@@ -10,7 +10,7 @@ import { useTranslatedServers } from "@/hooks/useTranslatedServers";
 import { useSortTable } from "@/hooks/useSortTable";
 import { useTranslations } from "next-intl";
 import { DeckData, SortingKey, Server } from "@/utils/types";
-import { getCardImageUrl, getCardName, getCardIdByName, isArcaneLegend } from '@/utils/cards';
+import { getCardImageUrl, getCardName, getCardIdByName, localizeCardName } from '@/utils/cards';
 import { compileDeckData } from "@/utils/deckData";
 import { percentize } from "@/utils/formatting";
 import { handleCopy } from "@/utils/clipboard";
@@ -50,7 +50,7 @@ export default function DeckShowcasePage({ params }: { params: Promise<{ locale:
   const charactersNameSorted = charactersName.toSorted((a,b) => a.localeCompare(b));
   const characters = charactersNameSorted.join("\\\\");
   
-  usePageTitle(t("title", { version: version, lineup: charactersName.join(" | ")}));
+  usePageTitle(t("title", { version: version, lineup: charactersName.map(c => localizeCardName(c, "characters", locale)).join(" | ")}));
   
   const dataByCharacters: MatchDataOfSpecificCharacter[] = useMemo(() => {
     const seen: MatchDataOfSpecificCharacter[] = [];
