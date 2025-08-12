@@ -25,6 +25,9 @@ export default async function LocaleLayout({
   
   return (
     <html lang={locale}>
+      <head>
+        <link rel="icon" href="/logo.png" type="image/png" />
+      </head>
       <body className="antialiased flex flex-col min-h-screen">
         <NextIntlClientProvider messages={messages} locale={locale}>
           <Navbar locale={locale}/>
