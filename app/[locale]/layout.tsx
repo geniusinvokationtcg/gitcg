@@ -5,7 +5,20 @@ import { routing } from '@/i18n/routing';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/footer';
 import "./globals.css";
- 
+
+export const metadata = {
+  title: "GITCG Community & Tournaments",
+  description: "GITCG community tournaments database",
+  openGraph: {
+    title: "GITCG Community & Tournaments",
+    description: "GITCG community tournaments database"
+  },
+  twitter: {
+    title: "GITCG Community & Tournaments",
+    description: "GITCG community tournaments database"
+  }
+}
+
 export default async function LocaleLayout({
   children,
   params
