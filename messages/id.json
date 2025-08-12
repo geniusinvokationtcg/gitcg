@@ -1,0 +1,85 @@
+{
+  "General": {
+    "tournament_schedule": "Jadwal Turnamen",
+    "decklist": "Daftar Kartu",
+    "matchups": "Pertandingan",
+    "lineup": "Susunan",
+    "deckcode": "Kode",
+    "copy_deckcode": "Salin kode",
+    "show_deckcode": "Tampilkan kode",
+    "hide_deckcode": "Sembunyikan kode",
+    "open_in_deck_builder": "Buka di penyusun dek",
+    "copied": "Disalin",
+    "no_data": "Pita sudah coba cari, tapi Pita gak ketemu data apa pun.",
+    "not_found": "Pita kebingungan karena gak ketemu URL yang kamu minta.<br></br>Mungkin URL itu gak ada. Ayo kita pulang ke <home>beranda</home>."
+  },
+  "Footer": {
+    "description": "GITCG adalah komunitas permainan kartu dalam Genshin Impact: Genius Invokation TCG. Kami tidak terafiliasi dengan HoYoverse sama sekali."
+  },
+  "About": {
+    "title": "Ini adalah laman about."
+  },
+  "Navbar": {
+    "menu": "Menu",
+    "weekly_statistic": "Data Turnamen Weekly",
+    "deck_builder": "Penyusun Dek",
+    "leaderboard": "Papan Peringkat",
+    "tournament_data": "Data Turnamen",
+    "weekly": "Weekly",
+    "major": "Major"
+  },
+  "Server": {
+    "all": "Semua Server",
+    "na": "America",
+    "eu": "Europe",
+    "as": "Asia"
+  },
+  "HomePage": {
+    "title": "GITCG Komunitas & Turnamen"
+  },
+  "WeeklyStatistic": {
+    "title": "Data Turnamen Weekly GITCG Versi {version}",
+    "showOrHide": "Tampilkan/Sembunyikan Kolom",
+    "week_num": "Minggu {week}",
+    "entire_version": "Sepanjang Versi",
+    "tableHeader": {
+      "deck": "Dek",
+      "usage_player": "Pemakaian <break></break>(per pemain)",
+      "usage_rate_player": "Tingkat Pemakaian <break></break>(per pemain)",
+      "best_result": "Hasil Terbaik",
+      "n_top_deck": "Jumlah <break></break>Menang ≥4",
+      "rate_top_deck": "Tingkat <break></break>Menang ≥4",
+      "stderr_top_deck": "Galat Baku <break></break>Menang ≥4",
+      "usage_match": "Pemakaian <break></break>(per pertandingan)",
+      "usage_rate_match": "Tingkat Pemakaian <break></break>(per pertandingan)",
+      "win_count": "Menang",
+      "win_rate": "Tingkat Kemenangan",
+      "stderr": "Galat Baku",
+      "win_count_nomirror": "Menang <break></break>(tanpa mirror)",
+      "win_rate_nomirror": "Tingkat Kemenangan <break></break>(tanpa mirror)",
+      "stderr_nomirror": "Galat Baku <break></break>(tanpa mirror)",
+      "tie_count": "Seri"
+    }
+  },
+  "DeckShowcasePage": {
+    "title": "Showcase Dek GITCG {version}: {lineup}",
+    "tableHeader": {
+      "opponent": "Lawan",
+      "game_count": "Jumlah Permainan",
+      "win_count": "Menang",
+      "win_rate": "Tingkat Kemenangan",
+      "tie_count": "Seri"
+    }
+  },
+  "MajorRecap": {
+    "title": "Rekap Turnamen Major GITCG {version}",
+    "match_title": "GITCG Versi {version} {server} Major Pertandingan {match}",
+    "player_title": "GITCG Versi {version} {server} Major Pemain Seed {seed}",
+    "round_x": "Ronde {round}",
+    "banned": "Di-ban",
+    "win": "Menang",
+    "lose": "Kalah",
+    "game_x": "Game {game}",
+    "watch_replay": "Tonton"
+  }
+}

@@ -1,0 +1,219 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+/*@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}*/
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  @apply text-base;
+}
+
+.monospaced {
+  font-family: "Courier New", "Courier", monospace;
+}
+
+a.inline {
+  @apply text-[#AF7637] hover:underline
+}
+
+footer {
+  @apply bg-gray-100/5 border-t-1 border-t-gray-300 text-center text-sm text-gray-600 px-3 py-4 z-50;
+}
+
+.footer_socmed_link {
+  @apply mx-2 text-blue-500 hover:text-blue-700;
+}
+
+nav {
+  @apply flex justify-between items-center px-8 py-2 bg-[#F8E9C5] border-b-1 border-b-gray-300 text-[17px];
+}
+.navbar_menu_desktop {
+  @apply hidden md:flex space-x-4;
+}
+.navbar_menu_mobile {
+  @apply md:hidden mt-2 flex flex-col space-y-2;
+}
+.navbar_menu_each {
+  @apply hover:text-[#AF7637] transition-colors duration-200 ease-in-out;
+}
+
+table {
+  @apply w-full border-gray-300 text-center;
+}
+table > thead > tr {
+  @apply border-b-1 border-gray-300 bg-gray-200;
+}
+table > thead > tr > th {
+  @apply p-2;
+}
+table > tbody > tr {
+  @apply border-b-1 border-gray-300 hover:bg-gray-50 transition-all duration-200
+}
+table > tbody > tr > td:not(.custom) {
+  @apply p-2;
+}
+.deck_column_width {
+  @apply w-[128px] md:w-[380px] min-w-[128px] md:min-w-[380px];
+}
+
+select {
+  @apply inline-flex justify-center items-center w-auto px-4 py-2 bg-white border border-gray-300 text-gray-900 text-xs rounded-sm
+  hover:bg-gray-50 hover:border-gray-500 hover:shadow-md
+  focus:border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:shadow-md
+  transition-all duration-200 ease-in-out cursor-pointer;
+  /*i got this code from deepseek lmao, my lazy ass cant be bothered with css*/
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; /* Hides default arrow */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 1rem;
+  padding-right: 1.75rem; /* Prevents text overlap */
+}
+
+.dropdowns_container {
+  @apply flex flex-wrap justify-end md:justify-start;
+}
+
+.section_title {
+  @apply flex text-center items-center justify-center text-2xl
+}
+.page_control {
+  @apply flex justify-center items-center gap-1
+}
+.page_control > span {
+  @apply min-w-10 flex text-center items-center justify-center text-sm text-gray-400
+}
+.page_control > svg {
+  @apply size-4 text-gray-400 transition-colors duration-200
+}
+.page_control > svg:hover:not(.disabled) {
+  @apply text-gray-600 cursor-pointer
+}
+.page_control > svg.disabled {
+  @apply text-gray-300 cursor-not-allowed
+}
+
+
+
+.deck_showcase_padding {
+  @apply px-3 pt-3
+}
+.matchups_table_padding {
+  @apply px-3 mt-3
+}
+
+.major_match_padding {
+  @apply px-3 pt-6 pb-5
+}
+.major_match_row {
+  @apply px-3 pt-1 w-full flex flex-row justify-center gap-x-1
+}
+.major_match_row > :first-child {
+  width: 50%; 
+  @apply overflow-hidden text-ellipsis whitespace-nowrap
+}
+.major_match_row > :nth-child(2) {
+  width: 60px;
+  @apply text-center;
+}
+.major_match_row > :last-child {
+  width: 50%;
+  @apply overflow-hidden text-ellipsis whitespace-nowrap
+}
+
+.major_match_row > .deck_container {
+  @apply flex flex-col max-w-[244px]
+}
+.major_match_row > .deck_container :first-child {
+  @apply text-sm md:text-base
+}
+.major_match_row > .deck_container :nth-child(2) {
+  @apply flex gap-0.5
+}
+.major_match_row > .ban :first-child {
+  @apply text-red-600
+}
+.major_match_row > .win :first-child > .wl_text {
+  @apply text-green-600
+}
+.major_match_row > .lose :first-child > .wl_text {
+  @apply text-gray-400
+}
+.major_match_row > .left_player :first-child {
+  @apply text-right
+}
+.major_match_row > .left_player :nth-child(2) {
+  @apply justify-end
+}
+
+
+.character_cards_large {
+  @apply flex items-center justify-center gap-1.5
+}
+.card_image_large {
+  position: relative;
+  width: 100px;
+  @media (width >= 48rem /* 768px */) {
+    width: 120px;
+  }
+}
+.card_image_large > img:first-child {
+  position: absolute;
+  width: 98%;
+  padding: 3px 1px;
+  object-fit: contain;
+  z-index: 0;
+}
+.card_image_large > img:last-child {
+  position: relative;
+  width: 120px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.card_image_medium {
+  position: relative;
+  width: 80px;
+}
+.card_image_medium_resize {
+  @media (width < 48rem /* 768px */) {
+    width: 55px;
+  }
+}
+.card_image_medium > img:first-child {
+  position: absolute;
+  width: 98%;
+  padding: 2px 0.5px;
+  object-fit: contain;
+  z-index: 0;
+}
+.card_image_medium > img:last-child {
+  position: relative;
+  width: 80px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.stat_showcase {
+  @apply flex flex-col align-bottom
+}
+.stat_showcase > div.stat_name {
+  @apply text-xs text-center whitespace-nowrap
+}
+.stat_showcase > div.stat_data {
+  @apply text-xl text-center whitespace-nowrap
+}

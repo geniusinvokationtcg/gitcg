@@ -1,0 +1,12 @@
+{
+  "latest": "5.8",
+  "available": [
+    "5.6","5.8"
+  ],
+  "major": [
+    {
+      "version": "5.6",
+      "server": ["as"]
+    }
+  ]
+}

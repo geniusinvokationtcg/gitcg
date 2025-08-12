@@ -1,0 +1,228 @@
+{
+  "max_players": 8,
+  "players": [
+    {
+      "name": "Ninja",
+      "seed": 1,
+      "uid": 845830353,
+      "deckcode": [
+        "GJDB6RkOHKDR6o8PGEDx9M8PHGHwB4YQCXFwO5cTE7ExxDMcFUFx1FcdC0Fg3NsdDsAA",
+        "EZBR6aQOAqDA6mgPGkBx9FcPFWBw+cEbDKERujYQE6FgzMYcDMFg1MkdDEGQ3N4dDsAA",
+        "FQDA0SYNARFxWmMPFlAw9psPE2EBaEgZFGGBCoEUG9FwacQWDJFA1MYdDEFg3MkdDcAA"
+      ]
+    },
+    {
+      "name": "Ianradtan",
+      "seed": 2,
+      "uid": 807044996,
+      "deckcode": [
+        "ADDAvwULAfDQ2oMPCCAw8o4PCEDh9EcPFGFwBZcQCVFxBjEQE2EROzMTE7ExDJMQGcAA",
+        "FBAgwSwMFlDhxXcMCJDQyY4VEqDh6S4OCZBw7pcOGOEhA4IQGTExPJMTC8HQEL0RDAAA",
+        "GADBwBkNHLDR6Y8OGJDx6s8OHKDw9IYPCUBw9pcQE3ExOzMTFbFxxFccC0Fg3LYdDMAA"
+      ]
+    },
+    {
+      "name": "Kanon",
+      "seed": 3,
+      "uid": 800232735,
+      "deckcode": [
+        "EZCR6c0OGKDB6o8PGEDx9M8PHGHwB5cQCXFxOzMTE7ExxFccFUFw1LYdC0Fg3NsdDsAA",
+        "AUBx9lwQGoFRCGMTFrExTEgWFIGBircYG6GBlrgQC6Fgab0WFZGAxcYcDFFh1FodD8AA",
+        "AODR6aQOApDA6mgOGqBw74wOCfDR9FcYFaFwisEbDKERaTYWE5FgzMYcDMFg1MkdDUAA"
+      ]
+    },
+    {
+      "name": "ersihfrans",
+      "seed": 4,
+      "uid": 889787737,
+      "deckcode": [
+        "EWDRybEMG5HRWi8PEkDw9J0PCWHRloEZGGEQorYQC7HQC78QC8Hx1DYdE0Fg3MYdDMAA",
+        "EZBR6aQOAqDA6mgPGkBx9FcPFVBw9sEbDKERujYQE6FgzMYcDMFg1MkdDEGQ3N4dDsAA",
+        "E2DwxB0MFUDwyVkMFpAh42IOCDDg5JwOCUDA9J0PCUDR9oIPGGEgirYYC6HREzYdE0AA"
+      ]
+    },
+    {
+      "name": "もちつき",
+      "seed": 5,
+      "uid": 883684725,
+      "deckcode": [
+        "HJDR6hkOGKDB9I8PGEDx9s8QHHHwB5cTCbFxO1ccFUFwxLYaDPFg1MYdDUGw3OkdDsAA",
+        "EbBx0V8NERHRWmIPFkAg9JwYCaHAip0ZCWHRljMaEyEw07QdCzHQ1MQdDEFA3MsdDMAA",
+        "EZBR6aQOAqDA6mgPGkBx9FcPGGEgirQbDKEQusEUE9FhzDYcDMFg1MYdDEGQ3N4dDsAA"
+      ]
+    },
+    {
+      "name": "DarkShrine",
+      "seed": 6,
+      "uid": 800941310,
+      "deckcode": [
+        "EUBxyV8MFZHhWmEPFkAR9GIPFmEgPJwTCcHAip0dCTHQ07YdC7GQ1LkdC0HR3IQdGMAA",
+        "G4ARxr0MEWHRWi8PEkDw9J0PCWHRloEZGGEQ07YQC7FgC70QC8Hw1L8dE0Fh3DYdFcAA",
+        "GJDB6RkOHKDR6o8PGEDx9M8PHGHwB5cTCbFxOzMcFUFxxFcaC/Fg1LYdDEFg3NsdDsAA"
+      ]
+    },
+    {
+      "name": "JatNad",
+      "seed": 7,
+      "uid": 833681982,
+      "deckcode": [
+        "FZDB2ZgNGNCw8pcPCSBw9KQPCkBB9jMPE2Ax+asPGpGxBcEQHFEQO8MTDLGg1ModDUAA",
+        "FjHRkx4LHEBhtXYLF9FgNoUTCGBR2n8OFzDw444PCEDh9jEPE2ExOzMTFbFx1FcdGUAA",
+        "GtFBNV8TFWHhNqcMFkARxGIMFpAgyZwVCaDA9p0PCWHR04IQGLEh1J4dC0Fg3LYdC8AA"
+      ]
+    },
+    {
+      "name": "Paroy",
+      "seed": 8,
+      "uid": 820757564,
+      "deckcode": [
+        "AJAR6qQOAqDA7mgPBhCB8acPFVFxulcbC6FA07QdDLEQ28EcE8Fh1DYdDUHg3OkdDsAA",
+        "HKDR6hkPGEDB9I8QGHHxB88TCbFwO5cVFbFxxFccC0Fgr7YaFvFQ1NsdDkGQ3OkdDsAA",
+        "HCDg8hkPHDBx9NAPCUBw9pcbGaHRup0cDEHxxIgdDrGw2+scDsHA1OwdD0EQ3PEdD8AA"
+      ]
+    }
+  ],
+  "bracket": [
+    {
+      "top": 8,
+      "best_of": 3,
+      "matchid": 1,
+      "bans": [1, 2],
+      "games": [
+        {
+          "deck_index": [2, 3],
+          "winner": 1
+        },
+        {
+          "deck_index": [3, 3],
+          "winner": 1
+        }
+      ]
+    },
+    {
+      "top": 8,
+      "best_of": 3,
+      "matchid": 2,
+      "bans": [2, 1],
+      "games": [
+        {
+          "deck_index": [1, 2],
+          "winner": 1,
+          "vod": "https://www.youtube.com/watch?v=Hnif21Vdxco&t=0s"
+        },
+        {
+          "deck_index": [3, 2],
+          "winner": 1,
+          "vod": "https://www.youtube.com/watch?v=Hnif21Vdxco&t=7m23s"
+        }
+      ]
+    },
+    {
+      "top": 8,
+      "best_of": 3,
+      "matchid": 3,
+      "bans": [3, 2],
+      "games": [
+        {
+          "deck_index": [2, 1],
+          "winner": 1,
+          "vod": "https://www.youtube.com/watch?v=kfAJOMaQPSs&t=3s"
+        },
+        {
+          "deck_index": [1, 3],
+          "winner": 2
+        },
+        {
+          "deck_index": [1, 1],
+          "winner": 1,
+          "vod": "https://www.youtube.com/watch?v=kfAJOMaQPSs&t=5m35s"
+        }
+      ]
+    },
+    {
+      "top": 8,
+      "best_of": 3,
+      "matchid": 4,
+      "bans": [2, 1],
+      "games": [
+        {
+          "deck_index": [3, 2],
+          "winner": 1,
+          "vod": "https://www.youtube.com/watch?v=h7keattXVRo&t=11m23s"
+        },
+        {
+          "deck_index": [1, 2],
+          "winner": 2,
+          "vod": "https://www.youtube.com/watch?v=h7keattXVRo&t=32m11s"
+        },
+        {
+          "deck_index": [1, 3],
+          "winner": 2,
+          "vod": "https://www.youtube.com/watch?v=h7keattXVRo&t=54m11s"
+        }
+      ]
+    },
+    {
+      "top": 4,
+      "best_of": 3,
+      "matchid": 5,
+      "bans": [1, 2],
+      "games": [
+        {
+          "deck_index": [2, 1],
+          "winner": 1,
+          "vod": "https://www.youtube.com/watch?v=Hnif21Vdxco&t=15m11s"
+        },
+        {
+          "deck_index": [3, 3],
+          "winner": 2,
+          "vod": "https://www.youtube.com/watch?v=Hnif21Vdxco&t=20m3s"
+        },
+        {
+          "deck_index": [3, 1],
+          "winner": 1,
+          "vod": "https://www.youtube.com/watch?v=Hnif21Vdxco&t=22m56s"
+        }
+      ]
+    },
+    {
+      "top": 4,
+      "best_of": 3,
+      "matchid": 6,
+      "bans": [2, 1],
+      "games": [
+        {
+          "deck_index": [3, 2],
+          "winner": 2,
+          "vod": "https://www.youtube.com/watch?v=h7keattXVRo&t=1h22m53s"
+        },
+        {
+          "deck_index": [1, 3],
+          "winner": 1,
+          "vod": "https://www.youtube.com/watch?v=h7keattXVRo&t=1h48m17s"
+        },
+        {
+          "deck_index": [3, 3],
+          "winner": 1,
+          "vod": "https://www.youtube.com/watch?v=h7keattXVRo&t=1h57m58s"
+        }
+      ]
+    },
+    {
+      "top": 2,
+      "best_of": 3,
+      "matchid": 7,
+      "bans": [2, 3],
+      "games": [
+        {
+          "deck_index": [1, 2],
+          "winner": 1
+        },
+        {
+          "deck_index": [3, 1],
+          "winner": 1
+        }
+      ]
+    }
+  ]
+}

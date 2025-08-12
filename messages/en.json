@@ -1,0 +1,85 @@
+{
+  "General": {
+    "tournament_schedule": "Tournament Schedule",
+    "decklist": "Decklist",
+    "matchups": "Matchups",
+    "lineup": "Lineup",
+    "deckcode": "Deckcode",
+    "copy_deckcode": "Copy deckcode",
+    "show_deckcode": "Show deckcode",
+    "hide_deckcode": "Hide deckcode",
+    "open_in_deck_builder": "Open in deck builder",
+    "copied": "Copied",
+    "no_data": "Pita has searched through the database, but Pita didn't find any data available.",
+    "not_found": "Pita gets confused because she can't find the URL you asked for.<br></br>It probably doesn't exist. So, let's just get you back <home>home</home>."
+  },
+  "Footer": {
+    "description": "GITCG is a community for the collectible card minigame of Genshin Impact: Genius Invokation TCG. We're not affiliated with HoYoverse in any way."
+  },
+  "About": {
+    "title": "This is an about page."
+  },
+  "Navbar": {
+    "menu": "Menu",
+    "weekly_statistic": "Weekly Statistic",
+    "deck_builder": "Deck Builder",
+    "leaderboard": "Leaderboard",
+    "tournament_data": "Tournament Data",
+    "weekly": "Weekly",
+    "major": "Major"
+  },
+  "Server": {
+    "all": "All Servers",
+    "na": "America",
+    "eu": "Europe",
+    "as": "Asia"
+  },
+  "HomePage": {
+    "title": "GITCG Community & Tournament"
+  },
+  "WeeklyStatistic": {
+    "title": "GITCG {version} Weekly Tournament Statistic",
+    "showOrHide": "Show/Hide Columns",
+    "week_num": "Week {week}",
+    "entire_version": "Entire Version",
+    "tableHeader": {
+      "deck": "Deck",
+      "usage_player": "Usages <break></break>(by player)",
+      "usage_rate_player": "Usage Rate <break></break>(by player)",
+      "best_result": "Best Result",
+      "n_top_deck": "Number of <break></break>≥4 Wins",
+      "rate_top_deck": "Rate of <break></break>≥4 Wins",
+      "stderr_top_deck": "Std Error of <break></break>≥4 Wins",
+      "usage_match": "Usages <break></break>(by match)",
+      "usage_rate_match": "Usage Rate <break></break>(by match)",
+      "win_count": "Wins",
+      "win_rate": "Win Rate",
+      "stderr": "Std Error",
+      "win_count_nomirror": "Wins <break></break>(no mirror)",
+      "win_rate_nomirror": "Win Rate <break></break>(no mirror)",
+      "stderr_nomirror": "Std Error <break></break>(no mirror)",
+      "tie_count": "Ties"
+    }
+  },
+  "DeckShowcasePage": {
+    "title": "GITCG {version} Deck Showcase: {lineup}",
+    "tableHeader": {
+      "opponent": "Opponent",
+      "game_count": "Games",
+      "win_count": "Wins",
+      "win_rate": "Win Rate",
+      "tie_count": "Ties"
+    }
+  },
+  "MajorRecap": {
+    "title": "GITCG {version} Major Recap",
+    "match_title": "GITCG {version} {server} Major Match {match}",
+    "player_title": "GITCG {version} {server} Major Player Seed {seed}",
+    "round_x": "Round {round}",
+    "banned": "Banned",
+    "win": "Win",
+    "lose": "Lose",
+    "game_x": "Game {game}",
+    "watch_replay": "Watch"
+  }
+}
