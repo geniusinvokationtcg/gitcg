@@ -68,15 +68,15 @@ function calculateDeckStat(data: MatchData[], char: string): DeckData {
       return a;
     }, 0),
     l: data.reduce((a, r) => {
-      if(r.player1 === row.player && r.characters1 === char && r.week === row.week && r.server === row.server && r.score1 === 0) a += 1;
-      if(r.player2 === row.player && r.characters2 === char && r.week === row.week && r.server === row.server && r.score2 === 0) a += 1;
+      if(r.player1 === row.player && r.characters1 === char && r.week === row.week && r.server === row.server && r.score1 === 0 && !r.isTie) a += 1;
+      if(r.player2 === row.player && r.characters2 === char && r.week === row.week && r.server === row.server && r.score2 === 0 && !r.isTie) a += 1;
       return a;
     }, 0)
   }));
-  const bestW = Math.max(...playerDataByCharWithResult.map((row: PlayerDataWithResult) => row.w));
+  const bestW = Math.max(...playerDataByCharWithResult.map(row => row.w));
   const playerDataByCharWithResultFilteredWin = playerDataByCharWithResult.filter(row => row.w === bestW);
-  const bestT = Math.max(...playerDataByCharWithResultFilteredWin.map((row: PlayerDataWithResult) => row.t));
-  const bestL = Math.max(...playerDataByCharWithResultFilteredWin.filter(row => row.t === bestT).map((row: PlayerDataWithResult) => row.l));
+  const bestT = Math.max(...playerDataByCharWithResultFilteredWin.map(row => row.t));
+  const bestL = Math.max(...playerDataByCharWithResultFilteredWin.filter(row => row.t === bestT).map(row => row.l));
   //top decks are decks that scores 4 wins or more
   const numberOfTopDecks = playerDataByCharWithResult.filter(row => row.w >= 4).length;
   const rateOfTopDecks = playerDataByCharWithResult.length === 0 ? 0 : numberOfTopDecks/playerDataByCharWithResult.length;
