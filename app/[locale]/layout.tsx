@@ -48,11 +48,11 @@ export default async function LocaleLayout({
           <Navbar locale={locale}/>
           <main className="flex justify-center flex-grow">
             {children}
-            <Analytics />
-            <SpeedInsights />
           </main>
           <Footer />
         </NextIntlClientProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
