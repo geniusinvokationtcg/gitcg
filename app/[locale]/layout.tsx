@@ -1,3 +1,5 @@
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import deepmerge from "deepmerge";
 import { notFound } from 'next/navigation';
@@ -44,7 +46,11 @@ export default async function LocaleLayout({
       <body className="antialiased flex flex-col min-h-screen">
         <NextIntlClientProvider messages={messages} locale={locale}>
           <Navbar locale={locale}/>
-          <main className="flex justify-center flex-grow">{children}</main>
+          <main className="flex justify-center flex-grow">
+            {children}
+            <Analytics />
+            <SpeedInsights />
+          </main>
           <Footer />
         </NextIntlClientProvider>
       </body>
