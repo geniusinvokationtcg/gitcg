@@ -45,7 +45,7 @@ export default function WeeklyStatPageClient({ params }: { params: Promise<{ loc
     { key: "stderr_nomirror", isShown: true },
     { key: "tie_count", isShown: true }
   ].map(col => {
-    return {...col, title: h.rich(col.key, { break: () => ""})}
+    return {...col, title: h.rich(col.key, { break: () => ""}) as string }
   }));
   const toggleColumn = (key: string) => {
     setTableHeader(tableHeader.map(col => 

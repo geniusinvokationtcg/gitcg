@@ -85,7 +85,7 @@ select {
 }
 
 .dropdowns_container {
-  @apply flex flex-wrap justify-end md:justify-start;
+  @apply flex flex-wrap justify-start;
 }
 
 .section_title {

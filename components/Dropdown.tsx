@@ -1,10 +1,10 @@
 import { Menu, MenuButton, MenuItems, MenuItem, Transition } from "@headlessui/react";
-import { ReactNode } from "react";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
+import { useState, useEffect } from "react"
 
 interface Column {
   key: string;
-  title: string | ReactNode;
+  title: string;
   isShown: boolean;
 }
 
@@ -17,6 +17,18 @@ export function ColumnVisibilityDropdown({
   onToggle: (key: string) => void;
   buttonText?: string;
 }) {
+  const [windowWidth, setWindowWidth] = useState<number>(0)
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, [])
+  const buttonTextLength = buttonText.length;
+  const maxLength = Math.max(...columns.map(col => col.title.length));
+  
   return (
     <Menu as="div" className="relative">
       <MenuButton
@@ -48,7 +60,7 @@ export function ColumnVisibilityDropdown({
         }}
       >
         <MenuItems
-          className="absolute right-0 z-90 mt-2 min-w-full whitespace-nowrap origin-top-right bg-white rounded-md shadow-lg ring-1 ring-gray-300 ring-opacity-5 focus:outline-none"
+          className={`absolute z-90 mt-2 whitespace-nowrap origin-top-right bg-white rounded-md shadow-lg ring-1 ring-gray-300 ring-opacity-5 focus:outline-none ${windowWidth < 768 && buttonTextLength < maxLength ? "left-0" : "right-0"}`}
         >
           <div className="py-1 max-h-[70vh] overflow-y-auto">
             {columns.map((column) => (
@@ -66,10 +78,10 @@ export function ColumnVisibilityDropdown({
                       column.isShown ? 'bg-gray-600 border-gray-600' : 'border-gray-400'
                     }`}>
                       {column.isShown && (
-                        <svg 
-                          xmlns="http://www.w3.org/2000/svg" 
-                          className="w-3 h-3 text-white" 
-                          viewBox="0 0 20 20" 
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="size-4 text-white"
+                          viewBox="0 0 20 20"
                           fill="currentColor"
                         >
                           <path 
