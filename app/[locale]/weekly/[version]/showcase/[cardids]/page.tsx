@@ -233,7 +233,6 @@ export default function DeckShowcasePage({ params }: { params: Promise<{ locale:
         />
       ))}
     </div>
-    <div className="px-3 justify-center text-center monospaced select-all hidden">{deckcode}</div>
     { showDeckcode && <div className={"mx-3 mt-1.5 text-center monospaced select-all break-all"}>
       {deckcode}
     </div> }

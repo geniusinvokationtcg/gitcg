@@ -7,9 +7,12 @@ import { useTranslations } from "next-intl";
 import { useTranslatedServers } from "@/hooks/useTranslatedServers";
 import { useMajorData } from "@/hooks/useMajorData";
 import { CardImageMedium } from "@/components/CardImage";
+import { CustomButton } from "@/components/Button";
+import { SuccessNotification } from "@/components/PopUp";
 import { ServerPure } from "@/utils/types";
 import { getCardImageUrl, getCardName } from "@/utils/cards";
 import { decodeAndSortActionCards } from "@/utils/decoder";
+import { handleCopy } from "@/utils/clipboard";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 
 export default function MajorPlayerDetail ({ params }: { params: Promise<{ locale: string; version: string; server: ServerPure; seed: number }> }) {
@@ -27,6 +30,13 @@ export default function MajorPlayerDetail ({ params }: { params: Promise<{ local
 
   const serverList = useTranslatedServers(); 
   const serverName = serverList.find(s => s.value === server)?.label || server.toUpperCase();
+
+  const [showNotification, setShowNotification] = useState<boolean>(false);
+  const copiedPopUpTrigger = () => {
+    setShowNotification(true);
+    setTimeout(() => setShowNotification(false), 2000);
+  }
+  const [showDeckcode, setShowDeckcode] = useState<boolean>(false);
 
   const { data, isLoading, error } = useMajorData(version, server);
   if(isLoading) return;
@@ -92,6 +102,20 @@ export default function MajorPlayerDetail ({ params }: { params: Promise<{ local
           locale={locale}
         />
       ))}
+    </div>
+    { showDeckcode && <div className={"mx-3 mt-1.5 text-center monospaced select-all break-all"}>
+      {decklists[deckIndex].deckcode}
+    </div> }
+    <div className="px-3 pt-1.5 flex justify-center mx-auto gap-1.5">
+      <CustomButton
+        buttonText={g("copy_deckcode")}
+        onClick={() => handleCopy(decklists[deckIndex].deckcode, copiedPopUpTrigger)}
+      />
+      <CustomButton
+        buttonText={showDeckcode ? g("hide_deckcode") : g("show_deckcode")}
+        onClick={() => setShowDeckcode(!showDeckcode)}
+      />
+      <SuccessNotification show={showNotification} text={g("copied")} />
     </div>
   </div>
 }
