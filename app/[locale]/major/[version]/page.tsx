@@ -61,7 +61,9 @@ export default function MajorRecap ({ params }: { params: Promise<{ locale: stri
     </div>
     <div className="overflow-auto text-sm flex flex-col justify-center">
       <div className="flex flex-row gap-x-12 mx-auto mb-2">
-        {rounds.map(round => <h2 className="font-semibold mb-2 min-w-50 text-center" key={round}>{t("round_x", { round: round})}</h2>)}
+        {rounds.map(round => <h2 className="font-semibold mb-2 min-w-50 text-center" key={round}>{
+          t(getRoundNameKey(games[round-1].length*2), { top: games[round-1].length*2 })
+        }</h2>)}
       </div>
       <div
         className="flex flex-row gap-x-12 mx-auto"
@@ -128,6 +130,17 @@ export default function MajorRecap ({ params }: { params: Promise<{ locale: stri
       </div>
     </div>
   </div>
+}
+
+export function getRoundNameKey(top: number) {
+  switch(top){
+    case 2:
+      return "final";
+    case 4:
+      return "semifinal";
+    default:
+      return "round_of_x";
+  }
 }
 
 // {/* Vertical line connecting matches */}

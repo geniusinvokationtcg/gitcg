@@ -6,6 +6,7 @@ import { use, useState } from "react"
 import { useTranslations } from "next-intl";
 import { useTranslatedServers } from "@/hooks/useTranslatedServers";
 import { useMajorData } from "@/hooks/useMajorData";
+import { useCopiedPopUp } from "@/hooks/utilities";
 import { CardImageMedium } from "@/components/CardImage";
 import { CustomButton } from "@/components/Button";
 import { SuccessNotification } from "@/components/PopUp";
@@ -31,11 +32,7 @@ export default function MajorPlayerDetail ({ params }: { params: Promise<{ local
   const serverList = useTranslatedServers(); 
   const serverName = serverList.find(s => s.value === server)?.label || server.toUpperCase();
 
-  const [showNotification, setShowNotification] = useState<boolean>(false);
-  const copiedPopUpTrigger = () => {
-    setShowNotification(true);
-    setTimeout(() => setShowNotification(false), 2000);
-  }
+  const { showNotification, copiedPopUpTrigger } = useCopiedPopUp();
   const [showDeckcode, setShowDeckcode] = useState<boolean>(false);
 
   const { data, isLoading, error } = useMajorData(version, server);

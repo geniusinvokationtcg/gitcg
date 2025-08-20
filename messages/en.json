@@ -35,7 +35,8 @@
     "as": "Asia"
   },
   "HomePage": {
-    "title": "GITCG Community & Tournaments"
+    "title": "GITCG Community & Tournaments",
+    "description": "Join our community Discord server to discuss, theorycraft, and participate in GITCG tournaments. Check out the tournament database for current meta decks."
   },
   "WeeklyStatistic": {
     "title": "GITCG {version} Weekly Tournament Statistic",
@@ -80,6 +81,9 @@
     "win": "Win",
     "lose": "Lose",
     "game_x": "Game {game}",
-    "watch_replay": "Watch"
+    "watch_replay": "Watch",
+    "final": "Final",
+    "semifinal": "Semifinals",
+    "round_of_x": "Round of {top}"
   }
 }

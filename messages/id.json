@@ -35,7 +35,8 @@
     "as": "Asia"
   },
   "HomePage": {
-    "title": "GITCG Komunitas & Turnamen"
+    "title": "GITCG Komunitas & Turnamen",
+    "description": "Gabung ke komunitas Discord untuk diskusi, theorycrafting, dan berpartisipasi dalam turnamen GITCG. Cek data turnamen untuk melihat meta terbaru."
   },
   "WeeklyStatistic": {
     "title": "Data Turnamen Weekly GITCG Versi {version}",
@@ -80,6 +81,9 @@
     "win": "Menang",
     "lose": "Kalah",
     "game_x": "Game {game}",
-    "watch_replay": "Tonton"
+    "watch_replay": "Tonton",
+    "final": "Final",
+    "semifinal": "Semifinal",
+    "round_of_x": "Babak {top} Besar"
   }
 }

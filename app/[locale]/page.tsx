@@ -1,14 +1,19 @@
-'use client';
-
+import { Metadata } from "next";
 import gameVersion from "@/game-version.json"
-import { useState, useEffect } from "react"
 import { useTranslations } from "next-intl";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata (): Promise<Metadata> {
+  const t = await getTranslations();
+  const metadata = {
+    title: t("HomePage.title"),
+    description: t("HomePage.description")
+  }
+  return {...metadata, openGraph: metadata}
+}
 
 export default function HomePage() {
   const t = useTranslations()
-
-  usePageTitle(t("HomePage.title"));
 
   return <div className="p-8 min-w-screen">
     <div className="text-center text-4xl">{t("General.tournament_schedule")}</div>

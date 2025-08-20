@@ -8,6 +8,7 @@ import { useWeeklyData } from "@/hooks/useWeeklyData";
 import { usePageTitle } from "@/hooks/usePageTitle";
 import { useTranslatedServers } from "@/hooks/useTranslatedServers";
 import { useSortTable } from "@/hooks/useSortTable";
+import { useCopiedPopUp } from "@/hooks/utilities";
 import { useTranslations } from "next-intl";
 import { DeckData, SortingKey, Server } from "@/utils/types";
 import { getCardImageUrl, getCardName, getCardIdByName, localizeCardName } from '@/utils/cards';
@@ -166,12 +167,7 @@ export default function DeckShowcasePage({ params }: { params: Promise<{ locale:
     setCompiledDeckData(compileDeckData(parsedData, characters) as DeckData);
   }, [deckIndex, uniqueCardsId])
 
-  const [showNotification, setShowNotification] = useState<boolean>(false);
-  const copiedPopUpTrigger = () => {
-    setShowNotification(true);
-    setTimeout(() => setShowNotification(false), 2000);
-  }
-
+  const { showNotification, copiedPopUpTrigger } = useCopiedPopUp();
   const [showDeckcode, setShowDeckcode] = useState<boolean>(false);
   
   const h = useTranslations("WeeklyStatistic.tableHeader");

@@ -35,7 +35,8 @@
     "as": "Asia"
   },
   "HomePage": {
-    "title": "GITCG《七圣召唤》玩家社区与赛事"
+    "title": "GITCG《七圣召唤》玩家社区与赛事",
+    "description": "加入GITCG的Discord社区，讨论七圣召唤、牌组构筑、参加七圣召唤赛事。打开赛事数据库查看当前主流牌组。"
   },
   "WeeklyStatistic": {
     "title": "GITCG《七圣召唤》{version}版本周赛数据",
@@ -80,6 +81,9 @@
     "win": "胜者",
     "lose": "失败",
     "game_x": "第{game}局",
-    "watch_replay": "观看回放"
+    "watch_replay": "观看回放",
+    "final": "总决赛",
+    "semifinal": "半决赛",
+    "round_of_x": "{top}强赛"
   }
 }
