@@ -23,3 +23,14 @@ export const getPlayer = (matchid: any, player: number, data: MajorData, games: 
   const playerSeed = seeding[indexCurrentRound][player - 1]
   return data.players.find(p => p.seed === playerSeed);
 }
+
+export function getRoundNameKey(top: number):string {
+  switch(top){
+    case 2:
+      return "final";
+    case 4:
+      return "semifinal";
+    default:
+      return "round_of_x";
+  }
+}

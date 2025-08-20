@@ -8,7 +8,7 @@ import { use, useState } from "react";
 import { useMajorData } from "@/hooks/useMajorData";
 import { useTranslatedServers } from "@/hooks/useTranslatedServers";
 import { generateSeeding } from "@/utils/brackets";
-import { getPlayer } from "@/utils/major"
+import { getPlayer, getRoundNameKey } from "@/utils/major"
 import { useTranslations } from "next-intl";
 import { CustomSelect } from "@/components/Dropdown";
 import { ServerPure } from "@/utils/types";
@@ -92,16 +92,21 @@ export default function MajorRecap ({ params }: { params: Promise<{ locale: stri
                 }}
               >
                 {/* Connectors (first part excludes last round; second part excludes first round) */}
-                {round < maxRound && (
+                {round < maxRound && <>
                   <div className={`absolute top-[calc(50%-1px)] left-full h-0 w-6 border-2 border-l-0 border-gray-300 ${i % 2 === 0 ? "" : "hidden"}`}
                   style={{
                     height: `${(matchMinHeight+8.5)*4}px`,
                   }}
                   />
-                )}
-                {round > 1 && (
+                  <div className={`absolute left-[calc(100%+24px)] h-0 w-6 border-t-2 border-gray-300 ${i % 2 === 0 ? "" : "hidden"}`}
+                    style={{
+                      top: `${matchMinHeight*4+15}px`
+                    }}
+                  />
+                </>}
+                {/*round > 1 && (
                   <div className="absolute top-[calc(50%-1px)] right-full h-0 w-6 border-t-2 border-gray-300" />
-                )}
+                )*/}
                 <Link href={`/${locale}/major/${version}/${server}/match/${matchid}`} className="block">
                 <div className="group w-50 relative z-10 flex flex-col gap-0.5 cursor-pointer" >
                   <div className="flex flex-row gap-0.5 justify-between h-8">
@@ -130,17 +135,6 @@ export default function MajorRecap ({ params }: { params: Promise<{ locale: stri
       </div>
     </div>
   </div>
-}
-
-export function getRoundNameKey(top: number) {
-  switch(top){
-    case 2:
-      return "final";
-    case 4:
-      return "semifinal";
-    default:
-      return "round_of_x";
-  }
 }
 
 // {/* Vertical line connecting matches */}
