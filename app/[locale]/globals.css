@@ -209,11 +209,14 @@ select {
 }
 
 .stat_showcase {
+  @apply flex gap-5 gap-y-1 justify-center items-center flex-wrap
+}
+.stat_showcase > * {
   @apply flex flex-col align-bottom
 }
-.stat_showcase > div.stat_name {
+.stat_showcase > * > :first-child {
   @apply text-xs text-center whitespace-nowrap
 }
-.stat_showcase > div.stat_data {
+.stat_showcase > * > :nth-child(2) {
   @apply text-xl text-center whitespace-nowrap
 }

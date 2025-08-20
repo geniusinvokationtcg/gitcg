@@ -6,7 +6,7 @@ import Link from "next/link";
 import { use } from "react";
 import { ServerPure, MajorPlayer } from "@/utils/types";
 import { getPlayer } from "@/utils/major";
-import { generateSeeding } from "@/utils/brackets";
+import { generateRoundStructure } from "@/utils/brackets";
 import { decode } from "@/utils/decoder";
 import { useTranslations } from "next-intl";
 import { useMajorData } from "@/hooks/useMajorData";
@@ -33,27 +33,11 @@ export default function MajorMatchDetail ({ params }: { params: Promise<{ locale
   const match = data.bracket.find(m => m.matchid === matchid);
   if(!match) return <p>Something went wrong: Can't find corresponding match</p>
 
-  const seeding = generateSeeding(data.max_players);
-  const seedingData = seeding.data;
-  if(!seedingData) return <p>Something went wrong: {seeding.error.message}</p>
+  const { seeding, maxRound, rounds, games } = generateRoundStructure(data.max_players)
+  if(!seeding) return <p>Something went wrong: Seeding error</p>
 
-  const maxRound = Math.ceil(Math.log2(data.max_players));
-  const rounds = Array.from({ length: maxRound }, (_, i) => i + 1);
-  const games: number[][] = [];
-  rounds.map(round => {
-    const n = data.max_players/(2**round)
-    if(games.length === 0) {
-      const g = Array.from({ length: n }, (_, i) => i + 1);
-      games.push(g);
-    }
-    else {
-      const g = Array.from({ length: n }, (_, i) => i + 1 + games.at(-1)!.at(-1)!);
-      games.push(g);
-    }
-  })
-
-  const player1 = getPlayer(matchid, 1, data, games, seedingData);
-  const player2 = getPlayer(matchid, 2, data, games, seedingData);
+  const player1 = getPlayer(matchid, 1, data, games, seeding);
+  const player2 = getPlayer(matchid, 2, data, games, seeding);
   if(!player1 || !player2 || player1.name === "BYE" || player2.name === "BYE") notFound();
   const score1 = match.games.reduce((s, game) => (game.winner === 1 ? s+1 : s), 0);
   const score2 = match.games.reduce((s, game) => (game.winner === 2 ? s+1 : s), 0);

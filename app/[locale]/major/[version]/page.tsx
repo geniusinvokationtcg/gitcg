@@ -7,7 +7,7 @@ import { usePageTitle } from "@/hooks/usePageTitle";
 import { use, useState } from "react";
 import { useMajorData } from "@/hooks/useMajorData";
 import { useTranslatedServers } from "@/hooks/useTranslatedServers";
-import { generateSeeding } from "@/utils/brackets";
+import { generateRoundStructure } from "@/utils/brackets";
 import { getPlayer, getRoundNameKey } from "@/utils/major"
 import { useTranslations } from "next-intl";
 import { CustomSelect } from "@/components/Dropdown";
@@ -27,24 +27,8 @@ export default function MajorRecap ({ params }: { params: Promise<{ locale: stri
   if(isLoading) return;
   if(!data) return <p>Something went wrong: {error ? error.message : "Unknown error"}</p>
   
-  const seeding = generateSeeding(data.max_players);
-  const seedingData = seeding.data;
-  if(!seedingData) return <p>Something went wrong: {seeding.error.message}</p>
-  
-  const maxRound = Math.ceil(Math.log2(data.max_players));
-  const rounds = Array.from({ length: maxRound }, (_, i) => i + 1);
-  const games: number[][] = [];
-  rounds.map(round => {
-    const n = data.max_players/(2**round)
-    if(games.length === 0) {
-      const g = Array.from({ length: n }, (_, i) => i + 1);
-      games.push(g);
-    }
-    else {
-      const g = Array.from({ length: n }, (_, i) => i + 1 + games.at(-1)!.at(-1)!);
-      games.push(g);
-    }
-  })
+  const { seeding, maxRound, rounds, games } = generateRoundStructure(data.max_players)
+  if(!seeding) return <p>Something went wrong: Seeding error</p>
 
   return <div className="min-w-screen p-6 mx-auto">
     <div className="mb-6 dropdowns_container gap-2">
@@ -77,8 +61,8 @@ export default function MajorRecap ({ params }: { params: Promise<{ locale: stri
             {games[index].map((matchid, i) => {
               const match = roundMatches.find(m => m.matchid === matchid);
               if(matchid === 5) console.log(JSON.stringify(match))
-              const playerData1 = getPlayer(match?.matchid, 1, data, games, seedingData)
-              const playerData2 = getPlayer(match?.matchid, 2, data, games, seedingData)
+              const playerData1 = getPlayer(match?.matchid, 1, data, games, seeding)
+              const playerData2 = getPlayer(match?.matchid, 2, data, games, seeding)
               const score1 = match?.games.reduce((s, game) => (game.winner === 1 ? s+1 : s), 0);
               const score2 = match?.games.reduce((s, game) => (game.winner === 2 ? s+1 : s), 0);
               const minWins = ((match?.best_of || NaN)+1)/2
@@ -108,24 +92,24 @@ export default function MajorRecap ({ params }: { params: Promise<{ locale: stri
                   <div className="absolute top-[calc(50%-1px)] right-full h-0 w-6 border-t-2 border-gray-300" />
                 )*/}
                 <Link href={`/${locale}/major/${version}/${server}/match/${matchid}`} className="block">
-                <div className="group w-50 relative z-10 flex flex-col gap-0.5 cursor-pointer" >
-                  <div className="flex flex-row gap-0.5 justify-between h-8">
-                    <span className={`overflow-hidden text-ellipsis whitespace-nowrap flex items-center w-full p-2 bg-gray-200 group-hover:bg-gray-300 transition-all duration-200 ${playerData1 ? (playerData1.name === winner?.name ? "font-semibold" : "") : ""}`}>
-                      {playerData1?.name || ""}
-                    </span>
-                    <span className={`py-2 bg-gray-200 group-hover:bg-gray-300 transition-all duration-200 min-w-8 flex justify-center items-center ${playerData1 ? (playerData1.name === winner?.name ? "font-semibold" : "") : ""}`}>
-                      {typeof score1 === "number" ? score1 : ""}
-                    </span>
+                  <div className="group w-50 relative z-10 flex flex-col gap-0.5 cursor-pointer" >
+                    <div className="flex flex-row gap-0.5 justify-between h-8">
+                      <span className={`overflow-hidden text-ellipsis whitespace-nowrap flex items-center w-full p-2 bg-gray-200 group-hover:bg-gray-300 transition-all duration-200 ${playerData1 ? (playerData1.name === winner?.name ? "font-semibold" : "") : ""}`}>
+                        {playerData1?.name || ""}
+                      </span>
+                      <span className={`py-2 bg-gray-200 group-hover:bg-gray-300 transition-all duration-200 min-w-8 flex justify-center items-center ${playerData1 ? (playerData1.name === winner?.name ? "font-semibold" : "") : ""}`}>
+                        {typeof score1 === "number" ? score1 : ""}
+                      </span>
+                    </div>
+                    <div className="flex flex-row gap-0.5 justify-between h-8">
+                      <span className={`overflow-hidden text-ellipsis whitespace-nowrap flex items-center w-full p-2 bg-gray-200 group-hover:bg-gray-300 transition-all duration-200 ${playerData2 ? (playerData2.name === winner?.name ? "font-semibold" : "") : ""}`}>
+                        {playerData2?.name || ""}
+                      </span>
+                      <span className={`py-2 bg-gray-200 group-hover:bg-gray-300 transition-all duration-200 min-w-8 flex justify-center items-center ${playerData2 ? (playerData2.name === winner?.name ? "font-semibold" : "") : ""}`}>
+                        {typeof score2 === "number" ? score2 : ""}
+                      </span>
+                    </div>
                   </div>
-                  <div className="flex flex-row gap-0.5 justify-between h-8">
-                    <span className={`overflow-hidden text-ellipsis whitespace-nowrap flex items-center w-full p-2 bg-gray-200 group-hover:bg-gray-300 transition-all duration-200 ${playerData2 ? (playerData2.name === winner?.name ? "font-semibold" : "") : ""}`}>
-                      {playerData2?.name || ""}
-                    </span>
-                    <span className={`py-2 bg-gray-200 group-hover:bg-gray-300 transition-all duration-200 min-w-8 flex justify-center items-center ${playerData2 ? (playerData2.name === winner?.name ? "font-semibold" : "") : ""}`}>
-                      {typeof score2 === "number" ? score2 : ""}
-                    </span>
-                  </div>
-                </div>
                 </Link>
                 
               </div>

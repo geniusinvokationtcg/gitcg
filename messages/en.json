@@ -84,6 +84,10 @@
     "watch_replay": "Watch",
     "final": "Final",
     "semifinal": "Semifinals",
-    "round_of_x": "Round of {top}"
+    "round_of_x": "Round of {top}",
+    "game_count": "Games",
+    "win_count": "Wins",
+    "win_rate": "Win Rate",
+    "best_advancement": "Best Advancement"
   }
 }

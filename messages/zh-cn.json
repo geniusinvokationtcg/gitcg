@@ -84,6 +84,10 @@
     "watch_replay": "观看回放",
     "final": "总决赛",
     "semifinal": "半决赛",
-    "round_of_x": "{top}强赛"
+    "round_of_x": "{top}强赛",
+    "game_count": "选用数",
+    "win_count": "胜数",
+    "win_rate": "胜率",
+    "best_advancement": "最佳战绩"
   }
 }

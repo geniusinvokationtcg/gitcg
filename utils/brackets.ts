@@ -1,5 +1,5 @@
 import { Maybe, SuccessResult, ErrorResult } from "@/utils/types"
-import { Seeding } from "./types"
+import { Seeding, MajorData } from "./types"
 
 export function generateSeeding (max_players: number): Maybe<Seeding> {
   if(max_players < 2) return ErrorResult("Invalid max players.");
@@ -12,7 +12,6 @@ export function generateSeeding (max_players: number): Maybe<Seeding> {
     pairs.push([i, numOfPlayer + 1 - i])
   }
   const pairsLength = pairs.length;
-  console.log(pairs)
 
   const firstHalf: Seeding = [];
   const secondHalf: Seeding = [];
@@ -56,4 +55,23 @@ export function generateSeeding (max_players: number): Maybe<Seeding> {
   }
 
   return SuccessResult([...firstHalf, ...secondHalf]);
+}
+
+export function generateRoundStructure (max_players: number) {
+  const seeding = generateSeeding(max_players).data;
+  const maxRound = Math.ceil(Math.log2(max_players));
+  const rounds = Array.from({ length: maxRound }, (_, i) => i + 1);
+  const games: number[][] = [];
+  rounds.map(round => {
+    const n = max_players/(2**round)
+    if(games.length === 0) {
+      const g = Array.from({ length: n }, (_, i) => i + 1);
+      games.push(g);
+    }
+    else {
+      const g = Array.from({ length: n }, (_, i) => i + 1 + games.at(-1)!.at(-1)!);
+      games.push(g);
+    }
+  })
+  return { seeding, maxRound, rounds, games }
 }

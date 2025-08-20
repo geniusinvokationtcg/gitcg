@@ -10,10 +10,13 @@ import { useCopiedPopUp } from "@/hooks/utilities";
 import { CardImageMedium } from "@/components/CardImage";
 import { CustomButton } from "@/components/Button";
 import { SuccessNotification } from "@/components/PopUp";
-import { ServerPure } from "@/utils/types";
+import { ServerPure, EliminationBracketMatch } from "@/utils/types";
 import { getCardImageUrl, getCardName } from "@/utils/cards";
+import { generateRoundStructure } from "@/utils/brackets";
+import { getWinner, getPlayer, getRoundNameKey } from "@/utils/major";
 import { decodeAndSortActionCards } from "@/utils/decoder";
 import { handleCopy } from "@/utils/clipboard";
+import { percentize } from "@/utils/formatting";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 
 export default function MajorPlayerDetail ({ params }: { params: Promise<{ locale: string; version: string; server: ServerPure; seed: number }> }) {
@@ -50,6 +53,22 @@ export default function MajorPlayerDetail ({ params }: { params: Promise<{ local
   
   document.title = `${player.name} | ${title}`
   
+  const { seeding, maxRound, rounds, games } = generateRoundStructure(data.max_players)
+
+  let playedMatches: EliminationBracketMatch[] = []
+  if(seeding){
+    let matchIndex = seeding.findIndex(m => m.includes(player.seed))
+    for(let r of games){
+      const match = data.bracket[ r[matchIndex]-1 ]
+      playedMatches.push(match)
+
+      const winner = getWinner(match.matchid, data)
+      const winnerData = getPlayer(match.matchid, winner, data, games, seeding)
+      if(!winnerData || winnerData.seed !== player.seed) break
+      matchIndex = Math.floor(matchIndex/2)
+    }
+  }
+
   const decklists = player.deckcode.map(code => {
     const decoded = decodeAndSortActionCards(code)
     const characterCards = decoded.splice(0, 3)
@@ -70,6 +89,39 @@ export default function MajorPlayerDetail ({ params }: { params: Promise<{ local
     <h1 className="deck_showcase_padding section_title font-semibold">
       {player.name}
     </h1>
+    {playedMatches.length > 0 && <div className="deck_showcase_padding stat_showcase">
+      {(() => {
+        let ok = true
+        if(!seeding) return
+        const gameCount = playedMatches.reduce((a, match) => a + match.games.length, 0)
+        const winCount = playedMatches.reduce((a, match) => a + match.games.filter(g => {
+          const player1 = getPlayer(match.matchid, 1, data, games, seeding)
+          if(!player1){ ok = false; return }
+          const currentPlayerIndexInMatch = player1.seed === player.seed ? 1 : 2
+          return g.winner === currentPlayerIndexInMatch
+        }).length, 0)
+        const winRate = gameCount === 0 ? 0 : winCount/gameCount
+        const bestTop = playedMatches.at(-1)!.top
+        if(ok) return <>
+          <div>
+            <div>{t("game_count")}</div>
+            <div>{gameCount}</div>
+          </div>
+          <div>
+            <div>{t("win_count")}</div>
+            <div>{winCount}</div>
+          </div>
+          <div>
+            <div>{t("win_rate")}</div>
+            <div>{percentize(winRate, locale)}</div>
+          </div>
+          <div>
+            <div>{t("best_advancement")}</div>
+            <div>{t(getRoundNameKey(bestTop), { top: bestTop })}</div>
+          </div>
+        </>
+      })()}
+    </div>}
     <div className="deck_showcase_padding section_title">{g("decklist")}</div>
     <div className="page_control px-3 pt-0.5">
       <ChevronLeftIcon className={deckIndex === 0 ? "disabled" : ""} onClick={ () => {if(deckIndex > 0) setDeckIndex(i => i-1)} }/>

@@ -84,6 +84,10 @@
     "watch_replay": "Tonton",
     "final": "Final",
     "semifinal": "Semifinal",
-    "round_of_x": "Babak {top} Besar"
+    "round_of_x": "Babak {top} Besar",
+    "game_count": "Jumlah Permainan",
+    "win_count": "Menang",
+    "win_rate": "Tingkat Kemenangan",
+    "best_advancement": "Babak Terakhir"
   }
 }

@@ -194,12 +194,12 @@ export default function DeckShowcasePage({ params }: { params: Promise<{ locale:
         <img src="/borders/normal.png"></img>
       </span>
     </div>
-    <div className="deck_showcase_padding flex gap-5 gap-y-1 justify-center items-center flex-wrap">
+    <div className="deck_showcase_padding stat_showcase">
       {["usage_player", "best_result", "rate_top_deck", "usage_match", "win_count", "win_rate", "tie_count"]
         .map((key) => (
-          <div className="stat_showcase" key={key}>
-            <div className="stat_name">{h.rich(key, {break: () => ""})}</div>
-            <div className="stat_data">
+          <div key={key}>
+            <div>{h.rich(key, {break: () => ""})}</div>
+            <div>
               {
                 !compiledDeckData
                 ? "-"
