@@ -89,6 +89,12 @@ export default function MajorPlayerDetail ({ params }: { params: Promise<{ local
     <h1 className="deck_showcase_padding section_title font-semibold">
       {player.name}
     </h1>
+    {player.avatar && <div className="deck_showcase_padding flex justify-center">
+        <img src={player.avatar === "default" ? `/major/${version}/avatar/${player.seed}.png` : player.avatar}
+          className="avatar"
+          alt="Avatar"
+        />
+    </div>}
     {playedMatches.length > 0 && <div className="deck_showcase_padding stat_showcase">
       {(() => {
         let ok = true
@@ -142,6 +148,46 @@ export default function MajorPlayerDetail ({ params }: { params: Promise<{ local
         <img src="/borders/normal.png"></img>
       </span>
     </div>
+    
+    {seeding && (() => {
+      let ok = true
+      let a = {
+        game_count: 0,
+        win_count: 0,
+        ban_count: 0
+      }
+      for(let m of playedMatches){
+        const player1 = getPlayer(m.matchid, 1, data, games, seeding)
+        if(!player1){ ok = false; return }
+        const currentPlayerIndex = player1.seed === player.seed ? 1 : 2
+
+        if(m.bans) if(m.bans[currentPlayerIndex-1] === deckIndex+1) a.ban_count++
+        m.games.forEach(g => {
+          if(g.deck_index[currentPlayerIndex-1] === deckIndex+1) a.game_count++
+          else return
+          if(g.winner === currentPlayerIndex) a.win_count++
+        })
+      }
+      if(ok) return <div className="deck_showcase_padding stat_showcase">
+        <div>
+          <div>{t("game_count")}</div>
+          <div>{a.game_count}</div>
+        </div>
+        <div>
+          <div>{t("win_count")}</div>
+          <div>{a.win_count}</div>
+        </div>
+        <div>
+          <div>{t("win_rate")}</div>
+          <div>{percentize(a.game_count === 0 ? 0 : a.win_count/a.game_count, locale)}</div>
+        </div>
+        <div>
+          <div>{t("ban_count")}</div>
+          <div>{a.ban_count}</div>
+        </div>
+      </div>
+    })()}
+    
     <div className="deck_showcase_padding flex gap-1.5 justify-center flex-wrap">
       {decklists[deckIndex].action_cards.map((c, index) => (
         <CardImageMedium

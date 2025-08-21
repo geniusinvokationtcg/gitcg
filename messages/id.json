@@ -88,6 +88,7 @@
     "game_count": "Jumlah Permainan",
     "win_count": "Menang",
     "win_rate": "Tingkat Kemenangan",
-    "best_advancement": "Babak Terakhir"
+    "best_advancement": "Babak Terakhir",
+    "ban_count": "Ban"
   }
 }

@@ -88,6 +88,7 @@
     "game_count": "Games",
     "win_count": "Wins",
     "win_rate": "Win Rate",
-    "best_advancement": "Best Advancement"
+    "best_advancement": "Best Advancement",
+    "ban_count": "Banned"
   }
 }

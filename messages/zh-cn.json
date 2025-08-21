@@ -88,6 +88,7 @@
     "game_count": "选用数",
     "win_count": "胜数",
     "win_rate": "胜率",
-    "best_advancement": "最佳战绩"
+    "best_advancement": "最佳战绩",
+    "ban_count": "禁用数"
   }
 }

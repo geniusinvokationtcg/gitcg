@@ -1,3 +1,4 @@
+import { UrlObject } from "url";
 import { routing } from "../i18n/routing";
 
 export type Locales = typeof routing.locales[number]
@@ -105,6 +106,7 @@ export interface MajorPlayer {
   seed: number
   uid: number
   deckcode: string[]
+  avatar?: string
 }
 
 export type Seeding = [number, number][];
