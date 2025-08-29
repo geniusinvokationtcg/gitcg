@@ -110,3 +110,50 @@ export interface MajorPlayer {
 }
 
 export type Seeding = [number, number][];
+
+interface CharacterCard {
+  id: number
+  name: string
+  element_type: number
+  role_skill_infos: {
+    skill_text: string
+    skill_costs: {
+      cost_type: string
+      icon: string
+      cost_num: string
+    }[]
+    type: string[]
+    resource: string
+    name: string
+    id: string
+  }[]
+  weapon: string
+  belongs: string[]
+  hp: number | string
+  resource: string
+}
+interface ActionCard {
+  id: number
+  name: string
+  content: string
+  action_type: string
+  rank_id: number
+  cost_num1: string
+  cost_type1_icon: string
+  cost_num2: string
+  cost_type2_icon: string
+  action_card_tags: string[]
+  resource: string
+  is_special: boolean
+}
+interface CardCode {
+  name: string
+  id: number
+  code: number
+  type: string
+}
+export interface CardsDataType {
+  characters: CharacterCard[]
+  actions: ActionCard[]
+  codes: CardCode[]
+}

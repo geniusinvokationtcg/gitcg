@@ -7,6 +7,7 @@ import { useTranslations } from "next-intl";
 import { useTranslatedServers } from "@/hooks/useTranslatedServers";
 import { useMajorData } from "@/hooks/useMajorData";
 import { useCopiedPopUp } from "@/hooks/utilities";
+import { useLocalCardsData } from "@/hooks/useLocalCardsData";
 import { CardImageMedium } from "@/components/CardImage";
 import { CustomButton } from "@/components/Button";
 import { SuccessNotification } from "@/components/PopUp";
@@ -25,6 +26,9 @@ export default function MajorPlayerDetail ({ params }: { params: Promise<{ local
   const majorMetadata = gameVersion.major.find(i => i.version === version);
   if(!majorMetadata) notFound();
   if(majorMetadata.server.indexOf(server) < 0) notFound();
+
+  const localCardsData = useLocalCardsData(locale)
+
   const g = useTranslations("General");
   const t = useTranslations("MajorRecap");
 
@@ -136,15 +140,15 @@ export default function MajorPlayerDetail ({ params }: { params: Promise<{ local
     </div>
     <div className="deck_showcase_padding character_cards_large">
       <span className="card_image_large">
-        <img src={getCardImageUrl("characters", decklists[deckIndex].character_cards[0], "id")} title={getCardName(decklists[deckIndex].character_cards[0], "characters", locale)}></img>
+        <img src={getCardImageUrl("characters", decklists[deckIndex].character_cards[0], "id")} title={getCardName(decklists[deckIndex].character_cards[0], localCardsData)}></img>
         <img src="/borders/normal.png"></img>
       </span>
       <span className="card_image_large">
-        <img src={getCardImageUrl("characters", decklists[deckIndex].character_cards[1], "id")} title={getCardName(decklists[deckIndex].character_cards[1], "characters", locale)}></img>
+        <img src={getCardImageUrl("characters", decklists[deckIndex].character_cards[1], "id")} title={getCardName(decklists[deckIndex].character_cards[1], localCardsData)}></img>
         <img src="/borders/normal.png"></img>
       </span>
       <span className="card_image_large">
-        <img src={getCardImageUrl("characters", decklists[deckIndex].character_cards[2], "id")} title={getCardName(decklists[deckIndex].character_cards[2], "characters", locale)}></img>
+        <img src={getCardImageUrl("characters", decklists[deckIndex].character_cards[2], "id")} title={getCardName(decklists[deckIndex].character_cards[2], localCardsData)}></img>
         <img src="/borders/normal.png"></img>
       </span>
     </div>
@@ -194,7 +198,7 @@ export default function MajorPlayerDetail ({ params }: { params: Promise<{ local
           key={index}
           cardType="actions"
           cardId={c}
-          locale={locale}
+          localCardsData={localCardsData}
         />
       ))}
     </div>

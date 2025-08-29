@@ -11,6 +11,7 @@ import { decode } from "@/utils/decoder";
 import { useTranslations } from "next-intl";
 import { useMajorData } from "@/hooks/useMajorData";
 import { useTranslatedServers } from "@/hooks/useTranslatedServers";
+import { useLocalCardsData } from "@/hooks/useLocalCardsData";
 import { CardImageMedium } from "@/components/CardImage";
 import { PlayCircleIcon } from '@heroicons/react/24/solid';
 
@@ -20,6 +21,8 @@ export default function MajorMatchDetail ({ params }: { params: Promise<{ locale
   const majorMetadata = gameVersion.major.find(i => i.version === version);
   if(!majorMetadata) notFound();
   if(majorMetadata.server.indexOf(server) < 0) notFound();
+
+  const localCardsData = useLocalCardsData(locale)
 
   const t = useTranslations("MajorRecap");
   
@@ -78,7 +81,7 @@ export default function MajorMatchDetail ({ params }: { params: Promise<{ locale
               cardType="characters"
               cardId={c}
               resize={true}
-              locale={locale}
+              localCardsData={localCardsData}
             />
           ))}
         </Link>
@@ -93,7 +96,7 @@ export default function MajorMatchDetail ({ params }: { params: Promise<{ locale
               cardType="characters"
               cardId={c}
               resize={true}
-              locale={locale}
+              localCardsData={localCardsData}
             />
           ))}
         </Link>
@@ -114,7 +117,7 @@ export default function MajorMatchDetail ({ params }: { params: Promise<{ locale
               cardType="characters"
               cardId={c}
               resize={true}
-              locale={locale}
+              localCardsData={localCardsData}
             />
           ))}
         </Link>
@@ -136,7 +139,7 @@ export default function MajorMatchDetail ({ params }: { params: Promise<{ locale
               cardType="characters"
               cardId={c}
               resize={true}
-              locale={locale}
+              localCardsData={localCardsData}
             />
           ))}
         </Link>

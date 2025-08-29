@@ -1,22 +1,20 @@
 import cardsData from "@/cards.json";
-import cardsData_cn from "@/cards_cn.json";
-import { CardType } from "./types"; 
+import { CardType, CardsDataType } from "./types";
+import { useLocalCardsData } from "@/hooks/useLocalCardsData";
 
 export function getCardImageUrl(
   cardType: CardType,
   keyword: string | number,
   byWhat?: "name" | "id"
-): string{
+): string | undefined {
   if(!byWhat) byWhat = "name";
   const cardList = cardType === "characters" ? cardsData.characters : cardsData.actions
-  return cardList.find(card => card[byWhat] === keyword)?.resource || "notFound()";
+  return cardList.find(card => card[byWhat] === keyword)?.resource || undefined;
 }
 
-export function getCardName (cardId: number, cardType: CardType, locale?: string): string {
-  const name = cardsData[cardType].find(c => c.id === cardId)?.name;
-  if(!name) return "";
-  const localized = localizeCardName(name, cardType, locale);
-  return localized || name;
+export function getCardName (cardId: number, localCardsData?: CardsDataType): string {
+  if(!localCardsData) localCardsData = cardsData
+  return localCardsData.codes.find(c => c.id === cardId)?.name || ""
 }
 
 export function getCardIdByName (cardName: string, cardType: CardType): number {
@@ -30,20 +28,9 @@ export function isArcaneLegend (cardId: number): boolean {
   return card.is_special;
 }
 
-export function localizeCardName (cardName: string, cardType: CardType, locale?: string): string {
-
-  if(!locale) return cardName;
-  const localizable = ["zh-cn"];
-  if(!localizable.includes(locale)) return cardName;
-  
-  if(locale === "zh-cn") {
-    var localCardsData = cardsData_cn;
-  } else {
-    return cardName;
-  }
-  
-  const cardId = cardsData[cardType].find(card => card.name === cardName)?.id;
-  if(!cardId) return cardName;
-    
-  return localCardsData[cardType].find(card => card.id === cardId)?.name || "error";
-}
+// export function localizeCardName (englishCardName: string, targetLocale: string): string {
+//   if(targetLocale === "en") return englishCardName
+//   const localCardsData = useLocalCardsData(targetLocale)
+//   const cardId = cardsData.codes.find(c => c.name === englishCardName)?.id || NaN
+//   return localCardsData.codes.find(c => c.id === cardId)?.name || englishCardName
+// }

@@ -9,9 +9,10 @@ import { usePageTitle } from "@/hooks/usePageTitle";
 import { useTranslatedServers } from "@/hooks/useTranslatedServers";
 import { useSortTable } from "@/hooks/useSortTable";
 import { useCopiedPopUp } from "@/hooks/utilities";
+import { useLocalCardsData } from "@/hooks/useLocalCardsData";
 import { useTranslations } from "next-intl";
 import { DeckData, SortingKey, Server } from "@/utils/types";
-import { getCardImageUrl, getCardName, getCardIdByName, localizeCardName } from '@/utils/cards';
+import { getCardImageUrl, getCardName, getCardIdByName } from '@/utils/cards';
 import { compileDeckData } from "@/utils/deckData";
 import { percentize } from "@/utils/formatting";
 import { handleCopy } from "@/utils/clipboard";
@@ -26,6 +27,8 @@ import { CardImageMedium } from "@/components/CardImage";
 export default function DeckShowcasePage({ params }: { params: Promise<{ locale: string; version: string; cardids: string }> }) {
   const { locale, version, cardids } = use(params);
   if(gameVersion.available.indexOf(version) < 0) notFound();
+
+  const localCardsData = useLocalCardsData(locale)
 
   const g = useTranslations("General");
   const t = useTranslations("DeckShowcasePage");
@@ -51,7 +54,7 @@ export default function DeckShowcasePage({ params }: { params: Promise<{ locale:
   const charactersNameSorted = charactersName.toSorted((a,b) => a.localeCompare(b));
   const characters = charactersNameSorted.join("\\\\");
   
-  usePageTitle(t("title", { version: version, lineup: charactersName.map(c => localizeCardName(c, "characters", locale)).join(" | ")}));
+  usePageTitle(t("title", { version: version, lineup: charactersId.map(cardId => getCardName(cardId, localCardsData)).join(" | ")}));
   
   const dataByCharacters: MatchDataOfSpecificCharacter[] = useMemo(() => {
     const seen: MatchDataOfSpecificCharacter[] = [];
@@ -178,19 +181,19 @@ export default function DeckShowcasePage({ params }: { params: Promise<{ locale:
 
   return <div className="max-w-220 mx-auto pb-3">
     <h1 className="deck_showcase_padding section_title">
-      {characterCards.map(c => getCardName(c, "characters", locale)).join(" | ")}
+      {characterCards.map(c => getCardName(c, localCardsData)).join(" | ")}
     </h1>
     <div className="deck_showcase_padding character_cards_large">
       <span className="card_image_large">
-        <img src={getCardImageUrl("characters", characterCards[0], "id")} title={getCardName(characterCards[0], "characters", locale)}></img>
+        <img src={getCardImageUrl("characters", characterCards[0], "id")} title={getCardName(characterCards[0], localCardsData)}></img>
         <img src="/borders/normal.png"></img>
       </span>
       <span className="card_image_large">
-        <img src={getCardImageUrl("characters", characterCards[1], "id")} title={getCardName(characterCards[1], "characters", locale)}></img>
+        <img src={getCardImageUrl("characters", characterCards[1], "id")} title={getCardName(characterCards[1], localCardsData)}></img>
         <img src="/borders/normal.png"></img>
       </span>
       <span className="card_image_large">
-        <img src={getCardImageUrl("characters", characterCards[2], "id")} title={getCardName(characterCards[2], "characters", locale)}></img>
+        <img src={getCardImageUrl("characters", characterCards[2], "id")} title={getCardName(characterCards[2], localCardsData)}></img>
         <img src="/borders/normal.png"></img>
       </span>
     </div>
@@ -225,7 +228,7 @@ export default function DeckShowcasePage({ params }: { params: Promise<{ locale:
           key={index}
           cardType="actions"
           cardId={c}
-          locale={locale}
+          localCardsData={localCardsData}
         />
       ))}
     </div>
@@ -281,11 +284,12 @@ export default function DeckShowcasePage({ params }: { params: Promise<{ locale:
               uniqueOpponents.length > 0
               ? uniqueOpponents.map(row => (
                 <tr key={`${row.character1}\\\\${row.character2}\\\\${row.character3}`}>
-                  <LineupShowcaseForTable 
+                  <LineupShowcaseForTable
                     characters={[row.charactersId[0], row.charactersId[1], row.charactersId[2]]}
                     border="normal"
                     locale={locale}
                     version={version}
+                    localCardsData={localCardsData}
                   />
                   <td>{row.game_count}</td>
                   <td>{row.win_count}</td>

@@ -1,20 +1,21 @@
 import Link from "next/link";
-import { getCardImageUrl, getCardName, localizeCardName } from '@/utils/cards';
-import { BorderType } from "@/utils/types";
+import { getCardImageUrl, getCardName } from '@/utils/cards';
+import { BorderType, CardsDataType } from "@/utils/types";
 import { ReactNode } from "react";
 import { useTranslations } from 'next-intl';
 
 export function LineupShowcaseForTable ({
-  characters, border, disableLink, locale, version
+  characters, border, disableLink, locale, version, localCardsData
 }: {
   characters: [number, number, number];
   border: BorderType | [BorderType, BorderType, BorderType];
   disableLink?: boolean;
   locale: string;
   version: string;
+  localCardsData: CardsDataType;
 }) {
   if(typeof border === "string") border = [border, border, border];
-  const charactersName = characters.map(c => getCardName(c, "characters", locale));
+  const charactersName = characters.map(c => getCardName(c, localCardsData));
 
   const children = <div className={"flex items-center justify-center gap-0.5 " + (disableLink ? "" : "cursor-pointer")}>
     <span className="hidden md:block w-[220px]">

@@ -6,6 +6,7 @@ import { use, useState, useMemo } from "react";
 import { useWeeklyData } from "@/hooks/useWeeklyData"
 import { usePageTitle } from "@/hooks/usePageTitle"
 import { useTranslatedServers } from "@/hooks/useTranslatedServers";
+import { useLocalCardsData } from '@/hooks/useLocalCardsData';
 import { useTranslations } from "next-intl";
 import { CustomSelect, ColumnVisibilityDropdown } from "@/components/Dropdown";
 import { LineupShowcaseForTable, NoDataAvailable, ColumnHeaderWithSorter } from "@/components/Table";
@@ -17,6 +18,7 @@ import { useSortTable } from '@/hooks/useSortTable';
 export default function WeeklyStatPageClient({ params }: { params: Promise<{ locale: string; version: string }> }){
   const { locale, version } = use(params);
   if(gameVersion.available.indexOf(version) < 0) notFound();
+  const localCardsData = useLocalCardsData(locale)
   const t = useTranslations("WeeklyStatistic");
   const h = useTranslations("WeeklyStatistic.tableHeader");
   usePageTitle(t("title", {version: version}));
@@ -165,6 +167,7 @@ export default function WeeklyStatPageClient({ params }: { params: Promise<{ loc
                 border="normal"
                 locale={locale}
                 version={version}
+                localCardsData={localCardsData}
               />
               {tableHeader.toSpliced(0, 1).filter(col => col.isShown).map((col) => (
                 <td key={col.key}>
