@@ -96,8 +96,8 @@
       "best_of": 3,
       "matchid": 1,
       "bans": [
-        null,
-        null
+        3,
+        3
       ],
       "games": []
     },
@@ -106,18 +106,23 @@
       "best_of": 3,
       "matchid": 2,
       "bans": [
-        null,
-        null
+        3,
+        3
       ],
-      "games": []
+      "games": [
+        {
+          "deck_index": [1, 2],
+          "winner": null
+        }
+      ]
     },
     {
       "top": 8,
       "best_of": 3,
       "matchid": 3,
       "bans": [
-        null,
-        null
+        1,
+        3
       ],
       "games": []
     },
