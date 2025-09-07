@@ -111,7 +111,17 @@
       ],
       "games": [
         {
-          "deck_index": [1, 2],
+          "deck_index": [
+            1,
+            2
+          ],
+          "winner": 2
+        },
+        {
+          "deck_index": [
+            1,
+            1
+          ],
           "winner": null
         }
       ]
