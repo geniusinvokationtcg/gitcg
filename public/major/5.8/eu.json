@@ -1,0 +1,165 @@
+{
+  "max_players": 8,
+  "players": [
+    {
+      "playerid": 143,
+      "name": "Silky <3",
+      "seed": 1,
+      "deckcode": [
+        "FtDA8SEPAxAR8nUPFSBx9FcPHEAR9cEPDFAQ9sEPDGCA/MgPDMHwus8bDaEgCtIQDaAA",
+        "GhBR0UENGbCQ9pcPCWFxCDAQE4EBO1cTFbFwisQQDKFAE8YRDDFg1MkdDEGQ3NAdDcAA",
+        "EfBR3x4OGADR4JAPCVBw9pcPFWFxA1cYDKFgisYQDKGQE8kRDTEA1NEdDUEQ3NsdDcAA"
+      ],
+      "avatar": "default"
+    },
+    {
+      "playerid": 37,
+      "name": "Ebrithil",
+      "seed": 2,
+      "deckcode": [
+        "FWDwyQ8MGpBB0GINFhAg0Z0PCWDR+TAZE2EB6lceFaFwPr8TC+Hw1MQdDEFA3MYdDMAA",
+        "HWDQxiYMFJDxyeANEgDB0SwNCRDQ9p0PE2EBCDAQFYFxPlcTC+Hw1L8dDEFA3MQdDMAA",
+        "EfBR4B4OGADQ9JcPCVBx9lcPFWFwA8YQDDFgiskYDKGQE9ARDTEA1NEdDUEQ3N8dDcAA"
+      ],
+      "avatar": "default"
+    },
+    {
+      "playerid": 190,
+      "name": "科巴尔",
+      "seed": 3,
+      "deckcode": [
+        "EUBwyQ8MFZDxy2IMFrAg0ZwNCRHAo50PCUDR9YIPGFAh9p4PGWHgC8IRDBEgacQdDEAA",
+        "HUDRxOwMFGDxxuAMEpDBySwNCRDQ0Z0NE7AB9jAPFWFx+FcTC+Hw1L8dE8Fh3DYeDLAA",
+        "HWBRypgMEaBh0dcaEjCh9CoPCUBw9pcTCrEAO6AQCrFBDFcQFcFxD5MRGQEwEMYdDMAA"
+      ],
+      "avatar": "default"
+    },
+    {
+      "playerid": 5,
+      "name": "ActualCube",
+      "seed": 4,
+      "deckcode": [
+        "AGDxyd0MFZDx0GINFhAg0Z0PCWDR9jAZE2EB6lceFaFwPr8TC+Hw1MQdDEFA3MYdDMAA",
+        "GPDR3xUOEQDg4JcPCUBx9VcPFWBw9sYYDKFgiskQDKGQE9ARDTEA1NEdDUEQ3N0dDcAA",
+        "AFGxhbINGODB6Y8OG5BQ6pcOCaBw9KQPCkBB9VcPFWFwO7QTC7Fg1L0dE0Fh3DYdGMAA"
+      ],
+      "avatar": "default"
+    },
+    {
+      "playerid": 70,
+      "name": "Kalomon",
+      "seed": 5,
+      "deckcode": [
+        "HWDQyQ8MFZDx0GINFhAg0Z0PCWDR9jAZE2EB6lceFaFwPr8TC+Hw1MQdDEFA3MYdDMAA",
+        "HZDhyXINGxDQ0ZAVEqHxo0cPCWHQip0cC0HwC78QE7FhEDYRDAFQ1MUdDEFg3MYdDMAA",
+        "GNDR3x4NEfBR4JAOCQBw9pcPFWFxAFcYC6HQisYQDKFgE8kRDDGQ1NAdDUEQ3NEdDcAA"
+      ],
+      "avatar": "default"
+    },
+    {
+      "playerid": 279,
+      "name": "Огурчик238",
+      "seed": 6,
+      "deckcode": [
+        "GmBBycYMApAR0cgNHBCB1acPCEDg9J0PCWDR9jAZE2EBC1cQFbFw1MQdDEFA3MYdDMAA",
+        "HZBg2RwNFKAg5VgOCVAA9JAPCUFwBZcQE1ExOzMTFbFxilcYDKEQ28EdG7GR3LkdDcAA",
+        "ETBxw98YF3EAh4AaCDAA9J0PCUHQA6MQCjExBIEQGEEQir0YGKFR6IUeDIEg3MIdDMAA"
+      ],
+      "avatar": "default"
+    },
+    {
+      "playerid": 318,
+      "name": "StarDuck",
+      "seed": 7,
+      "deckcode": [
+        "FRHAWhcPAkBh9GMPFlAw9psPFGGBaEgZGGERlrcfDIFgCsYWDJGQackdDUEA3NEdDcAA",
+        "GxAR0d4aGzDQ9JAPEkDx9kcQCWHQxJ0cC0Hw078QDLFQC8UQDMFg1MYdDEGQ3MkdDcAA",
+        "GPDR3xUOEQDh4JAPCUBw9ZcPFWBx9lcYDKFgisYQDKGQE8kRDTEA1NEdDUEQ3N0dDcAA"
+      ],
+      "avatar": "default"
+    },
+    {
+      "playerid": 163,
+      "name": ".utopial",
+      "seed": 8,
+      "deckcode": [
+        "ABBw0ycNETGA54MOCOAw7ooPCECg9I4PCGDg9pcQCWFwBsUTDLFQ1MkdDEGQ3NEdDcAA",
+        "GPDR3x4OEQBQ4JcPCUBx9lcPFWFwAL0YDKFgisYQDKGQE8kRDTEA1NEdDUEQ3N0dDcAA",
+        "HVHRNqQTFWDxxKcMFkEhWmIYCYDA9JwPCUDQ9p0PGGAh+YIPGZHg07YdCzFg1L0dE0AA"
+      ],
+      "avatar": "default"
+    }
+  ],
+  "bracket": [
+    {
+      "top": 8,
+      "best_of": 3,
+      "matchid": 1,
+      "bans": [
+        null,
+        null
+      ],
+      "games": []
+    },
+    {
+      "top": 8,
+      "best_of": 3,
+      "matchid": 2,
+      "bans": [
+        null,
+        null
+      ],
+      "games": []
+    },
+    {
+      "top": 8,
+      "best_of": 3,
+      "matchid": 3,
+      "bans": [
+        null,
+        null
+      ],
+      "games": []
+    },
+    {
+      "top": 8,
+      "best_of": 3,
+      "matchid": 4,
+      "bans": [
+        null,
+        null
+      ],
+      "games": []
+    },
+    {
+      "top": 4,
+      "best_of": 3,
+      "matchid": 5,
+      "bans": [
+        null,
+        null
+      ],
+      "games": []
+    },
+    {
+      "top": 4,
+      "best_of": 3,
+      "matchid": 6,
+      "bans": [
+        null,
+        null
+      ],
+      "games": []
+    },
+    {
+      "top": 2,
+      "best_of": 3,
+      "matchid": 7,
+      "bans": [
+        null,
+        null
+      ],
+      "games": []
+    }
+  ]
+}

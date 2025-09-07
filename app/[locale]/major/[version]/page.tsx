@@ -98,7 +98,7 @@ export default function MajorRecap ({ params }: { params: Promise<{ locale: stri
                         {playerData1?.name || ""}
                       </span>
                       <span className={`py-2 bg-gray-200 group-hover:bg-gray-300 transition-all duration-200 min-w-8 flex justify-center items-center ${playerData1 ? (playerData1.name === winner?.name ? "font-semibold" : "") : ""}`}>
-                        {typeof score1 === "number" ? score1 : ""}
+                        {playerData1 && typeof score1 === "number" ? score1 : ""}
                       </span>
                     </div>
                     <div className="flex flex-row gap-0.5 justify-between h-8">
@@ -106,7 +106,7 @@ export default function MajorRecap ({ params }: { params: Promise<{ locale: stri
                         {playerData2?.name || ""}
                       </span>
                       <span className={`py-2 bg-gray-200 group-hover:bg-gray-300 transition-all duration-200 min-w-8 flex justify-center items-center ${playerData2 ? (playerData2.name === winner?.name ? "font-semibold" : "") : ""}`}>
-                        {typeof score2 === "number" ? score2 : ""}
+                        {playerData2 && typeof score2 === "number" ? score2 : ""}
                       </span>
                     </div>
                   </div>

@@ -86,7 +86,7 @@ export default function MajorPlayerDetail ({ params }: { params: Promise<{ local
   // const characterCards = decoded.splice(0, 3)
   // const actionCards = decoded
 
-  return <div className="max-w-220 mx-auto pb-3">
+  return <div className="showcase_page_margin">
     <h1 className="deck_showcase_padding mt-3 section_title">
       {title}
     </h1>

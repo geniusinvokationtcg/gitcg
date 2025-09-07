@@ -107,8 +107,9 @@ select {
   @apply text-gray-300 cursor-not-allowed
 }
 
-
-
+.showcase_page_margin {
+  @apply max-w-220 mx-auto pb-3
+}
 .deck_showcase_padding {
   @apply px-3 pt-3
 }
@@ -224,8 +225,10 @@ select {
 img.avatar {
   border-radius: 50%;
   width: 160px;
+  height: 160px;
   object-fit: cover;
   @media (width < 48rem /* 768px */) {
     width: 120px;
+    height: 120px;
   }
 }

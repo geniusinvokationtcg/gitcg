@@ -179,7 +179,7 @@ export default function DeckShowcasePage({ params }: { params: Promise<{ locale:
   if(error) return <p>Uh, there seems to be a trouble<br />{error.message}</p>
   if(dataByCharacters.length === 0) notFound();
 
-  return <div className="max-w-220 mx-auto pb-3">
+  return <div className="showcase_page_margin">
     <h1 className="deck_showcase_padding section_title">
       {characterCards.map(c => getCardName(c, localCardsData)).join(" | ")}
     </h1>

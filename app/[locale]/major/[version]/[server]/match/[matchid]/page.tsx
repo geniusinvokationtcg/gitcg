@@ -71,7 +71,7 @@ export default function MajorMatchDetail ({ params }: { params: Promise<{ locale
       <div className="whitespace-nowrap">{score1} – {score2}</div>
       <div className="text-center"><Link href={`${playerPath}/${player2.seed}`} className="hover:underline">{player2.name}</Link></div>
     </div>
-    {match.bans && <div className="major_match_row">
+    {match.bans && !match.bans.some(b => typeof b !== "number") && <div className="major_match_row">
       <div className="deck_container ban left_player">
         <div>{t("banned")}</div>
         <Link href={`${playerPath}/${player1.seed}?d=${match.bans[0]-1}`}>
