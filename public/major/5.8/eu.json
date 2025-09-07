@@ -163,6 +163,20 @@
             1
           ],
           "winner": 2
+        },
+        {
+          "deck_index": [
+            3,
+            2
+          ],
+          "winner": 1
+        },
+        {
+          "deck_index": [
+            2,
+            2
+          ],
+          "winner": 1
         }
       ]
     },
