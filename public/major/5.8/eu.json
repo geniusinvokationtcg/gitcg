@@ -249,10 +249,18 @@
       "best_of": 3,
       "matchid": 6,
       "bans": [
-        null,
-        null
+        2,
+        3
       ],
-      "games": []
+      "games": [
+        {
+          "deck_index": [
+            3,
+            2
+          ],
+          "winner": null
+        }
+      ]
     },
     {
       "top": 2,
