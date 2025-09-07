@@ -180,6 +180,13 @@
             3,
             3
           ],
+          "winner": 1
+        },
+        {
+          "deck_index": [
+            1,
+            1
+          ],
           "winner": null
         }
       ]
