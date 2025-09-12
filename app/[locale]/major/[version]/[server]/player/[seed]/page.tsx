@@ -1,7 +1,7 @@
 'use client';
 
-import { notFound, useSearchParams } from "next/navigation";
-import gameVersion from "@/game-version.json"
+import { notFound, redirect, usePathname, useSearchParams } from "next/navigation";
+import { gameVersion, getVerLabel } from "@/utils/version";
 import { use, useState } from "react"
 import { useTranslations } from "next-intl";
 import { useTranslatedServers } from "@/hooks/useTranslatedServers";
@@ -11,7 +11,7 @@ import { useLocalCardsData } from "@/hooks/useLocalCardsData";
 import { CardImageMedium } from "@/components/CardImage";
 import { CustomButton } from "@/components/Button";
 import { SuccessNotification } from "@/components/PopUp";
-import { ServerPure, EliminationBracketMatch } from "@/utils/types";
+import { ServerPure, EliminationBracketMatch, Locales } from "@/utils/types";
 import { getCardImageUrl, getCardName } from "@/utils/cards";
 import { generateRoundStructure } from "@/utils/brackets";
 import { getWinner, getPlayer, getRoundNameKey } from "@/utils/major";
@@ -20,9 +20,15 @@ import { handleCopy } from "@/utils/clipboard";
 import { percentize } from "@/utils/formatting";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 
-export default function MajorPlayerDetail ({ params }: { params: Promise<{ locale: string; version: string; server: ServerPure; seed: number }> }) {
+export default function MajorPlayerDetail ({ params }: { params: Promise<{ locale: Locales; version: string; server: ServerPure; seed: number }> }) {
   const { locale, version, server } = use(params);
   let { seed } = use(params); seed = Number(seed);
+  const searchParams = useSearchParams();
+  const d = searchParams.get("d")
+
+  const pathname = usePathname()
+  if(version in gameVersion.redirect) redirect(`${pathname.replace(version, gameVersion.redirect[version as keyof typeof gameVersion.redirect])}?d=${d}`);
+  
   const majorMetadata = gameVersion.major.find(i => i.version === version);
   if(!majorMetadata) notFound();
   if(majorMetadata.server.indexOf(server) < 0) notFound();
@@ -31,9 +37,7 @@ export default function MajorPlayerDetail ({ params }: { params: Promise<{ local
 
   const g = useTranslations("General");
   const t = useTranslations("MajorRecap");
-
-  const searchParams = useSearchParams();
-  const d = searchParams.get("d")
+  
   const [deckIndex, setDeckIndex] = useState<number>(isNaN(Number(d)) ? 0 : Number(d));
 
   const serverList = useTranslatedServers(); 
@@ -50,7 +54,7 @@ export default function MajorPlayerDetail ({ params }: { params: Promise<{ local
   if(!player) notFound()
   
   const title = t("player_title", {
-    version: version,
+    version: getVerLabel(version, locale),
     server: serverName || server.toUpperCase(),
     seed: seed
   })

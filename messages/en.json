@@ -11,7 +11,8 @@
     "open_in_deck_builder": "Open in deck builder",
     "copied": "Copied",
     "no_data": "Pita has searched through the database, but Pita didn't find any data available.",
-    "not_found": "Pita gets confused because she can't find the URL you asked for.<br></br>It probably doesn't exist. So, let's just get you back <home>home</home>."
+    "not_found": "Pita gets confused because she can't find the URL you asked for.<br></br>It probably doesn't exist. So, let's just get you back <home>home</home>.",
+    "loading": "Loading…"
   },
   "Footer": {
     "description": "GITCG is a community for the collectible card minigame of Genshin Impact: Genius Invokation TCG. We're not affiliated with HoYoverse in any way."

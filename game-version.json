@@ -1,24 +1,48 @@
 {
   "latest": "6-0",
   "available": [
-    "5.6","5.8"
+    "5-6", "5-8", "6-0"
   ],
   "major": [
     {
-      "version": "5.8",
+      "version": "5-8",
       "server": ["eu"]
     },
     {
-      "version": "5.6",
+      "version": "5-6",
       "server": ["as"]
     },
     {
-      "version": "5.5",
+      "version": "5-5",
       "server": ["na"]
     },
     {
-      "version": "5.4",
+      "version": "5-4",
       "server": ["eu"]
+    }
+  ],
+  "redirect": {
+    "5.8": "5-8",
+    "5.6": "5-6",
+    "5.5": "5-5",
+    "5.4": "5-4"
+  },
+  "special_label": [
+    {
+      "version": "6-0",
+      "label": {
+        "en": "Luna I",
+        "id": "Candra I",
+        "zh-cn": "月之一"
+      }
+    },
+    {
+      "version": "6-1",
+      "label": {
+        "en": "Luna II",
+        "id": "Candra II",
+        "zh-cn": "月之二"
+      }
     }
   ]
 }

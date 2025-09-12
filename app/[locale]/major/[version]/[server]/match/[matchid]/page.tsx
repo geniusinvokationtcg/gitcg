@@ -1,10 +1,10 @@
 'use client';
 
-import { notFound } from "next/navigation";
-import gameVersion from "@/game-version.json"
+import { notFound, redirect, usePathname } from "next/navigation";
+import { gameVersion, getVerLabel } from "@/utils/version";
 import Link from "next/link";
 import { use } from "react";
-import { ServerPure, MajorPlayer } from "@/utils/types";
+import { ServerPure, MajorPlayer, Locales } from "@/utils/types";
 import { getPlayer } from "@/utils/major";
 import { generateRoundStructure } from "@/utils/brackets";
 import { decode } from "@/utils/decoder";
@@ -15,9 +15,11 @@ import { useLocalCardsData } from "@/hooks/useLocalCardsData";
 import { CardImageMedium } from "@/components/CardImage";
 import { PlayCircleIcon } from '@heroicons/react/24/solid';
 
-export default function MajorMatchDetail ({ params }: { params: Promise<{ locale: string; version: string; server: ServerPure; matchid: number }> }) {
+export default function MajorMatchDetail ({ params }: { params: Promise<{ locale: Locales; version: string; server: ServerPure; matchid: number }> }) {
   const { locale, version, server } = use(params);
   let { matchid } = use(params); matchid = Number(matchid);
+  const pathname = usePathname()
+  if(version in gameVersion.redirect) redirect(pathname.replace(version, gameVersion.redirect[version as keyof typeof gameVersion.redirect]));
   const majorMetadata = gameVersion.major.find(i => i.version === version);
   if(!majorMetadata) notFound();
   if(majorMetadata.server.indexOf(server) < 0) notFound();
@@ -46,7 +48,7 @@ export default function MajorMatchDetail ({ params }: { params: Promise<{ locale
   const score2 = match.games.reduce((s, game) => (game.winner === 2 ? s+1 : s), 0);
 
   const title = t("match_title", {
-    version: version,
+    version: getVerLabel(version, locale),
     server: serverName || server.toUpperCase(),
     match: matchid
   });

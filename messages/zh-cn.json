@@ -11,7 +11,8 @@
     "open_in_deck_builder": "打开构筑",
     "copied": "已复制",
     "no_data": "皮塔翻遍数据库，啥也没找到！",
-    "not_found": "皮塔晕头转向没找到这个网址！<br></br>它可能溜走了，先回<home>主页</home>歇歇吧~"
+    "not_found": "皮塔晕头转向没找到这个网址！<br></br>它可能溜走了，先回<home>主页</home>歇歇吧~",
+    "loading": "加载中⋯"
   },
   "Footer": {
     "description": "GITCG是《原神·七圣召唤》卡牌游戏的玩家社区，与米哈游或HoYoverse官方无任何关联。"

@@ -1,7 +1,7 @@
 'use client';
 
-import { redirect, notFound } from 'next/navigation';
-import gameVersion from "@/game-version.json";
+import { redirect, notFound, usePathname } from 'next/navigation';
+import { gameVersion, getVerLabel } from "@/utils/version";
 import { use, useState, useMemo } from "react";
 import { useWeeklyData } from "@/hooks/useWeeklyData"
 import { usePageTitle } from "@/hooks/usePageTitle"
@@ -10,18 +10,21 @@ import { useLocalCardsData } from '@/hooks/useLocalCardsData';
 import { useTranslations } from "next-intl";
 import { CustomSelect, ColumnVisibilityDropdown } from "@/components/Dropdown";
 import { LineupShowcaseForTable, NoDataAvailable, ColumnHeaderWithSorter } from "@/components/Table";
-import { Server, DeckData, SortingKey } from '@/utils/types'
+import { Locales, Server, DeckData, SortingKey } from '@/utils/types'
 import { compileDeckData } from '@/utils/deckData';
 import { percentize } from "@/utils/formatting";
 import { useSortTable } from '@/hooks/useSortTable';
 
-export default function WeeklyStatPageClient({ params }: { params: Promise<{ locale: string; version: string }> }){
+export default function WeeklyStatPageClient({ params }: { params: Promise<{ locale: Locales; version: string }> }){
   const { locale, version } = use(params);
+  const pathname = usePathname()
+  if(version in gameVersion.redirect) redirect(pathname.replace(version, gameVersion.redirect[version as keyof typeof gameVersion.redirect]));
   if(gameVersion.available.indexOf(version) < 0) notFound();
+  
   const localCardsData = useLocalCardsData(locale)
   const t = useTranslations("WeeklyStatistic");
   const h = useTranslations("WeeklyStatistic.tableHeader");
-  usePageTitle(t("title", {version: version}));
+  usePageTitle(t("title", {version: getVerLabel(version, locale)}));
   
   const [server, setServer] = useState<Server>("all");
   const serverList = useTranslatedServers();
@@ -119,8 +122,8 @@ export default function WeeklyStatPageClient({ params }: { params: Promise<{ loc
   return <div className="mx-auto p-6 text-xs min-w-screen">
     <div className="mb-6 gap-2 dropdowns_container">
       <CustomSelect
-        options={gameVersion.available.toReversed().map(v => ({ value: v, label: v }))}
-        value={version}
+        options={gameVersion.available.toReversed().map(v => ({ value: v, label: getVerLabel(v, locale) }))}
+        value={getVerLabel(version, locale)}
         onChange={changeVersion}
       />
       <CustomSelect

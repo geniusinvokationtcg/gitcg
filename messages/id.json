@@ -11,7 +11,8 @@
     "open_in_deck_builder": "Buka di penyusun dek",
     "copied": "Disalin",
     "no_data": "Pita sudah coba cari, tapi Pita gak ketemu data apa pun.",
-    "not_found": "Pita kebingungan karena gak ketemu URL yang kamu minta.<br></br>Mungkin URL itu gak ada. Ayo kita pulang ke <home>beranda</home>."
+    "not_found": "Pita kebingungan karena gak ketemu URL yang kamu minta.<br></br>Mungkin URL itu gak ada. Ayo kita pulang ke <home>beranda</home>.",
+    "loading": "Memuat…"
   },
   "Footer": {
     "description": "GITCG adalah komunitas permainan kartu dalam Genshin Impact: Genius Invokation TCG. Kami tidak terafiliasi dengan HoYoverse sama sekali."

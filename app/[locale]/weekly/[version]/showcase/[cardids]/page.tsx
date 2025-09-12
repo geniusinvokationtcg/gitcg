@@ -1,7 +1,7 @@
 'use client';
 
-import gameVersion from "@/game-version.json";
-import { notFound } from 'next/navigation';
+import { gameVersion, getVerLabel } from '@/utils/version';
+import { notFound, redirect, usePathname } from 'next/navigation';
 import { use, useEffect, useMemo, useState } from 'react';
 import { decode, decodeAndSortActionCards } from '@/utils/decoder';
 import { useWeeklyData } from "@/hooks/useWeeklyData";
@@ -11,7 +11,7 @@ import { useSortTable } from "@/hooks/useSortTable";
 import { useCopiedPopUp } from "@/hooks/utilities";
 import { useLocalCardsData } from "@/hooks/useLocalCardsData";
 import { useTranslations } from "next-intl";
-import { DeckData, SortingKey, Server } from "@/utils/types";
+import { Locales, DeckData, SortingKey, Server } from "@/utils/types";
 import { getCardImageUrl, getCardName, getCardIdByName } from '@/utils/cards';
 import { compileDeckData } from "@/utils/deckData";
 import { percentize } from "@/utils/formatting";
@@ -24,8 +24,10 @@ import { LineupShowcaseForTable, NoDataAvailable, ColumnHeaderWithSorter } from 
 import { CustomSelect } from "@/components/Dropdown";
 import { CardImageMedium } from "@/components/CardImage";
 
-export default function DeckShowcasePage({ params }: { params: Promise<{ locale: string; version: string; cardids: string }> }) {
+export default function DeckShowcasePage({ params }: { params: Promise<{ locale: Locales; version: string; cardids: string }> }) {
   const { locale, version, cardids } = use(params);
+  const pathname = usePathname()
+  if(version in gameVersion.redirect) redirect(pathname.replace(version, gameVersion.redirect[version as keyof typeof gameVersion.redirect]));
   if(gameVersion.available.indexOf(version) < 0) notFound();
 
   const localCardsData = useLocalCardsData(locale)
@@ -54,7 +56,7 @@ export default function DeckShowcasePage({ params }: { params: Promise<{ locale:
   const charactersNameSorted = charactersName.toSorted((a,b) => a.localeCompare(b));
   const characters = charactersNameSorted.join("\\\\");
   
-  usePageTitle(t("title", { version: version, lineup: charactersId.map(cardId => getCardName(cardId, localCardsData)).join(" | ")}));
+  usePageTitle(t("title", { version: getVerLabel(version, locale), lineup: charactersId.map(cardId => getCardName(cardId, localCardsData)).join(" | ")}));
   
   const dataByCharacters: MatchDataOfSpecificCharacter[] = useMemo(() => {
     const seen: MatchDataOfSpecificCharacter[] = [];

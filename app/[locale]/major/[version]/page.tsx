@@ -1,8 +1,8 @@
 'use client';
 
 import Link from "next/link"
-import { redirect, notFound } from "next/navigation";
-import gameVersion from "@/game-version.json"
+import { redirect, notFound, usePathname } from "next/navigation";
+import { gameVersion, getVerLabel } from "@/utils/version";
 import { usePageTitle } from "@/hooks/usePageTitle";
 import { use, useState } from "react";
 import { useMajorData } from "@/hooks/useMajorData";
@@ -11,14 +11,16 @@ import { generateRoundStructure } from "@/utils/brackets";
 import { getPlayer, getRoundNameKey } from "@/utils/major"
 import { useTranslations } from "next-intl";
 import { CustomSelect } from "@/components/Dropdown";
-import { ServerPure } from "@/utils/types";
+import { Locales, ServerPure } from "@/utils/types";
 
-export default function MajorRecap ({ params }: { params: Promise<{ locale: string; version: string }> }) {
+export default function MajorRecap ({ params }: { params: Promise<{ locale: Locales; version: string }> }) {
   const { locale, version } = use(params);
+  const pathname = usePathname()
+  if(version in gameVersion.redirect) redirect(pathname.replace(version, gameVersion.redirect[version as keyof typeof gameVersion.redirect]));
   const majorMetadata = gameVersion.major.find(i => i.version === version);
   if(!majorMetadata) notFound();
   const t = useTranslations("MajorRecap");
-  usePageTitle( t("title", { version: version } ));
+  usePageTitle( t("title", { version: getVerLabel(version, locale) } ));
 
   const [server, setServer] = useState<ServerPure>(majorMetadata.server[0] as ServerPure);
   const serverList = useTranslatedServers();
@@ -33,8 +35,8 @@ export default function MajorRecap ({ params }: { params: Promise<{ locale: stri
   return <div className="min-w-screen p-6 mx-auto">
     <div className="mb-6 dropdowns_container gap-2">
       <CustomSelect
-        options={gameVersion.major.map(i => ({ value: i.version, label: i.version }))}
-        value={version}
+        options={gameVersion.major.map(i => ({ value: i.version, label: getVerLabel(i.version, locale) }))}
+        value={getVerLabel(version, locale)}
         onChange={(newVersion: string) => { redirect(`/${locale}/major/${newVersion}`) }}
       />
       <CustomSelect
