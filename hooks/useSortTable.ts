@@ -4,10 +4,16 @@ export function useSortTable<T>() {
   const [sortKey, setSortKey] = useState<null | keyof T>(null);
   const [sortAsc, setSortAsc] = useState<boolean>(false);
   
-  const handleSort = (key: null | keyof T) => {
-    if(sortKey !== key) { setSortKey(key); setSortAsc(false); }
-    else if(sortKey === key && !sortAsc) { setSortAsc(true); }
-    else { setSortKey(null); setSortAsc(false); }
+  const handleSort = (key: null | keyof T, isAscendingFirst?: boolean) => {
+    if(isAscendingFirst){
+      if(sortKey !== key) { setSortKey(key); setSortAsc(true); }
+      else if(sortKey === key && sortAsc) { setSortAsc(false); }
+      else { setSortKey(null); setSortAsc(false); }
+    } else {
+      if(sortKey !== key) { setSortKey(key); setSortAsc(false); }
+      else if(sortKey === key && !sortAsc) { setSortAsc(true); }
+      else { setSortKey(null); setSortAsc(false); }
+    }
   };
 
   return {

@@ -17,3 +17,13 @@ export async function parseCSV<T>(
     return ErrorResult(e instanceof Error ? e.message : "Failed to load data");
   }
 }
+
+export async function parseCSVIgnoreErr<T>(
+  url: string,
+  config: {}
+): Promise<T[]> {
+  const res = await fetch(url)
+  const csvText = await res.text()
+  const parsed = Papa.parse<T>(csvText, config)
+  return parsed.data
+}

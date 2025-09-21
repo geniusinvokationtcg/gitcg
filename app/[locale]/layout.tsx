@@ -6,6 +6,7 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/footer';
+import { TanstackProvider } from "@/components/providers/tanstack-provider";
 import "./globals.css";
 
 export const metadata = {
@@ -28,7 +29,7 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: Promise<{locale: string}>;
 }) {
-  // Ensure that the incoming `locale` is valid
+  // Ensure that the incoming 'locale' is valid
   const {locale} = await params;
   if (!hasLocale(routing.locales, locale)) {
     notFound();
@@ -47,7 +48,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages} locale={locale}>
           <Navbar locale={locale}/>
           <main className="flex justify-center flex-grow">
-            {children}
+            <TanstackProvider>{children}</TanstackProvider>
           </main>
           <Footer />
         </NextIntlClientProvider>

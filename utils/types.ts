@@ -1,4 +1,3 @@
-import { UrlObject } from "url";
 import { routing } from "../i18n/routing";
 
 export type Locales = typeof routing.locales[number]
@@ -19,9 +18,23 @@ export interface SortingKey<T> {
   isAscending: boolean;
 }
 
+export interface DuelistRecord {
+  playerid: number
+  handle_display: string
+}
+
+export interface BannedPlayer {
+  playerid: number
+  uid: number[]
+  starting: string
+  ending?: string
+}
+
 export interface MatchData {
   player1: string;
   player2: string;
+  playerid1: number;
+  playerid2: number
   deckcode1: string;
   deckcode2: string;
   characters1: string;
@@ -38,6 +51,34 @@ export interface MatchData {
   matchNum: number;
   week: number;
   game: number;
+}
+
+export interface MatchDataOfSpecific {
+  deckcode: string;
+  cardsId: string; //cardsId refers to the id of all character and action cards combined
+  opponent: string;
+  opponent_playerid: number | null;
+  score: number;
+  isDrop: boolean | null | "";
+  isBye: boolean | null | "";
+  isTie: boolean | null | "";
+  isIncluded: boolean | null | "";
+  isMirror: boolean;
+  server: "AS" | "EU" | "NA";
+  matchNum: number;
+  week: number;
+  game: number;
+}
+
+export interface OpponentData {
+  character1: string;
+  character2: string;
+  character3: string;
+  charactersId: number[];
+  game_count: number;
+  win_count: number;
+  win_rate: number;
+  tie_count: number;
 }
 
 export interface PlayerData {
@@ -156,4 +197,17 @@ export interface CardsDataType {
   characters: CharacterCard[]
   actions: ActionCard[]
   codes: CardCode[]
+}
+
+export interface Seasons {
+  na: Season[]
+  eu: Season[]
+  as: Season[]
+}
+
+export interface Season {
+  versions: string[]
+  best_finish?: number //if this value is undefined or 0, the season has no major
+  qualification_type?: "top_8"
+  is_hidden?: boolean
 }

@@ -64,7 +64,7 @@ export default function MajorMatchDetail ({ params }: { params: Promise<{ locale
 
   const playerPath = `/${locale}/major/${version}/${server}/player`
 
-  return <div className="w-[406px] md:w-[556px] mx-auto pb-3">
+  return <div className="w-[406px] md:w-[556px] mx-auto my-6">
     <h1 className="major_match_padding section_title">
       {title}
     </h1>

@@ -12,7 +12,13 @@
     "copied": "Copied",
     "no_data": "Pita has searched through the database, but Pita didn't find any data available.",
     "not_found": "Pita gets confused because she can't find the URL you asked for.<br></br>It probably doesn't exist. So, let's just get you back <home>home</home>.",
-    "loading": "Loading…"
+    "loading": "Loading…",
+    "error": "Error…",
+    "spreadsheet": "Spreadsheet",
+    "enable_preview": "Enable Preview",
+    "disable_preview": "Disable Preview",
+    "preview_enabled": "Preview enabled. Lag may occur",
+    "preview_disabled": "Preview disabled"
   },
   "Footer": {
     "description": "GITCG is a community for the collectible card minigame of Genshin Impact: Genius Invokation TCG. We're not affiliated with HoYoverse in any way."
@@ -39,6 +45,26 @@
     "title": "GITCG Community & Tournaments",
     "description": "Join our community Discord server to discuss, theorycraft, and participate in GITCG tournaments. Check out the tournament database for current meta decks."
   },
+  "LeaderboardPage": {
+    "title": "GITCG {version} {server} Weekly Tournament Leaderboard",
+    "description": "Check out all the best performing players of GITCG {version} {server} weekly tournament",
+    "season_with_multiple_versions_label": "{first}–{last}",
+    "duelist_handle": "Duelist Handle",
+    "version_v": "Version {version}",
+    "week_num": "Week {week}",
+    "win_count": "W",
+    "tie_count": "T",
+    "loss_count": "L",
+    "best_x_finish": "Best {x} Finishes",
+    "total_wins": "Total Wins",
+    "total_ties": "Total Ties",
+    "total_losses": "Total Losses",
+    "total_games": "Total Games",
+    "major_qualification": "Major Qualification",
+    "qualified_for_major": "Yes",
+    "not_qualified_for_major": "No",
+    "data_difference_with_sheet": "If there is a difference of data between this website and the spreadsheet, please refer to the spreadsheet."
+  },
   "WeeklyStatistic": {
     "title": "GITCG {version} Weekly Tournament Statistic",
     "showOrHide": "Show/Hide Columns",
@@ -60,7 +86,9 @@
       "win_count_nomirror": "Wins <break></break>(no mirror)",
       "win_rate_nomirror": "Win Rate <break></break>(no mirror)",
       "stderr_nomirror": "Std Error <break></break>(no mirror)",
-      "tie_count": "Ties"
+      "tie_count": "Ties",
+      "weekly_participation": "Weekly Participation",
+      "game_count": "Games"
     }
   },
   "DeckShowcasePage": {
@@ -71,7 +99,8 @@
       "win_count": "Wins",
       "win_rate": "Win Rate",
       "tie_count": "Ties"
-    }
+    },
+    "player_page_title": "GITCG {version} Weekly Tournament Player Data"
   },
   "MajorRecap": {
     "title": "GITCG {version} Major Recap",

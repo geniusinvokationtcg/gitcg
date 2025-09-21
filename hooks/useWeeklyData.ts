@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { parseCSV } from "@/utils/csvParse";
 import { MatchData } from "@/utils/types";
+import { weeklyMatchdataHeader } from "@/utils/vars";
 
 export function useWeeklyData(version: string){
   const [parsedData, setParsedData] = useState<MatchData[]>([]);
@@ -15,11 +16,7 @@ export function useWeeklyData(version: string){
       setError(null);
 
       try {
-        const parsed = await parseCSV<MatchData>(`/weekly/${version}/matchdata.csv`, {
-          header: true,
-          skipEmptyLines: true,
-          dynamicTyping: true
-        });
+        const parsed = await parseCSV<MatchData>(`/weekly/${version}/matchdata.csv`, weeklyMatchdataHeader);
         
         if(parsed.error) setError(parsed.error);
         if(isMounted) setParsedData(parsed.data || []);

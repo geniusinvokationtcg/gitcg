@@ -15,7 +15,7 @@ export default function Navbar({ locale }: {locale: Locales}) {
   const [mobileSubmenuOpen, setMobileSubmenuOpen] = useState<string | null>(null);
 
   const navbarList = [
-    { name: t("leaderboard"), path: "https://docs.google.com/spreadsheets/d/18u31AAyttz1U1e_Qrm2XWDG3xq1MB2mR57BhVT1UCkk", target: "_block" },
+    { name: t("leaderboard"), path: "/leaderboard", target: "_self" },
     { name: t("tournament_data"), sub: [
       { name: t("weekly"), path: "/weekly" },
       { name: t("major"), path: "/major" }

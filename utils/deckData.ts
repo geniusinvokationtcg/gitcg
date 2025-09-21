@@ -4,7 +4,7 @@ import { decode } from "./decoder";
 /**
  * 
  * @param data - The data parsed from CSV.
- * @param char - (optional) If omitted, return data for all unique charactersas array.
+ * @param char - (optional) If omitted, return data for all unique characters as array.
  * @returns 
  */
 export function compileDeckData(data: MatchData[], char?: string): DeckData[] | DeckData {

@@ -51,11 +51,35 @@ nav {
 table {
   @apply w-full border-gray-300 text-center;
 }
+table.vertical_border {
+  @apply border-separate border-spacing-0
+}
 table > thead > tr {
   @apply border-b-1 border-gray-300 bg-gray-200;
 }
+table.vertical_border > thead > tr:first-child > th {
+  @apply border-t-1 border-gray-300
+}
+table.vertical_border > thead > tr:first-child > th:first-child, table.vertical_border > tbody > tr > td:first-child {
+  @apply border-l-1 border-gray-300
+}
+table.vertical_border > thead > tr > th, table.vertical_border > tbody > tr > td {
+  @apply border-r-1 border-b-1 border-gray-300 border-b-gray-300
+}
 table > thead > tr > th {
   @apply p-2;
+}
+table > thead > tr > th.compact_py_top {
+  @apply p-1 pb-0.5 whitespace-nowrap;
+}
+table > thead > tr > th.compact_py_middle {
+  @apply p-1 py-0.5 whitespace-nowrap;
+}
+table > thead > tr > th.compact_py_bottom {
+  @apply p-1 pt-0.5 whitespace-nowrap;
+}
+table > thead > tr.wtl_leaderboard > th {
+  @apply w-6 whitespace-nowrap;
 }
 table > tbody > tr {
   @apply border-b-1 border-gray-300 hover:bg-gray-50 transition-all duration-200
@@ -63,8 +87,15 @@ table > tbody > tr {
 table > tbody > tr > td:not(.custom) {
   @apply p-2;
 }
+table > tbody > tr.compact_py > td:not(.custom) {
+  @apply p-2 py-1
+}
 .deck_column_width {
   @apply w-[128px] md:w-[380px] min-w-[128px] md:min-w-[380px];
+}
+
+.fullpage_table_container {
+  @apply overflow-auto max-h-[calc(100vh-170px)]
 }
 
 select {
@@ -85,7 +116,7 @@ select {
 }
 
 .dropdowns_container {
-  @apply flex flex-wrap justify-start;
+  @apply flex flex-wrap justify-start items-center;
 }
 
 .section_title {
@@ -108,7 +139,7 @@ select {
 }
 
 .showcase_page_margin {
-  @apply max-w-220 mx-auto pb-3
+  @apply max-w-220 mx-auto mb-6 mt-3
 }
 .deck_showcase_padding {
   @apply px-3 pt-3
@@ -118,7 +149,7 @@ select {
 }
 
 .major_match_padding {
-  @apply px-3 pt-6 pb-3
+  @apply px-3 pb-3
 }
 .major_match_row {
   @apply px-3 pt-3 w-full flex flex-row justify-center gap-x-1
@@ -167,9 +198,11 @@ select {
 }
 .card_image_large {
   position: relative;
-  width: 100px;
-  @media (width >= 48rem /* 768px */) {
-    width: 120px;
+  width: 120px;
+}
+.card_image_large_resize {
+  @media (width < 48rem /* 768px */) {
+    width: 100px;
   }
 }
 .card_image_large > img:first-child {
@@ -179,7 +212,7 @@ select {
   object-fit: contain;
   z-index: 0;
 }
-.card_image_large > img:last-child {
+.card_image_large > img:nth-child(2) {
   position: relative;
   width: 120px;
   z-index: 10;
@@ -202,9 +235,34 @@ select {
   object-fit: contain;
   z-index: 0;
 }
-.card_image_medium > img:last-child {
+.card_image_medium > img:nth-child(2) {
   position: relative;
   width: 80px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.card_image_small {
+  position: relative;
+  width: 50px;
+  height: 85.8px;
+}
+.card_image_small_resize {
+  @media (width < 48rem /* 768px */) {
+    width: 40px;
+    height: 68.6px;
+  }
+}
+.card_image_small > img:first-child {
+  position: absolute;
+  width: 97%;
+  padding: 1.5px 0.4px;
+  object-fit: contain;
+  z-index: 0;
+}
+.card_image_small > img:nth-child(2) {
+  position: relative;
+  width: 50px;
   z-index: 10;
   pointer-events: none;
 }

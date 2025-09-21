@@ -11,3 +11,13 @@ export function useCopiedPopUp () {
 
   return { showNotification, setShowNotification, copiedPopUpTrigger }
 }
+
+export function useShowPopUp () {
+  const [showNotification, setShowNotification] = useState<boolean>(false);
+  const popUpTrigger = (timeout?: number) => {
+    setShowNotification(true);
+    setTimeout(() => setShowNotification(false), timeout || 2000);
+  }
+
+  return { showNotification, setShowNotification, popUpTrigger }
+}

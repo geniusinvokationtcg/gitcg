@@ -11,18 +11,17 @@ import { useSortTable } from "@/hooks/useSortTable";
 import { useCopiedPopUp } from "@/hooks/utilities";
 import { useLocalCardsData } from "@/hooks/useLocalCardsData";
 import { useTranslations } from "next-intl";
-import { Locales, DeckData, SortingKey, Server } from "@/utils/types";
-import { getCardImageUrl, getCardName, getCardIdByName } from '@/utils/cards';
+import { Locales, DeckData, SortingKey, Server, MatchDataOfSpecific, OpponentData } from "@/utils/types";
+import { getCardName, getCardIdByName } from '@/utils/cards';
 import { compileDeckData } from "@/utils/deckData";
 import { percentize } from "@/utils/formatting";
 import { handleCopy } from "@/utils/clipboard";
 import cardsData from "@/cards.json";
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
-import { CustomButton } from "@/components/Button";
+import { CustomButton, IndexSelector } from "@/components/Button";
 import { SuccessNotification } from "@/components/PopUp";
 import { LineupShowcaseForTable, NoDataAvailable, ColumnHeaderWithSorter } from "@/components/Table";
 import { CustomSelect } from "@/components/Dropdown";
-import { CardImageMedium } from "@/components/CardImage";
+import { CardImageMedium, CardImageLarge } from "@/components/CardImage";
 
 export default function DeckShowcasePage({ params }: { params: Promise<{ locale: Locales; version: string; cardids: string }> }) {
   const { locale, version, cardids } = use(params);
@@ -34,6 +33,7 @@ export default function DeckShowcasePage({ params }: { params: Promise<{ locale:
 
   const g = useTranslations("General");
   const t = useTranslations("DeckShowcasePage");
+  const h = useTranslations("WeeklyStatistic.tableHeader");
 
   const { parsedData, isLoading, error } = useWeeklyData(version);
 
@@ -58,8 +58,8 @@ export default function DeckShowcasePage({ params }: { params: Promise<{ locale:
   
   usePageTitle(t("title", { version: getVerLabel(version, locale), lineup: charactersId.map(cardId => getCardName(cardId, localCardsData)).join(" | ")}));
   
-  const dataByCharacters: MatchDataOfSpecificCharacter[] = useMemo(() => {
-    const seen: MatchDataOfSpecificCharacter[] = [];
+  const dataByCharacters: MatchDataOfSpecific[] = useMemo(() => {
+    const seen: MatchDataOfSpecific[] = [];
     parsedData.forEach(row => {
       const matchDetail = {
         isDrop: row.isDrop,
@@ -76,6 +76,7 @@ export default function DeckShowcasePage({ params }: { params: Promise<{ locale:
         deckcode: row.deckcode1,
         cardsId: decodeAndSortActionCards(row.deckcode1).join("|"),
         opponent: row.characters2,
+        opponent_playerid: row.playerid2,
         score: row.score1,
         ...matchDetail
       });
@@ -83,6 +84,7 @@ export default function DeckShowcasePage({ params }: { params: Promise<{ locale:
         deckcode: row.deckcode2,
         cardsId: decodeAndSortActionCards(row.deckcode2).join("|"),
         opponent: row.characters1,
+        opponent_playerid: row.playerid1,
         score: row.score2,
         ...matchDetail
       });
@@ -104,7 +106,7 @@ export default function DeckShowcasePage({ params }: { params: Promise<{ locale:
     })
     return Array.from(seen.values()).filter(row => {
       const cardsId = row.cardsId.split("|");
-      return (cardsId.length = 33) && !(
+      return (cardsId.length === 33) && !(
         cardsId.some(str => { isNaN(Number(str)) })
       );
     });
@@ -125,9 +127,9 @@ export default function DeckShowcasePage({ params }: { params: Promise<{ locale:
       const wins = games.filter(row => row.score === 1);
       const ties = games.filter(row => row.isTie);
       return {
-        character1: decodedOpponentCardNames[0].toString() || "",
-        character2: decodedOpponentCardNames[1].toString() || "",
-        character3: decodedOpponentCardNames[2].toString() || "",
+        character1: decodedOpponentCardNames[0]?.toString() || "",
+        character2: decodedOpponentCardNames[1]?.toString() || "",
+        character3: decodedOpponentCardNames[2]?.toString() || "",
         charactersId: decodedOpponentCardNames.map(c => getCardIdByName(c.toString(), "characters")),
         game_count: games.length,
         win_count: wins.length,
@@ -137,9 +139,9 @@ export default function DeckShowcasePage({ params }: { params: Promise<{ locale:
     }).sort((a,b) => {
       const keys: SortingKey<OpponentData>[] = [
         {key: "win_count", isAscending: false},
-        {key: "game_count", isAscending: false},
         {key: "win_rate", isAscending: false},
         {key: "tie_count", isAscending: false},
+        {key: "game_count", isAscending: false},
         {key: "character1", isAscending: true},
         {key: "character2", isAscending: true},
         {key: "character3", isAscending: true}
@@ -174,8 +176,6 @@ export default function DeckShowcasePage({ params }: { params: Promise<{ locale:
 
   const { showNotification, copiedPopUpTrigger } = useCopiedPopUp();
   const [showDeckcode, setShowDeckcode] = useState<boolean>(false);
-  
-  const h = useTranslations("WeeklyStatistic.tableHeader");
 
   if(isLoading) return;
   if(error) return <p>Uh, there seems to be a trouble<br />{error.message}</p>
@@ -186,18 +186,14 @@ export default function DeckShowcasePage({ params }: { params: Promise<{ locale:
       {characterCards.map(c => getCardName(c, localCardsData)).join(" | ")}
     </h1>
     <div className="deck_showcase_padding character_cards_large">
-      <span className="card_image_large">
-        <img src={getCardImageUrl("characters", characterCards[0], "id")} title={getCardName(characterCards[0], localCardsData)}></img>
-        <img src="/borders/normal.png"></img>
-      </span>
-      <span className="card_image_large">
-        <img src={getCardImageUrl("characters", characterCards[1], "id")} title={getCardName(characterCards[1], localCardsData)}></img>
-        <img src="/borders/normal.png"></img>
-      </span>
-      <span className="card_image_large">
-        <img src={getCardImageUrl("characters", characterCards[2], "id")} title={getCardName(characterCards[2], localCardsData)}></img>
-        <img src="/borders/normal.png"></img>
-      </span>
+      {characterCards.map((c, index) => (
+        <CardImageLarge
+          key={index}
+          cardType="characters"
+          cardId={c}
+          localCardsData={localCardsData}
+        />
+      ))}
     </div>
     <div className="deck_showcase_padding stat_showcase">
       {["usage_player", "best_result", "rate_top_deck", "usage_match", "win_count", "win_rate", "tie_count"]
@@ -219,11 +215,11 @@ export default function DeckShowcasePage({ params }: { params: Promise<{ locale:
       }
     </div>
     <div className="deck_showcase_padding section_title">{g("decklist")}</div>
-    <div className="page_control px-3 pt-0.5">
-      <ChevronLeftIcon className={deckIndex === 0 ? "disabled" : ""} onClick={ () => {if(deckIndex > 0) setDeckIndex(i => i-1)} }/>
-      <span>{`${deckIndex+1}/${uniqueCardsId.length}`}</span>
-      <ChevronRightIcon className={deckIndex === uniqueCardsId.length-1 ? "disabled" : ""} onClick={ () => {if(deckIndex < uniqueCardsId.length-1) setDeckIndex(i => i+1)} }/>
-    </div>
+    <IndexSelector
+      currentIndex={deckIndex+1}
+      setIndexFn={setDeckIndex}
+      maxIndex={uniqueCardsId.length}
+    />
     <div className="deck_showcase_padding flex gap-1.5 justify-center flex-wrap">
       {actionCards.map((c, index) => (
         <CardImageMedium
@@ -307,31 +303,4 @@ export default function DeckShowcasePage({ params }: { params: Promise<{ locale:
       </div>
     </div>
   </div>
-}
-
-interface MatchDataOfSpecificCharacter {
-  deckcode: string;
-  cardsId: string; //cardsId refers to the id of all character and action cards combined
-  opponent: string;
-  score: number;
-  isDrop: boolean | null | "";
-  isBye: boolean | null | "";
-  isTie: boolean | null | "";
-  isIncluded: boolean | null | "";
-  isMirror: boolean;
-  server: "AS" | "EU" | "NA";
-  matchNum: number;
-  week: number;
-  game: number;
-}
-
-interface OpponentData {
-  character1: string;
-  character2: string;
-  character3: string;
-  charactersId: number[];
-  game_count: number;
-  win_count: number;
-  win_rate: number;
-  tie_count: number;
 }

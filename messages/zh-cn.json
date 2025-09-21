@@ -12,7 +12,13 @@
     "copied": "已复制",
     "no_data": "皮塔翻遍数据库，啥也没找到！",
     "not_found": "皮塔晕头转向没找到这个网址！<br></br>它可能溜走了，先回<home>主页</home>歇歇吧~",
-    "loading": "加载中⋯"
+    "loading": "加载中…",
+    "error": "错误…",
+    "spreadsheet": "电子表格",
+    "enable_preview": "启用预览",
+    "disable_preview": "关闭预览",
+    "preview_enabled": "已启用预览，可能会出现卡顿",
+    "preview_disabled": "已关闭预览"
   },
   "Footer": {
     "description": "GITCG是《原神·七圣召唤》卡牌游戏的玩家社区，与米哈游或HoYoverse官方无任何关联。"
@@ -39,6 +45,26 @@
     "title": "GITCG《七圣召唤》玩家社区与赛事",
     "description": "加入GITCG的Discord社区，讨论七圣召唤、牌组构筑、参加七圣召唤赛事。打开赛事数据库查看当前主流牌组。"
   },
+  "LeaderboardPage": {
+    "title": "GITCG《七圣召唤》{version}版本{server}周赛排行榜",
+    "description": "查看GITCG《七圣召唤》{version}版本{server}周赛的最佳表现选手",
+    "season_with_multiple_versions_label": "{first}至{last}",
+    "duelist_handle": "选手昵称",
+    "version_v": "{version}版本",
+    "week_num": "第{week}周",
+    "win_count": "胜",
+    "tie_count": "平",
+    "loss_count": "负",
+    "best_x_finish": "最佳{x}周成绩",
+    "total_wins": "总胜数",
+    "total_ties": "总平数",
+    "total_losses": "总负数",
+    "total_games": "总局数",
+    "major_qualification": "巅峰赛晋级",
+    "qualified_for_major": "晋级",
+    "not_qualified_for_major": "未晋级",
+    "data_difference_with_sheet": "如果本站数据与表格不一致，请以表格为准。"
+  },
   "WeeklyStatistic": {
     "title": "GITCG《七圣召唤》{version}版本周赛数据",
     "showOrHide": "显示/隐藏列",
@@ -48,7 +74,7 @@
       "deck": "牌组阵容",
       "usage_player": "选用数<break></break>（按玩家）",
       "usage_rate_player": "选用率<break></break>（按玩家）",
-      "best_result": "最好成绩",
+      "best_result": "最佳成绩",
       "n_top_deck": "至少4胜次数",
       "rate_top_deck": "至少4胜率",
       "stderr_top_deck": "至少4胜标准误",
@@ -60,18 +86,21 @@
       "win_count_nomirror": "胜数<break></break>（非镜像）",
       "win_rate_nomirror": "胜率 <break></break>（非镜像）",
       "stderr_nomirror": "标准误<break></break>（非镜像）",
-      "tie_count": "平局数"
+      "tie_count": "平数",
+      "weekly_participation": "周赛参赛次数",
+      "game_count": "局数"
     }
   },
   "DeckShowcasePage": {
     "title": "GITCG《七圣召唤》{version}版本牌组展示：{lineup}",
     "tableHeader": {
       "opponent": "对方阵容",
-      "game_count": "选用数",
+      "game_count": "局数",
       "win_count": "胜数",
       "win_rate": "胜率",
-      "tie_count": "平局数"
-    }
+      "tie_count": "平数"
+    },
+    "player_page_title": "GITCG《七圣召唤》{version}版本周赛选手数据"
   },
   "MajorRecap": {
     "title": "GITCG《七圣召唤》{version}版本巅峰赛回顾",
@@ -79,14 +108,14 @@
     "player_title": "GITCG《七圣召唤》{version}版本{server}巅峰赛种子{seed}号选手",
     "round_x": "第{round}轮",
     "banned": "禁用",
-    "win": "胜者",
+    "win": "胜利",
     "lose": "失败",
     "game_x": "第{game}局",
     "watch_replay": "观看回放",
     "final": "总决赛",
     "semifinal": "半决赛",
     "round_of_x": "{top}强赛",
-    "game_count": "选用数",
+    "game_count": "局数",
     "win_count": "胜数",
     "win_rate": "胜率",
     "best_advancement": "最佳战绩",

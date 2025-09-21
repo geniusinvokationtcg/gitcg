@@ -30,7 +30,7 @@ export default function WeeklyStatPageClient({ params }: { params: Promise<{ loc
   const serverList = useTranslatedServers();
   const [week, setWeek] = useState<number>(NaN);
   
-  const {sortKey, sortAsc, handleSort} = useSortTable<DeckData>();  
+  const {sortKey, sortAsc, handleSort} = useSortTable<DeckData>();
 
   const [tableHeader, setTableHeader] = useState([
     { key: "deck", isShown: true },
@@ -142,14 +142,13 @@ export default function WeeklyStatPageClient({ params }: { params: Promise<{ loc
         buttonText={t("showOrHide")}
       />
     </div>
-    <div className="overflow-auto max-h-[calc(100vh-170px)]">
+    <div className="fullpage_table_container">
       <table>
         <thead className="sticky top-0 z-20 bg-gray-200">
           <tr>
             <th className="sticky left-0 z-10 bg-gray-200 deck_column_width">{tableHeader.find(h => h.key === "deck")?.title}</th>
             {tableHeader.toSpliced(0, 1).filter(col => col.isShown).map((col) => (
               <ColumnHeaderWithSorter<DeckData>
-                className="hover:bg-gray-300 transition-background duration-200"
                 text={<span className={`${locale === "zh-cn" ? "whitespace-nowrap" : ""}`}>
                   {h.rich(col.key, {break: () => <br />})}
                 </span>}

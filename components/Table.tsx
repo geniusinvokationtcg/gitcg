@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { getCardImageUrl, getCardName } from '@/utils/cards';
+import { getCardName } from '@/utils/cards';
 import { BorderType, CardsDataType } from "@/utils/types";
 import { ReactNode } from "react";
 import { useTranslations } from 'next-intl';
+import { CardImageSmall } from "./CardImage";
 
 export function LineupShowcaseForTable ({
   characters, border, disableLink, locale, version, localCardsData
@@ -21,14 +22,14 @@ export function LineupShowcaseForTable ({
     <span className="hidden md:block w-[220px]">
       {charactersName[0]}<br />{charactersName[1]}<br />{charactersName[2]}
     </span>
-    {
-      characters.map((c, index) =>
-        <span className="relative w-[40px] h-[68.6px] md:w-[50px] md:h-[85.8px]" key={c}>
-          <img src={getCardImageUrl("characters", c, "id")} className="absolute inset-0 w-[97%] pl-[0.4px] pt-[1.5px] object-contain z-0" title={charactersName[index]}></img>
-          <img src={`/borders/${border[index]}.png`} className="relative inset-0 w-full z-10 pointer-events-none"></img>
-        </span>
-      )
-    }
+    {characters.map((c, index) =>
+      <CardImageSmall
+        key={c}
+        cardType="characters"
+        cardId={c}
+        localCardsData={localCardsData}
+      />
+    )}
   </div>
 
   return <td className="custom sticky left-0 bg-white group-hover:bg-gray-50 transition-background duration-200 z-10 w-[380px] p-0.5">
@@ -51,22 +52,32 @@ export function NoDataAvailable ({ className }: {className?: string}) {
 }
 
 export function ColumnHeaderWithSorter<T>({
-  className, text, columnKey, isSorting, sortAsc, sortHandlerFn
+  className, text, columnKey, isSorting, sortAsc, sortHandlerFn, isAscendingFirst = false, colSpan = 1, rowSpan = 1
 }: {
   className?: string;
   text?: string | ReactNode;
   columnKey: string;
   isSorting: boolean;
   sortAsc: boolean;
-  sortHandlerFn: (key: keyof T) => void;
+  sortHandlerFn: (key: keyof T, isAscendingFirst?: boolean) => void;
+  isAscendingFirst?: boolean
+  colSpan?: number
+  rowSpan?: number
 }) {
-  return <th className={`cursor-pointer ${className}`} onClick={() => sortHandlerFn(columnKey as keyof T)}>
-    <span className={"flex items-center"}>
-      <span className="w-full">{text}</span>
-      <span className="w-2 flex flex-col items-center justify-center text-[8px] select-none">
-        <span style={{ lineHeight: "0.8" }}>{isSorting ? (sortAsc ? "▲" : "‎") : "▲"}</span>
-        <span style={{ lineHeight: "0.8" }}>{isSorting ? (sortAsc ? "‎" : "▼") : "▼"}</span>
+  return ( 
+    <th
+      className={`cursor-pointer hover:bg-gray-300 transition-background duration-200 ${className}`}
+      onClick={() => sortHandlerFn(columnKey as keyof T, isAscendingFirst)}
+      colSpan={colSpan}
+      rowSpan={rowSpan}
+    >
+      <span className={"flex items-center"}>
+        <span className="w-full">{text}</span>
+        <span className="w-2 flex flex-col items-center justify-center text-[8px] select-none">
+          <span style={{ lineHeight: "0.8" }}>{isSorting ? (sortAsc ? "▲" : "‎") : "▲"}</span>
+          <span style={{ lineHeight: "0.8" }}>{isSorting ? (sortAsc ? "‎" : "▼") : "▼"}</span>
+        </span>
       </span>
-    </span>
-  </th>
+    </th>
+  )
 }

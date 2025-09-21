@@ -12,7 +12,13 @@
     "copied": "Disalin",
     "no_data": "Pita sudah coba cari, tapi Pita gak ketemu data apa pun.",
     "not_found": "Pita kebingungan karena gak ketemu URL yang kamu minta.<br></br>Mungkin URL itu gak ada. Ayo kita pulang ke <home>beranda</home>.",
-    "loading": "Memuat…"
+    "loading": "Memuat…",
+    "error": "Error…",
+    "spreadsheet": "Spreadsheet",
+    "enable_preview": "Aktifkan Pratinjau",
+    "disable_preview": "Nonaktifkan Pratinjau",
+    "preview_enabled": "Pratinjau aktif. Lag mungkin terjadi",
+    "preview_disabled": "Pratinjau nonaktif"
   },
   "Footer": {
     "description": "GITCG adalah komunitas permainan kartu dalam Genshin Impact: Genius Invokation TCG. Kami tidak terafiliasi dengan HoYoverse sama sekali."
@@ -39,6 +45,26 @@
     "title": "GITCG Komunitas & Turnamen",
     "description": "Gabung ke komunitas Discord untuk diskusi, theorycrafting, dan berpartisipasi dalam turnamen GITCG. Cek data turnamen untuk melihat meta terbaru."
   },
+  "LeaderboardPage": {
+    "title": "GITCG Versi {version} {server}: Papan Peringkat Turnamen Weekly",
+    "description": "Lihat pemain terbaik dalam turnamen weekly GITCG versi {version} {server}",
+    "season_with_multiple_versions_label": "{first}–{last}",
+    "duelist_handle": "Nama Pemain",
+    "version_v": "Versi {version}",
+    "week_num": "Minggu {week}",
+    "win_count": "M",
+    "tie_count": "S",
+    "loss_count": "K",
+    "best_x_finish": "Jumlah {x} Terbaik",
+    "total_wins": "Jumlah Menang",
+    "total_ties": "Jumlah Seri",
+    "total_losses": "Jumlah Kalah",
+    "total_games": "Jumlah Permainan",
+    "major_qualification": "Melaju ke Major",
+    "qualified_for_major": "Ya",
+    "not_qualified_for_major": "Tidak",
+    "data_difference_with_sheet": "Jika terdapat perbedaan data dengan spreadsheet, gunakan data spreadsheet."
+  },
   "WeeklyStatistic": {
     "title": "Data Turnamen Weekly GITCG Versi {version}",
     "showOrHide": "Tampilkan/Sembunyikan Kolom",
@@ -60,7 +86,9 @@
       "win_count_nomirror": "Menang <break></break>(tanpa mirror)",
       "win_rate_nomirror": "Tingkat Kemenangan <break></break>(tanpa mirror)",
       "stderr_nomirror": "Galat Baku <break></break>(tanpa mirror)",
-      "tie_count": "Seri"
+      "tie_count": "Seri",
+      "weekly_participation": "Partisipasi Weekly",
+      "game_count": "Jumlah Permainan"
     }
   },
   "DeckShowcasePage": {
@@ -71,7 +99,8 @@
       "win_count": "Menang",
       "win_rate": "Tingkat Kemenangan",
       "tie_count": "Seri"
-    }
+    },
+    "player_page_title": "GITCG Data Pemain Turnamen Weekly Versi {version}"
   },
   "MajorRecap": {
     "title": "Rekap Turnamen Major GITCG {version}",

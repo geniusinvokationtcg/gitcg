@@ -9,7 +9,7 @@ export async function generateMetadata (): Promise<Metadata> {
     title: t("HomePage.title"),
     description: t("HomePage.description")
   }
-  return {...metadata, openGraph: metadata}
+  return {...metadata, openGraph: metadata, twitter: metadata}
 }
 
 export default function HomePage() {

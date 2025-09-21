@@ -8,11 +8,10 @@ import { useTranslatedServers } from "@/hooks/useTranslatedServers";
 import { useMajorData } from "@/hooks/useMajorData";
 import { useCopiedPopUp } from "@/hooks/utilities";
 import { useLocalCardsData } from "@/hooks/useLocalCardsData";
-import { CardImageMedium } from "@/components/CardImage";
-import { CustomButton } from "@/components/Button";
+import { CardImageMedium, CardImageLarge } from "@/components/CardImage";
+import { CustomButton, IndexSelector } from "@/components/Button";
 import { SuccessNotification } from "@/components/PopUp";
 import { ServerPure, EliminationBracketMatch, Locales } from "@/utils/types";
-import { getCardImageUrl, getCardName } from "@/utils/cards";
 import { generateRoundStructure } from "@/utils/brackets";
 import { getWinner, getPlayer, getRoundNameKey } from "@/utils/major";
 import { decodeAndSortActionCards } from "@/utils/decoder";
@@ -91,7 +90,7 @@ export default function MajorPlayerDetail ({ params }: { params: Promise<{ local
   // const actionCards = decoded
 
   return <div className="showcase_page_margin">
-    <h1 className="deck_showcase_padding mt-3 section_title">
+    <h1 className="deck_showcase_padding section_title">
       {title}
     </h1>
     <h1 className="deck_showcase_padding section_title font-semibold">
@@ -137,24 +136,20 @@ export default function MajorPlayerDetail ({ params }: { params: Promise<{ local
       })()}
     </div>}
     <div className="deck_showcase_padding section_title">{g("decklist")}</div>
-    <div className="page_control px-3 pt-0.5">
-      <ChevronLeftIcon className={deckIndex === 0 ? "disabled" : ""} onClick={ () => {if(deckIndex > 0) setDeckIndex(i => i-1)} }/>
-      <span>{`${deckIndex+1}/${player.deckcode.length}`}</span>
-      <ChevronRightIcon className={deckIndex === player.deckcode.length-1 ? "disabled" : ""} onClick={ () => {if(deckIndex < player.deckcode.length-1) setDeckIndex(i => i+1)} }/>
-    </div>
+    <IndexSelector
+      currentIndex={deckIndex+1}
+      setIndexFn={setDeckIndex}
+      maxIndex={player.deckcode.length}
+    />
     <div className="deck_showcase_padding character_cards_large">
-      <span className="card_image_large">
-        <img src={getCardImageUrl("characters", decklists[deckIndex].character_cards[0], "id")} title={getCardName(decklists[deckIndex].character_cards[0], localCardsData)}></img>
-        <img src="/borders/normal.png"></img>
-      </span>
-      <span className="card_image_large">
-        <img src={getCardImageUrl("characters", decklists[deckIndex].character_cards[1], "id")} title={getCardName(decklists[deckIndex].character_cards[1], localCardsData)}></img>
-        <img src="/borders/normal.png"></img>
-      </span>
-      <span className="card_image_large">
-        <img src={getCardImageUrl("characters", decklists[deckIndex].character_cards[2], "id")} title={getCardName(decklists[deckIndex].character_cards[2], localCardsData)}></img>
-        <img src="/borders/normal.png"></img>
-      </span>
+      {decklists[deckIndex].character_cards.map((c, index) => (
+        <CardImageLarge
+          key={index}
+          cardType="characters"
+          cardId={c}
+          localCardsData={localCardsData}
+        />
+      ))}
     </div>
     
     {seeding && (() => {
