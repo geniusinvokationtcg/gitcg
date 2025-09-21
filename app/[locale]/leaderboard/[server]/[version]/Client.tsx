@@ -267,7 +267,7 @@ export function LeaderboardPageClient ({ params }: { params: LeaderboardPagePara
             {rightHandCol.map(key =>
               <ColumnHeaderWithSorter<PlayerLeaderboardDataExtended>
                 key = {key}
-                className = "min-w-16"
+                className = "min-w-16 w-16"
                 text = {t(key, { x: season.best_finish ?? "" })}
                 columnKey = {key}
                 isSorting = {sortKey === key}
