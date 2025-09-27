@@ -11,7 +11,7 @@ export default function Footer() {
       </p>
       <div>
         <a
-          href="https://discord.gg/GITCG"
+          href="/discord"
           target="_blank"
           rel="noopener noreferrer"
           className="footer_socmed_link"
