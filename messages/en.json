@@ -104,9 +104,11 @@
   },
   "MajorRecap": {
     "title": "GITCG {version} Major Recap",
+    "watch_whole_replay": "Watch VOD",
     "match_title": "GITCG {version} {server} Major Match {match}",
     "player_title": "GITCG {version} {server} Major Player Seed {seed}",
     "round_x": "Round {round}",
+    "match_x": "Match {match}",
     "banned": "Banned",
     "win": "Win",
     "lose": "Lose",

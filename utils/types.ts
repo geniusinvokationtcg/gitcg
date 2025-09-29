@@ -125,7 +125,8 @@ export interface DeckData {
 export interface MajorData {
   max_players: number;
   players: MajorPlayer[];
-  bracket: EliminationBracketMatch[]
+  bracket: EliminationBracketMatch[];
+  vod?: string;
 }
 
 export interface EliminationBracketMatch {

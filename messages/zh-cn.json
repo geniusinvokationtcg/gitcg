@@ -104,9 +104,11 @@
   },
   "MajorRecap": {
     "title": "GITCG《七圣召唤》{version}版本巅峰赛回顾",
+    "watch_whole_replay": "观看回放",
     "match_title": "GITCG《七圣召唤》{version}版本{server}巅峰赛第{match}场",
     "player_title": "GITCG《七圣召唤》{version}版本{server}巅峰赛种子{seed}号选手",
     "round_x": "第{round}轮",
+    "match_x": "第{match}场",
     "banned": "禁用",
     "win": "胜利",
     "lose": "失败",

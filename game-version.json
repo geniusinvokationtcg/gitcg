@@ -19,6 +19,10 @@
     {
       "version": "5-4",
       "server": ["eu"]
+    },
+    {
+      "version": "5-3",
+      "server": ["as"]
     }
   ],
   "redirect": {

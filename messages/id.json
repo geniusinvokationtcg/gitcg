@@ -104,9 +104,11 @@
   },
   "MajorRecap": {
     "title": "Rekap Turnamen Major GITCG {version}",
+    "watch_whole_replay": "Tonton Tayangan Ulang",
     "match_title": "GITCG Versi {version} {server} Major Pertandingan {match}",
     "player_title": "GITCG Versi {version} {server} Major Pemain Seed {seed}",
     "round_x": "Ronde {round}",
+    "match_x": "Pertandingan {match}",
     "banned": "Di-ban",
     "win": "Menang",
     "lose": "Kalah",

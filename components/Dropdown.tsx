@@ -128,8 +128,8 @@ export function CustomSelect<T>({
       <MenuButton
         className={`flex justify-between items-center pl-4 pr-2 py-2 flex-row gap-2
         ${
-          className || "text-xs bg-white border border-gray-300 rounded-sm text-gray-900"+
-          "hover:bg-gray-50 hover:border-gray-500 focus:border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500 hover:shadow-md focus:shadow-md"
+          className ||
+          "text-xs bg-white border border-gray-300 rounded-sm text-gray-900 hover:bg-gray-50 hover:border-gray-500 focus:border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500 hover:shadow-md focus:shadow-md"
         }
         transition-all duration-200 ease-in-out
         bg-[right_0.5rem_center] bg-[length:1rem] bg-no-repeat

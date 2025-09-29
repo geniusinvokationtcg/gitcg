@@ -97,7 +97,7 @@ export default function MajorPlayerDetail ({ params }: { params: Promise<{ local
       {player.name}
     </h1>
     {player.avatar && <div className="deck_showcase_padding flex justify-center">
-        <img src={player.avatar === "default" ? `/major/${version}/avatar/${player.seed}.png` : player.avatar}
+        <img src={player.avatar === "default" ? `/major/${version}/avatar/${server}/${player.seed}.png` : player.avatar}
           className="avatar"
           alt="Avatar"
         />

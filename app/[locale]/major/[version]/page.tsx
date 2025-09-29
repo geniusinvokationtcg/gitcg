@@ -12,6 +12,7 @@ import { getPlayer, getRoundNameKey } from "@/utils/major"
 import { useTranslations } from "next-intl";
 import { CustomSelect } from "@/components/Dropdown";
 import { Locales, ServerPure } from "@/utils/types";
+import { CustomButton } from "@/components/Button";
 
 export default function MajorRecap ({ params }: { params: Promise<{ locale: Locales; version: string }> }) {
   const { locale, version } = use(params);
@@ -44,9 +45,15 @@ export default function MajorRecap ({ params }: { params: Promise<{ locale: Loca
         value={serverList.find(s => s.value === server)?.label || server}
         onChange={(newServer) => setServer(newServer)}
       />
+      {data.vod && <Link href={data.vod} target="_block" rel="noopener noreferrer">
+        <CustomButton
+          buttonText={t("watch_whole_replay")}
+          textSize="xs"
+        />
+      </Link>}
     </div>
     <div className="overflow-auto text-sm flex flex-col justify-center">
-      <div className="flex flex-row gap-x-12 mx-auto mb-2">
+      <div className="flex flex-row gap-x-12 mx-auto mb-6">
         {rounds.map(round => <h2 className="font-semibold mb-2 min-w-50 text-center" key={round}>{
           t(getRoundNameKey(games[round-1].length*2), { top: games[round-1].length*2 })
         }</h2>)}
@@ -93,8 +100,12 @@ export default function MajorRecap ({ params }: { params: Promise<{ locale: Loca
                 {/*round > 1 && (
                   <div className="absolute top-[calc(50%-1px)] right-full h-0 w-6 border-t-2 border-gray-300" />
                 )*/}
+
                 <Link href={`/${locale}/major/${version}/${server}/match/${matchid}`} className="block">
                   <div className="group w-50 relative z-10 flex flex-col gap-0.5 cursor-pointer" >
+                    <div className="absolute top-[-20px] text-gray-500 text-xs group-hover:text-gray-800 transition-all duration-200">
+                      {t("match_x", {match: matchid})}
+                    </div>
                     <div className="flex flex-row gap-0.5 justify-between h-8">
                       <span className={`overflow-hidden text-ellipsis whitespace-nowrap flex items-center w-full p-2 bg-gray-200 group-hover:bg-gray-300 transition-all duration-200 ${playerData1 ? (playerData1.name === winner?.name ? "font-semibold" : "") : ""}`}>
                         {playerData1?.name || ""}
