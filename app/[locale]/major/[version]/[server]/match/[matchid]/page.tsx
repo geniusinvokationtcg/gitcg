@@ -43,7 +43,7 @@ export default function MajorMatchDetail ({ params }: { params: Promise<{ locale
 
   const player1 = getPlayer(matchid, 1, data, games, seeding);
   const player2 = getPlayer(matchid, 2, data, games, seeding);
-  if(!player1 || !player2 || player1.name === "BYE" || player2.name === "BYE") notFound();
+  if(!player1 || !player2 || data.bracket.find(m => m.matchid === matchid)?.is_bye) notFound();
   const score1 = match.games.reduce((s, game) => (game.winner === 1 ? s+1 : s), 0);
   const score2 = match.games.reduce((s, game) => (game.winner === 2 ? s+1 : s), 0);
 

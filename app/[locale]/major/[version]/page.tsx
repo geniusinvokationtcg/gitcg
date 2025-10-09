@@ -101,25 +101,28 @@ export default function MajorRecap ({ params }: { params: Promise<{ locale: Loca
                   <div className="absolute top-[calc(50%-1px)] right-full h-0 w-6 border-t-2 border-gray-300" />
                 )*/}
 
-                <Link href={`/${locale}/major/${version}/${server}/match/${matchid}`} className="block">
-                  <div className="group w-50 relative z-10 flex flex-col gap-0.5 cursor-pointer" >
+                <Link href={match?.is_bye ? "" : `/${locale}/major/${version}/${server}/match/${matchid}`} className={`block ${match?.is_bye ? "cursor-default" : ""}`}>
+                  <div className={`group w-50 relative z-10 flex flex-col gap-0.5`} >
                     <div className="absolute top-[-20px] text-gray-500 text-xs group-hover:text-gray-800 transition-all duration-200">
-                      {t("match_x", {match: matchid})}
+                      {
+                        t("match_x", {match: matchid}) +
+                        (match && match?.best_of ? ` – ${t("best_of_x", {x: match.best_of, min_w: (match.best_of+1)/2})}` : "")
+                      }
                     </div>
                     <div className="flex flex-row gap-0.5 justify-between h-8">
-                      <span className={`overflow-hidden text-ellipsis whitespace-nowrap flex items-center w-full p-2 bg-gray-200 group-hover:bg-gray-300 transition-all duration-200 ${playerData1 ? (playerData1.name === winner?.name ? "font-semibold" : "") : ""}`}>
-                        {playerData1?.name || ""}
+                      <span className={`overflow-hidden text-ellipsis whitespace-nowrap flex items-center w-full p-2 bg-gray-200 group-hover:bg-gray-300 transition-all duration-200 ${playerData1 ? (playerData1.name === winner?.name || match?.is_bye ? "font-semibold" : "") : ""} ${!playerData1 && match?.is_bye ? "italic" : ""}`}>
+                        {playerData1?.name || (match?.is_bye ? "BYE" : "")}
                       </span>
                       <span className={`py-2 bg-gray-200 group-hover:bg-gray-300 transition-all duration-200 min-w-8 flex justify-center items-center ${playerData1 ? (playerData1.name === winner?.name ? "font-semibold" : "") : ""}`}>
-                        {playerData1 && typeof score1 === "number" ? score1 : ""}
+                        {playerData1 && !match?.is_bye && typeof score1 === "number" ? score1 : ""}
                       </span>
                     </div>
                     <div className="flex flex-row gap-0.5 justify-between h-8">
-                      <span className={`overflow-hidden text-ellipsis whitespace-nowrap flex items-center w-full p-2 bg-gray-200 group-hover:bg-gray-300 transition-all duration-200 ${playerData2 ? (playerData2.name === winner?.name ? "font-semibold" : "") : ""}`}>
-                        {playerData2?.name || ""}
+                      <span className={`overflow-hidden text-ellipsis whitespace-nowrap flex items-center w-full p-2 bg-gray-200 group-hover:bg-gray-300 transition-all duration-200 ${playerData2 ? (playerData2.name === winner?.name || match?.is_bye ? "font-semibold" : "") : ""} ${!playerData2 && match?.is_bye ? "italic" : ""}`}>
+                        {playerData2?.name || (match?.is_bye ? "BYE" : "")}
                       </span>
                       <span className={`py-2 bg-gray-200 group-hover:bg-gray-300 transition-all duration-200 min-w-8 flex justify-center items-center ${playerData2 ? (playerData2.name === winner?.name ? "font-semibold" : "") : ""}`}>
-                        {playerData2 && typeof score2 === "number" ? score2 : ""}
+                        {playerData2 && !match?.is_bye && typeof score2 === "number" ? score2 : ""}
                       </span>
                     </div>
                   </div>

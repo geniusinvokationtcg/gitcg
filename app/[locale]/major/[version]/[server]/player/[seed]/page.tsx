@@ -69,7 +69,7 @@ export default function MajorPlayerDetail ({ params }: { params: Promise<{ local
       const match = data.bracket[ r[matchIndex]-1 ]
       playedMatches.push(match)
 
-      const winner = getWinner(match.matchid, data)
+      const winner = getWinner(match.matchid, data, games, seeding)
       const winnerData = getPlayer(match.matchid, winner, data, games, seeding)
       if(!winnerData || winnerData.seed !== player.seed) break
       matchIndex = Math.floor(matchIndex/2)

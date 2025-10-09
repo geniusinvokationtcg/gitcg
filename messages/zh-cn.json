@@ -109,6 +109,7 @@
     "player_title": "GITCG《七圣召唤》{version}版本{server}巅峰赛种子{seed}号选手",
     "round_x": "第{round}轮",
     "match_x": "第{match}场",
+    "best_of_x": "{x}局{min_w}胜",
     "banned": "禁用",
     "win": "胜利",
     "lose": "失败",

@@ -109,6 +109,7 @@
     "player_title": "GITCG Versi {version} {server} Major Pemain Seed {seed}",
     "round_x": "Ronde {round}",
     "match_x": "Pertandingan {match}",
+    "best_of_x": "Best of {x}",
     "banned": "Di-ban",
     "win": "Menang",
     "lose": "Kalah",

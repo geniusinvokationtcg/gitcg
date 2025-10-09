@@ -7,7 +7,7 @@ import { notFound, redirect } from "next/navigation";
 import { seasons } from "../../seasons";
 import { useQuery } from "@tanstack/react-query";
 import { parseCSV, parseCSVIgnoreErr } from "@/utils/csvParse";
-import { duelistRecordUrl, weeklyMatchdataHeader } from "@/utils/vars";
+import { duelistRecordUrl, prefixStatusRegEx, weeklyMatchdataHeader } from "@/utils/vars";
 import { DuelistRecord, MatchData, Server, SortingKey } from "@/utils/types";
 import { CustomSelect } from "@/components/Dropdown";
 import { useSortTable } from "@/hooks/useSortTable";
@@ -70,6 +70,7 @@ export function LeaderboardPageClient ({ params }: { params: LeaderboardPagePara
       season.versions.map(async v => {
         const parsed = await parseCSV<MatchData>(`/weekly/${v}/matchdata.csv`, weeklyMatchdataHeader)
         const byServer = parsed.data?.filter(row => row.server === server.toUpperCase())
+        console.log(JSON.stringify(byServer))
         return {
           version: v,
           match_data: byServer ?? null,
@@ -94,7 +95,7 @@ export function LeaderboardPageClient ({ params }: { params: LeaderboardPagePara
   ).map(playerid => {
     let stats = {
       playerid: playerid,
-      handle_display: DRQuery.data?.find(row => row.playerid === playerid)?.handle_display.toString().replace(/^\[[^\]]+\]/, "") ?? (DRQuery.isLoading ? g("loading") : g("error")),
+      handle_display: DRQuery.data?.find(row => row.playerid === playerid)?.handle_display.toString().replace(prefixStatusRegEx, "") ?? (DRQuery.isLoading ? g("loading") : g("error")),
       scores: seasonQuery.data?.map(v => {
         const isBanned = bannedPlayers.find(v_ => v_.version === v.version)?.banned_players.find(p => p.playerid === playerid)
         return {
@@ -161,15 +162,18 @@ export function LeaderboardPageClient ({ params }: { params: LeaderboardPagePara
     }
     return 0
   }).filter(p => p.playerid > 0 && p.total_games > 0).map((p, i, arr) => {
-    const top = !(season.qualification_type && season.qualification_type.includes("top_")) ? null : Number(season.qualification_type.split("_", 2).at(-1))
+    let major_qualification = false
+    if(season.qualification_type === "top") {
+      let top = season.qualification_threshold ?? 8
+      major_qualification = i<top ? true : (p.best_x_finish === arr[top-1].best_x_finish && p.total_wins === arr[top-1].total_wins && p.total_games === arr[top-1].total_games)
+    } else if(season.qualification_type === "min") {
+      let min = season.qualification_threshold ?? (season.best_finish ?? 2)*4
+      major_qualification = p.best_x_finish >= min
+    }
     return {
       ...p,
       rank: i+1,
-      major_qualification: (
-        !top
-        ? false
-        : (i<top ? true : (p.best_x_finish === arr[top-1].best_x_finish && p.total_wins === arr[top-1].total_wins && p.total_games === arr[top-1].total_games))
-      )
+      major_qualification: major_qualification
     }
   }).sort((a, b) => {
     if(sortKey){
@@ -187,8 +191,9 @@ export function LeaderboardPageClient ({ params }: { params: LeaderboardPagePara
   if(!seasonQuery.data && seasonQuery.isLoading) return
   if(!seasonQuery.data) return `Error: ${seasonQuery.error?.message}`
 
-  const rightHandCol = ["total_wins", "total_ties", "total_losses", "total_games", "major_qualification"]
+  const rightHandCol = ["total_wins", "total_ties", "total_losses", "total_games"]
   if(season.best_finish) rightHandCol.unshift("best_x_finish")
+  if(season.qualification_type) rightHandCol.push("major_qualification")
 
   return <div className="mx-auto p-6 text-xs max-w-screen">
     <div className="mb-6 gap-2 dropdowns_container">
@@ -299,8 +304,8 @@ export function LeaderboardPageClient ({ params }: { params: LeaderboardPagePara
         <tbody>
           {participatingPlayer.map(p => 
             <tr key={p.playerid} className="compact_py group">
-              <td className="sticky left-0 z-10 bg-white group-hover:bg-gray-50">{p.rank}</td>
-              <td className="text-left text-ellipsis whitespace-nowrap sticky left-[32.8px] z-10 bg-white group-hover:bg-gray-50">
+              <td className="sticky left-0 z-10 bg-white group-hover:bg-gray-50 transition-all duration-200">{p.rank}</td>
+              <td className="text-left text-ellipsis whitespace-nowrap sticky left-[32.8px] z-10 bg-white group-hover:bg-gray-50 transition-all duration-200">
                 <Link href={`/${locale}/weekly/${seasonQuery.data.filter(s => s.match_data).at(-1)!.version}/player/${p.playerid}`}>{p.handle_display}</Link>
               </td>
               {p.scores.map(v => v.weeks?.flatMap(w => {
@@ -322,7 +327,7 @@ export function LeaderboardPageClient ({ params }: { params: LeaderboardPagePara
               <td>{p.total_ties}</td>
               <td>{p.total_losses}</td>
               <td>{p.total_games}</td>
-              {season.best_finish && <td className="whitespace-nowrap">{p.major_qualification ? t("qualified_for_major") : t("not_qualified_for_major")}</td>}
+              {season.qualification_type && <td className="whitespace-nowrap">{p.major_qualification ? t("qualified_for_major") : t("not_qualified_for_major")}</td>}
             </tr>
           )}
         </tbody>

@@ -1,0 +1,253 @@
+{
+  "max_players": 8,
+  "players": [
+    {
+      "playerid": 173,
+      "name": "yukimuuu",
+      "seed": 1,
+      "deckcode": [
+        "FWDByZgMEZBR0WoNFhCg1ZEVE6AB9DAPFFCB9kgWGIERCoEQC7HwDcQQDPFAD8YWDJAA",
+        "FlHRhXMYFVDhyWENF0DB1HwNE+Ax8jMPFUBx9FcPGmGxBKsTGbHhip4YC6HRCzUQE+AA",
+        "E9HwNh0TFWDwxFkMFkAhyWIYCYDA45wOCUDQ5J0PGEAh9IIPGWDh9p4YC6FgirYRCxAA",
+        "ARAwwTkMEUBgxE8MBJDxySoNEmGgOJcTFIGBWlcPFUBx9IIPGFAh9p4TC7FgirYQDLAA",
+        "EeCR43EOGDCx5CIOF0Cg8oMPCCAw9JcPCUBx9TMPFWBx9lcTGbEwO8kYDKGgisoQDbAA"
+      ],
+      "avatar": "default"
+    },
+    {
+      "playerid": 41,
+      "name": "Elradoman",
+      "seed": 2,
+      "deckcode": [
+        "EUBxxF4MFZDxyWEMFrAhy2INCRDA0ZwNCeDQ9J0PE1Ax9jMVGbHhC54RDBEgacIWDJAA",
+        "FWDByZgMEZBR0WoNFhCh1S8VE6AB9DAPFECB9UgPGGERaIEQDLEwD8QQDPFAacYWDJAA",
+        "AaBR2RgNFpCw21EPBSAQ9JcPCUBx9TEPE2EROzMTFbFxDJMQGcEwDcYQDNFgEMoRDAAA",
+        "FlHRhXMMFJAh1HwNF0HBWjMPEyAx9FcPFUBx9qsQGkGxO54TGcHgir0YE6FRCzUWGJAA",
+        "EaCRynENGOCx4yIOFzCg5IMOCEAw9JcPCUBx9TMPGWAx9qsTGrGwirQYE6FRCzUQDLAA"
+      ],
+      "avatar": "default"
+    },
+    {
+      "playerid": 190,
+      "name": "科巴尔",
+      "seed": 3,
+      "deckcode": [
+        "EeCR43EOGDCx5CIOF0Ch9HoPCEAw9ZcPCWBx9jMTE7ExO1cYFaFwirQQDbGQC9kRDTAA",
+        "FlDRxHMMF0AByXwMF5DA2ZwNCpFBWjQPE0BB9KsPGmGwBLMQC0ExCzUQGLFBaYUWGJAA",
+        "EWFwNg8VFYDxxGIMFkAgyZwMCZHAiJ0PCUDR9IIPGFAh9p4YGaHgC7YRCxFgab0WE5AA",
+        "FWDByZgMFZDh0WoNFhAQ1ZEVE6AB9DAPFECB9UgWGIERDYEQC9HwD8QQDPFAacYWDJAA",
+        "GmBAyhYMGKDB2Y8NGpBx26cOCZBw6ZcPE0Ax9DMPFVBx9pMTC7FBOzUQE6FRCzYWE5AA"
+      ],
+      "avatar": "default"
+    },
+    {
+      "playerid": 5,
+      "name": "ActualCube",
+      "seed": 4,
+      "deckcode": [
+        "AFGxhaQNGODB6Y8OGpBw6oYPCUBw9JcPCmFABaQQFVFxO1cTGLEgirYYC6HQC70QGLAA",
+        "AWAwvTkMERBgwU8MBEDxxCoMEpChyUgTFIGBWlcPFUBx9IIPGGEhO54YGaHgirYWC5AA",
+        "E2HwNh0MFUDwxFkMFpEhiGIOCTDA45wOCUDQ5J0PGEAh9IIPGWDg9rQYC6Fgir0RExAA",
+        "FmHCypkNFpHi0msOFxGi1mIWCqES9TEQFFEC90kXFYKCDIIRGdIREMURDfJBascXDZEB",
+        "AaBR2RgNFpCw21EPBSAQ9JcPCUBx9TEPE2ERO1cTFbFxDJMQGcEwDcYQDNFgEMoRDAAA"
+      ],
+      "avatar": "default"
+    },
+    {
+      "playerid": 19,
+      "name": "Binzu",
+      "seed": 5,
+      "deckcode": [
+        "FWDwuR0LEdDQxFkMFkAh2mIOCUDA5JwPCUDQ9J0PGGAh9oIYGaHhip4aCyFAorYRCxAA",
+        "AdAxwV4MERBgxE8MBEDxySoTEoGgOJcNFMCB9FcPFUBx9oITGLEhip4YC6FgC7YWC5AA",
+        "FWDAyTMMFJDx0WoNEhDA1Z0VCaDR9EgPFFCB9oEWGIEQC7YQC9HQD8QQDPFAacYWDJAA",
+        "AZBR2RgNFrCw8lEPBUAQ9JcPCVBx9jEQEzERO1cTGbExDJMQDMFgDcYQDNGgEMoRDQAA",
+        "EVGRNh4TEWFRWiIPEiAg8oMPCEAw9JcPCVBx9jMPE2ExAFcQFQFxO5MTGbExCjUREzAA"
+      ],
+      "avatar": "default"
+    },
+    {
+      "playerid": 245,
+      "name": "Yaesnt",
+      "seed": 6,
+      "deckcode": [
+        "A0AQxgwMAWCg0UgNBBCA3YMPCBAw9JcPCWBx9jAQE4EBCDMTE7ExC2UQFrFQDsQQDOAA",
+        "AJAR0VwNABCA3T0NA/DQ358OCQDw4MEODOAR7jUPExBQ8cIPDCAg8sMPDEAw9MkPDGAA",
+        "AhGR0iMXAnJBaFEOBtEB5JgPCjFy9TUQFEFC91gQFmJxC8QRDcJhDccRDeKRD8oRDvEB",
+        "FvCw4BUOAABQ8pcPCSBx9DEPE0AR9jMPE2ExO1cTGbEwDMYQDMFgDsoQDOGgEN8RDQAA",
+        "AZDx2Y0NFdDh8WEPCRBw9JcPE0BB9jQPDGBg+MYQDKGQEckRDTEATdAUDdEQadEWDZAA"
+      ],
+      "avatar": "default"
+    }
+  ],
+  "bracket": [
+    {
+      "top": 8,
+      "best_of": 3,
+      "matchid": 1,
+      "bans": [
+        null,
+        null
+      ],
+      "games": [],
+      "is_bye": true
+    },
+    {
+      "top": 8,
+      "best_of": 3,
+      "matchid": 2,
+      "bans": [
+        3,
+        2
+      ],
+      "games": [
+        {
+          "deck_index": [
+            5,
+            3
+          ],
+          "winner": 2
+        },
+        {
+          "deck_index": [
+            4,
+            5
+          ],
+          "winner": 2
+        }
+      ]
+    },
+    {
+      "top": 8,
+      "best_of": 3,
+      "matchid": 3,
+      "bans": [
+        null,
+        null
+      ],
+      "games": [],
+      "is_bye": true
+    },
+    {
+      "top": 8,
+      "best_of": 3,
+      "matchid": 4,
+      "bans": [
+        4,
+        4
+      ],
+      "games": [
+        {
+          "deck_index": [
+            2,
+            1
+          ],
+          "winner": 1
+        },
+        {
+          "deck_index": [
+            3,
+            2
+          ],
+          "winner": 1
+        }
+      ]
+    },
+    {
+      "top": 4,
+      "best_of": 3,
+      "matchid": 5,
+      "bans": [
+        3,
+        2
+      ],
+      "games": [
+        {
+          "deck_index": [
+            2,
+            4
+          ],
+          "winner": 1
+        },
+        {
+          "deck_index": [
+            4,
+            1
+          ],
+          "winner": 2
+        },
+        {
+          "deck_index": [
+            1,
+            5
+          ],
+          "winner": 1
+        }
+      ]
+    },
+    {
+      "top": 4,
+      "best_of": 3,
+      "matchid": 6,
+      "bans": [
+        1,
+        4
+      ],
+      "games": [
+        {
+          "deck_index": [
+            2,
+            1
+          ],
+          "winner": 1
+        },
+        {
+          "deck_index": [
+            5,
+            2
+          ],
+          "winner": 1
+        }
+      ]
+    },
+    {
+      "top": 2,
+      "best_of": 5,
+      "matchid": 7,
+      "bans": [
+        1,
+        2
+      ],
+      "games": [
+        {
+          "deck_index": [
+            3,
+            1
+          ],
+          "winner": 1
+        },
+        {
+          "deck_index": [
+            2,
+            5
+          ],
+          "winner": 1
+        },
+        {
+          "deck_index": [
+            4,
+            5
+          ],
+          "winner": 2
+        },
+        {
+          "deck_index": [
+            4,
+            1
+          ],
+          "winner": 1
+        }
+      ]
+    }
+  ]
+}

@@ -20,3 +20,5 @@ export const weeklyMatchdataHeader = {
   skipEmptyLines: true,
   dynamicTyping: true
 }
+
+export const prefixStatusRegEx = /^\[[^\]]+\]/

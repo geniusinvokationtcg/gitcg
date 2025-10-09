@@ -135,12 +135,14 @@ export interface EliminationBracketMatch {
   matchid: number
   bans?: [number, number]
   games: MajorGame[]
+  is_bye?: boolean
 }
 
 export interface MajorGame {
   deck_index: [number, number]
   winner: 1 | 2
   vod?: string
+  technical_win?: null | "unspecified" | "wrong_deck"
 }
 
 export interface MajorPlayer {
@@ -209,6 +211,7 @@ export interface Seasons {
 export interface Season {
   versions: string[]
   best_finish?: number //if this value is undefined or 0, the season has no major
-  qualification_type?: "top_8"
+  qualification_type?: "top" | "min" //top = player has to be the top threshold players; min = player must scores at least the threshold
+  qualification_threshold?: number
   is_hidden?: boolean
 }
