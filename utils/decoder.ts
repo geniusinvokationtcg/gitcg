@@ -1,5 +1,7 @@
 import cardsData from "@/cards.json";
-import { Maybe, SuccessResult, ErrorResult } from "@/utils/types"
+import talents from "./talents.json";
+import { Maybe, SuccessResult, ErrorResult, Elements, Tuple } from "@/utils/types"
+import { isArcaneLegend } from "./cards";
 
 const scrambling = [
 	[0, 1, 4],
@@ -37,7 +39,7 @@ const scrambling = [
 	[94, 95, 98],
 ]
 
-export function decode(code: string, output: "name" | "id" | "code" | null | undefined): Maybe<number[] | string[]> {
+export function decode(code: string, output?: "name" | "id" | "code"): Maybe<number[] | string[]> {
 	if(!output) output = "code";
   let buffer = Buffer.from(code, 'base64');
 	let hex_code = buffer.toString('hex');
@@ -60,13 +62,19 @@ export function decode(code: string, output: "name" | "id" | "code" | null | und
 
 	if (unscrambled.length !== 33) return ErrorResult("This is not a valid deck code");
 
+	Cards.refresh();
+
 	let deck: number[] = unscrambled.map(s => parseInt(s, 16));
-  if(output !== "code"){
-    Cards.refresh();
-    if(output === "name") return SuccessResult( deck.map(s => Cards.codes.find(c => c.code === s)?.[output]).filter((v): v is string => typeof v === "string") as string[] );
-    if(output === "id") return SuccessResult( deck.map(s => Cards.codes.find(c => c.code === s)?.[output]).filter((v): v is number => typeof v === "number") as number[] );
-  };
-	return SuccessResult(deck as number[]);
+	if(!deck.some(s => Cards.codes.find(c => c.code === s))) return ErrorResult("This deckcode contains nonexisting cards");
+	
+	if(output === "code") return SuccessResult(deck);
+
+	let nonCode: unknown[] = [];
+	if(output === "name") nonCode = deck.map(s => Cards.codes.find(c => c.code === s)?.[output]);
+	if(output === "id") nonCode = deck.map(s => Cards.codes.find(c => c.code === s)?.[output]);
+
+	if(nonCode.includes(undefined)) return ErrorResult("This deckcode contains nonexisting cards");
+	return SuccessResult(nonCode as number[] | string[]);
 }
 
 export function decodeAndSortActionCards(deckcode: string): number[] {
@@ -132,3 +140,153 @@ type Card = {
   code: number,
   type: "character" | "action",
 }
+
+export function isValidDeckcode(deckcode: string): { result: boolean; reason: string } {
+	const FalseResult = (reason: string) => ({result: false, reason: reason})
+
+	if(deckcode.length !== 68) return FalseResult("Wrong deckcode length")
+
+	const decoded = decode(deckcode, "id")
+	if(decoded.error) return FalseResult(decoded.error.message)
+
+	Cards.refresh()
+	
+	const deck = decoded.data as Tuple<number, 33>
+	const characters = deck.slice(0, 3) as Tuple<number, 3>
+	const actions = deck.slice(3) as Tuple<number, 30>
+	if(actions.length !== 30) return FalseResult("Insufficient cards")
+	actions.sort((a, b) => a-b)
+
+	//check if the card id corresponds to each correct card types (this should also check if each card id actually exists)
+	if(characters.some(id => Cards.codes.find(c => c.id === id)?.type !== "character")) return FalseResult("Invalid character cards")
+	if(actions.some(id => Cards.codes.find(c => c.id === id)?.type !== "action")) return FalseResult("Invalid action cards")
+
+	//check duplicate characters
+	if(new Set(characters).size !== characters.length) return FalseResult("Duplicate character")
+
+	//check each action card to only have max 2 copies (max 1 for arcane legend)
+	const groupedActions: Map<number, number> = new Map()
+	actions.forEach(id => groupedActions.set(id, (groupedActions.get(id) ?? 0) + 1))
+	const groupedActionsArr = Array.from(groupedActions.entries())
+	if(groupedActionsArr.some(([id, count]) => isArcaneLegend(id) ? count>1 : count>2)) return FalseResult("Exceeding copy of action cards")
+
+	//check elemental resonance
+	for(let res of elementResonance){
+		if(!actions.some(id => res.card_id.includes(id))) continue;
+		const eligibleCharacterCount = characters.reduce((a, r) => getElement(cardsData.characters.find(c => c.id === r)?.element_type ?? NaN) === res.element ? a+1 : a, 0)
+		if(eligibleCharacterCount < 2) return FalseResult("Ineligible elemental resonance")
+	}
+
+	//check tribe resonance
+	for(let res of tribeResonance){
+		if(!actions.some(id => res.card_id.includes(id))) continue;
+		const eligibleCharacterCount = characters.reduce((a, r) => cardsData.characters.find(c => c.id === r)?.belongs.includes(res.tribe) ? a+1 : a, 0)
+		if(eligibleCharacterCount < 2) return FalseResult("Ineligible tribe resonance")
+	}
+
+	//check talents (the id for talents is 2xxxxx)
+	const talentCards = groupedActionsArr.filter(([id, count]) => id < 300000)
+	if(talentCards.length > 0){
+		for(let [id, count] of talentCards){
+			const t = talents.find(t => t.talent_id === id)
+			if(!t) return FalseResult("Talent card doesn't exist")
+			if(!characters.includes(t.character_id)) return FalseResult("Ineligible talent card")
+		}
+	}
+
+	return {result: true, reason: "OK"}
+}
+
+const elementResonance: {
+	element: Elements,
+	card_id: number[]
+}[] = [
+	{
+		element: "cryo",
+		card_id: [331101, 331102]
+	},
+	{
+		element: "hydro",
+		card_id: [331201, 331202]
+	},
+	{
+		element: "pyro",
+		card_id: [331301, 331302]
+	},
+	{
+		element: "electro",
+		card_id: [331401, 331402]
+	},
+	{
+		element: "anemo",
+		card_id: [331501, 331502]
+	},
+	{
+		element: "geo",
+		card_id: [331601, 331602]
+	},
+	{
+		element: "dendro",
+		card_id: [331701, 331702]
+	}
+]
+
+const tribeResonance: {
+	tribe: string,
+	card_id: number[]
+}[] = [
+	{
+		tribe: "Mondstadt",
+		card_id: [331801]
+	},
+	{
+		tribe: "Liyue",
+		card_id: [331802]
+	},
+	{
+		tribe: "Inazuma",
+		card_id: [331803]
+	},
+	{
+		tribe: "Sumeru",
+		card_id: [331804]
+	},
+	{
+		tribe: "Fontaine",
+		card_id: [331805]
+	},
+	{
+		tribe: "Natlan",
+		card_id: [331806]
+	},
+	{
+		tribe: "Monster",
+		card_id: [332015]
+	},
+	{
+		tribe: "Fatui",
+		card_id: [332016]
+	}
+]
+
+interface Talent {
+	character_id: number
+	character_name: string
+	talent_id: number
+	talent_name: string
+}
+
+function getElement(code: number): Elements | undefined {
+	switch(code){
+		case 301: return "cryo"
+		case 302: return "hydro"
+		case 303: return "pyro"
+		case 304: return "electro"
+		case 305: return "geo"
+		case 306: return "dendro"
+		case 307: return "anemo"
+		default: return
+	}
+}
+
+console.log(isValidDeckcode("GlFBNl4TGGDByqcMGqFxZ2ENCZBw2ZcNCuBB6TMOE5Ax9FcPFUBw9bQPC1FQO7UTE7AA"))

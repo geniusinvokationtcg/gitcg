@@ -1,0 +1,728 @@
+[
+  {
+    "character_id": 1101,
+    "character_name": "Ganyu",
+    "talent_id": 211011,
+    "talent_name": "Undivided Heart"
+  },
+  {
+    "character_id": 1102,
+    "character_name": "Diona",
+    "talent_id": 211021,
+    "talent_name": "Shaken, Not Purred"
+  },
+  {
+    "character_id": 1103,
+    "character_name": "Kaeya",
+    "talent_id": 211031,
+    "talent_name": "Cold-Blooded Strike"
+  },
+  {
+    "character_id": 1104,
+    "character_name": "Chongyun",
+    "talent_id": 211041,
+    "talent_name": "Steady Breathing"
+  },
+  {
+    "character_id": 1105,
+    "character_name": "Kamisato Ayaka",
+    "talent_id": 211051,
+    "talent_name": "Kanten Senmyou Blessing"
+  },
+  {
+    "character_id": 1106,
+    "character_name": "Eula",
+    "talent_id": 211061,
+    "talent_name": "Wellspring of War-Lust"
+  },
+  {
+    "character_id": 1107,
+    "character_name": "Shenhe",
+    "talent_id": 211071,
+    "talent_name": "Mystical Abandon"
+  },
+  {
+    "character_id": 1108,
+    "character_name": "Qiqi",
+    "talent_id": 211081,
+    "talent_name": "Rite of Resurrection"
+  },
+  {
+    "character_id": 1201,
+    "character_name": "Barbara",
+    "talent_id": 212011,
+    "talent_name": "Glorious Season"
+  },
+  {
+    "character_id": 1202,
+    "character_name": "Xingqiu",
+    "talent_id": 212021,
+    "talent_name": "The Scent Remained"
+  },
+  {
+    "character_id": 1203,
+    "character_name": "Mona",
+    "talent_id": 212031,
+    "talent_name": "Prophecy of Submersion"
+  },
+  {
+    "character_id": 1204,
+    "character_name": "Tartaglia",
+    "talent_id": 212041,
+    "talent_name": "Abyssal Mayhem: Hydrospout"
+  },
+  {
+    "character_id": 1205,
+    "character_name": "Sangonomiya Kokomi",
+    "talent_id": 212051,
+    "talent_name": "Tamakushi Casket"
+  },
+  {
+    "character_id": 1206,
+    "character_name": "Kamisato Ayato",
+    "talent_id": 212061,
+    "talent_name": "Kyouka Fuushi"
+  },
+  {
+    "character_id": 1207,
+    "character_name": "Candace",
+    "talent_id": 212071,
+    "talent_name": "The Overflow"
+  },
+  {
+    "character_id": 1208,
+    "character_name": "Nilou",
+    "talent_id": 212081,
+    "talent_name": "The Starry Skies Their Flowers Rain"
+  },
+  {
+    "character_id": 1301,
+    "character_name": "Diluc",
+    "talent_id": 213011,
+    "talent_name": "Flowing Flame"
+  },
+  {
+    "character_id": 1302,
+    "character_name": "Xiangling",
+    "talent_id": 213021,
+    "talent_name": "Crossfire"
+  },
+  {
+    "character_id": 1303,
+    "character_name": "Bennett",
+    "talent_id": 213031,
+    "talent_name": "Grand Expectation"
+  },
+  {
+    "character_id": 1304,
+    "character_name": "Amber",
+    "talent_id": 213041,
+    "talent_name": "Bunny Triggered"
+  },
+  {
+    "character_id": 1305,
+    "character_name": "Yoimiya",
+    "talent_id": 213051,
+    "talent_name": "Naganohara Meteor Swarm"
+  },
+  {
+    "character_id": 1306,
+    "character_name": "Klee",
+    "talent_id": 213061,
+    "talent_name": "Pounding Surprise"
+  },
+  {
+    "character_id": 1307,
+    "character_name": "Hu Tao",
+    "talent_id": 213071,
+    "talent_name": "Sanguine Rouge"
+  },
+  {
+    "character_id": 1308,
+    "character_name": "Yanfei",
+    "talent_id": 213081,
+    "talent_name": "Right of Final Interpretation"
+  },
+  {
+    "character_id": 1309,
+    "character_name": "Dehya",
+    "talent_id": 213091,
+    "talent_name": "Stalwart and True"
+  },
+  {
+    "character_id": 1401,
+    "character_name": "Fischl",
+    "talent_id": 214011,
+    "talent_name": "Stellar Predator"
+  },
+  {
+    "character_id": 1402,
+    "character_name": "Razor",
+    "talent_id": 214021,
+    "talent_name": "Awakening"
+  },
+  {
+    "character_id": 1403,
+    "character_name": "Keqing",
+    "talent_id": 214031,
+    "talent_name": "Thundering Penance"
+  },
+  {
+    "character_id": 1404,
+    "character_name": "Cyno",
+    "talent_id": 214041,
+    "talent_name": "Featherfall Judgment"
+  },
+  {
+    "character_id": 1405,
+    "character_name": "Beidou",
+    "talent_id": 214051,
+    "talent_name": "Lightning Storm"
+  },
+  {
+    "character_id": 1406,
+    "character_name": "Kujou Sara",
+    "talent_id": 214061,
+    "talent_name": "Sin of Pride"
+  },
+  {
+    "character_id": 1407,
+    "character_name": "Raiden Shogun",
+    "talent_id": 214071,
+    "talent_name": "Wishes Unnumbered"
+  },
+  {
+    "character_id": 1408,
+    "character_name": "Yae Miko",
+    "talent_id": 214081,
+    "talent_name": "The Shrine's Sacred Shade"
+  },
+  {
+    "character_id": 1409,
+    "character_name": "Lisa",
+    "talent_id": 214091,
+    "talent_name": "Pulsating Witch"
+  },
+  {
+    "character_id": 1410,
+    "character_name": "Dori",
+    "talent_id": 214101,
+    "talent_name": "Discretionary Supplement"
+  },
+  {
+    "character_id": 1501,
+    "character_name": "Sucrose",
+    "talent_id": 215011,
+    "talent_name": "Chaotic Entropy"
+  },
+  {
+    "character_id": 1502,
+    "character_name": "Jean",
+    "talent_id": 215021,
+    "talent_name": "Lands of Dandelion"
+  },
+  {
+    "character_id": 1503,
+    "character_name": "Venti",
+    "talent_id": 215031,
+    "talent_name": "Embrace of Winds"
+  },
+  {
+    "character_id": 1504,
+    "character_name": "Xiao",
+    "talent_id": 215041,
+    "talent_name": "Conqueror of Evil: Guardian Yaksha"
+  },
+  {
+    "character_id": 1505,
+    "character_name": "Kaedehara Kazuha",
+    "talent_id": 215051,
+    "talent_name": "Poetics of Fuubutsu"
+  },
+  {
+    "character_id": 1506,
+    "character_name": "Wanderer",
+    "talent_id": 215061,
+    "talent_name": "Gales of Reverie"
+  },
+  {
+    "character_id": 1601,
+    "character_name": "Ningguang",
+    "talent_id": 216011,
+    "talent_name": "Strategic Reserve"
+  },
+  {
+    "character_id": 1602,
+    "character_name": "Noelle",
+    "talent_id": 216021,
+    "talent_name": "I Got Your Back"
+  },
+  {
+    "character_id": 1603,
+    "character_name": "Zhongli",
+    "talent_id": 216031,
+    "talent_name": "Dominance of Earth"
+  },
+  {
+    "character_id": 1604,
+    "character_name": "Albedo",
+    "talent_id": 216041,
+    "talent_name": "Descent of Divinity"
+  },
+  {
+    "character_id": 1605,
+    "character_name": "Arataki Itto",
+    "talent_id": 216051,
+    "talent_name": "Arataki Ichiban"
+  },
+  {
+    "character_id": 1701,
+    "character_name": "Collei",
+    "talent_id": 217011,
+    "talent_name": "Floral Sidewinder"
+  },
+  {
+    "character_id": 1702,
+    "character_name": "Tighnari",
+    "talent_id": 217021,
+    "talent_name": "Keen Sight"
+  },
+  {
+    "character_id": 1703,
+    "character_name": "Nahida",
+    "talent_id": 217031,
+    "talent_name": "The Seed of Stored Knowledge"
+  },
+  {
+    "character_id": 1704,
+    "character_name": "Yaoyao",
+    "talent_id": 217041,
+    "talent_name": "Beneficent"
+  },
+  {
+    "character_id": 1705,
+    "character_name": "Baizhu",
+    "talent_id": 217051,
+    "talent_name": "All Things Are of the Earth"
+  },
+  {
+    "character_id": 2101,
+    "character_name": "Fatui Cryo Cicin Mage",
+    "talent_id": 221011,
+    "talent_name": "Cicin's Cold Glare"
+  },
+  {
+    "character_id": 2201,
+    "character_name": "Rhodeia of Loch",
+    "talent_id": 222011,
+    "talent_name": "Streaming Surge"
+  },
+  {
+    "character_id": 2202,
+    "character_name": "Mirror Maiden",
+    "talent_id": 222021,
+    "talent_name": "Mirror Cage"
+  },
+  {
+    "character_id": 2301,
+    "character_name": "Fatui Pyro Agent",
+    "talent_id": 223011,
+    "talent_name": "Paid in Full"
+  },
+  {
+    "character_id": 2302,
+    "character_name": "Abyss Lector: Fathomless Flames",
+    "talent_id": 223021,
+    "talent_name": "Embers Rekindled"
+  },
+  {
+    "character_id": 2401,
+    "character_name": "Electro Hypostasis",
+    "talent_id": 224011,
+    "talent_name": "Absorbing Prism"
+  },
+  {
+    "character_id": 2501,
+    "character_name": "Maguu Kenki",
+    "talent_id": 225011,
+    "talent_name": "Transcendent Automaton"
+  },
+  {
+    "character_id": 2601,
+    "character_name": "Stonehide Lawachurl",
+    "talent_id": 226011,
+    "talent_name": "Stonehide Reforged"
+  },
+  {
+    "character_id": 2701,
+    "character_name": "Jadeplume Terrorshroom",
+    "talent_id": 227011,
+    "talent_name": "Proliferating Spores"
+  },
+  {
+    "character_id": 2102,
+    "character_name": "La Signora",
+    "talent_id": 221021,
+    "talent_name": "Pain for Pain"
+  },
+  {
+    "character_id": 2602,
+    "character_name": "Azhdaha",
+    "talent_id": 226022,
+    "talent_name": "Lunar Cycles Unending"
+  },
+  {
+    "character_id": 1109,
+    "character_name": "Layla",
+    "talent_id": 211091,
+    "talent_name": "Light's Remit"
+  },
+  {
+    "character_id": 1209,
+    "character_name": "Yelan",
+    "talent_id": 212091,
+    "talent_name": "Turn Control"
+  },
+  {
+    "character_id": 1310,
+    "character_name": "Lyney",
+    "talent_id": 213101,
+    "talent_name": "Conclusive Ovation"
+  },
+  {
+    "character_id": 1508,
+    "character_name": "Lynette",
+    "talent_id": 215081,
+    "talent_name": "A Cold Blade Like a Shadow"
+  },
+  {
+    "character_id": 1606,
+    "character_name": "Gorou",
+    "talent_id": 216061,
+    "talent_name": "Rushing Hound: Swift as the Wind"
+  },
+  {
+    "character_id": 1706,
+    "character_name": "Alhaitham",
+    "talent_id": 217061,
+    "talent_name": "Structuration"
+  },
+  {
+    "character_id": 2303,
+    "character_name": "Eremite Scorching Loremaster",
+    "talent_id": 223031,
+    "talent_name": "Scorpocalypse"
+  },
+  {
+    "character_id": 2402,
+    "character_name": "Thunder Manifestation",
+    "talent_id": 224021,
+    "talent_name": "Grieving Echo"
+  },
+  {
+    "character_id": 2502,
+    "character_name": "Dvalin",
+    "talent_id": 225021,
+    "talent_name": "Rending Vortex"
+  },
+  {
+    "character_id": 1311,
+    "character_name": "Thoma",
+    "talent_id": 213111,
+    "talent_name": "A Subordinate's Skills"
+  },
+  {
+    "character_id": 1507,
+    "character_name": "Sayu",
+    "talent_id": 215071,
+    "talent_name": "Skiving: New and Improved"
+  },
+  {
+    "character_id": 2103,
+    "character_name": "Cryo Hypostasis",
+    "talent_id": 221031,
+    "talent_name": "Sternfrost Prism"
+  },
+  {
+    "character_id": 2403,
+    "character_name": "Millennial Pearl Seahorse",
+    "talent_id": 224031,
+    "talent_name": "Pearl Solidification"
+  },
+  {
+    "character_id": 1110,
+    "character_name": "Charlotte",
+    "talent_id": 211101,
+    "talent_name": "A Summation of Interest"
+  },
+  {
+    "character_id": 1210,
+    "character_name": "Neuvillette",
+    "talent_id": 212101,
+    "talent_name": "Heir to the Ancient Sea's Authority"
+  },
+  {
+    "character_id": 1707,
+    "character_name": "Kirara",
+    "talent_id": 217071,
+    "talent_name": "Countless Sights to See"
+  },
+  {
+    "character_id": 2404,
+    "character_name": "Fatui Electro Cicin Mage",
+    "talent_id": 224041,
+    "talent_name": "Electro Cicin's Gleam"
+  },
+  {
+    "character_id": 1411,
+    "character_name": "Kuki Shinobu",
+    "talent_id": 214111,
+    "talent_name": "To Ward Weakness"
+  },
+  {
+    "character_id": 1509,
+    "character_name": "Faruzan",
+    "talent_id": 215091,
+    "talent_name": "The Wondrous Path of Truth"
+  },
+  {
+    "character_id": 2203,
+    "character_name": "Abyss Herald: Wicked Torrents",
+    "talent_id": 222031,
+    "talent_name": "Surging Undercurrent"
+  },
+  {
+    "character_id": 2304,
+    "character_name": "Emperor of Fire and Iron",
+    "talent_id": 223041,
+    "talent_name": "Molten Mail"
+  },
+  {
+    "character_id": 1111,
+    "character_name": "Wriothesley",
+    "talent_id": 211111,
+    "talent_name": "Terror for the Evildoers"
+  },
+  {
+    "character_id": 1211,
+    "character_name": "Furina",
+    "talent_id": 212111,
+    "talent_name": "\"Hear Me — Let Us Raise the Chalice of Love!\""
+  },
+  {
+    "character_id": 1312,
+    "character_name": "Xinyan",
+    "talent_id": 213121,
+    "talent_name": "Rockin' in a Flaming World"
+  },
+  {
+    "character_id": 1607,
+    "character_name": "Yun Jin",
+    "talent_id": 216071,
+    "talent_name": "Decorous Harmony"
+  },
+  {
+    "character_id": 1708,
+    "character_name": "Kaveh",
+    "talent_id": 217081,
+    "talent_name": "The Art of Budgeting"
+  },
+  {
+    "character_id": 2204,
+    "character_name": "All-Devouring Narwhal",
+    "talent_id": 222041,
+    "talent_name": "Lightless Feeding"
+  },
+  {
+    "character_id": 2405,
+    "character_name": "Consecrated Scorpion",
+    "talent_id": 224051,
+    "talent_name": "Fatal Fulmination"
+  },
+  {
+    "character_id": 2503,
+    "character_name": "Consecrated Flying Serpent",
+    "talent_id": 225031,
+    "talent_name": "Deathly Cyclone"
+  },
+  {
+    "character_id": 2702,
+    "character_name": "Guardian of Apep's Oasis",
+    "talent_id": 227021,
+    "talent_name": "A Thousand Young"
+  },
+  {
+    "character_id": 1313,
+    "character_name": "Chevreuse",
+    "talent_id": 213131,
+    "talent_name": "Vanguard's Coordinated Tactics"
+  },
+  {
+    "character_id": 1608,
+    "character_name": "Navia",
+    "talent_id": 216081,
+    "talent_name": "Undisclosed Distribution Channels"
+  },
+  {
+    "character_id": 2104,
+    "character_name": "Frost Operative",
+    "talent_id": 221041,
+    "talent_name": "Rimeflow Rapier"
+  },
+  {
+    "character_id": 1112,
+    "character_name": "Freminet",
+    "talent_id": 211121,
+    "talent_name": "Moment of Waking and Resolve"
+  },
+  {
+    "character_id": 1510,
+    "character_name": "Xianyun",
+    "talent_id": 215101,
+    "talent_name": "They Call Her Cloud Retainer"
+  },
+  {
+    "character_id": 2205,
+    "character_name": "Hydro Hilichurl Rogue",
+    "talent_id": 222051,
+    "talent_name": "Featherweight Foam"
+  },
+  {
+    "character_id": 1609,
+    "character_name": "Chiori",
+    "talent_id": 216091,
+    "talent_name": "In Five Colors Dyed"
+  },
+  {
+    "character_id": 2406,
+    "character_name": "Abyss Lector: Violet Lightning",
+    "talent_id": 224061,
+    "talent_name": "Chain Lightning Cascade"
+  },
+  {
+    "character_id": 2703,
+    "character_name": "Eremite Floral Ring-Dancer",
+    "talent_id": 227031,
+    "talent_name": "Spirit Serpent's Swirl"
+  },
+  {
+    "character_id": 1113,
+    "character_name": "Rosaria",
+    "talent_id": 211131,
+    "talent_name": "Divine Retribution"
+  },
+  {
+    "character_id": 1213,
+    "character_name": "Sigewinne",
+    "talent_id": 212131,
+    "talent_name": "Requires Appropriate Rest"
+  },
+  {
+    "character_id": 2603,
+    "character_name": "Golden Wolflord",
+    "talent_id": 226031,
+    "talent_name": "Beastly Corrosion"
+  },
+  {
+    "character_id": 1214,
+    "character_name": "Mualani",
+    "talent_id": 212141,
+    "talent_name": "Night Realm's Gift: Crests and Troughs"
+  },
+  {
+    "character_id": 1412,
+    "character_name": "Clorinde",
+    "talent_id": 214121,
+    "talent_name": "Dark-Shattering Flame"
+  },
+  {
+    "character_id": 1314,
+    "character_name": "Arlecchino",
+    "talent_id": 213141,
+    "talent_name": "All Reprisals and Arrears, Mine to Bear"
+  },
+  {
+    "character_id": 1709,
+    "character_name": "Kinich",
+    "talent_id": 217091,
+    "talent_name": "Night Realm's Gift: Repaid in Full"
+  },
+  {
+    "character_id": 1610,
+    "character_name": "Kachina",
+    "talent_id": 216101,
+    "talent_name": "Night Realm's Gift: Heart of Unity"
+  },
+  {
+    "character_id": 1710,
+    "character_name": "Emilie",
+    "talent_id": 217101,
+    "talent_name": "Marcotte Sillage"
+  },
+  {
+    "character_id": 1413,
+    "character_name": "Sethos",
+    "talent_id": 214131,
+    "talent_name": "Pylon of the Sojourning Sun Temple"
+  },
+  {
+    "character_id": 1611,
+    "character_name": "Xilonen",
+    "talent_id": 216111,
+    "talent_name": "Tour of Tepeilhuitl"
+  },
+  {
+    "character_id": 1114,
+    "character_name": "Citlali",
+    "talent_id": 211141,
+    "talent_name": "Mamaloaco's Frigid Rain"
+  },
+  {
+    "character_id": 1315,
+    "character_name": "Mavuika",
+    "talent_id": 213151,
+    "talent_name": "\"Humanity's Name\" Unfettered"
+  },
+  {
+    "character_id": 1511,
+    "character_name": "Chasca",
+    "talent_id": 215111,
+    "talent_name": "Bullet Trick"
+  },
+  {
+    "character_id": 1512,
+    "character_name": "Lan Yan",
+    "talent_id": 215121,
+    "talent_name": "Dance Vestments Billow Like Rainbow Jade"
+  },
+  {
+    "character_id": 1513,
+    "character_name": "Shikanoin Heizou",
+    "talent_id": 215131,
+    "talent_name": "Curious Casefiles"
+  },
+  {
+    "character_id": 2704,
+    "character_name": "Gluttonous Yumkasaur Mountain King",
+    "talent_id": 227041,
+    "talent_name": "The All-Devourer"
+  },
+  {
+    "character_id": 1414,
+    "character_name": "Iansan",
+    "talent_id": 214141,
+    "talent_name": "Teachings of the Collective of Plenty"
+  },
+  {
+    "character_id": 1514,
+    "character_name": "Yumemizuki Mizuki",
+    "talent_id": 215141,
+    "talent_name": "Your Echo I Meet in Dreams"
+  },
+  {
+    "character_id": 2305,
+    "character_name": "Lord of Eroded Primal Fire",
+    "talent_id": 223051,
+    "talent_name": "Undying Fury"
+  }
+]

@@ -1,5 +1,8 @@
 import { routing } from "../i18n/routing";
 
+export type Tuple<T, N extends number> = N extends N ? number extends N ? T[] : _TupleOf<T, N, []> : never;
+type _TupleOf<T, N extends number, R extends unknown[]> = R['length'] extends N ? R : _TupleOf<T, N, [T, ...R]>;
+
 export type Locales = typeof routing.locales[number]
 
 export type Maybe<T> = { data: null; error: Error } | { data: T; error: null };
@@ -201,6 +204,7 @@ export interface CardsDataType {
   actions: ActionCard[]
   codes: CardCode[]
 }
+export type Elements = "cryo" | "hydro" | "pyro" | "electro" | "geo" | "dendro" | "anemo"
 
 export interface Seasons {
   na: Season[]
