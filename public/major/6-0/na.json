@@ -109,7 +109,15 @@
         3,
         1
       ],
-      "games": []
+      "games": [
+        {
+          "deck_index": [
+            1,
+            2
+          ],
+          "winner": null
+        }
+      ]
     },
     {
       "top": 8,
