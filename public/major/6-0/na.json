@@ -277,7 +277,15 @@
         2,
         3
       ],
-      "games": []
+      "games": [
+        {
+          "deck_index": [
+            1,
+            2
+          ],
+          "winner": null
+        }
+      ]
     }
   ],
   "vod": "https://www.youtube.com/watch?v=Ou5O7-P6NBc"
