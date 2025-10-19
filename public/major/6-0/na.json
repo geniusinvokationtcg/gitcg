@@ -240,7 +240,7 @@
             2,
             1
           ],
-          "winner": null
+          "winner": 2
         }
       ]
     },
@@ -249,8 +249,8 @@
       "best_of": 3,
       "matchid": 6,
       "bans": [
-        null,
-        null
+        2,
+        3
       ],
       "games": []
     },
