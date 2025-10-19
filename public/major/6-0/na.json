@@ -233,6 +233,13 @@
             3,
             3
           ],
+          "winner": 2
+        },
+        {
+          "deck_index": [
+            2,
+            1
+          ],
           "winner": null
         }
       ]
