@@ -96,8 +96,8 @@
       "best_of": 3,
       "matchid": 1,
       "bans": [
-        null,
-        null
+        3,
+        2
       ],
       "games": []
     },
@@ -106,8 +106,8 @@
       "best_of": 3,
       "matchid": 2,
       "bans": [
-        null,
-        null
+        3,
+        1
       ],
       "games": []
     },
@@ -116,8 +116,8 @@
       "best_of": 3,
       "matchid": 3,
       "bans": [
-        null,
-        null
+        1,
+        2
       ],
       "games": []
     },
