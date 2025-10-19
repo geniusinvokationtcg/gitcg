@@ -215,7 +215,7 @@
             2,
             2
           ],
-          "winner": null
+          "winner": 2
         }
       ]
     },
@@ -224,8 +224,8 @@
       "best_of": 3,
       "matchid": 5,
       "bans": [
-        null,
-        null
+        1,
+        2
       ],
       "games": []
     },
