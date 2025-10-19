@@ -122,6 +122,13 @@
             2,
             3
           ],
+          "winner": 1
+        },
+        {
+          "deck_index": [
+            1,
+            3
+          ],
           "winner": null
         }
       ]
@@ -176,5 +183,6 @@
       ],
       "games": []
     }
-  ]
+  ],
+  "vod": "https://www.youtube.com/watch?v=Ou5O7-P6NBc"
 }

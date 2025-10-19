@@ -113,6 +113,7 @@
     "banned": "Banned",
     "win": "Win",
     "lose": "Lose",
+    "ongoing": "Ongoing",
     "game_x": "Game {game}",
     "watch_replay": "Watch",
     "final": "Final",

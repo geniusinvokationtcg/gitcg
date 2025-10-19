@@ -113,6 +113,7 @@
     "banned": "禁用",
     "win": "胜利",
     "lose": "失败",
+    "ongoing": "进行中",
     "game_x": "第{game}局",
     "watch_replay": "观看回放",
     "final": "总决赛",

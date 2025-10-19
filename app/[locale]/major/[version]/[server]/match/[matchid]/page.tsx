@@ -109,7 +109,7 @@ export default function MajorMatchDetail ({ params }: { params: Promise<{ locale
         <div className="flex justify-between">
           <div className="regular_text">{t("game_x", { game: match_index+1 })}</div>
           <div className="wl_text">
-            {game.winner ? (game.winner === 1 ? t("win") : t("lose")) : "‎"}
+            {game.winner ? (game.winner === 1 ? t("win") : t("lose")) : t("ongoing")}
           </div>
         </div>
         <Link href={`${playerPath}/${player1.seed}?d=${game.deck_index[0]-1}`}>
@@ -128,7 +128,7 @@ export default function MajorMatchDetail ({ params }: { params: Promise<{ locale
       <div className={`deck_container right_player ${game.winner === 2 ? "win" : "lose"}`}>
         <div className="flex justify-between">
           <div className="wl_text">
-            {game.winner ? (game.winner === 2 ? t("win") : t("lose")) : "‎"}
+            {game.winner ? (game.winner === 2 ? t("win") : t("lose")) : t("ongoing")}
           </div>
           {game.vod && <a href={game.vod} className="text-[#AF7637] items-center inline" target="_blank" rel="noopener noreferrer">
             <PlayCircleIcon className="size-4.5"/> {t("watch_replay")}
