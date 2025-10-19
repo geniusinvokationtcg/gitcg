@@ -1,0 +1,165 @@
+{
+  "max_players": 8,
+  "players": [
+    {
+      "playerid": 20,
+      "name": "Birdy",
+      "seed": 1,
+      "deckcode": [
+        "F0EBh/wYHXHwiJ0PCkAw9KMQChFAA6QQCzGgiroYE6FR6DUeGIFR1IUdDEEg3NQdDcAA",
+        "HpHi9c4QAkJCTeIVH8IRi5gZGqLyu7ocHKORBMohDTORBdohDkORB+QhD2Iy3eoeH8EB",
+        "H3Chv0ALHfHRNkQTFGBA2oYeCJBg9I4PCEHgCJcQCYFxOzATE7EB1DMdE0Ex3FcdFcAA"
+      ],
+      "avatar": "default"
+    },
+    {
+      "playerid": 126,
+      "name": "Rafu",
+      "seed": 2,
+      "deckcode": [
+        "H0HBh98YF3EAOp0YCYDQ9KQPCkFBA8EQHDEQiroYC6Gh6DUeE4FR1IUdGEFQ3NQdDcAA",
+        "HZHh580PAUBB9OEUHsEQTJcYGaHwurMbC6IxA7kgGzKQBMkgDEKRBjggE2GB3FkdFcAA",
+        "H3Chv0ALHfDR2kQeFJBA9IYPCEFgCI4QCIHgO5cTCbJxBzAgE3EB1DMdE0Ex3FcdFcAA"
+      ],
+      "avatar": "default"
+    },
+    {
+      "playerid": 156,
+      "name": "Tentia",
+      "seed": 3,
+      "deckcode": [
+        "GPDR3x4OEQBQ4JcPCWBx9lcQFTFwA8YYDKFgiskQDKGQE9ARDTEA1NEdDUEQ3N0dDcAA",
+        "HWBQxgUNAuDR8tcPBkCQ9GkPCVBw+ZcQEyEROzETGbExDJMQDMER1DUdE0Fh3DYdDMAA",
+        "H3Chv0ALHfHRNkQTFGBA2oYeCJFgBY4QCIHgCJcTCbFxOzAgE3IBBzMdE0Ex3FcdFcAA"
+      ],
+      "avatar": "default"
+    },
+    {
+      "playerid": 84,
+      "name": "Lieil",
+      "seed": 4,
+      "deckcode": [
+        "HyDBw98NF0AA1J0YCXHQh6MTCqAx9DAPC0FgA7oQCzGhijUYE6FR6IUeGIFQ3MIdDMAA",
+        "HkHi9c4RAjJCTeIVH8IRi5gZGqLyu7ocHKORBMohDTORBdghDkNyB+ghD2Ix3eQeEMEB",
+        "H4HR6TYQBBGh8pgQC0JBBKURDTKBi8kZDaKRu8ocFaOiBEshDkORBdohD2NxB+geD0EB"
+      ],
+      "avatar": "default"
+    },
+    {
+      "playerid": 85,
+      "name": "Linux",
+      "seed": 5,
+      "deckcode": [
+        "H/Chv0ATHWHRNkQNFKFA6YYPCFBg9Y4QCIHgCJcTE7EBOzAgE3IxBzMdFUFx3FcdC8AA",
+        "HyDB1HANHUHwh50YCXHQWqEPCkEQAaMQChEwA7oQCzGh6DUeE4FR1IUdGEFQ3MIdDMAA",
+        "BIGh6TYQHxHR8n4QCkFx9aURCzJBBMoZDaKRi88cDaLiu0shFTOhBd8hD0NxB+ghD2EB"
+      ],
+      "avatar": "default"
+    },
+    {
+      "playerid": 86,
+      "name": "LS-Plus",
+      "seed": 6,
+      "deckcode": [
+        "GPDR3x4OEQBQ4JcPCUBx9VcPFWBw9r0YDKFgisYQDKGQE8kRDTEA1NEdDUEQ3N0dDcAA",
+        "F5Ah0d4NGxHQo5APEmDx9kcYCaHQip0cC0HxxDYQE8FgEMURDAFQ1MYdDEFg3MkdDMAA",
+        "HyDB1N8NF0EAh50YCXHQOqEYCoEQAaMQChEwA7oQCzGhijUYE6FR6IUeGIFQ3MIdDMAA"
+      ],
+      "avatar": "default"
+    },
+    {
+      "playerid": 4,
+      "name": "9o_o6",
+      "seed": 7,
+      "deckcode": [
+        "HyDBwt8NF0AA1J0YCXHQh6EYCoAw9KMPCkBA+aQPC5FgA7YQCzGg6LoeGIFR3IUdDMAA",
+        "H5ChyUAMHdDR0UQNCBBg2oYeCZBx9DAPE0AB9jMQFYFxCFcTC7HwO78dDEFA3MQdDMAA",
+        "EfBR3x4OGADQ4JcPCUBx9FcPFWBw9r0QDAFgisYQDKGQCskRDTEA1NEdDUER3IgdDcAA"
+      ],
+      "avatar": "default"
+    },
+    {
+      "playerid": 90,
+      "name": "Magnamak",
+      "seed": 8,
+      "deckcode": [
+        "G9AB340NEfDg4JcOCQBx9DMPE0Ax9VcPFWBx9pMQCyFAO70TC7HQ1MMdFkFx3GcdDcAA",
+        "H0DB1N8YF3EAh50eCXDQ9KEPCkERATAQExEBA6sQEzFRijUYGKFR6IUeDIEg3MIdDcAA",
+        "H7Ch7O4OA8DA9JcPCUBw9bQPC2HQA8YQDDFg+MkfDIGQE9ATDeEQ1NEdHkFw3OsdDsAA"
+      ],
+      "avatar": "default"
+    }
+  ],
+  "bracket": [
+    {
+      "top": 8,
+      "best_of": 3,
+      "matchid": 1,
+      "bans": [
+        null,
+        null
+      ],
+      "games": []
+    },
+    {
+      "top": 8,
+      "best_of": 3,
+      "matchid": 2,
+      "bans": [
+        null,
+        null
+      ],
+      "games": []
+    },
+    {
+      "top": 8,
+      "best_of": 3,
+      "matchid": 3,
+      "bans": [
+        null,
+        null
+      ],
+      "games": []
+    },
+    {
+      "top": 8,
+      "best_of": 3,
+      "matchid": 4,
+      "bans": [
+        null,
+        null
+      ],
+      "games": []
+    },
+    {
+      "top": 4,
+      "best_of": 3,
+      "matchid": 5,
+      "bans": [
+        null,
+        null
+      ],
+      "games": []
+    },
+    {
+      "top": 4,
+      "best_of": 3,
+      "matchid": 6,
+      "bans": [
+        null,
+        null
+      ],
+      "games": []
+    },
+    {
+      "top": 2,
+      "best_of": 3,
+      "matchid": 7,
+      "bans": [
+        null,
+        null
+      ],
+      "games": []
+    }
+  ]
+}
