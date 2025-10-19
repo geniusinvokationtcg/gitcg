@@ -274,8 +274,8 @@
       "best_of": 3,
       "matchid": 7,
       "bans": [
-        null,
-        null
+        2,
+        3
       ],
       "games": []
     }
