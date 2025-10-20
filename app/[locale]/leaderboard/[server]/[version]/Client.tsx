@@ -70,7 +70,7 @@ export function LeaderboardPageClient ({ params }: { params: LeaderboardPagePara
       season.versions.map(async v => {
         const parsed = await parseCSV<MatchData>(`/weekly/${v}/matchdata.csv`, weeklyMatchdataHeader)
         const byServer = parsed.data?.filter(row => row.server === server.toUpperCase())
-        console.log(JSON.stringify(byServer))
+        //console.log(JSON.stringify(byServer))
         return {
           version: v,
           match_data: byServer ?? null,
