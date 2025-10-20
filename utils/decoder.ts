@@ -78,7 +78,7 @@ export function decode(code: string, output?: "name" | "id" | "code"): Maybe<num
 }
 
 export function decodeAndSortActionCards(deckcode: string): number[] {
-  const decoded = decode(deckcode, "id").data as number[];
+  const decoded = (decode(deckcode, "id").data ?? []) as number[];
   const characters = decoded.splice(0, 3); //decoded becomes the action cards after splicing
   decoded.sort((a, b) => { return a-b } );
   return [...characters, ...decoded];
@@ -288,5 +288,3 @@ function getElement(code: number): Elements | undefined {
 		default: return
 	}
 }
-
-console.log(isValidDeckcode("GlFBNl4TGGDByqcMGqFxZ2ENCZBw2ZcNCuBB6TMOE5Ax9FcPFUBw9bQPC1FQO7UTE7AA"))

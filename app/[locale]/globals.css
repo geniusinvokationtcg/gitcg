@@ -23,6 +23,35 @@ body {
   font-family: "Courier New", "Courier", monospace;
 }
 
+.icon_hover_bg {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  transition: background-color 200ms ease;
+  cursor: pointer;
+}
+.icon_hover_bg > svg {
+  width: 24px;
+  height: 24px;
+  z-index: 1;
+}
+.icon_hover_bg:hover {
+  background-color: #e5e7eb;
+}
+
+.icon_hover > svg {
+  transition: all 200ms ease;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+.icon_hover > svg:hover {
+  color: #AF7637;
+}
+
 a.inline {
   @apply text-[#AF7637] hover:underline
 }

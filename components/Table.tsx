@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl';
 import { CardImageSmall } from "./CardImage";
 
 export function LineupShowcaseForTable ({
-  characters, border, disableLink, locale, version, localCardsData
+  characters, border, disableLink, locale, version, localCardsData, childrenOnly = false, alwaysHideCardNames = false
 }: {
   characters: [number, number, number];
   border: BorderType | [BorderType, BorderType, BorderType];
@@ -14,12 +14,14 @@ export function LineupShowcaseForTable ({
   locale: string;
   version: string;
   localCardsData: CardsDataType;
+  childrenOnly?: boolean
+  alwaysHideCardNames?: boolean
 }) {
   if(typeof border === "string") border = [border, border, border];
   const charactersName = characters.map(c => getCardName(c, localCardsData));
 
   const children = <div className={"flex items-center justify-center gap-0.5 " + (disableLink ? "" : "cursor-pointer")}>
-    <span className="hidden md:block w-[220px]">
+    <span className={`hidden ${alwaysHideCardNames ? "" : "md:block"} w-[220px]`}>
       {charactersName[0]}<br />{charactersName[1]}<br />{charactersName[2]}
     </span>
     {characters.map((c, index) =>
@@ -32,7 +34,9 @@ export function LineupShowcaseForTable ({
     )}
   </div>
 
-  return <td className="custom sticky left-0 bg-white group-hover:bg-gray-50 transition-background duration-200 z-10 w-[380px] p-0.5">
+  if(childrenOnly) return children;
+
+  return <td className="custom sticky left-0 bg-white group-hover:bg-gray-50 transition-background duration-200 z-10 w-fit md:w-[380px] p-0.5">
     {
       disableLink
       ? children

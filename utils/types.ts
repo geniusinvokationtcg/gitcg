@@ -24,6 +24,9 @@ export interface SortingKey<T> {
 export interface DuelistRecord {
   playerid: number
   handle_display: string
+  uid_na: number
+  uid_eu: number
+  uid_as: number
 }
 
 export interface BannedPlayer {
@@ -218,4 +221,17 @@ export interface Season {
   qualification_type?: "top" | "min" //top = player has to be the top threshold players; min = player must scores at least the threshold
   qualification_threshold?: number
   is_hidden?: boolean
+}
+
+export interface CsvPasteRow {
+  teamName: string
+  inGameName: string
+  checkedInAt?: string | null
+  userID: string
+  teamCreatedAt?: string
+  uid: number
+  discord_username: string
+  deckcode: string
+  stream_opt_in: string
+  pronouns: string
 }

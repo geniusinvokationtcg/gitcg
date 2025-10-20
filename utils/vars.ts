@@ -9,6 +9,8 @@ export const serverList: { value: Server, label: string }[] = [
   { value: "as", label: "Asia" }
 ] as const;
 
+export const servers = ["na", "eu", "as"]
+
 export const languages: { locale: Locales, name: string }[] =[
   { locale: "en", name: "English" },
   { locale: "id", name: "Indonesia" },

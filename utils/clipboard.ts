@@ -1,4 +1,5 @@
-export const handleCopy = async (text: string, triggerFn?: () => void) => {
+export const handleCopy = async (text: string | number, triggerFn?: () => void) => {
+  text = text.toString()
   try {
     if(navigator.clipboard?.writeText) {
       await navigator.clipboard.writeText(text)
