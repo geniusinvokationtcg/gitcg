@@ -14,7 +14,7 @@ import { useSortTable } from "@/hooks/useSortTable";
 import { ColumnHeaderWithSorter, NoDataAvailable } from "@/components/Table";
 import { getVerLabel } from "@/utils/version";
 import { useTranslations } from "next-intl";
-import { decodeAndSortActionCards } from "@/utils/decoder";
+import { decodeAndSortActionCards, isValidDeckcode } from "@/utils/decoder";
 import { CustomButton } from "@/components/Button";
 import { SuccessNotification } from "@/components/PopUp";
 import { Tooltip } from "@/components/Tooltip";
@@ -311,7 +311,8 @@ export function LeaderboardPageClient ({ params }: { params: LeaderboardPagePara
               </td>
               {p.scores.map(v => v.weeks?.flatMap(w => {
                 let characters: string[] = []
-                if(w.deckcode) characters = decodeAndSortActionCards(w.deckcode).slice(0, 3).map(c => getCardName(c, localCardsData))
+                if(w.deckcode && isValidDeckcode(w.deckcode)) characters = decodeAndSortActionCards(w.deckcode).slice(0, 3).map(c => getCardName(c, localCardsData))
+                if(w.deckcode && !isValidDeckcode(w.deckcode)) console.error(w.deckcode, isValidDeckcode(w.deckcode))
                 return [
                   <td onMouseEnter={() => handleMouseEnter(`${p.playerid}_${v.version}_${w.week}`)} onMouseLeave={handleMouseLeave} key={`${p.playerid}_${v.version}_${w.week}_w`}>{w.win_count}</td>,
                   <td onMouseEnter={() => handleMouseEnter(`${p.playerid}_${v.version}_${w.week}`)} onMouseLeave={handleMouseLeave} key={`${p.playerid}_${v.version}_${w.week}_t`} className="relative">
