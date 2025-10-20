@@ -14,7 +14,7 @@ import { useSortTable } from "@/hooks/useSortTable";
 import { ColumnHeaderWithSorter, NoDataAvailable } from "@/components/Table";
 import { getVerLabel } from "@/utils/version";
 import { useTranslations } from "next-intl";
-import { decodeAndSortActionCards, isValidDeckcode } from "@/utils/decoder";
+import { decodeAndSortActionCards } from "@/utils/decoder";
 import { CustomButton } from "@/components/Button";
 import { SuccessNotification } from "@/components/PopUp";
 import { Tooltip } from "@/components/Tooltip";
@@ -27,7 +27,6 @@ import { InformationCircleIcon } from "@heroicons/react/24/outline";
 import { getBannedPlayers } from "../../bans";
 
 export function LeaderboardPageClient ({ params }: { params: LeaderboardPageParams }) {
-  try{
   const { locale, server, version } = params
 
   const serverList = useTranslatedServers()
@@ -311,8 +310,7 @@ export function LeaderboardPageClient ({ params }: { params: LeaderboardPagePara
               </td>
               {p.scores.map(v => v.weeks?.flatMap(w => {
                 let characters: string[] = []
-                if(w.deckcode && isValidDeckcode(w.deckcode)) characters = decodeAndSortActionCards(w.deckcode).slice(0, 3).map(c => getCardName(c, localCardsData))
-                if(w.deckcode && !isValidDeckcode(w.deckcode)) console.error(w.deckcode, isValidDeckcode(w.deckcode))
+                if(w.deckcode) characters = decodeAndSortActionCards(w.deckcode).slice(0, 3).map(c => getCardName(c, localCardsData))
                 return [
                   <td onMouseEnter={() => handleMouseEnter(`${p.playerid}_${v.version}_${w.week}`)} onMouseLeave={handleMouseLeave} key={`${p.playerid}_${v.version}_${w.week}_w`}>{w.win_count}</td>,
                   <td onMouseEnter={() => handleMouseEnter(`${p.playerid}_${v.version}_${w.week}`)} onMouseLeave={handleMouseLeave} key={`${p.playerid}_${v.version}_${w.week}_t`} className="relative">
@@ -337,9 +335,6 @@ export function LeaderboardPageClient ({ params }: { params: LeaderboardPagePara
     </div>
     {participatingPlayer.length === 0 && <NoDataAvailable/>}
   </div>
-  } catch(e) {
-    console.error(e)
-  }
 }
 
 interface PlayerLeaderboardData {
