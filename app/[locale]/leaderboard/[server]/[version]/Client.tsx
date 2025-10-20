@@ -27,6 +27,7 @@ import { InformationCircleIcon } from "@heroicons/react/24/outline";
 import { getBannedPlayers } from "../../bans";
 
 export function LeaderboardPageClient ({ params }: { params: LeaderboardPageParams }) {
+  try{
   const { locale, server, version } = params
 
   const serverList = useTranslatedServers()
@@ -335,6 +336,9 @@ export function LeaderboardPageClient ({ params }: { params: LeaderboardPagePara
     </div>
     {participatingPlayer.length === 0 && <NoDataAvailable/>}
   </div>
+  } catch(e) {
+    console.error(e)
+  }
 }
 
 interface PlayerLeaderboardData {
