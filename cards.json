@@ -4261,6 +4261,89 @@
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68c0b19c/782e488cbcaf377ef14b23bc552d817d.png"
     },
     {
+      "id": 1415,
+      "name": "Varesa",
+      "element_type": 304,
+      "role_skill_infos": [
+        {
+          "skill_text": "Deals 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><color=#FFACFFFF>Electro DMG</color>. <color=#FFFFFFFF>When the Skill used this time is <color=#FFFFFFFF>Plunging Attack</color>:</color> Deal +1 DMG. This character enters <color=#FFFFFFFF>Nightsoul's Blessing</color>, and gains 1 <color=#FFFFFFFF>Nightsoul point</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "14",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0a7a50d15a7580c4de07a41f87a95787.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Normal Attack"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/2c014e6053c4f0d032e1d1ff0c6de0e1.png",
+          "name": "By the Horns",
+          "id": "14151"
+        },
+        {
+          "skill_text": "Deals 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><color=#FFACFFFF>Electro DMG</color>, applies <color=#FFFFFFFF>Sudden Onrush</color> to self, enters <color=#FFFFFFFF>Nightsoul's Blessing</color>, gains 1 <color=#FFFFFFFF>Nightsoul point</color>, then switches to the next character.",
+          "skill_costs": [
+            {
+              "cost_type": "14",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0a7a50d15a7580c4de07a41f87a95787.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "Elemental Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67e335b2/d4b0631dece12673b392275b1f71a4d2.png",
+          "name": "Riding the Night-Rainbow",
+          "id": "14152"
+        },
+        {
+          "skill_text": "Deals 3 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><color=#FFACFFFF>Electro DMG</color>, applies <color=#FFFFFFFF>Apex Drive</color> to self.",
+          "skill_costs": [
+            {
+              "cost_type": "14",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0a7a50d15a7580c4de07a41f87a95787.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "Elemental Burst"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68f81ec7/21e36b465017d488ee42ca95f2eae3ad.png",
+          "name": "Guardian Vent!",
+          "id": "14153"
+        },
+        {
+          "skill_text": "(Passive) <color=#FFFFFFFF>After <color=#FFFFFFFF>Varesa</color> uses a Skill:</color> If she has 2 <color=#FFFFFFFF>Nightsoul points</color>, she consumes 2 <color=#FFFFFFFF>Nightsoul points</color> and applies <color=#FFFFFFFF>Apex Drive</color> to herself.",
+          "skill_costs": [],
+          "type": [
+            "Passive Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68f81ec7/ace580f2267138859ce8421d3778fc53.png",
+          "name": "Tag-Team Triple Jump!",
+          "id": "14154"
+        }
+      ],
+      "weapon": "Catalyst",
+      "belongs": [
+        "Natlan",
+        "",
+        ""
+      ],
+      "hp": "10",
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68f81eac/53efa3b6eabfd2cf5f1d05633042056a.png"
+    },
+    {
       "id": 1501,
       "name": "Sucrose",
       "element_type": 307,
@@ -5301,6 +5384,79 @@
       ],
       "hp": "10",
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68c0b19c/0ecb360619503d292559f33330b8e5ef.png"
+    },
+    {
+      "id": 1515,
+      "name": "Ifa",
+      "element_type": 307,
+      "role_skill_infos": [
+        {
+          "skill_text": "Deals 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' /><color=#80FFD7FF>Anemo DMG</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "17",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Normal Attack"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/2c014e6053c4f0d032e1d1ff0c6de0e1.png",
+          "name": "Rite of Dispelling Winds",
+          "id": "15151"
+        },
+        {
+          "skill_text": "Deals 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' /><color=#80FFD7FF>Anemo DMG</color>, enters <color=#FFFFFFFF>Nightsoul's Blessing</color>, gains 2 <color=#FFFFFFFF>Nightsoul points</color>, and applies <color=#FFFFFFFF>Cacucu</color> to self. (This skill cannot be used after the character enters <color=#FFFFFFFF>Nightsoul's Blessing</color>.)\\n(Characters with <color=#FFFFFFFF>Cacucu</color> attached can use the Technique: <color=#FFFFFFFF>Supporting Fire</color>)",
+          "skill_costs": [
+            {
+              "cost_type": "17",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Elemental Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/681a94b2/ca2ccb0863eb85ca0519ce40fe1ef160.png",
+          "name": "Airborne Disease Prevention",
+          "id": "15152"
+        },
+        {
+          "skill_text": "Deals 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' /><color=#80FFD7FF>Anemo DMG</color>, heals the character on your team who has taken the most DMG for 2 HP. If this Skill triggers <color=#80FFD7FF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' />Anemo-Related Reactions</color>, attach a <color=#FFFFFFFF>Sedation Mark</color> of the corresponding element to the opponent's active character.",
+          "skill_costs": [
+            {
+              "cost_type": "17",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Elemental Burst"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68f81ec7/40b867e183a6e9d69e369e2104087124.png",
+          "name": "Compound Sedation Field",
+          "id": "15153"
+        }
+      ],
+      "weapon": "Catalyst",
+      "belongs": [
+        "Natlan",
+        "",
+        ""
+      ],
+      "hp": "10",
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68f81eac/86d8d0d9ba2aeeb2e320df51fa3a69b4.png"
     },
     {
       "id": 1601,
@@ -7621,6 +7777,89 @@
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/e4c97d57a1a98622b95e506ef21a09ee.png"
     },
     {
+      "id": 2206,
+      "name": "Hydro Tulpa",
+      "element_type": 302,
+      "role_skill_infos": [
+        {
+          "skill_text": "Deals 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>Hydro DMG</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Normal Attack"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/2c014e6053c4f0d032e1d1ff0c6de0e1.png",
+          "name": "Savage Swell",
+          "id": "22061"
+        },
+        {
+          "skill_text": "Deals 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>Hydro DMG</color>, and randomly triggers the End Phase effect for 1 of your Summons. If this character's HP is not lower than 2, they will receive 1 <color=#FFFFFFFF><color=#FFFFFFFF>Piercing DMG</color></color>.",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "Elemental Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/04947869edfb74fdc989216007367ed2.png",
+          "name": "Storm Surge",
+          "id": "22062"
+        },
+        {
+          "skill_text": "Deals 4 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>Hydro DMG</color>, triggers the End Phase effect for all of your Summons.",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "Elemental Burst"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/9179a5ed91203527b4e858ed911cc47b.png",
+          "name": "Thundering Tide",
+          "id": "22063"
+        },
+        {
+          "skill_text": "<color=#FFFFFFFF>When this character's HP is not lower than 3, and all your Summons apart from Half-Tulpa leave play:</color> This character receives 2 <color=#FFFFFFFF><color=#FFFFFFFF>Piercing DMG</color></color> and summons 1 independent <color=#FFFFFFFF>Half-Tulpa</color>. (Once per Round)",
+          "skill_costs": [],
+          "type": [
+            "Passive Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/4ae8196036b6cc44cfef04b0252c5990.png",
+          "name": "Branching Flow",
+          "id": "22064"
+        }
+      ],
+      "weapon": "Other Weapons",
+      "belongs": [
+        "Monster",
+        "",
+        ""
+      ],
+      "hp": "12",
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/5fc668b6b1415d5ad341d5ff9accb5b6.png"
+    },
+    {
       "id": 2301,
       "name": "Fatui Pyro Agent",
       "element_type": 303,
@@ -7995,7 +8234,7 @@
           "id": "23052"
         },
         {
-          "skill_text": "Deals 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FF9999FF>Pyro DMG</color>, and deals 1 <color=#FFFFFFFF>Piercing DMG</color> to all the opponent's off-field characters. Both sides <color=#FFFFFFFF>Discard</color> the top 3 cards from their decks and attach 1 stack of <color=#FFFFFFFF>Resentment</color> to themselves.",
+          "skill_text": "Deals 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FF9999FF>Pyro DMG</color>, and deals 1 <color=#FFFFFFFF>Piercing DMG</color> to all the opponent's off-field characters. Both sides <color=#FFFFFFFF>Discard</color> the top 3 cards from their decks. Attaches 1 stack of <color=#FFFFFFFF>Resentment</color> to self.",
           "skill_costs": [
             {
               "cost_type": "13",
@@ -10478,6 +10717,26 @@
       "is_special": false
     },
     {
+      "id": 214151,
+      "name": "A Hero of Justice's Triumph",
+      "content": "<color=#FFFFFFFF>Fast Action</color>: Equip this to your <color=#FFFFFFFF>Varesa</color>.\\nAfter Varesa triggers <color=#FFFFFFFF>Tag-Team Triple Jump!</color>: Gain 1 <color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png' />Energy</color>.\\nElemental Bursts from Varesa, who has this card equipped, deal +1 DMG.\\n(You must have Varesa in your deck to add this card to your deck.)",
+      "action_type": "Equipment Cards",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/f7048dd5a016ad50724e4adb302a131e_1957506487216936243.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "Talent",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68f81eac/256bb240b08c0ee8e03fd898bf917c27.png",
+      "is_special": false
+    },
+    {
       "id": 215011,
       "name": "Chaotic Entropy",
       "content": "<color=#FFFFFFFF>Combat Action</color>: When your active character is <color=#FFFFFFFF>Sucrose</color>, equip this card.\\nAfter Sucrose equips this card, immediately use <color=#FFD780FF>Forbidden Creation - Isomer 75 / Type II</color> once.\\nAfter the <color=#FFFFFFFF>Large Wind Spirit</color> created by your Sucrose, who had this card equipped, has converted to another Elemental Type: Deal +1 DMG of this Elemental Type.\\n(You must have Sucrose in your deck to add this card to your deck.)",
@@ -10740,7 +10999,7 @@
     {
       "id": 215141,
       "name": "Your Echo I Meet in Dreams",
-      "content": "<color=#FFFFFFFF>Combat Action</color>: When your active character is <color=#FFFFFFFF>Yumemizuki Mizuki</color>, equip this card.\\nAfter Yumemizuki Mizuki equips this card, immediately use <color=#FFD780FF>Aisa Utamakura Pilgrimage</color> once.\\nIf Yumemizuki Mizuki is the active character, you deal +1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/924fba80b9137b4e8fdf5871aa22d666.png' /><color=#99FFFFFF>Cryo DMG</color>, <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>Hydro DMG</color>, <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FF9999FF>Pyro DMG</color>, and <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><color=#FFACFFFF>Electro DMG</color>. (Includes DMG from Swirl Reactions of any element triggered by your characters. Twice per Round.)\\n(You must have Yumemizuki Mizuki in your deck to add this card to your deck.)",
+      "content": "<color=#FFFFFFFF>Combat Action</color>: When your active character is <color=#FFFFFFFF>Yumemizuki Mizuki</color>, equip this card.\\nAfter Yumemizuki Mizuki equips this card, immediately use <color=#FFD780FF>Aisa Utamakura Pilgrimage</color> once.\\nIf Yumemizuki Mizuki is the active character, you deal +1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/924fba80b9137b4e8fdf5871aa22d666.png' /><color=#99FFFFFF>Cryo DMG</color>, <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>Hydro DMG</color>, <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FF9999FF>Pyro DMG</color>, and <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><color=#FFACFFFF>Electro DMG</color>. (Includes DMG from Swirl Reactions of any element that you trigger. Twice per Round.)\\n(You must have Yumemizuki Mizuki in your deck to add this card to your deck.)",
       "action_type": "Equipment Cards",
       "rank_id": 0,
       "cost_num1": "3",
@@ -10755,6 +11014,26 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68c0b19c/368f93f858a96d6db4415d5d5bbcc52b.png",
+      "is_special": false
+    },
+    {
+      "id": 215151,
+      "name": "Tactical Warm Compress Bandaging",
+      "content": "<color=#FFFFFFFF>Fast Action</color>: Equip this to your <color=#FFFFFFFF>Ifa</color> to heal the character on your team who has taken the most DMG for 1 HP.\\nWhen your Ifa, who has this card equipped, is on the field and you trigger <color=#80FFD7FF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' />Anemo-Related Reactions</color> or Electro-Charged, heal the character on your team who has taken the most DMG for 1 HP. (Twice per Round)\\n(You must have Ifa in your deck to add this card to your deck.)",
+      "action_type": "Equipment Cards",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/378c2c4f23cdde3eecd6efbc79bddef1_2323602151582222816.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "Talent",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68f81eac/57c06e95c52835d1aa9621e5937389d5.png",
       "is_special": false
     },
     {
@@ -11355,6 +11634,26 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/4fea591be1829b7154bdacb80bc90060.png",
+      "is_special": false
+    },
+    {
+      "id": 222061,
+      "name": "Flow Convergence",
+      "content": "<color=#FFFFFFFF>Fast Action</color>: Equip this to your <color=#FFFFFFFF>Hydro Tulpa</color> to attach <color=#FFFFFFFF>Elemental Lifeform: Hydro</color> to them. (This character is always affected by <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>Hydro</color> and is immune to <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>Hydro DMG</color>. <color=#FFFFFFFF><color=#FFFFFFFF>Duration (Rounds)</color>: 2</color>)\\nWhen your Hydro Tulpa, who has this card equipped, is on the field, after you declare the end of your round, if the attached character's HP is not less than 3, they will receive 2 <color=#FFFFFFFF><color=#FFFFFFFF>Piercing DMG</color></color> and summon 1 independent <color=#FFFFFFFF>Half-Tulpa</color>.\\n(You must have Hydro Tulpa in your deck to add this card to your deck.)",
+      "action_type": "Equipment Cards",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/bc5ce21badb7be88e4a6a2140c3ef535_8185592904156259932.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "Talent",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68f81eac/d7281f1639bc2717a10470ec3d85ee7f.png",
       "is_special": false
     },
     {
@@ -11975,6 +12274,26 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/4ae9ec3b7441c617f4357766cb673562.png",
+      "is_special": false
+    },
+    {
+      "id": 311111,
+      "name": "Everlasting Moonglow",
+      "content": "<color=#FFFFFFFF>When the character to which this is attached has at least 11 HP:</color> DMG +2.\\n<color=#FFFFFFFF>When played:</color> The character to which this is attached gains 1 Max HP.\\n(Only <color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/1643452964b58e2e69e64e2b5d3b5878.png' />Catalyst characters</color> can equip this. A character can equip a maximum of 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/49acb071b0d634ded17cb788d9f520ed.png' />Weapon)",
+      "action_type": "Equipment Cards",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/3367995a8344bccc77b2d9f794c1bbd2_3133187640885784967.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "Weapon",
+        "Catalyst",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68f81eac/b4deedc6e7992b84cc1527292fa02ae9.png",
       "is_special": false
     },
     {
@@ -13458,6 +13777,46 @@
       "is_special": false
     },
     {
+      "id": 312040,
+      "name": "Fell Dragon's Monocle",
+      "content": "<color=#FFFFFFFF>After the character to which this is attached uses an Elemental Skill:</color> <color=#FFFFFFFF><color=#FFFFFFFF>Adventure</color></color>: Once (Once per Round)\\n(A character can equip a maximum of 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/8abebfa3ce62ff97769616f606b9a7f4.png' />Artifact)",
+      "action_type": "Equipment Cards",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/3367995a8344bccc77b2d9f794c1bbd2_3133187640885784967.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "Artifact",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68f81eac/8ef3105358dce24347e577eaeb25ed72.png",
+      "is_special": false
+    },
+    {
+      "id": 312041,
+      "name": "Noblesse Oblige",
+      "content": "<color=#FFFFFFFF>When played:</color> The character to which this is attached gains 1 <color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png' />Energy</color>.\\n<color=#FFFFFFFF>After the character to which this is attached uses an Elemental Burst:</color> Your characters deal +1 DMG the next 3 times they deal DMG.\\n(A character can equip a maximum of 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/8abebfa3ce62ff97769616f606b9a7f4.png' />Artifact)",
+      "action_type": "Equipment Cards",
+      "rank_id": 0,
+      "cost_num1": "3",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/adc5e2670aa6dab74edbc9c2155df114_7471248184282789775.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "Artifact",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/681a9497/83c09ced2dfaa8ccd2547f446c3567e9.png",
+      "is_special": false
+    },
+    {
       "id": 312101,
       "name": "Broken Rime's Echo",
       "content": "<color=#FFFFFFFF>When you play a <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/f991e209778856fbf83078b501953475.png' />Talent card or a Character uses a Skill:</color> Spend 1 less <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/412134fa7fc8a73b5e20c177a3ae0046.png' /><color=#99FFFFFF>Cryo</color> Die. (Once per Round)\\n(A character can equip a maximum of 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/8abebfa3ce62ff97769616f606b9a7f4.png' />Artifact)",
@@ -14515,6 +14874,26 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/688960b0/e9cbcbb3e8cceafce48ac78230b66765.png",
+      "is_special": false
+    },
+    {
+      "id": 321031,
+      "name": "Adventurers' Guild",
+      "content": "<color=#FFFFFFFF>End Phase:</color> <color=#FFFFFFFF><color=#FFFFFFFF>Adventure</color></color>: Once.\\n<color=#FFFFFFFF><color=#FFFFFFFF>Usage(s)</color>: 3</color>",
+      "action_type": "Support Cards",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/3367995a8344bccc77b2d9f794c1bbd2_3133187640885784967.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "Location",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68f81eac/7c7663960d6e1d4cfd77504eadd65d05.png",
       "is_special": false
     },
     {
@@ -16878,6 +17257,26 @@
       "is_special": false
     },
     {
+      "id": 332056,
+      "name": "An Ancient Sacrifice of Sacred Brocade",
+      "content": "<color=#FFFFFFFF><color=#FFFFFFFF>Adventure</color></color>: Once. If your Adventure Experience is not less than 4, change to deal 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>Physical DMG</color> to your Active Character, and <color=#FFFFFFFF><color=#FFFFFFFF>Adventure</color></color>: Twice.",
+      "action_type": "Event Cards",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/3367995a8344bccc77b2d9f794c1bbd2_3133187640885784967.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68f81eac/5caf4846f7ea450447e6b258c0ca9764.png",
+      "is_special": false
+    },
+    {
       "id": 333001,
       "name": "Jueyun Guoba",
       "content": "During this Round, the target character's next <color=#FFFFFFFF>Normal Attack</color> deals +1 DMG.\\n(A character can consume at most 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/e25f04745615df9e779831a1c1354e38.png' />Food per Round)",
@@ -17315,6 +17714,26 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6851f39d/8ae1e5d363c9319efb035571cc733af7.png",
+      "is_special": false
+    },
+    {
+      "id": 333029,
+      "name": "Chenyu Brew",
+      "content": "Choose one of your characters. The next 2 times you <color=#FFFFFFFF><color=#FFFFFFFF>Adventure</color></color>, or during the End Phase, heal the target character for 1 HP.\\n(A character can consume at most 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/e25f04745615df9e779831a1c1354e38.png' />Food per Round.)",
+      "action_type": "Event Cards",
+      "rank_id": 0,
+      "cost_num1": "0",
+      "cost_type1_icon": "",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "Food",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68f81eac/acf4fe088561cd443741abd19a312def.png",
       "is_special": false
     }
   ],
@@ -20431,6 +20850,78 @@
       "name": "Aqua Simulacra",
       "id": 311208,
       "code": 520,
+      "type": "action"
+    },
+    {
+      "name": "Varesa",
+      "id": 1415,
+      "code": 521,
+      "type": "character"
+    },
+    {
+      "name": "Ifa",
+      "id": 1515,
+      "code": 522,
+      "type": "character"
+    },
+    {
+      "name": "Hydro Tulpa",
+      "id": 2206,
+      "code": 523,
+      "type": "character"
+    },
+    {
+      "name": "A Hero of Justice's Triumph",
+      "id": 214151,
+      "code": 524,
+      "type": "action"
+    },
+    {
+      "name": "Tactical Warm Compress Bandaging",
+      "id": 215151,
+      "code": 525,
+      "type": "action"
+    },
+    {
+      "name": "Flow Convergence",
+      "id": 222061,
+      "code": 526,
+      "type": "action"
+    },
+    {
+      "name": "Everlasting Moonglow",
+      "id": 311111,
+      "code": 527,
+      "type": "action"
+    },
+    {
+      "name": "Fell Dragon's Monocle",
+      "id": 312040,
+      "code": 528,
+      "type": "action"
+    },
+    {
+      "name": "Noblesse Oblige",
+      "id": 312041,
+      "code": 529,
+      "type": "action"
+    },
+    {
+      "name": "Adventurers' Guild",
+      "id": 321031,
+      "code": 530,
+      "type": "action"
+    },
+    {
+      "name": "An Ancient Sacrifice of Sacred Brocade",
+      "id": 332056,
+      "code": 531,
+      "type": "action"
+    },
+    {
+      "name": "Chenyu Brew",
+      "id": 333029,
+      "code": 532,
       "type": "action"
     }
   ]

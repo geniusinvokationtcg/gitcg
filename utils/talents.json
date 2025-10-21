@@ -724,5 +724,23 @@
     "character_name": "Lord of Eroded Primal Fire",
     "talent_id": 223051,
     "talent_name": "Undying Fury"
+  },
+  {
+    "character_id": 1415,
+    "character_name": "Varesa",
+    "talent_id": 214151,
+    "talent_name": "A Hero of Justice's Triumph"
+  },
+  {
+    "character_id": 1515,
+    "character_name": "Ifa",
+    "talent_id": 215151,
+    "talent_name": "Tactical Warm Compress Bandaging"
+  },
+  {
+    "character_id": 2206,
+    "character_name": "Hydro Tulpa",
+    "talent_id": 222061,
+    "talent_name": "Flow Convergence"
   }
 ]
