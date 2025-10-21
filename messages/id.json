@@ -102,6 +102,11 @@
     },
     "player_page_title": "GITCG Data Pemain Turnamen Weekly Versi {version}"
   },
+  "DecklistDumpPage": {
+    "title": "Kumpulan Dek GITCG Versi {version} Minggu {week} {server}",
+    "view_deck": "Lihat dek",
+    "uid_colon": "UID: "
+  },
   "MajorRecap": {
     "title": "Rekap Turnamen Major GITCG {version}",
     "watch_whole_replay": "Tonton Tayangan Ulang",

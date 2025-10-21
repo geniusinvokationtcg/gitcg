@@ -102,6 +102,11 @@
     },
     "player_page_title": "GITCG《七圣召唤》{version}版本周赛选手数据"
   },
+  "DecklistDumpPage": {
+    "title": "GITCG《七圣召唤》{version}版本周{week}赛{server}牌组列表",
+    "view_deck": "查看牌组",
+    "uid_colon": "UID："
+  },
   "MajorRecap": {
     "title": "GITCG《七圣召唤》{version}版本巅峰赛回顾",
     "watch_whole_replay": "观看回放",

@@ -6,6 +6,7 @@ import { duelistRecordUrl, servers } from "@/utils/vars"
 import { getVerLabel } from "@/utils/version"
 import { notFound } from "next/navigation"
 import { DecklistDumpPageClient } from "./Client"
+import { getTranslations } from "next-intl/server"
 
 export interface DecklistDumpPageParams {
   locale: Locales
@@ -15,6 +16,20 @@ export interface DecklistDumpPageParams {
 }
 
 export const revalidate = 60;
+
+export async function generateMetadata ({ params }: { params: Promise<DecklistDumpPageParams> }) {
+  const { locale, version, server, week } = await params
+  const t = await getTranslations("DecklistDumpPage")
+
+  const metadata = {
+    title: t("title", {
+      version: getVerLabel(version, locale),
+      week: week,
+      server: getServerLabel(server, locale) ?? ""
+    })
+  }
+  return {...metadata, openGraph: metadata, twitter: metadata}
+}
 
 export default async function DecklistDumpPage ({ params }: { params: Promise<DecklistDumpPageParams> }) {
   try {
@@ -26,11 +41,17 @@ export default async function DecklistDumpPage ({ params }: { params: Promise<De
     if(!servers.includes(server)) notFound()
 
     const _csvLink = await supabase.from("weekly")
-      .select("csv_link")
+      .select("csv_link,tournament_start")
       .eq("version", version)
       .eq("week", week)
       .eq("server", server)
       .single()
+
+    const _tournamentStart = _csvLink.data?.tournament_start as string | undefined
+    if(!_tournamentStart) notFound();
+    const tournamentStart = new Date(_tournamentStart)
+    const now = new Date()
+    if(tournamentStart > now) notFound()
 
     const csvLink = _csvLink.data?.csv_link as string | undefined | null
     if(!csvLink) notFound();
@@ -52,8 +73,16 @@ export default async function DecklistDumpPage ({ params }: { params: Promise<De
     const csvPaste = csvPastePromise.value.data
     const duelistRecord = (DRPromise.status === "fulfilled" ? DRPromise.value.data : null) ?? []
 
+    const t = await getTranslations("DecklistDumpPage")
+
     return <div className="max-w-[90vw] mx-auto mb-6 mt-3">
-      <div className="mt-3 section_title">GITCG {getVerLabel(version, locale)} Week {week} {getServerLabel(server, locale)} Decklist Dump</div>
+      <h1 className="mt-3 section_title">
+        {t("title", {
+          version: getVerLabel(version, locale),
+          week: week,
+          server: getServerLabel(server, locale) ?? ""
+        })}
+      </h1>
       <DecklistDumpPageClient
         params={p}
         csvPaste={csvPaste}
@@ -65,9 +94,4 @@ export default async function DecklistDumpPage ({ params }: { params: Promise<De
     console.error(e)
     notFound()
   }
-
-  // return new Intl.DateTimeFormat("id", {
-  //   dateStyle: "medium",
-  //   timeStyle: "short"
-  // }).format(new Date(b.tournament_start))
 }

@@ -1,5 +1,5 @@
 import { getCardImageUrl, isArcaneLegend, getCardName } from "@/utils/cards"
-import { CardType, CardsDataType } from "@/utils/types"
+import { BorderType, CardType, CardsDataType } from "@/utils/types"
 
 export function CardImageSmall ({ cardType, cardId, resize, localCardsData }: { cardType: CardType; cardId: number; resize?: boolean; localCardsData?: CardsDataType }) {
   if(typeof resize === "undefined") resize = true;
@@ -24,3 +24,26 @@ export function CardImageLarge ({ cardType, cardId, resize, localCardsData }: { 
     <img src={`/borders/normal${isArcaneLegend(cardId) ? "_esoteric": ""}.png`}></img>
   </div>
 }
+
+export function CardImage ({ cardType, cardId, size, borderType = "normal", resize = true, localCardsData }: {
+  cardType: CardType;
+  cardId: number;
+  size: CardImageSize;
+  borderType?: BorderType
+  resize?: boolean;
+  localCardsData?: CardsDataType;
+}) {
+  let px = 100;
+  switch(size){
+    case "small": px = 70; break;
+    case "medium": px = 100; break;
+    case "large": px = 140; break;
+  }
+
+  return <div className={`card_image_${size} ${resize ? `card_image_${size}_resize` : ""}`}>
+    <img src={getCardImageUrl(cardType, cardId, "id", px)} title={getCardName(cardId, localCardsData)}></img>
+    <img src={`/borders/${borderType}${isArcaneLegend(cardId) ? "_esoteric": ""}.png`}></img>
+  </div>
+}
+
+export type CardImageSize = "small" | "medium" | "large"

@@ -102,6 +102,11 @@
     },
     "player_page_title": "GITCG {version} Weekly Tournament Player Data"
   },
+  "DecklistDumpPage": {
+    "title": "GITCG {version} Week {week} {server} Decklist Dump",
+    "view_deck": "View deck",
+    "uid_colon": "UID: "
+  },
   "MajorRecap": {
     "title": "GITCG {version} Major Recap",
     "watch_whole_replay": "Watch VOD",

@@ -319,3 +319,21 @@ img.avatar {
     height: 120px;
   }
 }
+
+.dump_deck_preview_desktop {
+  @apply w-full min-w-80 max-w-150 p-5 h-fit border-1 border-gray-300 rounded-xl overflow-y-auto max-h-[calc(100vh-170px)] sticky top-10;
+  @media (width < 1080px) {
+    display: none
+  }
+}
+.dump_deck_preview_mobile {
+  @apply fixed bottom-0 left-0 min-w-[100vw] w-[100vw] min-h-[50vh] max-h-[85vh] overflow-y-auto rounded-t-4xl p-5 z-100 bg-white;
+  @media (width >= 1080px) {
+    display: none
+  }
+}
+.less_1080 {
+  @media (width >= 1080px) {
+    display: none
+  }
+}
