@@ -17,7 +17,7 @@ export function SuccessNotification({
       leaveFrom="translate-y-0 opacity-100"
       leaveTo="translate-y-[-100%] opacity-0"
     >
-      <div className="fixed inset-x-0 top-0 z-50 flex justify-center items-center
+      <div className="fixed inset-x-0 top-0 z-200 flex justify-center items-center
         w-fit mt-8 mx-auto py-2 px-4
         bg-white border border-gray-300 rounded-xl text-gray-900 shadow-md"
       >
