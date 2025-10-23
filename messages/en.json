@@ -104,6 +104,7 @@
   },
   "DecklistDumpPage": {
     "title": "GITCG {version} Week {week} {server} Decklist Dump",
+    "description": "Good luck have fun!",
     "view_deck": "View deck",
     "uid_colon": "UID: "
   },

@@ -104,6 +104,7 @@
   },
   "DecklistDumpPage": {
     "title": "GITCG《七圣召唤》{version}版本周{week}赛{server}牌组列表",
+    "description": "加油，玩得开心！",
     "view_deck": "查看牌组",
     "uid_colon": "UID："
   },

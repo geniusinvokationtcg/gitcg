@@ -26,7 +26,8 @@ export async function generateMetadata ({ params }: { params: Promise<DecklistDu
       version: getVerLabel(version, locale),
       week: week,
       server: getServerLabel(server, locale) ?? ""
-    })
+    }),
+    description: t("description")
   }
   return {...metadata, openGraph: metadata, twitter: metadata}
 }
