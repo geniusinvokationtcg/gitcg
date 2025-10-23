@@ -31,17 +31,19 @@ export async function generateMetadata ({ params }: { params: Promise<DecklistDu
   return {...metadata, openGraph: metadata, twitter: metadata}
 }
 
-export default async function DecklistDumpPage ({ params }: { params: Promise<DecklistDumpPageParams> }) {
+export default async function DecklistDumpPage ({ params, searchParams }: { params: Promise<DecklistDumpPageParams>, searchParams: Promise<{ key?: string }> }) {
   try {
     let p = await params
     p.week = +p.week
     const { locale, version, server, week } = p
 
+    const uuid = (await searchParams).key
+
     if(isNaN(week)) notFound()
     if(!servers.includes(server)) notFound()
 
     const _csvLink = await supabase.from("weekly")
-      .select("csv_link,tournament_start")
+      .select("csv_link,tournament_start,uuid")
       .eq("version", version)
       .eq("week", week)
       .eq("server", server)
@@ -51,7 +53,7 @@ export default async function DecklistDumpPage ({ params }: { params: Promise<De
     if(!_tournamentStart) notFound();
     const tournamentStart = new Date(_tournamentStart)
     const now = new Date()
-    if(tournamentStart > now) notFound()
+    if(tournamentStart > now && _csvLink.data?.uuid !== uuid) notFound()
 
     const csvLink = _csvLink.data?.csv_link as string | undefined | null
     if(!csvLink) notFound();
