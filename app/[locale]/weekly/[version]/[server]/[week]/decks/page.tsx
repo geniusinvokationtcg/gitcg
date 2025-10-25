@@ -3,7 +3,7 @@ import { csvPasteTransformHeader, parseCSV } from "@/utils/csvParse"
 import { getServerLabel } from "@/utils/server"
 import { CsvPasteRow, DuelistRecord, Locales, ServerPure } from "@/utils/types"
 import { duelistRecordUrl, servers } from "@/utils/vars"
-import { getVerLabel } from "@/utils/version"
+import { gameVersion, getVerLabel } from "@/utils/version"
 import { notFound } from "next/navigation"
 import { DecklistDumpPageClient } from "./Client"
 import { getTranslations } from "next-intl/server"
@@ -37,6 +37,8 @@ export default async function DecklistDumpPage ({ params, searchParams }: { para
     let p = await params
     p.week = +p.week
     const { locale, version, server, week } = p
+
+    if(!gameVersion.available.includes(version)) notFound();
 
     const uuid = (await searchParams).key
 
