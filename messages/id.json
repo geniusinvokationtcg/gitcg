@@ -106,7 +106,9 @@
     "title": "Kumpulan Dek GITCG Versi {version} Minggu {week} {server}",
     "description": "Good luck have fun!",
     "view_deck": "Lihat dek",
-    "uid_colon": "UID: "
+    "uid_colon": "UID: ",
+    "registered": "Terdaftar",
+    "unregistered": "Belum terdaftar"
   },
   "MajorRecap": {
     "title": "Rekap Turnamen Major GITCG {version}",

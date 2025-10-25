@@ -106,7 +106,9 @@
     "title": "GITCG {version} Week {week} {server} Decklist Dump",
     "description": "Good luck have fun!",
     "view_deck": "View deck",
-    "uid_colon": "UID: "
+    "uid_colon": "UID: ",
+    "registered": "Registered",
+    "unregistered": "Unregistered"
   },
   "MajorRecap": {
     "title": "GITCG {version} Major Recap",

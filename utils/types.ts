@@ -235,3 +235,8 @@ export interface CsvPasteRow {
   stream_opt_in: string
   pronouns: string
 }
+export interface CsvPasteRowClient {
+  teamName: string;
+  uid: number;
+  deckcode: string;
+}

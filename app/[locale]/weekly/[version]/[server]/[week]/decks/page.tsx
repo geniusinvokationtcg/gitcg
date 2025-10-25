@@ -1,7 +1,7 @@
 import { supabase } from "@/lib/supabaseClient"
 import { csvPasteTransformHeader, parseCSV } from "@/utils/csvParse"
 import { getServerLabel } from "@/utils/server"
-import { CsvPasteRow, DuelistRecord, Locales, ServerPure } from "@/utils/types"
+import { CsvPasteRow, CsvPasteRowClient, DuelistRecord, Locales, ServerPure } from "@/utils/types"
 import { duelistRecordUrl, servers } from "@/utils/vars"
 import { gameVersion, getVerLabel } from "@/utils/version"
 import { notFound } from "next/navigation"
@@ -56,7 +56,8 @@ export default async function DecklistDumpPage ({ params, searchParams }: { para
     if(!_tournamentStart) notFound();
     const tournamentStart = new Date(_tournamentStart)
     const now = new Date()
-    if(tournamentStart > now && _csvLink.data?.uuid !== uuid) notFound()
+    const isAdmin = _csvLink.data?.uuid === uuid
+    if(tournamentStart > now && !isAdmin) notFound()
 
     const csvLink = _csvLink.data?.csv_link as string | undefined | null
     if(!csvLink) notFound();
@@ -78,6 +79,12 @@ export default async function DecklistDumpPage ({ params, searchParams }: { para
     const csvPaste = csvPastePromise.value.data
     const duelistRecord = (DRPromise.status === "fulfilled" ? DRPromise.value.data : null) ?? []
 
+    const csvPasteClient: CsvPasteRowClient[] = csvPaste.filter(row => row.checkedInAt).map(row => ({
+      teamName: row.teamName,
+      uid: row.uid,
+      deckcode: row.deckcode
+    }))
+
     const t = await getTranslations("DecklistDumpPage")
 
     return <div className="max-w-[90vw] mx-auto mb-6 mt-3">
@@ -90,8 +97,9 @@ export default async function DecklistDumpPage ({ params, searchParams }: { para
       </h1>
       <DecklistDumpPageClient
         params={p}
-        csvPaste={csvPaste}
+        csvPaste={csvPasteClient}
         duelistRecord={duelistRecord}
+        isAdmin={isAdmin}
       />
     </div>
 

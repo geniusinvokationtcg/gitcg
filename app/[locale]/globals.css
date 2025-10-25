@@ -205,13 +205,13 @@ select {
 .major_match_row > .deck_container :nth-child(2) {
   @apply flex gap-0.5
 }
-.major_match_row > .ban :first-child {
+.red, .major_match_row > .ban :first-child {
   @apply text-red-600
 }
-.major_match_row > .win :first-child > .wl_text {
+.green, .major_match_row > .win :first-child > .wl_text {
   @apply text-green-600
 }
-.major_match_row > .lose :first-child > .wl_text {
+.gray_out, .major_match_row > .lose :first-child > .wl_text {
   @apply text-gray-400
 }
 .major_match_row > .left_player :first-child {

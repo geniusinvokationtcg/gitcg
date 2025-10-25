@@ -106,7 +106,9 @@
     "title": "GITCG《七圣召唤》{version}版本周{week}赛{server}牌组列表",
     "description": "加油，玩得开心！",
     "view_deck": "查看牌组",
-    "uid_colon": "UID："
+    "uid_colon": "UID：",
+    "registered": "已注册",
+    "unregistered": "未注册"
   },
   "MajorRecap": {
     "title": "GITCG《七圣召唤》{version}版本巅峰赛回顾",

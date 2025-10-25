@@ -1,6 +1,6 @@
 "use client"
 
-import { CsvPasteRow, DuelistRecord, Tuple } from "@/utils/types";
+import { CsvPasteRow, CsvPasteRowClient, DuelistRecord, Tuple } from "@/utils/types";
 import { DecklistDumpPageParams } from "./page";
 import { useState } from "react";
 import { decodeAndSortActionCards, isValidDeckcode } from "@/utils/decoder";
@@ -18,7 +18,7 @@ import { useLocalStorage } from "@/hooks/storage";
 import { motion } from "framer-motion"
 import { Backdrop } from "@/components/Backdrop";
 
-export function DecklistDumpPageClient ({ params, csvPaste, duelistRecord }: { params: DecklistDumpPageParams, csvPaste: CsvPasteRow[], duelistRecord: DuelistRecord[] }) {
+export function DecklistDumpPageClient ({ params, csvPaste, duelistRecord, isAdmin }: { params: DecklistDumpPageParams, csvPaste: CsvPasteRowClient[], duelistRecord: DuelistRecord[], isAdmin: boolean }) {
   const { locale, version, server, week } = params
 
   const g = useTranslations("General")
@@ -36,9 +36,10 @@ export function DecklistDumpPageClient ({ params, csvPaste, duelistRecord }: { p
   const transformedData = csvPaste.map(row => ({
     ...row,
     duelistHandle: duelistRecord.find(d => d[`uid_${server}`] === row.uid)?.handle_display,
+    isRegistered: duelistRecord.some(d => d[`uid_${server}`] === row.uid),
     isValidDeckcode: isValidDeckcode(row.deckcode),
     decoded: decodeAndSortActionCards(row.deckcode) as Tuple<number, 33>
-  })).filter(row => row.checkedInAt && row.isValidDeckcode.result)
+  })).filter(row => row.isValidDeckcode.result)
 
   const PreviewChildren = playerIndex !== null && <>
     <div className="absolute left-5 icon_hover_bg" onClick={() => setCardSize(cardSize === "small" ? "medium" : "small")}>
@@ -65,6 +66,9 @@ export function DecklistDumpPageClient ({ params, csvPaste, duelistRecord }: { p
             />
           </div>
         </div>
+        {isAdmin && <div className={`${view.isRegistered ? "green" : "red"} text-center`}>
+          {view.isRegistered ? t("registered") : t("unregistered")}
+        </div>}
         <div className="pt-3 text-2xl text-center">
           {view.decoded.slice(0, 3).map(c => getCardName(c, localCardsData)).join(" | ")}
         </div>
@@ -122,7 +126,7 @@ export function DecklistDumpPageClient ({ params, csvPaste, duelistRecord }: { p
         <table>
           <tbody>
             {transformedData.map((row, index) =>
-              <tr key={row.userID} className={`group items-center px-3 py-0.5 ${index === 0 ? "border-y" : "border-b"} text-sm`}>
+              <tr key={row.uid} className={`group items-center px-3 py-0.5 ${index === 0 ? "border-y" : "border-b"} text-sm`}>
                 <td className="w-50 align-middle text-left">
                   <div className="text-lg md:text-xl font-semibold">{row.duelistHandle || row.teamName}</div>
                   <div className="text-sm md:text-base whitespace-nowrap flex flex-row gap-0.5 items-center">
@@ -134,6 +138,9 @@ export function DecklistDumpPageClient ({ params, csvPaste, duelistRecord }: { p
                       />
                     </div>
                   </div>
+                  {isAdmin && <div className={row.isRegistered ? "green" : "red"}>
+                    {row.isRegistered ? t("registered") : t("unregistered")}
+                  </div>}
                 </td>
                 <LineupShowcaseForTable
                   characters={[row.decoded[0], row.decoded[1], row.decoded[2]]}
