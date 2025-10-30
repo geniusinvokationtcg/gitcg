@@ -67,7 +67,7 @@
   },
   "WeeklyStatistic": {
     "title": "GITCG《七圣召唤》{version}版本周赛数据",
-    "showOrHide": "显示/隐藏列",
+    "showOrHide": "显示或隐藏列",
     "week_num": "第{week}周",
     "entire_version": "全版本",
     "tableHeader": {
