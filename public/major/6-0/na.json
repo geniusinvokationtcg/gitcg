@@ -137,21 +137,24 @@
             1,
             2
           ],
-          "winner": 2
+          "winner": 2,
+          "vod": "https://www.youtube.com/watch?v=Ou5O7-P6NBc&t=14m6s"
         },
         {
           "deck_index": [
             2,
             3
           ],
-          "winner": 1
+          "winner": 1,
+          "vod": "https://www.youtube.com/watch?v=Ou5O7-P6NBc&t=29m36s"
         },
         {
           "deck_index": [
             1,
             3
           ],
-          "winner": 1
+          "winner": 1,
+          "vod": "https://www.youtube.com/watch?v=Ou5O7-P6NBc&t=40m21s"
         }
       ]
     },
@@ -201,21 +204,24 @@
             1,
             3
           ],
-          "winner": 2
+          "winner": 2,
+          "vod": "https://www.youtube.com/watch?v=Ou5O7-P6NBc&t=1h5m33s"
         },
         {
           "deck_index": [
             1,
             2
           ],
-          "winner": 1
+          "winner": 1,
+          "vod": "https://www.youtube.com/watch?v=Ou5O7-P6NBc&t=1h25m2s"
         },
         {
           "deck_index": [
             2,
             2
           ],
-          "winner": 2
+          "winner": 2,
+          "vod": "https://www.youtube.com/watch?v=Ou5O7-P6NBc&t=1h43m5s"
         }
       ]
     },
@@ -233,14 +239,16 @@
             3,
             3
           ],
-          "winner": 2
+          "winner": 2,
+          "vod": "https://www.youtube.com/watch?v=Ou5O7-P6NBc&t=2h14m22s"
         },
         {
           "deck_index": [
             2,
             1
           ],
-          "winner": 2
+          "winner": 2,
+          "vod": "https://www.youtube.com/watch?v=Ou5O7-P6NBc&t=2h27m56s"
         }
       ]
     },
@@ -258,14 +266,16 @@
             3,
             2
           ],
-          "winner": 2
+          "winner": 2,
+          "vod": "https://www.youtube.com/watch?v=Ou5O7-P6NBc&t=2h53m33s"
         },
         {
           "deck_index": [
             1,
             1
           ],
-          "winner": 2
+          "winner": 2,
+          "vod": "https://www.youtube.com/watch?v=Ou5O7-P6NBc&t=3h15m45s"
         }
       ]
     },
@@ -283,14 +293,16 @@
             1,
             2
           ],
-          "winner": 1
+          "winner": 1,
+          "vod": "https://www.youtube.com/watch?v=Ou5O7-P6NBc&t=3h50m30s"
         },
         {
           "deck_index": [
             3,
             2
           ],
-          "winner": 1
+          "winner": 1,
+          "vod": "https://www.youtube.com/watch?v=Ou5O7-P6NBc&t=4h1m55s"
         }
       ]
     }
