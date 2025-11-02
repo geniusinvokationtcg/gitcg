@@ -44,7 +44,9 @@ export const csvPasteTransformHeader = (header: string) => {
   switch(header){
     case "UID": return "uid";
     case "Discord Username": return "discord_username";
-    case "In-game Deck code": return "deckcode";
+    case "In-game Deck code":
+    case "Deck code":
+      return "deckcode";
     case "PC Only: Stream Opt-In (Yes/No)": return "stream_opt_in";
     case "Pronouns": return "pronouns"
     default: return header;
