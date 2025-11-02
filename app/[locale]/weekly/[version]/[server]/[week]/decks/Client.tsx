@@ -126,7 +126,7 @@ export function DecklistDumpPageClient ({ params, csvPaste, duelistRecord, isAdm
         <table>
           <tbody>
             {transformedData.map((row, index) =>
-              <tr key={row.uid} className={`group items-center px-3 py-0.5 ${index === 0 ? "border-y" : "border-b"} text-sm`}>
+              <tr key={row.uid} className={`group items-center px-3 py-0.5 ${index === 0 ? "border-y" : "border-b"} text-xs`}>
                 <td className="w-50 align-middle text-left">
                   <div className="text-lg md:text-xl font-semibold">{row.duelistHandle || row.teamName}</div>
                   <div className="text-sm md:text-base whitespace-nowrap flex flex-row gap-0.5 items-center">
