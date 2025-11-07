@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "HYWenHei";
+  font-style: normal;
+  font-weight: normal;
+  src: local("HYWenHei"), url("@/fonts/HYWenHei.woff") format("woff");
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -19,9 +26,23 @@ body {
   @apply text-base;
 }
 
+.genshin_font {
+  font-family: "HYWenHei";
+}
+
+.text_outline {
+  -webkit-text-stroke: 0.4px black
+}
+
 .monospaced {
   font-family: "Courier New", "Courier", monospace;
 }
+
+.prevent_select {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+} 
 
 .icon_hover_bg {
   display: inline-flex;

@@ -30,10 +30,3 @@ export function isArcaneLegend (cardId: number): boolean {
   if(!card) return false;
   return card.is_special;
 }
-
-// export function localizeCardName (englishCardName: string, targetLocale: string): string {
-//   if(targetLocale === "en") return englishCardName
-//   const localCardsData = useLocalCardsData(targetLocale)
-//   const cardId = cardsData.codes.find(c => c.name === englishCardName)?.id || NaN
-//   return localCardsData.codes.find(c => c.id === cardId)?.name || englishCardName
-// }
