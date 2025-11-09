@@ -1,5 +1,5 @@
 import { getLocalCardsData } from "@/cards/localCardsData";
-import { CardsDataType, Locales } from "@/utils/types";
+import { Locales } from "@/utils/types";
 import { DeckBuilderPageClient } from "./Client";
 
 export interface DeckBuilderPageParams {

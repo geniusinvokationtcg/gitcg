@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+.character_card_image, .action_card_image {
+  @apply relative
+}
+.character_card_image > :first-child:not(.disabled), .action_card_image > :first-child:not(.disabled) {
+  cursor: pointer;
+}
+.character_card_image > :first-child.disabled, .action_card_image > :first-child.disabled {
+  cursor: default;
+}
+.character_card_image > :nth-child(2), .action_card_image > :nth-child(2):not(.ribbon) {
+  @apply absolute z-12 -top-0.25 -left-0.5 min-w-5 text-center text-white items-end pointer-events-none;
+  font-family: "HYWenHei";
+  -webkit-text-stroke: 0.3px black;
+  text-shadow: 0.5px 0.5px 0 black;
+}
+.character_card_image > :nth-child(3), .action_card_image > :nth-child(3):not(.ribbon) {
+  @apply absolute size-8 z-11 -top-1.5 -left-2 pointer-events-none
+}
+.action_card_image > :nth-child(4):not(.ribbon) {
+  @apply absolute z-12 top-7.75 -left-0.5 min-w-5 text-center text-white items-end pointer-events-none;
+  font-family: "HYWenHei";
+  -webkit-text-stroke: 0.3px black;
+  text-shadow: 0.3px 0.3px 0 black;
+}
+.action_card_image > :nth-child(5):not(.ribbon) {
+  @apply absolute size-8 z-11 top-6.5 -left-2 pointer-events-none
+}
+
+.filter_container {
+  @apply px-4
+}
+.card_selection_container {
+  @apply px-2
+}
+.card_selection_container, .filter_container {
+  @apply border-1 border-gray-300 rounded-xl py-4 w-95 h-[65vh] overflow-y-auto justify-center;
+}
+.card_selection_container > :first-child {
+  @apply grid grid-cols-4 justify-center gap-2 gap-y-3;
+}
+
+.action_card_image > .ribbon {
+  @apply absolute bottom-1/4 z-15 bg-red-500 text-center w-full text-white text-[12px] pointer-events-none;
+  font-family: "HYWenHei";
+}
+
+.darkened {
+  filter: brightness(60%);
+}
+.whitened {
+  filter: opacity(70%)
+}

@@ -161,7 +161,7 @@ export interface MajorPlayer {
 
 export type Seeding = [number, number][];
 
-interface CharacterCard {
+export interface CharacterCard {
   id: number
   name: string
   element_type: number
@@ -182,7 +182,7 @@ interface CharacterCard {
   hp: number | string
   resource: string
 }
-interface ActionCard {
+export interface ActionCard {
   id: number
   name: string
   content: string
@@ -196,7 +196,7 @@ interface ActionCard {
   resource: string
   is_special: boolean
 }
-interface CardCode {
+export interface CardCode {
   name: string
   id: number
   code: number

@@ -26,12 +26,20 @@ body {
   @apply text-base;
 }
 
+.hidden_scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hidden_scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 .genshin_font {
   font-family: "HYWenHei";
 }
 
 .text_outline {
-  -webkit-text-stroke: 0.4px black
+  -webkit-text-stroke: 0.3px black;
 }
 
 .monospaced {
@@ -69,8 +77,14 @@ body {
   width: 16px;
   height: 16px;
 }
-.icon_hover > svg:hover {
+.icon_hover > svg:hover,
+.highlight,
+.clickable_text:hover {
   color: #AF7637;
+}
+
+.clickable_text {
+  @apply underline transition-colors duration-200 cursor-pointer ease-in-out
 }
 
 a.inline {
@@ -255,7 +269,7 @@ select {
     width: 100px;
   }
 }
-.card_image_large > img:first-child {
+.card_image_large > img:first-child:not(.null) {
   position: absolute;
   width: 98%;
   padding: 3px 1px;
@@ -278,7 +292,7 @@ select {
     width: 55px;
   }
 }
-.card_image_medium > img:first-child {
+.card_image_medium > img:first-child:not(.null) {
   position: absolute;
   width: 98%;
   padding: 2px 0.5px;
@@ -303,7 +317,7 @@ select {
     height: 68.6px;
   }
 }
-.card_image_small > img:first-child {
+.card_image_small > img:first-child:not(.null) {
   position: absolute;
   width: 97%;
   padding: 1.5px 0.4px;
@@ -315,6 +329,13 @@ select {
   width: 50px;
   z-index: 10;
   pointer-events: none;
+}
+.card_image_large > img:first-child.null,
+.card_image_medium > img:first-child.null,
+.card_image_small > img:first-child.null {
+  position: absolute;
+  object-fit: contain;
+  z-index: 0;
 }
 
 .stat_showcase {

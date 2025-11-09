@@ -27,7 +27,7 @@ export function CardImageLarge ({ cardType, cardId, resize, localCardsData }: { 
 
 export function CardImage ({ cardType, cardId, size, borderType = "normal", resize = true, localCardsData }: {
   cardType: CardType;
-  cardId: number;
+  cardId: number | null;
   size: CardImageSize;
   borderType?: BorderType
   resize?: boolean;
@@ -41,8 +41,12 @@ export function CardImage ({ cardType, cardId, size, borderType = "normal", resi
   }
 
   return <div className={`prevent_select card_image_${size} ${resize ? `card_image_${size}_resize` : ""}`}>
-    <img src={getCardImageUrl(cardType, cardId, "id", px)} title={getCardName(cardId, localCardsData)}></img>
-    <img src={`/borders/${borderType}${isArcaneLegend(cardId) ? "_esoteric": ""}.png`}></img>
+    {
+      cardId
+      ? <img src={getCardImageUrl(cardType, cardId, "id", px)} title={getCardName(cardId, localCardsData)}></img>
+      : <img src="/game_icons/Origin_Card_Back.webp" className="null" />
+    }
+    <img src={`/borders/${borderType}${cardId && isArcaneLegend(cardId) ? "_esoteric": ""}.png`}></img>
   </div>
 }
 

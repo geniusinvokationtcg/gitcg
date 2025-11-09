@@ -1,11 +1,12 @@
 import { Transition } from '@headlessui/react'
 import { CheckCircleIcon } from '@heroicons/react/24/outline'
+import { ReactNode } from 'react';
 
 export function SuccessNotification({
   show, text
 }: {
   show: boolean;
-  text: string;
+  text: string | ReactNode;
 }) {
   return (
     <Transition
