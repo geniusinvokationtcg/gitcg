@@ -18,12 +18,11 @@ export function SuccessNotification({
       leaveFrom="translate-y-0 opacity-100"
       leaveTo="translate-y-[-100%] opacity-0"
     >
-      <div className="fixed inset-x-0 top-0 z-200 flex justify-center items-center
-        w-fit mt-8 mx-auto py-2 px-4
-        bg-white border border-gray-300 rounded-xl text-gray-900 shadow-md"
-      >
-        <CheckCircleIcon className="size-5 text-gray-900" aria-hidden="true" />
-        <div className="ml-3 text-sm text-gray-900">{text}</div>
+      <div className="fixed inset-x-0 top-0 z-200 flex justify-center items-center mt-8 mx-8">
+        <div className="w-fit bg-white border border-gray-300 rounded-xl text-gray-900 shadow-md flex justify-center items-center py-2 px-4">
+          <CheckCircleIcon className="size-5 text-gray-900" aria-hidden="true" />
+          <div className="ml-3 text-sm text-gray-900">{text}</div>
+        </div>
       </div>
     </Transition>
   )

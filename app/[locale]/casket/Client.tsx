@@ -3,20 +3,21 @@
 import "./style.css"
 import { DeckBuilderPageParams } from "./page"
 import { CardImage } from "@/components/CardImage"
-import { useMemo, useState } from "react"
+import { ReactNode, useMemo, useState } from "react"
 import { useLocalCardsData } from "@/hooks/useLocalCardsData"
-import { CustomButton } from "@/components/Button"
-import { CardType } from "@/utils/types"
+import { Checkbox, CustomButton } from "@/components/Button"
+import { CardType, Elements } from "@/utils/types"
 import { costIconUrls } from "@/utils/vars"
 import { DndContext, DragEndEvent, PointerSensor, TouchSensor, closestCorners, useSensor, useSensors } from "@dnd-kit/core"
 import { arrayMove, horizontalListSortingStrategy, SortableContext } from "@dnd-kit/sortable"
 import { ActiveCharacterCard } from "./ActiveCharacterCard"
-import { isArcaneLegend, isValidCard } from "@/utils/cards"
+import { elementResonance, isArcaneLegend, isValidCard } from "@/utils/cards"
 import { encode as encodeDeck } from "@/utils/decoder"
-import { useCopiedPopUp } from "@/hooks/utilities"
+import { usePopUp } from "@/hooks/utilities"
 import { handleCopy } from "@/utils/clipboard"
 import { SuccessNotification } from "@/components/PopUp"
 import { useTranslations } from "next-intl"
+import { MagnifyingGlass, Eye } from "@/components/Icons"
 
 export function DeckBuilderPageClient ({
   params
@@ -25,18 +26,68 @@ export function DeckBuilderPageClient ({
 }) {
   const { locale } = params
 
+  //NEXT-INTL
   const g = useTranslations("General");
+  const term = useTranslations("Terminology");
 
+  //CARDS DATA
   const localCardsData = useLocalCardsData(locale);
   const { characters, codes } = localCardsData;
 
-  const { showNotification, copiedPopUpTrigger } = useCopiedPopUp();
-  const [ showclearAllNotification, setShowClearAllNotification ] = useState(false);
-
-  const [selectionCardType, setSelectionCardType] = useState<CardType>("characters");
+  //POP UP
+  const [_triggerPopUp, showPopUp, setShowPopUp] = usePopUp();
+  const [popUpContent, setPopUpContent] = useState<ReactNode>();
+  const triggerPopUp = (content: ReactNode) => {
+    setPopUpContent(content);
+    _triggerPopUp();
+  }
   
   //FILTER
   const [showInvalidCards, setShowInvalidCards] = useState(true);
+  const weapons = ["sword", "catalyst", "claymore", "bow", "polearm", "other_weapons"];
+  const characterFilter = [
+    {
+      category: "element",
+      items: elementResonance.map(res => res.element)
+    },
+    {
+      category: "weapon",
+      items: weapons
+    },
+    {
+      category: "affiliation",
+      items: ["mondstadt", "liyue", "inazuma", "sumeru", "fontaine", "natlan", "fatui", "eremite", "monster", "hilichurl", "consecrated_beast", "arkhe_pneuma", "arkhe_ousia", "none"]
+    }
+  ]
+  const actionFilter = [
+    {
+      category: "type",
+      items: ["equipment_card", "support_card", "event_card"]
+    },
+    {
+      category: "tag",
+      items: ["talent", "weapon", "artifact", "technique", "location", "companion", "item", "arcane_legend", "elemental_resonance", "food", "combat_action", "none"]
+    }
+  ]
+  const [cardFilter, setCardFilter] = useState<CardFilter>({
+    characters: {
+      element: [],
+      weapon: [],
+      affiliation: [],
+      hp: [],
+      has_big_skill: false,
+      teatime_mode: false
+    },
+    actions: {
+      type: [],
+      tag: [],
+      cost: [],
+      include_energy_cost: true,
+      show_invalid: false
+    }
+  });
+
+  const [selectionCardType, setSelectionCardType] = useState<CardType>("characters");
 
   const [activeCharacterCards, setActiveCharacterCards] = useState<{ id: number, cardId: number | null }[]>([
     { id: 1, cardId: null },
@@ -120,18 +171,22 @@ export function DeckBuilderPageClient ({
     return (isArcaneLegend(id) && count >= 1) || (isActionSlotFull && count >= 1) || count >= 2;
   }
 
-  const exportDeck = () => {
+  const [deckOffset, setDeckOffset] = useState(0);
+  const exportDeck = (nextOffset: boolean = false) => {
+    if(nextOffset) setDeckOffset( (deckOffset + 1) % 255 );
     const ids = [...activeCharacterCards.map(c => c.cardId ?? 0), ...activeActionCards];
     for(let i = ids.length; i < 33; i++){
       ids.push(0);
     }
     const deck = ids.map(id => codes.find(c => c.id === id)?.code ?? 0);
-    const code = encodeDeck(deck, 0);
-    handleCopy(code, copiedPopUpTrigger)
+    const code = encodeDeck(deck, deckOffset);
+    handleCopy(code, () => {
+      triggerPopUp(<p>Copied to clipboard<br/>Double click the Export button if the code doesn't work</p>);
+    });
   }
 
   return <div className="mx-6 my-6 overflow-hidden">
-    <SuccessNotification show={showNotification} text={"Copied to clipboard"} />
+    <SuccessNotification show={showPopUp} text={popUpContent} />
     <div className="mb-4 flex flex-row gap-2 justify-between">
       <div className="flex flex-row gap-2">
         <CustomButton
@@ -140,27 +195,22 @@ export function DeckBuilderPageClient ({
         />
       </div>
       <div className="flex flex-row gap-2">
-        <SuccessNotification show={showclearAllNotification} text={"Triple click the button to clear all"} />
-        <div onClick={(event) => {
-          if(event.detail === 1) {
-            setShowClearAllNotification(true);
-            setTimeout(() => setShowClearAllNotification(false), 5000);
-          }
-          if(event.detail === 3) {
-            setActiveCharacterCards(activeCharacterCards.map(c => ({ ...c, cardId: null })))
-            setActiveActionCards([]);
-            setShowClearAllNotification(false);
-          }
-        }}>
-          <CustomButton
-            buttonText="Clear All"
-            textSize="xs"
-          />
-        </div>
+        <CustomButton
+          buttonText="Clear All"
+          textSize="xs"
+          onClick={(e) => {
+            if(e.detail === 1) triggerPopUp("Triple click the button to clear all");
+            if(e.detail === 3) {
+              setActiveCharacterCards(activeCharacterCards.map(c => ({ ...c, cardId: null })))
+              setActiveActionCards([]);
+              setShowPopUp(false);
+            }
+          }}
+        />
         <CustomButton
           buttonText="Export"
           textSize="xs"
-          onClick={exportDeck}
+          onClick={(e) => exportDeck(e.detail === 2)}
         />
       </div>
     </div>
@@ -216,11 +266,19 @@ export function DeckBuilderPageClient ({
                 <img src={c.cost_type2_icon} />
               </>}
               {!c.isValid && <div className="ribbon">Invalid</div>}
+              <div className={`preview_button group ${false ? "disabled" : ""}`}>
+                <Eye className="size-3 text-gray-700 group-hover:text-[#AF7637] duration-200 transition-colors" />
+              </div>
+              {(() => {
+                const action = groupedActionCards.find(([id, count]) => id === c.id);
+                return action && <div className="ribbon brown_ribbon">{`${action[1]} / ${c.is_special ? 1 : 2}`}</div>
+              })()}
             </div>
           )}</div>
         </div>
         <div className="filter_container">
-          <div className="w-full" onClick={() => setShowInvalidCards(!showInvalidCards) } >Show invalid cards</div>
+          <Checkbox className="text-sm" trueCondition={!showInvalidCards} onClick={() => setShowInvalidCards(!showInvalidCards)}>Show invalid cards</Checkbox>
+          
         </div>
 
       </div>
@@ -280,4 +338,22 @@ export function DeckBuilderPageClient ({
     </div>
   
   </div>
+}
+
+interface CardFilter {
+  characters: {
+    element: Elements[]
+    weapon: string[]
+    affiliation: string[]
+    hp: number[]
+    has_big_skill: boolean
+    teatime_mode: boolean
+  }
+  actions: {
+    type: string[]
+    tag: string[]
+    cost: number[]
+    include_energy_cost: boolean
+    show_invalid: boolean
+  }
 }
