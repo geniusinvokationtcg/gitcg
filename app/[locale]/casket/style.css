@@ -50,7 +50,11 @@
   @apply border-1 border-gray-300 rounded-xl w-95 h-[65vh] overflow-y-auto justify-center;
 }
 .card_selection_container > :first-child {
-  @apply grid grid-cols-4 justify-center gap-2 gap-y-3;
+  @apply grid grid-cols-4 justify-center gap-2 gap-y-3 h-fit;
+}
+
+.filter_category {
+  @apply px-4 font-semibold;
 }
 
 .action_card_image > .ribbon {

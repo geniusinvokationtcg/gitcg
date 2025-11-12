@@ -21,6 +21,9 @@
     "preview_disabled": "Preview disabled"
   },
   "CardsTerminology": {
+    "skill_type": {
+      "passive_skill": "Passive Skill"
+    },
     "category": {
       "element": "Element",
       "weapon": "Weapon",
@@ -28,7 +31,8 @@
       "type": "Type",
       "tag": "Tag",
       "hp": "HP",
-      "cost": "Cost"
+      "cost": "Cost",
+      "skill_cost": "Skill Cost (excluding Energy)"
     },
     "cryo": "Cryo",
     "hydro": "Hydro",

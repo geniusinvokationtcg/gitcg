@@ -179,7 +179,7 @@ export interface CharacterCard {
   }[]
   weapon: string
   belongs: string[]
-  hp: number | string
+  hp: string
   resource: string
 }
 export interface ActionCard {

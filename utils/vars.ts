@@ -28,3 +28,7 @@ export const prefixStatusRegEx = /^\[[^\]]+\]/
 export const costIconUrls = {
   aligned: "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/3367995a8344bccc77b2d9f794c1bbd2_3133187640885784967.png"
 }
+
+export const gameCosts = [
+  { name: "energy", type: "1" }
+]

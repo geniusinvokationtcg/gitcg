@@ -3,7 +3,7 @@
 import "./style.css"
 import { DeckBuilderPageParams } from "./page"
 import { CardImage } from "@/components/CardImage"
-import { ReactNode, useMemo, useState } from "react"
+import { ReactNode, useId, useMemo, useState } from "react"
 import { useLocalCardsData } from "@/hooks/useLocalCardsData"
 import { Checkbox, CustomButton } from "@/components/Button"
 import { CardType, Elements } from "@/utils/types"
@@ -11,7 +11,7 @@ import { costIconUrls } from "@/utils/vars"
 import { DndContext, DragEndEvent, PointerSensor, TouchSensor, closestCorners, useSensor, useSensors } from "@dnd-kit/core"
 import { arrayMove, horizontalListSortingStrategy, SortableContext } from "@dnd-kit/sortable"
 import { ActiveCharacterCard } from "./ActiveCharacterCard"
-import { elementResonance, isArcaneLegend, isValidCard } from "@/utils/cards"
+import { elementResonance, getElement, isArcaneLegend, isValidCard } from "@/utils/cards"
 import { encode as encodeDeck } from "@/utils/decoder"
 import { usePopUp } from "@/hooks/utilities"
 import { handleCopy } from "@/utils/clipboard"
@@ -44,11 +44,27 @@ export function DeckBuilderPageClient ({
   
   //FILTER
   const [showInvalidCards, setShowInvalidCards] = useState(true);
-  const characterTraits = {
-      element: elementResonance.map(res => res.element),
-      weapon: ["sword", "catalyst", "claymore", "bow", "polearm", "other_weapons"],
-      affiliation: ["mondstadt", "liyue", "inazuma", "sumeru", "fontaine", "natlan", "fatui", "eremite", "monster", "hilichurl", "consecrated_beast", "arkhe_pneuma", "arkhe_ousia", "none"]
-    }
+  const characterTraits = useMemo(() => ({
+    element: elementResonance.map(res => res.element),
+    weapon: ["sword", "catalyst", "claymore", "bow", "polearm", "other_weapons"],
+    affiliation: ["mondstadt", "liyue", "inazuma", "sumeru", "fontaine", "natlan", "fatui", "eremite", "monster", "hilichurl", "consecrated_beast", "arkhe_pneuma", "arkhe_ousia", "none"],
+    hp: (() => {
+      const hitpoints: Set<string> = new Set();
+      localCardsData.characters.forEach(c => hitpoints.add(c.hp));
+      return Array.from(hitpoints.values()).sort((a, b) => Number(a)-Number(b));
+    })(),
+    skill_cost: (() => {
+      const costs: Set<number> = new Set();
+      localCardsData.characters.forEach(c => {
+        c.role_skill_infos.forEach(skill => {
+          if(skill.type.includes(term("skill_type.passive_skill"))) return;
+          const cost = skill.skill_costs.reduce((a, r) => a + (["1", "19"].includes(r.cost_type) ? 0 : Number(r.cost_num)), 0);
+          costs.add(cost);
+        })
+      })
+      return Array.from(costs.values()).sort((a, b) => a-b).map(cost => cost.toString());
+    })()
+  }), [localCardsData])
   const actionTraits = [
     {
       category: "type",
@@ -65,9 +81,9 @@ export function DeckBuilderPageClient ({
       weapon: [],
       affiliation: [],
       hp: [],
+      skill_cost: []
     },
     config: {
-      has_big_skill: false,
       teatime_mode: false
     }
   })
@@ -141,6 +157,38 @@ export function DeckBuilderPageClient ({
   const sensors = useSensors(
     useSensor(PointerSensor, activationConstraint), useSensor(TouchSensor, activationConstraint)
   )
+  const dnd_id = useId();
+
+  const filteredCharacters = useMemo(() => {
+    return characters.filter(c => {
+      const element = getElement(c.element_type);
+      const categories = characterFilter.categories;
+
+      return (element && categories.element.length > 0 ? categories.element.includes(element) : true)
+        && (categories.weapon.length > 0 ? categories.weapon.some(weap => term(weap) === c.weapon) : true)
+        && (categories.affiliation.length > 0
+          ? (
+            categories.affiliation.some(affi => affi !== "none"
+              ? c.belongs.includes(term(affi))
+              : !c.belongs.some(belong => belong !== "")
+            )
+          ) : true
+        )
+        && (categories.hp.length > 0 ? categories.hp.includes(c.hp) : true)
+        && (categories.skill_cost.length > 0
+          ? (
+            categories.skill_cost.some(cost => {
+              for (let skill of c.role_skill_infos) {
+                const _cost = skill.skill_costs.reduce((a, r) => a + (["1", "19"].includes(r.cost_type) ? 0 : Number(r.cost_num)), 0);
+                if(_cost === Number(cost)) return true;
+              }
+              return false;
+            })
+          ) : true
+        )
+    })
+    
+  }, [localCardsData, characterFilter])
 
   const _actions = useMemo(() => {
     return localCardsData.actions.map(c => ({
@@ -235,7 +283,7 @@ export function DeckBuilderPageClient ({
         </div>
 
         <div className={`card_selection_container ${selectionCardType === "characters" ? "flex" : "hidden"}`}>
-          <div>{characters.map(c =>
+          <div>{filteredCharacters.map(c =>
             <div key={c.id} className={`character_card_image ${isCharacterIncluded(c.id) ? "darkened" : ""} ${!isCharacterIncluded(null) && !isCharacterIncluded(c.id) ? "whitened" : ""}`}>
               <div
                 className={!isCharacterIncluded(null) && !isCharacterIncluded(c.id) ? "disabled" : ""}
@@ -288,21 +336,85 @@ export function DeckBuilderPageClient ({
             </div>
           )}</div>
         </div>
-        <div className="filter_container text-sm">
+        
+        <div className="filter_container">
           <Checkbox className="text-sm" trueCondition={!showInvalidCards} onClick={() => setShowInvalidCards(!showInvalidCards)}>Show invalid cards</Checkbox>
           <div>
-            <div>{term("category.element")}</div>
-            {characterTraits.element.map(elem => {
-              return <div>
-                <Checkbox
+            <div className="filter_category">{term("category.element")}</div>
+            <div className="grid grid-cols-3">
+              {characterTraits.element.map(elem => {
+                return <Checkbox
+                  key={elem}
+                  className="text-sm"
                   trueCondition = {characterFilter.categories.element.includes(elem)}
                   onClick = {() => handleCharacterFilter("element", elem)}
                 >
                   {term(elem)}
                 </Checkbox>
-              </div>
-            })}
+              })}
+            </div>
           </div>
+          <div>
+            <div className="filter_category">{term("category.weapon")}</div>
+            <div className="grid grid-cols-2">
+              {characterTraits.weapon.map(weap => {
+                return <Checkbox
+                  key={weap}
+                  className="text-sm"
+                  trueCondition = {characterFilter.categories.weapon.includes(weap)}
+                  onClick = {() => handleCharacterFilter("weapon", weap)}
+                >
+                  {term(weap)}
+                </Checkbox>
+              })}
+            </div>
+          </div>
+          <div>
+            <div className="filter_category">{term("category.affiliation")}</div>
+            <div className="grid grid-cols-2">
+              {characterTraits.affiliation.map(affi => {
+                return <Checkbox
+                  key={affi}
+                  className="text-sm"
+                  trueCondition = {characterFilter.categories.affiliation.includes(affi)}
+                  onClick = {() => handleCharacterFilter("affiliation", affi)}
+                >
+                  {affi === "none" ? "None" : term(affi)}
+                </Checkbox>
+              })}
+            </div>
+          </div>
+          <div>
+            <div className="filter_category">{term("category.hp")}</div>
+            <div className="grid grid-cols-4">
+              {characterTraits.hp.map(_hp => {
+                return <Checkbox
+                  key={_hp}
+                  className="text-sm"
+                  trueCondition = {characterFilter.categories.hp.includes(_hp)}
+                  onClick = {() => handleCharacterFilter("hp", _hp)}
+                >
+                  {_hp}
+                </Checkbox>
+              })}
+            </div>
+          </div>
+          <div>
+            <div className="filter_category">{term("category.skill_cost")}</div>
+            <div className="grid grid-cols-4">
+              {characterTraits.skill_cost.map(cost => {
+                return <Checkbox
+                  key={cost}
+                  className="text-sm"
+                  trueCondition = {characterFilter.categories.skill_cost.includes(cost)}
+                  onClick = {() => handleCharacterFilter("skill_cost", cost)}
+                >
+                  {cost}
+                </Checkbox>
+              })}
+            </div>
+          </div>
+          {JSON.stringify(characterFilter.categories)}
         </div>
 
       </div>
@@ -310,7 +422,7 @@ export function DeckBuilderPageClient ({
       <div className="flex flex-col gap-3 items-center">
         <div className="font-semibold">Active Lineup</div>
         <div className="border-1 border-gray-300 rounded-xl w-226 flex justify-center prevent_select">
-          <DndContext collisionDetection={closestCorners} onDragEnd={handleDragEnd} sensors={sensors}>
+          <DndContext id={dnd_id} collisionDetection={closestCorners} onDragEnd={handleDragEnd} sensors={sensors}>
             <div className="grid grid-cols-3 gap-16 p-4">
               <SortableContext items={activeCharacterCards} strategy={horizontalListSortingStrategy}>
                 {activeCharacterCards.map(c =>
@@ -370,9 +482,9 @@ interface CharacterFilter {
     weapon: string[]
     affiliation: string[]
     hp: string[]
+    skill_cost: string[]
   }
   config: {
-    has_big_skill: boolean
     teatime_mode: boolean
   }
 }
