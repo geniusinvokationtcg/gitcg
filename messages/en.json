@@ -20,7 +20,16 @@
     "preview_enabled": "Preview enabled. Lag may occur",
     "preview_disabled": "Preview disabled"
   },
-  "Terminology": {
+  "CardsTerminology": {
+    "category": {
+      "element": "Element",
+      "weapon": "Weapon",
+      "affiliation": "Affiliation",
+      "type": "Type",
+      "tag": "Tag",
+      "hp": "HP",
+      "cost": "Cost"
+    },
     "cryo": "Cryo",
     "hydro": "Hydro",
     "pyro": "Pyro",

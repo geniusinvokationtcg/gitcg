@@ -17,7 +17,7 @@ import { usePopUp } from "@/hooks/utilities"
 import { handleCopy } from "@/utils/clipboard"
 import { SuccessNotification } from "@/components/PopUp"
 import { useTranslations } from "next-intl"
-import { MagnifyingGlass, Eye } from "@/components/Icons"
+import { Eye } from "@/components/Icons"
 
 export function DeckBuilderPageClient ({
   params
@@ -28,7 +28,7 @@ export function DeckBuilderPageClient ({
 
   //NEXT-INTL
   const g = useTranslations("General");
-  const term = useTranslations("Terminology");
+  const term = useTranslations("CardsTerminology");
 
   //CARDS DATA
   const localCardsData = useLocalCardsData(locale);
@@ -44,22 +44,12 @@ export function DeckBuilderPageClient ({
   
   //FILTER
   const [showInvalidCards, setShowInvalidCards] = useState(true);
-  const weapons = ["sword", "catalyst", "claymore", "bow", "polearm", "other_weapons"];
-  const characterFilter = [
-    {
-      category: "element",
-      items: elementResonance.map(res => res.element)
-    },
-    {
-      category: "weapon",
-      items: weapons
-    },
-    {
-      category: "affiliation",
-      items: ["mondstadt", "liyue", "inazuma", "sumeru", "fontaine", "natlan", "fatui", "eremite", "monster", "hilichurl", "consecrated_beast", "arkhe_pneuma", "arkhe_ousia", "none"]
+  const characterTraits = {
+      element: elementResonance.map(res => res.element),
+      weapon: ["sword", "catalyst", "claymore", "bow", "polearm", "other_weapons"],
+      affiliation: ["mondstadt", "liyue", "inazuma", "sumeru", "fontaine", "natlan", "fatui", "eremite", "monster", "hilichurl", "consecrated_beast", "arkhe_pneuma", "arkhe_ousia", "none"]
     }
-  ]
-  const actionFilter = [
+  const actionTraits = [
     {
       category: "type",
       items: ["equipment_card", "support_card", "event_card"]
@@ -69,23 +59,45 @@ export function DeckBuilderPageClient ({
       items: ["talent", "weapon", "artifact", "technique", "location", "companion", "item", "arcane_legend", "elemental_resonance", "food", "combat_action", "none"]
     }
   ]
-  const [cardFilter, setCardFilter] = useState<CardFilter>({
-    characters: {
+  const [characterFilter, setCharacterFilter] = useState<CharacterFilter>({
+    categories: {
       element: [],
       weapon: [],
       affiliation: [],
       hp: [],
+    },
+    config: {
       has_big_skill: false,
       teatime_mode: false
-    },
-    actions: {
+    }
+  })
+  const [actionFilter, setActionFilter] = useState<ActionFilter>({
+    categories: {
       type: [],
       tag: [],
       cost: [],
+    },
+    config: {
       include_energy_cost: true,
       show_invalid: false
     }
-  });
+  })
+  const handleCharacterFilter = (category: keyof CharacterFilter["categories"], item: string) => {
+    let temp = characterFilter.categories;
+    const items = temp[category];
+    const index = items.indexOf(item);
+
+    if(index < 0) {
+      items.push(item);
+    } else {
+      items.splice(index, 1);
+    }
+    temp[category] = items;
+
+    setCharacterFilter({
+      ...characterFilter, categories: temp
+    })
+  }
 
   const [selectionCardType, setSelectionCardType] = useState<CardType>("characters");
 
@@ -276,9 +288,21 @@ export function DeckBuilderPageClient ({
             </div>
           )}</div>
         </div>
-        <div className="filter_container">
+        <div className="filter_container text-sm">
           <Checkbox className="text-sm" trueCondition={!showInvalidCards} onClick={() => setShowInvalidCards(!showInvalidCards)}>Show invalid cards</Checkbox>
-          
+          <div>
+            <div>{term("category.element")}</div>
+            {characterTraits.element.map(elem => {
+              return <div>
+                <Checkbox
+                  trueCondition = {characterFilter.categories.element.includes(elem)}
+                  onClick = {() => handleCharacterFilter("element", elem)}
+                >
+                  {term(elem)}
+                </Checkbox>
+              </div>
+            })}
+          </div>
         </div>
 
       </div>
@@ -340,19 +364,25 @@ export function DeckBuilderPageClient ({
   </div>
 }
 
-interface CardFilter {
-  characters: {
-    element: Elements[]
+interface CharacterFilter {
+  categories: {
+    element: string[]
     weapon: string[]
     affiliation: string[]
-    hp: number[]
+    hp: string[]
+  }
+  config: {
     has_big_skill: boolean
     teatime_mode: boolean
   }
-  actions: {
+}
+interface ActionFilter {
+  categories: {
     type: string[]
     tag: string[]
-    cost: number[]
+    cost: string[]
+  },
+  config: {
     include_energy_cost: boolean
     show_invalid: boolean
   }
