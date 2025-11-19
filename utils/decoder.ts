@@ -96,8 +96,7 @@ export function decode(code: string, output?: "name" | "id" | "code", bypassErro
 	if(output === "name") nonCode = deck.map(s => Cards.codes.find(c => c.code === s)?.[output]);
 	if(output === "id") nonCode = deck.map(s => Cards.codes.find(c => c.code === s)?.[output]);
 
-	if(bypassError) nonCode = nonCode.filter(s => s !== undefined);
-	if(nonCode.includes(undefined)) return ErrorResult("This deckcode contains nonexisting cards");
+	if(nonCode.includes(undefined) && !bypassError) return ErrorResult("This deckcode contains nonexisting cards");
 	return SuccessResult(nonCode as number[] | string[]);
 }
 

@@ -68,13 +68,13 @@ export function DeckBuilderPageClient ({
       setIsImporting(false);
       return;
     }
-    console.log(decoded.data)
 
-    let characters = (decoded.data.slice(0, 3) as number[]).filter(id => codes.find(c => c.id === id)?.type === "character");
+    let characters = (decoded.data.slice(0, 3) as (number | undefined)[]).map((id, i, arr) =>
+      codes.find(c => c.id === id)?.type === "character" &&
+      !arr.slice(0, i).includes(id) //check duplicate
+      ? id : null);
     let actions = (decoded.data.slice(0, 33) as number[]).filter(id => codes.find(c => c.id === id)?.type === "action");
     //slice starts from 0 instead of 3 in case of characters actual length < 3
-    
-    characters = Array.from(new Set(characters).values());
     
     const groupedActions: Map<number, number> = new Map();
     actions.forEach(id => groupedActions.set(id, (groupedActions.get(id) ?? 0) + 1));
