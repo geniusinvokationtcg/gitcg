@@ -25,13 +25,14 @@
       "passive_skill": "Passive Skill"
     },
     "category": {
+      "name": "Name",
       "element": "Element",
       "weapon": "Weapon",
       "affiliation": "Affiliation",
       "type": "Type",
       "tag": "Tag",
       "hp": "HP",
-      "cost": "Cost",
+      "cost": "Cost (excluding Energy)",
       "skill_cost": "Skill Cost (excluding Energy)"
     },
     "cryo": "Cryo",
@@ -71,9 +72,10 @@
     "companion": "Companion",
     "item": "Item",
     "arcane_legend": "Arcane Legend",
-    "elemental_resonance": "elemental_resonance",
+    "elemental_resonance": "Elemental Resonance",
     "food": "Food",
-    "combat_action": "Combat Action"
+    "combat_action": "Combat Action",
+    "none": "None"
   },
   "Footer": {
     "description": "GITCG is a community for the collectible card minigame of Genshin Impact: Genius Invokation TCG. We're not affiliated with HoYoverse in any way."

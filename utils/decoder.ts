@@ -62,7 +62,7 @@ export function encode(deck: number[], offset: number = 0): string {
 	return code;
 }
 
-export function decode(code: string, output?: "name" | "id" | "code"): Maybe<number[] | string[]> {
+export function decode(code: string, output?: "name" | "id" | "code", bypassError: boolean = false): Maybe<number[] | string[]> {
 	if(!output) output = "code";
   let buffer = Buffer.from(code, 'base64');
 	let hex_code = buffer.toString('hex');
@@ -83,12 +83,12 @@ export function decode(code: string, output?: "name" | "id" | "code"): Maybe<num
 		unscrambled.push(scrambling[i].map(s => scrambled[s]).join(""));
 	}
 
-	if (unscrambled.length !== 33) return ErrorResult("This is not a valid deck code");
+	if (unscrambled.length !== 33 && !bypassError) return ErrorResult("This is not a valid deck code");
 
 	Cards.refresh();
 
 	let deck: number[] = unscrambled.map(s => parseInt(s, 16));
-	if(!deck.some(s => Cards.codes.find(c => c.code === s))) return ErrorResult("This deckcode contains nonexisting cards");
+	if(!deck.some(s => Cards.codes.find(c => c.code === s)) && !bypassError) return ErrorResult("This deckcode contains nonexisting cards");
 	
 	if(output === "code") return SuccessResult(deck);
 
@@ -96,6 +96,7 @@ export function decode(code: string, output?: "name" | "id" | "code"): Maybe<num
 	if(output === "name") nonCode = deck.map(s => Cards.codes.find(c => c.code === s)?.[output]);
 	if(output === "id") nonCode = deck.map(s => Cards.codes.find(c => c.code === s)?.[output]);
 
+	if(bypassError) nonCode = nonCode.filter(s => s !== undefined);
 	if(nonCode.includes(undefined)) return ErrorResult("This deckcode contains nonexisting cards");
 	return SuccessResult(nonCode as number[] | string[]);
 }

@@ -25,11 +25,12 @@ export function CardImageLarge ({ cardType, cardId, resize, localCardsData }: { 
   </div>
 }
 
-export function CardImage ({ cardType, cardId, size, borderType = "normal", resize = true, localCardsData }: {
+export function CardImage ({ cardType, cardId, size, dynamicImagePx = false, borderType = "normal", resize = true, localCardsData }: {
   cardType: CardType;
   cardId: number | null;
-  size: CardImageSize;
-  borderType?: BorderType
+  size: CardImageSize | number;
+  dynamicImagePx?: boolean;
+  borderType?: BorderType;
   resize?: boolean;
   localCardsData?: CardsDataType;
 }) {
@@ -38,15 +39,43 @@ export function CardImage ({ cardType, cardId, size, borderType = "normal", resi
     case "small": px = 110; break;
     case "medium": px = 140; break;
     case "large": px = 180; break;
+    default: {
+      if(dynamicImagePx) { px = px+60 }
+      else if(size < 50) { px = 110 }
+      else if(size < 80) { px = 140 }
+      else { px = 180 }
+    };
   }
 
-  return <div className={`prevent_select card_image_${size} ${resize ? `card_image_${size}_resize` : ""}`}>
+  const isCustom = typeof size === "number"
+
+  const containerStyle: React.CSSProperties | undefined = isCustom ? {
+    position: "relative",
+    width: isCustom ? size : 120
+  } : undefined
+  const cardImageStyle: React.CSSProperties | undefined = isCustom ? {
+    position: "absolute",
+    width: "98%",
+    padding: "2px 0.5px",
+    objectFit: "contain",
+    zIndex: 0
+  } : undefined
+  const borderStyle: React.CSSProperties | undefined = isCustom ? {
+    position: "relative",
+    zIndex: 10,
+    pointerEvents: "none"
+  } : undefined
+
+  return <div
+    className={`prevent_select ${isCustom ? "" : `card_image_${size} ${resize ? `card_image_${size}_resize` : ""}`}`}
+    style={containerStyle}
+  >
     {
       cardId
-      ? <img src={getCardImageUrl(cardType, cardId, "id", px)} title={getCardName(cardId, localCardsData)}></img>
-      : <img src="/game_icons/Origin_Card_Back.webp" className="null" />
+      ? <img style={cardImageStyle} src={getCardImageUrl(cardType, cardId, "id", px)} title={getCardName(cardId, localCardsData)}></img>
+      : <img style={cardImageStyle} src="/game_icons/Origin_Card_Back.webp" className="null" />
     }
-    <img src={`/borders/${borderType}${cardId && isArcaneLegend(cardId) ? "_esoteric": ""}.png`}></img>
+    <img style={borderStyle} src={`/borders/${borderType}${cardId && isArcaneLegend(cardId) ? "_esoteric": ""}.png`}></img>
   </div>
 }
 

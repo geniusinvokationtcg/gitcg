@@ -9,6 +9,8 @@ export type Maybe<T> = { data: null; error: Error } | { data: T; error: null };
 export const ErrorResult = ((str: string) => { return { data: null, error: new Error(str) } });
 export const SuccessResult = <T>(data: T) => { return { data, error: null } };
 
+export type PopUpType = "success" | "info" | "error";
+
 export type Server = "all" | ServerPure;
 export type ServerPure = "na" | "eu" | "as";
 

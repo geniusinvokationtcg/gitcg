@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .character_card_image, .action_card_image {
-  @apply relative
+  position: relative;
 }
 .character_card_image > :first-child:not(.disabled), .action_card_image > :first-child:not(.disabled) {
   cursor: pointer;
@@ -47,14 +47,17 @@
   @apply py-4 px-2
 }
 .card_selection_container, .filter_container {
-  @apply border-1 border-gray-300 rounded-xl w-95 h-[65vh] overflow-y-auto justify-center;
+  @apply border-1 border-gray-300 rounded-xl w-95 h-[63.8vh] max-h-171 overflow-y-auto justify-center;
 }
 .card_selection_container > :first-child {
   @apply grid grid-cols-4 justify-center gap-2 gap-y-3 h-fit;
 }
 
 .filter_category {
-  @apply px-4 font-semibold;
+  @apply mx-4 font-semibold;
+}
+.separator_line {
+  @apply border-t-1 border-gray-300 my-1 mx-4;
 }
 
 .action_card_image > .ribbon {
@@ -72,4 +75,9 @@
 .brown_ribbon {
   background-color: #AF7637 !important;
   filter: brightness(100%) opacity(100%) !important;
+}
+
+input {
+  @apply border-1 border-gray-300 bg-white rounded-sm w-full px-3 mx-auto text-sm text-gray-900 transition-all duration-200 ease-in-out py-1.5;
+  @apply hover:border-gray-500 focus:border-gray-500 focus:outline-none focus:ring-gray-500 hover:shadow-md focus:shadow-md;
 }

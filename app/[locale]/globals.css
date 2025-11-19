@@ -71,6 +71,8 @@ body {
   background-color: #e5e7eb;
 }
 
+.icon_button
+
 .icon_hover > svg {
   transition: all 200ms ease;
   cursor: pointer;
@@ -79,8 +81,14 @@ body {
 }
 .icon_hover > svg:hover,
 .highlight,
-.clickable_text:hover {
+.clickable_text:hover,
+svg.icon_hover:hover {
   color: #AF7637;
+}
+
+svg.icon_hover {
+  transition: all 200ms ease;
+  cursor: pointer;
 }
 
 .clickable_text {

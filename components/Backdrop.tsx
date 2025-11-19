@@ -3,7 +3,7 @@ export function Backdrop({
   triggerFn
 }: {
   isOpen: boolean
-  triggerFn?: () => void
+  triggerFn?: (...args: any[]) => any
 }) {
   return <div
     className={`fixed inset-0 bg-[#00000050] z-100 transition-opacity duration-300 ${
