@@ -5,6 +5,11 @@
     display: none;
   }
 }
+.left_container_sidebar {
+  @media (width >= 1270px) {
+    display: none;
+  }
+}
 
 .left_buttons {
   @apply flex flex-row gap-2;
@@ -61,7 +66,12 @@
   @apply py-4 px-2
 }
 .card_selection_container, .filter_container {
-  @apply border-1 border-gray-300 rounded-xl w-95 h-[70vh] max-h-171 overflow-y-auto justify-center;
+  @apply border-1 border-gray-300 rounded-xl w-95 max-h-171 overflow-y-auto justify-center;
+  height: 70vh;
+  @media (width < 1270px) {
+    height: calc(100vh - 48px - 24px - 16px - 34px - 24px - 24px);
+    max-height: none;
+  }
 }
 .card_selection_container > :first-child {
   @apply grid grid-cols-4 justify-center gap-2 gap-y-3 h-fit;

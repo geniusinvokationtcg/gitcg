@@ -71,13 +71,13 @@ export default function Navbar({ locale }: {locale: Locales}) {
         </div>
       </nav>
       <div
-        className={`fixed inset-0 bg-[#00000050] z-100 transition-opacity duration-300 ${
+        className={`fixed inset-0 bg-[#00000050] z-100 transition-opacity duration-200 ${
           isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
         onClick={() => setIsOpen(false)}
       />
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-white z-101 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-full w-64 bg-white z-101 transform transition-transform duration-200 ease-in-out ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >

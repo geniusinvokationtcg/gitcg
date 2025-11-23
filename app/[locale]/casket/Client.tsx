@@ -114,6 +114,7 @@ export function DeckBuilderPageClient ({
   const actionCardSearchRef = useRef<HTMLInputElement>(null);
   const [characterRender, setCharacterRender] = useState(0);
   const [actionRender, setActionRender] = useState(0);
+  const [characterSearchQuery, setCharacterSearchQuery] = useState("");
   const [actionSearchQuery, setActionSearchQuery] = useState("");
 
   const [isActiveCardsLocked, setIsActiveCardsLocked] = useLocalStorage("casketIsActiveCardsLocked", false);
@@ -278,7 +279,7 @@ export function DeckBuilderPageClient ({
       const element = getElement(c.element_type);
       const categories = characterFilter.categories;
 
-      return (characterCardSearchRef.current ? c.name.toLowerCase().includes(characterCardSearchRef.current.value.toLowerCase()) : true)
+      return (c.name.toLowerCase().includes(characterSearchQuery.toLowerCase()))
         && (element && categories.element.length > 0 ? categories.element.includes(element) : true)
         && (categories.weapon.length > 0 ? categories.weapon.some(weap => term(weap) === c.weapon) : true)
         && (categories.affiliation.length > 0
@@ -310,13 +311,13 @@ export function DeckBuilderPageClient ({
       return comparation * (characterFilter.sort.is_ascending ? 1 : -1)
     })
     
-  }, [localCardsData, characterFilter, characterRender])
+  }, [localCardsData, characterFilter, characterSearchQuery])
 
   const filteredActions = useMemo(() => {
     return actions.filter(c => {
       const categories = actionFilter.categories;
 
-      return (actionCardSearchRef.current ? c.name.toLowerCase().includes(actionCardSearchRef.current.value.toLowerCase()) : true)
+      return (c.name.toLowerCase().includes(actionSearchQuery.toLowerCase()))
         && (actionFilter.config.show_invalid || c.isValid)
         && (categories.type.length > 0 ? categories.type.some(_type => term(_type) === c.action_type) : true)
         && (categories.tag.length > 0
@@ -336,7 +337,7 @@ export function DeckBuilderPageClient ({
       }
       return comparation * (actionFilter.sort.is_ascending ? 1 : -1);
     })
-  }, [localCardsData, actions, actionFilter, actionRender]);
+  }, [localCardsData, actions, actionFilter, actionSearchQuery]);
 
   const [activeActionCards, setActiveActionCards] = useState<number[]>([]);
   const groupedActionCards = useMemo(() => {
@@ -405,18 +406,15 @@ export function DeckBuilderPageClient ({
         type="search"
         placeholder="Search cards name"
         className={selectionCardType === "characters" ? "" : "hidden"}
-        ref={characterCardSearchRef}
-        onChange={() => {
-          clearAllRenderTimeouts();
-          renderTimeouts.current.push(setTimeout(() => setCharacterRender(prev => prev+1), 50));
-        }}
+        value={characterSearchQuery}
+        onChange={e => setCharacterSearchQuery(e.target.value)}
       />
       <input
         type="search"
         placeholder="Search cards name"
         className={selectionCardType === "actions" ? "" : "hidden"}
         value={actionSearchQuery}
-        onChange={(e) => setActionSearchQuery(e.target.value)}
+        onChange={e => setActionSearchQuery(e.target.value)}
       />
       <CustomButton
         type="icon"
@@ -721,8 +719,9 @@ export function DeckBuilderPageClient ({
       </div>
     </DialogBox>
 
-    <Backdrop isOpen={isSelectingCards} triggerFn={() => setIsSelectingCards(false)}/>
-    <div className={`fixed top-0 left-0 h-full py-6 px-4 bg-white z-101 transform transition-transform duration-200 ease-in-out ${isSelectingCards ? "translate-x-0" : "-translate-x-full"}`}>
+    <div className="left_container_sidebar"><Backdrop isOpen={isSelectingCards} triggerFn={() => setIsSelectingCards(false)}/></div>
+    <div className={`left_container_sidebar fixed top-0 left-0 h-full py-6 px-4 bg-white z-101 transform transition-transform duration-200 ease-in-out ${isSelectingCards ? "translate-x-0" : "-translate-x-full"}`}>
+      <IconButton className="flex justify-end pb-4" onClick={() => setIsSelectingCards(false)}><XMarkIcon/></IconButton>
       {LeftContainer}
     </div>
 
