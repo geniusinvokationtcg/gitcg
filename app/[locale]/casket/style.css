@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+.left_container_children {
+  @apply flex flex-col gap-3 w-95;
+}
 .left_container {
   @media (width < 1270px) {
     display: none;
@@ -11,8 +14,50 @@
   }
 }
 
+.active_character_container {
+  @apply grid grid-cols-3 gap-16 p-4;
+}
+.active_action_container {
+  @apply border-1 border-gray-300 rounded-xl w-201 h-102 flex justify-center;
+}
+.active_action_container > :first-child {
+  @apply grid grid-cols-10 gap-2 h-fit p-4;
+}
+@media (540px <= width < 870px) {
+  .active_action_container {
+    width: 492px;
+    height: 666px;
+  }
+  .active_action_container > :first-child {
+    @apply grid-cols-6;
+  }
+}
+@media (width < 540px) {
+  .active_character_container {
+    @apply gap-4;
+  }
+}
+@media (462px <= width < 540px) {
+  .active_action_container {
+    width: 414px;
+    height: 794px;
+  }
+  .active_action_container > :first-child {
+    @apply grid-cols-5;
+  }
+}
+@media (width < 462px) {
+  .active_action_container {
+    width: 100%; /*336px*/
+    height: 1051px;
+  }
+  .active_action_container > :first-child {
+    @apply grid-cols-4;
+  }
+}
+
 .left_buttons {
-  @apply flex flex-row gap-2;
+  @apply flex flex-row gap-1 h-fit;
   @media (width >= 1270px) {
     opacity: 0;
     pointer-events: none;
@@ -75,6 +120,14 @@
 }
 .card_selection_container > :first-child {
   @apply grid grid-cols-4 justify-center gap-2 gap-y-3 h-fit;
+}
+@media (width < 412px) {
+  .left_container_children, .card_selection_container, .filter_container {
+    @apply w-73;
+  }
+  .card_selection_container > :first-child {
+    @apply grid-cols-3;
+  }
 }
 
 .filter_category {

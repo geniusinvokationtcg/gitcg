@@ -24,7 +24,6 @@ import { Backdrop } from "@/components/Backdrop"
 import { useLocalStorage } from "@/hooks/storage"
 import { HugeiconsIcon } from "@hugeicons/react";
 import { FilterIcon, FilterRemoveIcon } from "@hugeicons/core-free-icons"
-import { Tooltip } from "@/components/Tooltip"
 
 export function DeckBuilderPageClient ({
   params
@@ -39,6 +38,7 @@ export function DeckBuilderPageClient ({
   //NEXT-INTL
   const g = useTranslations("General");
   const term = useTranslations("CardsTerminology");
+  const t = useTranslations("DeckBuilderPage");
 
   //CARDS DATA
   const localCardsData = useLocalCardsData(locale);
@@ -67,7 +67,7 @@ export function DeckBuilderPageClient ({
 
     const decoded = decodeDeck(importDeckRef.current.value, "id", true);
     if(decoded.error) {
-      triggerPopUp("Invalid deckcode", "error");
+      triggerPopUp(t("invalid_deckcode"), "error");
       setIsImporting(false);
       return;
     }
@@ -98,22 +98,13 @@ export function DeckBuilderPageClient ({
 
     setIsOpenDialog(false);
     setIsImporting(false);
-    triggerPopUp("Imported");
+    triggerPopUp(t("import_successful"));
     
   }
   const cancelImportDeck = () => {
     if(!isImporting) setIsOpenDialog(false);
   }
   
-  const renderTimeouts = useRef<any[]>([]);
-  const clearAllRenderTimeouts = () => {
-    renderTimeouts.current.forEach(timeout => clearTimeout(timeout));
-    renderTimeouts.current = [];
-  }
-  const characterCardSearchRef = useRef<HTMLInputElement>(null);
-  const actionCardSearchRef = useRef<HTMLInputElement>(null);
-  const [characterRender, setCharacterRender] = useState(0);
-  const [actionRender, setActionRender] = useState(0);
   const [characterSearchQuery, setCharacterSearchQuery] = useState("");
   const [actionSearchQuery, setActionSearchQuery] = useState("");
 
@@ -381,7 +372,7 @@ export function DeckBuilderPageClient ({
     const deck = ids.map(id => codes.find(c => c.id === id)?.code ?? 0);
     const code = encodeDeck(deck, deckOffset);
     handleCopy(code, () => {
-      triggerPopUp(<p className="text-center">Copied to clipboard<br/>Double click if the code doesn't work</p>);
+      triggerPopUp(<p className="text-center">{t("copied_to_clipboard")}<br/>{t("next_deck_offset_tip")}</p>);
     });
   }, [deckOffset, activeCharacterCards, activeActionCards, codes])
 
@@ -400,18 +391,18 @@ export function DeckBuilderPageClient ({
   )
   const dnd_id = useId();
 
-  const LeftContainer = <div className="flex flex-col gap-3 w-95 prevent_select">
+  const LeftContainer = <div className="left_container_children prevent_select">
     <div className="flex gap-2">
       <input
         type="search"
-        placeholder="Search cards name"
+        placeholder={t("search_query_placeholder")}
         className={selectionCardType === "characters" ? "" : "hidden"}
         value={characterSearchQuery}
         onChange={e => setCharacterSearchQuery(e.target.value)}
       />
       <input
         type="search"
-        placeholder="Search cards name"
+        placeholder={t("search_query_placeholder")}
         className={selectionCardType === "actions" ? "" : "hidden"}
         value={actionSearchQuery}
         onChange={e => setActionSearchQuery(e.target.value)}
@@ -427,8 +418,8 @@ export function DeckBuilderPageClient ({
     </div>
     
     <div className="flex flex-row gap-4 justify-evenly w-full">
-      <div onClick={() => setSelectionCardType("characters")} className={`clickable_text ${selectionCardType === "characters" ? "font-bold highlight" : ""}`}>Character Cards</div>
-      <div onClick={() => setSelectionCardType("actions")} className={`clickable_text ${selectionCardType === "actions" ? "font-bold highlight" : ""}`}>Action Cards</div>
+      <div onClick={() => setSelectionCardType("characters")} className={`clickable_text ${selectionCardType === "characters" ? "font-bold highlight" : ""}`}>{term("character_cards")}</div>
+      <div onClick={() => setSelectionCardType("actions")} className={`clickable_text ${selectionCardType === "actions" ? "font-bold highlight" : ""}`}>{term("action_cards")}</div>
     </div>
 
     <div className={`card_selection_container ${selectionCardType === "characters" && !isFiltering ? "flex" : "hidden"}`}>
@@ -474,7 +465,7 @@ export function DeckBuilderPageClient ({
             <div className={c.is_special ? "hidden" : ""}>{c.cost_num2}</div>
             <img src={c.cost_type2_icon} />
           </>}
-          {!c.isValid && <div className="ribbon">Invalid</div>}
+          {!c.isValid && <div className="ribbon">{t("invalid_card")}</div>}
           <div className={`preview_button group ${true ? "disabled" : ""}`}>
             <Eye className="size-3 text-gray-700 group-hover:text-[#AF7637] duration-200 transition-colors" />
           </div>
@@ -565,7 +556,7 @@ export function DeckBuilderPageClient ({
       </div>
 
       <div>
-        <div className="filter_category">Sort</div>
+        <div className="filter_category">{g("sort")}</div>
         <div className="grid grid-cols-1">
           {characterSortable.map(by => {
             return <Checkbox
@@ -586,20 +577,20 @@ export function DeckBuilderPageClient ({
             trueCondition = {characterFilter.sort.is_ascending}
             onClick= {() => handleCharacterSort(characterFilter.sort.by, true, true)}
             disabled={characterFilter.sort.by === null}
-          >Ascending</Checkbox>
+          >{g("ascending")}</Checkbox>
           <Checkbox
             className="text-sm"
             trueCondition = {!characterFilter.sort.is_ascending}
             onClick= {() => handleCharacterSort(characterFilter.sort.by, false, true)}
             disabled={characterFilter.sort.by === null}
-          >Descending</Checkbox>
+          >{g("descending")}</Checkbox>
         </div>
       </div>
 
     </div>
 
     <div className={`filter_container ${selectionCardType === "actions" && isFiltering ? "" : "hidden"}`}>
-      <Checkbox className="text-sm" trueCondition={actionFilter.config.show_invalid} onClick={() => handleActionConfig("show_invalid")}>Show invalid cards</Checkbox>
+      <Checkbox className="text-sm" trueCondition={actionFilter.config.show_invalid} onClick={() => handleActionConfig("show_invalid")}>{t("show_invalid_cards")}</Checkbox>
 
       <div>
         <div className="filter_category">{term("category.type")}</div>
@@ -648,7 +639,7 @@ export function DeckBuilderPageClient ({
       </div>
 
       <div>
-        <div className="filter_category">Sort</div>
+        <div className="filter_category">{g("sort")}</div>
         <div className="grid grid-cols-1">
           {actionSortable.map(by => {
             return <Checkbox
@@ -669,13 +660,13 @@ export function DeckBuilderPageClient ({
             trueCondition = {actionFilter.sort.is_ascending}
             onClick= {() => handleActionSort(actionFilter.sort.by, true, true)}
             disabled={actionFilter.sort.by === null}
-          >Ascending</Checkbox>
+          >{g("ascending")}</Checkbox>
           <Checkbox
             className="text-sm"
             trueCondition = {!actionFilter.sort.is_ascending}
             onClick= {() => handleActionSort(actionFilter.sort.by, false, true)}
             disabled={actionFilter.sort.by === null}
-          >Descending</Checkbox>
+          >{g("descending")}</Checkbox>
         </div>
       </div>
       
@@ -690,10 +681,10 @@ export function DeckBuilderPageClient ({
     <DialogBox isOpen={isOpenDialog}>
       <div className="relative flex flex-col gap-4 bg-white rounded-2xl w-100 h-fit p-5 text-center">
         <IconButton className="absolute right-4" onClick={cancelImportDeck}><XMarkIcon/></IconButton>
-        <div className="font-semibold">{isImporting ? "Importing..." : "Import Deck"}</div>
+        <div className="font-semibold">{isImporting ? t("importing") : t("import_deck")}</div>
         <input
           type="text"
-          placeholder="Enter deckcode"
+          placeholder={t("enter_deckcode_placeholder")}
           ref={importDeckRef}
           onKeyUp={e => {
             switch(e.key) {
@@ -704,13 +695,13 @@ export function DeckBuilderPageClient ({
         />
         <div className="flex flex-row gap-2 justify-center">
           <CustomButton
-            buttonText="Cancel"
+            buttonText={g("cancel")}
             textSize="xs"
             disabled={isImporting}
             onClick={cancelImportDeck}
           />
           <CustomButton
-            buttonText="Import"
+            buttonText={g("import")}
             textSize="xs"
             disabled={isImporting}
             onClick={handleImportDeck}
@@ -728,27 +719,27 @@ export function DeckBuilderPageClient ({
     <div className="flex flex-wrap gap-5">
       <div className="left_container">{LeftContainer}</div>
 
-      <div className="flex flex-col gap-3 items-center">
+      <div className="flex flex-col gap-3 items-center w-fit">
         
-        <div className="flex flex-row gap-2 justify-between w-full">
+        <div className="flex flex-row gap-4 justify-between w-full">
           <div className="left_buttons">
             <CustomButton
-              buttonText="Cards"
+              buttonText={t("open_cards_selection_sidebar")}
               textSize="xs"
               onClick={() => setIsSelectingCards(true)}
             />
           </div>
-          <div className="flex flex-row gap-2 justify-end">
+          <div className="flex flex-wrap gap-1 justify-end">
             <CustomButton
-              buttonText={mounted && isActiveCardsLocked ? "Unlock": "Lock"}
+              buttonText={mounted && isActiveCardsLocked ? t("unlock_active_cards"): t("lock_active_cards")}
               textSize="xs"
               onClick={() => {
                 setIsActiveCardsLocked(!isActiveCardsLocked);
-                triggerPopUp(isActiveCardsLocked ? "Active cards are unlocked" : "Active cards are locked")
+                triggerPopUp(isActiveCardsLocked ? t("active_cards_unlocked_successful") : t("active_cards_locked_successful"))
               }}
             />
             <CustomButton
-              buttonText="Import"
+              buttonText={g("import")}
               textSize="xs"
               onClick={() => {
                 setIsOpenDialog(!isOpenDialog);
@@ -756,10 +747,10 @@ export function DeckBuilderPageClient ({
               }}
             />
             <CustomButton
-              buttonText="Clear All"
+              buttonText={t("erase_active_cards")}
               textSize="xs"
               onClick={(e) => {
-                if(e.detail === 1) triggerPopUp("Triple click the button to clear all", "info");
+                if(e.detail === 1) triggerPopUp(t("erase_confirmation"), "info");
                 if(e.detail === 3) {
                   setActiveCharacterCards(activeCharacterCards.map(c => ({ ...c, cardId: null })))
                   setActiveActionCards([]);
@@ -768,7 +759,7 @@ export function DeckBuilderPageClient ({
               }}
             />
             <CustomButton
-              buttonText="Export"
+              buttonText={g("export")}
               textSize="xs"
               onClick={(e) => exportDeck(e.detail === 2)}
             />
@@ -776,10 +767,10 @@ export function DeckBuilderPageClient ({
         </div>
         
 
-        <div className="font-semibold">Active Lineup</div>
+        <div className="font-semibold">{term("active_characters")}</div>
         <div className="border-1 border-gray-300 rounded-xl w-full flex justify-center prevent_select">
           <DndContext id={dnd_id} collisionDetection={closestCorners} onDragEnd={handleDragEnd} sensors={sensors}>
-            <div className="grid grid-cols-3 gap-16 p-4">
+            <div className="active_character_container">
               <SortableContext items={activeCharacterCards} strategy={horizontalListSortingStrategy}>
                 {activeCharacterCards.map(c =>
                   <div key={c.id} onClick={() => c.cardId && !isActiveCardsLocked && removeCharacterCard(c.cardId)}>
@@ -796,9 +787,9 @@ export function DeckBuilderPageClient ({
           </DndContext>
         </div>
 
-        <div className="font-semibold">Active Deck</div>
-        <div className="border-1 border-gray-300 rounded-xl w-201 h-102 flex justify-center prevent_select">
-          <div className="grid grid-cols-10 gap-2 h-fit p-4">
+        <div className="font-semibold">{term("active_actions")}</div>
+        <div className="active_action_container prevent_select">
+          <div>
             {activeActionCards.map((id, i) => {
               const c = actions.find(_c => _c.id === id);
               if(!c) return;
@@ -823,7 +814,7 @@ export function DeckBuilderPageClient ({
                     <div className={c.is_special ? "hidden" : ""}>{c.cost_num2}</div>
                     <img src={c.cost_type2_icon} />
                   </>}
-                  {!c.isValid && <div className="ribbon">Invalid</div>}
+                  {!c.isValid && <div className="ribbon">{t("invalid_card")}</div>}
                 </div>
               </div>
             })}

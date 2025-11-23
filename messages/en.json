@@ -18,7 +18,13 @@
     "enable_preview": "Enable Preview",
     "disable_preview": "Disable Preview",
     "preview_enabled": "Preview enabled. Lag may occur",
-    "preview_disabled": "Preview disabled"
+    "preview_disabled": "Preview disabled",
+    "ascending": "Ascending",
+    "descending": "Descending",
+    "cancel": "Cancel",
+    "import": "Import",
+    "export": "Export",
+    "sort": "Sort"
   },
   "CardsTerminology": {
     "skill_type": {
@@ -35,6 +41,10 @@
       "cost": "Cost (excluding Energy)",
       "skill_cost": "Skill Cost (excluding Energy)"
     },
+    "character_cards": "Character Cards",
+    "action_cards": "Action Cards",
+    "active_characters": "Active Lineup",
+    "active_actions": "Active Deck",
     "cryo": "Cryo",
     "hydro": "Hydro",
     "pyro": "Pyro",
@@ -101,6 +111,27 @@
   "HomePage": {
     "title": "GITCG Community & Tournaments",
     "description": "Join our community Discord server to discuss, theorycraft, and participate in GITCG tournaments. Check out the tournament database for current meta decks."
+  },
+  "DeckBuilderPage": {
+    "title": "Casket of Tomes",
+    "description": "Genius Invokation TCG deck builder",
+    "invalid_deckcode": "Invalid deckcode",
+    "import_successful": "Imported",
+    "search_query_placeholder": "Search cards name",
+    "invalid_card": "Invalid",
+    "show_invalid_cards": "Show invalid cards",
+    "import_deck": "Import Deck",
+    "importing": "Importing…",
+    "enter_deckcode_placeholder": "Enter deckcode",
+    "open_cards_selection_sidebar": "Cards",
+    "lock_active_cards": "Lock",
+    "unlock_active_cards": "Unlock",
+    "active_cards_locked_successful": "Active cards are locked",
+    "active_cards_unlocked_successful": "Active cards are unlocked",
+    "erase_active_cards": "Clear All",
+    "erase_confirmation": "Triple click the button to clear all",
+    "copied_to_clipboard": "Copied to clipboard",
+    "next_deck_offset_tip": "Double click if the code doesn't work"
   },
   "LeaderboardPage": {
     "title": "GITCG {version} {server} Weekly Tournament Leaderboard",
