@@ -22,6 +22,9 @@ import { XMarkIcon } from "@heroicons/react/24/outline"
 import { DialogBox } from "@/components/DialogBox"
 import { Backdrop } from "@/components/Backdrop"
 import { useLocalStorage } from "@/hooks/storage"
+import { HugeiconsIcon } from "@hugeicons/react";
+import { FilterIcon, FilterRemoveIcon } from "@hugeicons/core-free-icons"
+import { Tooltip } from "@/components/Tooltip"
 
 export function DeckBuilderPageClient ({
   params
@@ -111,9 +114,11 @@ export function DeckBuilderPageClient ({
   const actionCardSearchRef = useRef<HTMLInputElement>(null);
   const [characterRender, setCharacterRender] = useState(0);
   const [actionRender, setActionRender] = useState(0);
+  const [actionSearchQuery, setActionSearchQuery] = useState("");
 
   const [isActiveCardsLocked, setIsActiveCardsLocked] = useLocalStorage("casketIsActiveCardsLocked", false);
   const [selectionCardType, setSelectionCardType] = useState<CardType>("characters");
+  const [isSelectingCards, setIsSelectingCards] = useState(false);
 
   const [activeCharacterCards, setActiveCharacterCards] = useState<{ id: number, cardId: number | null }[]>([
     { id: 1, cardId: null },
@@ -394,10 +399,296 @@ export function DeckBuilderPageClient ({
   )
   const dnd_id = useId();
 
+  const LeftContainer = <div className="flex flex-col gap-3 w-95 prevent_select">
+    <div className="flex gap-2">
+      <input
+        type="search"
+        placeholder="Search cards name"
+        className={selectionCardType === "characters" ? "" : "hidden"}
+        ref={characterCardSearchRef}
+        onChange={() => {
+          clearAllRenderTimeouts();
+          renderTimeouts.current.push(setTimeout(() => setCharacterRender(prev => prev+1), 50));
+        }}
+      />
+      <input
+        type="search"
+        placeholder="Search cards name"
+        className={selectionCardType === "actions" ? "" : "hidden"}
+        value={actionSearchQuery}
+        onChange={(e) => setActionSearchQuery(e.target.value)}
+      />
+      <CustomButton
+        type="icon"
+        buttonText={
+          isFiltering ? <HugeiconsIcon icon={FilterRemoveIcon} color="currentColor" strokeWidth={1.5} size={16}/> : <HugeiconsIcon icon={FilterIcon} color="currentColor" strokeWidth={1.5} size={16}/>
+        }
+        isActive={isFiltering}
+        onClick={() => setIsFiltering(!isFiltering)}
+      />
+    </div>
+    
+    <div className="flex flex-row gap-4 justify-evenly w-full">
+      <div onClick={() => setSelectionCardType("characters")} className={`clickable_text ${selectionCardType === "characters" ? "font-bold highlight" : ""}`}>Character Cards</div>
+      <div onClick={() => setSelectionCardType("actions")} className={`clickable_text ${selectionCardType === "actions" ? "font-bold highlight" : ""}`}>Action Cards</div>
+    </div>
+
+    <div className={`card_selection_container ${selectionCardType === "characters" && !isFiltering ? "flex" : "hidden"}`}>
+      <div>{filteredCharacters.map(c =>
+        <div key={c.id} className={`character_card_image ${isCharacterIncluded(c.id) ? "darkened" : ""} ${!isCharacterIncluded(null) && !isCharacterIncluded(c.id) ? "whitened" : ""}`}>
+          <div
+            className={!isCharacterIncluded(null) && !isCharacterIncluded(c.id) ? "disabled" : ""}
+            onClick={() => isCharacterIncluded(c.id) ? removeCharacterCard(c.id) : addCharacterCard(c.id)}
+          >
+            <CardImage
+              cardType="characters"
+              cardId={c.id}
+              size="medium"
+              borderType="normal"
+              resize={false}
+              localCardsData={localCardsData}
+            />
+          </div>
+          <div>{c.hp}</div>
+          <img src="/game_icons/hp.png" />
+        </div>
+      )}</div>
+    </div>
+    
+    <div className={`card_selection_container ${selectionCardType === "actions" && !isFiltering ? "flex" : "hidden"}`}>
+      <div>{filteredActions.map(c =>
+        <div key={c.id} className={`action_card_image ${isActionMaxed(c.id) ? "darkened" : ""} ${!isActionMaxed(c.id) && isActionSlotFull ? "whitened" : ""}`}>
+          <div 
+            className={!isActionMaxed(c.id) && isActionSlotFull ? "disabled" : ""}
+            onClick={() => isActionMaxed(c.id) ? removeActionCards(c.id, true) : addActionCards(c.id)}>
+            <CardImage
+              cardType="actions"
+              cardId={c.id}
+              size="medium"
+              borderType="normal"
+              resize={false}
+              localCardsData={localCardsData}
+            />
+          </div>
+          <div>{c.cost_num1}</div>
+          <img src={c.cost_type1_icon || costIconUrls.aligned} />
+          {c.cost_type2_icon && <>
+            <div className={c.is_special ? "hidden" : ""}>{c.cost_num2}</div>
+            <img src={c.cost_type2_icon} />
+          </>}
+          {!c.isValid && <div className="ribbon">Invalid</div>}
+          <div className={`preview_button group ${true ? "disabled" : ""}`}>
+            <Eye className="size-3 text-gray-700 group-hover:text-[#AF7637] duration-200 transition-colors" />
+          </div>
+          {(() => {
+            const action = groupedActionCards.find(([id, count]) => id === c.id);
+            return action && <div className="ribbon brown_ribbon">{`${action[1]} / ${c.is_special ? 1 : 2}`}</div>
+          })()}
+        </div>
+      )}</div>
+    </div>
+    
+    <div className={`relative filter_container ${selectionCardType === "characters" && isFiltering ? "" : "hidden"}`}>
+      
+      <div>
+        <div className="filter_category">{term("category.element")}</div>
+        <div className="grid grid-cols-3">
+          {characterTraits.element.map(elem => {
+            return <Checkbox
+              key={elem}
+              className="text-sm"
+              trueCondition = {characterFilter.categories.element.includes(elem)}
+              onClick = {() => handleCharacterFilter("element", elem)}
+            >
+              {term(elem)}
+            </Checkbox>
+          })}
+        </div>
+      </div>
+      <div>
+        <div className="filter_category">{term("category.weapon")}</div>
+        <div className="grid grid-cols-2">
+          {characterTraits.weapon.map(weap => {
+            return <Checkbox
+              key={weap}
+              className="text-sm"
+              trueCondition = {characterFilter.categories.weapon.includes(weap)}
+              onClick = {() => handleCharacterFilter("weapon", weap)}
+            >
+              {term(weap)}
+            </Checkbox>
+          })}
+        </div>
+      </div>
+      <div>
+        <div className="filter_category">{term("category.affiliation")}</div>
+        <div className="grid grid-cols-2">
+          {characterTraits.affiliation.map(affi => {
+            return <Checkbox
+              key={affi}
+              className="text-sm"
+              trueCondition = {characterFilter.categories.affiliation.includes(affi)}
+              onClick = {() => handleCharacterFilter("affiliation", affi)}
+            >
+              {term(affi)}
+            </Checkbox>
+          })}
+        </div>
+      </div>
+      <div>
+        <div className="filter_category">{term("category.hp")}</div>
+        <div className="grid grid-cols-4">
+          {characterTraits.hp.map(_hp => {
+            return <Checkbox
+              key={_hp}
+              className="text-sm"
+              trueCondition = {characterFilter.categories.hp.includes(_hp)}
+              onClick = {() => handleCharacterFilter("hp", _hp)}
+            >
+              {_hp}
+            </Checkbox>
+          })}
+        </div>
+      </div>
+      <div>
+        <div className="filter_category">{term("category.skill_cost")}</div>
+        <div className="grid grid-cols-4">
+          {characterTraits.skill_cost.map(cost => {
+            return <Checkbox
+              key={cost}
+              className="text-sm"
+              trueCondition = {characterFilter.categories.skill_cost.includes(cost)}
+              onClick = {() => handleCharacterFilter("skill_cost", cost)}
+            >
+              {cost}
+            </Checkbox>
+          })}
+        </div>
+      </div>
+
+      <div>
+        <div className="filter_category">Sort</div>
+        <div className="grid grid-cols-1">
+          {characterSortable.map(by => {
+            return <Checkbox
+              key={by}
+              className="text-sm"
+              trueCondition = {characterFilter.sort.by === by}
+              onClick = {() => handleCharacterSort(by, characterFilter.sort.is_ascending)}
+            >
+              {term(`category.${by}`)}
+            </Checkbox>
+          })}
+          
+        </div>
+        <div className="separator_line"></div>
+        <div className="grid grid-cols-2">
+          <Checkbox
+            className="text-sm"
+            trueCondition = {characterFilter.sort.is_ascending}
+            onClick= {() => handleCharacterSort(characterFilter.sort.by, true, true)}
+            disabled={characterFilter.sort.by === null}
+          >Ascending</Checkbox>
+          <Checkbox
+            className="text-sm"
+            trueCondition = {!characterFilter.sort.is_ascending}
+            onClick= {() => handleCharacterSort(characterFilter.sort.by, false, true)}
+            disabled={characterFilter.sort.by === null}
+          >Descending</Checkbox>
+        </div>
+      </div>
+
+    </div>
+
+    <div className={`filter_container ${selectionCardType === "actions" && isFiltering ? "" : "hidden"}`}>
+      <Checkbox className="text-sm" trueCondition={actionFilter.config.show_invalid} onClick={() => handleActionConfig("show_invalid")}>Show invalid cards</Checkbox>
+
+      <div>
+        <div className="filter_category">{term("category.type")}</div>
+        <div className="grid grid-cols-2">
+          {actionTraits.type.map(_type => {
+            return <Checkbox
+              key={_type}
+              className="text-sm"
+              trueCondition = {actionFilter.categories.type.includes(_type)}
+              onClick = {() => handleActionFilter("type", _type)}
+            >
+              {term(_type)}
+            </Checkbox>
+          })}
+        </div>
+      </div>
+      <div>
+        <div className="filter_category">{term("category.tag")}</div>
+        <div className="grid grid-cols-2">
+          {actionTraits.tag.map(_tag => {
+            return <Checkbox
+              key={_tag}
+              className="text-sm"
+              trueCondition = {actionFilter.categories.tag.includes(_tag)}
+              onClick = {() => handleActionFilter("tag", _tag)}
+            >
+              {term(_tag)}
+            </Checkbox>
+          })}
+        </div>
+      </div>
+      <div>
+        <div className="filter_category">{term("category.cost")}</div>
+        <div className="grid grid-cols-4">
+          {actionTraits.cost.map(_cost => {
+            return <Checkbox
+              key={_cost}
+              className="text-sm"
+              trueCondition = {actionFilter.categories.cost.includes(_cost)}
+              onClick = {() => handleActionFilter("cost", _cost)}
+            >
+              {_cost}
+            </Checkbox>
+          })}
+        </div>
+      </div>
+
+      <div>
+        <div className="filter_category">Sort</div>
+        <div className="grid grid-cols-1">
+          {actionSortable.map(by => {
+            return <Checkbox
+              key={by}
+              className="text-sm"
+              trueCondition = {actionFilter.sort.by === by}
+              onClick = {() => handleActionSort(by, actionFilter.sort.is_ascending)}
+            >
+              {term(`category.${by}`)}
+            </Checkbox>
+          })}
+          
+        </div>
+        <div className="separator_line"></div>
+        <div className="grid grid-cols-2">
+          <Checkbox
+            className="text-sm"
+            trueCondition = {actionFilter.sort.is_ascending}
+            onClick= {() => handleActionSort(actionFilter.sort.by, true, true)}
+            disabled={actionFilter.sort.by === null}
+          >Ascending</Checkbox>
+          <Checkbox
+            className="text-sm"
+            trueCondition = {!actionFilter.sort.is_ascending}
+            onClick= {() => handleActionSort(actionFilter.sort.by, false, true)}
+            disabled={actionFilter.sort.by === null}
+          >Descending</Checkbox>
+        </div>
+      </div>
+      
+    </div>
+
+  </div>
+
   return <div className="mx-6 my-6 overflow-hidden">
     <SuccessNotification show={showPopUp} text={popUpContent} type={popUpType} />
 
-    <Backdrop isOpen={isOpenDialog} triggerFn={cancelImportDeck}></Backdrop>
+    <Backdrop isOpen={isOpenDialog} triggerFn={cancelImportDeck}/>
     <DialogBox isOpen={isOpenDialog}>
       <div className="relative flex flex-col gap-4 bg-white rounded-2xl w-100 h-fit p-5 text-center">
         <IconButton className="absolute right-4" onClick={cancelImportDeck}><XMarkIcon/></IconButton>
@@ -430,335 +721,62 @@ export function DeckBuilderPageClient ({
       </div>
     </DialogBox>
 
-    <div className="mb-4 flex flex-row gap-2 justify-between">
-      <div className="flex flex-row gap-2">
-        <CustomButton
-          buttonText="Filter & Sort"
-          textSize="xs"
-          onClick={() => setIsFiltering(!isFiltering)}
-        />
-      </div>
-      <div className="flex flex-row gap-2">
-        <CustomButton
-          buttonText={mounted && isActiveCardsLocked ? "Unlock": "Lock"}
-          textSize="xs"
-          onClick={() => {
-            setIsActiveCardsLocked(!isActiveCardsLocked);
-            triggerPopUp(isActiveCardsLocked ? "Active cards are unlocked" : "Active cards are locked")
-          }}
-        />
-        <CustomButton
-          buttonText="Import"
-          textSize="xs"
-          onClick={() => {
-            setIsOpenDialog(!isOpenDialog);
-            setTimeout(() => importDeckRef.current?.focus(), 0);
-          }}
-        />
-        <CustomButton
-          buttonText="Clear All"
-          textSize="xs"
-          onClick={(e) => {
-            if(e.detail === 1) triggerPopUp("Triple click the button to clear all", "info");
-            if(e.detail === 3) {
-              setActiveCharacterCards(activeCharacterCards.map(c => ({ ...c, cardId: null })))
-              setActiveActionCards([]);
-              setShowPopUp(false);
-            }
-          }}
-        />
-        <CustomButton
-          buttonText="Export"
-          textSize="xs"
-          onClick={(e) => exportDeck(e.detail === 2)}
-        />
-      </div>
+    <Backdrop isOpen={isSelectingCards} triggerFn={() => setIsSelectingCards(false)}/>
+    <div className={`fixed top-0 left-0 h-full py-6 px-4 bg-white z-101 transform transition-transform duration-200 ease-in-out ${isSelectingCards ? "translate-x-0" : "-translate-x-full"}`}>
+      {LeftContainer}
     </div>
 
     <div className="flex flex-wrap gap-5">
-      <div className="flex flex-col gap-3 prevent_select w-95">
-        <input
-          type="search"
-          placeholder="Search cards name"
-          className={selectionCardType === "characters" ? "" : "hidden"}
-          ref={characterCardSearchRef}
-          onChange={() => {
-            clearAllRenderTimeouts();
-            renderTimeouts.current.push(setTimeout(() => setCharacterRender(prev => prev+1), 50));
-          }}
-        />
-        <input
-          type="search"
-          placeholder="Search cards name"
-          className={selectionCardType === "actions" ? "" : "hidden"}
-          ref={actionCardSearchRef}
-          onChange={() => {
-            clearAllRenderTimeouts();
-            renderTimeouts.current.push(setTimeout(() => setActionRender(prev => prev+1), 50));
-          }}
-        />
-        
-        <div className="flex flex-row gap-4 items-center">
-          <div className="flex flex-row gap-4 justify-evenly w-full">
-            <div onClick={() => setSelectionCardType("characters")} className={`clickable_text ${selectionCardType === "characters" ? "font-bold highlight" : ""}`}>Character Cards</div>
-            <div onClick={() => setSelectionCardType("actions")} className={`clickable_text ${selectionCardType === "actions" ? "font-bold highlight" : ""}`}>Action Cards</div>
-          </div>
-          <IconButton className={isFiltering ? "" : "hidden"} onClick={() => setIsFiltering(!isFiltering)}><XMarkIcon/></IconButton>
-        </div>
-
-        <div className={`card_selection_container ${selectionCardType === "characters" && !isFiltering ? "flex" : "hidden"}`}>
-          <div>{filteredCharacters.map(c =>
-            <div key={c.id} className={`character_card_image ${isCharacterIncluded(c.id) ? "darkened" : ""} ${!isCharacterIncluded(null) && !isCharacterIncluded(c.id) ? "whitened" : ""}`}>
-              <div
-                className={!isCharacterIncluded(null) && !isCharacterIncluded(c.id) ? "disabled" : ""}
-                onClick={() => isCharacterIncluded(c.id) ? removeCharacterCard(c.id) : addCharacterCard(c.id)}
-              >
-                <CardImage
-                  cardType="characters"
-                  cardId={c.id}
-                  size="medium"
-                  borderType="normal"
-                  resize={false}
-                  localCardsData={localCardsData}
-                />
-              </div>
-              <div>{c.hp}</div>
-              <img src="/game_icons/hp.png" />
-            </div>
-          )}</div>
-        </div>
-        
-        <div className={`card_selection_container ${selectionCardType === "actions" && !isFiltering ? "flex" : "hidden"}`}>
-          <div>{filteredActions.map(c =>
-            <div key={c.id} className={`action_card_image ${isActionMaxed(c.id) ? "darkened" : ""} ${!isActionMaxed(c.id) && isActionSlotFull ? "whitened" : ""}`}>
-              <div 
-                className={!isActionMaxed(c.id) && isActionSlotFull ? "disabled" : ""}
-                onClick={() => isActionMaxed(c.id) ? removeActionCards(c.id, true) : addActionCards(c.id)}>
-                <CardImage
-                  cardType="actions"
-                  cardId={c.id}
-                  size="medium"
-                  borderType="normal"
-                  resize={false}
-                  localCardsData={localCardsData}
-                />
-              </div>
-              <div>{c.cost_num1}</div>
-              <img src={c.cost_type1_icon || costIconUrls.aligned} />
-              {c.cost_type2_icon && <>
-                <div className={c.is_special ? "hidden" : ""}>{c.cost_num2}</div>
-                <img src={c.cost_type2_icon} />
-              </>}
-              {!c.isValid && <div className="ribbon">Invalid</div>}
-              <div className={`preview_button group ${true ? "disabled" : ""}`}>
-                <Eye className="size-3 text-gray-700 group-hover:text-[#AF7637] duration-200 transition-colors" />
-              </div>
-              {(() => {
-                const action = groupedActionCards.find(([id, count]) => id === c.id);
-                return action && <div className="ribbon brown_ribbon">{`${action[1]} / ${c.is_special ? 1 : 2}`}</div>
-              })()}
-            </div>
-          )}</div>
-        </div>
-        
-        <div className={`relative filter_container ${selectionCardType === "characters" && isFiltering ? "" : "hidden"}`}>
-          
-          <div>
-            <div className="filter_category">{term("category.element")}</div>
-            <div className="grid grid-cols-3">
-              {characterTraits.element.map(elem => {
-                return <Checkbox
-                  key={elem}
-                  className="text-sm"
-                  trueCondition = {characterFilter.categories.element.includes(elem)}
-                  onClick = {() => handleCharacterFilter("element", elem)}
-                >
-                  {term(elem)}
-                </Checkbox>
-              })}
-            </div>
-          </div>
-          <div>
-            <div className="filter_category">{term("category.weapon")}</div>
-            <div className="grid grid-cols-2">
-              {characterTraits.weapon.map(weap => {
-                return <Checkbox
-                  key={weap}
-                  className="text-sm"
-                  trueCondition = {characterFilter.categories.weapon.includes(weap)}
-                  onClick = {() => handleCharacterFilter("weapon", weap)}
-                >
-                  {term(weap)}
-                </Checkbox>
-              })}
-            </div>
-          </div>
-          <div>
-            <div className="filter_category">{term("category.affiliation")}</div>
-            <div className="grid grid-cols-2">
-              {characterTraits.affiliation.map(affi => {
-                return <Checkbox
-                  key={affi}
-                  className="text-sm"
-                  trueCondition = {characterFilter.categories.affiliation.includes(affi)}
-                  onClick = {() => handleCharacterFilter("affiliation", affi)}
-                >
-                  {term(affi)}
-                </Checkbox>
-              })}
-            </div>
-          </div>
-          <div>
-            <div className="filter_category">{term("category.hp")}</div>
-            <div className="grid grid-cols-4">
-              {characterTraits.hp.map(_hp => {
-                return <Checkbox
-                  key={_hp}
-                  className="text-sm"
-                  trueCondition = {characterFilter.categories.hp.includes(_hp)}
-                  onClick = {() => handleCharacterFilter("hp", _hp)}
-                >
-                  {_hp}
-                </Checkbox>
-              })}
-            </div>
-          </div>
-          <div>
-            <div className="filter_category">{term("category.skill_cost")}</div>
-            <div className="grid grid-cols-4">
-              {characterTraits.skill_cost.map(cost => {
-                return <Checkbox
-                  key={cost}
-                  className="text-sm"
-                  trueCondition = {characterFilter.categories.skill_cost.includes(cost)}
-                  onClick = {() => handleCharacterFilter("skill_cost", cost)}
-                >
-                  {cost}
-                </Checkbox>
-              })}
-            </div>
-          </div>
-
-          <div>
-            <div className="filter_category">Sort</div>
-            <div className="grid grid-cols-1">
-              {characterSortable.map(by => {
-                return <Checkbox
-                  key={by}
-                  className="text-sm"
-                  trueCondition = {characterFilter.sort.by === by}
-                  onClick = {() => handleCharacterSort(by, characterFilter.sort.is_ascending)}
-                >
-                  {term(`category.${by}`)}
-                </Checkbox>
-              })}
-              
-            </div>
-            <div className="separator_line"></div>
-            <div className="grid grid-cols-2">
-              <Checkbox
-                className="text-sm"
-                trueCondition = {characterFilter.sort.is_ascending}
-                onClick= {() => handleCharacterSort(characterFilter.sort.by, true, true)}
-                disabled={characterFilter.sort.by === null}
-              >Ascending</Checkbox>
-              <Checkbox
-                className="text-sm"
-                trueCondition = {!characterFilter.sort.is_ascending}
-                onClick= {() => handleCharacterSort(characterFilter.sort.by, false, true)}
-                disabled={characterFilter.sort.by === null}
-              >Descending</Checkbox>
-            </div>
-          </div>
-
-        </div>
-
-        <div className={`filter_container ${selectionCardType === "actions" && isFiltering ? "" : "hidden"}`}>
-          <Checkbox className="text-sm" trueCondition={actionFilter.config.show_invalid} onClick={() => handleActionConfig("show_invalid")}>Show invalid cards</Checkbox>
-
-          <div>
-            <div className="filter_category">{term("category.type")}</div>
-            <div className="grid grid-cols-2">
-              {actionTraits.type.map(_type => {
-                return <Checkbox
-                  key={_type}
-                  className="text-sm"
-                  trueCondition = {actionFilter.categories.type.includes(_type)}
-                  onClick = {() => handleActionFilter("type", _type)}
-                >
-                  {term(_type)}
-                </Checkbox>
-              })}
-            </div>
-          </div>
-          <div>
-            <div className="filter_category">{term("category.tag")}</div>
-            <div className="grid grid-cols-2">
-              {actionTraits.tag.map(_tag => {
-                return <Checkbox
-                  key={_tag}
-                  className="text-sm"
-                  trueCondition = {actionFilter.categories.tag.includes(_tag)}
-                  onClick = {() => handleActionFilter("tag", _tag)}
-                >
-                  {term(_tag)}
-                </Checkbox>
-              })}
-            </div>
-          </div>
-          <div>
-            <div className="filter_category">{term("category.cost")}</div>
-            <div className="grid grid-cols-4">
-              {actionTraits.cost.map(_cost => {
-                return <Checkbox
-                  key={_cost}
-                  className="text-sm"
-                  trueCondition = {actionFilter.categories.cost.includes(_cost)}
-                  onClick = {() => handleActionFilter("cost", _cost)}
-                >
-                  {_cost}
-                </Checkbox>
-              })}
-            </div>
-          </div>
-
-          <div>
-            <div className="filter_category">Sort</div>
-            <div className="grid grid-cols-1">
-              {actionSortable.map(by => {
-                return <Checkbox
-                  key={by}
-                  className="text-sm"
-                  trueCondition = {actionFilter.sort.by === by}
-                  onClick = {() => handleActionSort(by, actionFilter.sort.is_ascending)}
-                >
-                  {term(`category.${by}`)}
-                </Checkbox>
-              })}
-              
-            </div>
-            <div className="separator_line"></div>
-            <div className="grid grid-cols-2">
-              <Checkbox
-                className="text-sm"
-                trueCondition = {actionFilter.sort.is_ascending}
-                onClick= {() => handleActionSort(actionFilter.sort.by, true, true)}
-                disabled={actionFilter.sort.by === null}
-              >Ascending</Checkbox>
-              <Checkbox
-                className="text-sm"
-                trueCondition = {!actionFilter.sort.is_ascending}
-                onClick= {() => handleActionSort(actionFilter.sort.by, false, true)}
-                disabled={actionFilter.sort.by === null}
-              >Descending</Checkbox>
-            </div>
-          </div>
-          
-        </div>
-
-      </div>
+      <div className="left_container">{LeftContainer}</div>
 
       <div className="flex flex-col gap-3 items-center">
+        
+        <div className="flex flex-row gap-2 justify-between w-full">
+          <div className="left_buttons">
+            <CustomButton
+              buttonText="Cards"
+              textSize="xs"
+              onClick={() => setIsSelectingCards(true)}
+            />
+          </div>
+          <div className="flex flex-row gap-2 justify-end">
+            <CustomButton
+              buttonText={mounted && isActiveCardsLocked ? "Unlock": "Lock"}
+              textSize="xs"
+              onClick={() => {
+                setIsActiveCardsLocked(!isActiveCardsLocked);
+                triggerPopUp(isActiveCardsLocked ? "Active cards are unlocked" : "Active cards are locked")
+              }}
+            />
+            <CustomButton
+              buttonText="Import"
+              textSize="xs"
+              onClick={() => {
+                setIsOpenDialog(!isOpenDialog);
+                setTimeout(() => importDeckRef.current?.focus(), 0);
+              }}
+            />
+            <CustomButton
+              buttonText="Clear All"
+              textSize="xs"
+              onClick={(e) => {
+                if(e.detail === 1) triggerPopUp("Triple click the button to clear all", "info");
+                if(e.detail === 3) {
+                  setActiveCharacterCards(activeCharacterCards.map(c => ({ ...c, cardId: null })))
+                  setActiveActionCards([]);
+                  setShowPopUp(false);
+                }
+              }}
+            />
+            <CustomButton
+              buttonText="Export"
+              textSize="xs"
+              onClick={(e) => exportDeck(e.detail === 2)}
+            />
+          </div>
+        </div>
+        
+
         <div className="font-semibold">Active Lineup</div>
         <div className="border-1 border-gray-300 rounded-xl w-full flex justify-center prevent_select">
           <DndContext id={dnd_id} collisionDetection={closestCorners} onDragEnd={handleDragEnd} sensors={sensors}>

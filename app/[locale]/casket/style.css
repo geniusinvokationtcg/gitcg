@@ -1,5 +1,19 @@
 @import "tailwindcss";
 
+.left_container {
+  @media (width < 1270px) {
+    display: none;
+  }
+}
+
+.left_buttons {
+  @apply flex flex-row gap-2;
+  @media (width >= 1270px) {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
 .character_card_image, .action_card_image {
   position: relative;
 }
@@ -47,7 +61,7 @@
   @apply py-4 px-2
 }
 .card_selection_container, .filter_container {
-  @apply border-1 border-gray-300 rounded-xl w-95 h-[63.8vh] max-h-171 overflow-y-auto justify-center;
+  @apply border-1 border-gray-300 rounded-xl w-95 h-[70vh] max-h-171 overflow-y-auto justify-center;
 }
 .card_selection_container > :first-child {
   @apply grid grid-cols-4 justify-center gap-2 gap-y-3 h-fit;

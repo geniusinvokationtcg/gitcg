@@ -12,6 +12,13 @@
   --foreground: #171717;
 }
 
+/*color palette
+[#fffaee]
+[#F8E9C5] navbar bg
+[#d8aa76]
+[#AF7637] highlight
+*/
+
 /*@media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;

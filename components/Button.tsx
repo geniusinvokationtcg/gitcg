@@ -7,22 +7,32 @@ export function CustomButton({
   buttonText,
   onClick,
   textSize = "sm",
-  disabled = false
+  disabled = false,
+  type = "text",
+  isActive = false
 }: {
-  buttonText: string;
+  buttonText: string | ReactNode;
   onClick?: (...args: any[]) => any
   textSize?: string;
-  disabled?: boolean
+  disabled?: boolean;
+  type?: "text" | "icon";
+  isActive?: boolean
 }) {
+  let typeDependentClassName = "";
+  switch(type) {
+    case "text": typeDependentClassName = "px-4"; break;
+    case "icon": typeDependentClassName = "px-2"; break;
+  }
+
   return <Button as="div"
     onClick={(e) => {if(onClick && !disabled) onClick(e)}}
     className={
-      `inline-flex justify-center items-center px-4 py-2 text-${textSize} bg-white border rounded-sm 
-      transition-all duration-200 ease-in-out
-      ${disabled ? "border-gray-200 text-gray-400 pointer-events-none" : `
-        border-gray-300 text-gray-900
-        hover:bg-gray-50 hover:border-gray-500 hover:shadow-md
-      `}
+      `inline-flex justify-center items-center ${typeDependentClassName} py-2 text-${textSize} border rounded-sm 
+      transition-all duration-200 ease-in-out text-gray-900 bg-white
+      ${isActive ? "border-gray-500" : "border-gray-300"}
+      ${disabled ? "opacity-50 pointer-events-none" :
+        `${isActive ? "hover:border-gray-900" : "hover:border-gray-500"} hover:bg-gray-50 hover:shadow-md`
+      }
       cursor-pointer prevent_select`
     }
   >
