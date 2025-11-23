@@ -1,5 +1,5 @@
 export function Tooltip({ children, content, position }: { children: React.ReactNode; content: React.ReactNode, position?: string }) {
-  let positionCSS: string = ""
+  let positionCSS = ""
   switch(position){
     case "left":
       positionCSS = "right-full top-1/2 mr-2 -translate-y-1/2"
@@ -17,7 +17,7 @@ export function Tooltip({ children, content, position }: { children: React.React
   return (
     <div className="relative group inline-block">
       {children}
-      <div className={`${positionCSS} absolute hidden rounded-sm bg-white border-1 border-gray-200 text-sm p-2 group-hover:block z-100`}>
+      <div className={`${positionCSS} absolute hidden rounded-sm bg-white border-1 border-gray-200 text-xs p-2 group-hover:block z-100`}>
         {content}
       </div>
     </div>

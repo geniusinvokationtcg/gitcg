@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 export function useCopiedPopUp () {
   const [showNotification, setShowNotification] = useState<boolean>(false);
@@ -12,12 +12,19 @@ export function useCopiedPopUp () {
   return { showNotification, setShowNotification, copiedPopUpTrigger }
 }
 
-export function useShowPopUp () {
-  const [showNotification, setShowNotification] = useState<boolean>(false);
-  const popUpTrigger = (timeout?: number) => {
-    setShowNotification(true);
-    setTimeout(() => setShowNotification(false), timeout || 2000);
+export function usePopUp () {
+  const timeouts = useRef<any[]>([]);
+  const clearAllTimeouts = () => {
+    timeouts.current.forEach(timeout => clearTimeout(timeout));
+    timeouts.current = [];
   }
 
-  return { showNotification, setShowNotification, popUpTrigger }
+  const [showPopUp, setShowPopUp] = useState<boolean>(false);
+  const triggerPopUp = (timeout?: number) => {
+    clearAllTimeouts();
+    setShowPopUp(true);
+    timeouts.current.push(setTimeout(() => setShowPopUp(false), timeout || 2000));
+  }
+
+  return [triggerPopUp, showPopUp, setShowPopUp, timeouts] as const;
 }

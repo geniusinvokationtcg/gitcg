@@ -1,7 +1,6 @@
 import cardsData from "@/cards.json";
-import talents from "./talents.json";
 import { Maybe, SuccessResult, ErrorResult, Elements, Tuple } from "@/utils/types"
-import { isArcaneLegend } from "./cards";
+import { isArcaneLegend, elementResonance, tribeResonance, getElement, talents } from "./cards";
 
 const scrambling = [
 	[0, 1, 4],
@@ -39,7 +38,31 @@ const scrambling = [
 	[94, 95, 98],
 ]
 
-export function decode(code: string, output?: "name" | "id" | "code"): Maybe<number[] | string[]> {
+export function encode(deck: number[], offset: number = 0): string {
+	let unscrambled = deck.map(d => d.toString(16).padStart(3, '0'));
+	let scrambled: string[] = [];
+
+	for (let i = 0; i < scrambling.length; i++) {
+		scrambling[i].forEach((s, j) => {
+			scrambled[s] = unscrambled[i][j];
+		})
+	}
+
+	scrambled.push("0", "0", "0");
+
+	let bytes = [];
+	for (let i = 0; i < scrambled.length; i += 2) {
+		let byte = scrambled[i] + scrambled[i + 1];
+		bytes.push(byte);
+	}
+
+	let hex_code = hex_offset(bytes, offset).join("");
+	let buffer = Buffer.from(hex_code, 'hex');
+	let code = buffer.toString('base64');
+	return code;
+}
+
+export function decode(code: string, output?: "name" | "id" | "code", bypassError: boolean = false): Maybe<number[] | string[]> {
 	if(!output) output = "code";
   let buffer = Buffer.from(code, 'base64');
 	let hex_code = buffer.toString('hex');
@@ -60,12 +83,12 @@ export function decode(code: string, output?: "name" | "id" | "code"): Maybe<num
 		unscrambled.push(scrambling[i].map(s => scrambled[s]).join(""));
 	}
 
-	if (unscrambled.length !== 33) return ErrorResult("This is not a valid deck code");
+	if (unscrambled.length !== 33 && !bypassError) return ErrorResult("This is not a valid deck code");
 
 	Cards.refresh();
 
 	let deck: number[] = unscrambled.map(s => parseInt(s, 16));
-	if(!deck.some(s => Cards.codes.find(c => c.code === s))) return ErrorResult("This deckcode contains nonexisting cards");
+	if(!deck.some(s => Cards.codes.find(c => c.code === s)) && !bypassError) return ErrorResult("This deckcode contains nonexisting cards");
 	
 	if(output === "code") return SuccessResult(deck);
 
@@ -73,7 +96,7 @@ export function decode(code: string, output?: "name" | "id" | "code"): Maybe<num
 	if(output === "name") nonCode = deck.map(s => Cards.codes.find(c => c.code === s)?.[output]);
 	if(output === "id") nonCode = deck.map(s => Cards.codes.find(c => c.code === s)?.[output]);
 
-	if(nonCode.includes(undefined)) return ErrorResult("This deckcode contains nonexisting cards");
+	if(nonCode.includes(undefined) && !bypassError) return ErrorResult("This deckcode contains nonexisting cards");
 	return SuccessResult(nonCode as number[] | string[]);
 }
 
@@ -197,94 +220,9 @@ export function isValidDeckcode(deckcode: string): { result: boolean; reason: st
 	return {result: true, reason: "OK"}
 }
 
-const elementResonance: {
-	element: Elements,
-	card_id: number[]
-}[] = [
-	{
-		element: "cryo",
-		card_id: [331101, 331102]
-	},
-	{
-		element: "hydro",
-		card_id: [331201, 331202]
-	},
-	{
-		element: "pyro",
-		card_id: [331301, 331302]
-	},
-	{
-		element: "electro",
-		card_id: [331401, 331402]
-	},
-	{
-		element: "anemo",
-		card_id: [331501, 331502]
-	},
-	{
-		element: "geo",
-		card_id: [331601, 331602]
-	},
-	{
-		element: "dendro",
-		card_id: [331701, 331702]
-	}
-]
-
-const tribeResonance: {
-	tribe: string,
-	card_id: number[]
-}[] = [
-	{
-		tribe: "Mondstadt",
-		card_id: [331801]
-	},
-	{
-		tribe: "Liyue",
-		card_id: [331802]
-	},
-	{
-		tribe: "Inazuma",
-		card_id: [331803]
-	},
-	{
-		tribe: "Sumeru",
-		card_id: [331804]
-	},
-	{
-		tribe: "Fontaine",
-		card_id: [331805]
-	},
-	{
-		tribe: "Natlan",
-		card_id: [331806]
-	},
-	{
-		tribe: "Monster",
-		card_id: [332015]
-	},
-	{
-		tribe: "Fatui",
-		card_id: [332016]
-	}
-]
-
 interface Talent {
 	character_id: number
 	character_name: string
 	talent_id: number
 	talent_name: string
-}
-
-function getElement(code: number): Elements | undefined {
-	switch(code){
-		case 301: return "cryo"
-		case 302: return "hydro"
-		case 303: return "pyro"
-		case 304: return "electro"
-		case 305: return "geo"
-		case 306: return "dendro"
-		case 307: return "anemo"
-		default: return
-	}
 }

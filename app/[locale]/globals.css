@@ -1,9 +1,23 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "HYWenHei";
+  font-style: normal;
+  font-weight: normal;
+  src: local("HYWenHei"), url("@/fonts/HYWenHei.woff") format("woff");
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
+
+/*color palette
+[#fffaee]
+[#F8E9C5] navbar bg
+[#d8aa76]
+[#AF7637] highlight
+*/
 
 /*@media (prefers-color-scheme: dark) {
   :root {
@@ -19,9 +33,31 @@ body {
   @apply text-base;
 }
 
+.hidden_scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hidden_scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.genshin_font {
+  font-family: "HYWenHei";
+}
+
+.text_outline {
+  -webkit-text-stroke: 0.3px black;
+}
+
 .monospaced {
   font-family: "Courier New", "Courier", monospace;
 }
+
+.prevent_select {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+} 
 
 .icon_hover_bg {
   display: inline-flex;
@@ -42,14 +78,28 @@ body {
   background-color: #e5e7eb;
 }
 
+.icon_button
+
 .icon_hover > svg {
   transition: all 200ms ease;
   cursor: pointer;
   width: 16px;
   height: 16px;
 }
-.icon_hover > svg:hover {
+.icon_hover > svg:hover,
+.highlight,
+.clickable_text:hover,
+svg.icon_hover:hover {
   color: #AF7637;
+}
+
+svg.icon_hover {
+  transition: all 200ms ease;
+  cursor: pointer;
+}
+
+.clickable_text {
+  @apply underline transition-colors duration-200 cursor-pointer ease-in-out
 }
 
 a.inline {
@@ -234,7 +284,7 @@ select {
     width: 100px;
   }
 }
-.card_image_large > img:first-child {
+.card_image_large > img:first-child:not(.null) {
   position: absolute;
   width: 98%;
   padding: 3px 1px;
@@ -257,7 +307,7 @@ select {
     width: 55px;
   }
 }
-.card_image_medium > img:first-child {
+.card_image_medium > img:first-child:not(.null) {
   position: absolute;
   width: 98%;
   padding: 2px 0.5px;
@@ -282,7 +332,7 @@ select {
     height: 68.6px;
   }
 }
-.card_image_small > img:first-child {
+.card_image_small > img:first-child:not(.null) {
   position: absolute;
   width: 97%;
   padding: 1.5px 0.4px;
@@ -294,6 +344,13 @@ select {
   width: 50px;
   z-index: 10;
   pointer-events: none;
+}
+.card_image_large > img:first-child.null,
+.card_image_medium > img:first-child.null,
+.card_image_small > img:first-child.null {
+  position: absolute;
+  object-fit: contain;
+  z-index: 0;
 }
 
 .stat_showcase {

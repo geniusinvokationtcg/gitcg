@@ -9,6 +9,8 @@ export type Maybe<T> = { data: null; error: Error } | { data: T; error: null };
 export const ErrorResult = ((str: string) => { return { data: null, error: new Error(str) } });
 export const SuccessResult = <T>(data: T) => { return { data, error: null } };
 
+export type PopUpType = "success" | "info" | "error";
+
 export type Server = "all" | ServerPure;
 export type ServerPure = "na" | "eu" | "as";
 
@@ -161,7 +163,7 @@ export interface MajorPlayer {
 
 export type Seeding = [number, number][];
 
-interface CharacterCard {
+export interface CharacterCard {
   id: number
   name: string
   element_type: number
@@ -179,10 +181,10 @@ interface CharacterCard {
   }[]
   weapon: string
   belongs: string[]
-  hp: number | string
+  hp: string
   resource: string
 }
-interface ActionCard {
+export interface ActionCard {
   id: number
   name: string
   content: string
@@ -196,7 +198,7 @@ interface ActionCard {
   resource: string
   is_special: boolean
 }
-interface CardCode {
+export interface CardCode {
   name: string
   id: number
   code: number

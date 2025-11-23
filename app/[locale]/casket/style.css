@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+.left_container_children {
+  @apply flex flex-col gap-3 w-95;
+}
+.left_container {
+  @media (width < 1270px) {
+    display: none;
+  }
+}
+.left_container_sidebar {
+  @media (width >= 1270px) {
+    display: none;
+  }
+}
+
+.active_character_container {
+  @apply grid grid-cols-3 gap-16 p-4;
+}
+.active_action_container {
+  @apply border-1 border-gray-300 rounded-xl w-201 h-102 flex justify-center;
+}
+.active_action_container > :first-child {
+  @apply grid grid-cols-10 gap-2 h-fit p-4;
+}
+@media (540px <= width < 870px) {
+  .active_action_container {
+    width: 492px;
+    height: 666px;
+  }
+  .active_action_container > :first-child {
+    @apply grid-cols-6;
+  }
+}
+@media (width < 540px) {
+  .active_character_container {
+    @apply gap-4;
+  }
+}
+@media (462px <= width < 540px) {
+  .active_action_container {
+    width: 414px;
+    height: 794px;
+  }
+  .active_action_container > :first-child {
+    @apply grid-cols-5;
+  }
+}
+@media (width < 462px) {
+  .active_action_container {
+    width: 100%; /*336px*/
+    height: 1051px;
+  }
+  .active_action_container > :first-child {
+    @apply grid-cols-4;
+  }
+}
+
+.left_buttons {
+  @apply flex flex-row gap-1 h-fit;
+  @media (width >= 1270px) {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.character_card_image, .action_card_image {
+  position: relative;
+}
+.character_card_image > :first-child:not(.disabled), .action_card_image > :first-child:not(.disabled) {
+  cursor: pointer;
+}
+.character_card_image > :first-child.disabled, .action_card_image > :first-child.disabled {
+  cursor: default;
+}
+.character_card_image > :nth-child(2):not(.preview_button), .action_card_image > :nth-child(2):not(.ribbon):not(.preview_button) {
+  @apply absolute z-12 -top-0.25 -left-0.5 min-w-5 text-center text-white items-end pointer-events-none;
+  font-family: "HYWenHei";
+  -webkit-text-stroke: 0.3px black;
+  text-shadow: 0.5px 0.5px 0 black;
+}
+.character_card_image > :nth-child(3):not(.preview_button), .action_card_image > :nth-child(3):not(.ribbon):not(.preview_button) {
+  @apply absolute size-8 z-11 -top-1.5 -left-2 pointer-events-none
+}
+.action_card_image > :nth-child(4):not(.ribbon):not(.preview_button) {
+  @apply absolute z-12 top-7.75 -left-0.5 min-w-5 text-center text-white items-end pointer-events-none;
+  font-family: "HYWenHei";
+  -webkit-text-stroke: 0.3px black;
+  text-shadow: 0.3px 0.3px 0 black;
+}
+.action_card_image > :nth-child(5):not(.ribbon):not(.preview_button) {
+  @apply absolute size-8 z-11 top-6.5 -left-2 pointer-events-none
+}
+.action_card_image > .preview_button {
+  @apply absolute z-12 -top-0.25 -right-0.25 cursor-pointer w-5 h-5 justify-center items-center bg-gray-100 border-1 rounded-[50%] transition-colors duration-200;
+}
+.action_card_image > .preview_button:not(.disabled) {
+  @apply flex;
+}
+.action_card_image > .preview_button.disabled {
+  @apply hidden;
+}
+.action_card_image > .preview_button:hover {
+  @apply border-[#AF7637] text-[#AF7637] bg-[#fff9eb];
+}
+
+.filter_container {
+  @apply py-2
+}
+.card_selection_container {
+  @apply py-4 px-2
+}
+.card_selection_container, .filter_container {
+  @apply border-1 border-gray-300 rounded-xl w-95 max-h-171 overflow-y-auto justify-center;
+  height: 70vh;
+  @media (width < 1270px) {
+    height: calc(100vh - 48px - 24px - 16px - 34px - 24px - 24px);
+    max-height: none;
+  }
+}
+.card_selection_container > :first-child {
+  @apply grid grid-cols-4 justify-center gap-2 gap-y-3 h-fit;
+}
+@media (width < 412px) {
+  .left_container_children, .card_selection_container, .filter_container {
+    @apply w-73;
+  }
+  .card_selection_container > :first-child {
+    @apply grid-cols-3;
+  }
+}
+
+.filter_category {
+  @apply mx-4 font-semibold;
+}
+.separator_line {
+  @apply border-t-1 border-gray-300 my-1 mx-4;
+}
+
+.action_card_image > .ribbon {
+  @apply absolute bottom-1/10 z-15 bg-red-500 text-center w-full text-white text-[12px] pointer-events-none;
+  font-family: "HYWenHei";
+}
+
+.darkened > :not(.ribbon) {
+  filter: brightness(60%);
+}
+.whitened {
+  filter: opacity(70%)
+}
+
+.brown_ribbon {
+  background-color: #AF7637 !important;
+  filter: brightness(100%) opacity(100%) !important;
+}
+
+input {
+  @apply border-1 border-gray-300 bg-white rounded-sm w-full px-3 mx-auto text-sm text-gray-900 transition-all duration-200 ease-in-out py-1.5;
+  @apply hover:border-gray-500 focus:border-gray-500 focus:outline-none focus:ring-gray-500 hover:shadow-md focus:shadow-md;
+}

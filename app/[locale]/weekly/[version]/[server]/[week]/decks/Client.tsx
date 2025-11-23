@@ -1,6 +1,6 @@
 "use client"
 
-import { CsvPasteRow, CsvPasteRowClient, DuelistRecord, Tuple } from "@/utils/types";
+import { CsvPasteRowClient, DuelistRecord, Tuple } from "@/utils/types";
 import { DecklistDumpPageParams } from "./page";
 import { useState } from "react";
 import { decodeAndSortActionCards, isValidDeckcode } from "@/utils/decoder";

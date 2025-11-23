@@ -18,7 +18,7 @@ import { decodeAndSortActionCards } from "@/utils/decoder";
 import { CustomButton } from "@/components/Button";
 import { SuccessNotification } from "@/components/PopUp";
 import { Tooltip } from "@/components/Tooltip";
-import { useShowPopUp } from "@/hooks/utilities";
+import { usePopUp } from "@/hooks/utilities";
 import { getCardName } from "@/utils/cards";
 import { useLocalCardsData } from "@/hooks/useLocalCardsData";
 import { useLocalStorage } from "@/hooks/storage";
@@ -42,7 +42,7 @@ export function LeaderboardPageClient ({ params }: { params: LeaderboardPagePara
 
   const {sortKey, sortAsc, handleSort} = useSortTable<PlayerLeaderboardDataExtended>()
 
-  const { showNotification, popUpTrigger } = useShowPopUp()
+  const [popUpTrigger, showNotification] = usePopUp()
 
   const [enablePreview, setEnablePreview] = useLocalStorage<boolean>("leaderboardDeckPreview", false)
   

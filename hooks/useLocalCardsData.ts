@@ -5,9 +5,9 @@ import defaultCardsData from "@/cards.json"
 import { CardsDataType } from "@/utils/types"
 
 export function useLocalCardsData (locale?: string) {
-  switch(locale){
-    case "id": locale = "en"
-  }
+  // switch(locale){
+  //   case "id": locale = "en"
+  // }
   
   const [cardsData, setCardsData] = useState<CardsDataType>({
     characters: [],
