@@ -37,7 +37,7 @@
     @apply gap-4;
   }
 }
-@media (462px <= width < 540px) {
+@media (480px <= width < 540px) {
   .active_action_container {
     width: 414px;
     height: 794px;
@@ -46,7 +46,7 @@
     @apply grid-cols-5;
   }
 }
-@media (width < 462px) {
+@media (width < 480px) {
   .active_action_container {
     width: 100%; /*336px*/
     height: 1051px;
