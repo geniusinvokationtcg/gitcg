@@ -114,7 +114,7 @@
   },
   "DeckBuilderPage": {
     "title": "Casket of Tomes",
-    "description": "Pembuat dek Genius Invokation TCG",
+    "description": "Penyusun dek Genius Invokation TCG",
     "invalid_deckcode": "Kode tidak sah",
     "import_successful": "Berhasil mengimpor",
     "search_query_placeholder": "Cari nama kartu",

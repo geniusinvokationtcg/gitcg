@@ -8,7 +8,7 @@
     "copy_deckcode": "复制牌组码",
     "show_deckcode": "显示牌组码",
     "hide_deckcode": "隐藏牌组码",
-    "open_in_deck_builder": "打开构筑",
+    "open_in_deck_builder": "打开构筑器",
     "copied": "已复制",
     "no_data": "皮塔翻遍数据库，啥也没找到！",
     "not_found": "皮塔晕头转向没找到这个网址！<br></br>它可能溜走了，先回<home>主页</home>歇歇吧~",
@@ -96,7 +96,7 @@
   "Navbar": {
     "menu": "菜单",
     "weekly_statistic": "周赛数据",
-    "deck_builder": "牌组构筑",
+    "deck_builder": "牌组构筑器",
     "leaderboard": "排行榜",
     "tournament_data": "赛事数据",
     "weekly": "周赛",
