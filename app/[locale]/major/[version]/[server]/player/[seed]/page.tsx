@@ -17,7 +17,6 @@ import { getWinner, getPlayer, getRoundNameKey } from "@/utils/major";
 import { decodeAndSortActionCards } from "@/utils/decoder";
 import { handleCopy } from "@/utils/clipboard";
 import { percentize } from "@/utils/formatting";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 
 export default function MajorPlayerDetail ({ params }: { params: Promise<{ locale: Locales; version: string; server: ServerPure; seed: number }> }) {
   const { locale, version, server } = use(params);
@@ -204,7 +203,7 @@ export default function MajorPlayerDetail ({ params }: { params: Promise<{ local
     { showDeckcode && <div className={"mx-3 mt-1.5 text-center monospaced select-all break-all"}>
       {decklists[deckIndex].deckcode}
     </div> }
-    <div className="px-3 pt-1.5 flex justify-center mx-auto gap-1.5">
+    <div className="px-3 pt-1.5 flex flex-wrap justify-center mx-auto gap-1.5">
       <CustomButton
         buttonText={g("copy_deckcode")}
         onClick={() => handleCopy(decklists[deckIndex].deckcode, copiedPopUpTrigger)}
@@ -214,6 +213,10 @@ export default function MajorPlayerDetail ({ params }: { params: Promise<{ local
         onClick={() => setShowDeckcode(!showDeckcode)}
       />
       <SuccessNotification show={showNotification} text={g("copied")} />
+      <CustomButton
+        buttonText={g("open_in_deck_builder")}
+        onClick={() => window.open(`/casket/?q=${decklists[deckIndex].deckcode}`, "_blank")}
+      />
     </div>
   </div>
 }

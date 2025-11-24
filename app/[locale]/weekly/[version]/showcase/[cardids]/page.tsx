@@ -233,7 +233,7 @@ export default function DeckShowcasePage({ params }: { params: Promise<{ locale:
     { showDeckcode && <div className={"mx-3 mt-1.5 text-center monospaced select-all break-all"}>
       {deckcode}
     </div> }
-    <div className="px-3 pt-1.5 flex justify-center mx-auto gap-1.5">
+    <div className="px-3 pt-1.5 flex flex-wrap justify-center mx-auto gap-1.5">
       <CustomButton
         buttonText={g("copy_deckcode")}
         onClick={() => handleCopy(deckcode, copiedPopUpTrigger)}
@@ -243,12 +243,10 @@ export default function DeckShowcasePage({ params }: { params: Promise<{ locale:
         onClick={() => setShowDeckcode(!showDeckcode)}
       />
       <SuccessNotification show={showNotification} text={g("copied")} />
-      <span className="hidden">
-        <CustomButton
-          buttonText="Open in deck builder"
-          onClick={() => { window.open(`/${locale}/deck-builder/${deckcode}`, '_blank', 'noopener,noreferrer') }}
-        />
-      </span>
+      <CustomButton
+        buttonText={g("open_in_deck_builder")}
+        onClick={() => window.open(`/casket/?q=${deckcode}`, "_blank")}
+      />
     </div>
     <div className="deck_showcase_padding section_title">{g("matchups")}</div>
     <div className="deck_showcase_padding dropdowns_container gap-2">

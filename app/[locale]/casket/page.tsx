@@ -7,10 +7,11 @@ import { Metadata } from "next";
 export interface DeckBuilderPageParams {
   locale: Locales
 }
+export interface DeckBuilderPageSearchParams {
+  q?: string //import deckcode
+}
 
-export async function generateMetadata ({ params }: { params: Promise<DeckBuilderPageParams> }): Promise<Metadata> {
-  const { locale } = await params;
-
+export async function generateMetadata (): Promise<Metadata> {
   const t = await getTranslations("DeckBuilderPage");
 
   const metadata = {
@@ -21,11 +22,9 @@ export async function generateMetadata ({ params }: { params: Promise<DeckBuilde
   return {...metadata, openGraph: metadata, twitter: metadata}
 }
 
-export default async function DeckBuilderPage ({ params }: { params: Promise<DeckBuilderPageParams> }) {
+export default async function DeckBuilderPage ({ params, searchParams }: { params: Promise<DeckBuilderPageParams>; searchParams: Promise<DeckBuilderPageSearchParams> }) {
   const p = await params;
-  const { locale } = p;
-
-  let localCardsData = await getLocalCardsData(locale);
-
-  return <DeckBuilderPageClient params={p} />
+  const q = await searchParams;
+  
+  return <DeckBuilderPageClient params={p} searchParams={q} />
 }

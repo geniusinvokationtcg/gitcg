@@ -1,7 +1,7 @@
 'use client'
 
 import "./style.css"
-import { DeckBuilderPageParams } from "./page"
+import { DeckBuilderPageParams, DeckBuilderPageSearchParams } from "./page"
 import { CardImage } from "@/components/CardImage"
 import { ReactNode, useCallback, useEffect, useId, useMemo, useRef, useState } from "react"
 import { useLocalCardsData } from "@/hooks/useLocalCardsData"
@@ -24,16 +24,21 @@ import { Backdrop } from "@/components/Backdrop"
 import { useLocalStorage } from "@/hooks/storage"
 import { HugeiconsIcon } from "@hugeicons/react";
 import { FilterIcon, FilterRemoveIcon } from "@hugeicons/core-free-icons"
+import { usePathname, useRouter } from "next/navigation"
 
 export function DeckBuilderPageClient ({
-  params
+  params, searchParams
 }: {
   params: DeckBuilderPageParams;
+  searchParams: DeckBuilderPageSearchParams;
 }) {
   const { locale } = params
 
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
+
+  const router = useRouter();
+  const pathname = usePathname();
 
   //NEXT-INTL
   const g = useTranslations("General");
@@ -72,11 +77,19 @@ export function DeckBuilderPageClient ({
       return;
     }
 
-    let characters = (decoded.data.slice(0, 3) as (number | undefined)[]).map((id, i, arr) =>
+    writeImport(decoded.data as number[]);
+
+    setIsOpenDialog(false);
+    setIsImporting(false);
+    triggerPopUp(t("import_successful"));
+    
+  }
+  const writeImport = (decodedData: (number | undefined)[]) => {
+    let characters = (decodedData.slice(0, 3) as (number | undefined)[]).map((id, i, arr) =>
       codes.find(c => c.id === id)?.type === "character" &&
       !arr.slice(0, i).includes(id) //check duplicate
       ? id : null);
-    let actions = (decoded.data.slice(0, 33) as number[]).filter(id => codes.find(c => c.id === id)?.type === "action");
+    let actions = (decodedData.slice(0, 33) as number[]).filter(id => codes.find(c => c.id === id)?.type === "action");
     //slice starts from 0 instead of 3 in case of characters actual length < 3
     
     const groupedActions: Map<number, number> = new Map();
@@ -95,11 +108,6 @@ export function DeckBuilderPageClient ({
       return {...c, cardId: characters[i] ?? null}
     }));
     setActiveActionCards(actions);
-
-    setIsOpenDialog(false);
-    setIsImporting(false);
-    triggerPopUp(t("import_successful"));
-    
   }
   const cancelImportDeck = () => {
     if(!isImporting) setIsOpenDialog(false);
@@ -390,6 +398,14 @@ export function DeckBuilderPageClient ({
     useSensor(PointerSensor, activationConstraint), useSensor(TouchSensor, activationConstraint)
   )
   const dnd_id = useId();
+
+  useEffect(() => {
+    if(!searchParams.q) return;
+    const decoded = decodeDeck(searchParams.q.replaceAll(" ", "+"), "id", true);
+    if(decoded.error) return;
+    writeImport(decoded.data as number[]);
+    router.replace(pathname);
+  }, [codes])
 
   const LeftContainer = <div className="left_container_children prevent_select">
     <div className="flex gap-2">

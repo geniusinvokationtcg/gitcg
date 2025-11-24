@@ -108,6 +108,10 @@ export function DecklistDumpPageClient ({ params, csvPaste, duelistRecord, isAdm
             buttonText={showDeckcode ? g("hide_deckcode") : g("show_deckcode")}
             onClick={() => setShowDeckcode(!showDeckcode)}
           />
+          <CustomButton
+            buttonText={g("open_in_deck_builder")}
+            onClick={() => window.open(`/casket/?q=${view.deckcode}`, "_blank")}
+          />
         </div>
       </>
     })()}
