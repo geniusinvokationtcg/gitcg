@@ -5,6 +5,11 @@
   ],
   "major": [
     {
+      "version": "6-1",
+      "server": ["as"],
+      "start": 1764500400
+    },
+    {
       "version": "6-0",
       "server": ["na"]
     },
@@ -78,6 +83,22 @@
         "en": "Luna V",
         "id": "Candra V",
         "zh-cn": "月之五"
+      }
+    },
+    {
+      "version": "6-5",
+      "label": {
+        "en": "Luna VI",
+        "id": "Candra VI",
+        "zh-cn": "月之六"
+      }
+    },
+    {
+      "version": "6-6",
+      "label": {
+        "en": "Luna VII",
+        "id": "Candra VII",
+        "zh-cn": "月之七"
       }
     }
   ]

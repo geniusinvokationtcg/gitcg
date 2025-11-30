@@ -31,7 +31,7 @@ export default function MajorMatchDetail ({ params }: { params: Promise<{ locale
   const serverList = useTranslatedServers();
   const serverName = serverList.find(s => s.value === server)?.label || server.toUpperCase();
 
-  const { data, isLoading, error } = useMajorData(version, server);
+  const { data, isLoading, error } = useMajorData(version, server, gameVersion.latest === version);
   if(isLoading) return;
   if(!data) return <p>Something went wrong: {error ? error.message : "Unknown error"}</p>
 

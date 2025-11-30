@@ -3,40 +3,21 @@
 import { useEffect, useState } from "react";
 import { MajorData } from "@/utils/types";
 import { ServerPure } from "@/utils/types";
+import { useQuery } from "@tanstack/react-query";
 
-export function useMajorData (version: string, server: ServerPure) {
-  const [data, setData] = useState<MajorData | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<Error | null>(null);
+const MAJOR_DATA_API = "https://script.google.com/macros/s/AKfycbxajfQ2Ncu8jSxh_ok_mlWvhy_HokptJBC6Huklm0HpLqNszNcWTELHvcHqdrhjEvUahA/exec";
+
+export function useMajorData (version: string, server: ServerPure, isLive: boolean) {
+  const majorDataQuery = useQuery({
+    queryKey: [`major_${version}_${server}`],
+    queryFn: async () => {
+      const res = await fetch(isLive ? MAJOR_DATA_API : `/major/${version}/${server}.json`);
+      const json = await res.json();
+      return (isLive ? json.data : json) as MajorData | null
+    },
+    refetchInterval: isLive ? 10000 : false
+    
+  })
   
-  useEffect(() => {
-    let isMounted = true;
-    
-    const getData = async () => {
-      setIsLoading(true);
-      setError(null);
-
-      try {
-        const res = await fetch(`/major/${version}/${server}.json`);
-        if(!res.ok) setError(new Error(`Failed to load data: ${res.status} ${res.statusText}`));
-        const json = await res.json();
-        if(isMounted) setData(json || null);
-      }
-      catch(e) {
-        if(isMounted){
-          console.error(e);
-          setData(null);
-          setError(e instanceof Error ? e : new Error("Failed to load data"));
-        }
-      }
-      finally {
-        if(isMounted) setIsLoading(false);
-      }
-    }
-    
-    getData();
-    return () => {isMounted = false};
-  }, [version, server]);
-
-  return { data, isLoading, error };
+  return majorDataQuery;
 }

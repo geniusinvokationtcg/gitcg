@@ -44,7 +44,7 @@ export default function MajorPlayerDetail ({ params }: { params: Promise<{ local
   const { showNotification, copiedPopUpTrigger } = useCopiedPopUp();
   const [showDeckcode, setShowDeckcode] = useState<boolean>(false);
 
-  const { data, isLoading, error } = useMajorData(version, server);
+  const { data, isLoading, error } = useMajorData(version, server, gameVersion.latest === version);
   if(isLoading) return;
   if(!data) return <p>Something went wrong: {error ? error.message : "Unknown error"}</p>
 
