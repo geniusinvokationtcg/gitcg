@@ -3,7 +3,6 @@
 import Link from "next/link"
 import { redirect, notFound, usePathname } from "next/navigation";
 import { gameVersion, getVerLabel } from "@/utils/version";
-import { usePageTitle } from "@/hooks/usePageTitle";
 import { useState } from "react";
 import { useMajorData } from "@/hooks/useMajorData";
 import { useTranslatedServers } from "@/hooks/useTranslatedServers";
@@ -22,7 +21,6 @@ export default function MajorRecapClient ({ params }: { params: MajorRecapParams
   const majorMetadata = gameVersion.major.find(i => i.version === version);
   if(!majorMetadata) notFound();
   const t = useTranslations("MajorRecap");
-  usePageTitle( t("title", { version: getVerLabel(version, locale) } ));
 
   const [server, setServer] = useState<ServerPure>(majorMetadata.server[0] as ServerPure);
   const serverList = useTranslatedServers();

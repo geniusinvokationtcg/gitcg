@@ -199,7 +199,7 @@
     "unregistered": "Belum terdaftar"
   },
   "MajorRecap": {
-    "title": "Rekap Turnamen Major GITCG {version}",
+    "title": "Bracket Turnamen Major GITCG {version}",
     "watch_whole_replay": "Tonton Tayangan Ulang",
     "match_title": "GITCG Versi {version} {server} Major Pertandingan {match}",
     "player_title": "GITCG Versi {version} {server} Major Pemain Seed {seed}",
