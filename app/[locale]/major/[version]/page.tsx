@@ -16,7 +16,7 @@ export default async function MajorRecap ({ params }: { params: Promise<MajorRec
   const majorMetadata = gameVersion.major.find(i => i.version === version);
   
   if(!majorMetadata) notFound();
-  if(majorMetadata.start && new Date(majorMetadata.start) < new Date()) notFound();
+  if(majorMetadata.start && new Date(majorMetadata.start*1000) > new Date()) notFound();
 
   return <MajorRecapClient params={p}/>
 }

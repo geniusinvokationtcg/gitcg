@@ -37,7 +37,7 @@ export default function MajorRecapClient ({ params }: { params: MajorRecapParams
   return <div className="min-w-screen p-6 mx-auto">
     <div className="mb-6 dropdowns_container gap-2">
       <CustomSelect
-        options={gameVersion.major.filter(i => !i.start || new Date(i.start) >= new Date()).map(i => ({ value: i.version, label: getVerLabel(i.version, locale) }))}
+        options={gameVersion.major.filter(i => !i.start || new Date(i.start) <= new Date()).map(i => ({ value: i.version, label: getVerLabel(i.version, locale) }))}
         value={getVerLabel(version, locale)}
         onChange={(newVersion: string) => { redirect(`/${locale}/major/${newVersion}`) }}
       />
