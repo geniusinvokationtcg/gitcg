@@ -1,0 +1,305 @@
+{
+  "max_players": 8,
+  "players": [
+    {
+      "playerid": 69,
+      "name": "Kaizen",
+      "seed": 1,
+      "deckcode": [
+        "HSDg8iIPGECx9OEPHmAQ9pcQCRFxAasdGrGx28EfHJEQ+dsQDsEwDOMRDgFA1OQdD0AA",
+        "GPDR4B4OEQBQ9ZcPCWBx9lcQFTFwA8YYDKFgiskQDKGQE9ARDTEQ1NEdE0Gg3N8dDcAA",
+        "H3Chv0ALHfHRNkQTFGBA2oYeCJBg9I4PCEHgBZcQCYFxCDATE7EBOzMdE0Ex3FcdFcAA"
+      ],
+      "avatar": "default"
+    },
+    {
+      "playerid": 290,
+      "name": "VPNilou",
+      "seed": 2,
+      "deckcode": [
+        "H/Chv0ATHWHRNkQNFKFA6YYPCFBg9o4QCIHgCJcTE7EBOzAgE3IxBzMdFUFx3FcdC8AA",
+        "ABDQ0S0eAnDA6mgOBqGAiowdCDHA050fCYLQBr0UGNFAacYWDJFg1MkdDEGQ3NAdDcAA",
+        "HUHx9nAfEWFxWnkPCUDQ9J0QCzGgA7oUC8HRTIUVGLFQisMYDKGQ6NEeDYER3JQdGcAA"
+      ],
+      "avatar": "default"
+    },
+    {
+      "playerid": 159,
+      "name": "Trion",
+      "seed": 3,
+      "deckcode": [
+        "HJDS9AsPHUHhTOEUHsEQipcYCqFAuqQbGaLxA7kgGzKQBMggDGKABskRDBGQ3NsdHsAA",
+        "AxFQ5yEPHkDh9PEdHzER01cfG4Fx+LcgGDFBaYQWDJFgzMYcDMGQ1MkdDUEA3NEdDcAA",
+        "H/Chv90TFGEBNkQNFKFA6YYeCJBg9Y4QCIHgCJcTE7EBOzAgE3IxB1cdFUFy3BEdC8AA"
+      ],
+      "avatar": "default"
+    },
+    {
+      "playerid": 8,
+      "name": "Akira",
+      "seed": 4,
+      "deckcode": [
+        "H/Chv0ATHWHRNkQNFKFA6YYPCEBg9I4PCFDg9ZcQE4EBCDATE7ExOzMdFUFx3FcdC8AA",
+        "ERBx1b0PEUBR9C8PEmHwCJcTE7EBOzARFQFxCIINGPEgEL8TDKFA08QdDEGQ3MkODQAA",
+        "AjIyAwsgA2KgBpccCcFx3DMbE5ExuTUdDMGQiskYHqFwA/QQDzBA1/YTFHHBN0wTILAA"
+      ],
+      "avatar": "default"
+    },
+    {
+      "playerid": 279,
+      "name": "Огурчик238",
+      "seed": 5,
+      "deckcode": [
+        "A0HS1fsOA+Gy6v4PB5GR7moPCtFx85gQFCES9TIQGkIyCZQRFIJiPDcUDbKhDcsRDsEB",
+        "GmBBycYMApAR0cgNHBCB1acPCGDg9p0dCTHR0zAfE4EBC1cQFbFw1MQdDEFA3MYdDMAA",
+        "HUDh9rwPH2HBApMQGSExB7kQG3GQO8YTDLFg29sdDrEwDOMQDsFAr+QaHvGR1OkdD0AA"
+      ],
+      "avatar": "default"
+    },
+    {
+      "playerid": 13,
+      "name": "Ark",
+      "seed": 6,
+      "deckcode": [
+        "H3Chv0ALHfHRNkQTFGBA2oYeCJBg9Y4QCIHgCJcTCbFxOzAgE3IBBzMdE0Ex3FcdFcAA",
+        "FnDA9CEPHkDh+fEbH6ER01cfG4Fx+LcQFaGAacYWDJFgzMkcDMGQ1NAdDUEQ3NEdHsAA",
+        "A/GiAwsQHjHQiskYDqFwuucbDqKAA+ggDzIQBPEgD0JABvQgD2FQ1PgdD0GA3P8dD8AA"
+      ],
+      "avatar": "default"
+    },
+    {
+      "playerid": 59,
+      "name": "Ianradtan",
+      "seed": 7,
+      "deckcode": [
+        "HDDR494PEUCR9OEUHsEQTJcYGaHwir0bC6HRurkgGzKQBMkgDEKQBtcgDWFw3N4dDsAA",
+        "H/HR8jsQAhHx9ZgQC0JBBKURDTKRi8oZFaKiu0scDqPRBOghDzNxBekhD0OBB/AhD2EB",
+        "IECx9O4dGzEh07UfG4FR+PEgGzJxBrcgDGFgTcYUDNGQadAWDZEA1NEdDUEQ3N4dD8AA"
+      ],
+      "avatar": "default"
+    },
+    {
+      "playerid": 120,
+      "name": "petoru",
+      "seed": 8,
+      "deckcode": [
+        "H1Chyd0MFJDw0X0NEhDA2o4eCJDg9ZcPE2EBCDAQFYFxO1cgGXIwB78dC0Hw3MQdDMAA",
+        "HHDR294PIECx9OETHrEQTJcUCsFAiqQYE6ExurkbG6KQA8ggDEKABskgDGGQ3NcdDcAA",
+        "A3BQ9hoPHpHhuvEdHzER27cfG4Fx+IQQGKFAacYWDJFgzMkcDMGQ1NAdDUEQ3NEdHsAA"
+      ],
+      "avatar": "default"
+    }
+  ],
+  "bracket": [
+    {
+      "top": 8,
+      "best_of": 3,
+      "matchid": 1,
+      "bans": [
+        1,
+        3
+      ],
+      "games": [
+        {
+          "deck_index": [
+            3,
+            2
+          ],
+          "winner": 1,
+          "vod": "https://www.youtube.com/watch?v=s4yUcZvcNbU&t=5s"
+        },
+        {
+          "deck_index": [
+            2,
+            2
+          ],
+          "winner": 1,
+          "vod": "https://www.youtube.com/watch?v=s4yUcZvcNbU&t=5m12s"
+        }
+      ]
+    },
+    {
+      "top": 8,
+      "best_of": 3,
+      "matchid": 2,
+      "bans": [
+        1,
+        2
+      ],
+      "games": [
+        {
+          "deck_index": [
+            2,
+            3
+          ],
+          "winner": 2
+        },
+        {
+          "deck_index": [
+            2,
+            1
+          ],
+          "winner": 2
+        }
+      ]
+    },
+    {
+      "top": 8,
+      "best_of": 3,
+      "matchid": 3,
+      "bans": [
+        2,
+        1
+      ],
+      "games": [
+        {
+          "deck_index": [
+            3,
+            2
+          ],
+          "winner": 1
+        },
+        {
+          "deck_index": [
+            1,
+            2
+          ],
+          "winner": 2,
+          "vod": "https://www.youtube.com/watch?v=WYhoykrk3XM&t=3s"
+        },
+        {
+          "deck_index": [
+            1,
+            3
+          ],
+          "winner": 2,
+          "vod": "https://www.youtube.com/watch?v=WYhoykrk3XM&t=3m6s"
+        }
+      ]
+    },
+    {
+      "top": 8,
+      "best_of": 3,
+      "matchid": 4,
+      "bans": [
+        2,
+        1
+      ],
+      "games": [
+        {
+          "deck_index": [
+            1,
+            2
+          ],
+          "winner": 2,
+          "vod": "https://www.youtube.com/watch?v=bvSExhALSmc&t=0s"
+        },
+        {
+          "deck_index": [
+            1,
+            3
+          ],
+          "winner": 2,
+          "vod": "https://www.youtube.com/watch?v=bvSExhALSmc&t=10m"
+        }
+      ]
+    },
+    {
+      "top": 4,
+      "best_of": 3,
+      "matchid": 5,
+      "bans": [
+        3,
+        2
+      ],
+      "games": [
+        {
+          "deck_index": [
+            2,
+            3
+          ],
+          "winner": 1,
+          "vod": "https://www.youtube.com/watch?v=s4yUcZvcNbU&t=9m33s"
+        },
+        {
+          "deck_index": [
+            1,
+            3
+          ],
+          "winner": 1,
+          "vod": "https://www.youtube.com/watch?v=s4yUcZvcNbU&t=13m50s"
+        }
+      ]
+    },
+    {
+      "top": 4,
+      "best_of": 3,
+      "matchid": 6,
+      "bans": [
+        2,
+        1
+      ],
+      "games": [
+        {
+          "deck_index": [
+            1,
+            2
+          ],
+          "winner": 1,
+          "vod": "https://www.youtube.com/watch?v=_90QIAl0ERo&t=0s"
+        },
+        {
+          "deck_index": [
+            3,
+            3
+          ],
+          "winner": 2,
+          "vod": "https://www.youtube.com/watch?v=_90QIAl0ERo&t=6m27s"
+        },
+        {
+          "deck_index": [
+            3,
+            2
+          ],
+          "winner": 1,
+          "vod": "https://www.youtube.com/watch?v=_90QIAl0ERo&t=14m52s"
+        }
+      ]
+    },
+    {
+      "top": 2,
+      "best_of": 3,
+      "matchid": 7,
+      "bans": [
+        3,
+        3
+      ],
+      "games": [
+        {
+          "deck_index": [
+            1,
+            1
+          ],
+          "winner": 2,
+          "vod": "https://www.youtube.com/watch?v=s4yUcZvcNbU&t=18m19s"
+        },
+        {
+          "deck_index": [
+            1,
+            2
+          ],
+          "winner": 1,
+          "vod": "https://www.youtube.com/watch?v=s4yUcZvcNbU&t=22m33s"
+        },
+        {
+          "deck_index": [
+            2,
+            2
+          ],
+          "winner": 1,
+          "vod": "https://www.youtube.com/watch?v=s4yUcZvcNbU&t=26m"
+        }
+      ]
+    }
+  ]
+}
