@@ -1002,7 +1002,7 @@
           "id": "11141"
         },
         {
-          "skill_text": "造成2点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/924fba80b9137b4e8fdf5871aa22d666.png' /><color=#99FFFFFF>冰元素伤害</color>。\\n自身进入<color=#FFFFFFFF>夜魂加持</color>，并获得1点<color=#FFFFFFFF>「夜魂值」</color>；生成1点<color=#FFFFFFFF>白曜护盾</color>和<color=#FFFFFFFF>伊兹帕帕</color>。（角色进入<color=#FFFFFFFF>夜魂加持</color>后不可使用此技能）",
+          "skill_text": "造成1点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/924fba80b9137b4e8fdf5871aa22d666.png' /><color=#99FFFFFF>冰元素伤害</color>。\\n自身进入<color=#FFFFFFFF>夜魂加持</color>，并获得1点<color=#FFFFFFFF>「夜魂值」</color>；生成1点<color=#FFFFFFFF>白曜护盾</color>和<color=#FFFFFFFF>伊兹帕帕</color>。（角色进入<color=#FFFFFFFF>夜魂加持</color>后不可使用此技能）",
           "skill_costs": [
             {
               "cost_type": "11",
@@ -1057,6 +1057,89 @@
       ],
       "hp": "10",
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6851f39d/d4816b81084129534e36b0f3ca8a2cd8.png"
+    },
+    {
+      "id": 1115,
+      "name": "爱可菲",
+      "element_type": 301,
+      "role_skill_infos": [
+        {
+          "skill_text": "造成2点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>物理伤害</color>。",
+          "skill_costs": [
+            {
+              "cost_type": "11",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/412134fa7fc8a73b5e20c177a3ae0046.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "普通攻击"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/0a4af4ecb63b4741aa3e42d18a2a0c21.png",
+          "name": "后厨手艺",
+          "id": "11151"
+        },
+        {
+          "skill_text": "造成1点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/924fba80b9137b4e8fdf5871aa22d666.png' /><color=#99FFFFFF>冰元素伤害</color>，召唤<color=#FFFFFFFF>厨艺机关·低温冷藏模式</color>。",
+          "skill_costs": [
+            {
+              "cost_type": "11",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/412134fa7fc8a73b5e20c177a3ae0046.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "元素战技"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/681a94b2/45a8f965a7fdd80af3409b64844bcc9c.png",
+          "name": "低温烹饪",
+          "id": "11152"
+        },
+        {
+          "skill_text": "造成1点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/924fba80b9137b4e8fdf5871aa22d666.png' /><color=#99FFFFFF>冰元素伤害</color>，治疗我方所有角色2点。",
+          "skill_costs": [
+            {
+              "cost_type": "11",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/412134fa7fc8a73b5e20c177a3ae0046.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "元素爆发"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/692f7dca/038cd3c27bb1d69293741248bda2dbe3.png",
+          "name": "花刀技法",
+          "id": "11153"
+        },
+        {
+          "skill_text": "【被动】战斗开始时，生成<color=#FFFFFFFF>全频谱多重任务厨艺机关</color>。",
+          "skill_costs": [],
+          "type": [
+            "被动技能"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/692f7dca/07117c86929bb1cba16c945697de7d52.png",
+          "name": "时时刻刻的即兴料理",
+          "id": "11154"
+        }
+      ],
+      "weapon": "长柄武器",
+      "belongs": [
+        "枫丹",
+        "始基力：荒性",
+        ""
+      ],
+      "hp": "11",
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/692f7dae/30524c3bd8ab6ad0b4ee20ae799956b8.png"
     },
     {
       "id": 1201,
@@ -1898,7 +1981,7 @@
         "始基力：荒性",
         ""
       ],
-      "hp": "10",
+      "hp": "12",
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/a87e843dcf2c66b79379c5dfa8698ec5.png"
     },
     {
@@ -3059,7 +3142,7 @@
           "id": "13141"
         },
         {
-          "skill_text": "在对方场上生成5层<color=#FFFFFFFF>血偿勒令</color>，然后造成2点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FF9999FF>火元素伤害</color>。",
+          "skill_text": "在对方场上生成3层<color=#FFFFFFFF>血偿勒令</color>，然后造成2点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FF9999FF>火元素伤害</color>。",
           "skill_costs": [
             {
               "cost_type": "13",
@@ -3197,6 +3280,79 @@
       ],
       "hp": "10",
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6851f39d/2165e28186d3d2118deaaf6bd65a8047.png"
+    },
+    {
+      "id": 1316,
+      "name": "嘉明",
+      "element_type": 303,
+      "role_skill_infos": [
+        {
+          "skill_text": "造成2点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>物理伤害</color>。",
+          "skill_costs": [
+            {
+              "cost_type": "13",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/fe4517db495f28fdbcb44607d94640c3.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "普通攻击"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/bf0237fba9d4ab5b47ea86b90711a765.png",
+          "name": "刃爪悬星",
+          "id": "13161"
+        },
+        {
+          "skill_text": "造成1点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FF9999FF>火元素伤害</color>，自身附属<color=#FFFFFFFF>舞兽之法</color>，我方切换到下一个角色。",
+          "skill_costs": [
+            {
+              "cost_type": "13",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/fe4517db495f28fdbcb44607d94640c3.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "元素战技"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/a76b68deb6c4901697900c9af2491d87.png",
+          "name": "瑞兽登高楼",
+          "id": "13162"
+        },
+        {
+          "skill_text": "造成2点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FF9999FF>火元素伤害</color>，自身附属<color=#FFFFFFFF>猊兽·文仔</color>。",
+          "skill_costs": [
+            {
+              "cost_type": "13",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/fe4517db495f28fdbcb44607d94640c3.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "元素爆发"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/cb9d2342f0f577889a99d501218a5e57.png",
+          "name": "璨焰金猊舞",
+          "id": "13163"
+        }
+      ],
+      "weapon": "双手剑",
+      "belongs": [
+        "璃月",
+        "",
+        ""
+      ],
+      "hp": "10",
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/1093af15150c7a5382de9cec09a84a10.png"
     },
     {
       "id": 1401,
@@ -4220,7 +4376,7 @@
           "id": "14142"
         },
         {
-          "skill_text": "造成3点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><color=#FFACFFFF>雷元素伤害</color>，自身进入<color=#FFFFFFFF>夜魂加持</color>，获得1点<color=#FFFFFFFF>「夜魂值」</color>，生成<color=#FFFFFFFF>动能标示</color>。",
+          "skill_text": "造成2点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><color=#FFACFFFF>雷元素伤害</color>，自身进入<color=#FFFFFFFF>夜魂加持</color>，获得1点<color=#FFFFFFFF>「夜魂值」</color>，生成<color=#FFFFFFFF>动能标示</color>。",
           "skill_costs": [
             {
               "cost_type": "14",
@@ -4257,7 +4413,7 @@
         "",
         ""
       ],
-      "hp": "12",
+      "hp": "11",
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68c0b19c/782e488cbcaf377ef14b23bc552d817d.png"
     },
     {
@@ -9263,6 +9419,89 @@
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/801a5ae8cf766e652926b78c00e23a0b.png"
     },
     {
+      "id": 2604,
+      "name": "黑蛇骑士·摧岩之钺",
+      "element_type": 305,
+      "role_skill_infos": [
+        {
+          "skill_text": "造成2点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>物理伤害</color>。",
+          "skill_costs": [
+            {
+              "cost_type": "15",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/680e755181a0b8c29e87d0570815ac29.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "普通攻击"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/4ef5373e27e14926f2fec5ffa0511440.png",
+          "name": "顶位迅斩",
+          "id": "26041"
+        },
+        {
+          "skill_text": "造成3点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/98c267c74a3efdcfed4131a054ff4b82.png' /><color=#FFE699FF>岩元素伤害</color>。",
+          "skill_costs": [
+            {
+              "cost_type": "15",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/680e755181a0b8c29e87d0570815ac29.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "元素战技"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/5552e085c80f4b182fa07e7aee441ac1.png",
+          "name": "斧盾震击",
+          "id": "26042"
+        },
+        {
+          "skill_text": "自身<color=#FFFFFFFF><color=#FFE699FF>附着<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/98c267c74a3efdcfed4131a054ff4b82.png' />岩元素</color></color>，准备技能<color=#FFFFFFFF>巨钺强袭</color>，然后准备技能<color=#FFFFFFFF>大师之击</color>。",
+          "skill_costs": [
+            {
+              "cost_type": "15",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/680e755181a0b8c29e87d0570815ac29.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "元素爆发"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/fb5f7a912f030cb73a0e02591ae88221.png",
+          "name": "坚岩姿态",
+          "id": "26043"
+        },
+        {
+          "skill_text": "【被动】如果敌方场上存在<color=#FFFFFFFF> 伤害抵消</color>、<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/681a94b1/24bc6b249479a2371a126a0c617ee0ae.png' /><color=#FFFFFFFF>护盾</color>状态；或存在<color=#FFFFFFFF> 伤害抵消</color>、<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/681a94b1/24bc6b249479a2371a126a0c617ee0ae.png' /><color=#FFFFFFFF>护盾</color>出战状态，则我方角色使用技能后，自身附属1层<color=#FFFFFFFF>摧岩伟力</color>。",
+          "skill_costs": [],
+          "type": [
+            "被动技能"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/9cacc562a002a2a3a24e97ae06baa5f4.png",
+          "name": "攻阵气势",
+          "id": "26044"
+        }
+      ],
+      "weapon": "其他武器",
+      "belongs": [
+        "魔物",
+        "",
+        ""
+      ],
+      "hp": "12",
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/ca1a1605ba727dba805bec700c841950.png"
+    },
+    {
       "id": 2701,
       "name": "翠翎恐蕈",
       "element_type": 306,
@@ -9877,6 +10116,26 @@
       "is_special": false
     },
     {
+      "id": 211151,
+      "name": "虹彩缤纷的甜点茶话",
+      "content": "<color=#FFFFFFFF>战斗行动</color>：我方出战角色为<color=#FFFFFFFF>爱可菲</color>时，装备此牌。\\n爱可菲装备此牌后，立刻使用一次<color=#FFD780FF>低温烹饪</color>。\\n<color=#FFFFFFFF>我方其他角色使用「普通攻击」后：</color>触发我方<color=#FFFFFFFF>厨艺机关·低温冷藏模式</color>的「结束阶段」效果。（不消耗使用次数，每回合1次）\\n（牌组中包含爱可菲，才能加入牌组）",
+      "action_type": "装备牌",
+      "rank_id": 0,
+      "cost_num1": "4",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/17d89519af925fc46075404a350a3009_6395321278147437046.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "天赋",
+        "战斗行动",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/692f7dae/d76e8f2571575771d9487e89abc6571b.png",
+      "is_special": false
+    },
+    {
       "id": 212011,
       "name": "光辉的季节",
       "content": "<color=#FFFFFFFF>战斗行动</color>：我方出战角色为<color=#FFFFFFFF>芭芭拉</color>时，装备此牌。\\n芭芭拉装备此牌后，立刻使用一次<color=#FFD780FF>演唱，开始♪</color>。\\n装备有此牌的芭芭拉在场时，<color=#FFFFFFFF>歌声之环</color>会使我方执行「切换角色」行动时少花费1个元素骰。（每回合1次）\\n（牌组中包含芭芭拉，才能加入牌组）",
@@ -10434,6 +10693,26 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6851f39d/54a0676a2da2e4f1697483ccc8c79b01.png",
+      "is_special": false
+    },
+    {
+      "id": 213161,
+      "name": "通明庇佑",
+      "content": "<color=#FFFFFFFF>战斗行动</color>：我方出战角色为<color=#FFFFFFFF>嘉明</color>时，装备此牌。\\n嘉明装备此牌后，立刻使用一次<color=#FFD780FF>璨焰金猊舞</color>。\\n<color=#FFFFFFFF>所附属角色进行<color=#FFFFFFFF>下落攻击</color>时：</color>伤害额外+1。\\n<color=#FFFFFFFF>所附属角色使用「元素战技」后：</color>治疗所附属角色2点。（每回合1次）\\n（牌组中包含嘉明，才能加入牌组）",
+      "action_type": "装备牌",
+      "rank_id": 0,
+      "cost_num1": "3",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/7aa8c29e9df41e16b1d5c7f1a5dc52f1_4169361615738189778.png",
+      "cost_num2": "3",
+      "cost_type2_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/36cb5de8667e09ae102d165b89d6e441_604510126303725408.png",
+      "action_card_tags": [
+        "天赋",
+        "战斗行动",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/692f7dae/84016d14895f7e849a9ea8f5192722d5.png",
       "is_special": false
     },
     {
@@ -11488,7 +11767,7 @@
       "cost_type2_icon": "",
       "action_card_tags": [
         "天赋",
-        "",
+        "减伤",
         "",
         "",
         ""
@@ -11994,6 +12273,26 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/345e28ee9261c7b5693687517ae11365.png",
+      "is_special": false
+    },
+    {
+      "id": 226041,
+      "name": "「曾如磐石抵挡黑水奔流…」",
+      "content": "<color=#FFFFFFFF>战斗行动</color>：我方出战角色为<color=#FFFFFFFF>黑蛇骑士·摧岩之钺</color>时，装备此牌。\\n<color=#FFFFFFFF>打出或行动阶段开始时：</color>使<color=#FFFFFFFF>黑蛇骑士·摧岩之钺</color><color=#FFE699FF>附着<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/98c267c74a3efdcfed4131a054ff4b82.png' />岩元素</color>。\\n（牌组中包含黑蛇骑士·摧岩之钺，才能加入牌组）",
+      "action_type": "装备牌",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/37aa06d83b3bc7f7d9ae9fef79d77f03_6636163564922919444.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "天赋",
+        "战斗行动",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/692f7dae/75f2c00dab526b1175be3371a981ed9e.png",
       "is_special": false
     },
     {
@@ -12629,7 +12928,7 @@
       "action_card_tags": [
         "武器",
         "双手剑",
-        "",
+        "减伤",
         "",
         ""
       ],
@@ -12809,7 +13108,7 @@
       "action_card_tags": [
         "武器",
         "长柄武器",
-        "",
+        "减伤",
         "",
         ""
       ],
@@ -12989,7 +13288,7 @@
       "action_card_tags": [
         "武器",
         "单手剑",
-        "",
+        "减伤",
         "",
         ""
       ],
@@ -13814,6 +14113,26 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/681a9497/83c09ced2dfaa8ccd2547f446c3567e9.png",
+      "is_special": false
+    },
+    {
+      "id": 312043,
+      "name": "水仙之梦",
+      "content": "<color=#FFFFFFFF>附属角色使用技能后：</color><color=#FFFFFFFF><color=#FFFFFFFF>冒险</color></color>1次。（每回合2次）\\n如果我方已经完成过冒险，则所附属角色造成的伤害+1。\\n（角色最多装备1件「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/8abebfa3ce62ff97769616f606b9a7f4.png' />圣遗物」）",
+      "action_type": "装备牌",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/3367995a8344bccc77b2d9f794c1bbd2_3133187640885784967.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "圣遗物",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/692f7dae/70b8367bd9b6790bccf5ee107fd45155.png",
       "is_special": false
     },
     {
@@ -15497,6 +15816,26 @@
       "is_special": false
     },
     {
+      "id": 322031,
+      "name": "西摩尔",
+      "content": "<color=#FFFFFFFF>入场时：</color>复制对方牌组顶的1张牌加入我方手牌。\\n<color=#FFFFFFFF>我方打出名称不存在于本局最初牌组的牌时：</color><color=#FFFFFFFF><color=#FFFFFFFF>冒险</color></color>1次。（每回合1次，最多生效2次）",
+      "action_type": "支援牌",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/3367995a8344bccc77b2d9f794c1bbd2_3133187640885784967.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "伙伴",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/692f7dae/2fa69edf3395c8056fb8989f3214f779.png",
+      "is_special": false
+    },
+    {
       "id": 323001,
       "name": "参量质变仪",
       "content": "<color=#FFFFFFFF>双方角色使用技能后：</color>如果造成了元素伤害，此牌累积1个<color=#FFFFFFFF>「质变进度」</color>。如果此牌已累积3个<color=#FFFFFFFF>「质变进度」</color>，则弃置此牌并生成3个不同的基础元素骰。",
@@ -15874,6 +16213,26 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6851f39d/65d1a747380412255f32dbbd4d7ce9b3.png",
+      "is_special": true
+    },
+    {
+      "id": 330012,
+      "name": "「沙中遗事」",
+      "content": "<color=#FFFFFFFF>挑选</color>一项：\\n将敌方1张费用最高的手牌置于牌组底。\\n或\\n将我方所有手牌置于牌组底，然后抓相同数量+1张手牌。",
+      "action_type": "事件牌",
+      "rank_id": 0,
+      "cost_num1": "0",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/3367995a8344bccc77b2d9f794c1bbd2_3133187640885784967.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "https://fastcdn.hoyoverse.com/static-resource-v2/2023/07/10/95ea5f8357e489bccf5fb40a73955d2f_3489949153267385660.png",
+      "action_card_tags": [
+        "秘传",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/692f7dae/61666397f2746f1ec9aa798e1c58f492.png",
       "is_special": true
     },
     {
@@ -17179,7 +17538,7 @@
     {
       "id": 332051,
       "name": "「邪龙」的苏醒",
-      "content": "召唤<color=#FFFFFFFF>「邪龙」</color>。\\n本场对局中，我方支援区每弃置1张卡牌，则<color=#FFFFFFFF>「邪龙」</color>可用次数+1；我方召唤区每弃置1张卡牌，则<color=#FFFFFFFF>「邪龙」</color>效果量+1。（可叠加，最多叠加到5）\\n（<color=#FFFFFFFF>「邪龙」</color>：<color=#FFFFFFFF>结束阶段：</color>造成1点<color=#FFFFFFFF>穿透伤害</color>。\\n<color=#FFFFFFFF><color=#FFFFFFFF>可用次数</color>：1</color>）",
+      "content": "召唤<color=#FFFFFFFF>「邪龙」</color>。\\n本场对局中，我方支援区每弃置1张卡牌，则<color=#FFFFFFFF>「邪龙」</color>可用次数+1；我方召唤区每弃置1张卡牌，则<color=#FFFFFFFF>「邪龙」</color>效果量+1。（可叠加，最多叠加到4）\\n（<color=#FFFFFFFF>「邪龙」</color>：<color=#FFFFFFFF>结束阶段：</color>造成1点<color=#FFFFFFFF>穿透伤害</color>。\\n<color=#FFFFFFFF><color=#FFFFFFFF>可用次数</color>：1</color>）",
       "action_type": "事件牌",
       "rank_id": 0,
       "cost_num1": "2",
@@ -17274,6 +17633,46 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68f81eac/5caf4846f7ea450447e6b258c0ca9764.png",
+      "is_special": false
+    },
+    {
+      "id": 332057,
+      "name": "水仙十字大冒险",
+      "content": "如果我方存在相同元素类型的角色，则治疗我方受伤最多的角色1点；\\n如果我方存在相同武器类型的角色，抓1张牌；\\n如果我方存在相同所属势力的角色，则<color=#FFFFFFFF><color=#FFFFFFFF>冒险</color></color>1次。",
+      "action_type": "事件牌",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/3367995a8344bccc77b2d9f794c1bbd2_3133187640885784967.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/692f7dae/fcbf23b0a4c2063e86dc1f5e311c9a67.png",
+      "is_special": false
+    },
+    {
+      "id": 332058,
+      "name": "拯救世界的计划",
+      "content": "下回合结束阶段时，双方出战角色生命值变为5。",
+      "action_type": "事件牌",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/3367995a8344bccc77b2d9f794c1bbd2_3133187640885784967.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/692f7dae/0e072331dbd1a0eb4ad1d8927f13a640.png",
       "is_special": false
     },
     {
@@ -17679,7 +18078,7 @@
     {
       "id": 333027,
       "name": "纵声欢唱",
-      "content": "所有我方角色获得<color=#FFFFFFFF>饱腹</color>，抓3张牌，下2次切换角色少花费1个元素骰。\\n（每回合每个角色最多食用1次「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/e25f04745615df9e779831a1c1354e38.png' />料理」）",
+      "content": "所有我方角色获得<color=#FFFFFFFF>饱腹</color>，抓2张牌，下2次切换角色少花费1个元素骰。\\n（每回合每个角色最多食用1次「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/e25f04745615df9e779831a1c1354e38.png' />料理」）",
       "action_type": "事件牌",
       "rank_id": 0,
       "cost_num1": "3",
@@ -20922,6 +21321,72 @@
       "name": "沉玉茶露",
       "id": 333029,
       "code": 532,
+      "type": "action"
+    },
+    {
+      "name": "爱可菲",
+      "id": 1115,
+      "code": 533,
+      "type": "character"
+    },
+    {
+      "name": "嘉明",
+      "id": 1316,
+      "code": 534,
+      "type": "character"
+    },
+    {
+      "name": "黑蛇骑士·摧岩之钺",
+      "id": 2604,
+      "code": 535,
+      "type": "character"
+    },
+    {
+      "name": "虹彩缤纷的甜点茶话",
+      "id": 211151,
+      "code": 536,
+      "type": "action"
+    },
+    {
+      "name": "通明庇佑",
+      "id": 213161,
+      "code": 537,
+      "type": "action"
+    },
+    {
+      "name": "「曾如磐石抵挡黑水奔流…」",
+      "id": 226041,
+      "code": 538,
+      "type": "action"
+    },
+    {
+      "name": "水仙之梦",
+      "id": 312043,
+      "code": 539,
+      "type": "action"
+    },
+    {
+      "name": "西摩尔",
+      "id": 322031,
+      "code": 540,
+      "type": "action"
+    },
+    {
+      "name": "「沙中遗事」",
+      "id": 330012,
+      "code": 541,
+      "type": "action"
+    },
+    {
+      "name": "水仙十字大冒险",
+      "id": 332057,
+      "code": 542,
+      "type": "action"
+    },
+    {
+      "name": "拯救世界的计划",
+      "id": 332058,
+      "code": 543,
       "type": "action"
     }
   ]

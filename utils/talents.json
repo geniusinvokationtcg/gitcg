@@ -742,5 +742,23 @@
     "character_name": "Hydro Tulpa",
     "talent_id": 222061,
     "talent_name": "Flow Convergence"
+  },
+  {
+    "character_id": 1115,
+    "character_name": "Escoffier",
+    "talent_id": 211151,
+    "talent_name": "Tea Parties Bursting With Color"
+  },
+  {
+    "character_id": 1316,
+    "character_name": "Gaming",
+    "talent_id": 213161,
+    "talent_name": "Bringer of Blessing"
+  },
+  {
+    "character_id": 2604,
+    "character_name": "Black Serpent Knight: Rockbreaker Ax",
+    "talent_id": 226041,
+    "talent_name": "\"Once Stood Against the Tide of Dark Waters Like Bedrock...\""
   }
 ]

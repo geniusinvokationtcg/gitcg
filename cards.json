@@ -1002,7 +1002,7 @@
           "id": "11141"
         },
         {
-          "skill_text": "Deals 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/924fba80b9137b4e8fdf5871aa22d666.png' /><color=#99FFFFFF>Cryo DMG</color>.\\nEnters <color=#FFFFFFFF>Nightsoul's Blessing</color>, gains 1 <color=#FFFFFFFF>Nightsoul point</color>, and creates 1 point of <color=#FFFFFFFF>Opal Shield</color> and <color=#FFFFFFFF>Itzpapa</color>. (This skill cannot be used after the character enters <color=#FFFFFFFF>Nightsoul's Blessing</color>)",
+          "skill_text": "Deals 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/924fba80b9137b4e8fdf5871aa22d666.png' /><color=#99FFFFFF>Cryo DMG</color>.\\nEnters <color=#FFFFFFFF>Nightsoul's Blessing</color>, gains 1 <color=#FFFFFFFF>Nightsoul point</color>, and creates 1 point of <color=#FFFFFFFF>Opal Shield</color> and <color=#FFFFFFFF>Itzpapa</color>. (This skill cannot be used after the character enters <color=#FFFFFFFF>Nightsoul's Blessing</color>)",
           "skill_costs": [
             {
               "cost_type": "11",
@@ -1057,6 +1057,89 @@
       ],
       "hp": "10",
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6851f39d/d4816b81084129534e36b0f3ca8a2cd8.png"
+    },
+    {
+      "id": 1115,
+      "name": "Escoffier",
+      "element_type": 301,
+      "role_skill_infos": [
+        {
+          "skill_text": "Deals 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>Physical DMG</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "11",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/412134fa7fc8a73b5e20c177a3ae0046.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Normal Attack"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/0a4af4ecb63b4741aa3e42d18a2a0c21.png",
+          "name": "Kitchen Skills",
+          "id": "11151"
+        },
+        {
+          "skill_text": "Deals 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/924fba80b9137b4e8fdf5871aa22d666.png' /><color=#99FFFFFF>Cryo DMG</color>, summons <color=#FFFFFFFF>Cooking Mek: Cold Storage Mode</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "11",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/412134fa7fc8a73b5e20c177a3ae0046.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "Elemental Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/681a94b2/45a8f965a7fdd80af3409b64844bcc9c.png",
+          "name": "Low-Temperature Cooking",
+          "id": "11152"
+        },
+        {
+          "skill_text": "Deals 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/924fba80b9137b4e8fdf5871aa22d666.png' /><color=#99FFFFFF>Cryo DMG</color>, heals all your characters for 2 HP.",
+          "skill_costs": [
+            {
+              "cost_type": "11",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/412134fa7fc8a73b5e20c177a3ae0046.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Elemental Burst"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/692f7dca/038cd3c27bb1d69293741248bda2dbe3.png",
+          "name": "Scoring Cuts",
+          "id": "11153"
+        },
+        {
+          "skill_text": "(Passive) When battle begins, create 1 <color=#FFFFFFFF>All-Spectrum Multi-Use Cooking Mek</color>.",
+          "skill_costs": [],
+          "type": [
+            "Passive Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/692f7dca/07117c86929bb1cba16c945697de7d52.png",
+          "name": "Constant Off-the-Cuff Cookery",
+          "id": "11154"
+        }
+      ],
+      "weapon": "Polearm",
+      "belongs": [
+        "Fontaine",
+        "Arkhe: Ousia",
+        ""
+      ],
+      "hp": "11",
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/692f7dae/30524c3bd8ab6ad0b4ee20ae799956b8.png"
     },
     {
       "id": 1201,
@@ -1898,7 +1981,7 @@
         "Arkhe: Ousia",
         ""
       ],
-      "hp": "10",
+      "hp": "12",
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/a87e843dcf2c66b79379c5dfa8698ec5.png"
     },
     {
@@ -3059,7 +3142,7 @@
           "id": "13141"
         },
         {
-          "skill_text": "Create 5 stacks of <color=#FFFFFFFF>Blood-Debt Directive</color> on the opponent's side of the field and deal 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FF9999FF>Pyro DMG</color>.",
+          "skill_text": "Create 3 stacks of <color=#FFFFFFFF>Blood-Debt Directive</color> on the opponent's side of the field and deal 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FF9999FF>Pyro DMG</color>.",
           "skill_costs": [
             {
               "cost_type": "13",
@@ -3197,6 +3280,79 @@
       ],
       "hp": "10",
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6851f39d/2165e28186d3d2118deaaf6bd65a8047.png"
+    },
+    {
+      "id": 1316,
+      "name": "Gaming",
+      "element_type": 303,
+      "role_skill_infos": [
+        {
+          "skill_text": "Deals 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>Physical DMG</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "13",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/fe4517db495f28fdbcb44607d94640c3.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Normal Attack"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/bf0237fba9d4ab5b47ea86b90711a765.png",
+          "name": "Stellar Rend",
+          "id": "13161"
+        },
+        {
+          "skill_text": "Deals 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FF9999FF>Pyro DMG</color>. Attaches <color=#FFFFFFFF>Wushou Arts</color> to self and switches to your next character.",
+          "skill_costs": [
+            {
+              "cost_type": "13",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/fe4517db495f28fdbcb44607d94640c3.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "Elemental Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/a76b68deb6c4901697900c9af2491d87.png",
+          "name": "Bestial Ascent",
+          "id": "13162"
+        },
+        {
+          "skill_text": "Deals 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FF9999FF>Pyro DMG</color>. Attaches <color=#FFFFFFFF>Suanni: Man Chai</color> to self.",
+          "skill_costs": [
+            {
+              "cost_type": "13",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/fe4517db495f28fdbcb44607d94640c3.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "Elemental Burst"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/cb9d2342f0f577889a99d501218a5e57.png",
+          "name": "Suanni's Gilded Dance",
+          "id": "13163"
+        }
+      ],
+      "weapon": "Claymore",
+      "belongs": [
+        "Liyue",
+        "",
+        ""
+      ],
+      "hp": "10",
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/1093af15150c7a5382de9cec09a84a10.png"
     },
     {
       "id": 1401,
@@ -4220,7 +4376,7 @@
           "id": "14142"
         },
         {
-          "skill_text": "Deals 3 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><color=#FFACFFFF>Electro DMG</color>, enters <color=#FFFFFFFF>Nightsoul's Blessing</color>, gains 1 <color=#FFFFFFFF>Nightsoul point</color>, and creates <color=#FFFFFFFF>Kinetic Energy Scale</color>.",
+          "skill_text": "Deals 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><color=#FFACFFFF>Electro DMG</color>, enters <color=#FFFFFFFF>Nightsoul's Blessing</color>, gains 1 <color=#FFFFFFFF>Nightsoul point</color>, and creates <color=#FFFFFFFF>Kinetic Energy Scale</color>.",
           "skill_costs": [
             {
               "cost_type": "14",
@@ -4257,7 +4413,7 @@
         "",
         ""
       ],
-      "hp": "12",
+      "hp": "11",
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68c0b19c/782e488cbcaf377ef14b23bc552d817d.png"
     },
     {
@@ -9263,6 +9419,89 @@
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/801a5ae8cf766e652926b78c00e23a0b.png"
     },
     {
+      "id": 2604,
+      "name": "Black Serpent Knight: Rockbreaker Ax",
+      "element_type": 305,
+      "role_skill_infos": [
+        {
+          "skill_text": "Deals 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>Physical DMG</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "15",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/680e755181a0b8c29e87d0570815ac29.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Normal Attack"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/4ef5373e27e14926f2fec5ffa0511440.png",
+          "name": "Supreme Strike",
+          "id": "26041"
+        },
+        {
+          "skill_text": "Deals 3 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/98c267c74a3efdcfed4131a054ff4b82.png' /><color=#FFE699FF>Geo DMG</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "15",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/680e755181a0b8c29e87d0570815ac29.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "Elemental Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/5552e085c80f4b182fa07e7aee441ac1.png",
+          "name": "Axe and Aegis",
+          "id": "26042"
+        },
+        {
+          "skill_text": "Perform <color=#FFFFFFFF><color=#FFE699FF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/98c267c74a3efdcfed4131a054ff4b82.png' />Geo Application</color></color> on self and prepares the Skill <color=#FFFFFFFF>Greataxe Strike</color>, then prepares the Skill <color=#FFFFFFFF>Master's Strike</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "15",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/680e755181a0b8c29e87d0570815ac29.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Elemental Burst"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/fb5f7a912f030cb73a0e02591ae88221.png",
+          "name": "Stone Stance",
+          "id": "26043"
+        },
+        {
+          "skill_text": "(Passive) If the opponent has <color=#FFFFFFFF>Damage Negation</color> or <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/681a94b1/24bc6b249479a2371a126a0c617ee0ae.png' /><color=#FFFFFFFF>Shield</color> Status on their side of the field, or they have <color=#FFFFFFFF>Damage Negation</color> or <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/681a94b1/24bc6b249479a2371a126a0c617ee0ae.png' /><color=#FFFFFFFF>Shield</color> Combat Status, attach 1 stack of <color=#FFFFFFFF>Might of Stone</color> to self after your character uses a Skill.",
+          "skill_costs": [],
+          "type": [
+            "Passive Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/9cacc562a002a2a3a24e97ae06baa5f4.png",
+          "name": "Attacking Momentum",
+          "id": "26044"
+        }
+      ],
+      "weapon": "Other Weapons",
+      "belongs": [
+        "Monster",
+        "",
+        ""
+      ],
+      "hp": "12",
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/ca1a1605ba727dba805bec700c841950.png"
+    },
+    {
       "id": 2701,
       "name": "Jadeplume Terrorshroom",
       "element_type": 306,
@@ -9877,6 +10116,26 @@
       "is_special": false
     },
     {
+      "id": 211151,
+      "name": "Tea Parties Bursting With Color",
+      "content": "<color=#FFFFFFFF>Combat Action</color>: When your active character is <color=#FFFFFFFF>Escoffier</color>, equip this card.\\nAfter Escoffier equips this card, immediately use <color=#FFD780FF>Low-Temperature Cooking</color> once.\\n<color=#FFFFFFFF>When your other character uses a Normal Attack:</color> Triggers your <color=#FFFFFFFF>Cooking Mek: Cold Storage Mode's</color> End Phase effect. (Its Usages will not decrease, once per Round)\\n(You must have Escoffier in your deck to add this card to your deck.)",
+      "action_type": "Equipment Cards",
+      "rank_id": 0,
+      "cost_num1": "4",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/17d89519af925fc46075404a350a3009_6395321278147437046.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "Talent",
+        "Combat Action",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/692f7dae/d76e8f2571575771d9487e89abc6571b.png",
+      "is_special": false
+    },
+    {
       "id": 212011,
       "name": "Glorious Season",
       "content": "<color=#FFFFFFFF>Combat Action</color>: When your active character is <color=#FFFFFFFF>Barbara</color>, equip this card.\\nAfter Barbara equips this card, immediately use <color=#FFD780FF>Let the Show Begin♪</color> once.\\nWhen your Barbara, who has this card equipped, is on the field, <color=#FFFFFFFF>Melody Loop</color> will allow you to spend 1 fewer Elemental Die the next time you use \"Switch Character.\" (Once per round)\\n(You must have Barbara in your deck to add this card to your deck.)",
@@ -10434,6 +10693,26 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6851f39d/54a0676a2da2e4f1697483ccc8c79b01.png",
+      "is_special": false
+    },
+    {
+      "id": 213161,
+      "name": "Bringer of Blessing",
+      "content": "<color=#FFFFFFFF>Combat Action</color>: When your active character is <color=#FFFFFFFF>Gaming</color>, equip this card.\\nAfter Gaming equips this card, immediately use <color=#FFD780FF>Suanni's Gilded Dance</color> once.\\n<color=#FFFFFFFF>When the attached character uses a <color=#FFFFFFFF>Plunging Attack</color>:</color> Deals an additional +1 DMG.\\n<color=#FFFFFFFF>When the attached character uses an Elemental Skill:</color> Heal the attached character for 2 HP. (Once per Round)\\n(You must have Gaming in your deck to add this card to your deck.)",
+      "action_type": "Equipment Cards",
+      "rank_id": 0,
+      "cost_num1": "3",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/7aa8c29e9df41e16b1d5c7f1a5dc52f1_4169361615738189778.png",
+      "cost_num2": "3",
+      "cost_type2_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/36cb5de8667e09ae102d165b89d6e441_604510126303725408.png",
+      "action_card_tags": [
+        "Talent",
+        "Combat Action",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/692f7dae/84016d14895f7e849a9ea8f5192722d5.png",
       "is_special": false
     },
     {
@@ -11488,7 +11767,7 @@
       "cost_type2_icon": "",
       "action_card_tags": [
         "Talent",
-        "",
+        "Damage Reduction",
         "",
         "",
         ""
@@ -11994,6 +12273,26 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/345e28ee9261c7b5693687517ae11365.png",
+      "is_special": false
+    },
+    {
+      "id": 226041,
+      "name": "\"Once Stood Against the Tide of Dark Waters Like Bedrock...\"",
+      "content": "<color=#FFFFFFFF>Combat Action</color>: When your active character is <color=#FFFFFFFF>Black Serpent Knight: Rockbreaker Ax</color>, equip this card.\\n<color=#FFFFFFFF>When this card is played or the Action Phase begins:</color> <color=#FFFFFFFF>Black Serpent Knight: Rockbreaker Ax</color>Perform <color=#FFE699FF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/98c267c74a3efdcfed4131a054ff4b82.png' />Geo Application</color>.\\n(You must have Black Serpent Knight: Rockbreaker Ax in your deck to add this card to your deck.)",
+      "action_type": "Equipment Cards",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/37aa06d83b3bc7f7d9ae9fef79d77f03_6636163564922919444.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "Talent",
+        "Combat Action",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/692f7dae/75f2c00dab526b1175be3371a981ed9e.png",
       "is_special": false
     },
     {
@@ -12629,7 +12928,7 @@
       "action_card_tags": [
         "Weapon",
         "Claymore",
-        "",
+        "Damage Reduction",
         "",
         ""
       ],
@@ -12809,7 +13108,7 @@
       "action_card_tags": [
         "Weapon",
         "Polearm",
-        "",
+        "Damage Reduction",
         "",
         ""
       ],
@@ -12989,7 +13288,7 @@
       "action_card_tags": [
         "Weapon",
         "Sword",
-        "",
+        "Damage Reduction",
         "",
         ""
       ],
@@ -13339,7 +13638,7 @@
     {
       "id": 312018,
       "name": "Gilded Dreams",
-      "content": "<color=#FFFFFFFF>When played: </color>Generate 1 Die of the same Element as thecharacter to which this is attached. If you have 3 different Elemental Types in your party, generate 2 such Dice instead.\\n<color=#FFFFFFFF>When the character to which this card is attached is your active character, then when an opposing character takes Elemental Reaction DMG: </color>Draw 1 card. (Up to twice per Round)\\n(A character can equip a maximum of 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/8abebfa3ce62ff97769616f606b9a7f4.png' />Artifact)",
+      "content": "<color=#FFFFFFFF>When played: </color>Generate 1 Die of the same Element as the character to which this is attached. If you have 3 different Elemental Types in your party, generate 2 such Dice instead.\\n<color=#FFFFFFFF>When the character to which this card is attached is your active character, then when an opposing character takes Elemental Reaction DMG: </color>Draw 1 card. (Up to twice per Round)\\n(A character can equip a maximum of 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/8abebfa3ce62ff97769616f606b9a7f4.png' />Artifact)",
       "action_type": "Equipment Cards",
       "rank_id": 0,
       "cost_num1": "3",
@@ -13814,6 +14113,26 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/681a9497/83c09ced2dfaa8ccd2547f446c3567e9.png",
+      "is_special": false
+    },
+    {
+      "id": 312043,
+      "name": "Nymph's Dream",
+      "content": "<color=#FFFFFFFF>When the attached character uses a Skill:</color> Starts an <color=#FFFFFFFF><color=#FFFFFFFF>Adventure</color></color>. (Twice per Round)\\nIf you have completed an Adventure, the attached character deals +1 DMG.\\n(A character can equip a maximum of 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/8abebfa3ce62ff97769616f606b9a7f4.png' /> Artifact)",
+      "action_type": "Equipment Cards",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/3367995a8344bccc77b2d9f794c1bbd2_3133187640885784967.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "Artifact",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/692f7dae/70b8367bd9b6790bccf5ee107fd45155.png",
       "is_special": false
     },
     {
@@ -14979,7 +15298,7 @@
     {
       "id": 322005,
       "name": "Chef Mao",
-      "content": "<color=#FFFFFFFF>After playing a <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/e25f04745615df9e779831a1c1354e38.png' />Food Event Card:</color> Create 1 random Basic Elemental Die (once per Round).\\n<color=#FFFFFFFF>After playing a <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/e25f04745615df9e779831a1c1354e38.png' />Food Event Card:</color>Draw 1 random <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/e25f04745615df9e779831a1c1354e38.png' />Food Event Card from your deck (once per match).",
+      "content": "<color=#FFFFFFFF>After playing a <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/e25f04745615df9e779831a1c1354e38.png' />Food Event Card:</color> Create 1 random Basic Elemental Die (once per Round).\\n<color=#FFFFFFFF>After playing a <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/e25f04745615df9e779831a1c1354e38.png' />Food Event Card: </color>Draw 1 random <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/e25f04745615df9e779831a1c1354e38.png' />Food Event Card from your deck (once per match).",
       "action_type": "Support Cards",
       "rank_id": 0,
       "cost_num1": "1",
@@ -15199,7 +15518,7 @@
     {
       "id": 322016,
       "name": "Dunyarzad",
-      "content": "<color=#FFFFFFFF>When playing a <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/58f10112edcb87e1cdf515117e306fe5.png' />Companion Support Card:</color> Spend 1 fewer Elemental Die (once per Round).\\n<color=#FFFFFFFF>After playing a <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/58f10112edcb87e1cdf515117e306fe5.png' />Companion Support Card:</color>Draw 1 random <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/58f10112edcb87e1cdf515117e306fe5.png' />Companion Support Card from your deck (once per match).",
+      "content": "<color=#FFFFFFFF>When playing a <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/58f10112edcb87e1cdf515117e306fe5.png' />Companion Support Card:</color> Spend 1 fewer Elemental Die (once per Round).\\n<color=#FFFFFFFF>After playing a <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/58f10112edcb87e1cdf515117e306fe5.png' />Companion Support Card: </color>Draw 1 random <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/58f10112edcb87e1cdf515117e306fe5.png' />Companion Support Card from your deck (once per match).",
       "action_type": "Support Cards",
       "rank_id": 0,
       "cost_num1": "1",
@@ -15494,6 +15813,26 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/688960b0/f0b07cd910f3904382267747d4a412e9.png",
+      "is_special": false
+    },
+    {
+      "id": 322031,
+      "name": "Seymour",
+      "content": "<color=#FFFFFFFF>When played:</color> Copy 1 card from the top of your opponent's deck and add it to your Hand.\\n<color=#FFFFFFFF>When you play a card whose name is not in the original deck at the start of the game: </color><color=#FFFFFFFF><color=#FFFFFFFF>Adventure</color></color> once. (Once per Round, up to twice)",
+      "action_type": "Support Cards",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/3367995a8344bccc77b2d9f794c1bbd2_3133187640885784967.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "Companion",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/692f7dae/2fa69edf3395c8056fb8989f3214f779.png",
       "is_special": false
     },
     {
@@ -15874,6 +16213,26 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6851f39d/65d1a747380412255f32dbbd4d7ce9b3.png",
+      "is_special": true
+    },
+    {
+      "id": 330012,
+      "name": "Lost Legacies in the Sand",
+      "content": "<color=#FFFFFFFF>Select</color> one of the following:\\nPlace 1 card with the highest cost from your opponent's Hand at the bottom of their deck.\\nOr\\nPlace all cards from your Hand at the bottom of your deck and then draw the same number of cards plus 1.",
+      "action_type": "Event Cards",
+      "rank_id": 0,
+      "cost_num1": "0",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/3367995a8344bccc77b2d9f794c1bbd2_3133187640885784967.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "https://fastcdn.hoyoverse.com/static-resource-v2/2023/07/10/95ea5f8357e489bccf5fb40a73955d2f_3489949153267385660.png",
+      "action_card_tags": [
+        "Arcane Legend",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/692f7dae/61666397f2746f1ec9aa798e1c58f492.png",
       "is_special": true
     },
     {
@@ -17179,7 +17538,7 @@
     {
       "id": 332051,
       "name": "Fell Dragon's Awakening",
-      "content": "Summon <color=#FFFFFFFF>Fell Dragon</color>.\\nDuring this match, for each card you discard from the Support Zone, <color=#FFFFFFFF>Fell Dragon</color> gains 1 Usage. For each card you discard from the Summon Zone, <color=#FFFFFFFF>Fell Dragon</color> gains 1 Effect. (Can stack. Max 5 stacks.)\\n(<color=#FFFFFFFF>Fell Dragon</color>: <color=#FFFFFFFF>End Phase:</color> Deal 1 <color=#FFFFFFFF>Piercing DMG</color>.\\n<color=#FFFFFFFF><color=#FFFFFFFF>Usage(s)</color>: 1</color>)",
+      "content": "Summon <color=#FFFFFFFF>Fell Dragon</color>.\\nDuring this match, for each card you discard from the Support Zone, <color=#FFFFFFFF>Fell Dragon</color> gains 1 Usage. For each card you discard from the Summon Zone, <color=#FFFFFFFF>Fell Dragon</color> gains 1 Effect. (Can stack. Max 4 stacks.)\\n(<color=#FFFFFFFF>Fell Dragon</color>: <color=#FFFFFFFF>End Phase:</color> Deal 1 <color=#FFFFFFFF>Piercing DMG</color>.\\n<color=#FFFFFFFF><color=#FFFFFFFF>Usage(s)</color>: 1</color>)",
       "action_type": "Event Cards",
       "rank_id": 0,
       "cost_num1": "2",
@@ -17274,6 +17633,46 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68f81eac/5caf4846f7ea450447e6b258c0ca9764.png",
+      "is_special": false
+    },
+    {
+      "id": 332057,
+      "name": "The Narzissenkreuz Adventure",
+      "content": "If you have multiple characters of the same Elemental Type, then heal your most damaged character for 1 HP.\\nIf you have multiple characters that use the same type of weapon, then draw 1 card.\\nIf you have characters that belong to the same faction, then <color=#FFFFFFFF><color=#FFFFFFFF>Adventure</color></color> once.",
+      "action_type": "Event Cards",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/3367995a8344bccc77b2d9f794c1bbd2_3133187640885784967.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/692f7dae/fcbf23b0a4c2063e86dc1f5e311c9a67.png",
+      "is_special": false
+    },
+    {
+      "id": 332058,
+      "name": "Plan to Save the World",
+      "content": "At the End Phase of the next Round, each side's active character's HP is set to 5.",
+      "action_type": "Event Cards",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/3367995a8344bccc77b2d9f794c1bbd2_3133187640885784967.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/692f7dae/0e072331dbd1a0eb4ad1d8927f13a640.png",
       "is_special": false
     },
     {
@@ -17679,7 +18078,7 @@
     {
       "id": 333027,
       "name": "Sing Your Heart Out",
-      "content": "All of your characters gain <color=#FFFFFFFF>Satiated</color>. Draw 3 cards and use 1 fewer Elemental Die for the next 2 character switches.\\n(A character can consume at most 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/e25f04745615df9e779831a1c1354e38.png' />Food per Round)",
+      "content": "All of your characters gain <color=#FFFFFFFF>Satiated</color>. Draw 2 cards and use 1 fewer Elemental Die for the next 2 character switches.\\n(A character can consume at most 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/e25f04745615df9e779831a1c1354e38.png' />Food per Round)",
       "action_type": "Event Cards",
       "rank_id": 0,
       "cost_num1": "3",
@@ -20922,6 +21321,72 @@
       "name": "Chenyu Brew",
       "id": 333029,
       "code": 532,
+      "type": "action"
+    },
+    {
+      "name": "Escoffier",
+      "id": 1115,
+      "code": 533,
+      "type": "character"
+    },
+    {
+      "name": "Gaming",
+      "id": 1316,
+      "code": 534,
+      "type": "character"
+    },
+    {
+      "name": "Black Serpent Knight: Rockbreaker Ax",
+      "id": 2604,
+      "code": 535,
+      "type": "character"
+    },
+    {
+      "name": "Tea Parties Bursting With Color",
+      "id": 211151,
+      "code": 536,
+      "type": "action"
+    },
+    {
+      "name": "Bringer of Blessing",
+      "id": 213161,
+      "code": 537,
+      "type": "action"
+    },
+    {
+      "name": "\"Once Stood Against the Tide of Dark Waters Like Bedrock...\"",
+      "id": 226041,
+      "code": 538,
+      "type": "action"
+    },
+    {
+      "name": "Nymph's Dream",
+      "id": 312043,
+      "code": 539,
+      "type": "action"
+    },
+    {
+      "name": "Seymour",
+      "id": 322031,
+      "code": 540,
+      "type": "action"
+    },
+    {
+      "name": "Lost Legacies in the Sand",
+      "id": 330012,
+      "code": 541,
+      "type": "action"
+    },
+    {
+      "name": "The Narzissenkreuz Adventure",
+      "id": 332057,
+      "code": 542,
+      "type": "action"
+    },
+    {
+      "name": "Plan to Save the World",
+      "id": 332058,
+      "code": 543,
       "type": "action"
     }
   ]
