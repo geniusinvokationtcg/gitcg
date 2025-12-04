@@ -68,7 +68,7 @@ export default function MajorRecapClient ({ params }: { params: MajorRecapParams
           return <div key={round} className="flex flex-col items-center gap-8 relative">
             {games[index].map((matchid, i) => {
               const match = roundMatches.find(m => m.matchid === matchid);
-              if(matchid === 5) console.log(JSON.stringify(match))
+              //if(matchid === 5) console.log(JSON.stringify(match))
               const playerData1 = getPlayer(match?.matchid, 1, data, games, seeding)
               const playerData2 = getPlayer(match?.matchid, 2, data, games, seeding)
               const score1 = match?.games.reduce((s, game) => (game.winner === 1 ? s+1 : s), 0);
