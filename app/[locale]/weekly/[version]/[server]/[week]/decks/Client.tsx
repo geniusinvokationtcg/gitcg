@@ -60,8 +60,9 @@ export function DecklistDumpPageClient ({ params, csvPaste, duelistRecord, isAdm
         </div>
         <div className="text-center flex flex-row gap-0.5 justify-center items-center">
           <div>{t("uid_colon")}{view.uid} </div>
-          <div className="icon_hover">
+          <div>
             <ClipboardDocumentIcon
+              className="size-4 hover:text-[#AF7637] transition-all duration-200 cursor-pointer"
               onClick={() => handleCopy(view.uid, copiedPopUpTrigger)}
             />
           </div>
