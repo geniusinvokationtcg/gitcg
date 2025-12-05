@@ -45,6 +45,9 @@ export const seasons: Seasons = {
   ],
   as: [
     {
+      versions: ["6-2"]
+    },
+    {
       versions: ["5-8", "6-0", "6-1"],
       best_finish: 5,
       qualification_type: "top",
