@@ -305,8 +305,10 @@ export function LeaderboardPageClient ({ params }: { params: LeaderboardPagePara
           {participatingPlayer.map(p => 
             <tr key={p.playerid} className="compact_py group">
               <td className="sticky left-0 z-10 bg-white group-hover:bg-gray-50 transition-all duration-200">{p.rank}</td>
-              <td className="text-left text-ellipsis whitespace-nowrap sticky left-[32.8px] z-10 bg-white group-hover:bg-gray-50 transition-all duration-200">
-                <Link href={`/${locale}/weekly/${seasonQuery.data.filter(s => s.match_data).at(-1)!.version}/player/${p.playerid}`}>{p.handle_display}</Link>
+              <td className="text-left text-ellipsis whitespace-nowrap sticky left-[32.8px] z-10 bg-white group-hover:bg-gray-50 transition-all duration-200 cursor-pointer"
+                onClick={() => window.open(`/${locale}/weekly/${seasonQuery.data.filter(s => s.match_data).at(-1)!.version}/player/${p.playerid}`, "_self")}
+              >
+                {p.handle_display}
               </td>
               {p.scores.map(v => v.weeks?.flatMap(w => {
                 let characters: string[] = []
