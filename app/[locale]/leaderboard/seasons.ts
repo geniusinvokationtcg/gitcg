@@ -27,6 +27,9 @@ export const seasons: Seasons = {
   ],
   eu: [
     {
+      versions: ["6-2"]
+    },
+    {
       versions: ["6-0", "6-1", "6-3"],
       best_finish: 5,
       qualification_type: "top",
