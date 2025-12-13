@@ -207,6 +207,11 @@ export function DeckBuilderPageClient ({
       is_ascending: true
     }
   })
+  const characterFilterAmount = useMemo(() =>
+    Object.values(characterFilter.categories).reduce((a, arr) => a + arr.length, 0)
+    + Object.values(characterFilter.config).reduce((a, key) => a + (key ? 1 : 0), 0)
+    + (characterFilter.sort.by ? 1 : 0), [characterFilter]
+  )
   const [actionFilter, setActionFilter] = useState<ActionFilter>({
     categories: {
       type: [],
@@ -221,6 +226,11 @@ export function DeckBuilderPageClient ({
       is_ascending: true
     }
   })
+  const actionFilterAmount = useMemo(() =>
+    Object.values(actionFilter.categories).reduce((a, arr) => a + arr.length, 0)
+    + Object.values(actionFilter.config).reduce((a, key) => a + (key ? 1 : 0), 0)
+    + (actionFilter.sort.by ? 1 : 0), [actionFilter]
+  )
   const handleCharacterFilter = useCallback((category: keyof CharacterFilter["categories"], item: string) => {
     let temp = characterFilter.categories;
     const items = temp[category];
@@ -423,14 +433,21 @@ export function DeckBuilderPageClient ({
         value={actionSearchQuery}
         onChange={e => setActionSearchQuery(e.target.value)}
       />
-      <CustomButton
-        type="icon"
-        buttonText={
-          isFiltering ? <HugeiconsIcon icon={FilterRemoveIcon} color="currentColor" strokeWidth={1.5} size={16}/> : <HugeiconsIcon icon={FilterIcon} color="currentColor" strokeWidth={1.5} size={16}/>
+      <div className="relative">
+        <CustomButton
+          type="icon"
+          buttonText={
+            isFiltering ? <HugeiconsIcon icon={FilterRemoveIcon} color="currentColor" strokeWidth={1.5} size={16}/> : <HugeiconsIcon icon={FilterIcon} color="currentColor" strokeWidth={1.5} size={16}/>
+          }
+          isActive={isFiltering}
+          onClick={() => setIsFiltering(!isFiltering)}
+        />
+        {((selectionCardType === "characters" && characterFilterAmount>0) || (selectionCardType === "actions" && actionFilterAmount>0)) &&
+          <div className="pointer-events-none absolute text-[0.725rem] rounded-[50%] bg-white border-gray-500 border size-5 -top-2 -right-2 flex justify-center items-center">
+            {selectionCardType === "characters" ? characterFilterAmount : actionFilterAmount}
+          </div>
         }
-        isActive={isFiltering}
-        onClick={() => setIsFiltering(!isFiltering)}
-      />
+      </div>
     </div>
     
     <div className="flex flex-row gap-4 justify-evenly w-full">
@@ -690,7 +707,7 @@ export function DeckBuilderPageClient ({
 
   </div>
 
-  return <div className="mx-6 my-6 overflow-hidden">
+  return <div className="px-6 py-6 overflow-hidden">
     <SuccessNotification show={showPopUp} text={popUpContent} type={popUpType} />
 
     <Backdrop isOpen={isOpenDialog} triggerFn={cancelImportDeck}/>
