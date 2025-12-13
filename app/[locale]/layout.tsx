@@ -8,6 +8,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/footer';
 import { TanstackProvider } from "@/components/providers/tanstack-provider";
 import "./globals.css";
+import { headers } from "next/headers";
 
 export const metadata = {
   title: "GITCG Community & Tournaments",
@@ -29,6 +30,11 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: Promise<{locale: string}>;
 }) {
+  const headersList = await headers();
+  //const pathname = headersList.get("x-pathname") || "";
+  const searchParams = new URLSearchParams(headersList.get("x-search") || "");
+  const hideComponents = /*/^\/.+\/weekly\/.+\/.+\/[0-9]\/decks$/.test(pathname) &&*/ searchParams.has("obs");
+
   // Ensure that the incoming 'locale' is valid
   const {locale} = await params;
   if (!hasLocale(routing.locales, locale)) {
@@ -46,11 +52,11 @@ export default async function LocaleLayout({
       </head>
       <body className="antialiased flex flex-col min-h-screen">
         <NextIntlClientProvider messages={messages} locale={locale}>
-          <Navbar locale={locale}/>
+          {!hideComponents && <Navbar locale={locale}/>}
           <main className="flex justify-center flex-grow">
             <TanstackProvider>{children}</TanstackProvider>
           </main>
-          <Footer />
+          {!hideComponents && <Footer />}
         </NextIntlClientProvider>
         <Analytics />
         <SpeedInsights />

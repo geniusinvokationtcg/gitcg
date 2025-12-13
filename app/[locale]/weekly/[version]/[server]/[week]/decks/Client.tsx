@@ -8,7 +8,7 @@ import { getCardName } from "@/utils/cards";
 import { LineupShowcaseForTable } from "@/components/Table";
 import { useLocalCardsData } from "@/hooks/useLocalCardsData";
 import { CustomButton } from "@/components/Button";
-import { ClipboardDocumentIcon, XMarkIcon, MagnifyingGlassPlusIcon, MagnifyingGlassMinusIcon } from "@heroicons/react/24/outline";
+import { ClipboardDocumentIcon, XMarkIcon, MagnifyingGlassPlusIcon, MagnifyingGlassMinusIcon, ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 import { useCopiedPopUp } from "@/hooks/utilities";
 import { handleCopy } from "@/utils/clipboard";
 import { SuccessNotification } from "@/components/PopUp";
@@ -18,7 +18,7 @@ import { useLocalStorage } from "@/hooks/storage";
 import { motion } from "framer-motion"
 import { Backdrop } from "@/components/Backdrop";
 
-export function DecklistDumpPageClient ({ params, csvPaste, duelistRecord, isAdmin }: { params: DecklistDumpPageParams, csvPaste: CsvPasteRowClient[], duelistRecord: DuelistRecord[], isAdmin: boolean }) {
+export default function DecklistDumpPageClient ({ params, csvPaste, duelistRecord, isAdmin }: { params: DecklistDumpPageParams, csvPaste: CsvPasteRowClient[], duelistRecord: DuelistRecord[], isAdmin: boolean }) {
   const { locale, version, server, week } = params
 
   const g = useTranslations("General")
@@ -133,7 +133,15 @@ export function DecklistDumpPageClient ({ params, csvPaste, duelistRecord, isAdm
             {transformedData.map((row, index) =>
               <tr key={row.uid} className={`group items-center px-3 py-0.5 ${index === 0 ? "border-y" : "border-b"} text-xs`}>
                 <td className="w-50 align-middle text-left">
-                  <div className="text-lg md:text-xl font-semibold">{row.duelistHandle || row.teamName}</div>
+                  <div className="text-lg md:text-xl font-semibold whitespace-nowrap flex flex-row gap-1 items-center">
+                    <div>{row.duelistHandle || row.teamName}</div>
+                    {isAdmin && <div>
+                      <ArrowTopRightOnSquareIcon
+                        className="size-4 hover:text-[#AF7637] transition-all duration-200 cursor-pointer"
+                        onClick={() => window.open(`/weekly/${version}/${server}/${week}/decks?obs=duel&top=${row.uid}&bottom=${row.uid}`, "popupWindow", "width=548,height=470")}
+                      />
+                    </div>}
+                  </div>
                   <div className="text-sm md:text-base whitespace-nowrap flex flex-row gap-0.5 items-center">
                     <div>{t("uid_colon")}{row.uid}</div>
                     <div>
