@@ -120,6 +120,8 @@
     "search_query_placeholder": "Cari nama kartu",
     "invalid_card": "Tidak sah",
     "show_invalid_cards": "Tampilkan kartu tidak sah",
+    "teatime_mode": "Mode Teatime",
+    "teatime_mode_explanation": "Pilih 2 kartu karakter, filter akan menampilkan pilihan kartu karakter ketiga yang memungkinkan sehingga terdapat setidaknya 2 kartu karakter dengan elemen, senjata, dan afiliasi yang sama pada dek.",
     "import_deck": "Impor Dek",
     "importing": "Sedang mengimpor…",
     "enter_deckcode_placeholder": "Masukkan kode",

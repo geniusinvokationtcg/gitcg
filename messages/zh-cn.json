@@ -120,6 +120,8 @@
     "search_query_placeholder": "搜索牌名称",
     "invalid_card": "无效",
     "show_invalid_cards": "显示无效牌",
+    "teatime_mode": "茶歇模式",
+    "teatime_mode_explanation": "选择2张角色牌，筛选器将显示可能作为第三张角色牌的选项，使得牌组中至少有2张角色牌在元素、武器和所属上分别相同。",
     "import_deck": "导入牌组",
     "importing": "导入中…",
     "enter_deckcode_placeholder": "输入牌组码",

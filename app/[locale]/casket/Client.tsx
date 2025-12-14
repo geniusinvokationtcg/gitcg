@@ -3,7 +3,7 @@
 import "./style.css"
 import { DeckBuilderPageParams, DeckBuilderPageSearchParams } from "./page"
 import { CardImage } from "@/components/CardImage"
-import { ReactNode, useCallback, useEffect, useId, useMemo, useRef, useState } from "react"
+import { lazy, ReactNode, useCallback, useEffect, useId, useMemo, useRef, useState } from "react"
 import { useLocalCardsData } from "@/hooks/useLocalCardsData"
 import { Checkbox, CustomButton, IconButton } from "@/components/Button"
 import { CardType, PopUpType } from "@/utils/types"
@@ -18,13 +18,19 @@ import { handleCopy } from "@/utils/clipboard"
 import { SuccessNotification } from "@/components/PopUp"
 import { useTranslations } from "next-intl"
 import { Eye } from "@/components/Icons"
-import { XMarkIcon } from "@heroicons/react/24/outline"
+import { QuestionMarkCircleIcon, XMarkIcon } from "@heroicons/react/24/outline"
 import { DialogBox } from "@/components/DialogBox"
 import { Backdrop } from "@/components/Backdrop"
 import { useLocalStorage } from "@/hooks/storage"
 import { HugeiconsIcon } from "@hugeicons/react";
 import { FilterIcon, FilterRemoveIcon } from "@hugeicons/core-free-icons"
 import { usePathname, useRouter } from "next/navigation"
+
+const Tooltip = lazy(() =>
+  import("@/components/Tooltip").then(module => ({
+    default: module.Tooltip,
+  }))
+)
 
 export function DeckBuilderPageClient ({
   params, searchParams
@@ -247,6 +253,11 @@ export function DeckBuilderPageClient ({
       ...characterFilter, categories: temp
     })
   }, [characterFilter])
+  const handleCharacterConfig = useCallback((config_key: keyof CharacterFilter["config"]) => setCharacterFilter({
+    ...characterFilter, config: {
+      ...characterFilter.config, [config_key]: !characterFilter.config[config_key]
+    }
+  }), [characterFilter])
   const handleCharacterSort = useCallback((by: CharacterFilter["sort"]["by"], is_ascending: boolean, dont_remove_by?: boolean) => {
     let newBy: CharacterFilter["sort"]["by"] = by;
     if(characterFilter.sort.by === by && !dont_remove_by) newBy = null;
@@ -311,6 +322,33 @@ export function DeckBuilderPageClient ({
             })
           ) : true
         )
+        && (characterFilter.config.teatime_mode
+          ? (
+            (() => {
+              const cardsDetail = activeCharacterCards.map(activeCard =>
+                localCardsData.characters.find(char => char.id === activeCard.cardId)
+              ).filter(char => char !== undefined);
+
+              if(cardsDetail.length !== 2) return true;
+
+              const elements = cardsDetail.map(activeCard => activeCard.element_type);
+              const weapons = cardsDetail.map(activeCard => activeCard.weapon);
+              const belongs = cardsDetail.flatMap(activeCard => activeCard.belongs).filter(belong => belong !== "");
+
+              const elementCount: Map<number, number> = new Map(); elements.forEach(element => elementCount.set(element, (elementCount.get(element) ?? 0) + 1 ));
+              const weaponCount: Map<string, number> = new Map(); weapons.forEach(weap => weaponCount.set(weap, (weaponCount.get(weap) ?? 0) + 1 ));
+              const belongCount: Map<string, number> = new Map(); belongs.forEach(belong => belongCount.set(belong, (belongCount.get(belong) ?? 0) + 1 ));
+
+              const elementArr = Array.from(elementCount.entries()).sort(([, a], [, b]) => b-a); console.log(elementArr)
+              const weaponArr = Array.from(weaponCount.entries()).sort(([, a], [, b]) => b-a);
+              const belongArr = Array.from(belongCount.entries()).sort(([, a], [, b]) => b-a);
+
+              return (elementArr[0][1] >=2 ? true : elementArr.some(([element]) => c.element_type === element))
+                && (weaponArr[0][1] >=2 ? true : weaponArr.some(([weap]) => c.weapon === weap))
+                && (belongArr[0][1] >=2 ? true : belongArr.some(([belong]) => c.belongs.includes(belong)))
+            })()
+          ) : true
+        )
     }).sort((a, b) => {
       let comparation = 0;
       switch(characterFilter.sort.by) {
@@ -320,7 +358,7 @@ export function DeckBuilderPageClient ({
       return comparation * (characterFilter.sort.is_ascending ? 1 : -1)
     })
     
-  }, [localCardsData, characterFilter, characterSearchQuery])
+  }, [localCardsData, activeCharacterCards, characterFilter, characterSearchQuery])
 
   const filteredActions = useMemo(() => {
     return actions.filter(c => {
@@ -511,6 +549,14 @@ export function DeckBuilderPageClient ({
     </div>
     
     <div className={`relative filter_container ${selectionCardType === "characters" && isFiltering ? "" : "hidden"}`}>
+      <Checkbox className="text-sm" trueCondition={characterFilter.config.teatime_mode} onClick={() => handleCharacterConfig("teatime_mode")}>
+        <div className="flex flex-row gap-1 items-center">
+          <p>{t("teatime_mode")}</p>
+          <Tooltip position="bottom" content={<div className="text-xs w-50">{t("teatime_mode_explanation")}</div>}>
+            <QuestionMarkCircleIcon className="size-4.5 translate-y-0.25"/>
+          </Tooltip>
+        </div>
+      </Checkbox>
       
       <div>
         <div className="filter_category">{term("category.element")}</div>

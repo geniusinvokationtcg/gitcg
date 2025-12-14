@@ -120,6 +120,8 @@
     "search_query_placeholder": "Search cards name",
     "invalid_card": "Invalid",
     "show_invalid_cards": "Show invalid cards",
+    "teatime_mode": "Teatime mode",
+    "teatime_mode_explanation": "Choose 2 character cards, the filter will show possible third character card options such that the deck has at least 2 character cards of the same element, weapon, and affiliation each.",
     "import_deck": "Import Deck",
     "importing": "Importing…",
     "enter_deckcode_placeholder": "Enter deckcode",
