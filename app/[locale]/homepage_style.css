@@ -10,18 +10,18 @@ div.home > * {
   max-width: 840px;
 }
 
-h1 {
+h1.home {
   font-weight: 700;
   text-align: center;
   font-size: clamp(2rem, 4vw, 3rem);
 }
 
-h2 {
+h2.home {
   text-align: center;
   font-size: clamp(1.25rem, 3.5vw, 2.25rem)
 }
 
-h3 {
+h3.home {
   text-align: center;
   font-size: clamp(1.25rem, 2.5vw, 1.5rem);
 }

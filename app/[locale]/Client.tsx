@@ -23,7 +23,7 @@ export default function HomePageClient () {
 
     <div className="home">
       <div className="flex flex-col items-center gap-3">
-        <h1>{h("join_message")}</h1>
+        <h1 className="home">{h("join_message")}</h1>
         <div className="flex flex-wrap gap-2 justify-center">
           <a className="join" href="/discord" target="_blank" rel="noopener noreferrer">{t("General.join")}</a>
           <button className="join" onClick={() => setIsOpen(!isOpen)}>{t("General.tournament_schedule")}</button>
@@ -31,7 +31,7 @@ export default function HomePageClient () {
       </div>
 
       <div className="collapsible">
-        <h3>{t("General.faq")}</h3>
+        <h3 className="home">{t("General.faq")}</h3>
         <details>
           <summary>{h("collapsible.find_tournament_channel_summary")}</summary>
           <div className="flex flex-col gap-2">
