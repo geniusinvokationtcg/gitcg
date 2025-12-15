@@ -11,15 +11,16 @@ import "./globals.css";
 import { headers } from "next/headers";
 
 export const metadata = {
+  keywords: ["genshin tcg", "gitcg" , "genius invokation tcg", "tcg"],
   title: "GITCG Community & Tournaments",
-  description: "GITCG community tournaments database",
+  description: "Genius Invokation TCG community tournaments database, collectible card minigame of Genshin Impact",
   openGraph: {
     title: "GITCG Community & Tournaments",
-    description: "GITCG community tournaments database"
+    description: "Genius Invokation TCG community tournaments database, collectible card minigame of Genshin Impact"
   },
   twitter: {
     title: "GITCG Community & Tournaments",
-    description: "GITCG community tournaments database"
+    description: "Genius Invokation TCG community tournaments database, collectible card minigame of Genshin Impact"
   }
 }
 

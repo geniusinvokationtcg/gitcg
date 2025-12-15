@@ -1,6 +1,7 @@
 {
   "General": {
     "tournament_schedule": "Jadwal Turnamen",
+    "faq": "FAQ",
     "decklist": "Daftar Kartu",
     "matchups": "Pertandingan",
     "lineup": "Susunan",
@@ -25,7 +26,8 @@
     "import": "Impor",
     "export": "Ekspor",
     "sort": "Urutkan",
-    "reset": "Reset"
+    "reset": "Reset",
+    "join": "Gabung"
   },
   "CardsTerminology": {
     "skill_type": {
@@ -111,7 +113,14 @@
   },
   "HomePage": {
     "title": "GITCG Komunitas & Turnamen",
-    "description": "Gabung ke komunitas Discord untuk diskusi, theorycrafting, dan berpartisipasi dalam turnamen GITCG. Cek data turnamen untuk melihat meta terbaru."
+    "description": "Gabung ke komunitas Discord untuk diskusi, theorycrafting, dan berpartisipasi dalam turnamen GITCG. Cek data turnamen untuk melihat meta terbaru.",
+    "join_message": "Gabung ke server Discord untuk berpartisipasi di turnamen",
+    "collapsible": {
+      "find_tournament_channel_summary": "Saya tidak menemukan channel turnamennya",
+      "find_tournament_channel_content": "Buka <roles_channel></roles_channel> dan scroll ke atas sampai ketemu bagian <other_roles_section></other_roles_section> atau bisa juga <direct_link>klik di sini</direct_link>. Kemudian react dengan emoji <trophy_emoji></trophy_emoji> untuk mendapatkan role <role_name></role_name>. Channel <tournaments_channel></tournaments_channel> nanti akan muncul.",
+      "tournament_rule_summary": "Peraturan turnamennya apa saja?",
+      "tournament_rule_content": "Kamu bisa baca peraturan turnamen <link>di sini</link> (bahasa Inggris saja)."
+    }
   },
   "DeckBuilderPage": {
     "title": "Casket of Tomes",

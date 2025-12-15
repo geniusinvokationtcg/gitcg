@@ -1,6 +1,7 @@
 {
   "General": {
     "tournament_schedule": "Tournament Schedule",
+    "faq": "FAQ",
     "decklist": "Decklist",
     "matchups": "Matchups",
     "lineup": "Lineup",
@@ -25,7 +26,8 @@
     "import": "Import",
     "export": "Export",
     "sort": "Sort",
-    "reset": "Reset"
+    "reset": "Reset",
+    "join": "Join"
   },
   "CardsTerminology": {
     "skill_type": {
@@ -111,7 +113,14 @@
   },
   "HomePage": {
     "title": "GITCG Community & Tournaments",
-    "description": "Join our community Discord server to discuss, theorycraft, and participate in GITCG tournaments. Check out the tournament database for current meta decks."
+    "description": "Join our community Discord server to discuss, theorycraft, and participate in GITCG tournaments. Check out the tournament database for current meta decks.",
+    "join_message": "Join our Discord server to participate in tournaments",
+    "collapsible": {
+      "find_tournament_channel_summary": "I can't find the tournament channel",
+      "find_tournament_channel_content": "Go to <roles_channel></roles_channel> and scroll up until you find <other_roles_section></other_roles_section> section or just <direct_link>click this link</direct_link>. Then, react to the <trophy_emoji></trophy_emoji> emoji to get the <role_name></role_name> role. The <tournaments_channel></tournaments_channel> channel would show up.",
+      "tournament_rule_summary": "What are the tournament rules?",
+      "tournament_rule_content": "You can find it in our rulebook <link>here</link>."
+    }
   },
   "DeckBuilderPage": {
     "title": "Casket of Tomes",

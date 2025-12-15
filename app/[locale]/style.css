@@ -1,0 +1,107 @@
+div.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(8px, 2vw, 24px);
+  padding: 32px;
+}
+
+div.home > * {
+  max-width: 840px;
+}
+
+h1 {
+  font-weight: 700;
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h2 {
+  text-align: center;
+  font-size: clamp(1.25rem, 3.5vw, 2.25rem)
+}
+
+h3 {
+  text-align: center;
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+}
+
+.img_wrapper {
+  width: min(90vw, 1080px);
+}
+
+.join {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-width: 2.5px;
+  border-color: black;
+  border-radius: 8px;
+  padding: 6px 12px;
+  width: min(70vw, 240px);
+  height: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.6;
+  transition: all 200ms ease;
+}
+.join:hover {
+  border-color: transparent;
+  font-size: 1.15rem;
+  color: white;
+  font-weight: 700;
+  background-color: #AF7637;
+}
+
+.collapsible {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+summary {
+  position: relative;
+  list-style: none;
+  cursor: pointer;
+  padding: 12px 16px 12px 32px;
+  border-width: 1px;
+  border-radius: 0.5rem;
+  transition: all 200ms ease;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+summary:hover {
+  background-color: #f3f4f6;
+}
+
+details summary::before {
+  content: "+";
+  position: absolute;
+  left: 10px;
+  translate: 0 -0.1rem;
+  width: 1rem;
+  text-align: center;
+}
+details[open] summary::before {
+  content: "-";
+}
+
+details > :nth-child(2) {
+  padding: 8px;
+}
+
+.highlight {
+  border-radius: 0.25rem;
+  background-color: #f3f4f6;
+  padding: 0 6px;
+  font-weight: 600;
+  color: black;
+}
+
+.icon {
+  display: inline-block;
+  translate: 0 0.1rem;
+}

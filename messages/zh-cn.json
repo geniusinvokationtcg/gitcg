@@ -1,6 +1,7 @@
 {
   "General": {
     "tournament_schedule": "赛事赛程",
+    "faq": "常见问题",
     "decklist": "牌组",
     "matchups": "对阵",
     "lineup": "阵容",
@@ -25,7 +26,8 @@
     "import": "导入",
     "export": "导出",
     "sort": "排序",
-    "reset": "重置"
+    "reset": "重置",
+    "join": "加入"
   },
   "CardsTerminology": {
     "skill_type": {
@@ -111,7 +113,14 @@
   },
   "HomePage": {
     "title": "GITCG《七圣召唤》玩家社区与赛事",
-    "description": "加入GITCG的Discord社区，讨论七圣召唤、牌组构筑、参加七圣召唤赛事。打开赛事数据库查看当前主流牌组。"
+    "description": "加入GITCG的Discord社区，讨论七圣召唤、牌组构筑、参加七圣召唤赛事。打开赛事数据库查看当前主流牌组。",
+    "join_message": "加入GITCG的Discord服务器，参与赛事",
+    "collapsible": {
+      "find_tournament_channel_summary": "我找不到赛事频道",
+      "find_tournament_channel_content": "前往<roles_channel></roles_channel>，向上滚动，找到<other_roles_section></other_roles_section>部分，或直接<direct_link>点击此链接</direct_link>。然后对<trophy_emoji></trophy_emoji>表情作出反应获取<role_name></role_name>身份组。完成后<tournaments_channel></tournaments_channel>频道将会显示。",
+      "tournament_rule_summary": "赛事规则是什么？",
+      "tournament_rule_content": "你可以<link>点击这里</link>查看赛事规则。（仅限英文）"
+    }
   },
   "DeckBuilderPage": {
     "title": "秘典之盒",
