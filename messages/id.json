@@ -24,7 +24,8 @@
     "cancel": "Batal",
     "import": "Impor",
     "export": "Ekspor",
-    "sort": "Urutkan"
+    "sort": "Urutkan",
+    "reset": "Reset"
   },
   "CardsTerminology": {
     "skill_type": {

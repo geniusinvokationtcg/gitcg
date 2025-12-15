@@ -24,7 +24,8 @@
     "cancel": "Cancel",
     "import": "Import",
     "export": "Export",
-    "sort": "Sort"
+    "sort": "Sort",
+    "reset": "Reset"
   },
   "CardsTerminology": {
     "skill_type": {

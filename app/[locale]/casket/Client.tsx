@@ -197,60 +197,35 @@ export function DeckBuilderPageClient ({
     })()
   }), [localCardsData])
 
-  const [characterFilter, setCharacterFilter] = useState<CharacterFilter>({
-    categories: {
-      element: [],
-      weapon: [],
-      affiliation: [],
-      hp: [],
-      skill_cost: []
-    },
-    config: {
-      teatime_mode: false
-    },
-    sort: {
-      by: null,
-      is_ascending: true
-    }
-  })
+  const [characterFilter, setCharacterFilter] = useState<CharacterFilter>(defaultCharacterFilter)
   const characterFilterAmount = useMemo(() =>
     Object.values(characterFilter.categories).reduce((a, arr) => a + arr.length, 0)
     + Object.values(characterFilter.config).reduce((a, key) => a + (key ? 1 : 0), 0)
     + (characterFilter.sort.by ? 1 : 0), [characterFilter]
   )
-  const [actionFilter, setActionFilter] = useState<ActionFilter>({
-    categories: {
-      type: [],
-      tag: [],
-      cost: [],
-    },
-    config: {
-      show_invalid: false
-    },
-    sort: {
-      by: null,
-      is_ascending: true
-    }
-  })
+
+  const [actionFilter, setActionFilter] = useState<ActionFilter>(defaultActionFilter)
   const actionFilterAmount = useMemo(() =>
     Object.values(actionFilter.categories).reduce((a, arr) => a + arr.length, 0)
     + Object.values(actionFilter.config).reduce((a, key) => a + (key ? 1 : 0), 0)
     + (actionFilter.sort.by ? 1 : 0), [actionFilter]
   )
+
   const handleCharacterFilter = useCallback((category: keyof CharacterFilter["categories"], item: string) => {
-    let temp = characterFilter.categories;
-    const items = temp[category];
-    const index = items.indexOf(item);
+    setCharacterFilter(prev => {
+      const items = prev.categories[category];
 
-    if(index < 0) {
-      items.push(item);
-    } else {
-      items.splice(index, 1);
-    }
-    temp[category] = items;
-
-    setCharacterFilter({
-      ...characterFilter, categories: temp
+      const newItems = items.includes(item)
+        ? items.filter(i => i !== item) //remove
+        : [...items, item] //add
+      
+      return {
+        ...prev,
+        categories: {
+          ...prev.categories,
+          [category]: newItems
+        }
+      }
     })
   }, [characterFilter])
   const handleCharacterConfig = useCallback((config_key: keyof CharacterFilter["config"]) => setCharacterFilter({
@@ -265,20 +240,22 @@ export function DeckBuilderPageClient ({
       ...characterFilter, sort: { by: newBy, is_ascending }
     })
   }, [characterFilter])
+
   const handleActionFilter = useCallback((category: keyof ActionFilter["categories"], item: string) => {
-    let temp = actionFilter.categories;
-    const items = temp[category];
-    const index = items.indexOf(item);
+    setActionFilter(prev => {
+      const items = prev.categories[category];
 
-    if(index < 0) {
-      items.push(item);
-    } else {
-      items.splice(index, 1);
-    }
-    temp[category] = items;
-
-    setActionFilter({
-      ...actionFilter, categories: temp
+      const newItems = items.includes(item)
+        ? items.filter(i => i !== item) //remove
+        : [...items, item] //add
+      
+      return {
+        ...prev,
+        categories: {
+          ...prev.categories,
+          [category]: newItems
+        }
+      }
     })
   }, [actionFilter])
   const handleActionConfig = useCallback((config_key: keyof ActionFilter["config"]) => setActionFilter({
@@ -666,6 +643,14 @@ export function DeckBuilderPageClient ({
         </div>
       </div>
 
+      <div className="flex flex-row gap-1 justify-center items-center my-2">
+        <CustomButton
+          buttonText={g("reset")}
+          textSize="xs"
+          onClick={() => setCharacterFilter(defaultCharacterFilter)}
+        />
+      </div>
+
     </div>
 
     <div className={`filter_container ${selectionCardType === "actions" && isFiltering ? "" : "hidden"}`}>
@@ -747,6 +732,14 @@ export function DeckBuilderPageClient ({
             disabled={actionFilter.sort.by === null}
           >{g("descending")}</Checkbox>
         </div>
+      </div>
+
+      <div className="flex flex-row gap-1 justify-center items-center my-2">
+        <CustomButton
+          buttonText={g("reset")}
+          textSize="xs"
+          onClick={() => setActionFilter(defaultActionFilter)}
+        />
       </div>
       
     </div>
@@ -914,6 +907,37 @@ const unwantedCostIcons = [ //for actions
 
 const characterSortable = ["name", "hp"];
 const actionSortable = ["name", "cost"];
+
+const defaultCharacterFilter = {
+  categories: {
+    element: [],
+    weapon: [],
+    affiliation: [],
+    hp: [],
+    skill_cost: []
+  },
+  config: {
+    teatime_mode: false
+  },
+  sort: {
+    by: null,
+    is_ascending: true
+  }
+}
+const defaultActionFilter = {
+  categories: {
+    type: [],
+    tag: [],
+    cost: [],
+  },
+  config: {
+    show_invalid: false
+  },
+  sort: {
+    by: null,
+    is_ascending: true
+  }
+}
 
 const activationConstraint = {
   activationConstraint: {
