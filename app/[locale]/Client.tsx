@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl"
 import { gameVersion } from "@/utils/version"
-import "./style.css"
+import "./homepage_style.css"
 import { useState } from "react"
 import { DialogBox } from "@/components/DialogBox"
 import { Backdrop } from "@/components/Backdrop"
@@ -37,12 +37,12 @@ export default function HomePageClient () {
           <div className="flex flex-col gap-2">
             <p>
               {h.rich("collapsible.find_tournament_channel_content", {
-                roles_channel: () => <span className="highlight">#roles</span>,
-                other_roles_section: () => <span className="highlight">Other Roles</span>,
+                roles_channel: () => <span className="strong">#roles</span>,
+                other_roles_section: () => <span className="strong">Other Roles</span>,
                 direct_link: (chunk) => <a className="clickable_text" href="https://discord.com/channels/1016377670348587058/1098572911230582934/1098692503613485167" target="_blank" rel="noopener noreferrer">{chunk}</a>,
                 trophy_emoji: () => <span className="icon">{DiscordTrophyEmoji}</span>,
-                role_name: () => <span className="highlight">Access: Tournaments</span>,
-                tournaments_channel: () => <a className="highlight" href="https://discord.com/channels/1016377670348587058/1049254049356197908" target="_blank" rel="noopener noreferrer">#tournaments</a>
+                role_name: () => <span className="strong">Access: Tournaments</span>,
+                tournaments_channel: () => <a className="strong" href="https://discord.com/channels/1016377670348587058/1049254049356197908" target="_blank" rel="noopener noreferrer">#tournaments</a>
               })}
             </p>
             <img src="/guide/gitcg_roles.png" loading="lazy"/>
