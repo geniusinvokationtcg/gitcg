@@ -6,7 +6,7 @@ import { getVerLabel } from "@/utils/version";
 import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-export default function Plate ({ params, round }: { params: DecklistDumpPageParams, round?: number }) {
+export default function Plate ({ params, round, msg }: { params: DecklistDumpPageParams, round?: number, msg?: string }) {
   const { locale, version, server, week } = params;
   
   const Logo = <img src={"/gitcg_weekly_logo.png"} className="object-none translate-y-[5.5px]"/>
@@ -22,7 +22,7 @@ export default function Plate ({ params, round }: { params: DecklistDumpPagePara
       >
         {`${getVerLabel(version, locale)} ${getServerLabel(server, locale)}`}
         <br/>
-        {`Week ${week} ${round ? `Round ${round}` : ""}`}
+        {msg || `Week ${week} ${round ? `Round ${round}` : ""}`}
       </p>
     </div>, [params, round]
   )

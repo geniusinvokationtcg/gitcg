@@ -25,6 +25,7 @@ interface DecklistDumpPageSearchParams {
   top?: number
   bottom?: number
   round?: number
+  msg?: string
 }
 
 export const revalidate = 60;
@@ -61,7 +62,7 @@ export default async function DecklistDumpPage ({ params, searchParams }: { para
     if(!servers.includes(server)) notFound()
 
     if(q.obs === "plate") return <Suspense>
-      <Plate params={p} round={q.round}/>
+      <Plate params={p} round={q.round} msg={q.msg}/>
     </Suspense>
 
     const _csvLink = await getCsvLink(version, week, server);
