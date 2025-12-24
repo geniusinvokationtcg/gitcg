@@ -85,6 +85,24 @@ function commonSeasons(key: string): Season[] {
       best_finish: 2,
       qualification_type: "min",
       qualification_threshold: 8
+    },
+    {
+      versions: ["5-0"],
+      best_finish: 2,
+      qualification_type: "min",
+      qualification_threshold: 8
+    },
+    {
+      versions: ["4-8"],
+      best_finish: 2,
+      qualification_type: "min",
+      qualification_threshold: 8
+    },
+    {
+      versions: ["4-7"],
+      best_finish: 2,
+      qualification_type: "min",
+      qualification_threshold: 8
     }
   ]
   return []

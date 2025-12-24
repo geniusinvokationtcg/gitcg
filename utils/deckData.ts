@@ -24,7 +24,14 @@ function extractUniqueCharacters(data: MatchData[]) {
 }
 
 function extractDataByPlayer(data: MatchData[]) {
-  const seen = new Map();
+  const seen: Map<string, {
+    player: string
+    deckcode: string
+    characters: string
+    server: "AS" | "EU" | "NA"
+    week: number
+    game: number
+  }> = new Map();
   data.forEach(row => {
     const key = `${row.player1}||${row.characters1}||${row.week}||${row.server}`;
     if(!seen.has(key)) seen.set(key, {
@@ -32,7 +39,8 @@ function extractDataByPlayer(data: MatchData[]) {
       deckcode: row.deckcode1,
       characters: row.characters1,
       server: row.server,
-      week: row.week
+      week: row.week,
+      game: row.game
     });
   });
   data.filter(row => !row.isBye).forEach(row => {
@@ -42,7 +50,8 @@ function extractDataByPlayer(data: MatchData[]) {
       deckcode: row.deckcode2,
       characters: row.characters2,
       server: row.server,
-      week: row.week
+      week: row.week,
+      game: row.game
     });
   });
   return Array.from(seen.values());
@@ -58,18 +67,18 @@ function calculateDeckStat(data: MatchData[], char: string): DeckData {
   const playerDataByCharWithResult: PlayerDataWithResult[] = playerDataByChar.map(row => ({
     ...row,
     w: data.reduce((a, r) => {
-      if(r.player1 === row.player && r.characters1 === char && r.week === row.week && r.server === row.server) a += r.score1;
-      if(r.player2 === row.player && r.characters2 === char && r.week === row.week && r.server === row.server) a += r.score2;
+      if(r.player1 === row.player && r.characters1 === char && r.week === row.week && r.server === row.server && r.game <= 5) a += r.score1;
+      if(r.player2 === row.player && r.characters2 === char && r.week === row.week && r.server === row.server && r.game <= 5) a += r.score2;
       return a;
     }, 0),
     t: data.reduce((a, r) => {
-      if(r.player1 === row.player && r.characters1 === char && r.week === row.week && r.server === row.server && r.isTie) a += 1;
-      if(r.player2 === row.player && r.characters2 === char && r.week === row.week && r.server === row.server && r.isTie) a += 1;
+      if(r.player1 === row.player && r.characters1 === char && r.week === row.week && r.server === row.server && r.isTie && r.game <= 5) a += 1;
+      if(r.player2 === row.player && r.characters2 === char && r.week === row.week && r.server === row.server && r.isTie && r.game <= 5) a += 1;
       return a;
     }, 0),
     l: data.reduce((a, r) => {
-      if(r.player1 === row.player && r.characters1 === char && r.week === row.week && r.server === row.server && r.score1 === 0 && !r.isTie) a += 1;
-      if(r.player2 === row.player && r.characters2 === char && r.week === row.week && r.server === row.server && r.score2 === 0 && !r.isTie) a += 1;
+      if(r.player1 === row.player && r.characters1 === char && r.week === row.week && r.server === row.server && r.score1 === 0 && !r.isTie && r.game <= 5) a += 1;
+      if(r.player2 === row.player && r.characters2 === char && r.week === row.week && r.server === row.server && r.score2 === 0 && !r.isTie && r.game <= 5) a += 1;
       return a;
     }, 0)
   }));
