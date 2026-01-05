@@ -187,7 +187,7 @@
       "win_rate_nomirror": "Tỉ Lệ Thắng <break></break>(không tính mirror)",
       "stderr_nomirror": "Sai Số Chuẩn <break></break>(không tính mirror)",
       "tie_count": "Tổng Trận Hoà",
-      "weekly_participation": "Người Tham Gia",
+      "weekly_participation": "Số Tuần Tham Gia",
       "game_count": "Game"
     }
   },
