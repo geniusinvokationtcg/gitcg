@@ -25,6 +25,7 @@ import { useLocalStorage } from "@/hooks/storage"
 import { HugeiconsIcon } from "@hugeicons/react";
 import { FilterIcon, FilterRemoveIcon } from "@hugeicons/core-free-icons"
 import { usePathname, useRouter } from "next/navigation"
+import { normalizeSearchText } from "@/utils/formatting"
 
 const Tooltip = lazy(() =>
   import("@/components/Tooltip").then(module => ({
@@ -276,7 +277,7 @@ export function DeckBuilderPageClient ({
       const element = getElement(c.element_type);
       const categories = characterFilter.categories;
 
-      return (c.name.toLowerCase().includes(characterSearchQuery.toLowerCase()))
+      return (normalizeSearchText(c.name, locale).includes( normalizeSearchText(characterSearchQuery, locale) ))
         && (element && categories.element.length > 0 ? categories.element.includes(element) : true)
         && (categories.weapon.length > 0 ? categories.weapon.some(weap => term(weap) === c.weapon) : true)
         && (categories.affiliation.length > 0
@@ -341,7 +342,7 @@ export function DeckBuilderPageClient ({
     return actions.filter(c => {
       const categories = actionFilter.categories;
 
-      return (c.name.toLowerCase().includes(actionSearchQuery.toLowerCase()))
+      return (normalizeSearchText(c.name, locale).includes( normalizeSearchText(actionSearchQuery, locale) ))
         && (actionFilter.config.show_invalid || c.isValid)
         && (categories.type.length > 0 ? categories.type.some(_type => term(_type) === c.action_type) : true)
         && (categories.tag.length > 0

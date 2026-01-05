@@ -14,6 +14,7 @@ export const servers = ["na", "eu", "as"]
 export const languages: { locale: Locales, name: string }[] =[
   { locale: "en", name: "English" },
   { locale: "id", name: "Indonesia" },
+  { locale: "vi", name: "Tiếng Việt" },
   { locale: "zh-cn", name: "简体中文" },
 ]
 
