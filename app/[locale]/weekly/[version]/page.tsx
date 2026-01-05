@@ -149,7 +149,7 @@ export default function WeeklyStatPageClient({ params }: { params: Promise<{ loc
             <th className="sticky left-0 z-10 bg-gray-200 deck_column_width">{tableHeader.find(h => h.key === "deck")?.title}</th>
             {tableHeader.toSpliced(0, 1).filter(col => col.isShown).map((col) => (
               <ColumnHeaderWithSorter<DeckData>
-                text={<span className={`${locale === "zh-cn" ? "whitespace-nowrap" : ""}`}>
+                text={<span className={`${["zh-cn", "vi"].includes(locale) ? "whitespace-nowrap" : ""}`}>
                   {h.rich(col.key, {break: () => <br />})}
                 </span>}
                 key={col.key}
