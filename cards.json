@@ -753,7 +753,7 @@
         "Arkhe: Pneuma",
         ""
       ],
-      "hp": "10",
+      "hp": "11",
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/6743cf8a6f1f1c0cf939cbb5b1a100d2.png"
     },
     {
@@ -1140,6 +1140,89 @@
       ],
       "hp": "11",
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/692f7dae/30524c3bd8ab6ad0b4ee20ae799956b8.png"
+    },
+    {
+      "id": 1116,
+      "name": "Skirk",
+      "element_type": 301,
+      "role_skill_infos": [
+        {
+          "skill_text": "Deals 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>Physical DMG</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "11",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/412134fa7fc8a73b5e20c177a3ae0046.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Normal Attack"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/3f016e2d606ca39ea86e24d5245dfa5b.png",
+          "name": "Havoc: Sunder",
+          "id": "11161"
+        },
+        {
+          "skill_text": "Gains 2 <color=#FFFFFFFF>Serpent's Subtlety</color>, then creates 1 <color=#FFFFFFFF>Mutual Weapons Mentorship</color> and adds it to your Hand. (Once per Round)",
+          "skill_costs": [
+            {
+              "cost_type": "11",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/412134fa7fc8a73b5e20c177a3ae0046.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Elemental Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6851f3bf/9ff9843045796b5cd4fa6a5eb4d8554a.png",
+          "name": "Havoc: Warp",
+          "id": "11162"
+        },
+        {
+          "skill_text": "Consumes all <color=#FFFFFFFF>Serpent's Subtlety</color>, deals <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/924fba80b9137b4e8fdf5871aa22d666.png' /><color=#99FFFFFF>Cryo DMG</color> equal to the <color=#FFFFFFFF>Serpent's Subtlety</color> consumed, and deals 2 <color=#FFFFFFFF>Piercing DMG</color> to characters on standby. If 7 <color=#FFFFFFFF>Serpent's Subtlety</color> are consumed, deal 3 <color=#FFFFFFFF>Piercing DMG</color> to characters on standby instead.",
+          "skill_costs": [
+            {
+              "cost_type": "11",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/412134fa7fc8a73b5e20c177a3ae0046.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "20",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Elemental Burst"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6966dce5/92ac0a8581ae3bd406b804fc79724478.png",
+          "name": "Havoc: Ruin",
+          "id": "11163"
+        },
+        {
+          "skill_text": "(Passive) Skirk is unable to gain Energy but can now accumulate up to 7 points of <color=#FFFFFFFF>Serpent's Subtlety</color>.\\n<color=#FFFFFFFF>After you trigger Frozen, Cryo Swirl, Superconduct, or Cryo Crystallize reactions:</color> Create 1 <color=#FFFFFFFF>Void Rift</color> in your hand. (3 times per Round)",
+          "skill_costs": [],
+          "type": [
+            "Passive Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6966dce5/4794a9840c053cad18c7d5915dd51212.png",
+          "name": "Reason Beyond Reason",
+          "id": "11164"
+        }
+      ],
+      "weapon": "Sword",
+      "belongs": [
+        "Cosmic Calamity",
+        "",
+        ""
+      ],
+      "hp": "10",
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6966dcbb/792673111d3461580f1344757ed93abb.png"
     },
     {
       "id": 1201,
@@ -1596,7 +1679,7 @@
         "",
         ""
       ],
-      "hp": "10",
+      "hp": "11",
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/f03323c9496016cd1aea4a5c886e5103.png"
     },
     {
@@ -2694,7 +2777,7 @@
           "id": "13082"
         },
         {
-          "skill_text": "Deals 3 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FF9999FF>Pyro DMG</color>, attaches <color=#FFFFFFFF>Scarlet Seal</color> and <color=#FFFFFFFF>Brilliance</color> to this character.",
+          "skill_text": "Deals 4 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FF9999FF>Pyro DMG</color>, attaches <color=#FFFFFFFF>Scarlet Seal</color> and <color=#FFFFFFFF>Brilliance</color> to this character.",
           "skill_costs": [
             {
               "cost_type": "13",
@@ -2956,7 +3039,7 @@
         "",
         ""
       ],
-      "hp": "10",
+      "hp": "12",
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/893d387c64630556f9fb4a9f59a3a733.png"
     },
     {
@@ -4498,6 +4581,89 @@
       ],
       "hp": "10",
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68f81eac/53efa3b6eabfd2cf5f1d05633042056a.png"
+    },
+    {
+      "id": 1416,
+      "name": "Ororon",
+      "element_type": 304,
+      "role_skill_infos": [
+        {
+          "skill_text": "Deals 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>Physical DMG</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "14",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0a7a50d15a7580c4de07a41f87a95787.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Normal Attack"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/cc29fde34aa6d42f8e110628a4bf2de2.png",
+          "name": "Spiritvessel Snapshot",
+          "id": "14161"
+        },
+        {
+          "skill_text": "Deals 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><color=#FFACFFFF>Electro DMG</color> and creates a <color=#FFFFFFFF>Spirit Orb</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "14",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0a7a50d15a7580c4de07a41f87a95787.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "Elemental Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/2e33112c8ac4b8d1a04b74836f04acd0.png",
+          "name": "Night's Sling",
+          "id": "14162"
+        },
+        {
+          "skill_text": "Deals 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><color=#FFACFFFF>Electro DMG</color> and summons <color=#FFFFFFFF>Supersonic Oculus</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "14",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0a7a50d15a7580c4de07a41f87a95787.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Elemental Burst"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6966dce5/a271eaeb2aebfe54ee965b861fad5746.png",
+          "name": "Dark Voices Echo",
+          "id": "14163"
+        },
+        {
+          "skill_text": "(Passive) <color=#FFFFFFFF>After you trigger Electro-Charged:</color> If possible, consume 2 <color=#FFFFFFFF>Nightsoul points</color> to deal 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><color=#FFACFFFF>Electro DMG</color>.\\nAfter you deal <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>Hydro DMG</color> or <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><color=#FFACFFFF>Electro DMG</color> from a source other than this skill, enter <color=#FFFFFFFF>Nightsoul's Blessing</color> and gain 1 <color=#FFFFFFFF>Nightsoul point</color>. (Once per Round)",
+          "skill_costs": [],
+          "type": [
+            "Passive Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6966dce5/e33bafa14b8c9c66ed81043c178aa282.png",
+          "name": "Nightshade Synesthesia",
+          "id": "14164"
+        }
+      ],
+      "weapon": "Bow",
+      "belongs": [
+        "Natlan",
+        "",
+        ""
+      ],
+      "hp": "10",
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6966dcbb/b5c814d87bb619b8f0da38e463b26c5b.png"
     },
     {
       "id": 1501,
@@ -6523,7 +6689,7 @@
         "",
         ""
       ],
-      "hp": "10",
+      "hp": "11",
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/dfdb17a8038971bcd7bb14481c509a68.png"
     },
     {
@@ -7853,7 +8019,7 @@
       "weapon": "Other Weapons",
       "belongs": [
         "Monster",
-        "",
+        "Cosmic Calamity",
         ""
       ],
       "hp": "5",
@@ -8012,8 +8178,91 @@
         "",
         ""
       ],
-      "hp": "12",
+      "hp": "11",
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/5fc668b6b1415d5ad341d5ff9accb5b6.png"
+    },
+    {
+      "id": 2207,
+      "name": "Consecrated Horned Crocodile",
+      "element_type": 302,
+      "role_skill_infos": [
+        {
+          "skill_text": "Deals 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>Physical DMG</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Normal Attack"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/4ef5373e27e14926f2fec5ffa0511440.png",
+          "name": "Fang Bite",
+          "id": "22071"
+        },
+        {
+          "skill_text": "Deals 3 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>Hydro DMG</color>, puts up to 1 card with the highest original Elemental Dice cost in your Hand at the bottom of your deck, then creates 1 <color=#FFFFFFFF>Bonecruncher's Energy Block</color> and adds it to your Hand.",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "Elemental Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/36a0bb6649e9bb94f8846c03161cb601.png",
+          "name": "Saw-Toothed Surge",
+          "id": "22072"
+        },
+        {
+          "skill_text": "Deals 4 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>Hydro DMG</color>, then <color=#FFFFFFFF>Discard</color>s up to 3 <color=#FFFFFFFF>Bonecruncher's Energy Block</color> cards. For each of those cards <color=#FFFFFFFF>Discard</color>ed, heal the character on your team that has taken the most damage for 1 HP and increase their Max HP by 1.",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Elemental Burst"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/3bb336fc4d536e0b503e979b8bba66c1.png",
+          "name": "Reptilian Rage",
+          "id": "22073"
+        },
+        {
+          "skill_text": "(Passive) After you play or discard a <color=#FFFFFFFF>Bonecruncher's Energy Block</color> card, heal the character on your team that has taken the most damage for 1 HP.",
+          "skill_costs": [],
+          "type": [
+            "Passive Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/5119de14ea0197b3d23a6b16a2766439.png",
+          "name": "Consecrated Senses",
+          "id": "22074"
+        }
+      ],
+      "weapon": "Other Weapons",
+      "belongs": [
+        "Monster",
+        "Consecrated Beast",
+        ""
+      ],
+      "hp": "11",
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/49d8176cf43a866b88bed5709e6a80c5.png"
     },
     {
       "id": 2301,
@@ -8427,7 +8676,7 @@
         "",
         ""
       ],
-      "hp": "12",
+      "hp": "11",
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68c0b19c/6abd1453ffdf05be5e77fb804b40c403.png"
     },
     {
@@ -10136,6 +10385,26 @@
       "is_special": false
     },
     {
+      "id": 211161,
+      "name": "Far to Fall",
+      "content": "<color=#FFFFFFFF>Fast Action</color>: Equip this to your <color=#FFFFFFFF>Skirk</color>.\\n<color=#FFFFFFFF>When your Skirk has this card equipped and is on the field, when you play or <color=#FFFFFFFF>Discard</color> Void Rift:</color> Deal 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/924fba80b9137b4e8fdf5871aa22d666.png' /><color=#99FFFFFF>Cryo DMG</color> to the opponent's active character. (Once per Round)\\n(You must have Skirk in your deck to add this card to your deck.)",
+      "action_type": "Equipment Cards",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/17d89519af925fc46075404a350a3009_6395321278147437046.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "Talent",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6966dcbb/68c6db1af291f5a3ac1de30e673b4110.png",
+      "is_special": false
+    },
+    {
       "id": 212011,
       "name": "Glorious Season",
       "content": "<color=#FFFFFFFF>Combat Action</color>: When your active character is <color=#FFFFFFFF>Barbara</color>, equip this card.\\nAfter Barbara equips this card, immediately use <color=#FFD780FF>Let the Show Begin♪</color> once.\\nWhen your Barbara, who has this card equipped, is on the field, <color=#FFFFFFFF>Melody Loop</color> will allow you to spend 1 fewer Elemental Die the next time you use \"Switch Character.\" (Once per round)\\n(You must have Barbara in your deck to add this card to your deck.)",
@@ -10238,7 +10507,7 @@
     {
       "id": 212061,
       "name": "Kyouka Fuushi",
-      "content": "<color=#FFFFFFFF>Combat Action</color>: When your active character is <color=#FFFFFFFF>Kamisato Ayato</color>, equip this card.\\nAfter Kamisato Ayato equips this card, immediately use <color=#FFD780FF>Kamisato Art: Kyouka</color> once.\\nWhen your Kamisato Ayato, who has this card equipped, triggers the effects of <color=#FFFFFFFF>Takimeguri Kanka</color>, deal +2 additional DMG if the target's remaining HP is equal to or less than 6.\\n(You must have Kamisato Ayato in your deck to add this card to your deck.)",
+      "content": "<color=#FFFFFFFF>Combat Action</color>: When your active character is <color=#FFFFFFFF>Kamisato Ayato</color>, equip this card.\\nAfter Kamisato Ayato equips this card, immediately use <color=#FFD780FF>Kamisato Art: Kyouka</color> once.\\nAfter Kamisato Ayato, who has <color=#FFFFFFFF>Takimeguri Kanka</color> attached, uses a Normal Attack: The character to which this is attached spends 2 fewer <color=#FF9999FF><color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png' />Unaligned Element</color></color> the next time they use a Normal Attack this Round. (That Normal Attack will not trigger this card's effect)\\n(You must have Kamisato Ayato in your deck to add this card to your deck.)",
       "action_type": "Equipment Cards",
       "rank_id": 0,
       "cost_num1": "3",
@@ -11016,6 +11285,26 @@
       "is_special": false
     },
     {
+      "id": 214161,
+      "name": "Trails Amidst the Forest Fog",
+      "content": "<color=#FFFFFFFF>Fast Action</color>: Equip this to your <color=#FFFFFFFF>Ororon</color>.\\nThe first Electro-Charged reaction you trigger each Round deals +1 Piercing DMG.\\n(You must have Ororon in your deck to add this card to your deck.)",
+      "action_type": "Equipment Cards",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/f7048dd5a016ad50724e4adb302a131e_1957506487216936243.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "Talent",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6966dcbb/b9bc0c851a911ffa1a15887a77628661.png",
+      "is_special": false
+    },
+    {
       "id": 215011,
       "name": "Chaotic Entropy",
       "content": "<color=#FFFFFFFF>Combat Action</color>: When your active character is <color=#FFFFFFFF>Sucrose</color>, equip this card.\\nAfter Sucrose equips this card, immediately use <color=#FFD780FF>Forbidden Creation - Isomer 75 / Type II</color> once.\\nAfter the <color=#FFFFFFFF>Large Wind Spirit</color> created by your Sucrose, who had this card equipped, has converted to another Elemental Type: Deal +1 DMG of this Elemental Type.\\n(You must have Sucrose in your deck to add this card to your deck.)",
@@ -11541,7 +11830,7 @@
       "content": "<color=#FFFFFFFF>Combat Action</color>: When your active character is <color=#FFFFFFFF>Collei</color>, equip this card.\\nAfter Collei equips this card, immediately use <color=#FFD780FF>Floral Brush</color> once.\\nAfter your Collei, who has this card equipped, <color=#FFFFFFFF>uses Floral Brush</color>, during this Round, when your characters' Skills trigger <color=#7EC236FF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' />Dendro-Related Reactions</color>: Deal 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' /><color=#7EC236FF>Dendro DMG</color>. (Once per Round)\\n(You must have Collei in your deck to add this card to your deck.)",
       "action_type": "Equipment Cards",
       "rank_id": 0,
-      "cost_num1": "4",
+      "cost_num1": "3",
       "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/7187c0cc6441821b895062980ac096c9_6446026439481236429.png",
       "cost_num2": "0",
       "cost_type2_icon": "",
@@ -11767,7 +12056,7 @@
       "cost_type2_icon": "",
       "action_card_tags": [
         "Talent",
-        "Damage Reduction",
+        "",
         "",
         "",
         ""
@@ -11933,6 +12222,26 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68f81eac/d7281f1639bc2717a10470ec3d85ee7f.png",
+      "is_special": false
+    },
+    {
+      "id": 222071,
+      "name": "Deathly Overflow",
+      "content": "<color=#FFFFFFFF>Fast Action</color>: Equip to your <color=#FFFFFFFF>Consecrated Horned Crocodile</color>.\\n<color=#FFFFFFFF>When played:</color> Create 1 <color=#FFFFFFFF>Bonecruncher's Energy Block</color> and add it to your Hand.\\nWhen your Consecrated Horned Crocodile, who has this card equipped, is on the field and after you use <color=#FFFFFFFF>Bonecruncher's Energy Block</color>, heal the character on your team who has taken the most DMG for 1 HP.\\n(You must have Consecrated Horned Crocodile in your deck to add this card to your deck.)",
+      "action_type": "Equipment Cards",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/bc5ce21badb7be88e4a6a2140c3ef535_8185592904156259932.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "Talent",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6966dcbb/2452380125303d9dcfa0dd256e8062a4.png",
       "is_special": false
     },
     {
@@ -12596,6 +12905,26 @@
       "is_special": false
     },
     {
+      "id": 311112,
+      "name": "Starcaller's Watch",
+      "content": "<color=#FFFFFFFF>The first time each round you play a card whose name was not in your initial deck:</color> That card costs 1 fewer Elemental Die. The attached character deals +1 DMG the next time they deal DMG. (Can stack up to 2 stacks)\\n(<color=#FFFFFFFF>Only <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/1643452964b58e2e69e64e2b5d3b5878.png' />Catalyst Characters</color> can equip this. A character can equip a maximum of 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/49acb071b0d634ded17cb788d9f520ed.png' />Weapon)",
+      "action_type": "Equipment Cards",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/3367995a8344bccc77b2d9f794c1bbd2_3133187640885784967.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "Weapon",
+        "Catalyst",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6966dcbb/9e399f4351cf68e96cc0929ef239a781.png",
+      "is_special": false
+    },
+    {
       "id": 311201,
       "name": "Raven Bow",
       "content": "<color=#FFFFFFFF>The character deals +1 DMG</color>.\\n(<color=#FFFFFFFF>Only <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/9b142cbc6e2e5e472ff1c37a78d7dd77.png' />Bow Characters</color> can equip this. A character can equip a maximum of 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/49acb071b0d634ded17cb788d9f520ed.png' />Weapon)",
@@ -12898,7 +13227,7 @@
     {
       "id": 311308,
       "name": "\"Ultimate Overlord's Mega Magic Sword\"",
-      "content": "This card will record the number of Action Cards with different names you have played in this match whose names are not in your original deck for said match, with each type granting 1 <color=#FFFFFFFF>Support</color>.\\nIf this card's <color=#FFFFFFFF>Support</color> value is at least 2/4/8, then the <color=#FFFFFFFF>Character will deal +1/2/3 DMG</color>.\\n(Only <color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/0d2f1936c3e7d24dcfb57a3510a0e528.png' />Claymore Characters</color> can equip this. A character can only equip 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/49acb071b0d634ded17cb788d9f520ed.png' />Weapon.)",
+      "content": "This card will record the number of Action Cards with different names you have played in this match whose names are not in your original deck for said match, with each type granting 1 <color=#FFFFFFFF>Support</color>.\\nIf this card's <color=#FFFFFFFF>Support</color> value is at least 2/4/9, then the <color=#FFFFFFFF>Character will deal +1/2/3 DMG</color>.\\n(Only <color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/0d2f1936c3e7d24dcfb57a3510a0e528.png' />Claymore Characters</color> can equip this. A character can only equip 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/49acb071b0d634ded17cb788d9f520ed.png' />Weapon.)",
       "action_type": "Equipment Cards",
       "rank_id": 0,
       "cost_num1": "2",
@@ -12933,6 +13262,26 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/a6c7c478f3b266b794890a1fc8035639.png",
+      "is_special": false
+    },
+    {
+      "id": 311310,
+      "name": "Flame-Forged Insight",
+      "content": "<color=#FFFFFFFF>The character deals +2 DMG with their Elemental Burst</color>.\\n<color=#FFFFFFFF>When you trigger an Elemental Reaction:</color> Gain 1 stack of <color=#FFFFFFFF>Mind in Bloom</color>. When <color=#FFFFFFFF>Mind in Bloom</color> is at 2 or more stacks, consume 2 stacks of <color=#FFFFFFFF>Mind in Bloom</color> to grant the attached character <color=#FFFFFFFF>1 <color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png' />Energy</color></color>.\\n(<color=#FFFFFFFF>Only <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/0d2f1936c3e7d24dcfb57a3510a0e528.png' />Claymore characters</color> can equip this. A character can equip a maximum of 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/49acb071b0d634ded17cb788d9f520ed.png' />Weapon)",
+      "action_type": "Equipment Cards",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/adc5e2670aa6dab74edbc9c2155df114_7471248184282789775.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "Weapon",
+        "Claymore",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6966dcbb/1cf4f41278370bd117249b4037c27fd4.png",
       "is_special": false
     },
     {
@@ -14133,6 +14482,26 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/692f7dae/70b8367bd9b6790bccf5ee107fd45155.png",
+      "is_special": false
+    },
+    {
+      "id": 312044,
+      "name": "Dyed Tassel",
+      "content": "<color=#FFFFFFFF>When the character to which this is attached uses a <color=#FFFFFFFF>Charged Attack</color>:</color> Deals +1 DMG. (Once per Round)\\n<color=#FFFFFFFF>After the attached character uses a <color=#FFFFFFFF>Plunging Attack</color>:</color> Create 1 stack of <color=#FFFFFFFF>Efficient Switch</color>. (Once per Round)\\n(A character can equip a maximum of 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/8abebfa3ce62ff97769616f606b9a7f4.png' /> Artifact)",
+      "action_type": "Equipment Cards",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/adc5e2670aa6dab74edbc9c2155df114_7471248184282789775.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "Artifact",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6966dcbb/bf199e963ef340f378dba71b9e424c40.png",
       "is_special": false
     },
     {
@@ -15836,6 +16205,26 @@
       "is_special": false
     },
     {
+      "id": 322032,
+      "name": "Bona and Cocouik",
+      "content": "<color=#FFFFFFFF>When played:</color> <color=#FFFFFFFF><color=#FFFFFFFF>Adventure</color></color> once.\\n<color=#FFFFFFFF>After you use a <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/c77ba0b2ea2bf428b8414c9f9bc86035.png' />Technique:</color> <color=#FFFFFFFF><color=#FFFFFFFF>Adventure</color></color> once. (Once per Round)",
+      "action_type": "Support Cards",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/adc5e2670aa6dab74edbc9c2155df114_7471248184282789775.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "Companion",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6966dcbb/03e5632be74612e29115aaeef47d194e.png",
+      "is_special": false
+    },
+    {
       "id": 323001,
       "name": "Parametric Transformer",
       "content": "<color=#FFFFFFFF>When either side uses a Skill:</color> If Elemental DMG was dealt, this card gains 1 <color=#FFFFFFFF>Qualitative Progress</color>.\\nIf this card has gained 3 <color=#FFFFFFFF>Qualitative Progress</color>, then discard this card and create 3 different Basic Elemental Dice.",
@@ -17178,11 +17567,11 @@
     {
       "id": 332028,
       "name": "Machine Assembly Line",
-      "content": "<color=#FFFFFFFF>Each time after your character is targeted by and takes DMG or is healed:</color> Accumulate 1 point of <color=#FFFFFFFF>Battle-Readiness</color> (Max 2 points).\\n<color=#FFFFFFFF>When you play a <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/49acb071b0d634ded17cb788d9f520ed.png' />Weapon or <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/8abebfa3ce62ff97769616f606b9a7f4.png' />Artifact with an original cost of no more Dice than you have <color=#FFFFFFFF>Battle-Readiness</color> points:</color> Clear all <color=#FFFFFFFF>Battle-Readiness</color> points and play that card for free.",
+      "content": "Deals 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>Physical DMG</color> to your active character. Draw 1 random <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/8abebfa3ce62ff97769616f606b9a7f4.png' />Artifact card from your deck.",
       "action_type": "Event Cards",
       "rank_id": 0,
-      "cost_num1": "0",
-      "cost_type1_icon": "",
+      "cost_num1": "1",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/3367995a8344bccc77b2d9f794c1bbd2_3133187640885784967.png",
       "cost_num2": "0",
       "cost_type2_icon": "",
       "action_card_tags": [
@@ -17278,7 +17667,7 @@
     {
       "id": 332036,
       "name": "\"I'd Rather Lose Money Myself...\"",
-      "content": "Each time your opponent gains 2 Elemental Dice during this Round, you gain 1 <color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8401f5013a7c381edb6cd088b207bb9f.png' />Omni Element</color>. (Elemental Die provided by this effect are excluded)",
+      "content": "Each time your opponent gains 1 Elemental Die during this Round: If you have not declared the end of your Round, you will create 1 <color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8401f5013a7c381edb6cd088b207bb9f.png' />Omni Element</color>. Otherwise, create 1 <color=#FFFFFFFF>Shield</color>.\\n<color=#FFFFFFFF><color=#FFFFFFFF>Usage(s)</color>: 3</color>",
       "action_type": "Event Cards",
       "rank_id": 0,
       "cost_num1": "0",
@@ -17358,7 +17747,7 @@
     {
       "id": 332041,
       "name": "Ultimate Surfing Buddy!",
-      "content": "<color=#FFFFFFFF>Can only be played when there are at least a total of 2 Summons on the field (Both sides' Summons count):</color> Randomly triggers an End Phase effect of one of your and the opponent's Summons.",
+      "content": "<color=#FFFFFFFF>Combat Action</color>: <color=#FFFFFFFF>Can only be played when there are at least a total of 2 Summons on the field (Both sides' Summons count)</color> Randomly triggers an End Phase effect of one of your and the opponent's Summons each.",
       "action_type": "Event Cards",
       "rank_id": 0,
       "cost_num1": "0",
@@ -17366,7 +17755,7 @@
       "cost_num2": "0",
       "cost_type2_icon": "",
       "action_card_tags": [
-        "",
+        "Combat Action",
         "",
         "",
         "",
@@ -17576,6 +17965,26 @@
       "is_special": false
     },
     {
+      "id": 332053,
+      "name": "Broken Sea",
+      "content": "Select a card from your Support Zone and discard it. Then all of your <color=#FFFFFFFF>Simulanka Summon</color>s gain +1 Usage and +1 Effect.",
+      "action_type": "Event Cards",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/3367995a8344bccc77b2d9f794c1bbd2_3133187640885784967.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "Simulanka",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6966dcbb/85a542354eeb085957b9b4e156dff3a0.png",
+      "is_special": false
+    },
+    {
       "id": 332054,
       "name": "\"A Blessing From 'M'\"",
       "content": "Select a summon on your side to discard, convert its Usage(s) into up to 2 basic Elemental Dice of different types. If its usage count is no less than 3, then heal the most damaged character on your side for 2 HP.",
@@ -17673,6 +18082,26 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/692f7dae/0e072331dbd1a0eb4ad1d8927f13a640.png",
+      "is_special": false
+    },
+    {
+      "id": 332059,
+      "name": "\"An Adventure Through the Morning Mist\"",
+      "content": "Put at most 2 cards with the lowest cost in your Hand at the bottom of your deck, then draw the same number of cards.\\n<color=#FFFFFFFF>After this card is <color=#FFFFFFFF>Discard</color>ed:</color> <color=#FFFFFFFF><color=#FFFFFFFF>Adventure</color></color> once.",
+      "action_type": "Event Cards",
+      "rank_id": 0,
+      "cost_num1": "0",
+      "cost_type1_icon": "",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6966dcbb/e1eef84481dc8fd5f4e5d372558d4e29.png",
       "is_special": false
     },
     {
@@ -21387,6 +21816,78 @@
       "name": "Plan to Save the World",
       "id": 332058,
       "code": 543,
+      "type": "action"
+    },
+    {
+      "name": "Broken Sea",
+      "id": 332053,
+      "code": 517,
+      "type": "action"
+    },
+    {
+      "name": "Skirk",
+      "id": 1116,
+      "code": 544,
+      "type": "character"
+    },
+    {
+      "name": "Ororon",
+      "id": 1416,
+      "code": 545,
+      "type": "character"
+    },
+    {
+      "name": "Consecrated Horned Crocodile",
+      "id": 2207,
+      "code": 546,
+      "type": "character"
+    },
+    {
+      "name": "Far to Fall",
+      "id": 211161,
+      "code": 547,
+      "type": "action"
+    },
+    {
+      "name": "Trails Amidst the Forest Fog",
+      "id": 214161,
+      "code": 548,
+      "type": "action"
+    },
+    {
+      "name": "Deathly Overflow",
+      "id": 222071,
+      "code": 549,
+      "type": "action"
+    },
+    {
+      "name": "Starcaller's Watch",
+      "id": 311112,
+      "code": 550,
+      "type": "action"
+    },
+    {
+      "name": "Flame-Forged Insight",
+      "id": 311310,
+      "code": 551,
+      "type": "action"
+    },
+    {
+      "name": "Dyed Tassel",
+      "id": 312044,
+      "code": 552,
+      "type": "action"
+    },
+    {
+      "name": "Bona and Cocouik",
+      "id": 322032,
+      "code": 553,
+      "type": "action"
+    },
+    {
+      "name": "\"An Adventure Through the Morning Mist\"",
+      "id": 332059,
+      "code": 554,
       "type": "action"
     }
   ]

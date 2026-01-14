@@ -753,7 +753,7 @@
         "Arkhe: Pneuma",
         ""
       ],
-      "hp": "10",
+      "hp": "11",
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/6743cf8a6f1f1c0cf939cbb5b1a100d2.png"
     },
     {
@@ -1140,6 +1140,89 @@
       ],
       "hp": "11",
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/692f7dae/30524c3bd8ab6ad0b4ee20ae799956b8.png"
+    },
+    {
+      "id": 1116,
+      "name": "Skirk",
+      "element_type": 301,
+      "role_skill_infos": [
+        {
+          "skill_text": "Mengakibatkan 2 poin <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>Physical DMG</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "11",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/412134fa7fc8a73b5e20c177a3ae0046.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Normal Attack"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/3f016e2d606ca39ea86e24d5245dfa5b.png",
+          "name": "Havoc: Sunder",
+          "id": "11161"
+        },
+        {
+          "skill_text": "Mendapatkan 2 poin <color=#FFFFFFFF>Serpent's Subtlety</color> dan menciptakan 1 <color=#FFFFFFFF>Mutual Weapons Mentorship</color> ke Tangan. (Sekali setiap Ronde)",
+          "skill_costs": [
+            {
+              "cost_type": "11",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/412134fa7fc8a73b5e20c177a3ae0046.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Elemental Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6851f3bf/9ff9843045796b5cd4fa6a5eb4d8554a.png",
+          "name": "Havoc: Warp",
+          "id": "11162"
+        },
+        {
+          "skill_text": "Mengonsumsi seluruh <color=#FFFFFFFF>Serpent's Subtlety</color>, mengakibatkan <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/924fba80b9137b4e8fdf5871aa22d666.png' /><color=#99FFFFFF>Cryo DMG</color> setara jumlah <color=#FFFFFFFF>Serpent's Subtlety</color> yang dikonsumsi, dan mengakibatkan 2 poin <color=#FFFFFFFF>Piercing DMG</color> kepada Karakter standby. Jika 7 poin <color=#FFFFFFFF>Serpent's Subtlety</color> dikonsumsi, maka akan diubah menjadi mengakibatkan 3 poin <color=#FFFFFFFF>Piercing DMG</color> kepada Karakter standby.",
+          "skill_costs": [
+            {
+              "cost_type": "11",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/412134fa7fc8a73b5e20c177a3ae0046.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "20",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Elemental Burst"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6966dce5/92ac0a8581ae3bd406b804fc79724478.png",
+          "name": "Havoc: Ruin",
+          "id": "11163"
+        },
+        {
+          "skill_text": "(Pasif) Skirk tidak akan mendapatkan Energy, melainkan dapat mengakumulasi <color=#FFFFFFFF>Serpent's Subtlety</color> hingga 7 poin.\\n<color=#FFFFFFFF>Setelah kamu memicu reaksi Frozen/Cryo Swirl/Superconduct/Cryo Crystallize: </color>Menciptakan kartu <color=#FFFFFFFF>Void Rift</color> ke Tangan. (3 kali setiap Ronde)",
+          "skill_costs": [],
+          "type": [
+            "Passive Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6966dce5/4794a9840c053cad18c7d5915dd51212.png",
+          "name": "Reason Beyond Reason",
+          "id": "11164"
+        }
+      ],
+      "weapon": "Sword",
+      "belongs": [
+        "Cosmic Calamity",
+        "",
+        ""
+      ],
+      "hp": "10",
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6966dcbb/792673111d3461580f1344757ed93abb.png"
     },
     {
       "id": 1201,
@@ -1596,7 +1679,7 @@
         "",
         ""
       ],
-      "hp": "10",
+      "hp": "11",
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/f03323c9496016cd1aea4a5c886e5103.png"
     },
     {
@@ -2694,7 +2777,7 @@
           "id": "13082"
         },
         {
-          "skill_text": "Mengakibatkan 3 poin <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FF9999FF>Pyro DMG</color>. Karakter ini memperoleh status <color=#FFFFFFFF>Scarlet Seal</color> dan <color=#FFFFFFFF>Brilliance</color>.",
+          "skill_text": "Mengakibatkan 4 poin <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FF9999FF>Pyro DMG</color>. Karakter ini memperoleh status <color=#FFFFFFFF>Scarlet Seal</color> dan <color=#FFFFFFFF>Brilliance</color>.",
           "skill_costs": [
             {
               "cost_type": "13",
@@ -2956,7 +3039,7 @@
         "",
         ""
       ],
-      "hp": "10",
+      "hp": "12",
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/893d387c64630556f9fb4a9f59a3a733.png"
     },
     {
@@ -4498,6 +4581,89 @@
       ],
       "hp": "10",
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68f81eac/53efa3b6eabfd2cf5f1d05633042056a.png"
+    },
+    {
+      "id": 1416,
+      "name": "Ororon",
+      "element_type": 304,
+      "role_skill_infos": [
+        {
+          "skill_text": "Mengakibatkan 2 poin <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>Physical DMG</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "14",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0a7a50d15a7580c4de07a41f87a95787.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Normal Attack"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/cc29fde34aa6d42f8e110628a4bf2de2.png",
+          "name": "Spiritvessel Snapshot",
+          "id": "14161"
+        },
+        {
+          "skill_text": "Mengakibatkan 2 poin <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><color=#FFACFFFF>Electro DMG</color> dan menciptakan <color=#FFFFFFFF>Spirit Orb</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "14",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0a7a50d15a7580c4de07a41f87a95787.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "Elemental Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/2e33112c8ac4b8d1a04b74836f04acd0.png",
+          "name": "Night's Sling",
+          "id": "14162"
+        },
+        {
+          "skill_text": "Mengakibatkan 2 poin <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><color=#FFACFFFF>Electro DMG</color> dan memanggil <color=#FFFFFFFF>Supersonic Oculus</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "14",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0a7a50d15a7580c4de07a41f87a95787.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Elemental Burst"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6966dce5/a271eaeb2aebfe54ee965b861fad5746.png",
+          "name": "Dark Voices Echo",
+          "id": "14163"
+        },
+        {
+          "skill_text": "(Pasif) <color=#FFFFFFFF>Setelah Karaktermu memicu reaksi Electro-Charged:</color> Jika memungkinkan, mengonsumsi 2 <color=#FFFFFFFF>poin Nightsoul</color> dan mengakibatkan 1 poin <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><color=#FFACFFFF>Electro DMG</color>.\\nSetelah Karaktermu mengakibatkan <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>Hydro DMG</color> atau <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><color=#FFACFFFF>Electro DMG</color> dari sumber selain Skill ini, diri sendiri akan memasuki <color=#FFFFFFFF>Nightsoul's Blessing</color> dan mendapatkan 1 <color=#FFFFFFFF>poin Nightsoul</color>. (Sekali setiap Ronde)",
+          "skill_costs": [],
+          "type": [
+            "Passive Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6966dce5/e33bafa14b8c9c66ed81043c178aa282.png",
+          "name": "Nightshade Synesthesia",
+          "id": "14164"
+        }
+      ],
+      "weapon": "Bow",
+      "belongs": [
+        "Natlan",
+        "",
+        ""
+      ],
+      "hp": "10",
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6966dcbb/b5c814d87bb619b8f0da38e463b26c5b.png"
     },
     {
       "id": 1501,
@@ -6523,7 +6689,7 @@
         "",
         ""
       ],
-      "hp": "10",
+      "hp": "11",
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/dfdb17a8038971bcd7bb14481c509a68.png"
     },
     {
@@ -7853,7 +8019,7 @@
       "weapon": "Senjata Lain",
       "belongs": [
         "Monster",
-        "",
+        "Cosmic Calamity",
         ""
       ],
       "hp": "5",
@@ -8012,8 +8178,91 @@
         "",
         ""
       ],
-      "hp": "12",
+      "hp": "11",
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/5fc668b6b1415d5ad341d5ff9accb5b6.png"
+    },
+    {
+      "id": 2207,
+      "name": "Consecrated Horned Crocodile",
+      "element_type": 302,
+      "role_skill_infos": [
+        {
+          "skill_text": "Mengakibatkan 2 poin <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>Physical DMG</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Normal Attack"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/4ef5373e27e14926f2fec5ffa0511440.png",
+          "name": "Fang Bite",
+          "id": "22071"
+        },
+        {
+          "skill_text": "Mengakibatkan 3 poin <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>Hydro DMG</color>, lalu menempatkan hingga 1 kartu berbiaya Dadu Elemental awal tertinggi dari Tangan ke bagian bawah Dek, serta menciptakan kartu <color=#FFFFFFFF>Bonecruncher's Energy Block</color> di Tangan.",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "Elemental Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/36a0bb6649e9bb94f8846c03161cb601.png",
+          "name": "Saw-Toothed Surge",
+          "id": "22072"
+        },
+        {
+          "skill_text": "Mengakibatkan 4 poin <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>Hydro DMG</color>, lalu mem<color=#FFFFFFFF>buang</color> hingga 3 <color=#FFFFFFFF>Bonecruncher's Energy Block</color>. Untuk setiap kartu yang di<color=#FFFFFFFF>buang</color>, memulihkan 1 poin HP untuk Karakter menerima DMG terbesar dan meningkatkan 1 poin Max HP-nya.",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Elemental Burst"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/3bb336fc4d536e0b503e979b8bba66c1.png",
+          "name": "Reptilian Rage",
+          "id": "22073"
+        },
+        {
+          "skill_text": "(Pasif) Setelah kamu memainkan atau membuang <color=#FFFFFFFF>Bonecruncher's Energy Block</color>, memulihkan 1 poin HP Karaktermu yang menerima DMG terbanyak.",
+          "skill_costs": [],
+          "type": [
+            "Passive Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/5119de14ea0197b3d23a6b16a2766439.png",
+          "name": "Consecrated Senses",
+          "id": "22074"
+        }
+      ],
+      "weapon": "Senjata Lain",
+      "belongs": [
+        "Monster",
+        "Consecrated Beast",
+        ""
+      ],
+      "hp": "11",
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/49d8176cf43a866b88bed5709e6a80c5.png"
     },
     {
       "id": 2301,
@@ -8427,7 +8676,7 @@
         "",
         ""
       ],
-      "hp": "12",
+      "hp": "11",
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68c0b19c/6abd1453ffdf05be5e77fb804b40c403.png"
     },
     {
@@ -10136,6 +10385,26 @@
       "is_special": false
     },
     {
+      "id": 211161,
+      "name": "Far to Fall",
+      "content": "<color=#FFFFFFFF>Aksi Cepat</color>: Kenakan ini pada <color=#FFFFFFFF>Skirk</color> milikmu.\\n<color=#FFFFFFFF>Ketika Skirk yang mengenakan kartu ini ada di arena dan saat kamu memainkan atau mem<color=#FFFFFFFF>buang</color> Void Rift:</color> mengakibatkan 1 poin <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/924fba80b9137b4e8fdf5871aa22d666.png' /><color=#99FFFFFF>Cryo DMG</color> kepada Karakter aktif lawan. (Sekali setiap Ronde)\\n(Kamu harus punya Skirk di dalam Dek-mu untuk menambahkan kartu ini ke dalam Dek)",
+      "action_type": "Kartu Equipment",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/17d89519af925fc46075404a350a3009_6395321278147437046.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "Talenta",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6966dcbb/68c6db1af291f5a3ac1de30e673b4110.png",
+      "is_special": false
+    },
+    {
       "id": 212011,
       "name": "Glorious Season",
       "content": "<color=#FFFFFFFF>Aksi Tempur</color>: Kartu ini dapat dikenakan saat menggunakan <color=#FFFFFFFF>Barbara</color> sebagai Karakter aktif.\\nBarbara akan langsung melancarkan <color=#FFD780FF>Let the Show Begin♪</color> satu kali setelah mengenakannya.\\nKetika mengenakan kartu ini, <color=#FFFFFFFF>Melody Loop</color> akan mengurangi 1 Dadu Elemental yang dibutuhkan saat melakukan Aksi \"bertukar Karakter\" (satu kali setiap Ronde) selama Barbara belum gugur.\\n(Kamu harus punya Barbara di dalam Dek-mu untuk menambahkan kartu ini ke dalam Dek)",
@@ -10238,7 +10507,7 @@
     {
       "id": 212061,
       "name": "Kyouka Fuushi",
-      "content": "<color=#FFFFFFFF>Aksi Tempur</color>: Kartu ini dapat dikenakan saat menggunakan <color=#FFFFFFFF>Kamisato Ayato</color> sebagai Karakter aktif.\\nKamisato Ayato akan langsung melancarkan <color=#FFD780FF>Kamisato Art: Kyouka</color> satu kali setelah mengenakannya.\\nKetika mengenakan kartu ini, efek <color=#FFFFFFFF>Takimeguri Kanka</color> yang dipicu oleh Kamisato Ayato akan mengakibatkan DMG +2 terhadap musuh yang memiliki 6 poin HP atau lebih sedikit.\\n(Kamu harus punya Kamisato Ayato di dalam Dek-mu untuk menambahkan kartu ini ke dalam Dek)",
+      "content": "<color=#FFFFFFFF>Aksi Tempur</color>: Saat Karakter aktifmu <color=#FFFFFFFF>Kamisato Ayato</color>, kenakanlah kartu ini.\\nKamisato Ayato akan langsung melancarkan <color=#FFD780FF>Kamisato Art: Kyouka</color> satu kali setelah mengenakannya.\\nSetelah Kamisato Ayato yang terpengaruh <color=#FFFFFFFF>Takimeguri Kanka</color> menggunakan Normal Attack: Karakter yang terpengaruh akan mengonsumsi 2 <color=#FF9999FF><color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png' />Elemen Tidak Selaras</color></color> lebih sedikit saat melancarkan Normal Attack berikutnya selama Ronde ini. (Normal Attack ini tidak akan memicu efek kartu ini berulang kali)\\n(Kamu harus punya Kamisato Ayato di dalam Dek-mu untuk menambahkan kartu ini ke dalam Dek)",
       "action_type": "Kartu Equipment",
       "rank_id": 0,
       "cost_num1": "3",
@@ -11016,6 +11285,26 @@
       "is_special": false
     },
     {
+      "id": 214161,
+      "name": "Trails Amidst the Forest Fog",
+      "content": "<color=#FFFFFFFF>Aksi Cepat</color>: Kenakan ini pada <color=#FFFFFFFF>Ororon</color> milikmu.\\nPiercing DMG dari reaksi Electro-Charged pertama yang dipicu olehmu di setiap Ronde akan mengakibatkan DMG +1.\\n(Kamu harus punya Ororon di dalam Dek-mu untuk menambahkan kartu ini ke dalam Dek)",
+      "action_type": "Kartu Equipment",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/f7048dd5a016ad50724e4adb302a131e_1957506487216936243.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "Talenta",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6966dcbb/b9bc0c851a911ffa1a15887a77628661.png",
+      "is_special": false
+    },
+    {
       "id": 215011,
       "name": "Chaotic Entropy",
       "content": "<color=#FFFFFFFF>Aksi Tempur</color>: Kartu ini dapat dikenakan saat menggunakan <color=#FFFFFFFF>Sucrose</color> sebagai Karakter aktif.\\nSucrose akan langsung melancarkan <color=#FFD780FF>Forbidden Creation - Isomer 75 / Type II</color> satu kali setelah mengenakannya.\\nKetika mengenakan kartu ini, <color=#FFFFFFFF>Large Wind Spirit</color> yang diciptakan Sucrose dan telah terpengaruh elemen lain setelah memicu Swirl akan mengakibatkan DMG +1 dengan elemen yang sesuai. \\n(Kamu harus punya Sucrose di dalam Dek-mu untuk menambahkan kartu ini ke dalam Dek)",
@@ -11541,7 +11830,7 @@
       "content": "<color=#FFFFFFFF>Aksi Tempur</color>: Kartu ini dapat dikenakan saat menggunakan <color=#FFFFFFFF>Collei</color> sebagai Karakter aktif.\\nCollei akan langsung melancarkan <color=#FFD780FF>Floral Brush</color> satu kali setelah mengenakannya.\\nKetika mengenakan kartu ini, Karakter aktifmu akan mengakibatkan +1 poin <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' /><color=#7EC236FF>Dendro DMG</color> saat memicu <color=#7EC236FF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' />Reaksi Terkait Dendro</color> (satu kali setiap Ronde), jika Collei melancarkan <color=#FFFFFFFF>Floral Brush</color> pada Ronde tersebut.\\n(Kamu harus punya Collei di dalam Dek-mu untuk menambahkan kartu ini ke dalam Dek)",
       "action_type": "Kartu Equipment",
       "rank_id": 0,
-      "cost_num1": "4",
+      "cost_num1": "3",
       "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/7187c0cc6441821b895062980ac096c9_6446026439481236429.png",
       "cost_num2": "0",
       "cost_type2_icon": "",
@@ -11767,7 +12056,7 @@
       "cost_type2_icon": "",
       "action_card_tags": [
         "Talenta",
-        "Pengurangan DMG",
+        "",
         "",
         "",
         ""
@@ -11933,6 +12222,26 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68f81eac/d7281f1639bc2717a10470ec3d85ee7f.png",
+      "is_special": false
+    },
+    {
+      "id": 222071,
+      "name": "Deathly Overflow",
+      "content": "<color=#FFFFFFFF>Aksi Cepat</color>: Kenakan ini pada <color=#FFFFFFFF>Consecrated Horned Crocodile</color> milikmu.\\n<color=#FFFFFFFF>Saat dimainkan: </color>Menciptakan kartu <color=#FFFFFFFF>Bonecruncher's Energy Block</color> di Tanganmu.\\nSaat Consecrated Horned Crocodile yang mengenakan kartu ini berada di arena dan setelah kamu menggunakan <color=#FFFFFFFF>Bonecruncher's Energy Block</color>, memulihkan 1 poin HP Karaktermu yang telah menerima DMG paling banyak.\\n(Kamu harus punya Consecrated Horned Crocodile di dalam Dek-mu untuk menambahkan kartu ini ke dalam Dek)",
+      "action_type": "Kartu Equipment",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/bc5ce21badb7be88e4a6a2140c3ef535_8185592904156259932.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "Talenta",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6966dcbb/2452380125303d9dcfa0dd256e8062a4.png",
       "is_special": false
     },
     {
@@ -12596,6 +12905,26 @@
       "is_special": false
     },
     {
+      "id": 311112,
+      "name": "Starcaller's Watch",
+      "content": "<color=#FFFFFFFF>Saat kamu pertama kali memainkan kartu yang bukan berasal dari Dek awal pada setiap Ronde: </color>Kartu tersebut mengonsumsi 1 Dadu Elemental lebih sedikit. Karakter yang terpengaruh mengakibatkan DMG +1 untuk DMG berikutnya. (Dapat ditumpuk hingga 2)\\n(<color=#FFFFFFFF>Hanya Karakter pengguna <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/1643452964b58e2e69e64e2b5d3b5878.png' />Catalyst</color> yang dapat mengenakannya. Karakter maksimum dapat mengenakan 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/49acb071b0d634ded17cb788d9f520ed.png' />Senjata)",
+      "action_type": "Kartu Equipment",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/3367995a8344bccc77b2d9f794c1bbd2_3133187640885784967.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "Senjata",
+        "Catalyst",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6966dcbb/9e399f4351cf68e96cc0929ef239a781.png",
+      "is_special": false
+    },
+    {
       "id": 311201,
       "name": "Raven Bow",
       "content": "<color=#FFFFFFFF>Karakter mengakibatkan DMG +1</color>.\\n(<color=#FFFFFFFF>Hanya Karakter pengguna <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/9b142cbc6e2e5e472ff1c37a78d7dd77.png' />Bow</color> yang dapat mengenakannya. Karakter maksimum dapat mengenakan 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/49acb071b0d634ded17cb788d9f520ed.png' />Senjata)",
@@ -12898,7 +13227,7 @@
     {
       "id": 311308,
       "name": "\"Ultimate Overlord's Mega Magic Sword\"",
-      "content": "Kartu ini akan mencatat jumlah Kartu Aksi berbeda nama yang sudah kamu mainkan di Ronde ini yang namanya tidak terdapat dalam Dek awalmu di pertandingan ini, dengan masing-masing nama memberikan 1 <color=#FFFFFFFF>\"Support\"</color>.\\nJika <color=#FFFFFFFF>\"Support\"</color> kartu ini minimum 2/4/8, maka <color=#FFFFFFFF>Karakter mengakibatkan DMG +1/2/3</color>.\\n(<color=#FFFFFFFF>Hanya Karakter pengguna <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/0d2f1936c3e7d24dcfb57a3510a0e528.png' />Claymore</color> yang dapat mengenakannya. Karakter maksimum dapat mengenakan 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/49acb071b0d634ded17cb788d9f520ed.png' />Senjata)",
+      "content": "Kartu ini akan mencatat jumlah Kartu Aksi berbeda nama yang sudah kamu mainkan di Ronde ini yang namanya tidak terdapat dalam Dek awalmu di pertandingan ini, dengan masing-masing nama memberikan 1 <color=#FFFFFFFF>\"Support\"</color>.\\nJika <color=#FFFFFFFF>\"Support\"</color> kartu ini minimum 2/4/9, maka <color=#FFFFFFFF>Karakter mengakibatkan DMG +1/2/3</color>.\\n(<color=#FFFFFFFF>Hanya Karakter pengguna <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/0d2f1936c3e7d24dcfb57a3510a0e528.png' />Claymore</color> yang dapat mengenakannya. Karakter maksimum dapat mengenakan 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/49acb071b0d634ded17cb788d9f520ed.png' />Senjata)",
       "action_type": "Kartu Equipment",
       "rank_id": 0,
       "cost_num1": "2",
@@ -12933,6 +13262,26 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/a6c7c478f3b266b794890a1fc8035639.png",
+      "is_special": false
+    },
+    {
+      "id": 311310,
+      "name": "Flame-Forged Insight",
+      "content": "<color=#FFFFFFFF>Elemental Burst Karakter mengakibatkan DMG +2.</color>\\n<color=#FFFFFFFF>Saat Karaktermu memicu Reaksi Elemental: </color>Mengakumulasi 1 lapis <color=#FFFFFFFF>Mind in Bloom</color>. Saat <color=#FFFFFFFF>Mind in Bloom</color> tidak kurang dari 2 lapis, akan mengonsumsi 2 lapis <color=#FFFFFFFF>Mind in Bloom</color> untuk membuat Karakter yang terpengaruh <color=#FFFFFFFF>mendapatkan 1 poin <color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png' />Energy</color></color>.\\n(<color=#FFFFFFFF>Hanya <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/0d2f1936c3e7d24dcfb57a3510a0e528.png' />Karakter pengguna Claymore</color> yang dapat mengenakan ini. Karakter maksimum dapat mengenakan 1 buah <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/49acb071b0d634ded17cb788d9f520ed.png' />Senjata)",
+      "action_type": "Kartu Equipment",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/adc5e2670aa6dab74edbc9c2155df114_7471248184282789775.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "Senjata",
+        "Claymore",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6966dcbb/1cf4f41278370bd117249b4037c27fd4.png",
       "is_special": false
     },
     {
@@ -14133,6 +14482,26 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/692f7dae/70b8367bd9b6790bccf5ee107fd45155.png",
+      "is_special": false
+    },
+    {
+      "id": 312044,
+      "name": "Dyed Tassel",
+      "content": "<color=#FFFFFFFF>Saat Karakter yang terpengaruh melancarkan <color=#FFFFFFFF>Charged Attack</color>: </color>Mengakibatkan DMG +1. (Sekali setiap Ronde)\\n<color=#FFFFFFFF>Setelah Karakter yang terpengaruh melancarkan <color=#FFFFFFFF>Plunging Attack</color>: </color>Menciptakan 1 lapis <color=#FFFFFFFF>Efficient Switch</color>. (Sekali setiap Ronde)\\n(Karakter dapat mengenakan maksimum 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/8abebfa3ce62ff97769616f606b9a7f4.png' />Artefak)",
+      "action_type": "Kartu Equipment",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/adc5e2670aa6dab74edbc9c2155df114_7471248184282789775.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "Artefak",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6966dcbb/bf199e963ef340f378dba71b9e424c40.png",
       "is_special": false
     },
     {
@@ -15836,6 +16205,26 @@
       "is_special": false
     },
     {
+      "id": 322032,
+      "name": "Bona and \"Cocouik\"",
+      "content": "<color=#FFFFFFFF>Saat dimainkan: </color><color=#FFFFFFFF>Melakukan <color=#FFFFFFFF>Adventure</color></color> 1 kali.\\n<color=#FFFFFFFF>Setelah kamu menggunakan <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/c77ba0b2ea2bf428b8414c9f9bc86035.png' />Teknik:</color> Melakukan <color=#FFFFFFFF><color=#FFFFFFFF>Adventure</color></color> 1 kali. (Sekali setiap Ronde)",
+      "action_type": "Kartu Pendukung",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/adc5e2670aa6dab74edbc9c2155df114_7471248184282789775.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "Teman",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6966dcbb/03e5632be74612e29115aaeef47d194e.png",
+      "is_special": false
+    },
+    {
       "id": 323001,
       "name": "Parametric Transformer",
       "content": "<color=#FFFFFFFF>Setelah Karakter salah satu pemain menggunakan Skill:</color> Jika mengakibatkan DMG Elemental, maka kartu ini akan memperoleh 1 <color=#FFFFFFFF>\"Qualitative Progress\"</color>.\\nSaat kartu ini memiliki 3 <color=#FFFFFFFF>\"Qualitative Progress\"</color>, maka kartu ini akan dibuang, lalu menciptakan 3 Dadu Elemental Dasar dengan jenis elemen yang berbeda.",
@@ -17178,11 +17567,11 @@
     {
       "id": 332028,
       "name": "Machine Assembly Line",
-      "content": "<color=#FFFFFFFF>Setiap kali Karaktermu ditargetkan, lalu menerima DMG atau pemulihan:</color> Mengakumulasi 1 poin <color=#FFFFFFFF>Battle-Readiness</color> (Maksimum 2 poin).\\n<color=#FFFFFFFF>Saat kamu memainkan <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/49acb071b0d634ded17cb788d9f520ed.png' />Senjata atau <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/8abebfa3ce62ff97769616f606b9a7f4.png' />Artefak yang biaya awalnya tidak melebihi <color=#FFFFFFFF>Battle-Readiness</color>:</color> Menghapus semua <color=#FFFFFFFF>Battle-Readiness</color> dan memainkan kartu tersebut secara gratis.",
+      "content": "Mengakibatkan 1 poin <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>Physical DMG</color> kepada Karakter aktifmu. Mengambil 1 Kartu <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/8abebfa3ce62ff97769616f606b9a7f4.png' />Artefak secara acak dari Dek-mu.",
       "action_type": "Kartu Event",
       "rank_id": 0,
-      "cost_num1": "0",
-      "cost_type1_icon": "",
+      "cost_num1": "1",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/3367995a8344bccc77b2d9f794c1bbd2_3133187640885784967.png",
       "cost_num2": "0",
       "cost_type2_icon": "",
       "action_card_tags": [
@@ -17278,7 +17667,7 @@
     {
       "id": 332036,
       "name": "\"I'd Rather Lose Money Myself...\"",
-      "content": "Selama Ronde ini, setiap lawan mendapatkan 2 Dadu Elemental: kamu mendapatkan 1 <color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8401f5013a7c381edb6cd088b207bb9f.png' />Elemen Omni</color>. (Tidak termasuk Dadu Elemental yang diberikan oleh efek ini)",
+      "content": "Selama Ronde ini, jika kamu belum menyatakan berakhirnya Ronde, maka kamu akan menciptakan 1 <color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8401f5013a7c381edb6cd088b207bb9f.png' />Elemen Omni</color> setiap kali lawan mendapatkan 1 Dadu Elemental. Jika tidak, akan menciptakan 1 <color=#FFFFFFFF>Perisai</color>.\\n<color=#FFFFFFFF><color=#FFFFFFFF>Penggunaan</color>: 3</color>",
       "action_type": "Kartu Event",
       "rank_id": 0,
       "cost_num1": "0",
@@ -17358,7 +17747,7 @@
     {
       "id": 332041,
       "name": "Ultimate Surfing Buddy!",
-      "content": "<color=#FFFFFFFF>Hanya dapat dimainkan saat di arena terdapat minimum 2 Panggilan (secara total) milik siapa saja:</color> secara acak memicu efek \"Tahap Selesai\" dari masing-masing 1 Panggilan milikmu dan musuh.",
+      "content": "<color=#FFFFFFFF>Aksi Tempur</color>: <color=#FFFFFFFF>Hanya dapat dimainkan saat di arena terdapat minimum 2 Panggilan (secara total) milik siapa saja</color>. Secara acak memicu efek \"Tahap Selesai\" dari masing-masing 1 Panggilan milikmu dan musuh.",
       "action_type": "Kartu Event",
       "rank_id": 0,
       "cost_num1": "0",
@@ -17366,7 +17755,7 @@
       "cost_num2": "0",
       "cost_type2_icon": "",
       "action_card_tags": [
-        "",
+        "Aksi Tempur",
         "",
         "",
         "",
@@ -17576,6 +17965,26 @@
       "is_special": false
     },
     {
+      "id": 332053,
+      "name": "Broken Sea",
+      "content": "Memilih 1 kartu dari Zona Pendukung-mu dan membuangnya. Lalu, membuat jumlah Penggunaan dan jumlah efek dari semua <color=#FFFFFFFF>Panggilan \"Simulanka\"</color> milikmu menjadi +1.",
+      "action_type": "Kartu Event",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1_icon": "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/3367995a8344bccc77b2d9f794c1bbd2_3133187640885784967.png",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "Simulanka",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6966dcbb/85a542354eeb085957b9b4e156dff3a0.png",
+      "is_special": false
+    },
+    {
       "id": 332054,
       "name": "\"A Blessing From 'M'\"",
       "content": "Pilih serta buang satu Panggilan-mu, kemudian ubah Penggunaan-nya menjadi maksimum 2 Dadu Elemental dasar dengan tipe berbeda. Jika jumlah penggunaannya tidak kurang dari 3, juga akan memulihkan Karaktermu yang menerima DMG terbanyak sebesar 2 HP.",
@@ -17673,6 +18082,26 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/692f7dae/0e072331dbd1a0eb4ad1d8927f13a640.png",
+      "is_special": false
+    },
+    {
+      "id": 332059,
+      "name": "\"An Adventure Through the Morning Mist\"",
+      "content": "Menaruh maksimum 2 kartu berbiaya terendah di Tanganmu di bawah Dek-mu, lalu mengambil kartu dengan jumlah yang sama.\\n<color=#FFFFFFFF>Setelah kartu ini di<color=#FFFFFFFF>buang</color>:</color> <color=#FFFFFFFF> Melakukan <color=#FFFFFFFF>Adventure</color></color> satu kali.",
+      "action_type": "Kartu Event",
+      "rank_id": 0,
+      "cost_num1": "0",
+      "cost_type1_icon": "",
+      "cost_num2": "0",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6966dcbb/e1eef84481dc8fd5f4e5d372558d4e29.png",
       "is_special": false
     },
     {
@@ -21387,6 +21816,78 @@
       "name": "Plan to Save the World",
       "id": 332058,
       "code": 543,
+      "type": "action"
+    },
+    {
+      "name": "Broken Sea",
+      "id": 332053,
+      "code": 517,
+      "type": "action"
+    },
+    {
+      "name": "Skirk",
+      "id": 1116,
+      "code": 544,
+      "type": "character"
+    },
+    {
+      "name": "Ororon",
+      "id": 1416,
+      "code": 545,
+      "type": "character"
+    },
+    {
+      "name": "Consecrated Horned Crocodile",
+      "id": 2207,
+      "code": 546,
+      "type": "character"
+    },
+    {
+      "name": "Far to Fall",
+      "id": 211161,
+      "code": 547,
+      "type": "action"
+    },
+    {
+      "name": "Trails Amidst the Forest Fog",
+      "id": 214161,
+      "code": 548,
+      "type": "action"
+    },
+    {
+      "name": "Deathly Overflow",
+      "id": 222071,
+      "code": 549,
+      "type": "action"
+    },
+    {
+      "name": "Starcaller's Watch",
+      "id": 311112,
+      "code": 550,
+      "type": "action"
+    },
+    {
+      "name": "Flame-Forged Insight",
+      "id": 311310,
+      "code": 551,
+      "type": "action"
+    },
+    {
+      "name": "Dyed Tassel",
+      "id": 312044,
+      "code": 552,
+      "type": "action"
+    },
+    {
+      "name": "Bona and \"Cocouik\"",
+      "id": 322032,
+      "code": 553,
+      "type": "action"
+    },
+    {
+      "name": "\"An Adventure Through the Morning Mist\"",
+      "id": 332059,
+      "code": 554,
       "type": "action"
     }
   ]
