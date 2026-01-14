@@ -169,7 +169,7 @@ export function DeckBuilderPageClient ({
   const characterTraits = useMemo(() => ({
     element: elementResonance.map(res => res.element),
     weapon: ["sword", "catalyst", "claymore", "bow", "polearm", "other_weapons"],
-    affiliation: ["mondstadt", "liyue", "inazuma", "sumeru", "fontaine", "natlan", "fatui", "eremite", "monster", "hilichurl", "consecrated_beast", "arkhe_pneuma", "arkhe_ousia", "none"],
+    affiliation: ["mondstadt", "liyue", "inazuma", "sumeru", "fontaine", "natlan", "fatui", "eremite", "monster", "hilichurl", "consecrated_beast", "cosmic_calamity", "arkhe_pneuma", "arkhe_ousia", "none"],
     hp: (() => {
       const hitpoints: Set<string> = new Set();
       localCardsData.characters.forEach(c => hitpoints.add(c.hp));
@@ -900,7 +900,7 @@ export function DeckBuilderPageClient ({
   </div>
 }
 
-const unwantedCostTypes = ["1", "19"]; //for characters
+const unwantedCostTypes = ["1", "19", "20"]; //for characters
 const unwantedCostIcons = [ //for actions
   "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/36cb5de8667e09ae102d165b89d6e441_604510126303725408.png",
   "https://fastcdn.hoyoverse.com/static-resource-v2/2023/07/10/95ea5f8357e489bccf5fb40a73955d2f_3489949153267385660.png"
