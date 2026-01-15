@@ -760,5 +760,23 @@
     "character_name": "Black Serpent Knight: Rockbreaker Ax",
     "talent_id": 226041,
     "talent_name": "\"Once Stood Against the Tide of Dark Waters Like Bedrock...\""
+  },
+  {
+    "character_id": 1116,
+    "character_name": "Skirk",
+    "talent_id": 211161,
+    "talent_name": "Far to Fall"
+  },
+  {
+    "character_id": 1416,
+    "character_name": "Ororon",
+    "talent_id": 214161,
+    "talent_name": "Trails Amidst the Forest Fog"
+  },
+  {
+    "character_id": 2207,
+    "character_name": "Consecrated Horned Crocodile",
+    "talent_id": 222071,
+    "talent_name": "Deathly Overflow"
   }
 ]
