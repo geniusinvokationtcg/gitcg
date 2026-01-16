@@ -12,6 +12,7 @@ const DeckLeftPane = lazy(() => import("./obs/DeckLeftPane"));
 const DeckSlideshow = lazy(() => import("./obs/DeckSlideshow"))
 const DecklistDumpPageClient = lazy(() => import("./Client"));
 const Plate = lazy(() => import("./obs/Plate"))
+const NextMatch = lazy(() => import("./obs/NextMatch"));
 
 export interface DecklistDumpPageParams {
   locale: Locales
@@ -102,6 +103,17 @@ export default async function DecklistDumpPage ({ params, searchParams }: { para
 
     const t = await getTranslations("DecklistDumpPage")
 
+    if(q.obs === "next") return <Suspense>
+      <NextMatch
+        params={p}
+        csvPaste={csvPasteClient}
+        duelistRecord={duelistRecord}
+        top={q.top}
+        bottom={q.bottom}
+        round={q.round}
+      />
+    </Suspense>
+    
     if(q.obs === "duel") return <Suspense>
       <DeckLeftPane
         params={p}
