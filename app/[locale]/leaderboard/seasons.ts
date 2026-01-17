@@ -3,13 +3,13 @@ import { Season, Seasons } from "@/utils/types"
 export const seasons: Seasons = {
   na: [
     {
-      versions: ["6-2"]
-    },
-    {
       versions: ["6-1", "6-3", "6-4"],
       best_finish: 5,
       qualification_type: "top",
       qualification_threshold: 8
+    },
+    {
+      versions: ["6-2"]
     },
     {
       versions: ["5-6", "5-8", "6-0"],
@@ -27,13 +27,13 @@ export const seasons: Seasons = {
   ],
   eu: [
     {
-      versions: ["6-2"]
-    },
-    {
       versions: ["6-0", "6-1", "6-3"],
       best_finish: 5,
       qualification_type: "top",
       qualification_threshold: 8
+    },
+    {
+      versions: ["6-2"]
     },
     {
       versions: ["5-5", "5-6", "5-8"],
@@ -50,6 +50,12 @@ export const seasons: Seasons = {
     ...commonSeasons("pre5-3")
   ],
   as: [
+    {
+      versions: ["6-3", "6-4", "6-5"],
+      best_finish: 3,
+      qualification_type: "top",
+      qualification_threshold: 8
+    },
     {
       versions: ["6-2"]
     },
