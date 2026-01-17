@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { redirect, notFound, usePathname } from "next/navigation";
 import { gameVersion, getVerLabel } from "@/utils/version";
-import { useState } from "react";
+import { lazy, useState, Suspense } from "react";
 import { useMajorData } from "@/hooks/useMajorData";
 import { useTranslatedServers } from "@/hooks/useTranslatedServers";
 import { generateRoundStructure } from "@/utils/brackets";
@@ -13,6 +13,11 @@ import { CustomSelect } from "@/components/Dropdown";
 import { ServerPure } from "@/utils/types";
 import { CustomButton } from "@/components/Button";
 import { MajorRecapParams } from "./page";
+import { InformationCircleIcon } from "@heroicons/react/24/outline";
+
+const Tooltip = lazy(() =>
+  import("@/components/Tooltip").then(module => ({ default: module.Tooltip }))
+);
 
 export default function MajorRecapClient ({ params }: { params: MajorRecapParams }) {
   const { locale, version } = params
@@ -75,6 +80,19 @@ export default function MajorRecapClient ({ params }: { params: MajorRecapParams
               const score2 = match?.games.reduce((s, game) => (game.winner === 2 ? s+1 : s), 0);
               const minWins = ((match?.best_of || NaN)+1)/2
               const winner = score1 === minWins ? playerData1 : (score2 === minWins ? playerData2 : null)
+
+              const isMatchWinner = (player: 1 | 2) => {
+                let mountPlayerData = player === 1 ? playerData1 : playerData2;
+                
+                if(match?.enforce_winner === player) return true;
+
+                if(!mountPlayerData) return false;
+
+                if(mountPlayerData.name === winner?.name) return true;
+                if(match?.is_bye) return true;
+
+                return false;
+              }
                           
               return <div
                 key={matchid}
@@ -100,32 +118,45 @@ export default function MajorRecapClient ({ params }: { params: MajorRecapParams
                   <div className="absolute top-[calc(50%-1px)] right-full h-0 w-6 border-t-2 border-gray-300" />
                 )*/}
 
-                <Link href={match?.is_bye ? "" : `/${locale}/major/${version}/${server}/match/${matchid}`} className={`block ${match?.is_bye ? "cursor-default" : ""}`}>
-                  <div className={`group w-50 relative z-10 flex flex-col gap-0.5`} >
-                    <div className="absolute top-[-20px] text-gray-500 text-xs group-hover:text-gray-800 transition-all duration-200">
-                      {
-                        t("match_x", {match: matchid}) +
-                        (match && match?.best_of ? ` – ${t("best_of_x", {x: match.best_of, min_w: (match.best_of+1)/2})}` : "")
-                      }
+                <Suspense><div className="relative">
+                  {match?.enforce_winner && match?.enforce_reason && match.enforce_reason !== "unspecified" &&
+                    <div className="absolute z-11 -top-1/3 right-1.5">
+                      <Tooltip position="bottom" content={
+                        <div className="text-xs text-center w-30">{
+                          t(`enforce_reason.${match.enforce_reason}`, { player: (isMatchWinner(1) ? playerData2?.name : playerData1?.name) ?? "" })
+                        }</div>
+                      }>
+                        <InformationCircleIcon className="size-5 text-gray-500"/>
+                      </Tooltip>
                     </div>
-                    <div className="flex flex-row gap-0.5 justify-between h-8">
-                      <span className={`overflow-hidden text-ellipsis whitespace-nowrap flex items-center w-full p-2 bg-gray-200 group-hover:bg-gray-300 transition-all duration-200 ${playerData1 ? (playerData1.name === winner?.name || match?.is_bye ? "font-semibold" : "") : ""} ${!playerData1 && match?.is_bye ? "italic" : ""}`}>
-                        {playerData1?.name || (match?.is_bye ? "BYE" : "")}
-                      </span>
-                      <span className={`py-2 bg-gray-200 group-hover:bg-gray-300 transition-all duration-200 min-w-8 flex justify-center items-center ${playerData1 ? (playerData1.name === winner?.name ? "font-semibold" : "") : ""}`}>
-                        {playerData1 && !match?.is_bye && typeof score1 === "number" ? score1 : ""}
-                      </span>
+                  }
+                  <Link href={match?.is_bye ? "" : `/${locale}/major/${version}/${server}/match/${matchid}`} className={`block ${match?.is_bye ? "cursor-default" : ""}`}>
+                    <div className={`group w-50 relative z-10 flex flex-col gap-0.5`} >
+                      <div className="absolute top-[-20px] text-gray-500 text-xs group-hover:text-gray-800 transition-all duration-200">
+                        {
+                          t("match_x", {match: matchid}) +
+                          (match && match?.best_of ? ` – ${t("best_of_x", {x: match.best_of, min_w: (match.best_of+1)/2})}` : "")
+                        }
+                      </div>
+                      <div className="flex flex-row gap-0.5 justify-between h-8">
+                        <span className={`overflow-hidden text-ellipsis whitespace-nowrap flex items-center w-full p-2 bg-gray-200 group-hover:bg-gray-300 transition-all duration-200 ${isMatchWinner(1) ? "font-semibold" : ""} ${!playerData1 && match?.is_bye ? "italic" : ""}`}>
+                          {playerData1?.name || (match?.is_bye ? "BYE" : "")}
+                        </span>
+                        <span className={`py-2 bg-gray-200 group-hover:bg-gray-300 transition-all duration-200 min-w-8 flex justify-center items-center ${isMatchWinner(1) ? "font-semibold" : ""}`}>
+                          {playerData1 && !match?.is_bye && typeof score1 === "number" ? score1 : ""}
+                        </span>
+                      </div>
+                      <div className="flex flex-row gap-0.5 justify-between h-8">
+                        <span className={`overflow-hidden text-ellipsis whitespace-nowrap flex items-center w-full p-2 bg-gray-200 group-hover:bg-gray-300 transition-all duration-200 ${isMatchWinner(2) ? "font-semibold" : ""} ${!playerData2 && match?.is_bye ? "italic" : ""}`}>
+                          {playerData2?.name || (match?.is_bye ? "BYE" : "")}
+                        </span>
+                        <span className={`py-2 bg-gray-200 group-hover:bg-gray-300 transition-all duration-200 min-w-8 flex justify-center items-center ${isMatchWinner(2) ? "font-semibold" : ""}`}>
+                          {playerData2 && !match?.is_bye && typeof score2 === "number" ? score2 : ""}
+                        </span>
+                      </div>
                     </div>
-                    <div className="flex flex-row gap-0.5 justify-between h-8">
-                      <span className={`overflow-hidden text-ellipsis whitespace-nowrap flex items-center w-full p-2 bg-gray-200 group-hover:bg-gray-300 transition-all duration-200 ${playerData2 ? (playerData2.name === winner?.name || match?.is_bye ? "font-semibold" : "") : ""} ${!playerData2 && match?.is_bye ? "italic" : ""}`}>
-                        {playerData2?.name || (match?.is_bye ? "BYE" : "")}
-                      </span>
-                      <span className={`py-2 bg-gray-200 group-hover:bg-gray-300 transition-all duration-200 min-w-8 flex justify-center items-center ${playerData2 ? (playerData2.name === winner?.name ? "font-semibold" : "") : ""}`}>
-                        {playerData2 && !match?.is_bye && typeof score2 === "number" ? score2 : ""}
-                      </span>
-                    </div>
-                  </div>
-                </Link>
+                  </Link>
+                </div></Suspense>
                 
               </div>
             })}

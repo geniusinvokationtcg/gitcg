@@ -3,6 +3,9 @@ import { prefixStatusRegEx } from "./vars";
 
 export const getWinner = (matchid: number, data: MajorData, games: number[][], seeding: Seeding) => {
   const match = data.bracket.find(m => m.matchid === matchid);
+
+  if(match && match.enforce_winner) return match.enforce_winner;
+  
   const score1 = match?.games.reduce((s, game) => (game.winner === 1 ? s+1 : s), 0);
   const score2 = match?.games.reduce((s, game) => (game.winner === 2 ? s+1 : s), 0);
   const minWins = ((match?.best_of || NaN)+1)/2

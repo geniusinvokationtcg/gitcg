@@ -232,6 +232,11 @@
     "win_count": "Wins",
     "win_rate": "Win Rate",
     "best_advancement": "Best Advancement",
-    "ban_count": "Banned"
+    "ban_count": "Banned",
+    "enforce_reason": {
+      "drop": "{player} dropped from the tournament",
+      "disqualified": "{player} was disqualified",
+      "no_show": "{player} didn't show up"
+    }
   }
 }

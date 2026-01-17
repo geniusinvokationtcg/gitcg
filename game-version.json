@@ -43,7 +43,7 @@
     },
     {
       "version": "4-8",
-      "server": ["eu", "as"]
+      "server": ["na", "eu", "as"]
     }
   ],
   "redirect": {

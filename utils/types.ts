@@ -144,6 +144,8 @@ export interface EliminationBracketMatch {
   bans?: [number, number]
   games: MajorGame[]
   is_bye?: boolean
+  enforce_winner?: 1 | 2
+  enforce_reason?: null | "unspecified" | "drop" | "disqualified" | "no_show"
 }
 
 export interface MajorGame {

@@ -232,6 +232,11 @@
     "win_count": "Menang",
     "win_rate": "Tingkat Kemenangan",
     "best_advancement": "Babak Terakhir",
-    "ban_count": "Ban"
+    "ban_count": "Ban",
+    "enforce_reason": {
+      "drop": "{player} mengundurkan diri dari turnamen",
+      "disqualified": "{player} didiskualifikasi",
+      "no_show": "{player} tidak hadir"
+    }
   }
 }
