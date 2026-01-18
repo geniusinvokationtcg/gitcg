@@ -118,18 +118,20 @@ export default function MajorRecapClient ({ params }: { params: MajorRecapParams
                   <div className="absolute top-[calc(50%-1px)] right-full h-0 w-6 border-t-2 border-gray-300" />
                 )*/}
 
-                <Suspense><div className="relative">
-                  {match?.enforce_winner && match?.enforce_reason && match.enforce_reason !== "unspecified" &&
-                    <div className="absolute z-11 -top-1/3 right-1.5">
-                      <Tooltip position="bottom" content={
-                        <div className="text-xs text-center w-30">{
-                          t(`enforce_reason.${match.enforce_reason}`, { player: (isMatchWinner(1) ? playerData2?.name : playerData1?.name) ?? "" })
-                        }</div>
-                      }>
-                        <InformationCircleIcon className="size-5 text-gray-500"/>
-                      </Tooltip>
-                    </div>
-                  }
+                <div className="relative">
+                  <Suspense>
+                    {match?.enforce_winner && match?.enforce_reason && match.enforce_reason !== "unspecified" &&
+                      <div className="absolute z-11 -top-1/3 right-1.5">
+                        <Tooltip position="bottom" content={
+                          <div className="text-xs text-center w-30">{
+                            t(`enforce_reason.${match.enforce_reason}`, { player: (isMatchWinner(1) ? playerData2?.name : playerData1?.name) ?? "" })
+                          }</div>
+                        }>
+                          <InformationCircleIcon className="size-5 text-gray-500"/>
+                        </Tooltip>
+                      </div>
+                    }
+                  </Suspense>
                   <Link href={match?.is_bye ? "" : `/${locale}/major/${version}/${server}/match/${matchid}`} className={`block ${match?.is_bye ? "cursor-default" : ""}`}>
                     <div className={`group w-50 relative z-10 flex flex-col gap-0.5`} >
                       <div className="absolute top-[-20px] text-gray-500 text-xs group-hover:text-gray-800 transition-all duration-200">
@@ -156,7 +158,7 @@ export default function MajorRecapClient ({ params }: { params: MajorRecapParams
                       </div>
                     </div>
                   </Link>
-                </div></Suspense>
+                </div>
                 
               </div>
             })}
