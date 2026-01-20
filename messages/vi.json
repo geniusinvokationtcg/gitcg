@@ -219,6 +219,7 @@
     "round_x": "Round {round}",
     "match_x": "Game {match}",
     "best_of_x": "Best of {x}",
+    "bye": "BYE",
     "banned": "Ban",
     "win": "Win",
     "lose": "Lose",
@@ -232,6 +233,11 @@
     "win_count": "Tổng Trận Thắng",
     "win_rate": "Tỉ Lệ Thắng",
     "best_advancement": "Thành Tích Cao Nhất",
-    "ban_count": "Số Lần Ban"
+    "ban_count": "Số Lần Ban",
+    "enforce_reason": {
+      "drop": "{player} đã xin rút khỏi giải đấu",
+      "disqualified": "{player} đã bị loại khỏi giải đấu",
+      "no_show": "{player} đã vắng mặt"
+    }
   }
 }

@@ -142,7 +142,7 @@ export default function MajorRecapClient ({ params }: { params: MajorRecapParams
                       </div>
                       <div className="flex flex-row gap-0.5 justify-between h-8">
                         <span className={`overflow-hidden text-ellipsis whitespace-nowrap flex items-center w-full p-2 bg-gray-200 group-hover:bg-gray-300 transition-all duration-200 ${isMatchWinner(1) ? "font-semibold" : ""} ${!playerData1 && match?.is_bye ? "italic" : ""}`}>
-                          {playerData1?.name || (match?.is_bye ? "BYE" : "")}
+                          {playerData1?.name || (match?.is_bye ? t("bye") : "")}
                         </span>
                         <span className={`py-2 bg-gray-200 group-hover:bg-gray-300 transition-all duration-200 min-w-8 flex justify-center items-center ${isMatchWinner(1) ? "font-semibold" : ""}`}>
                           {playerData1 && !match?.is_bye && typeof score1 === "number" ? score1 : ""}
@@ -150,7 +150,7 @@ export default function MajorRecapClient ({ params }: { params: MajorRecapParams
                       </div>
                       <div className="flex flex-row gap-0.5 justify-between h-8">
                         <span className={`overflow-hidden text-ellipsis whitespace-nowrap flex items-center w-full p-2 bg-gray-200 group-hover:bg-gray-300 transition-all duration-200 ${isMatchWinner(2) ? "font-semibold" : ""} ${!playerData2 && match?.is_bye ? "italic" : ""}`}>
-                          {playerData2?.name || (match?.is_bye ? "BYE" : "")}
+                          {playerData2?.name || (match?.is_bye ? t("bye") : "")}
                         </span>
                         <span className={`py-2 bg-gray-200 group-hover:bg-gray-300 transition-all duration-200 min-w-8 flex justify-center items-center ${isMatchWinner(2) ? "font-semibold" : ""}`}>
                           {playerData2 && !match?.is_bye && typeof score2 === "number" ? score2 : ""}

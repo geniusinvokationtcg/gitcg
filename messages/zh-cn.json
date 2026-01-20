@@ -219,6 +219,7 @@
     "round_x": "第{round}轮",
     "match_x": "第{match}场",
     "best_of_x": "{x}局{min_w}胜",
+    "bye": "轮空",
     "banned": "禁用",
     "win": "胜利",
     "lose": "失败",

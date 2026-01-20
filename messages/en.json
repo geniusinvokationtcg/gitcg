@@ -219,6 +219,7 @@
     "round_x": "Round {round}",
     "match_x": "Match {match}",
     "best_of_x": "Best of {x}",
+    "bye": "BYE",
     "banned": "Banned",
     "win": "Win",
     "lose": "Lose",

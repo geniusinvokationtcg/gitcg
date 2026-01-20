@@ -219,6 +219,7 @@
     "round_x": "Ronde {round}",
     "match_x": "Pertandingan {match}",
     "best_of_x": "Best of {x}",
+    "bye": "BYE",
     "banned": "Di-ban",
     "win": "Menang",
     "lose": "Kalah",
