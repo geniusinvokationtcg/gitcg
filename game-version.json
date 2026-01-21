@@ -52,6 +52,10 @@
     {
       "version": "4-6",
       "server": ["na", "eu", "as"]
+    },
+    {
+      "version": "4-5",
+      "server": ["na", "eu", "as"]
     }
   ],
   "redirect": {
