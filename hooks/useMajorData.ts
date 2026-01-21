@@ -1,8 +1,6 @@
 'use client';
 
-import { useEffect, useState } from "react";
-import { MajorData } from "@/utils/types";
-import { ServerPure } from "@/utils/types";
+import { MajorData, ServerPure } from "@/utils/types";
 import { useQuery } from "@tanstack/react-query";
 
 const MAJOR_DATA_API = "https://script.google.com/macros/s/AKfycbxajfQ2Ncu8jSxh_ok_mlWvhy_HokptJBC6Huklm0HpLqNszNcWTELHvcHqdrhjEvUahA/exec";

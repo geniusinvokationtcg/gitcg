@@ -2,7 +2,7 @@
 
 import cardsData from "@/cards.json";
 import { gameVersion, getVerLabel } from "@/utils/version";
-import { duelistRecordUrl, weeklyMatchdataHeader } from "@/utils/vars";
+import { duelistRecordUrl, prefixStatusRegEx, weeklyMatchdataHeader } from "@/utils/vars";
 import { notFound, redirect } from 'next/navigation';
 import { use, useEffect, useMemo, useState } from "react";
 import { useLocalCardsData } from "@/hooks/useLocalCardsData";
@@ -193,7 +193,7 @@ export default function WeeklyPlayerPage ({ params }: { params: Promise<{ locale
       {t("player_page_title", { version: getVerLabel(version, locale) })}
     </h1>
     <h1 className="deck_showcase_padding section_title font-semibold">
-      {DRQuery.isLoading ? g("loading") : DRQuery.data?.find(p => p.playerid === playerid)?.handle_display}
+      {DRQuery.isLoading ? g("loading") : DRQuery.data?.find(p => p.playerid === playerid)?.handle_display.replace(prefixStatusRegEx, "")}
     </h1>
     {dataByPlayer.length === 0 ? <NoDataAvailable/> : <>
       <div className="deck_showcase_padding stat_showcase">
