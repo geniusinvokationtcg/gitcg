@@ -142,6 +142,7 @@ export interface EliminationBracketMatch {
   best_of: number
   matchid: number
   bans?: [number, number]
+  bans2?: [number, number]
   games: MajorGame[]
   is_bye?: boolean
   enforce_winner?: 1 | 2
@@ -149,6 +150,7 @@ export interface EliminationBracketMatch {
 }
 
 export interface MajorGame {
+  game_num?: number
   deck_index: [number, number]
   winner: 1 | 2
   vod?: string

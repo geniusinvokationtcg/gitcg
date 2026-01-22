@@ -73,41 +73,49 @@ export default function MajorMatchDetail ({ params }: { params: Promise<{ locale
       <div className="whitespace-nowrap">{score1} – {score2}</div>
       <div className="text-center"><Link href={`${playerPath}/${player2.seed}`} className="hover:underline">{player2.name}</Link></div>
     </div>
-    {match.bans && !match.bans.some(b => typeof b !== "number") && <div className="major_match_row">
-      <div className="deck_container ban left_player">
-        <div>{t("banned")}</div>
-        <Link href={`${playerPath}/${player1.seed}?d=${match.bans[0]-1}`}>
-          {getCharacterCards(player1, match.bans[0]-1).map((c, i) => (
-            <CardImageMedium
-              key={i}
-              cardType="characters"
-              cardId={c}
-              resize={true}
-              localCardsData={localCardsData}
-            />
-          ))}
-        </Link>
-      </div>
-      <div/>
-      <div className="deck_container ban right_player">
-        <div>{t("banned")}</div>
-        <Link href={`${playerPath}/${player2.seed}?d=${match.bans[1]-1}`}>
-          {getCharacterCards(player2, match.bans[1]-1).map((c, i) => (
-            <CardImageMedium
-              key={i}
-              cardType="characters"
-              cardId={c}
-              resize={true}
-              localCardsData={localCardsData}
-            />
-          ))}
-        </Link>
-      </div>
-    </div>}
+    {((/*BANS*/) => {
+      function banDiv (matchBans: [number, number], players: [MajorPlayer, MajorPlayer]) {
+        return <div className="major_match_row">
+          <div className="deck_container ban left_player">
+            <div>{t("banned")}</div>
+            <Link href={`${playerPath}/${players[0].seed}?d=${matchBans[0]-1}`}>
+              {getCharacterCards(players[0], matchBans[0]-1).map((c, i) => (
+                <CardImageMedium
+                  key={i}
+                  cardType="characters"
+                  cardId={c}
+                  resize={true}
+                  localCardsData={localCardsData}
+                />
+              ))}
+            </Link>
+          </div>
+          <div/>
+          <div className="deck_container ban right_player">
+            <div>{t("banned")}</div>
+            <Link href={`${playerPath}/${players[1].seed}?d=${matchBans[1]-1}`}>
+              {getCharacterCards(players[1], matchBans[1]-1).map((c, i) => (
+                <CardImageMedium
+                  key={i}
+                  cardType="characters"
+                  cardId={c}
+                  resize={true}
+                  localCardsData={localCardsData}
+                />
+              ))}
+            </Link>
+          </div>
+        </div>
+      }
+      return <>
+        {match.bans && !match.bans.some(b => typeof b !== "number") && banDiv(match.bans, [player1, player2])}
+        {match.bans2 && !match.bans2.some(b => typeof b !== "number") && banDiv(match.bans2, [player1, player2])}
+      </>
+    })()}
     {match.games.map((game, match_index) => <div className="major_match_row" key={match_index}>
       <div className={`deck_container left_player ${game.winner === 1 ? "win" : "lose"}`}>
         <div className="flex justify-between">
-          <div className="regular_text">{t("game_x", { game: match_index+1 })}</div>
+          <div className="regular_text">{t("game_x", { game: game?.game_num ?? match_index+1 })}</div>
           <div className="wl_text">
             {game.winner ? (game.winner === 1 ? t("win") : t("lose")) : t("ongoing")}
           </div>

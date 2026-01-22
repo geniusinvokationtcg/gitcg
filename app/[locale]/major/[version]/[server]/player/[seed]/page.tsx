@@ -164,6 +164,7 @@ export default function MajorPlayerDetail ({ params }: { params: Promise<{ local
         const currentPlayerIndex = player1.seed === player.seed ? 1 : 2
 
         if(m.bans) if(m.bans[currentPlayerIndex-1] === deckIndex+1) a.ban_count++
+        if(m.bans2) if(m.bans2[currentPlayerIndex-1] === deckIndex+1) a.ban_count++
         m.games.forEach(g => {
           if(g.deck_index[currentPlayerIndex-1] === deckIndex+1) a.game_count++
           else return
