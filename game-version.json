@@ -60,6 +60,10 @@
     {
       "version": "4-3",
       "server": ["na", "eu", "as"]
+    },
+    {
+      "version": "4-2",
+      "server": ["eu"]
     }
   ],
   "redirect": {
