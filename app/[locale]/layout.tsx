@@ -32,9 +32,9 @@ export default async function LocaleLayout({
   params: Promise<{locale: string}>;
 }) {
   const headersList = await headers();
-  //const pathname = headersList.get("x-pathname") || "";
+  const pathname = headersList.get("x-pathname") || "";
   const searchParams = new URLSearchParams(headersList.get("x-search") || "");
-  const hideComponents = /*/^\/.+\/weekly\/.+\/.+\/[0-9]\/decks$/.test(pathname) &&*/ searchParams.has("obs");
+  const hideComponents = /^\/.+\/obs\/.+$/.test(pathname) || searchParams.has("obs");
 
   // Ensure that the incoming 'locale' is valid
   const {locale} = await params;
