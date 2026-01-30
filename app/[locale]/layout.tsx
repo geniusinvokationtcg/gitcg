@@ -9,6 +9,7 @@ import Footer from '@/components/footer';
 import { TanstackProvider } from "@/components/providers/tanstack-provider";
 import "./globals.css";
 import { headers } from "next/headers";
+import { AuthProvider } from "@/context/Auth";
 
 export const metadata = {
   keywords: ["genshin tcg", "gitcg" , "genius invokation tcg", "tcg"],
@@ -52,13 +53,15 @@ export default async function LocaleLayout({
         <link rel="icon" href="/logo.png" type="image/png" />
       </head>
       <body className="antialiased flex flex-col min-h-screen">
-        <NextIntlClientProvider messages={messages} locale={locale}>
-          {!hideComponents && <Navbar locale={locale}/>}
-          <main className="flex justify-center flex-grow">
-            <TanstackProvider>{children}</TanstackProvider>
-          </main>
-          {!hideComponents && <Footer />}
-        </NextIntlClientProvider>
+        <AuthProvider>
+          <NextIntlClientProvider messages={messages} locale={locale}>
+            {!hideComponents && <Navbar locale={locale}/>}
+            <main className="flex justify-center flex-grow">
+              <TanstackProvider>{children}</TanstackProvider>
+            </main>
+            {!hideComponents && <Footer />}
+          </NextIntlClientProvider>
+        </AuthProvider>
         <Analytics />
         <SpeedInsights />
       </body>

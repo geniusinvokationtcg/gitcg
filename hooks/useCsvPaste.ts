@@ -10,11 +10,14 @@ interface CsvPasteAPIRes {
 
 export function useCsvPaste (uuid: string, nocsv?: boolean) {
   const [csvPaste, setCsvPaste] = useState<CsvPasteAPIRes | null>(null)
+  const [isLoading, setIsLoading] = useState(true)
   
   useEffect(() => {
     let cancelled = false
 
     if(!uuid) return () => { cancelled = true };
+
+    setIsLoading(true)
 
     async function load() {
       const res = await fetch(`/api/weekly?uuid=${uuid}${nocsv ? "&nocsv=1" : ""}`)
@@ -24,13 +27,16 @@ export function useCsvPaste (uuid: string, nocsv?: boolean) {
       }
 
       const data = await res.json()
-      if(!cancelled) setCsvPaste(data)
+      if(!cancelled) {
+        setCsvPaste(data)
+        setIsLoading(false)
+      }
     }
 
     load()
 
-    return () => { cancelled = true }
+    return () => { cancelled = true; setIsLoading(false) }
   }, [uuid])
 
-  return csvPaste
+  return { csvPaste, isLoading }
 }

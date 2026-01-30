@@ -104,24 +104,21 @@ export function ColumnVisibilityDropdown({
   );
 }
 
-export function CustomSelect<T>({
+export function CustomSelect({
   options,
   value,
   onChange,
   className,
-  listClassName
+  listClassName,
+  additionalClass
 }: {
-  options: { value: string | number; label: string | number }[];
+  options: { value: string | number; label: React.ReactNode }[];
   value: string | number;
   onChange: (value: any) => void;
   className?: string;
   listClassName?: string;
+  additionalClass?: string
 }) {
-  /*const maxWidth = useMemo(() => {
-    const maxLength = Math.max(...options.map(opt => opt.label.length));
-    // 1ch ≈ width of one character, adjust multipliers as needed
-    return `${Math.min(maxLength * 0.6 + 4, 20)}rem`; // Caps at 20rem
-  }, [options]);*/
 
   return (
     <Menu as="div" className="relative">
@@ -131,11 +128,12 @@ export function CustomSelect<T>({
           className ||
           "text-xs bg-white border border-gray-300 rounded-sm text-gray-900 hover:bg-gray-50 hover:border-gray-500 focus:border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500 hover:shadow-md focus:shadow-md"
         }
+        ${ additionalClass || "" }
         transition-all duration-200 ease-in-out
         bg-[right_0.5rem_center] bg-[length:1rem] bg-no-repeat
         cursor-pointer`}
       >
-        {value}
+        {options.find(option => option.value === value)?.label ?? value}
         <ChevronDownIcon className="size-3.5"/>
       </MenuButton>
 

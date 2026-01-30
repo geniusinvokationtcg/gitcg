@@ -17,8 +17,8 @@ export default function DeckCarouselOverlay() {
 
   const csvPasteAPIRes = useCsvPaste(data?.weekly_uuid || "")
 
-  const server = csvPasteAPIRes?.server ?? "as"
-  const csvPaste = csvPasteAPIRes?.csvPaste ?? []
+  const server = csvPasteAPIRes.csvPaste?.server ?? "as"
+  const csvPaste = csvPasteAPIRes.csvPaste?.csvPaste ?? []
 
   const transformedData = csvPaste.map(row => ({
     ...row,

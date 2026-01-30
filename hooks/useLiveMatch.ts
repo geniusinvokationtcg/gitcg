@@ -3,7 +3,7 @@
 import { supabase } from "@/lib/supabaseClient";
 import { useEffect, useState } from "react";
 
-interface LiveMatchData {
+export interface LiveMatchData {
   id: number
   weekly_uuid: string
   first_player_uid: number
@@ -11,19 +11,38 @@ interface LiveMatchData {
   round: number
 }
 
-export function useLiveMatch () {
+export function useLiveMatch() {
   const [data, setData] = useState<LiveMatchData | null>(null)
   const [error, setError] = useState<string | null>(null)
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    supabase.from("live_match")
-      .select("*")
-      .eq("id", 1)
-      .single<LiveMatchData>()
-      .then(({ data, error }) => {
-        if (error) setError(error.message);
-        else setData(data);
-      })
+    let cancelled = false;
+
+    const fetchData = async () => {
+      setIsLoading(true)
+
+      const { data, error } = await supabase.from("live_match")
+        .select("*")
+        .eq("id", 1)
+        .single<LiveMatchData>()
+
+      if (cancelled) return;
+
+      if (error) {
+        setError(error.message)
+        setData(null)
+      } else {
+        setError(null)
+        setData(data)
+      }
+
+      setIsLoading(false)
+    }
+
+    fetchData()
+
+    return () => { cancelled = true }
   }, [])
 
   useEffect(() => {
@@ -40,5 +59,5 @@ export function useLiveMatch () {
     }
   }, [])
 
-  return { data, error }
+  return { data, error, isLoading }
 }

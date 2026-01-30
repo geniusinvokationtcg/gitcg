@@ -12,9 +12,9 @@ export default function PlateOverlay() {
 
   const csvPasteAPIRes = useCsvPaste(data?.weekly_uuid || "", true)
 
-  const version = csvPasteAPIRes?.version ?? gameVersion.latest
-  const week = csvPasteAPIRes?.week ?? 1
-  const server = csvPasteAPIRes?.server ?? "as"
+  const version = csvPasteAPIRes.csvPaste?.version ?? gameVersion.latest
+  const week = csvPasteAPIRes.csvPaste?.week ?? 1
+  const server = csvPasteAPIRes.csvPaste?.server ?? "as"
   const round = data?.round ?? 1
 
   const Logo = <img src={"/gitcg_weekly_logo.png"} className="object-none translate-y-[5.5px]" />

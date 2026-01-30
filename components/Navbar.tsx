@@ -6,6 +6,7 @@ import { Bars3Icon, XMarkIcon, ChevronDownIcon, ChevronUpIcon } from '@heroicons
 import { Link } from '../i18n/navigation';
 import { Locales } from "../utils/types"
 import { LocaleSwitcher } from './LocaleSwitcher';
+import { useAuth } from '@/context/Auth';
 
 export default function Navbar({ locale }: {locale: Locales}) {
   const t = useTranslations("Navbar");
@@ -22,13 +23,27 @@ export default function Navbar({ locale }: {locale: Locales}) {
       { name: t("major"), path: "/major" }
     ] }
   ];
+
+  const auth = useAuth()
   
   return (
     <>
       <nav>
-        <Link href="/">
-          <img src="/logo.png" alt="GITCG Logo" className="w-16" />
-        </Link>
+        <div className="flex flex-row gap-3 items-center">
+          <Link href="/">
+            <img src="/logo.png" alt="GITCG Logo" className="w-16" />
+          </Link>
+
+          {auth.user &&
+            <Link href="/account/login" className="hover:text-[#AF7637] transition-colors duration-200">
+              {auth.user.app_metadata.provider === "discord"
+                ? (auth.user.user_metadata.custom_claims.global_name || auth.user.user_metadata.full_name || auth.user.user_metadata.name)
+                : (auth.user.email || "Unnamed")
+              }
+              {auth.isAdmin && <div className="text-xs">Admin</div>}
+            </Link>
+          }
+        </div>
         
         <div className="flex justify-center items-center gap-5">
           <ul className="navbar_menu_desktop">

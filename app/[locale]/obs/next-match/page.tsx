@@ -19,11 +19,11 @@ export default function NextMatchOverlay() {
   if (error) return "Error: " + error;
   if (!data) return "Match loading";
   if (!duelistRecord) return "DR loading";
-  if (!csvPasteAPIRes) return "CSV loading";
+  if (!csvPasteAPIRes.csvPaste) return "CSV loading";
 
   const { round } = data
 
-  const { server, csvPaste } = csvPasteAPIRes;
+  const { server, csvPaste } = csvPasteAPIRes.csvPaste;
 
   const top = data.first_player_uid
   const bottom = data.second_player_uid
