@@ -24,7 +24,7 @@ export default function DeckCarouselOverlay() {
     ...row,
     isValidDeckcode: isValidDeckcode(row.deckcode),
     decoded: decodeAndSortActionCards(row.deckcode)
-  })).filter(row => row.isValidDeckcode.result)
+  })).filter(row => row.isValidDeckcode.result && row.isCheckedIn)
 
   const [playerIndex, setPlayerIndex] = useState(0);
 

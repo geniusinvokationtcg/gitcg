@@ -245,4 +245,5 @@ export interface CsvPasteRowClient {
   teamName: string;
   uid: number;
   deckcode: string;
+  isCheckedIn: boolean;
 }
