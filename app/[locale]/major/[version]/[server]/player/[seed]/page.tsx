@@ -46,7 +46,7 @@ export default function MajorPlayerDetail ({ params }: { params: Promise<{ local
 
   const { data, isLoading, error } = useMajorData(version, server, gameVersion.latest === version);
   if(isLoading) return;
-  if(!data) return <p>Something went wrong: {error ? error.message : "Unknown error"}</p>
+  if(!data) return <p>Something went wrong: {error ?? "Unknown error"}</p>
 
   const player = data.players.find(p => p.seed === seed)
   if(!player) notFound()

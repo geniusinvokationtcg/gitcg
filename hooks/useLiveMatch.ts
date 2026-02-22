@@ -61,3 +61,61 @@ export function useLiveMatch() {
 
   return { data, error, isLoading }
 }
+
+export interface LiveMajorData {
+  id: number
+  major_uuid: string
+  match: number
+  game: number
+}
+
+export function useLiveMajor() {
+  const [data, setData] = useState<LiveMajorData | null>(null)
+  const [error, setError] = useState<string | null>(null)
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    let cancelled = false;
+
+    const fetchData = async () => {
+      setIsLoading(true)
+
+      const { data, error } = await supabase.from("major_live_match")
+        .select("*")
+        .eq("id", 1)
+        .single<LiveMajorData>()
+
+      if (cancelled) return;
+
+      if (error) {
+        setError(error.message)
+        setData(null)
+      } else {
+        setError(null)
+        setData(data)
+      }
+
+      setIsLoading(false)
+    }
+
+    fetchData()
+
+    return () => { cancelled = true }
+  }, [])
+
+  useEffect(() => {
+    const channel = supabase.channel("major_live_match")
+      .on(
+        "postgres_changes",
+        { event: "UPDATE", schema: "public", table: "major_live_match", filter: "id=eq.1" },
+        (payload) => setData(payload.new as LiveMajorData)
+      )
+      .subscribe(status => console.log(status))
+
+    return () => {
+      supabase.removeChannel(channel)
+    }
+  }, [])
+
+  return { data, error, isLoading }
+}

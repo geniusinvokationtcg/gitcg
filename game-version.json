@@ -5,6 +5,10 @@
   ],
   "major": [
     {
+      "version": "6-3",
+      "server": ["eu"]
+    },
+    {
       "version": "6-1",
       "server": ["as"],
       "start": 0
@@ -63,7 +67,6 @@
     },
     {
       "version": "4-2",
-      "server": ["eu"]
       "server": ["na", "eu"]
     }
   ],

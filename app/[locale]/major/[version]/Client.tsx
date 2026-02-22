@@ -32,7 +32,7 @@ export default function MajorRecapClient ({ params }: { params: MajorRecapParams
 
   const { data, isLoading, error } = useMajorData(version, server, gameVersion.latest === version);
   if(isLoading) return;
-  if(!data) return <p>Something went wrong: {error ? error.message : "Unknown error"}</p>
+  if(!data) return <p>Something went wrong: {error ?? "Unknown error"}</p>
   
   const { seeding, maxRound, rounds, games } = generateRoundStructure(data.max_players)
   if(!seeding) return <p>Something went wrong: Seeding error</p>

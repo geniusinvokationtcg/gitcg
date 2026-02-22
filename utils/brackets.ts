@@ -1,5 +1,5 @@
 import { Maybe, SuccessResult, ErrorResult } from "@/utils/types"
-import { Seeding, MajorData } from "./types"
+import { Seeding } from "./types"
 
 export function generateSeeding (max_players: number): Maybe<Seeding> {
   if(max_players < 2) return ErrorResult("Invalid max players.");

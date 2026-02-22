@@ -33,7 +33,7 @@ export default function MajorMatchDetail ({ params }: { params: Promise<{ locale
 
   const { data, isLoading, error } = useMajorData(version, server, gameVersion.latest === version);
   if(isLoading) return;
-  if(!data) return <p>Something went wrong: {error ? error.message : "Unknown error"}</p>
+  if(!data) return <p>Something went wrong: {error ?? "Unknown error"}</p>
 
   const match = data.bracket.find(m => m.matchid === matchid);
   if(!match) return <p>Something went wrong: Can't find corresponding match</p>
