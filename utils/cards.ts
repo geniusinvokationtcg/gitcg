@@ -109,35 +109,35 @@ export const tribeResonance: {
 	card_id: number[]
 }[] = [
 	{
-		tribe: "Mondstadt",
+		tribe: "mondstadt",
 		card_id: [331801]
 	},
 	{
-		tribe: "Liyue",
+		tribe: "liyue",
 		card_id: [331802]
 	},
 	{
-		tribe: "Inazuma",
+		tribe: "inazuma",
 		card_id: [331803]
 	},
 	{
-		tribe: "Sumeru",
+		tribe: "sumeru",
 		card_id: [331804]
 	},
 	{
-		tribe: "Fontaine",
+		tribe: "fontaine",
 		card_id: [331805]
 	},
 	{
-		tribe: "Natlan",
+		tribe: "natlan",
 		card_id: [331806]
 	},
 	{
-		tribe: "Monster",
+		tribe: "monster",
 		card_id: [332015]
 	},
 	{
-		tribe: "Fatui",
+		tribe: "fatui",
 		card_id: [332016]
 	}
 ]
