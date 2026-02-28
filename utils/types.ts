@@ -187,6 +187,7 @@ export interface CharacterCard {
   belongs: string[]
   hp: string
   resource: string
+  avatar: string
 }
 export interface ActionCard {
   id: number
@@ -195,12 +196,15 @@ export interface ActionCard {
   action_type: string
   rank_id: number
   cost_num1: string
+  cost_type1: string
   cost_type1_icon: string
   cost_num2: string
+  cost_type2: string
   cost_type2_icon: string
   action_card_tags: string[]
   resource: string
   is_special: boolean
+  max_count: number
 }
 export interface CardCode {
   name: string

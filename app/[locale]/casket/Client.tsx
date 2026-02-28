@@ -104,7 +104,7 @@ export function DeckBuilderPageClient ({
     const groupedActionsArr = Array.from(groupedActions.entries());
     actions = [];
     groupedActionsArr.forEach(([id, count]) => {
-      const maxCount = isArcaneLegend(id) ? 1 : 2;
+      const maxCount = localCardsData.actions.find(action => action.id === id)?.max_count ?? 2;
       for(let i=1; i <= (count > maxCount ? maxCount : count); i++){
         actions.push(id);
       }
@@ -155,13 +155,13 @@ export function DeckBuilderPageClient ({
       ...c,
       isValid: isValidCard(c.id, activeCharacterCards.map(_c => _c.cardId)),
       total_cost_num: (() => {
-        const cost_num1 = unwantedCostIcons.includes(c.cost_type1_icon) ? 0 : Number(c.cost_num1);
-        const cost_num2 = unwantedCostIcons.includes(c.cost_type2_icon) ? 0 : Number(c.cost_num2);
+        const cost_num1 = unwantedCostTypes.includes(c.cost_type1) ? 0 : Number(c.cost_num1);
+        const cost_num2 = unwantedCostTypes.includes(c.cost_type2) ? 0 : Number(c.cost_num2);
         const cost = (isNaN(cost_num1) ? 0 : cost_num1) + (isNaN(cost_num2) ? 0 : cost_num2);
         return cost
       })()
     }))
-  }, [localCardsData, unwantedCostIcons, activeCharacterCards])
+  }, [localCardsData, unwantedCostTypes, activeCharacterCards])
   
   //FILTER
   const [isFiltering, setIsFiltering] = useState(false);
@@ -169,7 +169,7 @@ export function DeckBuilderPageClient ({
   const characterTraits = useMemo(() => ({
     element: elementResonance.map(res => res.element),
     weapon: ["sword", "catalyst", "claymore", "bow", "polearm", "other_weapons"],
-    affiliation: ["mondstadt", "liyue", "inazuma", "sumeru", "fontaine", "natlan", "fatui", "eremite", "monster", "hilichurl", "consecrated_beast", "cosmic_calamity", "arkhe_pneuma", "arkhe_ousia", "none"],
+    affiliation: ["mondstadt", "liyue", "inazuma", "sumeru", "fontaine", "natlan", "nod_krai", "fatui", "eremite", "monster", "hilichurl", "consecrated_beast", "cosmic_calamity", "arkhe_pneuma", "arkhe_ousia", "none"],
     hp: (() => {
       const hitpoints: Set<string> = new Set();
       localCardsData.characters.forEach(c => hitpoints.add(c.hp));
@@ -190,7 +190,7 @@ export function DeckBuilderPageClient ({
 
   const actionTraits = useMemo(() => ({
     type: ["equipment_card", "support_card", "event_card"],
-    tag: ["talent", "weapon", "sword", "catalyst", "claymore", "bow", "polearm", "artifact", "technique", "location", "companion", "item", "arcane_legend", "elemental_resonance", "food", "combat_action", "none"],
+    tag: ["talent", "weapon", "sword", "catalyst", "claymore", "bow", "polearm", "artifact", "technique", "location", "companion", "item", "arcane_legend", "elemental_transfiguration", "elemental_resonance", "food", "combat_action", "none"],
     cost: (() => {
       const costs: Set<number> = new Set();
       actions.forEach(c => costs.add(c.total_cost_num));
@@ -279,11 +279,11 @@ export function DeckBuilderPageClient ({
 
       return (normalizeSearchText(c.name, locale).includes( normalizeSearchText(characterSearchQuery, locale) ))
         && (element && categories.element.length > 0 ? categories.element.includes(element) : true)
-        && (categories.weapon.length > 0 ? categories.weapon.some(weap => term(weap) === c.weapon) : true)
+        && (categories.weapon.length > 0 ? categories.weapon.some(weap => weap === c.weapon) : true)
         && (categories.affiliation.length > 0
           ? (
             categories.affiliation.some(affi => affi !== "none"
-              ? c.belongs.includes(term(affi))
+              ? c.belongs.includes(affi)
               : !c.belongs.some(belong => belong !== "")
             )
           ) : true
@@ -344,11 +344,11 @@ export function DeckBuilderPageClient ({
 
       return (normalizeSearchText(c.name, locale).includes( normalizeSearchText(actionSearchQuery, locale) ))
         && (actionFilter.config.show_invalid || c.isValid)
-        && (categories.type.length > 0 ? categories.type.some(_type => term(_type) === c.action_type) : true)
+        && (categories.type.length > 0 ? categories.type.some(_type => _type === c.action_type) : true)
         && (categories.tag.length > 0
           ? (
             categories.tag.some(_tag => _tag !== "none"
-              ? c.action_card_tags.includes(term(_tag))
+              ? c.action_card_tags.includes(_tag)
               : !c.action_card_tags.some(card_tag => card_tag !== "")
             )
           ) : true
@@ -375,8 +375,7 @@ export function DeckBuilderPageClient ({
   const addActionCards = useCallback((id: number) => {
     const index = groupedActionCards.findIndex(([_id, count]) => _id === id);
     const count = index >= 0 ? groupedActionCards[index][1] : 0;
-    if(isArcaneLegend(id) && count >= 1) return;
-    if(count >= 2 || activeActionCards.length >= 30) return;
+    if(count >= (localCardsData.actions.find(action => action.id === id)?.max_count ?? 2) || activeActionCards.length >= 30) return;
     setActiveActionCards([...activeActionCards, id].sort((a, b) => a-b));
   }, [groupedActionCards, activeActionCards])
   const removeActionCards = useCallback((id: number, eraseAll: boolean = false) => {
@@ -393,7 +392,7 @@ export function DeckBuilderPageClient ({
     const card = groupedActionCards.find(([_id, index]) => _id === id);
     if(!card) return false;
     const [_id, count] = card;
-    return (isArcaneLegend(id) && count >= 1) || (isActionSlotFull && count >= 1) || count >= 2;
+    return count >= (localCardsData.actions.find(action => action.id === _id)?.max_count ?? 2) || (isActionSlotFull && count >= 1);
   }, [groupedActionCards, isActionSlotFull])
 
   const [deckOffset, setDeckOffset] = useState(0);
@@ -509,10 +508,10 @@ export function DeckBuilderPageClient ({
             />
           </div>
           <div>{c.cost_num1}</div>
-          <img src={c.cost_type1_icon || costIconUrls.aligned} />
+          <img src={c.cost_type1 ? `/game_icons/code/${c.cost_type1}.png` : costIconUrls.aligned} />
           {c.cost_type2_icon && <>
             <div className={c.is_special ? "hidden" : ""}>{c.cost_num2}</div>
-            <img src={c.cost_type2_icon} />
+            <img src={c.cost_type2 ? `/game_icons/code/${c.cost_type2}.png` : ""} />
           </>}
           {!c.isValid && <div className="ribbon">{t("invalid_card")}</div>}
           <div className={`preview_button group ${true ? "disabled" : ""}`}>
@@ -520,7 +519,7 @@ export function DeckBuilderPageClient ({
           </div>
           {(() => {
             const action = groupedActionCards.find(([id, count]) => id === c.id);
-            return action && <div className="ribbon brown_ribbon">{`${action[1]} / ${c.is_special ? 1 : 2}`}</div>
+            return action && <div className="ribbon brown_ribbon">{`${action[1]} / ${localCardsData.actions.find(a => a.id === action[0])?.max_count ?? 2}`}</div>
           })()}
         </div>
       )}</div>
@@ -882,10 +881,10 @@ export function DeckBuilderPageClient ({
                     />
                   </div>
                   <div>{c.cost_num1}</div>
-                  <img src={c.cost_type1_icon || costIconUrls.aligned} />
+                  <img src={c.cost_type1 ? `/game_icons/code/${c.cost_type1}.png` : costIconUrls.aligned} />
                   {c.cost_type2_icon && <>
                     <div className={c.is_special ? "hidden" : ""}>{c.cost_num2}</div>
-                    <img src={c.cost_type2_icon} />
+                    <img src={c.cost_type2 ? `/game_icons/code/${c.cost_type2}.png` : ""} />
                   </>}
                   {!c.isValid && <div className="ribbon">{t("invalid_card")}</div>}
                 </div>
@@ -900,8 +899,8 @@ export function DeckBuilderPageClient ({
   </div>
 }
 
-const unwantedCostTypes = ["1", "19", "20"]; //for characters
-const unwantedCostIcons = [ //for actions
+const unwantedCostTypes = ["1", "6", "19", "20"]; //for characters
+const unwantedCostIcons = [ //for actions (NO LONGER USED AFTER OLD API IS DEAD)
   "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/36cb5de8667e09ae102d165b89d6e441_604510126303725408.png",
   "https://fastcdn.hoyoverse.com/static-resource-v2/2023/07/10/95ea5f8357e489bccf5fb40a73955d2f_3489949153267385660.png"
 ];

@@ -778,5 +778,23 @@
     "character_name": "Consecrated Horned Crocodile",
     "talent_id": 222071,
     "talent_name": "Deathly Overflow"
+  },
+  {
+    "character_id": 1117,
+    "character_name": "Mika",
+    "talent_id": 211171,
+    "talent_name": "Companion's Counsel"
+  },
+  {
+    "character_id": 1417,
+    "character_name": "Ineffa",
+    "talent_id": 214171,
+    "talent_name": "Rectifying Processor"
+  },
+  {
+    "character_id": 2306,
+    "character_name": "Goldflame Qucusaur Tyrant",
+    "talent_id": 223061,
+    "talent_name": "Flamelord's Blessing"
   }
 ]
