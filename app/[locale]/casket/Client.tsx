@@ -172,7 +172,7 @@ export function DeckBuilderPageClient ({
     affiliation: ["mondstadt", "liyue", "inazuma", "sumeru", "fontaine", "natlan", "nod_krai", "fatui", "eremite", "monster", "hilichurl", "consecrated_beast", "cosmic_calamity", "arkhe_pneuma", "arkhe_ousia", "none"],
     hp: (() => {
       const hitpoints: Set<string> = new Set();
-      localCardsData.characters.forEach(c => hitpoints.add(c.hp));
+      localCardsData.characters.forEach(c => hitpoints.add(c.hp.toString()));
       return Array.from(hitpoints.values()).sort((a, b) => Number(a)-Number(b));
     })(),
     skill_cost: (() => {
@@ -288,7 +288,7 @@ export function DeckBuilderPageClient ({
             )
           ) : true
         )
-        && (categories.hp.length > 0 ? categories.hp.includes(c.hp) : true)
+        && (categories.hp.length > 0 ? categories.hp.includes(c.hp.toString()) : true)
         && (categories.skill_cost.length > 0
           ? (
             categories.skill_cost.some(cost => {

@@ -185,7 +185,7 @@ export interface CharacterCard {
   }[]
   weapon: string
   belongs: string[]
-  hp: string
+  hp: number
   resource: string
   avatar: string
 }
