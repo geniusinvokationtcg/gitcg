@@ -137,3 +137,5 @@ dist
 
 # Ignore all VSCode settings
 .vscode/
+
+app/*/casket/DeckImage/

@@ -26,12 +26,14 @@ import { HugeiconsIcon } from "@hugeicons/react";
 import { FilterIcon, FilterRemoveIcon } from "@hugeicons/core-free-icons"
 import { usePathname, useRouter } from "next/navigation"
 import { normalizeSearchText } from "@/utils/formatting"
+import { useDeckImageCanvas } from "./useDeckImage"
 
 const Tooltip = lazy(() =>
   import("@/components/Tooltip").then(module => ({
     default: module.Tooltip,
   }))
 )
+const InGameDeckImage = lazy(() => import("./DeckImage/InGame"))
 
 export function DeckBuilderPageClient ({
   params, searchParams
@@ -65,9 +67,23 @@ export function DeckBuilderPageClient ({
     setPopUpType(type);
     _triggerPopUp();
   }, [])
+
+  //DECK IMAGE
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  // const placeholderRef = useRef<HTMLDivElement>(null);
+  const { generateDeckImage, copyDeckImage, downloadDeckImage, isGenerating } = useDeckImageCanvas(localCardsData);
   
-  //DIALOG BOX
+  //IMPORT DIALOG BOX
   const [isOpenDialog, setIsOpenDialog] = useState(false);
+  
+  //DECK IMAGE DIALOG BOX
+  const [isOpenDeckImage, setIsOpenDeckImage] = useState(false);
+  useEffect(() => {
+    if(isOpenDeckImage && canvasRef.current) {
+      generateDeckImage(canvasRef.current, activeCharacterCards.map(c => c.cardId), activeActionCards, locale)
+    }
+  }, [isOpenDeckImage])
+
 
   const importDeckRef = useRef<HTMLInputElement>(null);
   const [isImporting, setIsImporting] = useState(false);
@@ -317,7 +333,7 @@ export function DeckBuilderPageClient ({
               const weaponCount: Map<string, number> = new Map(); weapons.forEach(weap => weaponCount.set(weap, (weaponCount.get(weap) ?? 0) + 1 ));
               const belongCount: Map<string, number> = new Map(); belongs.forEach(belong => belongCount.set(belong, (belongCount.get(belong) ?? 0) + 1 ));
 
-              const elementArr = Array.from(elementCount.entries()).sort(([, a], [, b]) => b-a); console.log(elementArr)
+              const elementArr = Array.from(elementCount.entries()).sort(([, a], [, b]) => b-a);
               const weaponArr = Array.from(weaponCount.entries()).sort(([, a], [, b]) => b-a);
               const belongArr = Array.from(belongCount.entries()).sort(([, a], [, b]) => b-a);
 
@@ -396,14 +412,18 @@ export function DeckBuilderPageClient ({
   }, [groupedActionCards, isActionSlotFull])
 
   const [deckOffset, setDeckOffset] = useState(0);
-  const exportDeck = useCallback((nextOffset: boolean = false) => {
-    if(nextOffset) setDeckOffset( (deckOffset + 1) % 255 );
+  const getDeckcode = useCallback(() => {
     const ids = [...activeCharacterCards.map(c => c.cardId ?? 0), ...activeActionCards];
     for(let i = ids.length; i < 33; i++){
       ids.push(0);
     }
     const deck = ids.map(id => codes.find(c => c.id === id)?.code ?? 0);
     const code = encodeDeck(deck, deckOffset);
+    return code;
+  }, [deckOffset, activeCharacterCards, activeActionCards, codes])
+  const exportDeck = useCallback((nextOffset: boolean = false) => {
+    if(nextOffset) setDeckOffset(prev => (prev + 1) % 255 );
+    const code = getDeckcode()
     handleCopy(code, () => {
       triggerPopUp(<p className="text-center">{t("copied_to_clipboard")}<br/>{t("next_deck_offset_tip")}</p>);
     });
@@ -781,6 +801,44 @@ export function DeckBuilderPageClient ({
         </div>
       </div>
     </DialogBox>
+    
+    <Backdrop isOpen={isOpenDeckImage} triggerFn={() => setIsOpenDeckImage(false)}/>
+    <DialogBox isOpen={isOpenDeckImage}>
+      <div className="deck_image_container">
+        <IconButton className="absolute right-4" onClick={() => setIsOpenDeckImage(false)}><XMarkIcon/></IconButton>
+        <div className="font-semibold">{isGenerating ? t("generating_image") : t("deck_image")}</div>
+        
+          <div className="flex justify-center overflow-auto">
+            <canvas ref={canvasRef} width={1200} height={1630} className="max-w-full h-auto"></canvas>
+          </div>
+
+        <div className="flex flex-row gap-2 justify-center">
+          <CustomButton
+            buttonText={g("cancel")}
+            textSize="xs"
+            disabled={isGenerating}
+            onClick={() => setIsOpenDeckImage(false)}
+          />
+          <CustomButton
+            buttonText={g("copy")}
+            textSize="xs"
+            disabled={isGenerating}
+            onClick={() =>
+              copyDeckImage(canvasRef.current,
+              () => triggerPopUp(t("copied_to_clipboard"), "success"),
+              () => triggerPopUp(g("unsupported_img_copy"), "error")
+            )}
+          />
+          <CustomButton
+            buttonText={g("download")}
+            textSize="xs"
+            disabled={isGenerating}
+            onClick={() => downloadDeckImage(canvasRef.current, getDeckcode())}
+          />
+        </div>
+      
+      </div>
+    </DialogBox>
 
     <div className="left_container_sidebar"><Backdrop isOpen={isSelectingCards} triggerFn={() => setIsSelectingCards(false)}/></div>
     <div className={`left_container_sidebar fixed top-0 left-0 h-full py-6 px-4 bg-white z-101 transform transition-transform duration-200 ease-in-out ${isSelectingCards ? "translate-x-0" : "-translate-x-full"}`}>
@@ -829,6 +887,11 @@ export function DeckBuilderPageClient ({
                   setShowPopUp(false);
                 }
               }}
+            />
+            <CustomButton
+              buttonText={t("deck_image_button")}
+              textSize="xs"
+              onClick={() => setIsOpenDeckImage(true)}
             />
             <CustomButton
               buttonText={g("export")}
@@ -894,16 +957,21 @@ export function DeckBuilderPageClient ({
         </div>
       </div>
 
-    </div>
+    </div>    
+
+    {/* <InGameDeckImage
+      cards={[]}
+      ref={placeholderRef}
+    /> */}
   
   </div>
 }
 
 const unwantedCostTypes = ["1", "6", "19", "20"]; //for characters
-const unwantedCostIcons = [ //for actions (NO LONGER USED AFTER OLD API IS DEAD)
-  "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/36cb5de8667e09ae102d165b89d6e441_604510126303725408.png",
-  "https://fastcdn.hoyoverse.com/static-resource-v2/2023/07/10/95ea5f8357e489bccf5fb40a73955d2f_3489949153267385660.png"
-];
+// const unwantedCostIcons = [ //for actions (NO LONGER USED AFTER OLD API IS DEAD)
+//   "https://webstatic.hoyoverse.com/upload/static-resource/2023/01/17/36cb5de8667e09ae102d165b89d6e441_604510126303725408.png",
+//   "https://fastcdn.hoyoverse.com/static-resource-v2/2023/07/10/95ea5f8357e489bccf5fb40a73955d2f_3489949153267385660.png"
+// ];
 
 const characterSortable = ["name", "hp"];
 const actionSortable = ["name", "cost"];

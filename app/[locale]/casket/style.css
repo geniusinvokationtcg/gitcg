@@ -158,3 +158,16 @@ input {
   @apply border-1 border-gray-300 bg-white rounded-sm w-full px-3 mx-auto text-sm text-gray-900 transition-all duration-200 ease-in-out py-1.5;
   @apply hover:border-gray-500 focus:border-gray-500 focus:outline-none focus:ring-gray-500 hover:shadow-md focus:shadow-md;
 }
+
+.deck_image_container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: white;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  width: min(95vw, 1300px);
+  max-height: 80vh;
+}

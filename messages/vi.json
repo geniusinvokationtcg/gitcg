@@ -27,7 +27,10 @@
     "export": "Copy Mã",
     "sort": "Lọc",
     "reset": "Reset",
-    "join": "Tham Gia Discord"
+    "join": "Tham Gia Discord",
+    "download": "Tải Xuống",
+    "copy": "Copy",
+    "unsupported_img_copy": "Thiết bị này không hỗ trợ tính năng copy ảnh"
   },
   "CardsTerminology": {
     "skill_type": {
@@ -146,7 +149,10 @@
     "erase_active_cards": "Reset",
     "erase_confirmation": "Click ba lần để reset các thẻ",
     "copied_to_clipboard": "Đã copy vào bản nhớ tạm",
-    "next_deck_offset_tip": "Click hai lần nếu chưa copy thành công"
+    "next_deck_offset_tip": "Click hai lần nếu chưa copy thành công",
+    "deck_image_button": "Ảnh",
+    "deck_image": "Ảnh Deck",
+    "generating_image": "Đang tạo ảnh..."
   },
   "LeaderboardPage": {
     "title": "Bảng Xếp Hạng GITCG Giải Weekly Phiên Bản {version} {server}",

@@ -27,7 +27,10 @@
     "export": "Export",
     "sort": "Sort",
     "reset": "Reset",
-    "join": "Join"
+    "join": "Join",
+    "download": "Download",
+    "copy": "Copy",
+    "unsupported_img_copy": "This device doesn't support image copying"
   },
   "CardsTerminology": {
     "skill_type": {
@@ -146,7 +149,10 @@
     "erase_active_cards": "Clear All",
     "erase_confirmation": "Triple click the button to clear all",
     "copied_to_clipboard": "Copied to clipboard",
-    "next_deck_offset_tip": "Double click if the code doesn't work"
+    "next_deck_offset_tip": "Double click if the code doesn't work",
+    "deck_image_button": "Image",
+    "deck_image": "Deck Image",
+    "generating_image": "Generating image..."
   },
   "LeaderboardPage": {
     "title": "GITCG {version} {server} Weekly Tournament Leaderboard",

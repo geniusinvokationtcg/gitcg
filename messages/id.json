@@ -27,7 +27,10 @@
     "export": "Ekspor",
     "sort": "Urutkan",
     "reset": "Reset",
-    "join": "Gabung"
+    "join": "Gabung",
+    "download": "Unduh",
+    "copy": "Salin",
+    "unsupported_img_copy": "Perangkat ini tidak mendukung penyalinan gambar"
   },
   "CardsTerminology": {
     "skill_type": {
@@ -146,7 +149,10 @@
     "erase_active_cards": "Hapus Semua",
     "erase_confirmation": "Klik tiga kali untuk hapus semua",
     "copied_to_clipboard": "Disalin ke papan klip",
-    "next_deck_offset_tip": "Klik dua kali jika kode yang didapat tidak dapat digunakan"
+    "next_deck_offset_tip": "Klik dua kali jika kode yang didapat tidak dapat digunakan",
+    "deck_image_button": "Gambar",
+    "deck_image": "Gambar Dek",
+    "generating_image": "Sedang menyusun gambar..."
   },
   "LeaderboardPage": {
     "title": "GITCG Versi {version} {server}: Papan Peringkat Turnamen Weekly",

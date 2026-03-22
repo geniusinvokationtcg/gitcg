@@ -27,7 +27,10 @@
     "export": "导出",
     "sort": "排序",
     "reset": "重置",
-    "join": "加入"
+    "join": "加入",
+    "download": "下载",
+    "copy": "复制",
+    "unsupported_img_copy": "该设备不支持复制图片"
   },
   "CardsTerminology": {
     "skill_type": {
@@ -146,7 +149,10 @@
     "erase_active_cards": "清空牌组",
     "erase_confirmation": "请连续点击三次以清空牌组",
     "copied_to_clipboard": "已复制",
-    "next_deck_offset_tip": "如果牌组码无法使用，请双击"
+    "next_deck_offset_tip": "如果牌组码无法使用，请双击",
+    "deck_image_button": "牌组图片",
+    "deck_image": "牌组图片",
+    "generating_image": "正在生成图片..."
   },
   "LeaderboardPage": {
     "title": "GITCG《七圣召唤》{version}版本{server}周赛排行榜",

@@ -25,7 +25,7 @@ export function CardImageLarge ({ cardType, cardId, resize, localCardsData }: { 
   </div>
 }
 
-export function CardImage ({ cardType, cardId, size, dynamicImagePx = false, borderType = "normal", resize = true, localCardsData }: {
+export function CardImage ({ cardType, cardId, size, dynamicImagePx = false, borderType = "normal", resize = true, localCardsData, crossOrigin }: {
   cardType: CardType;
   cardId: number | null;
   size: CardImageSize | number;
@@ -33,6 +33,7 @@ export function CardImage ({ cardType, cardId, size, dynamicImagePx = false, bor
   borderType?: BorderType;
   resize?: boolean;
   localCardsData?: CardsDataType;
+  crossOrigin?: "" | "anonymous" | "use-credentials" | undefined
 }) {
   let px = 100;
   switch(size){
@@ -58,7 +59,8 @@ export function CardImage ({ cardType, cardId, size, dynamicImagePx = false, bor
     width: "98%",
     padding: "2px 0.5px",
     objectFit: "contain",
-    zIndex: 0
+    zIndex: 0,
+    translate: size>120 ? "1.5px" : ""
   } : undefined
   const borderStyle: React.CSSProperties | undefined = isCustom ? {
     position: "relative",
@@ -72,10 +74,10 @@ export function CardImage ({ cardType, cardId, size, dynamicImagePx = false, bor
   >
     {
       cardId
-      ? <img style={cardImageStyle} src={getCardImageUrl(cardType, cardId, "id", px)} title={getCardName(cardId, localCardsData)}></img>
-      : <img style={cardImageStyle} src="/game_icons/Origin_Card_Back.webp" className="null" />
+      ? <img style={cardImageStyle} src={getCardImageUrl(cardType, cardId, "id", px)} title={getCardName(cardId, localCardsData)} crossOrigin={crossOrigin}></img>
+      : <img style={cardImageStyle} src="/game_icons/Origin_Card_Back.webp" className="null" crossOrigin={crossOrigin} />
     }
-    <img style={borderStyle} src={`/borders/${borderType}${cardId && isArcaneLegend(cardId) ? "_esoteric": ""}.png`}></img>
+    <img style={borderStyle} src={`/borders/${borderType}${cardId && isArcaneLegend(cardId) ? "_esoteric": ""}.png`} crossOrigin={crossOrigin}></img>
   </div>
 }
 
