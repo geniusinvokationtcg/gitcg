@@ -33,7 +33,7 @@ const Tooltip = lazy(() =>
     default: module.Tooltip,
   }))
 )
-const InGameDeckImage = lazy(() => import("./DeckImage/InGame"))
+// const InGameDeckImage = lazy(() => import("./DeckImage/InGame"))
 
 export function DeckBuilderPageClient ({
   params, searchParams
