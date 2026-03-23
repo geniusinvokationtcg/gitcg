@@ -27,6 +27,7 @@ import { FilterIcon, FilterRemoveIcon } from "@hugeicons/core-free-icons"
 import { usePathname, useRouter } from "next/navigation"
 import { normalizeSearchText } from "@/utils/formatting"
 import { useDeckImageCanvas } from "./useDeckImage"
+import { CustomSelect } from "@/components/Dropdown"
 
 const Tooltip = lazy(() =>
   import("@/components/Tooltip").then(module => ({
@@ -71,16 +72,24 @@ export function DeckBuilderPageClient ({
   //DECK IMAGE
   const canvasRef = useRef<HTMLCanvasElement>(null);
   // const placeholderRef = useRef<HTMLDivElement>(null);
-  const { generateDeckImage, copyDeckImage, downloadDeckImage, isGenerating } = useDeckImageCanvas(localCardsData);
+  const { generateDeckImage, generateDeckImageGenshincards, copyDeckImage, downloadDeckImage, isGenerating } = useDeckImageCanvas(locale, localCardsData);
   
   //IMPORT DIALOG BOX
   const [isOpenDialog, setIsOpenDialog] = useState(false);
   
   //DECK IMAGE DIALOG BOX
+  const [deckImageType, setDeckImageType] = useState(0);
   const [isOpenDeckImage, setIsOpenDeckImage] = useState(false);
   useEffect(() => {
     if(isOpenDeckImage && canvasRef.current) {
-      generateDeckImage(canvasRef.current, activeCharacterCards.map(c => c.cardId), activeActionCards, locale)
+      const characters = activeCharacterCards.map(c => c.cardId)
+
+      switch(deckImageType){
+        case 0: generateDeckImage(canvasRef.current, characters, activeActionCards);
+          break;
+        case 1: generateDeckImageGenshincards(canvasRef.current, characters, groupedActionCards);
+          break;
+      }
     }
   }, [isOpenDeckImage])
 
@@ -809,7 +818,7 @@ export function DeckBuilderPageClient ({
         <div className="font-semibold">{isGenerating ? t("generating_image") : t("deck_image")}</div>
         
           <div className="flex justify-center overflow-auto">
-            <canvas ref={canvasRef} width={1200} height={1630} className="max-w-full h-auto"></canvas>
+            <canvas ref={canvasRef} className="max-w-full h-auto"></canvas>
           </div>
 
         <div className="flex flex-row gap-2 justify-center">
@@ -888,10 +897,17 @@ export function DeckBuilderPageClient ({
                 }
               }}
             />
-            <CustomButton
-              buttonText={t("deck_image_button")}
-              textSize="xs"
-              onClick={() => setIsOpenDeckImage(true)}
+            <CustomSelect
+              options = {[
+                { value: 0, label: g("default") },
+                { value: 1, label: "genshincards" }
+              ]}
+              value={deckImageType}
+              onChange={(value: number) => {
+                setDeckImageType(value)
+                setIsOpenDeckImage(true)
+              }}
+              overwriteLabel={t("deck_image_button")}
             />
             <CustomButton
               buttonText={g("export")}
@@ -957,7 +973,7 @@ export function DeckBuilderPageClient ({
         </div>
       </div>
 
-    </div>    
+    </div>
 
     {/* <InGameDeckImage
       cards={[]}

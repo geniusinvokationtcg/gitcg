@@ -30,7 +30,8 @@
     "join": "Gabung",
     "download": "Unduh",
     "copy": "Salin",
-    "unsupported_img_copy": "Perangkat ini tidak mendukung penyalinan gambar"
+    "unsupported_img_copy": "Perangkat ini tidak mendukung penyalinan gambar",
+    "default": "Default"
   },
   "CardsTerminology": {
     "skill_type": {

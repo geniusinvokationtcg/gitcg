@@ -110,7 +110,8 @@ export function CustomSelect({
   onChange,
   className,
   listClassName,
-  additionalClass
+  additionalClass,
+  overwriteLabel
 }: {
   options: { value: string | number; label: React.ReactNode }[];
   value: string | number;
@@ -118,6 +119,7 @@ export function CustomSelect({
   className?: string;
   listClassName?: string;
   additionalClass?: string
+  overwriteLabel?: React.ReactNode
 }) {
 
   return (
@@ -133,7 +135,7 @@ export function CustomSelect({
         bg-[right_0.5rem_center] bg-[length:1rem] bg-no-repeat
         cursor-pointer`}
       >
-        {options.find(option => option.value === value)?.label ?? value}
+        {overwriteLabel ?? options.find(option => option.value === value)?.label ?? value}
         <ChevronDownIcon className="size-3.5"/>
       </MenuButton>
 

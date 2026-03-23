@@ -5,7 +5,7 @@ import { CardsDataType, Locales } from "@/utils/types"
 import { useTranslations } from "next-intl"
 import { useState } from "react"
 
-export function useDeckImageCanvas(localCardsData: CardsDataType) {
+export function useDeckImageCanvas(locale: Locales, localCardsData: CardsDataType) {
   const term = useTranslations("CardsTerminology")
 
   const [isGenerating, setIsGenerating] = useState(false)
@@ -65,8 +65,11 @@ export function useDeckImageCanvas(localCardsData: CardsDataType) {
     }
   }
 
-  const generateDeckImage = async (canvas: HTMLCanvasElement, characters: (number | null)[], actions: number[], locale: Locales) => {
+  const generateDeckImage = async (canvas: HTMLCanvasElement, characters: (number | null)[], actions: number[]) => {
     if(!canvas) return;
+
+    canvas.width = 1200
+    canvas.height = 1630
 
     const context = canvas.getContext("2d")
     if(!context) return;
@@ -124,10 +127,165 @@ export function useDeckImageCanvas(localCardsData: CardsDataType) {
       console.error(e)
     } finally {
       setIsGenerating(false)
-    }   
+    }
   }
 
-  return { generateDeckImage, copyDeckImage, downloadDeckImage, isGenerating }
+  const generateDeckImageGenshincards = async (canvas: HTMLCanvasElement, characters: (number | null)[], groupedActionCards: [number, number][]) => {
+    if(!canvas) return;
+
+    //DETERMINE CANVAS SIZE
+    const charDiameter = 128
+    const actionHeight = 75
+
+    const width = 420
+    const height = charDiameter + 5 + actionHeight*groupedActionCards.length + 4
+
+    canvas.width = width
+    canvas.height = height
+
+    const context = canvas.getContext("2d")
+    if(!context) return;
+
+    try {
+      setIsGenerating(true)
+
+      context.clearRect(0, 0, width, height)
+
+      //CHARACTERS (AVATAR)
+      let char_x_offset = 9
+      for (let i=0; i<3; i++) {
+        const char_x_offset_current = char_x_offset
+        char_x_offset += charDiameter+9 //in the beginning of the loop so if a char is null, the offset still moves
+
+        const card_id = characters[i]
+        if(!card_id) continue;
+
+        const imgUrl = localCardsData.characters.find(c => c.id === card_id)?.avatar
+        if(!imgUrl) continue;
+        const img = await loadImage(imgUrl)
+        context.drawImage(img, char_x_offset_current, 0, charDiameter, charDiameter)
+      }
+
+      //ACTIONS
+      let action_y_offset = charDiameter+9
+
+      for (let i=0; i<groupedActionCards.length; i++) {
+        const [card_id, count] = groupedActionCards[i]
+        if(!card_id || count === 0) continue;
+
+        const isArcane = isArcaneLegend(card_id)
+
+        const card_detail = localCardsData.actions.find(c => c.id === card_id)
+        if(!card_detail) continue;
+        
+        //card image
+        const imgUrl = card_detail.resource
+        if(!imgUrl) continue;
+        const img = await loadImage(imgUrl + "?x-oss-process=image/format,png/quality,Q_90/resize,s_340")
+
+        context.save()
+        context.roundRect(0, action_y_offset, 420, actionHeight, 14)
+        context.clip()
+        
+        context.drawImage(img, 0, 150, 340, actionHeight, 80, action_y_offset, 340, actionHeight)
+
+        //define gradient
+        const gradient = context.createLinearGradient(0, action_y_offset, 420, action_y_offset+actionHeight)
+        if(isArcane) {
+          gradient.addColorStop(0, "rgba(128, 0, 128, 1)")
+          gradient.addColorStop(0.2, "rgba(128, 0, 128, 1)")
+          gradient.addColorStop(1, "rgba(128, 0, 128, 0.1)")
+        }
+        else {
+          gradient.addColorStop(0, "rgba(0, 0, 0, 1)")
+          gradient.addColorStop(0.2, "rgba(0, 0, 0, 1)")
+          gradient.addColorStop(1, "rgba(0, 0, 0, 0)")
+        }
+        
+        context.fillStyle = gradient
+        context.fillRect(0, action_y_offset, 420, actionHeight)
+
+        //card name
+        context.fillStyle = "white"
+        context.font = "normal 1.3rem Arial"
+        context.textAlign = "left"
+        context.textBaseline = "middle"
+        
+        const cardName = card_detail.name
+        const maxTextWidth = 280
+        const wordSeparator = ["zh-cn", "zh-tw", "ja", "ko"].includes(locale) ? "" : " "
+        const words = cardName.split(wordSeparator)
+        const lines: string[] = []
+        let currentLine = words[0]
+        for(let i=1; words.length>0 && i<words.length; i++) {
+          const word = words[i]
+          const testLine = currentLine + wordSeparator + word
+          const textMetrics = context.measureText(testLine)
+          
+          if(textMetrics.width > maxTextWidth) {
+            lines.push(currentLine)
+            currentLine = word
+          } else {
+            currentLine = testLine
+          }
+        }
+        if(currentLine.length > 0) lines.push(currentLine);
+
+        lines.forEach((line, i) => {
+          const yLineAdjustment = -(lines.length-1)*25/2 + i*25
+          const y = action_y_offset + actionHeight/2 + yLineAdjustment
+          context.fillText(line, 70, y, maxTextWidth)
+        })
+
+        //card count
+        context.fillStyle = "white"
+        context.font = "700 2.4rem Arial"
+        context.textAlign = "left"
+        context.textBaseline = "middle"
+        context.fillText("×"+count, 365, action_y_offset+actionHeight/2)
+        context.strokeText("×"+count, 365, action_y_offset+actionHeight/2)
+
+        //card cost
+        context.font = "700 1.6rem Arial"
+        context.textAlign = "center"
+        context.textBaseline = "middle"
+        context.fillStyle = costs.find(cost => cost.type === card_detail.cost_type1)?.color || "white"
+        
+        const costDistance = 12
+        if(!card_detail.cost_type2 || card_detail.cost_type2 === "6") {
+          context.fillText(card_detail.cost_num1, 35, action_y_offset+27)
+        } else {
+          context.fillText(card_detail.cost_num1, 35-costDistance, action_y_offset+27)
+          context.fillStyle = costs.find(cost => cost.type === card_detail.cost_type2)?.color || "white"
+          context.fillText(card_detail.cost_num2, 35+costDistance, action_y_offset+27)
+        }
+        if(!card_detail.cost_type2) {
+          const costImg = await loadImage(costs.find(cost => cost.type === card_detail.cost_type1)?.icon || fallbackCostIcon)
+          context.drawImage(costImg, 35-22/2, action_y_offset+40, 22, 22)
+        } else {
+          const costImgUrl1 = costs.find(cost => cost.type === card_detail.cost_type1)?.icon || fallbackCostIcon
+          const costImg1 = await loadImage(costImgUrl1)
+          context.drawImage(costImg1, 35-22/2-costDistance, action_y_offset+40, 22, 22)
+
+          const costImgUrl2 = costs.find(cost => cost.type === card_detail.cost_type2)?.icon || fallbackCostIcon
+          const costImg2 = await loadImage(costImgUrl2)
+          context.drawImage(costImg2, 35-22/2+costDistance, action_y_offset+40, 22, 22)
+        }
+
+        //restore rounded corner clip
+        context.restore()
+
+        action_y_offset += actionHeight
+      }
+
+    } catch (e) {
+      console.error(e)
+    } finally {
+      setIsGenerating(false)
+    }
+  }
+
+  return { generateDeckImage, generateDeckImageGenshincards, copyDeckImage, downloadDeckImage, isGenerating }
 }
 
 const position = {
@@ -181,3 +339,18 @@ const position = {
     "ko": { left: 852, top: 1426, width: 175, height: 159.6 },
   }
 };
+
+const costs = [
+  { type: "1", color: "rgba(242, 194, 104, 1)", icon: "/game_icons/code/1.png" },
+  { type: "3", color: "white", icon: "/game_icons/code/3.png" },
+  { type: "6", color: "white", icon: "/game_icons/code/6.png" },
+  { type: "10", color: "rgba(151, 152, 153, 1)", icon: "/game_icons/code/10.png" },
+  { type: "11", color: "rgba(122, 241, 241, 1)", icon: "/game_icons/code/11_element.png" },
+  { type: "12", color: "rgba(0, 192, 255, 1)", icon: "/game_icons/code/12_element.png" },
+  { type: "13", color: "rgba(255, 102, 64, 1)", icon: "/game_icons/code/13_element.png" },
+  { type: "14", color: "rgba(204, 128, 255, 1)", icon: "/game_icons/code/14_element.png" },
+  { type: "15", color: "rgba(255, 176, 13, 1)", icon: "/game_icons/code/15_element.png" },
+  { type: "16", color: "rgba(155, 229, 61, 1)", icon: "/game_icons/code/16_element.png" },
+  { type: "17", color: "rgba(51, 215, 160, 1)", icon: "/game_icons/code/17_element.png" },
+]
+const fallbackCostIcon = "/game_icons/code/3.png"

@@ -30,7 +30,8 @@
     "join": "Join",
     "download": "Download",
     "copy": "Copy",
-    "unsupported_img_copy": "This device doesn't support image copying"
+    "unsupported_img_copy": "This device doesn't support image copying",
+    "default": "Default"
   },
   "CardsTerminology": {
     "skill_type": {

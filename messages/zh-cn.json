@@ -30,7 +30,8 @@
     "join": "加入",
     "download": "下载",
     "copy": "复制",
-    "unsupported_img_copy": "该设备不支持复制图片"
+    "unsupported_img_copy": "该设备不支持复制图片",
+    "default": "默认"
   },
   "CardsTerminology": {
     "skill_type": {

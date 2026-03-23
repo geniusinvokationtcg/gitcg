@@ -30,7 +30,8 @@
     "join": "Tham Gia Discord",
     "download": "Tải Xuống",
     "copy": "Copy",
-    "unsupported_img_copy": "Thiết bị này không hỗ trợ tính năng copy ảnh"
+    "unsupported_img_copy": "Thiết bị này không hỗ trợ tính năng copy ảnh",
+    "default": "Mặc Định"
   },
   "CardsTerminology": {
     "skill_type": {

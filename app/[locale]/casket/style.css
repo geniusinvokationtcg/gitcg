@@ -168,6 +168,6 @@ input {
   border-radius: 16px;
   padding: 20px;
   text-align: center;
-  width: min(95vw, 1300px);
+  width: min(95vw, 1200px);
   max-height: 80vh;
 }
