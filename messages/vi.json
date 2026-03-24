@@ -151,7 +151,7 @@
     "erase_confirmation": "Click ba lần để reset các thẻ",
     "copied_to_clipboard": "Đã copy vào bản nhớ tạm",
     "next_deck_offset_tip": "Click hai lần nếu chưa copy thành công",
-    "deck_image_button": "Ảnh",
+    "deck_image_button": "Xuất Ảnh",
     "deck_image": "Ảnh Deck",
     "generating_image": "Đang tạo ảnh..."
   },
