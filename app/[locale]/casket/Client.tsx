@@ -71,6 +71,7 @@ export function DeckBuilderPageClient ({
 
   //DECK IMAGE
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const canvasContainerRef = useRef<HTMLDivElement>(null);
   // const placeholderRef = useRef<HTMLDivElement>(null);
   const { generateDeckImage, generateDeckImageGenshincards, copyDeckImage, downloadDeckImage, isGenerating } = useDeckImageCanvas(locale, localCardsData);
   
@@ -81,13 +82,13 @@ export function DeckBuilderPageClient ({
   const [deckImageType, setDeckImageType] = useState(0);
   const [isOpenDeckImage, setIsOpenDeckImage] = useState(false);
   useEffect(() => {
-    if(isOpenDeckImage && canvasRef.current) {
+    if(isOpenDeckImage && canvasRef.current && canvasContainerRef.current) {
       const characters = activeCharacterCards.map(c => c.cardId)
 
       switch(deckImageType){
-        case 0: generateDeckImage(canvasRef.current, characters, activeActionCards);
+        case 0: generateDeckImage(canvasRef.current, canvasContainerRef.current, characters, activeActionCards);
           break;
-        case 1: generateDeckImageGenshincards(canvasRef.current, characters, groupedActionCards);
+        case 1: generateDeckImageGenshincards(canvasRef.current, canvasContainerRef.current, characters, groupedActionCards);
           break;
       }
     }
@@ -817,9 +818,9 @@ export function DeckBuilderPageClient ({
         <IconButton className="absolute right-4" onClick={() => setIsOpenDeckImage(false)}><XMarkIcon/></IconButton>
         <div className="font-semibold">{isGenerating ? t("generating_image") : t("deck_image")}</div>
         
-          <div className="flex justify-center overflow-auto">
-            <canvas ref={canvasRef} className="max-w-full h-auto"></canvas>
-          </div>
+        <div ref={canvasContainerRef} className="flex justify-center overflow-auto mx-auto">
+          <canvas ref={canvasRef} className={`max-w-full h-auto`}></canvas>
+        </div>
 
         <div className="flex flex-row gap-2 justify-center">
           <CustomButton

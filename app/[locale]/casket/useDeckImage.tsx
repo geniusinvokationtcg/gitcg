@@ -65,11 +65,13 @@ export function useDeckImageCanvas(locale: Locales, localCardsData: CardsDataTyp
     }
   }
 
-  const generateDeckImage = async (canvas: HTMLCanvasElement, characters: (number | null)[], actions: number[]) => {
+  const generateDeckImage = async (canvas: HTMLCanvasElement, canvasContainer: HTMLDivElement, characters: (number | null)[], actions: number[]) => {
     if(!canvas) return;
 
     canvas.width = 1200
     canvas.height = 1630
+
+    canvasContainer.style.maxWidth = `${canvas.width/canvas.height*canvasContainer.clientHeight}px`
 
     const context = canvas.getContext("2d")
     if(!context) return;
@@ -130,7 +132,7 @@ export function useDeckImageCanvas(locale: Locales, localCardsData: CardsDataTyp
     }
   }
 
-  const generateDeckImageGenshincards = async (canvas: HTMLCanvasElement, characters: (number | null)[], groupedActionCards: [number, number][]) => {
+  const generateDeckImageGenshincards = async (canvas: HTMLCanvasElement, canvasContainer: HTMLDivElement, characters: (number | null)[], groupedActionCards: [number, number][]) => {
     if(!canvas) return;
 
     //DETERMINE CANVAS SIZE
@@ -142,6 +144,8 @@ export function useDeckImageCanvas(locale: Locales, localCardsData: CardsDataTyp
 
     canvas.width = width
     canvas.height = height
+
+    canvasContainer.style.maxWidth = `${width/height*canvasContainer.clientHeight}px`
 
     const context = canvas.getContext("2d")
     if(!context) return;
