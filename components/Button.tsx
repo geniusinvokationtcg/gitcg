@@ -9,7 +9,8 @@ export function CustomButton({
   textSize = "sm",
   disabled = false,
   type = "text",
-  isActive = false
+  isActive = false,
+  disableWordWrap = false
 }: {
   buttonText: string | ReactNode;
   onClick?: (...args: any[]) => any
@@ -17,6 +18,7 @@ export function CustomButton({
   disabled?: boolean;
   type?: "text" | "icon";
   isActive?: boolean
+  disableWordWrap?: boolean
 }) {
   let typeDependentClassName = "";
   switch(type) {
@@ -33,6 +35,7 @@ export function CustomButton({
       ${disabled ? "opacity-50 pointer-events-none" :
         `${isActive ? "hover:border-gray-900" : "hover:border-gray-500"} hover:bg-gray-50 hover:shadow-md`
       }
+      ${disableWordWrap ? "whitespace-nowrap" : ""}
       cursor-pointer prevent_select`
     }
   >

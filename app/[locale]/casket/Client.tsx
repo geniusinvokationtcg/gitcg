@@ -867,6 +867,7 @@ export function DeckBuilderPageClient ({
               buttonText={t("open_cards_selection_sidebar")}
               textSize="xs"
               onClick={() => setIsSelectingCards(true)}
+              disableWordWrap={true}
             />
           </div>
           <div className="flex flex-wrap gap-1 justify-end">
