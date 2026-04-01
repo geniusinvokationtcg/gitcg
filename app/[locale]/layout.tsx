@@ -50,7 +50,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <head>
-        <link rel="icon" href="/logo.png" type="image/png" />
+        <link rel="icon" href="/pitabrain.webp" type="image/png" />
       </head>
       <body className="antialiased flex flex-col min-h-screen">
         <AuthProvider>
