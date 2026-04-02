@@ -31,7 +31,7 @@ export default function Navbar({ locale }: {locale: Locales}) {
       <nav>
         <div className="flex flex-row gap-3 items-center">
           <Link href="/">
-            <img src="/pitabrain.webp" alt="GITCG Logo" className="w-16" />
+            <img src="/logo.png" alt="GITCG Logo" className="w-16" />
           </Link>
 
           {auth.user &&
