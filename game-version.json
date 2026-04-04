@@ -132,6 +132,14 @@
         "id": "Candra VII",
         "zh-cn": "月之七"
       }
+    },
+    {
+      "version": "6-7",
+      "label": {
+        "en": "Luna VIII",
+        "id": "Candra VIII",
+        "zh-cn": "月之八"
+      }
     }
   ]
 }

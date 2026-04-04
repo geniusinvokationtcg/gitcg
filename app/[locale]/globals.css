@@ -398,3 +398,8 @@ img.avatar {
 .basic_shadow-bottom {
   box-shadow: 0 1.5px 0 black;
 }
+
+.ui-disabled {
+  filter: opacity(70%);
+  pointer-events: none;
+}
