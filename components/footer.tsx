@@ -19,14 +19,6 @@ export default function Footer() {
           Discord
         </a>
         <a
-          href="https://x.com/invokationtcg"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="footer_socmed_link"
-        >
-          X
-        </a>
-        <a
           href="https://www.reddit.com/r/GeniusInvokationTCG/"
           target="_blank"
           rel="noopener noreferrer"
@@ -41,6 +33,14 @@ export default function Footer() {
           className="footer_socmed_link"
         >
           YouTube
+        </a>
+        <a
+          href="https://twitch.tv/GITCG"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="footer_socmed_link"
+        >
+          Twitch
         </a>
       </div>
     </footer>
