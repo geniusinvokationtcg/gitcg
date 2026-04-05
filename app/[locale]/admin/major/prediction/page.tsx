@@ -1,9 +1,7 @@
 "use client"
 
-import { CustomButton } from "@/components/Button";
 import { CustomSelect } from "@/components/Dropdown";
 import { useAuth } from "@/context/Auth";
-import { useCsvPaste } from "@/hooks/useCsvPaste";
 import { useLiveMajor } from "@/hooks/useLiveMatch";
 import { useMajorMetadataByUuid, useMajorCasterPredictionData } from "@/hooks/useMajorData";
 import { supabase } from "@/lib/supabaseClient";
@@ -12,7 +10,7 @@ import { getPlayer } from "@/utils/major";
 import { getServerLabel } from "@/utils/server";
 import { getVerLabel } from "@/utils/version";
 import { notFound, redirect, usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function LiveMatchEditor() {
   const auth = useAuth()
@@ -46,14 +44,6 @@ export default function LiveMatchEditor() {
   // const round = games.findIndex(r => r.includes(liveMatch?.matchid || 1)) || 0
 
   if(!liveMatch || !seeding) notFound();
-
-//   const matchid = liveMatch.matchid
-
-//   const player1 = getPlayer(matchid, 1, majorData, games, seeding);
-//   const player2 = getPlayer(matchid, 2, majorData, games, seeding);
-//   if(!player1 || !player2 || majorData.bracket.find(m => m.matchid === matchid)?.is_bye) notFound();
-//   const score1 = liveMatch.games.reduce((s, game) => (game.winner === 1 ? s+1 : s), 0);
-//   const score2 = liveMatch.games.reduce((s, game) => (game.winner === 2 ? s+1 : s), 0);
 
   return <div className="flex flex-col gap-4 my-4 mx-4">
     <h1 className="section_title">

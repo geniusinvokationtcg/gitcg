@@ -127,46 +127,46 @@ nav {
   @apply hover:text-[#AF7637] transition-colors duration-200 ease-in-out;
 }
 
-table {
+table:not(.custom) {
   @apply w-full border-gray-300 text-center;
 }
-table.vertical_border {
+table:not(.custom).vertical_border {
   @apply border-separate border-spacing-0
 }
-table > thead > tr {
+table:not(.custom) > thead > tr {
   @apply border-b-1 border-gray-300 bg-gray-200;
 }
-table.vertical_border > thead > tr:first-child > th {
+table:not(.custom).vertical_border > thead > tr:first-child > th {
   @apply border-t-1 border-gray-300
 }
-table.vertical_border > thead > tr:first-child > th:first-child, table.vertical_border > tbody > tr > td:first-child {
+table:not(.custom).vertical_border > thead > tr:first-child > th:first-child, table:not(.custom).vertical_border > tbody > tr > td:first-child {
   @apply border-l-1 border-gray-300
 }
-table.vertical_border > thead > tr > th, table.vertical_border > tbody > tr > td {
+table:not(.custom).vertical_border > thead > tr > th, table:not(.custom).vertical_border > tbody > tr > td {
   @apply border-r-1 border-b-1 border-gray-300 border-b-gray-300
 }
-table > thead > tr > th {
+table:not(.custom) > thead > tr > th {
   @apply p-2;
 }
-table > thead > tr > th.compact_py_top {
+table:not(.custom) > thead > tr > th.compact_py_top {
   @apply p-1 pb-0.5 whitespace-nowrap;
 }
-table > thead > tr > th.compact_py_middle {
+table:not(.custom) > thead > tr > th.compact_py_middle {
   @apply p-1 py-0.5 whitespace-nowrap;
 }
-table > thead > tr > th.compact_py_bottom {
+table:not(.custom) > thead > tr > th.compact_py_bottom {
   @apply p-1 pt-0.5 whitespace-nowrap;
 }
-table > thead > tr.wtl_leaderboard > th {
+table:not(.custom) > thead > tr.wtl_leaderboard > th {
   @apply w-6 whitespace-nowrap;
 }
-table > tbody > tr {
+table:not(.custom) > tbody > tr {
   @apply border-b-1 border-gray-300 hover:bg-gray-50 transition-all duration-200
 }
-table > tbody > tr > td:not(.custom) {
+table:not(.custom) > tbody > tr > td:not(.custom) {
   @apply p-2;
 }
-table > tbody > tr.compact_py > td:not(.custom) {
+table:not(.custom) > tbody > tr.compact_py > td:not(.custom) {
   @apply p-2 py-1
 }
 .deck_column_width {

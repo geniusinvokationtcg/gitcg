@@ -92,7 +92,7 @@ interface MajorMetadataSupabase {
   server: ServerPure
   tournament_start: string
   content: MajorData
-  prediction: MajorCasterPrediction
+  casters: string[] | null
 }
 
 export function useMajorMetadataByUuid (major_uuid: string) {
@@ -154,7 +154,7 @@ export function useMajorCasterPredictionData (major_uuid: string) {
     major_uuid: string
     caster_user_id: string
     match_id: number
-    winner: 1 | 2
+    winner: 1 | 2 | null
   }
 
   const [data, setData] = useState<MajorCasterPredictionData[] | null>(null)
@@ -249,15 +249,4 @@ export function useMajorDataOld (version: string, server: ServerPure, isLive: bo
   })
   
   return majorDataQuery;
-}
-
-interface MajorCasterPrediction {
-  casters: string[]
-  predictions: {
-    user_id: string
-    prediction: {
-      winner: 1 | 2
-      matchid: number
-    }[]
-  }[]
 }
