@@ -1394,7 +1394,7 @@
         "",
         ""
       ],
-      "hp": 10,
+      "hp": 12,
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/caba45c994061913630051dd1aee22eb.png",
       "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f716/302b2c185f63cad48736c627a1551afe.png"
     },
@@ -2335,6 +2335,164 @@
       "hp": 10,
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/be60bb200b3595c311ba7b7846699b3e.png",
       "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f716/9d16b2f1f89173db12cb4a23665fe7d6.png"
+    },
+    {
+      "id": 1215,
+      "name": "塔利雅",
+      "element_type": 302,
+      "role_skill_infos": [
+        {
+          "skill_text": "造成2点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>物理伤害</color>。",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "普通攻击"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/3f016e2d606ca39ea86e24d5245dfa5b.png",
+          "name": "西风剑术·祭仪",
+          "id": "12151"
+        },
+        {
+          "skill_text": "造成2点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>水元素伤害</color>，生成<color=#FFFFFFFF>雾雨秘迹</color>。",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "元素战技"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6851f3bf/d35b2faee503b4a5802dd6f8bf926b96.png",
+          "name": "圣浸的礼典",
+          "id": "12152"
+        },
+        {
+          "skill_text": "造成2点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>水元素伤害</color>，生成2层<color=#FFFFFFFF>护盾</color>和2层<color=#FFFFFFFF>西风之眷</color>。",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "元素爆发"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58cc0/d710fe21a8e1089e812909ad096f415f.png",
+          "name": "纯耀的祷咏",
+          "id": "12153"
+        }
+      ],
+      "weapon": "sword",
+      "belongs": [
+        "mondstadt",
+        "",
+        ""
+      ],
+      "hp": 10,
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/73533564d896f219a74b16ecd1b2f2ef.png",
+      "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58cbe/3d819990ea80ea82815395ae7d0fef32.png"
+    },
+    {
+      "id": 1216,
+      "name": "爱诺",
+      "element_type": 302,
+      "role_skill_infos": [
+        {
+          "skill_text": "造成2点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>物理伤害</color>。",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "普通攻击"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/bf0237fba9d4ab5b47ea86b90711a765.png",
+          "name": "敲打修理法",
+          "id": "12161"
+        },
+        {
+          "skill_text": "造成2点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>水元素伤害</color>，生成1层<color=#FFFFFFFF>敏捷切换</color>。如果手牌中有卡牌具有<color=#FFFFFFFF>赋能</color>，则改为造成3点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>水元素伤害</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "元素战技"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68c0b1b7/9036689db484d5b98aca56379b66ba1e.png",
+          "name": "妙思捕手",
+          "id": "12162"
+        },
+        {
+          "skill_text": "造成2点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>水元素伤害</color>，召唤<color=#FFFFFFFF>冷静一下鸭</color>。",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "元素爆发"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58cc0/e7f65b0170c6547076d62ab839e1eddc.png",
+          "name": "精密水冷仪",
+          "id": "12163"
+        },
+        {
+          "skill_text": "<color=#FFFFFFFF>我方卡牌被赋予<color=#FFFFFFFF>赋能</color>时</color>：如果我方场上存在<color=#FFFFFFFF>冷静一下鸭</color>，则使其可用次数+1，否则自身获得1点<color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png' />充能</color>。（每回合1次）",
+          "skill_costs": [],
+          "type": [
+            "被动技能"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58cc0/dbe3f7bafe5e35980ee3c91684c28060.png",
+          "name": "模块式高效运作",
+          "id": "12164"
+        }
+      ],
+      "weapon": "claymore",
+      "belongs": [
+        "nod_krai",
+        "",
+        ""
+      ],
+      "hp": 10,
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/06c08232f1285e53474d769a3c87042e.png",
+      "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58cbe/751c2a66dfbd3fb158870012ff33b364.png"
     },
     {
       "id": 1301,
@@ -10463,6 +10621,90 @@
       "hp": 8,
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/49b811e95884361c796496f33fcb9501.png",
       "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f716/d6a56a54fa436716a950c4a890f16fa6.png"
+    },
+    {
+      "id": 2705,
+      "name": "圣骸牙兽",
+      "element_type": 306,
+      "role_skill_infos": [
+        {
+          "skill_text": "造成2点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>物理伤害</color>。",
+          "skill_costs": [
+            {
+              "cost_type": "16",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/848248aa7c40784633446db172ee4678.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "普通攻击"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/4ef5373e27e14926f2fec5ffa0511440.png",
+          "name": "利爪猛击",
+          "id": "27051"
+        },
+        {
+          "skill_text": "造成2点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' /><color=#7EC236FF>草元素伤害</color>，从牌组中抓1张<color=#FFFFFFFF>噬骸能量块</color>。",
+          "skill_costs": [
+            {
+              "cost_type": "16",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/848248aa7c40784633446db172ee4678.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "元素战技"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/2e5044941d1d68125634c523b1d8bb9b.png",
+          "name": "掠能绿波",
+          "id": "27052"
+        },
+        {
+          "skill_text": "造成4点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' /><color=#7EC236FF>草元素伤害</color>，如果手牌中存在<color=#FFFFFFFF>噬骸能量块</color>，则<color=#FFFFFFFF>舍弃</color>1张并准备技能<color=#FFFFFFFF>催萌腐草</color>。",
+          "skill_costs": [
+            {
+              "cost_type": "16",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/848248aa7c40784633446db172ee4678.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "元素爆发"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58cc0/94b561533a67777369b67da9c6363892.png",
+          "name": "横生厄蔓",
+          "id": "27053"
+        },
+        {
+          "skill_text": "【被动】战斗开始时，生成2张<color=#FFFFFFFF>噬骸能量块</color>放入牌组底。我方每回合可以额外打出1张<color=#FFFFFFFF>噬骸能量块</color>。",
+          "skill_costs": [],
+          "type": [
+            "被动技能"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58cc0/aa739c79d24549ed240a053f62daaf51.png",
+          "name": "亡骸饥渴",
+          "id": "27054"
+        }
+      ],
+      "weapon": "other_weapons",
+      "belongs": [
+        "monster",
+        "consecrated_beast",
+        ""
+      ],
+      "hp": 10,
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/46e049776dc49fb066afbd761dc42523.png",
+      "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58cbe/b998ab30c21ae8e20f6240e01cb81384.png"
     }
   ],
   "actions": [
@@ -11153,6 +11395,52 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/7b5e3da85ddff6c4adefb5096baecb2a.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 212151,
+      "name": "愿一切欢睦陪伴你",
+      "content": "<color=#FFFFFFFF>战斗行动</color>：我方出战角色为<color=#FFFFFFFF>塔利雅</color>时，装备此牌。\\n塔利雅装备此牌后，立刻使用一次<color=#FFD780FF>纯耀的祷咏</color>。\\n<color=#FFFFFFFF>装备有此卡牌的<color=#FFFFFFFF>塔利雅</color>在场时，我方角色被击倒时：</color>如果我方场上存在<color=#FFFFFFFF>西风之眷</color>，则消耗所有<color=#FFFFFFFF>西风之眷</color>，使该角色<color=#FFFFFFFF>免于被击倒</color>，并治疗该角色到2点生命值。\\n（牌组中包含塔利雅，才能加入牌组）",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "3",
+      "cost_type1": "12",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+      "cost_num2": "2",
+      "cost_type2": "1",
+      "cost_type2_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+      "action_card_tags": [
+        "talent",
+        "combat_action",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/6ef9a3f7dfdbc9028145679c1001b1f5.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 212161,
+      "name": "天才之为构造之责任",
+      "content": "<color=#FFFFFFFF>战斗行动</color>：我方出战角色为<color=#FFFFFFFF>爱诺</color>时，装备此牌。\\n爱诺装备此牌后，立刻使用一次<color=#FFD780FF>精密水冷仪</color>。\\n<color=#FFFFFFFF>装备有此卡牌的<color=#FFFFFFFF>爱诺</color>在场时，我方触发感电、月感电及绽放反应时：</color>该次伤害+2，并且赋予我方<color=#FFFFFFFF><color=#FFFFFFFF>当前元素骰费用</color></color>最高的1张手牌<color=#FFFFFFFF><color=#FFFFFFFF>赋能</color></color>。（每回合1次）\\n（牌组中包含爱诺，才能加入牌组）",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "3",
+      "cost_type1": "12",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+      "cost_num2": "2",
+      "cost_type2": "1",
+      "cost_type2_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+      "action_card_tags": [
+        "talent",
+        "combat_action",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/bd378ee0c17a6a04c2d8d8681a44236a.png",
       "is_special": false,
       "max_count": 2
     },
@@ -12240,7 +12528,7 @@
     {
       "id": 215151,
       "name": "温敷战术包扎",
-      "content": "<color=#FFFFFFFF>快速行动</color>：装备给我方的<color=#FFFFFFFF>伊法</color>，治疗我方受伤最多的角色1点。\\n装备有此牌的伊法在场时，我方触发<color=#80FFD7FF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' />风元素相关反应</color>、<color=#FFFFFFFF>感电</color>或<color=#FFFFFFFF>月感电</color>反应后，治疗我方受伤最多的角色1点。（每回合2次）（每回合2次）\\n（牌组中包含伊法，才能加入牌组）",
+      "content": "<color=#FFFFFFFF>快速行动</color>：装备给我方的<color=#FFFFFFFF>伊法</color>，治疗我方受伤最多的角色1点。\\n装备有此牌的伊法在场时，我方触发<color=#80FFD7FF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' />风元素相关反应</color>、<color=#FFFFFFFF>感电</color>或<color=#FFFFFFFF>月感电</color>反应后，治疗我方受伤最多的角色1点。（每回合2次）\\n（牌组中包含伊法，才能加入牌组）",
       "action_type": "equipment_card",
       "rank_id": 0,
       "cost_num1": "1",
@@ -13526,6 +13814,29 @@
       "max_count": 2
     },
     {
+      "id": 227051,
+      "name": "亡草蔽日",
+      "content": "<color=#FFFFFFFF>快速行动</color>：装备给我方的<color=#FFFFFFFF>圣骸牙兽</color>。\\n<color=#FFFFFFFF>我方打出或<color=#FFFFFFFF>舍弃</color><color=#FFFFFFFF>噬骸能量块</color>时：</color>抓1张牌。（每回合1次）\\n（牌组中包含圣骸牙兽，才能加入牌组）",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1": "16",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/848248aa7c40784633446db172ee4678.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/367483e899dced6aae396e76d110ecb8.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 311101,
       "name": "魔导绪论",
       "content": "<color=#FFFFFFFF>角色造成的伤害+1</color>。\\n（<color=#FFFFFFFF>「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/1643452964b58e2e69e64e2b5d3b5878.png' />法器」角色</color>才能装备。角色最多装备1件「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/49acb071b0d634ded17cb788d9f520ed.png' />武器」）",
@@ -13982,6 +14293,29 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68c0b19c/de1ff2a2297669bb11a62f6728d54701.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 311209,
+      "name": "罗网勾针",
+      "content": "<color=#FFFFFFFF>角色使用「元素爆发」造成的伤害+2</color>。\\n<color=#FFFFFFFF>我方引发元素反应时：</color>累计1层<color=#FFFFFFFF>矫捷无影</color>，当<color=#FFFFFFFF>矫捷无影</color>不低于2层时，消耗2层<color=#FFFFFFFF>矫捷无影</color>使所附属角色<color=#FFFFFFFF>获得1点<color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png' />充能</color></color>。\\n（<color=#FFFFFFFF>「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/9b142cbc6e2e5e472ff1c37a78d7dd77.png' />弓」角色</color>才能装备。角色最多装备1件「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/49acb071b0d634ded17cb788d9f520ed.png' />武器」）",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1": "10",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "weapon",
+        "bow",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/02d3eaf7fa1df661cbfe49b4905b1221.png",
       "is_special": false,
       "max_count": 2
     },
@@ -16148,6 +16482,29 @@
       "max_count": 2
     },
     {
+      "id": 313010,
+      "name": "膨膨兽",
+      "content": "<color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/c77ba0b2ea2bf428b8414c9f9bc86035.png' />特技</color>：膨膨音波\\n<color=#FFFFFFFF><color=#FFFFFFFF>可用次数</color>：2</color>\\n（角色最多装备1个「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/c77ba0b2ea2bf428b8414c9f9bc86035.png' />特技」）",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1": "3",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8b295c3fed21771dcced6055cdf2f2ce.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "technique",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/502d57864e525c12811cd53885e7f854.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 321001,
       "name": "璃月港口",
       "content": "<color=#FFFFFFFF>结束阶段：</color>抓2张牌。\\n<color=#FFFFFFFF>可用次数</color>：2",
@@ -16909,7 +17266,7 @@
     {
       "id": 321037,
       "name": "霜月之坊",
-      "content": "<color=#FFFFFFFF>入场时：</color>抓2张牌，治疗我方受伤最多的角色2点。\\n<color=#FFFFFFFF>结束阶段：</color>赋予我方随机2张<color=#FFFFFFFF><color=#FFFFFFFF>当前元素骰费用</color></color>不为0的手牌<color=#FFFFFFFF><color=#FFFFFFFF>费用降低</color></color>。\\n<color=#FFFFFFFF><color=#FFFFFFFF>可用次数</color>：2</color>",
+      "content": "<color=#FFFFFFFF>入场时：</color>抓2张牌，治疗我方受伤最多的角色2点。\\n<color=#FFFFFFFF>结束阶段：</color>赋予我方随机2张手牌<color=#FFFFFFFF><color=#FFFFFFFF>费用降低</color></color>。\\n<color=#FFFFFFFF><color=#FFFFFFFF>可用次数</color>：2</color>",
       "action_type": "support_card",
       "rank_id": 0,
       "cost_num1": "4",
@@ -17712,6 +18069,29 @@
       "max_count": 2
     },
     {
+      "id": 322033,
+      "name": "乐平波琳",
+      "content": "<color=#FFFFFFFF>入场时：</color><color=#FFFFFFFF><color=#FFFFFFFF>挑选</color></color>1个<color=#FFFFFFFF><color=#FFFFFFFF>投资计划</color></color>。",
+      "action_type": "support_card",
+      "rank_id": 0,
+      "cost_num1": "0",
+      "cost_type1": "",
+      "cost_type1_icon": "",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "companion",
+        "709",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/2c8123a9dd654596a3d84a86e0368b23.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 323001,
       "name": "参量质变仪",
       "content": "<color=#FFFFFFFF>双方角色使用技能后：</color>如果造成了元素伤害，此牌累积1个<color=#FFFFFFFF>「质变进度」</color>。如果此牌已累积3个<color=#FFFFFFFF>「质变进度」</color>，则弃置此牌并生成3个不同的基础元素骰。",
@@ -18185,7 +18565,7 @@
       "cost_type2_icon": "",
       "action_card_tags": [
         "elemental_transfiguration",
-        "elemental_transfiguration",
+        "",
         "",
         "",
         ""
@@ -18208,12 +18588,58 @@
       "cost_type2_icon": "",
       "action_card_tags": [
         "elemental_transfiguration",
-        "elemental_transfiguration",
+        "",
         "",
         "",
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/699e3469/fd9237880d00e3da16c866a7f7b21897.png",
+      "is_special": false,
+      "max_count": 1
+    },
+    {
+      "id": 331006,
+      "name": "元素幻变：绽放祝佑",
+      "content": "<color=#FFFFFFFF><color=#FFFFFFFF>元素幻变</color>：</color><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>水元素</color><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' /><color=#7EC236FF>草元素</color>\\n<color=#FFFFFFFF>投掷阶段：</color>总是投出2个<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png' /><color=#80C0FFFF>水元素骰</color>和2个<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/848248aa7c40784633446db172ee4678.png' /><color=#7EC236FF>草元素骰</color>。\\n<color=#FFFFFFFF>我方触发<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' />绽放反应后</color>：弃置此牌并从<color=#FFFFFFFF>绽放祝佑·甘露</color>和<color=#FFFFFFFF>绽放祝佑·蔓生</color>中挑选一项加入手牌。",
+      "action_type": "support_card",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1": "3",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8b295c3fed21771dcced6055cdf2f2ce.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "elemental_transfiguration",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/bfec330966d7dfb52798c3bc141db035.png",
+      "is_special": false,
+      "max_count": 1
+    },
+    {
+      "id": 331007,
+      "name": "元素幻变：火岩祝佑",
+      "content": "<color=#FFFFFFFF><color=#FFFFFFFF>元素幻变</color>：</color><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FF9999FF>火元素</color><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/98c267c74a3efdcfed4131a054ff4b82.png' /><color=#FFE699FF>岩元素</color>\\n<color=#FFFFFFFF>投掷阶段：</color>总是投出2个<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/fe4517db495f28fdbcb44607d94640c3.png' /><color=#FF9999FF>火元素骰</color>和2个<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/680e755181a0b8c29e87d0570815ac29.png' /><color=#FFE699FF>岩元素骰</color>。\\n<color=#FFFFFFFF>我方触发<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/98c267c74a3efdcfed4131a054ff4b82.png' />火结晶反应后</color>：弃置此牌并从<color=#FFFFFFFF>火岩祝佑·回火</color>和<color=#FFFFFFFF>火岩祝佑·重熔</color>中挑选一项加入手牌。",
+      "action_type": "support_card",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1": "3",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8b295c3fed21771dcced6055cdf2f2ce.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "elemental_transfiguration",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/dfa6be6e97e11e3764e281e4fa2ffe3f.png",
       "is_special": false,
       "max_count": 1
     },
@@ -18540,6 +18966,29 @@
       "max_count": 2
     },
     {
+      "id": 331721,
+      "name": "月兆·满辉",
+      "content": "赋予我方随机1张手牌以及牌组顶的卡牌<color=#FFFFFFFF><color=#FFFFFFFF>费用降低</color></color>。\\n（牌组包含至少2个「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/699e3488/078a07b812a1c29d7129e2647797fe5a.png' />挪德卡莱」角色，才能加入牌组）",
+      "action_type": "event_card",
+      "rank_id": 0,
+      "cost_num1": "0",
+      "cost_type1": "",
+      "cost_type1_icon": "",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "elemental_resonance",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/c8839f957b49f4f2f7cd86727076cdf7.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 331801,
       "name": "风与自由",
       "content": "<color=#FFFFFFFF>本回合中，我方角色使用技能后：</color>将下一个我方后台角色切换到场上。\\n（牌组包含至少2个「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/f95f1e6a700f7e53fd02782881a8fba8.png' />蒙德」角色，才能加入牌组）",
@@ -18674,6 +19123,29 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6851f39d/601656dd3eb21d365471f5855ea52f3d.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 331807,
+      "name": "月与故乡",
+      "content": "<color=#FFFFFFFF>本回合内我方打出下张卡牌后：</color>在下个回合开始时，创建1张所打出的卡牌加入手牌。\\n（牌组包含至少2个「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/699e3488/078a07b812a1c29d7129e2647797fe5a.png' />挪德卡莱」角色，才能加入牌组）",
+      "action_type": "event_card",
+      "rank_id": 0,
+      "cost_num1": "0",
+      "cost_type1": "",
+      "cost_type1_icon": "",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/9ad413e40f8bda2a2793df7cf16d446a.png",
       "is_special": false,
       "max_count": 2
     },
@@ -19962,6 +20434,29 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/699e3469/d70376b1ab3e4fdd78c2ebb570e6af89.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 332062,
+      "name": "清扫时间",
+      "content": "我方手牌中每存在1种附着状态，则生成1个随机基础元素骰。（至多生成2个）",
+      "action_type": "event_card",
+      "rank_id": 0,
+      "cost_num1": "0",
+      "cost_type1": "",
+      "cost_type1_icon": "",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/8b92c1e4913c313fd5475409e0994455.png",
       "is_special": false,
       "max_count": 2
     },
@@ -23908,6 +24403,90 @@
       "name": "叮铃哐啷军团",
       "id": 332061,
       "code": 569,
+      "type": "action"
+    },
+    {
+      "name": "塔利雅",
+      "id": 1215,
+      "code": 570,
+      "type": "character"
+    },
+    {
+      "name": "爱诺",
+      "id": 1216,
+      "code": 571,
+      "type": "character"
+    },
+    {
+      "name": "圣骸牙兽",
+      "id": 2705,
+      "code": 572,
+      "type": "character"
+    },
+    {
+      "name": "愿一切欢睦陪伴你",
+      "id": 212151,
+      "code": 573,
+      "type": "action"
+    },
+    {
+      "name": "天才之为构造之责任",
+      "id": 212161,
+      "code": 574,
+      "type": "action"
+    },
+    {
+      "name": "亡草蔽日",
+      "id": 227051,
+      "code": 575,
+      "type": "action"
+    },
+    {
+      "name": "罗网勾针",
+      "id": 311209,
+      "code": 576,
+      "type": "action"
+    },
+    {
+      "name": "膨膨兽",
+      "id": 313010,
+      "code": 577,
+      "type": "action"
+    },
+    {
+      "name": "乐平波琳",
+      "id": 322033,
+      "code": 578,
+      "type": "action"
+    },
+    {
+      "name": "元素幻变：绽放祝佑",
+      "id": 331006,
+      "code": 579,
+      "type": "action"
+    },
+    {
+      "name": "元素幻变：火岩祝佑",
+      "id": 331007,
+      "code": 580,
+      "type": "action"
+    },
+    {
+      "name": "月兆·满辉",
+      "id": 331721,
+      "code": 581,
+      "type": "action"
+    },
+    {
+      "name": "月与故乡",
+      "id": 331807,
+      "code": 582,
+      "type": "action"
+    },
+    {
+      "name": "清扫时间",
+      "id": 332062,
+      "code": 583,
       "type": "action"
     }
   ]

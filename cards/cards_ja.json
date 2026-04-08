@@ -1394,7 +1394,7 @@
         "",
         ""
       ],
-      "hp": 10,
+      "hp": 12,
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/caba45c994061913630051dd1aee22eb.png",
       "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f716/302b2c185f63cad48736c627a1551afe.png"
     },
@@ -2335,6 +2335,164 @@
       "hp": 10,
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/be60bb200b3595c311ba7b7846699b3e.png",
       "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f716/9d16b2f1f89173db12cb4a23665fe7d6.png"
+    },
+    {
+      "id": 1215,
+      "name": "ダリア",
+      "element_type": 302,
+      "role_skill_infos": [
+        {
+          "skill_text": "<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>物理ダメージ</color>を2与える。",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "通常攻撃"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/3f016e2d606ca39ea86e24d5245dfa5b.png",
+          "name": "西風剣術・祭儀",
+          "id": "12151"
+        },
+        {
+          "skill_text": "<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>水元素ダメージ</color>を2与え、<color=#FFFFFFFF>霧雨の秘跡</color>を生成する。",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "元素スキル"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6851f3bf/d35b2faee503b4a5802dd6f8bf926b96.png",
+          "name": "受洗の礼典",
+          "id": "12152"
+        },
+        {
+          "skill_text": "<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>水元素ダメージ</color>を2与え、<color=#FFFFFFFF>シールド</color>を2層、<color=#FFFFFFFF>西風の恵み</color>を2層生成する。",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "元素爆発"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58cc0/d710fe21a8e1089e812909ad096f415f.png",
+          "name": "純光の祈り",
+          "id": "12153"
+        }
+      ],
+      "weapon": "sword",
+      "belongs": [
+        "mondstadt",
+        "",
+        ""
+      ],
+      "hp": 10,
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/73533564d896f219a74b16ecd1b2f2ef.png",
+      "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58cbe/3d819990ea80ea82815395ae7d0fef32.png"
+    },
+    {
+      "id": 1216,
+      "name": "アイノ",
+      "element_type": 302,
+      "role_skill_infos": [
+        {
+          "skill_text": "<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>物理ダメージ</color>を2与える。",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "通常攻撃"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/bf0237fba9d4ab5b47ea86b90711a765.png",
+          "name": "叩いて直す！",
+          "id": "12161"
+        },
+        {
+          "skill_text": "<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>水元素ダメージ</color>を2与え、<color=#FFFFFFFF>高速キャラチェンジ</color>を1層生成する。<color=#FFFFFFFF>エンパワー</color>を持つカードが手札にある場合、代わりに<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>水元素ダメージ</color>を3与える。",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "元素スキル"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68c0b1b7/9036689db484d5b98aca56379b66ba1e.png",
+          "name": "アイデアキャッチャー",
+          "id": "12162"
+        },
+        {
+          "skill_text": "<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>水元素ダメージ</color>を2与え、<color=#FFFFFFFF>落ち着いた方がいいカモ？</color>を召喚する。",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "元素爆発"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58cc0/e7f65b0170c6547076d62ab839e1eddc.png",
+          "name": "お水ひえひえ装置",
+          "id": "12163"
+        },
+        {
+          "skill_text": "<color=#FFFFFFFF>味方カードに<color=#FFFFFFFF>エンパワー</color>が付与された時</color>、味方フィールド上に<color=#FFFFFFFF>落ち着いた方がいいカモ？</color>が存在する場合、その使用可能回数+1。存在しない場合、自身が<color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png' />チャージ</color>を1獲得する。（各ラウンドで1回のみ）",
+          "skill_costs": [],
+          "type": [
+            "固有スキル"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58cc0/dbe3f7bafe5e35980ee3c91684c28060.png",
+          "name": "効率運用プロトコル",
+          "id": "12164"
+        }
+      ],
+      "weapon": "claymore",
+      "belongs": [
+        "nod_krai",
+        "",
+        ""
+      ],
+      "hp": 10,
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/06c08232f1285e53474d769a3c87042e.png",
+      "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58cbe/751c2a66dfbd3fb158870012ff33b364.png"
     },
     {
       "id": 1301,
@@ -10463,6 +10621,90 @@
       "hp": 8,
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/49b811e95884361c796496f33fcb9501.png",
       "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f716/d6a56a54fa436716a950c4a890f16fa6.png"
+    },
+    {
+      "id": 2705,
+      "name": "聖骸牙獣",
+      "element_type": 306,
+      "role_skill_infos": [
+        {
+          "skill_text": "<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>物理ダメージ</color>を2与える。",
+          "skill_costs": [
+            {
+              "cost_type": "16",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/848248aa7c40784633446db172ee4678.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "通常攻撃"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/4ef5373e27e14926f2fec5ffa0511440.png",
+          "name": "鋭い爪の猛撃",
+          "id": "27051"
+        },
+        {
+          "skill_text": "<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' /><color=#7EC236FF>草元素ダメージ</color>を2与え、山札から<color=#FFFFFFFF>喰骸エネルギークラスター</color>を1枚引く。",
+          "skill_costs": [
+            {
+              "cost_type": "16",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/848248aa7c40784633446db172ee4678.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "元素スキル"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/2e5044941d1d68125634c523b1d8bb9b.png",
+          "name": "略奪の波動",
+          "id": "27052"
+        },
+        {
+          "skill_text": "<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' /><color=#7EC236FF>草元素ダメージ</color>を4与え、手札に<color=#FFFFFFFF>喰骸エネルギークラスター</color>がある場合、1枚<color=#FFFFFFFF>破棄</color>してスキル<color=#FFFFFFFF>腐草の萌芽</color>を準備する。",
+          "skill_costs": [
+            {
+              "cost_type": "16",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/848248aa7c40784633446db172ee4678.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "元素爆発"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58cc0/94b561533a67777369b67da9c6363892.png",
+          "name": "災厄の蔓",
+          "id": "27053"
+        },
+        {
+          "skill_text": "【固有】戦闘開始時、<color=#FFFFFFFF>喰骸エネルギークラスター</color>を2枚生成して山札の一番下に置く。味方は各ラウンドで<color=#FFFFFFFF>喰骸エネルギークラスター</color>を追加で1枚使用できる。",
+          "skill_costs": [],
+          "type": [
+            "固有スキル"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58cc0/aa739c79d24549ed240a053f62daaf51.png",
+          "name": "亡骸の渇き",
+          "id": "27054"
+        }
+      ],
+      "weapon": "other_weapons",
+      "belongs": [
+        "monster",
+        "consecrated_beast",
+        ""
+      ],
+      "hp": 10,
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/46e049776dc49fb066afbd761dc42523.png",
+      "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58cbe/b998ab30c21ae8e20f6240e01cb81384.png"
     }
   ],
   "actions": [
@@ -11153,6 +11395,52 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/7b5e3da85ddff6c4adefb5096baecb2a.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 212151,
+      "name": "あらゆる喜びが君とあらんことを",
+      "content": "<color=#FFFFFFFF>戦闘アクション</color>：味方の出撃キャラが<color=#FFFFFFFF>ダリア</color>の時、このカードを装備する。\\nダリアがこのカードを装備した後、直ちに<color=#FFD780FF>純光の祈り</color>を1回使用する。\\n<color=#FFFFFFFF>このカードを装備した<color=#FFFFFFFF>ダリア</color>がフィールドにいて、味方キャラが倒された時、</color>味方のフィールドに<color=#FFFFFFFF>西風の恵み</color>がある場合、<color=#FFFFFFFF>西風の恵み</color>をすべて消費し、そのキャラを<color=#FFFFFFFF>戦闘不能にならない</color>状態にし、HPを2まで治療する。\\n（このカードはデッキにダリアが含まれている場合のみ、デッキに追加できる）",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "3",
+      "cost_type1": "12",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+      "cost_num2": "2",
+      "cost_type2": "1",
+      "cost_type2_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+      "action_card_tags": [
+        "talent",
+        "combat_action",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/6ef9a3f7dfdbc9028145679c1001b1f5.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 212161,
+      "name": "天才なりの構築責任",
+      "content": "<color=#FFFFFFFF>戦闘アクション</color>：味方の出撃キャラが<color=#FFFFFFFF>アイノ</color>の時、このカードを装備する。\\nアイノがこのカードを装備した後、直ちに<color=#FFD780FF>お水ひえひえ装置</color>を1回使用する。\\n<color=#FFFFFFFF>このカードを装備した<color=#FFFFFFFF>アイノ</color>がフィールドにいる状態で、味方が感電、月感電、または開花反応を起こした時、</color>そのダメージ+2。さらに、味方の<color=#FFFFFFFF><color=#FFFFFFFF>現在の元素サイコロのコスト</color></color>が最も高い手札1枚に<color=#FFFFFFFF><color=#FFFFFFFF>エンパワー</color></color>を付与する。（各ラウンドで1回のみ）\\n（このカードはデッキにアイノが含まれている場合のみ、デッキに追加できる）",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "3",
+      "cost_type1": "12",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+      "cost_num2": "2",
+      "cost_type2": "1",
+      "cost_type2_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+      "action_card_tags": [
+        "talent",
+        "combat_action",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/bd378ee0c17a6a04c2d8d8681a44236a.png",
       "is_special": false,
       "max_count": 2
     },
@@ -13526,6 +13814,29 @@
       "max_count": 2
     },
     {
+      "id": 227051,
+      "name": "天を覆う枯れ草",
+      "content": "<color=#FFFFFFFF>クイックアクション</color>：味方の<color=#FFFFFFFF>聖骸牙獣</color>に装備させる。\\n<color=#FFFFFFFF>味方が<color=#FFFFFFFF>喰骸エネルギークラスター</color>を使用、または<color=#FFFFFFFF>破棄</color>した時、</color>カードを1枚引く。（各ラウンドで1回まで）\\n（このカードはデッキに聖骸牙獣が含まれている場合のみ、デッキに追加できる）",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1": "16",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/848248aa7c40784633446db172ee4678.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/367483e899dced6aae396e76d110ecb8.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 311101,
       "name": "魔導緒論",
       "content": "<color=#FFFFFFFF>キャラの与えるダメージ+1</color>。\\n（<color=#FFFFFFFF>「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/1643452964b58e2e69e64e2b5d3b5878.png' />法器」キャラ</color>のみ装備可能。キャラが装備できる「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/49acb071b0d634ded17cb788d9f520ed.png' />武器」は1つのみ）",
@@ -13982,6 +14293,29 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68c0b19c/de1ff2a2297669bb11a62f6728d54701.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 311209,
+      "name": "羅網の針",
+      "content": "<color=#FFFFFFFF>キャラが発動する「元素爆発」のダメージ+2</color>。\\n<color=#FFFFFFFF>味方が元素反応を起こした時、</color><color=#FFFFFFFF>俊敏無影</color>を1層重ねる。<color=#FFFFFFFF>俊敏無影</color>が2層以上の時、<color=#FFFFFFFF>俊敏無影</color>を2層消費して、付与されたキャラが<color=#FFFFFFFF><color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png' />チャージ</color></color>を1獲得する。\\n（<color=#FFFFFFFF>「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/9b142cbc6e2e5e472ff1c37a78d7dd77.png' />弓」キャラ</color>のみ装備可能。キャラが装備できる<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/49acb071b0d634ded17cb788d9f520ed.png' />「武器」は最大1つまで）",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1": "10",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "weapon",
+        "bow",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/02d3eaf7fa1df661cbfe49b4905b1221.png",
       "is_special": false,
       "max_count": 2
     },
@@ -16148,6 +16482,29 @@
       "max_count": 2
     },
     {
+      "id": 313010,
+      "name": "プクプク獣",
+      "content": "<color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/c77ba0b2ea2bf428b8414c9f9bc86035.png' />特技</color>：プクプク音波\\n<color=#FFFFFFFF><color=#FFFFFFFF>使用可能回数</color>：2</color>\\n（キャラが装備できる「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/c77ba0b2ea2bf428b8414c9f9bc86035.png' />特技」は1つのみ）",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1": "3",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8b295c3fed21771dcced6055cdf2f2ce.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "technique",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/502d57864e525c12811cd53885e7f854.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 321001,
       "name": "璃月港口",
       "content": "<color=#FFFFFFFF>エンドフェーズ：</color>手札を2枚引く。\\n<color=#FFFFFFFF>使用可能回数</color>：2",
@@ -16909,7 +17266,7 @@
     {
       "id": 321037,
       "name": "霜月の里",
-      "content": "<color=#FFFFFFFF>登場時：</color>カードを2枚引く。HPを最も失っている味方キャラのHPを2回復する。\\n<color=#FFFFFFFF>エンドフェーズ：</color><color=#FFFFFFFF><color=#FFFFFFFF>現在の元素サイコロのコスト</color></color>が0でない味方のランダムな手札2枚に<color=#FFFFFFFF><color=#FFFFFFFF>コストダウン</color></color>を付与する。\\n<color=#FFFFFFFF><color=#FFFFFFFF>使用可能回数</color>：2</color>",
+      "content": "<color=#FFFFFFFF>登場時：</color>カードを2枚引く。HPを最も失っている味方キャラのHPを2回復する。\\n<color=#FFFFFFFF>エンドフェーズ：</color>味方のランダムな手札2枚に<color=#FFFFFFFF><color=#FFFFFFFF>コストダウン</color></color>を付与する。\\n<color=#FFFFFFFF><color=#FFFFFFFF>使用可能回数</color>：2</color>",
       "action_type": "support_card",
       "rank_id": 0,
       "cost_num1": "4",
@@ -17712,6 +18069,29 @@
       "max_count": 2
     },
     {
+      "id": 322033,
+      "name": "レピーヌ・ポーリーン",
+      "content": "<color=#FFFFFFFF>登場時：</color><color=#FFFFFFFF><color=#FFFFFFFF>投資計画</color></color>を1つ<color=#FFFFFFFF><color=#FFFFFFFF>選択</color></color>する。",
+      "action_type": "support_card",
+      "rank_id": 0,
+      "cost_num1": "0",
+      "cost_type1": "",
+      "cost_type1_icon": "",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "companion",
+        "709",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/2c8123a9dd654596a3d84a86e0368b23.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 323001,
       "name": "参量物質変化器",
       "content": "<color=#FFFFFFFF>双方のキャラがスキルを発動した後</color>、元素ダメージを与えた場合、このカードに<color=#FFFFFFFF>「物質変化進捗」</color>を1つ重ねる。3つの<color=#FFFFFFFF>「物質変化進捗」</color>を重ねた時、このカードを破棄し、元素タイプの異なる基本元素サイコロを3個生成する。",
@@ -18185,7 +18565,7 @@
       "cost_type2_icon": "",
       "action_card_tags": [
         "elemental_transfiguration",
-        "elemental_transfiguration",
+        "",
         "",
         "",
         ""
@@ -18208,12 +18588,58 @@
       "cost_type2_icon": "",
       "action_card_tags": [
         "elemental_transfiguration",
-        "elemental_transfiguration",
+        "",
         "",
         "",
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/699e3469/fd9237880d00e3da16c866a7f7b21897.png",
+      "is_special": false,
+      "max_count": 1
+    },
+    {
+      "id": 331006,
+      "name": "元素変幻・開花の祝福",
+      "content": "<color=#FFFFFFFF><color=#FFFFFFFF>元素変幻</color>：</color><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>水元素</color><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' /><color=#7EC236FF>草元素</color>\\n<color=#FFFFFFFF>ロールフェーズ：</color>常に<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png' /><color=#80C0FFFF>水元素サイコロ</color>2個と<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/848248aa7c40784633446db172ee4678.png' /><color=#7EC236FF>草元素サイコロ</color>2個が出る。\\n<color=#FFFFFFFF>味方が<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' />開花反応を起こした後</color>、このカードを破棄し、<color=#FFFFFFFF>開花の祝福・甘露</color>と<color=#FFFFFFFF>開花の祝福・蔓生</color>の中から1つ選び、手札に加える。",
+      "action_type": "support_card",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1": "3",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8b295c3fed21771dcced6055cdf2f2ce.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "elemental_transfiguration",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/bfec330966d7dfb52798c3bc141db035.png",
+      "is_special": false,
+      "max_count": 1
+    },
+    {
+      "id": 331007,
+      "name": "元素変幻・炎と岩の祝福",
+      "content": "<color=#FFFFFFFF><color=#FFFFFFFF>元素変幻</color>：</color><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FF9999FF>炎元素</color><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/98c267c74a3efdcfed4131a054ff4b82.png' /><color=#FFE699FF>岩元素</color>\\n<color=#FFFFFFFF>ロールフェーズ：</color>常に<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/fe4517db495f28fdbcb44607d94640c3.png' /><color=#FF9999FF>炎元素サイコロ</color>2個と<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/680e755181a0b8c29e87d0570815ac29.png' /><color=#FFE699FF>岩元素サイコロ</color>2個が出る。\\n<color=#FFFFFFFF>味方が<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/98c267c74a3efdcfed4131a054ff4b82.png' />炎結晶反応を起こした後</color>、このカードを破棄し、<color=#FFFFFFFF>炎と岩の祝福・回炎</color>と<color=#FFFFFFFF>炎と岩の祝福・再熔</color>の中から1つ選び、手札に加える。",
+      "action_type": "support_card",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1": "3",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8b295c3fed21771dcced6055cdf2f2ce.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "elemental_transfiguration",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/dfa6be6e97e11e3764e281e4fa2ffe3f.png",
       "is_special": false,
       "max_count": 1
     },
@@ -18540,6 +18966,29 @@
       "max_count": 2
     },
     {
+      "id": 331721,
+      "name": "月兆・満照",
+      "content": "味方の手札からランダムに1枚と、山札の一番上にあるカードに<color=#FFFFFFFF><color=#FFFFFFFF>コストダウン</color></color>を付与する。\\n（デッキに「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/699e3488/078a07b812a1c29d7129e2647797fe5a.png' />ナド・クライ」のキャラが2体以上含まれている場合のみ、デッキに追加できる）",
+      "action_type": "event_card",
+      "rank_id": 0,
+      "cost_num1": "0",
+      "cost_type1": "",
+      "cost_type1_icon": "",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "elemental_resonance",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/c8839f957b49f4f2f7cd86727076cdf7.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 331801,
       "name": "風と自由",
       "content": "<color=#FFFFFFFF>本ラウンド中、味方のキャラがスキルを発動した後</color>、味方の次の待機キャラを出撃キャラにチェンジする。\\n（デッキに「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/f95f1e6a700f7e53fd02782881a8fba8.png' />モンド」のキャラが2体以上含まれている場合のみ、デッキに追加できる）",
@@ -18674,6 +19123,29 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6851f39d/601656dd3eb21d365471f5855ea52f3d.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 331807,
+      "name": "月と故郷",
+      "content": "<color=#FFFFFFFF>このラウンド中、味方が次のカードを使用した後、</color>次のラウンド開始時、その使用したカードを1枚生成して手札に加える。\\n（デッキに「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/699e3488/078a07b812a1c29d7129e2647797fe5a.png' />ナド・クライ」のキャラが2体以上含まれている場合のみ、デッキに追加できる）",
+      "action_type": "event_card",
+      "rank_id": 0,
+      "cost_num1": "0",
+      "cost_type1": "",
+      "cost_type1_icon": "",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/9ad413e40f8bda2a2793df7cf16d446a.png",
       "is_special": false,
       "max_count": 2
     },
@@ -19962,6 +20434,29 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/699e3469/d70376b1ab3e4fdd78c2ebb570e6af89.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 332062,
+      "name": "お掃除の時間",
+      "content": "味方の手札に付着状態が1種類あるごとに、ランダムな基本元素サイコロを1個生成する。（最大で2個まで生成可能）",
+      "action_type": "event_card",
+      "rank_id": 0,
+      "cost_num1": "0",
+      "cost_type1": "",
+      "cost_type1_icon": "",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/8b92c1e4913c313fd5475409e0994455.png",
       "is_special": false,
       "max_count": 2
     },
@@ -23908,6 +24403,90 @@
       "name": "カチャカチャ軍団",
       "id": 332061,
       "code": 569,
+      "type": "action"
+    },
+    {
+      "name": "ダリア",
+      "id": 1215,
+      "code": 570,
+      "type": "character"
+    },
+    {
+      "name": "アイノ",
+      "id": 1216,
+      "code": 571,
+      "type": "character"
+    },
+    {
+      "name": "聖骸牙獣",
+      "id": 2705,
+      "code": 572,
+      "type": "character"
+    },
+    {
+      "name": "あらゆる喜びが君とあらんことを",
+      "id": 212151,
+      "code": 573,
+      "type": "action"
+    },
+    {
+      "name": "天才なりの構築責任",
+      "id": 212161,
+      "code": 574,
+      "type": "action"
+    },
+    {
+      "name": "天を覆う枯れ草",
+      "id": 227051,
+      "code": 575,
+      "type": "action"
+    },
+    {
+      "name": "羅網の針",
+      "id": 311209,
+      "code": 576,
+      "type": "action"
+    },
+    {
+      "name": "プクプク獣",
+      "id": 313010,
+      "code": 577,
+      "type": "action"
+    },
+    {
+      "name": "レピーヌ・ポーリーン",
+      "id": 322033,
+      "code": 578,
+      "type": "action"
+    },
+    {
+      "name": "元素変幻・開花の祝福",
+      "id": 331006,
+      "code": 579,
+      "type": "action"
+    },
+    {
+      "name": "元素変幻・炎と岩の祝福",
+      "id": 331007,
+      "code": 580,
+      "type": "action"
+    },
+    {
+      "name": "月兆・満照",
+      "id": 331721,
+      "code": 581,
+      "type": "action"
+    },
+    {
+      "name": "月と故郷",
+      "id": 331807,
+      "code": 582,
+      "type": "action"
+    },
+    {
+      "name": "お掃除の時間",
+      "id": 332062,
+      "code": 583,
       "type": "action"
     }
   ]

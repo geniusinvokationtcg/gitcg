@@ -796,5 +796,23 @@
     "character_name": "Goldflame Qucusaur Tyrant",
     "talent_id": 223061,
     "talent_name": "Flamelord's Blessing"
+  },
+  {
+    "character_id": 1215,
+    "character_name": "Dahlia",
+    "talent_id": 212151,
+    "talent_name": "You Shall Go Out With Joy"
+  },
+  {
+    "character_id": 1216,
+    "character_name": "Aino",
+    "talent_id": 212161,
+    "talent_name": "The Burden of Creative Genius"
+  },
+  {
+    "character_id": 2705,
+    "character_name": "Consecrated Fanged Beast",
+    "talent_id": 227051,
+    "talent_name": "Withered Reeds Eclipse the Sun"
   }
 ]

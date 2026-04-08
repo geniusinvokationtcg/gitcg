@@ -133,6 +133,10 @@ export const tribeResonance: {
 		card_id: [331806]
 	},
 	{
+		tribe: "nod_krai",
+		card_id: [331721, 331807]
+	},
+	{
 		tribe: "monster",
 		card_id: [332015]
 	},

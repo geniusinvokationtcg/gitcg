@@ -1394,7 +1394,7 @@
         "",
         ""
       ],
-      "hp": 10,
+      "hp": 12,
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/caba45c994061913630051dd1aee22eb.png",
       "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f716/302b2c185f63cad48736c627a1551afe.png"
     },
@@ -2335,6 +2335,164 @@
       "hp": 10,
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/be60bb200b3595c311ba7b7846699b3e.png",
       "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f716/9d16b2f1f89173db12cb4a23665fe7d6.png"
+    },
+    {
+      "id": 1215,
+      "name": "Dahlia",
+      "element_type": 302,
+      "role_skill_infos": [
+        {
+          "skill_text": "Gây 2 điểm <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>Sát Thương Vật Lý</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Tấn Công Thường"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/3f016e2d606ca39ea86e24d5245dfa5b.png",
+          "name": "Tây Phong Kiếm Thuật - Nghi Lễ",
+          "id": "12151"
+        },
+        {
+          "skill_text": "Gây 2 điểm <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>Sát Thương Nguyên Tố Thủy</color>, sinh ra <color=#FFFFFFFF>Bí Ẩn Mưa Sương</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "Kỹ Năng Nguyên Tố"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6851f3bf/d35b2faee503b4a5802dd6f8bf926b96.png",
+          "name": "Nghi Thức Rửa Tội",
+          "id": "12152"
+        },
+        {
+          "skill_text": "Gây 2 điểm <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>Sát Thương Nguyên Tố Thủy</color>, sinh ra 2 tầng <color=#FFFFFFFF>Khiên</color> và 2 tầng <color=#FFFFFFFF>Tây Phong Thân Quyến</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Kỹ Năng Nộ"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58cc0/d710fe21a8e1089e812909ad096f415f.png",
+          "name": "Thánh Ca Thuần Khiết",
+          "id": "12153"
+        }
+      ],
+      "weapon": "sword",
+      "belongs": [
+        "mondstadt",
+        "",
+        ""
+      ],
+      "hp": 10,
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/73533564d896f219a74b16ecd1b2f2ef.png",
+      "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58cbe/3d819990ea80ea82815395ae7d0fef32.png"
+    },
+    {
+      "id": 1216,
+      "name": "Aino",
+      "element_type": 302,
+      "role_skill_infos": [
+        {
+          "skill_text": "Gây 2 điểm <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>Sát Thương Vật Lý</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Tấn Công Thường"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/bf0237fba9d4ab5b47ea86b90711a765.png",
+          "name": "Phương Pháp Tu Sửa Gõ Và Đập",
+          "id": "12161"
+        },
+        {
+          "skill_text": "Gây 2 điểm <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>Sát Thương Nguyên Tố Thủy</color>, sinh ra 1 tầng <color=#FFFFFFFF>Chuyển Đổi Nhanh Nhẹn</color>. Nếu có thẻ bài trên tay sở hữu <color=#FFFFFFFF>Trao Quyền</color>, sẽ chuyển sang gây 3 điểm <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>Sát Thương Nguyên Tố Thủy</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "Kỹ Năng Nguyên Tố"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68c0b1b7/9036689db484d5b98aca56379b66ba1e.png",
+          "name": "Bàn Tay Kỳ Diệu",
+          "id": "12162"
+        },
+        {
+          "skill_text": "Gây 2 điểm <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>Sát Thương Nguyên Tố Thủy</color>, triệu hồi <color=#FFFFFFFF>Vịt Bình Tĩnh</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Kỹ Năng Nộ"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58cc0/e7f65b0170c6547076d62ab839e1eddc.png",
+          "name": "Máy Làm Lạnh Tinh Xảo",
+          "id": "12163"
+        },
+        {
+          "skill_text": "<color=#FFFFFFFF>Khi thẻ bài phe ta được áp dụng <color=#FFFFFFFF>Trao Quyền</color></color>: Nếu trong trận phe ta tồn tại <color=#FFFFFFFF>Vịt Bình Tĩnh</color>, sẽ +1 số lần khả dụng của nó, nếu không, bản thân sẽ nhận 1 điểm <color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png' />Năng Lượng</color>. (Mỗi hiệp 1 lần)",
+          "skill_costs": [],
+          "type": [
+            "Kỹ Năng Bị Động"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58cc0/dbe3f7bafe5e35980ee3c91684c28060.png",
+          "name": "Vận Hành Mô Đun Hiệu Quả",
+          "id": "12164"
+        }
+      ],
+      "weapon": "claymore",
+      "belongs": [
+        "nod_krai",
+        "",
+        ""
+      ],
+      "hp": 10,
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/06c08232f1285e53474d769a3c87042e.png",
+      "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58cbe/751c2a66dfbd3fb158870012ff33b364.png"
     },
     {
       "id": 1301,
@@ -10463,6 +10621,90 @@
       "hp": 8,
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/49b811e95884361c796496f33fcb9501.png",
       "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f716/d6a56a54fa436716a950c4a890f16fa6.png"
+    },
+    {
+      "id": 2705,
+      "name": "Nanh Thú Thánh Hóa",
+      "element_type": 306,
+      "role_skill_infos": [
+        {
+          "skill_text": "Gây 2 điểm <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>Sát Thương Vật Lý</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "16",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/848248aa7c40784633446db172ee4678.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Tấn Công Thường"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/4ef5373e27e14926f2fec5ffa0511440.png",
+          "name": "Móng Vuốt Mãnh Kích",
+          "id": "27051"
+        },
+        {
+          "skill_text": "Gây 2 điểm <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' /><color=#7EC236FF>Sát Thương Nguyên Tố Thảo</color>, rút 1 lá <color=#FFFFFFFF>Khối Năng Lượng Nhai Xương</color> từ trong bộ bài.",
+          "skill_costs": [
+            {
+              "cost_type": "16",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/848248aa7c40784633446db172ee4678.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "Kỹ Năng Nguyên Tố"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/2e5044941d1d68125634c523b1d8bb9b.png",
+          "name": "Sóng Xanh Rút Cạn",
+          "id": "27052"
+        },
+        {
+          "skill_text": "Gây 4 điểm <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' /><color=#7EC236FF>Sát Thương Nguyên Tố Thảo</color>, nếu bài trên tay có <color=#FFFFFFFF>Khối Năng Lượng Nhai Xương</color>, sẽ <color=#FFFFFFFF>Vứt Bỏ</color> 1 lá và chuẩn bị kỹ năng <color=#FFFFFFFF>Cỏ Úa Hồi Sinh</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "16",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/848248aa7c40784633446db172ee4678.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Kỹ Năng Nộ"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58cc0/94b561533a67777369b67da9c6363892.png",
+          "name": "Dây Leo Trỗi Dậy",
+          "id": "27053"
+        },
+        {
+          "skill_text": "(Bị động) Khi bắt đầu chiến đấu, sinh ra 2 lá <color=#FFFFFFFF>Khối Năng Lượng Nhai Xương</color> đặt xuống dưới cùng bộ bài. Mỗi hiệp phe ta có thể đánh ra thêm 1 lá <color=#FFFFFFFF>Khối Năng Lượng Nhai Xương</color>.",
+          "skill_costs": [],
+          "type": [
+            "Kỹ Năng Bị Động"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58cc0/aa739c79d24549ed240a053f62daaf51.png",
+          "name": "Xương Cốt Đói Khát",
+          "id": "27054"
+        }
+      ],
+      "weapon": "other_weapons",
+      "belongs": [
+        "monster",
+        "consecrated_beast",
+        ""
+      ],
+      "hp": 10,
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/46e049776dc49fb066afbd761dc42523.png",
+      "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58cbe/b998ab30c21ae8e20f6240e01cb81384.png"
     }
   ],
   "actions": [
@@ -11153,6 +11395,52 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/7b5e3da85ddff6c4adefb5096baecb2a.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 212151,
+      "name": "Hạnh Phúc Đồng Hành",
+      "content": "<color=#FFFFFFFF>Hành Động Chiến Đấu</color>: Trang bị thẻ bài này khi nhân vật xuất chiến phe ta là <color=#FFFFFFFF>Dahlia</color>.\\nDahlia sau khi trang bị thẻ bài này, lập tức dùng 1 lần <color=#FFD780FF>Thánh Ca Thuần Khiết</color>.\\n<color=#FFFFFFFF>Khi <color=#FFFFFFFF>Dahlia</color> trang bị thẻ bài này đang trong trận, khi nhân vật phe ta bị đánh bại:</color> Nếu trong trận phe ta tồn tại <color=#FFFFFFFF>Tây Phong Thân Quyến</color>, sẽ tiêu hao tất cả <color=#FFFFFFFF>Tây Phong Thân Quyến</color>, khiến nhân vật <color=#FFFFFFFF>Không Bị Đánh Bại</color> và chữa trị cho nhân vật này đến 2 điểm HP.\\n(Bộ bài có Dahlia mới có thể thêm)",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "3",
+      "cost_type1": "12",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+      "cost_num2": "2",
+      "cost_type2": "1",
+      "cost_type2_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+      "action_card_tags": [
+        "talent",
+        "combat_action",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/6ef9a3f7dfdbc9028145679c1001b1f5.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 212161,
+      "name": "Trách Nhiệm Của Người Sáng Tạo Thiên Tài",
+      "content": "<color=#FFFFFFFF>Hành Động Chiến Đấu</color>: Trang bị thẻ bài này khi nhân vật xuất chiến phe ta là <color=#FFFFFFFF>Aino</color>.\\nSau khi Aino trang bị thẻ bài này, lập tức dùng 1 lần <color=#FFD780FF>Máy Làm Lạnh Tinh Xảo</color>.\\n<color=#FFFFFFFF>Khi <color=#FFFFFFFF>Aino</color> trang bị thẻ bài này đang trong trận, khi phe ta kích hoạt phản ứng Điện Cảm, Nguyệt-Điện Cảm và Sum Suê:</color> Sát thương lần này +2, đồng thời áp dụng <color=#FFFFFFFF><color=#FFFFFFFF>Trao Quyền</color></color> cho 1 lá có <color=#FFFFFFFF><color=#FFFFFFFF>Chi Phí Xúc Xắc Nguyên Tố Hiện Tại</color></color> cao nhất trên tay phe ta. (Mỗi hiệp 1 lần)\\n(Bộ bài có Aino mới có thể thêm)",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "3",
+      "cost_type1": "12",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+      "cost_num2": "2",
+      "cost_type2": "1",
+      "cost_type2_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+      "action_card_tags": [
+        "talent",
+        "combat_action",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/bd378ee0c17a6a04c2d8d8681a44236a.png",
       "is_special": false,
       "max_count": 2
     },
@@ -13526,6 +13814,29 @@
       "max_count": 2
     },
     {
+      "id": 227051,
+      "name": "Cỏ Tàn Át Nắng",
+      "content": "<color=#FFFFFFFF>Hành Động Nhanh</color>: Trang bị cho <color=#FFFFFFFF>Nanh Thú Thánh Hóa</color> phe ta.\\n<color=#FFFFFFFF>Khi phe ta đánh ra hoặc <color=#FFFFFFFF>Vứt Bỏ</color> <color=#FFFFFFFF>Khối Năng Lượng Nhai Xương</color>:</color> Rút 1 thẻ bài. (Mỗi hiệp 1 lần)\\n(Bộ bài có Nanh Thú Thánh Hóa mới có thể thêm)",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1": "16",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/848248aa7c40784633446db172ee4678.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/367483e899dced6aae396e76d110ecb8.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 311101,
       "name": "Tóm Tắt Ma Pháp",
       "content": "<color=#FFFFFFFF>Sát thương nhân vật tạo ra +1</color>.\\n(<color=#FFFFFFFF>Nhân vật dùng <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/1643452964b58e2e69e64e2b5d3b5878.png' />Pháp Khí</color> mới có thể trang bị. Nhân vật tối đa trang bị 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/49acb071b0d634ded17cb788d9f520ed.png' />vũ khí)",
@@ -13982,6 +14293,29 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68c0b19c/de1ff2a2297669bb11a62f6728d54701.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 311209,
+      "name": "Móc Cạm Bẫy",
+      "content": "<color=#FFFFFFFF>Nhân vật dùng Kỹ Năng Nộ sẽ +2 sát thương gây ra</color>.\\n<color=#FFFFFFFF>Khi phe ta kích hoạt phản ứng nguyên tố:</color> Tích lũy 1 tầng <color=#FFFFFFFF>Thoăn Thoắt Vô Ảnh</color>, khi <color=#FFFFFFFF>Thoăn Thoắt Vô Ảnh</color> không dưới 2 tầng, sẽ tiêu hao 2 tầng <color=#FFFFFFFF>Thoăn Thoắt Vô Ảnh</color> và khiến nhân vật áp dụng <color=#FFFFFFFF>nhận 1 điểm <color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png' />Năng Lượng</color></color>.\\n(Nhân vật dùng <color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/9b142cbc6e2e5e472ff1c37a78d7dd77.png' />Cung</color> mới có thể trang bị. Nhân vật tối đa trang bị 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/49acb071b0d634ded17cb788d9f520ed.png' />Vũ Khí)",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1": "10",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "weapon",
+        "bow",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/02d3eaf7fa1df661cbfe49b4905b1221.png",
       "is_special": false,
       "max_count": 2
     },
@@ -16148,6 +16482,29 @@
       "max_count": 2
     },
     {
+      "id": 313010,
+      "name": "Hải Thú Bồng Bềnh",
+      "content": "<color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/c77ba0b2ea2bf428b8414c9f9bc86035.png' />Đặc Kỹ</color>: Sóng Âm\\n<color=#FFFFFFFF><color=#FFFFFFFF>Số Lần Khả Dụng</color>: 2</color>\\n(Nhân vật tối đa trang bị 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/c77ba0b2ea2bf428b8414c9f9bc86035.png' />Đặc Kỹ)",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1": "3",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8b295c3fed21771dcced6055cdf2f2ce.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "technique",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/502d57864e525c12811cd53885e7f854.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 321001,
       "name": "Bến Cảng Liyue",
       "content": "<color=#FFFFFFFF>Giai Đoạn Kết Thúc:</color> Rút 2 thẻ bài.\\n<color=#FFFFFFFF>Số Lần Khả Dụng</color>: 2",
@@ -16909,7 +17266,7 @@
     {
       "id": 321037,
       "name": "Sương Nguyệt Phường",
-      "content": "<color=#FFFFFFFF>Khi vào trận:</color> Rút 2 lá bài, chữa trị 2 điểm cho nhân vật chịu nhiều sát thương nhất phe ta.\\n<color=#FFFFFFFF>Giai Đoạn Kết Thúc:</color> Áp dụng <color=#FFFFFFFF><color=#FFFFFFFF>Giảm Chi Phí</color></color> cho 2 lá ngẫu nhiên có <color=#FFFFFFFF><color=#FFFFFFFF>Chi Phí Xúc Xắc Nguyên Tố Hiện Tại</color></color> khác 0 trên tay phe ta.\\n<color=#FFFFFFFF><color=#FFFFFFFF>Số Lần Khả Dụng</color>: 2</color>",
+      "content": "<color=#FFFFFFFF>Khi vào trận:</color> Rút 2 lá bài, chữa trị 2 điểm cho nhân vật chịu nhiều sát thương nhất phe ta.\\n<color=#FFFFFFFF>Giai Đoạn Kết Thúc:</color> Áp dụng <color=#FFFFFFFF><color=#FFFFFFFF>Giảm Chi Phí</color></color> cho 2 lá ngẫu nhiên trên tay phe ta.\\n<color=#FFFFFFFF><color=#FFFFFFFF>Số Lần Khả Dụng</color>: 2</color>",
       "action_type": "support_card",
       "rank_id": 0,
       "cost_num1": "4",
@@ -17712,6 +18069,29 @@
       "max_count": 2
     },
     {
+      "id": 322033,
+      "name": "Lepine-Pauline",
+      "content": "<color=#FFFFFFFF>Khi vào trận:</color> <color=#FFFFFFFF><color=#FFFFFFFF>Lựa Chọn</color></color> 1 <color=#FFFFFFFF><color=#FFFFFFFF>Kế Hoạch Đầu Tư</color></color>.",
+      "action_type": "support_card",
+      "rank_id": 0,
+      "cost_num1": "0",
+      "cost_type1": "",
+      "cost_type1_icon": "",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "companion",
+        "709",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/2c8123a9dd654596a3d84a86e0368b23.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 323001,
       "name": "Máy Biến Đổi Tham Số",
       "content": "<color=#FFFFFFFF>Sau khi nhân vật một trong hai phe dùng kỹ năng:</color> Nếu gây ra sát thương nguyên tố, thẻ bài này tích lũy 1 <color=#FFFFFFFF>Tiến Độ Biến Chất</color>. Nếu thẻ bài này đã tích lũy 3 <color=#FFFFFFFF>Tiến Độ Biến Chất</color>, sẽ hủy bỏ thẻ bài này và sinh ra 3 Xúc Xắc Nguyên Tố cơ bản khác nhau.",
@@ -18185,7 +18565,7 @@
       "cost_type2_icon": "",
       "action_card_tags": [
         "elemental_transfiguration",
-        "elemental_transfiguration",
+        "",
         "",
         "",
         ""
@@ -18208,12 +18588,58 @@
       "cost_type2_icon": "",
       "action_card_tags": [
         "elemental_transfiguration",
-        "elemental_transfiguration",
+        "",
         "",
         "",
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/699e3469/fd9237880d00e3da16c866a7f7b21897.png",
+      "is_special": false,
+      "max_count": 1
+    },
+    {
+      "id": 331006,
+      "name": "Biến Ảo Nguyên Tố: Chúc Phúc Sum Suê",
+      "content": "<color=#FFFFFFFF><color=#FFFFFFFF>Biến Ảo Nguyên Tố</color>:</color> <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>Nguyên Tố Thủy</color> <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' /><color=#7EC236FF>Nguyên Tố Thảo</color>\\n<color=#FFFFFFFF>Giai Đoạn Gieo Xúc Xắc:</color> Luôn gieo ra 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png' /><color=#80C0FFFF>Xúc Xắc Nguyên Tố Thủy</color> và 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/848248aa7c40784633446db172ee4678.png' /><color=#7EC236FF>Xúc Xắc Nguyên Tố Thảo</color>.\\n<color=#FFFFFFFF>Sau khi phe ta kích hoạt <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' />phản ứng Sum Suê</color>: Hủy thẻ bài này, đồng thời chọn một trong <color=#FFFFFFFF>Chúc Phúc Sum Suê: Amrita</color> và <color=#FFFFFFFF>Chúc Phúc Sum Suê: Rậm Rạp</color> thêm vào bài trên tay.",
+      "action_type": "support_card",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1": "3",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8b295c3fed21771dcced6055cdf2f2ce.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "elemental_transfiguration",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/bfec330966d7dfb52798c3bc141db035.png",
+      "is_special": false,
+      "max_count": 1
+    },
+    {
+      "id": 331007,
+      "name": "Biến Ảo Nguyên Tố: Chúc Phúc Hỏa Nham",
+      "content": "<color=#FFFFFFFF><color=#FFFFFFFF>Biến Ảo Nguyên Tố</color>:</color> <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FF9999FF>Nguyên Tố Hỏa</color> <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/98c267c74a3efdcfed4131a054ff4b82.png' /><color=#FFE699FF>Nguyên Tố Nham</color>\\n<color=#FFFFFFFF>Giai Đoạn Gieo Xúc Xắc:</color> Luôn gieo ra 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/fe4517db495f28fdbcb44607d94640c3.png' /><color=#FF9999FF>Xúc Xắc Nguyên Tố Hỏa</color> và 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/680e755181a0b8c29e87d0570815ac29.png' /><color=#FFE699FF>Xúc Xắc Nguyên Tố Nham</color>.\\n<color=#FFFFFFFF>Sau khi phe ta kích hoạt <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/98c267c74a3efdcfed4131a054ff4b82.png' />phản ứng Kết Tinh Hỏa</color>: Hủy thẻ bài này, đồng thời chọn một trong <color=#FFFFFFFF>Chúc Phúc Hỏa Nham: Hồi Hỏa</color> và <color=#FFFFFFFF>Chúc Phúc Hỏa Nham: Tái Luyện</color> thêm vào bài trên tay.",
+      "action_type": "support_card",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1": "3",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8b295c3fed21771dcced6055cdf2f2ce.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "elemental_transfiguration",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/dfa6be6e97e11e3764e281e4fa2ffe3f.png",
       "is_special": false,
       "max_count": 1
     },
@@ -18540,6 +18966,29 @@
       "max_count": 2
     },
     {
+      "id": 331721,
+      "name": "Nguyệt Triệu - Rực Sáng",
+      "content": "Áp dụng <color=#FFFFFFFF><color=#FFFFFFFF>Giảm Chi Phí</color></color> cho 1 lá ngẫu nhiên trên tay phe ta và lá trên cùng của bộ bài.\\n(Bộ bài có tối thiểu 2 nhân vật <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/699e3488/078a07b812a1c29d7129e2647797fe5a.png' />Nod-Krai mới có thể thêm)",
+      "action_type": "event_card",
+      "rank_id": 0,
+      "cost_num1": "0",
+      "cost_type1": "",
+      "cost_type1_icon": "",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "elemental_resonance",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/c8839f957b49f4f2f7cd86727076cdf7.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 331801,
       "name": "Phong Tự Do",
       "content": "<color=#FFFFFFFF>Trong hiệp này, sau khi nhân vật phe ta sử dụng kỹ năng:</color> Đổi nhân vật dự bị kế tiếp của phe ta ra trận.\\n(Bộ bài có tối thiểu 2 nhân vật <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/f95f1e6a700f7e53fd02782881a8fba8.png' />Mondstadt mới có thể thêm)",
@@ -18674,6 +19123,29 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6851f39d/601656dd3eb21d365471f5855ea52f3d.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 331807,
+      "name": "Trăng Và Quê Hương",
+      "content": "<color=#FFFFFFFF>Trong hiệp này, sau khi phe ta đánh ra thẻ bài tiếp theo:</color> Khi bắt đầu hiệp sau, sinh ra 1 lá vừa đánh ra và thêm vào bài trên tay.\\n(Bộ bài có tối thiểu 2 nhân vật <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/699e3488/078a07b812a1c29d7129e2647797fe5a.png' />Nod-Krai mới có thể thêm)",
+      "action_type": "event_card",
+      "rank_id": 0,
+      "cost_num1": "0",
+      "cost_type1": "",
+      "cost_type1_icon": "",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/9ad413e40f8bda2a2793df7cf16d446a.png",
       "is_special": false,
       "max_count": 2
     },
@@ -19962,6 +20434,29 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/699e3469/d70376b1ab3e4fdd78c2ebb570e6af89.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 332062,
+      "name": "Thời Gian Quét Dọn",
+      "content": "Với mỗi 1 loại trạng thái áp dụng tồn tại trên bài trong tay phe ta, sẽ sinh ra 1 Xúc Xắc Nguyên Tố cơ bản ngẫu nhiên. (Tối đa sinh ra 2)",
+      "action_type": "event_card",
+      "rank_id": 0,
+      "cost_num1": "0",
+      "cost_type1": "",
+      "cost_type1_icon": "",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/8b92c1e4913c313fd5475409e0994455.png",
       "is_special": false,
       "max_count": 2
     },
@@ -23908,6 +24403,90 @@
       "name": "Quân Đoàn Clink Clank",
       "id": 332061,
       "code": 569,
+      "type": "action"
+    },
+    {
+      "name": "Dahlia",
+      "id": 1215,
+      "code": 570,
+      "type": "character"
+    },
+    {
+      "name": "Aino",
+      "id": 1216,
+      "code": 571,
+      "type": "character"
+    },
+    {
+      "name": "Nanh Thú Thánh Hóa",
+      "id": 2705,
+      "code": 572,
+      "type": "character"
+    },
+    {
+      "name": "Hạnh Phúc Đồng Hành",
+      "id": 212151,
+      "code": 573,
+      "type": "action"
+    },
+    {
+      "name": "Trách Nhiệm Của Người Sáng Tạo Thiên Tài",
+      "id": 212161,
+      "code": 574,
+      "type": "action"
+    },
+    {
+      "name": "Cỏ Tàn Át Nắng",
+      "id": 227051,
+      "code": 575,
+      "type": "action"
+    },
+    {
+      "name": "Móc Cạm Bẫy",
+      "id": 311209,
+      "code": 576,
+      "type": "action"
+    },
+    {
+      "name": "Hải Thú Bồng Bềnh",
+      "id": 313010,
+      "code": 577,
+      "type": "action"
+    },
+    {
+      "name": "Lepine-Pauline",
+      "id": 322033,
+      "code": 578,
+      "type": "action"
+    },
+    {
+      "name": "Biến Ảo Nguyên Tố: Chúc Phúc Sum Suê",
+      "id": 331006,
+      "code": 579,
+      "type": "action"
+    },
+    {
+      "name": "Biến Ảo Nguyên Tố: Chúc Phúc Hỏa Nham",
+      "id": 331007,
+      "code": 580,
+      "type": "action"
+    },
+    {
+      "name": "Nguyệt Triệu - Rực Sáng",
+      "id": 331721,
+      "code": 581,
+      "type": "action"
+    },
+    {
+      "name": "Trăng Và Quê Hương",
+      "id": 331807,
+      "code": 582,
+      "type": "action"
+    },
+    {
+      "name": "Thời Gian Quét Dọn",
+      "id": 332062,
+      "code": 583,
       "type": "action"
     }
   ]
