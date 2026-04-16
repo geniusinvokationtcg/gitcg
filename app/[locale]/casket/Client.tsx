@@ -920,7 +920,11 @@ export function DeckBuilderPageClient ({
         </div>
         
 
-        <div className="font-semibold">{term("active_characters")}</div>
+        <div className="flex flex-row justify-between items-center w-full">
+          <div className="w-10"/>
+          <div className="font-semibold">{term("active_characters")}</div>
+          <div className="font-light text-sm w-10 text-end -translate-x-1">{activeCharacterCards.filter(c => c.cardId !== null).length+"/3"}</div>
+        </div>
         <div className="border-1 border-gray-300 rounded-xl w-full flex justify-center prevent_select">
           <DndContext id={dnd_id} collisionDetection={closestCorners} onDragEnd={handleDragEnd} sensors={sensors}>
             <div className="active_character_container">
@@ -940,7 +944,11 @@ export function DeckBuilderPageClient ({
           </DndContext>
         </div>
 
-        <div className="font-semibold">{term("active_actions")}</div>
+        <div className="flex flex-row justify-between items-center w-full">
+          <div className="w-10"/>
+          <div className="font-semibold">{term("active_actions")}</div>
+          <div className="font-light text-sm w-10 text-end -translate-x-1">{activeActionCards.length+"/30"}</div>
+        </div>
         <div className="active_action_container prevent_select">
           <div>
             {activeActionCards.map((id, i) => {

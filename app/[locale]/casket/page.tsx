@@ -1,4 +1,3 @@
-import { getLocalCardsData } from "@/cards/localCardsData";
 import { Locales } from "@/utils/types";
 import { DeckBuilderPageClient } from "./Client";
 import { getTranslations } from "next-intl/server";
