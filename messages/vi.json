@@ -31,7 +31,8 @@
     "download": "Tải Xuống",
     "copy": "Copy",
     "unsupported_img_copy": "Thiết bị này không hỗ trợ tính năng copy ảnh",
-    "default": "Mặc Định"
+    "default": "Mặc Định",
+    "share": "Chia Sẻ"
   },
   "CardsTerminology": {
     "skill_type": {

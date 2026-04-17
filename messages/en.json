@@ -31,7 +31,8 @@
     "download": "Download",
     "copy": "Copy",
     "unsupported_img_copy": "This device doesn't support image copying",
-    "default": "Default"
+    "default": "Default",
+    "share": "Share"
   },
   "CardsTerminology": {
     "skill_type": {

@@ -31,7 +31,8 @@
     "download": "Unduh",
     "copy": "Salin",
     "unsupported_img_copy": "Perangkat ini tidak mendukung penyalinan gambar",
-    "default": "Default"
+    "default": "Default",
+    "share": "Bagikan"
   },
   "CardsTerminology": {
     "skill_type": {

@@ -431,11 +431,20 @@ export function DeckBuilderPageClient ({
     const code = encodeDeck(deck, deckOffset);
     return code;
   }, [deckOffset, activeCharacterCards, activeActionCards, codes])
-  const exportDeck = useCallback((nextOffset: boolean = false) => {
+  const exportDeck = useCallback((nextOffset: boolean = false, isShareableLink: boolean = false) => {
     if(nextOffset) setDeckOffset(prev => (prev + 1) % 255 );
-    const code = getDeckcode()
+    let code = getDeckcode()
+    if(isShareableLink && window) code = window.location.origin + "/casket?q=" + code
     handleCopy(code, () => {
-      triggerPopUp(<p className="text-center">{t("copied_to_clipboard")}<br/>{t("next_deck_offset_tip")}</p>);
+      triggerPopUp(
+        <p className="text-center">{
+          t("copied_to_clipboard")}
+          {!isShareableLink && <>
+            <br/>
+            {t("next_deck_offset_tip")}
+          </>}
+        </p>
+      );
     });
   }, [deckOffset, activeCharacterCards, activeActionCards, codes])
 
@@ -910,6 +919,11 @@ export function DeckBuilderPageClient ({
                 setIsOpenDeckImage(true)
               }}
               overwriteLabel={t("deck_image_button")}
+            />
+            <CustomButton
+              buttonText={g("share")}
+              textSize="xs"
+              onClick={(e) => exportDeck(false, true)}
             />
             <CustomButton
               buttonText={g("export")}
