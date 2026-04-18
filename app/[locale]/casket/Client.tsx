@@ -13,7 +13,7 @@ import { arrayMove, horizontalListSortingStrategy, SortableContext } from "@dnd-
 import { ActiveCharacterCard } from "./ActiveCharacterCard"
 import { elementResonance, getElement, isValidCard } from "@/utils/cards"
 import { decode as decodeDeck, encode as encodeDeck } from "@/utils/decoder"
-import { usePopUp } from "@/hooks/utilities"
+import { useDialogBox, usePopUp } from "@/hooks/utilities"
 import { handleCopy } from "@/utils/clipboard"
 import { SuccessNotification } from "@/components/PopUp"
 import { useTranslations } from "next-intl"
@@ -23,7 +23,7 @@ import { DialogBox } from "@/components/DialogBox"
 import { Backdrop } from "@/components/Backdrop"
 import { useLocalStorage } from "@/hooks/storage"
 import { HugeiconsIcon } from "@hugeicons/react";
-import { FilterIcon, FilterRemoveIcon } from "@hugeicons/core-free-icons"
+import { FilterIcon, FilterRemoveIcon, Settings01Icon } from "@hugeicons/core-free-icons"
 import { usePathname, useRouter } from "next/navigation"
 import { normalizeSearchText } from "@/utils/formatting"
 import { useDeckImageCanvas } from "./useDeckImage"
@@ -76,7 +76,7 @@ export function DeckBuilderPageClient ({
   const { generateDeckImage, generateDeckImageGenshincards, copyDeckImage, downloadDeckImage, isGenerating } = useDeckImageCanvas(locale, localCardsData);
   
   //IMPORT DIALOG BOX
-  const [isOpenDialog, setIsOpenDialog] = useState(false);
+  const { DialogBoxes, openBox, closeBox } = useDialogBox()
   
   //DECK IMAGE DIALOG BOX
   const [deckImageType, setDeckImageType] = useState(0);
@@ -112,7 +112,7 @@ export function DeckBuilderPageClient ({
 
     writeImport(decoded.data as number[]);
 
-    setIsOpenDialog(false);
+    closeBox("import_deck")
     setIsImporting(false);
     triggerPopUp(t("import_successful"));
     
@@ -143,7 +143,7 @@ export function DeckBuilderPageClient ({
     setActiveActionCards(actions);
   }
   const cancelImportDeck = () => {
-    if(!isImporting) setIsOpenDialog(false);
+    closeBox("import_deck")
   }
   
   const [characterSearchQuery, setCharacterSearchQuery] = useState("");
@@ -491,7 +491,7 @@ export function DeckBuilderPageClient ({
         <CustomButton
           type="icon"
           buttonText={
-            isFiltering ? <HugeiconsIcon icon={FilterRemoveIcon} color="currentColor" strokeWidth={1.5} size={16}/> : <HugeiconsIcon icon={FilterIcon} color="currentColor" strokeWidth={1.5} size={16}/>
+            <HugeiconsIcon icon={isFiltering ? FilterRemoveIcon : FilterIcon} color="currentColor" strokeWidth={1.5} size={16}/>
           }
           isActive={isFiltering}
           onClick={() => setIsFiltering(!isFiltering)}
@@ -786,40 +786,8 @@ export function DeckBuilderPageClient ({
   </div>
 
   return <div className="px-6 py-6 overflow-hidden">
+    {DialogBoxes}
     <SuccessNotification show={showPopUp} text={popUpContent} type={popUpType} />
-
-    <Backdrop isOpen={isOpenDialog} triggerFn={cancelImportDeck}/>
-    <DialogBox isOpen={isOpenDialog}>
-      <div className="relative flex flex-col gap-4 bg-white rounded-2xl w-100 h-fit p-5 text-center">
-        <IconButton className="absolute right-4" onClick={cancelImportDeck}><XMarkIcon/></IconButton>
-        <div className="font-semibold">{isImporting ? t("importing") : t("import_deck")}</div>
-        <input
-          type="text"
-          placeholder={t("enter_deckcode_placeholder")}
-          ref={importDeckRef}
-          onKeyUp={e => {
-            switch(e.key) {
-              case "Enter": handleImportDeck(); break;
-              case "Escape": cancelImportDeck(); break;
-            }
-          }}
-        />
-        <div className="flex flex-row gap-2 justify-center">
-          <CustomButton
-            buttonText={g("cancel")}
-            textSize="xs"
-            disabled={isImporting}
-            onClick={cancelImportDeck}
-          />
-          <CustomButton
-            buttonText={g("import")}
-            textSize="xs"
-            disabled={isImporting}
-            onClick={handleImportDeck}
-          />
-        </div>
-      </div>
-    </DialogBox>
     
     <Backdrop isOpen={isOpenDeckImage} triggerFn={() => setIsOpenDeckImage(false)}/>
     <DialogBox isOpen={isOpenDeckImage}>
@@ -872,12 +840,19 @@ export function DeckBuilderPageClient ({
         
         <div className="flex flex-row gap-4 justify-between w-full">
           <div className="left_buttons">
-            <CustomButton
+            <div className="open_cards_selection_sidebar"><CustomButton
               buttonText={t("open_cards_selection_sidebar")}
               textSize="xs"
               onClick={() => setIsSelectingCards(true)}
               disableWordWrap={true}
-            />
+            /></div>
+            {/* <CustomButton
+              type="icon"
+              buttonText={
+                <HugeiconsIcon icon={Settings01Icon} color="currentColor" strokeWidth={1.5} size={16}/>
+              }
+              onClick={() => setIsFiltering(!isFiltering)}
+            /> */}
           </div>
           <div className="flex flex-wrap gap-1 justify-end">
             <CustomButton
@@ -892,7 +867,38 @@ export function DeckBuilderPageClient ({
               buttonText={g("import")}
               textSize="xs"
               onClick={() => {
-                setIsOpenDialog(!isOpenDialog);
+                openBox(
+                  "import_deck",
+                  <div className="relative flex flex-col gap-4 bg-white rounded-2xl w-100 h-fit p-5 text-center">
+                    <IconButton className="absolute right-4" onClick={cancelImportDeck}><XMarkIcon/></IconButton>
+                    <div className="font-semibold">{isImporting ? t("importing") : t("import_deck")}</div>
+                    <input
+                      type="text"
+                      placeholder={t("enter_deckcode_placeholder")}
+                      ref={importDeckRef}
+                      onKeyUp={e => {
+                        switch(e.key) {
+                          case "Enter": handleImportDeck(); break;
+                          case "Escape": cancelImportDeck(); break;
+                        }
+                      }}
+                    />
+                    <div className="flex flex-row gap-2 justify-center">
+                      <CustomButton
+                        buttonText={g("cancel")}
+                        textSize="xs"
+                        disabled={isImporting}
+                        onClick={cancelImportDeck}
+                      />
+                      <CustomButton
+                        buttonText={g("import")}
+                        textSize="xs"
+                        disabled={isImporting}
+                        onClick={handleImportDeck}
+                      />
+                    </div>
+                  </div>
+                )
                 setTimeout(() => importDeckRef.current?.focus(), 0);
               }}
             />

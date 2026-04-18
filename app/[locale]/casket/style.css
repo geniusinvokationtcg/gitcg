@@ -58,9 +58,10 @@
 
 .left_buttons {
   @apply flex flex-row gap-1 h-fit;
+}
+.open_cards_selection_sidebar {
   @media (width >= 1270px) {
-    opacity: 0;
-    pointer-events: none;
+    display: none;
   }
 }
 
