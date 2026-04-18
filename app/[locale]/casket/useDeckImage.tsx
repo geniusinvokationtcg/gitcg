@@ -191,7 +191,14 @@ export function useDeckImageCanvas(locale: Locales, localCardsData: CardsDataTyp
         context.roundRect(0, action_y_offset, 420, actionHeight, 14)
         context.clip()
         
-        context.drawImage(img, 0, 150, 340, actionHeight, 80, action_y_offset, 340, actionHeight)
+        const cardTagSyMap: Record<string, number> = {
+          food: 220,
+          talent: 220
+        }
+        const predefinedTag = card_detail.action_card_tags.find(tag => cardTagSyMap[tag])
+        const sy = predefinedTag ? cardTagSyMap[predefinedTag] : 150
+        
+        context.drawImage(img, 0, sy, 340, actionHeight, 80, action_y_offset, 340, actionHeight)
 
         //define gradient
         const gradient = context.createLinearGradient(0, action_y_offset, 420, action_y_offset+actionHeight)
