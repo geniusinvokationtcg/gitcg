@@ -3,6 +3,12 @@ import { Season, Seasons } from "@/utils/types"
 export const seasons: Seasons = {
   na: [
     {
+      versions: ["6-5", "6-6", "6-7"],
+      best_finish: 3,
+      qualification_type: "top",
+      qualification_threshold: 8
+    },
+    {
       versions: ["6-1", "6-3", "6-4"],
       best_finish: 5,
       qualification_type: "top",
