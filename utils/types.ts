@@ -242,7 +242,7 @@ export interface CsvPasteRow {
   uid: number
   discord_username: string
   deckcode: string
-  stream_opt_in: string
+  stream_opt_in?: string
   pronouns: string
 }
 export interface CsvPasteRowClient {
