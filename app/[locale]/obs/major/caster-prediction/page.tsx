@@ -53,6 +53,7 @@ export default function MajorCasterPredictionOverlay () {
                   case "4f642aae-cd1f-474d-b898-bc2f88a273b9": return "Coffin"
                   case "f15caf8e-bd2a-4eff-9505-7d9b279a6567": return "Kerching"
                   case "c197df31-b927-4fa3-8677-d470e1ee76cc": return "ersihfrans"
+                  case "6369b903-9f6f-4a36-967a-967ea06f619d": return "KevinZ"
                 }
               })()}
             </div>
