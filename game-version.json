@@ -5,6 +5,10 @@
   ],
   "major": [
     {
+      "version": "6-5",
+      "server": ["as"]
+    },
+    {
       "version": "6-4",
       "server": ["na"]
     },
