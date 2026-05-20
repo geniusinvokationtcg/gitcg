@@ -836,7 +836,7 @@
         "arkhe_ousia",
         ""
       ],
-      "hp": 10,
+      "hp": 11,
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/e3e40f7ad59ec1a91732384b71384305.png",
       "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f716/acc786f26a24b3b816db41129fc0cab4.png"
     },
@@ -4147,7 +4147,7 @@
           "id": "14062"
         },
         {
-          "skill_text": "Deals 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><color=#FFACFFFF>Electro DMG</color>, summons 1 <color=#FFFFFFFF>Tengu Juurai: Stormcluster</color>.",
+          "skill_text": "Deals 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><color=#FFACFFFF>Electro DMG</color>, summons 1 <color=#FFFFFFFF>Tengu Juurai: Stormcluster</color>.",
           "skill_costs": [
             {
               "cost_type": "14",
@@ -5032,7 +5032,7 @@
           "id": "14173"
         },
         {
-          "skill_text": "(Passive) During this game, when your opponent is affected by <color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' />Electro-Charged reaction(s)</color>, it will be converted into the <color=#FFFFFFFF><color=#FFFFFFFF>Lunar-Charged</color></color> reaction.\\nWhen this character's on the field, and the opponent's Action Card is attached with <color=#FFFFFFFF>Electric Shock</color>: Also attach the <color=#FFFFFFFF>Untunable</color> state.",
+          "skill_text": "(Passive) During this game, when your opponent is affected by <color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' />Electro-Charged reaction(s)</color>, it will be converted into the <color=#FFFFFFFF><color=#FFFFFFFF>Lunar-Charged</color></color> reaction.\\n<color=#FFFFFFFF>When this character's on the field, and the opponent's Action Card is attached with Electric Shock:</color> Also attach the <color=#FFFFFFFF>Untunable</color> state.",
           "skill_costs": [],
           "type": [
             "Passive Skill"
@@ -5051,6 +5051,90 @@
       "hp": 10,
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/699e3469/e2396c3b49ebfb6fcb4f6e9efba01446.png",
       "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/699e3484/92b2f1481ebbf678390fa1ad25ea5f6c.png"
+    },
+    {
+      "id": 1418,
+      "name": "Flins",
+      "element_type": 304,
+      "role_skill_infos": [
+        {
+          "skill_text": "Deals 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>Physical DMG</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "14",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0a7a50d15a7580c4de07a41f87a95787.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Normal Attack"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/0a4af4ecb63b4741aa3e42d18a2a0c21.png",
+          "name": "Pocztowy Demonspear",
+          "id": "14181"
+        },
+        {
+          "skill_text": "The first time this Skill is used each Round, deal 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><color=#FFACFFFF>Electro DMG</color> and attach <color=#FFFFFFFF>Manifest Flame</color> to this character. When this Skill is used again, consume 2 <color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png' />Energy</color> and this character <color=#FFFFFFFF>prepares</color>: <color=#FFFFFFFF><color=#FFFFFFFF>Thunderous Symphony</color></color>.",
+          "skill_costs": [
+            {
+              "cost_type": "14",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0a7a50d15a7580c4de07a41f87a95787.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Elemental Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68c0b1b7/39b77d0c5b8813f2ba161a845684763f.png",
+          "name": "Ancient Rite: Arcane Light",
+          "id": "14182"
+        },
+        {
+          "skill_text": "Deals 6 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><color=#FFACFFFF>Electro DMG</color>, deals 2 <color=#FFFFFFFF>Piercing DMG</color> to all opposing characters on standby.",
+          "skill_costs": [
+            {
+              "cost_type": "14",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0a7a50d15a7580c4de07a41f87a95787.png",
+              "cost_num": "4"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "4"
+            }
+          ],
+          "type": [
+            "Elemental Burst"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a0cf9d1/66b3141295c521d621643919e88e898b.png",
+          "name": "Ancient Ritual: Cometh the Night",
+          "id": "14183"
+        },
+        {
+          "skill_text": "(Passive) During this game, when your opponent is affected by <color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /> <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /> Electro-Charged reaction(s)</color>, the reaction will be converted to the <color=#FFFFFFFF><color=#FFFFFFFF>Lunar-Charged</color></color> reaction.\\n<color=#FFFFFFFF>When this character is on the field, and <color=#FFFFFFFF>Electric Shock</color> is attached to the opponent's Action Card: </color>Deal 1 <color=#FFFFFFFF>Piercing DMG</color> to the opposing character with the highest HP.",
+          "skill_costs": [],
+          "type": [
+            "Passive Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/699e3486/9efdb294db75570ba7cc4cb7e63e3615.png",
+          "name": "Moonsign Benediction: Old World Secrets",
+          "id": "14184"
+        }
+      ],
+      "weapon": "polearm",
+      "belongs": [
+        "nod_krai",
+        "",
+        ""
+      ],
+      "hp": 10,
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a0cf9b1/26a55751bdb0d26106124917557bf5e3.png",
+      "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a0cf9ce/93f60d134f7edf938885f3f819debe2a.png"
     },
     {
       "id": 1501,
@@ -5788,7 +5872,7 @@
         "",
         ""
       ],
-      "hp": 10,
+      "hp": 11,
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/c1d32fbcbb61540baf05ae1c2c074e91.png",
       "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f716/ba29a9372b150d935c77639ed84412b7.png"
     },
@@ -7519,7 +7603,7 @@
           "id": "17071"
         },
         {
-          "skill_text": "Creates 1 <color=#FFFFFFFF>Urgent Neko Parcel</color> and <color=#FFFFFFFF>Shield of Safe Transport</color>.",
+          "skill_text": "Creates 1 <color=#FFFFFFFF>Urgent Neko Parcel</color> and 2 stacks of <color=#FFFFFFFF>Shield of Safe Transport</color>.",
           "skill_costs": [
             {
               "cost_type": "16",
@@ -7797,6 +7881,90 @@
       "hp": 10,
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67e33599/6614ba0897cfe5b1830d4c23ec75ab2c.png",
       "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67e335b0/d1597e7c081ce3e732b1c5fb552b7780.png"
+    },
+    {
+      "id": 1711,
+      "name": "Lauma",
+      "element_type": 306,
+      "role_skill_infos": [
+        {
+          "skill_text": "Deals 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' /><color=#7EC236FF>Dendro DMG</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "16",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/848248aa7c40784633446db172ee4678.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Normal Attack"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/2c014e6053c4f0d032e1d1ff0c6de0e1.png",
+          "name": "Peregrination of Linnunrata",
+          "id": "17111"
+        },
+        {
+          "skill_text": "Deal 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' /><color=#7EC236FF>Dendro DMG</color>, as well as generate <color=#FFFFFFFF>Frostgrove Sanctuary</color>. If you have a card in your Hand with <color=#FFFFFFFF>Cost Reduction</color>, remove <color=#FFFFFFFF>Cost Reduction</color> from a random card and instead generate a <color=#FFFFFFFF>Frostgrove Sanctuary</color> that deals 2 DMG.",
+          "skill_costs": [
+            {
+              "cost_type": "16",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/848248aa7c40784633446db172ee4678.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "Elemental Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68c0b1b7/86e7b5a69ad587ea5ede82b0517404d1.png",
+          "name": "Runo: Dawnless Rest of Karsikko",
+          "id": "17112"
+        },
+        {
+          "skill_text": "Apply <color=#FFFFFFFF><color=#FFFFFFFF>Cost Reduction</color></color> to 3 random cards with <color=#FFFFFFFF><color=#FFFFFFFF>Current Elemental Dice Cost</color></color> greater than 0 in your Hand. Generate 3 stacks of <color=#FFFFFFFF>Pale Hymn</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "16",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/848248aa7c40784633446db172ee4678.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Elemental Burst"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a0cf9d1/218b9ccb92b9c42f3e888e7c9cf32c4d.png",
+          "name": "Runo: All Hearts Become the Beating Moon",
+          "id": "17113"
+        },
+        {
+          "skill_text": "(Passive) During this game, when your opponent is affected by <color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' /> Bloom reaction(s)</color>, the reaction will be converted to the <color=#FFFFFFFF><color=#FFFFFFFF>Lunar-Bloom</color></color> reaction.\\n<color=#FFFFFFFF>When the opponent is affected by <color=#FFFFFFFF>Lunar-Bloom</color> reaction:</color> Apply <color=#FFFFFFFF>Cost Reduction</color> to 1 random card in your Deck.",
+          "skill_costs": [],
+          "type": [
+            "Passive Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a0cf9d1/5191dbab79aa4cde77238186390f4560.png",
+          "name": "Moonsign Benediction: Nature's Chorus",
+          "id": "17114"
+        }
+      ],
+      "weapon": "catalyst",
+      "belongs": [
+        "nod_krai",
+        "",
+        ""
+      ],
+      "hp": 11,
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a0cf9b1/d8823a6542afeb714b7fe8428eac9844.png",
+      "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a0cf9ce/0b6a227d1cd22fbf28cc2130e6f91a39.png"
     },
     {
       "id": 2101,
@@ -10287,6 +10455,80 @@
       "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f716/6b0da779da3b68ef954646eca97de8d9.png"
     },
     {
+      "id": 2605,
+      "name": "Experimental Field Generator",
+      "element_type": 305,
+      "role_skill_infos": [
+        {
+          "skill_text": "Deals 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>Physical DMG</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "15",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/680e755181a0b8c29e87d0570815ac29.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Normal Attack"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/4ef5373e27e14926f2fec5ffa0511440.png",
+          "name": "Gravity Application: Crush",
+          "id": "26051"
+        },
+        {
+          "skill_text": "Deal 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/98c267c74a3efdcfed4131a054ff4b82.png' /><color=#FFE699FF>Geo DMG</color> and generate 2 stacks of <color=#FFFFFFFF>Efficient Switch</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "15",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/680e755181a0b8c29e87d0570815ac29.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "Elemental Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/2326fe2f453d93bc6da1f5b2c04a5087.png",
+          "name": "Gravity Application: Point Null",
+          "id": "26052"
+        },
+        {
+          "skill_text": "Deal 3 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/98c267c74a3efdcfed4131a054ff4b82.png' /><color=#FFE699FF>Geo DMG</color>, as well as generate <color=#FFFFFFFF>Low Gravity Background</color> and <color=#FFFFFFFF>Shock Blast</color>. During this Round, all your characters on standby use 1 less <color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png' />Unaligned Element</color> when using their next <color=#FFFFFFFF>Normal Attack</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "15",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/680e755181a0b8c29e87d0570815ac29.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Elemental Burst"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a0cf9d1/6352fab89bebdec169c4f2a6f55a8b2d.png",
+          "name": "Gravity Application: Field Reduction",
+          "id": "26053"
+        }
+      ],
+      "weapon": "other_weapons",
+      "belongs": [
+        "monster",
+        "",
+        ""
+      ],
+      "hp": 11,
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a0cf9b1/b553e27c80674b330fc4929b182b7093.png",
+      "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a0cf9ce/91477535a8d52b6a10c3e91cf2819d83.png"
+    },
+    {
       "id": 2701,
       "name": "Jadeplume Terrorshroom",
       "element_type": 306,
@@ -11401,7 +11643,7 @@
     {
       "id": 212151,
       "name": "You Shall Go Out With Joy",
-      "content": "<color=#FFFFFFFF>Combat Action</color>: When your active character is <color=#FFFFFFFF>Dahlia</color>, equip this card.\\nAfter Dahlia equips this card, immediately use <color=#FFD780FF>Radiant Psalter</color> once.\\n<color=#FFFFFFFF>When your <color=#FFFFFFFF>Dahlia</color>, who has this card equipped, is on the field, and your character is defeated:</color> If you have <color=#FFFFFFFF>Favonian Favor</color> on the field, consume all <color=#FFFFFFFF>Favonian Favor</color> to ensure the character <color=#FFFFFFFF>Immunity to Defeat</color>, and heal them to 2 HP.\\n(You must have Dahlia in your deck to add this card to your deck.)",
+      "content": "<color=#FFFFFFFF>Combat Action</color>: When your active character is <color=#FFFFFFFF>Dahlia</color>, equip this card.\\nAfter Dahlia equips this card, immediately use <color=#FFD780FF>Radiant Psalter</color> once.\\n<color=#FFFFFFFF>When your <color=#FFFFFFFF>Dahlia</color>, who has this card equipped, is on the field, and your character is defeated:</color> If you have <color=#FFFFFFFF>Favonian Favor</color> on the field, consume all <color=#FFFFFFFF>Favonian Favor</color> to grant the character <color=#FFFFFFFF>Immunity to Defeat</color>, and heal them to 2 HP.\\n(You must have Dahlia in your deck to add this card to your deck.)",
       "action_type": "equipment_card",
       "rank_id": 0,
       "cost_num1": "3",
@@ -11424,7 +11666,7 @@
     {
       "id": 212161,
       "name": "The Burden of Creative Genius",
-      "content": "<color=#FFFFFFFF>Combat Action</color>: When your active character is <color=#FFFFFFFF>Aino</color>, equip this card.\\nAfter Aino equips this card, immediately use <color=#FFD780FF>Precision Hydronic Cooler</color> once.\\n<color=#FFFFFFFF>When your <color=#FFFFFFFF>Aino</color>, who has this card equipped, is on the field, and you trigger an Electro-Charged, Lunar-Charged, or Bloom reaction:</color> Deal +2 DMG for this instance and attach <color=#FFFFFFFF><color=#FFFFFFFF>Empowerment</color></color> to the 1 card with the highest <color=#FFFFFFFF><color=#FFFFFFFF>Current Elemental Dice Cost</color></color> from your Hand. (Once per Round)\\n(You must have Aino in your deck to add this card to your deck.)",
+      "content": "<color=#FFFFFFFF>Combat Action</color>: When your active character is <color=#FFFFFFFF>Aino</color>, equip this card.\\nAfter Aino equips this card, immediately use <color=#FFD780FF>Precision Hydronic Cooler</color> once.\\n<color=#FFFFFFFF>When your <color=#FFFFFFFF>Aino</color>, who has this card equipped, is on the field, and you trigger an Electro-Charged, Lunar-Charged, Bloom, or Lunar-Bloom reaction:</color> Deal +2 DMG for this instance and attach <color=#FFFFFFFF><color=#FFFFFFFF>Empowerment</color></color> to the 1 card with the highest <color=#FFFFFFFF><color=#FFFFFFFF>Current Elemental Dice Cost</color></color> from your Hand. (Once per Round)\\n(You must have Aino in your deck to add this card to your deck.)",
       "action_type": "equipment_card",
       "rank_id": 0,
       "cost_num1": "3",
@@ -11930,7 +12172,7 @@
     {
       "id": 214061,
       "name": "Sin of Pride",
-      "content": "<color=#FFFFFFFF>Combat Action</color>: When your active character is <color=#FFFFFFFF>Kujou Sara</color>, equip this card.\\nAfter Kujou Sara equips this card, immediately use <color=#FFD780FF>Tengu Stormcall</color> once.\\nWhen Kujou Sara is active and has this card equipped, all allied <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><color=#FFACFFFF>Electro</color> characters with <color=#FFFFFFFF>Crowfeather Cover</color> will deal +1 additional <color=#FFFFFFFF>Elemental Skill</color> and <color=#FFFFFFFF>Elemental Burst</color> DMG.\\n(You must have Kujou Sara in your deck to add this card to your deck.)",
+      "content": "<color=#FFFFFFFF>Combat Action</color>: When your active character is <color=#FFFFFFFF>Kujou Sara</color>, equip this card.\\nAfter Kujou Sara equips this card, immediately use <color=#FFD780FF>Tengu Stormcall</color> once.\\nWhen Kujou Sara is active and has this card equipped, all allied characters with <color=#FFFFFFFF>Crowfeather Cover</color> will deal +1 additional <color=#FFFFFFFF>Elemental Skill</color> and <color=#FFFFFFFF>Elemental Burst</color> DMG.\\n(You must have Kujou Sara in your deck to add this card to your deck.)",
       "action_type": "equipment_card",
       "rank_id": 0,
       "cost_num1": "3",
@@ -12200,6 +12442,29 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/699e3469/970577bab4be88bbcde694d79c79deee.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 214181,
+      "name": "Part the Veil of Snow",
+      "content": "<color=#FFFFFFFF>Fast Action</color>: Equip this to your <color=#FFFFFFFF>Flins</color>.\\nFlins gains 1 <color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png' />Energy</color>.\\n<color=#FFFFFFFF>After you trigger a Lunar-Charged reaction:</color> Flins gains 1 <color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png' />Energy</color>. (Once per Round)\\n(You must have Flins in your deck to add this card to your deck)",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1": "14",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0a7a50d15a7580c4de07a41f87a95787.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a0cf9b1/00a844174296624c0d0d69c09bb0ac88.png",
       "is_special": false,
       "max_count": 2
     },
@@ -13032,6 +13297,29 @@
       "max_count": 2
     },
     {
+      "id": 217111,
+      "name": "\"O Lips, Weave Me Songs and Psalms\"",
+      "content": "<color=#FFFFFFFF>Combat Action</color>: When your active character is <color=#FFFFFFFF>Lauma</color>, equip this card.\\nAfter Lauma equips this card, immediately use <color=#FFD780FF>Runo: Dawnless Rest of Karsikko</color> once.\\n<color=#FFFFFFFF>After you trigger Bloom or Lunar-Bloom:</color> Heal your most injured character for 2 HP. (Once per Round)\\n(You must have Lauma in your deck to add this card to your deck.)",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "3",
+      "cost_type1": "16",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/848248aa7c40784633446db172ee4678.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "combat_action",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a0cf9b1/16e333a28beb94c0316c1463446ad1fc.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 221011,
       "name": "Cicin's Cold Glare",
       "content": "<color=#FFFFFFFF>Combat Action</color>: When your active character is <color=#FFFFFFFF>Fatui Cryo Cicin Mage</color>, equip this card.\\nAfter Fatui Cryo Cicin Mage equips this card, immediately use <color=#FFD780FF>Misty Summons</color> once.\\nAfter your Fatui Cryo Cicin Mage, who has this card equipped, uses a Skill: If <color=#FFFFFFFF>Cryo Cicins</color>' <color=#FFFFFFFF>Usage(s)</color> have exceeded their upper limit, deal 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/924fba80b9137b4e8fdf5871aa22d666.png' /><color=#99FFFFFF>Cryo DMG</color>.\\n(You must have Fatui Cryo Cicin Mage in your deck to add this card to your deck.)",
@@ -13722,6 +14010,29 @@
       "max_count": 2
     },
     {
+      "id": 226051,
+      "name": "Gravity Field",
+      "content": "<color=#FFFFFFFF>Fast Action</color>: Equip this to your <color=#FFFFFFFF>Experimental Field Generator</color>.\\n<color=#FFFFFFFF>After either side declares the end of their Round:</color> That side switches to the next character.\\nYour character's <color=#FFFFFFFF>Plunging Attack</color> deals +1 DMG. (Twice per Round)\\n(You must have Experimental Field Generator in your deck to add this card to your deck.)",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1": "15",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/680e755181a0b8c29e87d0570815ac29.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a0cf9b1/05ed87b542bdaf65780a1f70017271b5.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 227011,
       "name": "Proliferating Spores",
       "content": "<color=#FFFFFFFF>Combat Action</color>: When your active character is <color=#FFFFFFFF>Jadeplume Terrorshroom</color>, equip this card.\\nAfter Jadeplume Terrorshroom equips this card, immediately use <color=#FFD780FF>Volatile Spore Cloud</color> once.\\nYour Jadeplume Terrorshroom, who has this card equipped, can accumulate 1 more stack of <color=#FFFFFFFF>Radical Vitality</color>.\\n(You must have Jadeplume Terrorshroom in your deck to add this card to your deck.)",
@@ -13957,7 +14268,7 @@
       "content": "<color=#FFFFFFFF>For each point of \"Bonus DMG\" this card has, character deals +1 DMG</color>.\\n<color=#FFFFFFFF>End Phase:</color> This card gains 1 point of <color=#FFFFFFFF>\"Bonus DMG\"</color>. (Max 2 points)\\n(Can only be equipped by <color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/1643452964b58e2e69e64e2b5d3b5878.png' />Catalyst Characters</color>. Each Character can equip at most 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/49acb071b0d634ded17cb788d9f520ed.png' />Weapon.)",
       "action_type": "equipment_card",
       "rank_id": 0,
-      "cost_num1": "3",
+      "cost_num1": "2",
       "cost_type1": "3",
       "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8b295c3fed21771dcced6055cdf2f2ce.png",
       "cost_num2": "0",
@@ -14713,7 +15024,7 @@
     {
       "id": 311408,
       "name": "Rightful Reward",
-      "content": "<color=#FFFFFFFF>Character's Elemental Burst deals +2 DMG.</color>\\n<color=#FFFFFFFF>After your active character takes DMG or is healed:</color> Gain 1 <color=#FFFFFFFF>Principle of Justice</color> point. If this card has already accumulated 3 such points, consume 3 points and grant this character 1 <color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png' />Energy</color>.\\n(<color=#FFFFFFFF>Only <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/507c08d788ec1cb60c7bb1d5980fd510.png' />Polearm Characters</color> can equip this. A character can equip a maximum of 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/49acb071b0d634ded17cb788d9f520ed.png' />Weapon)",
+      "content": "<color=#FFFFFFFF>Character's Elemental Burst deals +2 DMG.</color>\\n<color=#FFFFFFFF>After your active character takes DMG or is healed:</color> Gain 1 <color=#FFFFFFFF>Principle of Justice</color> point. If this card has already accumulated 4 such points, consume 4 points and grant this character 1 <color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png' />Energy</color>.\\n(<color=#FFFFFFFF>Only <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/507c08d788ec1cb60c7bb1d5980fd510.png' />Polearm Characters</color> can equip this. A character can equip a maximum of 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/49acb071b0d634ded17cb788d9f520ed.png' />Weapon)",
       "action_type": "equipment_card",
       "rank_id": 0,
       "cost_num1": "2",
@@ -15953,6 +16264,29 @@
       "max_count": 2
     },
     {
+      "id": 312045,
+      "name": "Gladiator's Finale",
+      "content": "The character to which this is attached deals +1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>Physical DMG</color>.\\n<color=#FFFFFFFF>When the character to which this is attached is your only character still not defeated:</color> Their Normal Attack costs 1 fewer <color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png' />Unaligned Element</color> and deals +1 DMG. (Twice per Round)\\n(A character can equip a maximum of 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/8abebfa3ce62ff97769616f606b9a7f4.png' /> Artifact)",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1": "10",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "artifact",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a0cf9b1/8bd5135ff92d70bdb8d60ebfa275189b.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 312101,
       "name": "Broken Rime's Echo",
       "content": "<color=#FFFFFFFF>When you play a <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/f991e209778856fbf83078b501953475.png' />Talent card or a Character uses a Skill:</color> Spend 1 less <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/412134fa7fc8a73b5e20c177a3ae0046.png' /><color=#99FFFFFF>Cryo</color> Die. (Once per Round)\\n(A character can equip a maximum of 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/8abebfa3ce62ff97769616f606b9a7f4.png' />Artifact)",
@@ -16392,7 +16726,7 @@
     {
       "id": 313006,
       "name": "Qucusaurus",
-      "content": "<color=#FFFFFFFF>When played:</color> Attach <color=#FFFFFFFF>Target</color> to the opposing active character.\\n<color=#FFFFFFFF>When the attached character switches to become the active character, and when the opposing active character has<color=#FFFFFFFF>Target</color> attached:</color> If possible, <color=#FFFFFFFF>Discard</color> 1 Card from your Hand with the highest <color=#FFFFFFFF>Current Elemental Dice Cost</color>. Then, consider your current Switch instance a <color=#FFFFFFFF>Fast Action</color> rather than a <color=#FFFFFFFF>Combat Action</color>, make it cost 1 fewer Elemental Die, and then cancel all <color=#FFFFFFFF>Target</color> attached to opposing characters.\\n<color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/c77ba0b2ea2bf428b8414c9f9bc86035.png' />Technique</color>: Swift Glide\\n<color=#FFFFFFFF><color=#FFFFFFFF>Usage(s)</color>: 2</color>\\n(A character can only equip 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/c77ba0b2ea2bf428b8414c9f9bc86035.png' />Technique at a time)",
+      "content": "<color=#FFFFFFFF>When played:</color> Attach <color=#FFFFFFFF>Target</color> to the opposing active character.\\n<color=#FFFFFFFF>When an opposing character with <color=#FFFFFFFF>Target</color> attached switches to become the active character:</color> You gain 1 stack of <color=#FFFFFFFF><color=#FFFFFFFF>Efficient Switch</color></color> and <color=#FFFFFFFF><color=#FFFFFFFF>Agile Switch</color></color>, and then cancel all <color=#FFFFFFFF>Target</color> attached to opposing characters.\\n<color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/c77ba0b2ea2bf428b8414c9f9bc86035.png' />Technique</color>: Swift Glide\\n<color=#FFFFFFFF><color=#FFFFFFFF>Usage(s)</color>: 2</color>\\n(A character can only equip 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/c77ba0b2ea2bf428b8414c9f9bc86035.png' />Technique at a time)",
       "action_type": "equipment_card",
       "rank_id": 0,
       "cost_num1": "1",
@@ -16898,7 +17232,7 @@
     {
       "id": 321018,
       "name": "Fortress of Meropide",
-      "content": "<color=#FFFFFFFF>When your active character takes DMG or is healed:</color> This card gains 1 point of <color=#FFFFFFFF>Prohibition</color> (Can stack. Max 5 stacks). If this card has accumulated 5 Prohibition points, consume 5 Prohibition points and apply <color=#FFFFFFFF>Invalidation</color> to 1 random card in your opponent's Hand.",
+      "content": "<color=#FFFFFFFF>When your active character takes DMG or is healed:</color> This card gains 1 point of <color=#FFFFFFFF>Prohibition</color> (Can stack. Max 6 stacks). If this card has accumulated 6 Prohibition points, consume 6 Prohibition points and apply <color=#FFFFFFFF>Invalidation</color> to 1 random card in your opponent's Hand.",
       "action_type": "support_card",
       "rank_id": 0,
       "cost_num1": "1",
@@ -18092,6 +18426,29 @@
       "max_count": 2
     },
     {
+      "id": 322034,
+      "name": "Netochka",
+      "content": "<color=#FFFFFFFF>When you trigger a Lunar-Charged or Lunar-Bloom reaction:</color> Attach <color=#FFFFFFFF><color=#FFFFFFFF>Battle Plan</color></color> to your active character. (Once per Round)",
+      "action_type": "support_card",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1": "3",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8b295c3fed21771dcced6055cdf2f2ce.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "companion",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a0cf9b1/d2d12811a4545e1f0108a475f2225219.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 323001,
       "name": "Parametric Transformer",
       "content": "<color=#FFFFFFFF>When either side uses a Skill:</color> If Elemental DMG was dealt, this card gains 1 <color=#FFFFFFFF>Qualitative Progress</color>.\\nIf this card has gained 3 <color=#FFFFFFFF>Qualitative Progress</color>, then discard this card and create 3 different Basic Elemental Dice.",
@@ -18140,7 +18497,7 @@
     {
       "id": 323003,
       "name": "Red Feather Fan",
-      "content": "<color=#FFFFFFFF>After you switch characters:</color> The next Switch Character action you perform this Round will be considered a <color=#FFFFFFFF>Fast Action</color> instead of a <color=#FFFFFFFF>Combat Action</color>. It will also cost 1 fewer Elemental Die. (Once per Round)",
+      "content": "<color=#FFFFFFFF>After you switch characters:</color> Gain 1 stack of <color=#FFFFFFFF><color=#FFFFFFFF>Efficient Switch</color></color> and <color=#FFFFFFFF><color=#FFFFFFFF>Agile Switch</color></color>. (Once per Round)",
       "action_type": "support_card",
       "rank_id": 0,
       "cost_num1": "2",
@@ -18508,7 +18865,7 @@
     {
       "id": 330011,
       "name": "Fight for Death",
-      "content": "Draw 1 card.\\n<color=#FFFFFFFF>For every character on your side of the field that is defeated:</color> All your remaining characters gain +2 Max HP.",
+      "content": "Draw 1 card.\\n<color=#FFFFFFFF>For every character on your side of the field that is defeated:</color> All your remaining characters gain +2 Max HP.\\n(Only one <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/ad05fb6424e58a2a5685647b6240555a.png' />\"Arcane Legend\" card can be played per match. This card will be in your starting hand.)",
       "action_type": "event_card",
       "rank_id": 0,
       "cost_num1": "1",
@@ -18531,7 +18888,7 @@
     {
       "id": 330012,
       "name": "Lost Legacies in the Sand",
-      "content": "<color=#FFFFFFFF>Select</color> one of the following:\\nPlace 1 card with the highest <color=#FFFFFFFF>Current Elemental Dice Cost</color> from your opponent's Hand at the bottom of their deck.\\nOr\\nPlace all cards from your Hand at the bottom of your deck and then draw the same number of cards plus 1.",
+      "content": "<color=#FFFFFFFF>Select</color> one of the following:\\nPlace 1 card with the highest <color=#FFFFFFFF>Current Elemental Dice Cost</color> from your opponent's Hand at the bottom of their deck.\\nOr\\nPlace all cards from your Hand at the bottom of your deck and then draw the same number of cards plus 1.\\n(Only one <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/ad05fb6424e58a2a5685647b6240555a.png' />\"Arcane Legend\" card can be played per match. This card will be in your starting hand.)",
       "action_type": "event_card",
       "rank_id": 0,
       "cost_num1": "0",
@@ -18548,6 +18905,29 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/692f7dae/61666397f2746f1ec9aa798e1c58f492.png",
+      "is_special": true,
+      "max_count": 1
+    },
+    {
+      "id": 330013,
+      "name": "The Other Side of the Frostmoon",
+      "content": "<color=#FFFFFFFF>When played, and at the start of each Action Phase:</color> Attach <color=#FFFFFFFF><color=#FFFFFFFF>Cost Reduction</color></color> to 1 random card in your Hand.\\n(Only one <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/ad05fb6424e58a2a5685647b6240555a.png' />\"Arcane Legend\" card can be played per match. This card will be in your starting hand.)",
+      "action_type": "event_card",
+      "rank_id": 0,
+      "cost_num1": "0",
+      "cost_type1": "",
+      "cost_type1_icon": "",
+      "cost_num2": "1",
+      "cost_type2": "6",
+      "cost_type2_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/5bdbe64fa0b51912abf046d26f735401.png",
+      "action_card_tags": [
+        "arcane_legend",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a0cf9b1/819df1a92acc35d2ff8df237ff7ebdc9.png",
       "is_special": true,
       "max_count": 1
     },
@@ -18600,7 +18980,7 @@
     {
       "id": 331006,
       "name": "Elemental Transfiguration: Bloom Blessing",
-      "content": "<color=#FFFFFFFF><color=#FFFFFFFF>Elemental Transfiguration</color></color>: <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>Hydro</color> <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' /><color=#7EC236FF>Dendro</color>\\n<color=#FFFFFFFF>Roll Phase</color>: Always roll 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png' /><color=#80C0FFFF>Hydro Dice</color> and 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/848248aa7c40784633446db172ee4678.png' /><color=#7EC236FF>Dendro Dice</color>.\\n<color=#FFFFFFFF>After you trigger <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' />Bloom reaction(s):</color> Discard this card, then choose either <color=#FFFFFFFF>Bloom Blessing: Amrita</color> or <color=#FFFFFFFF>Bloom Blessing: Overgrow</color> and add it to your Hand.",
+      "content": "<color=#FFFFFFFF><color=#FFFFFFFF>Elemental Transfiguration</color></color>: <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>Hydro</color> <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' /><color=#7EC236FF>Dendro</color>\\n<color=#FFFFFFFF>Roll Phase</color>: Always roll 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png' /><color=#80C0FFFF>Hydro Dice</color> and 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/848248aa7c40784633446db172ee4678.png' /><color=#7EC236FF>Dendro Dice</color>.\\n<color=#FFFFFFFF>After you trigger <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' />Bloom or Lunar-Bloom reaction(s):</color> Discard this card, then choose either <color=#FFFFFFFF>Bloom Blessing: Amrita</color> or <color=#FFFFFFFF>Bloom Blessing: Overgrow</color> and add it to your Hand.",
       "action_type": "support_card",
       "rank_id": 0,
       "cost_num1": "2",
@@ -18623,7 +19003,7 @@
     {
       "id": 331007,
       "name": "Elemental Transfiguration: Lava Blessing",
-      "content": "<color=#FFFFFFFF><color=#FFFFFFFF>Elemental Transfiguration</color>: </color><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FF9999FF>Pyro</color> <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/98c267c74a3efdcfed4131a054ff4b82.png' /><color=#FFE699FF>Geo</color>\\n<color=#FFFFFFFF>Roll Phase</color>: Always roll 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/fe4517db495f28fdbcb44607d94640c3.png' /><color=#FF9999FF>Pyro Dice</color> and 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/680e755181a0b8c29e87d0570815ac29.png' /><color=#FFE699FF>Geo Dice</color>.\\n<color=#FFFFFFFF>After you trigger <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/98c267c74a3efdcfed4131a054ff4b82.png' />Pyro-Crystallize reaction(s):</color> Discard this card, then choose either <color=#FFFFFFFF>Lava Blessing: Turnfire</color> or <color=#FFFFFFFF>Lava Blessing: Remelting</color> and add it to your Hand.",
+      "content": "<color=#FFFFFFFF><color=#FFFFFFFF>Elemental Transfiguration</color>: </color><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FF9999FF>Pyro</color> <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/98c267c74a3efdcfed4131a054ff4b82.png' /><color=#FFE699FF>Geo</color>\\n<color=#FFFFFFFF>Roll Phase</color>: Always roll 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/fe4517db495f28fdbcb44607d94640c3.png' /><color=#FF9999FF>Pyro Dice</color> and 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/680e755181a0b8c29e87d0570815ac29.png' /><color=#FFE699FF>Geo Dice</color>.\\n<color=#FFFFFFFF>After you trigger a <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/98c267c74a3efdcfed4131a054ff4b82.png' /><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FFFFFFFF>Pyro Crystallize</color> reaction</color>: Discard this card, then choose either <color=#FFFFFFFF>Lava Blessing: Turnfire</color> or <color=#FFFFFFFF>Lava Blessing: Remelting</color> and add it to your Hand.",
       "action_type": "support_card",
       "rank_id": 0,
       "cost_num1": "2",
@@ -18640,6 +19020,52 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/dfa6be6e97e11e3764e281e4fa2ffe3f.png",
+      "is_special": false,
+      "max_count": 1
+    },
+    {
+      "id": 331008,
+      "name": "Elemental Transfiguration: Rimegrass Blessing",
+      "content": "<color=#FFFFFFFF><color=#FFFFFFFF>Elemental Transfiguration</color>:</color> <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/924fba80b9137b4e8fdf5871aa22d666.png' /><color=#99FFFFFF>Cryo</color> <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' /><color=#7EC236FF>Dendro</color>\\n<color=#FFFFFFFF>Roll Phase:</color> Always roll 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/412134fa7fc8a73b5e20c177a3ae0046.png' /><color=#99FFFFFF>Cryo Dice</color> and 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/848248aa7c40784633446db172ee4678.png' /><color=#7EC236FF>Dendro Dice</color>.\\n<color=#FFFFFFFF>Before you choose an action, if there is an opposing character affected by both <color=#99FFFFFF>Cryo</color> and <color=#7EC236FF>Dendro</color>:</color> Discard this card, then choose either <color=#FFFFFFFF>Rimegrass Blessing: Thorn Frost</color> or <color=#FFFFFFFF>Rimegrass Blessing: Cold Vine</color> and add it to your Hand.",
+      "action_type": "support_card",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1": "3",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8b295c3fed21771dcced6055cdf2f2ce.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "elemental_transfiguration",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a0cf9b1/1164140ba16d90c388702aca9bd0eb93.png",
+      "is_special": false,
+      "max_count": 1
+    },
+    {
+      "id": 331009,
+      "name": "Elemental Transfiguration: Stormgale Blessing",
+      "content": "<color=#FFFFFFFF><color=#FFFFFFFF>Elemental Transfiguration</color>:</color> <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><color=#FFACFFFF>Electro</color> <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' /><color=#80FFD7FF>Anemo</color>\\n<color=#FFFFFFFF>Roll Phase:</color> Always roll 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0a7a50d15a7580c4de07a41f87a95787.png' /><color=#FFACFFFF>Electro Dice</color> and 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png' /><color=#80FFD7FF>Anemo Dice</color>.\\n<color=#FFFFFFFF>After you trigger an <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' />Electro Swirl reaction:</color> Discard this card, then choose either <color=#FFFFFFFF>Stormgale Blessing: Swift Bolt</color> or <color=#FFFFFFFF>Stormgale Blessing: Wind Force</color> and add it to your Hand.",
+      "action_type": "support_card",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1": "3",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8b295c3fed21771dcced6055cdf2f2ce.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "elemental_transfiguration",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a0cf9b1/bab71d306fc419b600b7ffafbd5197c2.png",
       "is_special": false,
       "max_count": 1
     },
@@ -20986,6 +21412,29 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68f81eac/acf4fe088561cd443741abd19a312def.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 333030,
+      "name": "Roulette Special",
+      "content": "The target character gains 4 random buffs from the following effects:\\nHeal the target character for 2 HP.\\nThe target character gains +1 Max HP.\\nThe next Skill the target character uses costs 1 less Elemental Die.\\nThe target character deals +1 DMG the next time they do damage.\\n(A character can consume at most 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/e25f04745615df9e779831a1c1354e38.png' />Food per Round)",
+      "action_type": "event_card",
+      "rank_id": 0,
+      "cost_num1": "4",
+      "cost_type1": "3",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8b295c3fed21771dcced6055cdf2f2ce.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "food",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a0cf9b1/ed0bbfd758f8354d1b7d6fa376fc3a40.png",
       "is_special": false,
       "max_count": 2
     }
@@ -24487,6 +24936,78 @@
       "name": "Cleaning Time",
       "id": 332062,
       "code": 583,
+      "type": "action"
+    },
+    {
+      "name": "Flins",
+      "id": 1418,
+      "code": 584,
+      "type": "character"
+    },
+    {
+      "name": "Lauma",
+      "id": 1711,
+      "code": 585,
+      "type": "character"
+    },
+    {
+      "name": "Experimental Field Generator",
+      "id": 2605,
+      "code": 586,
+      "type": "character"
+    },
+    {
+      "name": "Part the Veil of Snow",
+      "id": 214181,
+      "code": 587,
+      "type": "action"
+    },
+    {
+      "name": "\"O Lips, Weave Me Songs and Psalms\"",
+      "id": 217111,
+      "code": 588,
+      "type": "action"
+    },
+    {
+      "name": "Gravity Field",
+      "id": 226051,
+      "code": 589,
+      "type": "action"
+    },
+    {
+      "name": "Gladiator's Finale",
+      "id": 312045,
+      "code": 590,
+      "type": "action"
+    },
+    {
+      "name": "Netochka",
+      "id": 322034,
+      "code": 591,
+      "type": "action"
+    },
+    {
+      "name": "Elemental Transfiguration: Rimegrass Blessing",
+      "id": 331008,
+      "code": 592,
+      "type": "action"
+    },
+    {
+      "name": "Elemental Transfiguration: Stormgale Blessing",
+      "id": 331009,
+      "code": 593,
+      "type": "action"
+    },
+    {
+      "name": "The Other Side of the Frostmoon",
+      "id": 330013,
+      "code": 594,
+      "type": "action"
+    },
+    {
+      "name": "Roulette Special",
+      "id": 333030,
+      "code": 595,
       "type": "action"
     }
   ]
