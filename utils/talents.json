@@ -814,5 +814,23 @@
     "character_name": "Consecrated Fanged Beast",
     "talent_id": 227051,
     "talent_name": "Withered Reeds Eclipse the Sun"
+  },
+  {
+    "character_id": 1418,
+    "character_name": "Flins",
+    "talent_id": 214181,
+    "talent_name": "Part the Veil of Snow"
+  },
+  {
+    "character_id": 1711,
+    "character_name": "Lauma",
+    "talent_id": 217111,
+    "talent_name": "\"O Lips, Weave Me Songs and Psalms\""
+  },
+  {
+    "character_id": 2605,
+    "character_name": "Experimental Field Generator",
+    "talent_id": 226051,
+    "talent_name": "Gravity Field"
   }
 ]
