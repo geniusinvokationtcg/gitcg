@@ -16,7 +16,7 @@ export async function parseCSV<T>(
 
   try {
     const res = await fetch(url, {
-      next: { revalidate: 600 }
+      next: { revalidate: 300 }
     });
     if(!res.ok) return ErrorResult(`Failed to fetch CSV: ${res.status} ${res.statusText}`);
     const csvText = await res.text();
@@ -30,7 +30,7 @@ export async function parseCSV<T>(
     
     cache.set(url, {
       data: parsed.data,
-      expiry: now + 600_000
+      expiry: now + 300_000
     });
 
     return SuccessResult(parsed.data);
