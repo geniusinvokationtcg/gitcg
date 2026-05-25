@@ -63,6 +63,12 @@ export const seasons: Seasons = {
   ],
   as: [
     {
+      versions: ["6-6", "6-7", "7-0"],
+      best_finish: 3,
+      qualification_type: "top",
+      qualification_threshold: 8
+    },
+    {
       versions: ["6-3", "6-4", "6-5"],
       best_finish: 3,
       qualification_type: "top",
