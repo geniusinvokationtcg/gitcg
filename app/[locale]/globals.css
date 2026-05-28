@@ -377,6 +377,11 @@ img.avatar {
   }
 }
 
+img.round {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 .dump_deck_preview_desktop {
   @apply w-full min-w-80 max-w-150 p-5 h-fit border-1 border-gray-300 rounded-xl overflow-y-auto max-h-[calc(100vh-170px)] sticky top-10;
   @media (width < 1080px) {
