@@ -5,9 +5,14 @@ import { useLiveMatch } from "@/hooks/useLiveMatch";
 import { getServerLabel } from "@/utils/server";
 import { gameVersion, getVerLabel } from "@/utils/version";
 import { AnimatePresence, motion } from "framer-motion";
+import { useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 
 export default function PlateOverlay() {
+  const q = useSearchParams()
+  const customText = q.get("msg")
+  console.log(customText)
+
   let { data, error } = useLiveMatch();
 
   const csvPasteAPIRes = useCsvPaste(data?.weekly_uuid || "", true)
@@ -30,7 +35,10 @@ export default function PlateOverlay() {
       >
         {`${getVerLabel(version, "en")} ${getServerLabel(server, "en")}`}
         <br />
-        {`Week ${week} ${round ? `Round ${round}` : ""}`}
+        {`Week ${week} ${
+          customText ? customText :
+          (round ? `Round ${round}` : "")
+        }`}
       </p>
     </div>, [version, week, server, round]
   )
