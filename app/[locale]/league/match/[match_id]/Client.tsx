@@ -186,7 +186,7 @@ export function CoopLeagueMatchPageClient({ params, season_id, match, teams }: {
                       buttonText={
                         <EyeIcon className="size-4"/>
                       }
-                      onClick={() => window.open(`/casket?q=${game.deckcode_a}`)}
+                      onClick={() => window.open(`/casket?q=${game.deckcode_b}`)}
                     />
                   </div>
                 </div>
