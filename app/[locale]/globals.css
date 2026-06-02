@@ -194,6 +194,15 @@ select {
   padding-right: 1.75rem; /* Prevents text overlap */
 }
 
+.hoverable_card {
+  @apply bg-white border border-gray-300 rounded-sm
+  hover:bg-gray-50 hover:border-gray-500 hover:shadow-md
+  focus:border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:shadow-md
+  transition-all duration-200 ease-in-out;
+  color: #101828;
+  font-size: 12px;
+}
+
 .dropdowns_container {
   @apply flex flex-wrap justify-start items-center;
 }
@@ -375,6 +384,11 @@ img.avatar {
     width: 120px;
     height: 120px;
   }
+}
+
+img.round {
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .dump_deck_preview_desktop {
