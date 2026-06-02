@@ -3,19 +3,18 @@
 import { a } from "@react-spring/web";
 import { useGameDataByMatch, useGameDataByPlayer, useMatchData, usePlayerData, useTeamData } from "../hooks";
 import { CoopLeagueSeasonPageParams } from "./page";
+import Link from "next/link";
 
-export function DeckBuilderPageClient({ params }: { params: CoopLeagueSeasonPageParams }) {
+export function CoopLeagueSeasonPageClient({ params }: { params: CoopLeagueSeasonPageParams }) {
   const { locale, season } = params
 
   const teams = useTeamData(season);
   const listedTeamIds = teams.data.map(team => team.id)
 
   const players = usePlayerData(listedTeamIds)
-
-  const listedPlayerIds = players.data.map(player => player.id)
+  // const listedPlayerIds = players.data.map(player => player.id)
 
   const matches = useMatchData(listedTeamIds)
-
   const listedMatchIds = matches.data.map(match => match.id)
 
   const games = useGameDataByMatch(listedMatchIds)
@@ -131,110 +130,114 @@ export function DeckBuilderPageClient({ params }: { params: CoopLeagueSeasonPage
     || b.tie - a.tie
   )
 
-  return <div className="mx-auto my-6 px-4 flex flex-col gap-6">
+  return <div className="mx-auto my-6 px-6 flex flex-col gap-6 min-w-screen">
     <div className="flex flex-col gap-3">
       <h1 className="section_title">Round-Robin Bracket</h1>
-      <table className="vertical_border border-t-1 border-gray-300">
-        <tbody>
-          <tr>
-            <td className="min-w-18 max-w-18 h-18"></td>
-            {teamStatsUnsorted.map(team => (
-              <td key={team.id} className="text-xs min-w-18 max-w-18 h-18">
-                <a href={`/league/${season}/team/${team.id}`} className="flex flex-col gap-1 items-center">
-                  <img className="w-8 h-8 min-w-8 round" src={`/league/${season}/team_icons/${team.id}.png`} />
-                  <div className="text-[10px]">{team.alias}</div>
-                </a>
-              </td>
-            ))}
-          </tr>
-          {teamStatsUnsorted.map(team => (
-            <tr key={team.id}>
-              <td className="text-xs min-w-18 max-w-18 h-18">
-                <a href={`/league/${season}/team/${team.id}`} className="flex flex-col gap-1 items-center">
-                  <img className="w-8 h-8 min-w-8 round" src={`/league/${season}/team_icons/${team.id}.png`} />
-                  <div className="text-[10px]">{team.alias}</div>
-                </a>
-              </td>
-
-              {teamStatsUnsorted.map(opp => (
-                <td key={opp.id}>
-                  {team.id !== opp.id && (
-                    <div className="text-xs flex flex-col gap-0.25">
-                      {(() => {
-                        const m = matchStats.find(match => (match.team_a_id === team.id && match.team_b_id === opp.id) || (match.team_a_id === opp.id && match.team_b_id === team.id))
-                        if(!m) return;
-
-                        const isTeamA = m.team_a_id === team.id
-                        const win = isTeamA ? m.win_a : m.win_b
-                        const tie = m.tie
-                        const loss = isTeamA ? m.loss_a : m.loss_b
-
-                        let status = ""
-                        let color = ""
-                        if(m.isOngoing) {
-                          status = "Playing"
-                          color = "bg-gray-200"
-                        } else if (win > loss) {
-                          status = "Win"
-                          color = "bg-green-200"
-                        } else if (win === loss) {
-                          status = "Tie"
-                          color = "bg-amber-200"
-                        } else if (win < loss) {
-                          status = "Loss"
-                          color = "bg-red-200"
-                        }
-
-                        return <>
-                          <div className="text-[11px]">{`Week ${m.week}`}</div>
-                          <div className={`text-[14px] rounded-sm p-0.5 ${color}`}>{status}</div>
-                          <div className="text-[11px]">{
-                            `${win} – ${tie} – ${loss}`
-                          }</div>
-                        </>
-                      })()}
-                    </div>
-                  )}
+      <div className="fullpage_table_container border-t-1 border-gray-300 lg:w-fit lg:self-center"> {/*lg to center it for large screen*/}
+        <table className="vertical_border">
+          <tbody>
+            <tr className="sticky top-0 z-20 bg-white hover:bg-gray-50 group">
+              <td className="min-w-18 max-w-18 h-18 sticky left-0 z-10 bg-white group-hover:bg-gray-50"></td>
+              {teamStatsUnsorted.map(team => (
+                <td key={team.id} className="text-xs min-w-18 max-w-18 h-18">
+                  <a href={`/league/team/${team.id}`} className="flex flex-col gap-1 items-center">
+                    <img className="w-8 h-8 min-w-8 round" src={`/league/${season}/team_icons/${team.id}.png`} />
+                    <div className="text-[10px]">{team.alias}</div>
+                  </a>
                 </td>
               ))}
             </tr>
-          ))}
-        </tbody>
-      </table>
+            {teamStatsUnsorted.map(team => (
+              <tr key={team.id} className="group">
+                <td className="text-xs min-w-18 max-w-18 h-18 sticky left-0 z-10 bg-white group-hover:bg-gray-50 transition-all duration-200">
+                  <a href={`/league/team/${team.id}`} className="flex flex-col gap-1 items-center">
+                    <img className="w-8 h-8 min-w-8 round" src={`/league/${season}/team_icons/${team.id}.png`} />
+                    <div className="text-[10px]">{team.alias}</div>
+                  </a>
+                </td>
+
+                {teamStatsUnsorted.map(opp => (
+                  <td key={opp.id}>
+                    {team.id !== opp.id && (
+                      <div className="text-xs flex flex-col gap-0.25">
+                        {(() => {
+                          const m = matchStats.find(match => (match.team_a_id === team.id && match.team_b_id === opp.id) || (match.team_a_id === opp.id && match.team_b_id === team.id))
+                          if(!m) return;
+
+                          const isTeamA = m.team_a_id === team.id
+                          const win = isTeamA ? m.win_a : m.win_b
+                          const tie = m.tie
+                          const loss = isTeamA ? m.loss_a : m.loss_b
+
+                          let status = ""
+                          let color = ""
+                          if(m.isOngoing) {
+                            status = "Playing"
+                            color = "bg-gray-200"
+                          } else if (win > loss) {
+                            status = "Win"
+                            color = "bg-green-200"
+                          } else if (win === loss) {
+                            status = "Tie"
+                            color = "bg-amber-200"
+                          } else if (win < loss) {
+                            status = "Loss"
+                            color = "bg-red-200"
+                          }
+
+                          return <Link href={`/league/match/${m.id}`}>
+                            <div className="text-[11px] whitespace-nowrap">{`Week ${m.week}`}</div>
+                            <div className={`text-[14px] whitespace-nowrap rounded-sm p-0.5 ${color}`}>{status}</div>
+                            <div className="text-[11px] whitespace-nowrap">{
+                              `${win} – ${tie} – ${loss}`
+                            }</div>
+                          </Link>
+                        })()}
+                      </div>
+                    )}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
 
     <div className="flex flex-col gap-3">
       <h1 className="section_title">Standing</h1>
-      <table className="text-xs">
-        <thead>
-          <tr>
-            <th className="w-15">Rank</th>
-            <th className="w-75">Team</th>
-            <th className="w-18">Points</th>
-            <th className="w-30">Match Record</th>
-            <th className="w-30">Game Record</th>
-          </tr>
-        </thead>
-        <tbody>
-          {teamStatsSorted.map((team, i) => (
-            <tr key={team.id}>
-              <td>{i + 1}</td>
-              <td className="text-start">
-                <a href={`/league/${season}/team/${team.id}`} className="flex flex-row items-center gap-2">
-                  <img className="w-8 h-8 min-w-8 round" src={`/league/${season}/team_icons/${team.id}.png`} />
-                  <p className="clickable_text">
-                    <span>{team.name + " "}</span>
-                    <span className="text-[10px]">{`(${team.alias})`}</span>
-                  </p>
-                </a>
-              </td>
-              <td>{team.pts.toLocaleString(locale)}</td>
-              <td className="whitespace-nowrap">{`${team.match.win} – ${team.match.tie} – ${team.match.loss}`}</td>
-              <td className="whitespace-nowrap">{`${team.game.win} – ${team.game.tie} – ${team.game.loss}`}</td>
+      <div className="self-center">
+        <table className="text-xs">
+          <thead>
+            <tr>
+              <th className="w-15">Rank</th>
+              <th className="w-75">Team</th>
+              <th className="w-18">Points</th>
+              <th className="w-30">Match Record</th>
+              <th className="w-30">Game Record</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {teamStatsSorted.map((team, i) => (
+              <tr key={team.id}>
+                <td>{i + 1}</td>
+                <td className="text-start">
+                  <a href={`/league/team/${team.id}`} className="flex flex-row items-center gap-2">
+                    <img className="w-8 h-8 min-w-8 round" src={`/league/${season}/team_icons/${team.id}.png`} />
+                    <p className="clickable_text">
+                      <span>{team.name + " "}</span>
+                      <span className="text-[10px]">{`(${team.alias})`}</span>
+                    </p>
+                  </a>
+                </td>
+                <td>{team.pts.toLocaleString(locale)}</td>
+                <td className="whitespace-nowrap">{`${team.match.win} – ${team.match.tie} – ${team.match.loss}`}</td>
+                <td className="whitespace-nowrap">{`${team.game.win} – ${team.game.tie} – ${team.game.loss}`}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
 
     <div className="flex flex-col gap-3">

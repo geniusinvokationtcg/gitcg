@@ -22,7 +22,7 @@ export default function Navbar({ locale }: { locale: Locales }) {
       name: t("tournament_data"), sub: [
         { name: t("weekly"), path: "/weekly" },
         { name: t("major"), path: "/major" },
-        { name: "Co-op League", path: "/league/s0" }
+        { name: "Co-op League", path: "/league/s4-3" }
       ]
     }
   ];

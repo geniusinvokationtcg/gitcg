@@ -249,5 +249,11 @@
       "disqualified": "{player} was disqualified",
       "no_show": "{player} didn't show up"
     }
+  },
+  "CoopLeague": {
+    "win": "Win",
+    "lose": "Lose",
+    "tie": "Tie",
+    "ongoing": "Playing"
   }
 }

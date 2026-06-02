@@ -1,5 +1,7 @@
 import { Locales } from "@/utils/types";
-import { DeckBuilderPageClient } from "./Client";
+import { CoopLeagueSeasonPageClient } from "./Client";
+import { supabase } from "@/lib/supabaseClient";
+import { notFound } from "next/navigation";
 
 export interface CoopLeagueSeasonPageParams {
   locale: Locales
@@ -9,9 +11,15 @@ export interface CoopLeagueSeasonPageParams {
 export async function generateMetadata({ params }: { params: Promise<CoopLeagueSeasonPageParams> }) {
   const p = await params
 
+  const seasonName = await supabase.schema("league")
+    .from("seasons")
+    .select("name")
+    .eq("season_id", p.season)
+    .single<{ name: string }>()
+
   const metadata = {
-    title: `GITCG Co-op League Season ${p.season}`,
-    description: "The best league"
+    title: `GITCG Co-op League ${seasonName.data ? "Season "+seasonName.data.name : "" }`,
+    description: "Pitabrain"
   }
 
   return { ...metadata, openGraph: metadata, twitter: metadata }
@@ -19,5 +27,14 @@ export async function generateMetadata({ params }: { params: Promise<CoopLeagueS
 
 export default async function CoopLeagueSeasonPage({ params }: { params: Promise<CoopLeagueSeasonPageParams> }) {
   const p = await params
-  return <DeckBuilderPageClient params={p}/>
+
+  const seasonName = await supabase.schema("league")
+    .from("seasons")
+    .select("name")
+    .eq("season_id", p.season)
+    .single<{ name: string }>()
+  
+  if(!seasonName.data) notFound()
+  
+  return <CoopLeagueSeasonPageClient params={p}/>
 }

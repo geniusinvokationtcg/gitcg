@@ -5,7 +5,7 @@ type LeaguePlayerStatus = "active" | "dropped"
 type LeagueMatchPhase = "round_robin" | "playoff"
 
 export interface LeagueSeason {
-  id: number
+  id: string
   created_at: string
   season_id: string
   name: string | null
@@ -16,7 +16,7 @@ export interface LeagueTeam {
   created_at: string
   season_id: string
   name: string
-  alias: string | null
+  alias: string
   logo_url: string | null
   status: LeagueTeamStatus
 }
@@ -40,6 +40,7 @@ export interface LeagueMatch {
   week: string
   order: number | null
   phase: LeagueMatchPhase
+  season_id: string
 }
 
 export interface LeagueGame {
@@ -52,4 +53,6 @@ export interface LeagueGame {
   winner_player_id: string
   server: ServerPure
   is_tie: boolean
+  deckcode_a: string
+  deckcode_b: string
 }

@@ -56,7 +56,7 @@ export default async function LocaleLayout({
         <AuthProvider>
           <NextIntlClientProvider messages={messages} locale={locale}>
             {!hideComponents && <Navbar locale={locale}/>}
-            <main className="flex justify-center flex-grow">
+            <main className="flex-1">
               <TanstackProvider>{children}</TanstackProvider>
             </main>
             {!hideComponents && <Footer />}

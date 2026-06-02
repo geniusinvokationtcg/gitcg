@@ -135,8 +135,8 @@ export default async function DecklistDumpPage ({ params, searchParams }: { para
 
     
 
-    return <div className="max-w-[90vw] mx-auto mb-6 mt-3">
-      <h1 className="mt-3 section_title">
+    return <div className="max-w-[90vw] mx-auto mb-6 mt-3 w-fit">
+      <h1 className="mt-6 section_title">
         {t("title", {
           version: getVerLabel(version, locale),
           week: week,

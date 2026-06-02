@@ -1,0 +1,140 @@
+.league_body {
+  margin-inline: auto;
+  margin-block: 24px;
+  padding-inline: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.league_body > section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+.league_body > section > h1, h1 {
+  text-align: center;
+  font-size: 24px;
+}
+
+.match_card, .game_card {
+  width: 100%;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.match_cards_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+  gap: 12px;
+  max-width: 100%;
+  margin-inline: auto;
+  width: min(1000px, 100vw);
+}
+
+.card_grid {
+  display: grid;
+  grid-template-columns: minmax(0, 240px) 28px minmax(0, 240px);
+  align-self: center;
+}
+.card_grid > div > div > p {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card_grid_team_name > div:first-child, .card_grid_team_name > div:last-child {
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+}
+.card_grid_team_name > div:first-child {
+  grid-template-columns: minmax(0, 1fr) 40px;
+}
+.card_grid_team_name > div:last-child {
+  grid-template-columns: 40px minmax(0, 1fr);
+}
+
+.card_grid_team_name > div > div > p:first-child {
+  font-weight: 600;
+  font-size: 14px;
+}
+.card_grid_team_name > div > div > p:nth-child(2) {
+  font-size: 11px;
+}
+
+.teams_header {
+  display: grid;
+  grid-template-columns: minmax(0, 360px) 80px minmax(0, 360px);
+}
+
+.teams_header > :first-child, .teams_header > :last-child {
+  display: grid;
+  gap: 12px;
+  align-items: center;
+}
+.teams_header > :first-child {
+  grid-template-columns: minmax(0, 1fr) 100px;
+}
+.teams_header > :last-child {
+  grid-template-columns: 100px minmax(0, 1fr);
+}
+
+.teams_header > :nth-child(2) {
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+  display: grid;
+  grid-template-rows: 100px;
+  align-items: center;
+}
+
+.teams_header > * > div:first-child {
+  text-align: end;
+}
+
+.teams_header > * > div > p:first-child {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+}
+.teams_header > * > div > p:nth-child(2) {
+  font-size: 14px;
+}
+
+@media (width < 48rem) {
+  .teams_header {
+    grid-template-columns: minmax(0, 360px) 60px minmax(0, 360px);
+  }
+  .teams_header > :first-child, .teams_header > :last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  .teams_header > :first-child {
+    flex-direction: column-reverse;
+  }
+  .teams_header > * > div:first-child, .teams_header > * > div {
+    text-align: center;
+  }
+  .teams_header > * > div > p:first-child {
+    font-size: 16px;
+  }
+  .teams_header > * > div > p:nth-child(2) {
+    font-size: 12px;
+  }
+}
+
+.game_cards_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+  gap: 12px;
+  max-width: 100%;
+  margin-inline: auto;
+  width: min(500px, 100vw);
+}

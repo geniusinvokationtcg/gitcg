@@ -785,7 +785,7 @@ export function DeckBuilderPageClient ({
 
   </div>
 
-  return <div className="px-6 py-6 overflow-hidden">
+  return <div className="px-6 py-6 overflow-hidden mx-auto w-fit">
     {DialogBoxes}
     <SuccessNotification show={showPopUp} text={popUpContent} type={popUpType} />
     
