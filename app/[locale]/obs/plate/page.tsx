@@ -59,7 +59,7 @@ export default function PlateOverlay() {
   if (!data) return "Match loading";
   if (!csvPasteAPIRes) return "CSV loading";
 
-  return <div style={{ background: "transparent", width: 548 }} className="flex flex-col justify-center items-center">
+  return <div style={{ background: "transparent", width: 548 }} className="flex flex-col min-h-screen justify-center items-center">
     <AnimatePresence mode="wait">
       <motion.div
         key={elementIndex}
