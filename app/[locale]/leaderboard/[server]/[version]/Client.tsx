@@ -240,7 +240,7 @@ export function LeaderboardPageClient ({ params }: { params: LeaderboardPagePara
       
       
     </div>
-    <div className="fullpage_table_container w-fit mx-auto">
+    <div className="fullpage_table_container max-w-fit mx-auto">
       <table className="vertical_border">
         <thead className="sticky top-0 z-20 bg-gray-200">
           <tr>

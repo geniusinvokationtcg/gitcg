@@ -26,7 +26,7 @@ export default function BracketOverlay () {
 
   if(!liveMatch || !seeding) notFound();
   
-  return <div className="overflow-auto text-lg flex flex-col justify-center text-[#6C3C16]">
+  return <div className="text-lg flex flex-col justify-center text-[#6C3C16] min-h-screen">
     <div className="flex flex-row gap-x-12 mx-auto mb-4">
       {rounds.map(round => <h2 className="font-bold mb-2 min-w-54 text-center" key={round}>{
         t(getRoundNameKey(games[round-1].length*2), { top: games[round-1].length*2 })

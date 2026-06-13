@@ -2,6 +2,7 @@ import { Locales } from "@/utils/types"
 import { CoopLeagueTeamPageClient } from "./Client"
 import { supabase } from "@/lib/supabaseClient"
 import { notFound } from "next/navigation"
+import { getSeasonName, getTeam } from "../../data"
 
 export interface CoopLeagueTeamPageParams {
   locale: Locales
@@ -11,17 +12,11 @@ export interface CoopLeagueTeamPageParams {
 export async function generateMetadata({ params }: { params: Promise<CoopLeagueTeamPageParams> }) {
   const p = await params
 
-  const team = await supabase.schema("league")
-    .from("teams")
-    .select("season_id,name")
-    .eq("id", p.team_id)
-    .single()
-  
-  const seasonName = await supabase.schema("league")
-    .from("seasons")
-    .select("name")
-    .eq("season_id", team.data?.season_id)
-    .single<{ name: string }>()
+  const team = await getTeam(p.team_id)
+
+  if(!team.data) notFound()
+
+  const seasonName = await getSeasonName(team.data.season_id)
 
   const metadata = {
     title: `${team.data?.name} | GITCG Co-op League ${seasonName.data?.name || ""}`,

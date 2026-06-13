@@ -1,7 +1,7 @@
 import { Locales } from "@/utils/types";
 import { CoopLeagueSeasonPageClient } from "./Client";
-import { supabase } from "@/lib/supabaseClient";
 import { notFound } from "next/navigation";
+import { getSeasonName } from "../data";
 
 export interface CoopLeagueSeasonPageParams {
   locale: Locales
@@ -11,14 +11,10 @@ export interface CoopLeagueSeasonPageParams {
 export async function generateMetadata({ params }: { params: Promise<CoopLeagueSeasonPageParams> }) {
   const p = await params
 
-  const seasonName = await supabase.schema("league")
-    .from("seasons")
-    .select("name")
-    .eq("season_id", p.season)
-    .single<{ name: string }>()
+  const seasonName = await getSeasonName(p.season)
 
   const metadata = {
-    title: `GITCG Co-op League ${seasonName.data ? "Season "+seasonName.data.name : "" }`,
+    title: `GITCG Co-op League ${seasonName.data?.name || ""}`,
     description: "Pitabrain"
   }
 
@@ -28,11 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<CoopLeagueS
 export default async function CoopLeagueSeasonPage({ params }: { params: Promise<CoopLeagueSeasonPageParams> }) {
   const p = await params
 
-  const seasonName = await supabase.schema("league")
-    .from("seasons")
-    .select("name")
-    .eq("season_id", p.season)
-    .single<{ name: string }>()
+  const seasonName = await getSeasonName(p.season)
   
   if(!seasonName.data) notFound()
   

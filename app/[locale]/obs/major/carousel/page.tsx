@@ -37,7 +37,7 @@ export default function MajorDeckCarouselOverlay () {
 
   if(!majorMetadata.data || !currentPlayer) return "Loading";
 
-  return <div className="flex justify-center items-center">
+  return <div className="flex justify-center items-center min-h-screen">
     <AnimatePresence mode="wait">
       <motion.div
         key={playerIndex}

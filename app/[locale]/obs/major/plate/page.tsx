@@ -9,7 +9,6 @@ import { ServerPure } from "@/utils/types";
 import { gameVersion, getVerLabel } from "@/utils/version";
 import { AnimatePresence, motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { notFound } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 
 export default function MajorPlateOverlay () {
@@ -62,7 +61,7 @@ export default function MajorPlateOverlay () {
   if(!live.data || !majorMetadata.data) return "Loading";
   if(!liveMatch || !seeding) return "Loading"
 
-  return <div style={{ background: "transparent", width: 548 }} className="flex flex-col justify-center items-center">
+  return <div style={{ background: "transparent", width: 548 }} className="flex flex-col min-h-screen justify-center items-center">
     <AnimatePresence mode="wait">
       <motion.div
         key={elementIndex}
