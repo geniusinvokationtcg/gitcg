@@ -2,15 +2,13 @@
 
 import { CardImage } from "@/components/CardImage"
 import { useLiveMajor } from "@/hooks/useLiveMatch"
-import { useMajorData, useMajorMetadataByUuid } from "@/hooks/useMajorData"
-import { supabase } from "@/lib/supabaseClient"
+import { useMajorMetadataByUuid } from "@/hooks/useMajorData"
 import { generateRoundStructure } from "@/utils/brackets"
-import { decode, decodeAndSortActionCards } from "@/utils/decoder"
+import { decodeAndSortActionCards } from "@/utils/decoder"
 import { getPlayer } from "@/utils/major"
-import { MajorPlayer } from "@/utils/types"
 import { notFound } from "next/navigation"
 
-export default function MajorLineupPage () {  
+export default function MajorLineupPage () {
   const live = useLiveMajor()
 
   const majorMetadata = useMajorMetadataByUuid(live.data?.major_uuid || "")

@@ -1,5 +1,5 @@
 import { supabaseServer } from "@/lib/supabaseServer";
-import { csvPasteTransformHeader, parseCSV } from "@/utils/csvParse";
+import { csvPasteTransformHeader, parseCSVNoCache } from "@/utils/csvParse";
 import { CsvPasteRow, CsvPasteRowClient, ServerPure } from "@/utils/types";
 import { NextResponse } from "next/server";
 
@@ -54,7 +54,7 @@ export async function GET(req: Request) {
   let csvPasteClient: CsvPasteRowClient[] = []
 
   if (!nocsv) {
-    const csvPaste = await parseCSV<CsvPasteRow>(data.csv_link, { transformHeader: csvPasteTransformHeader })
+    const csvPaste = await parseCSVNoCache<CsvPasteRow>(data.csv_link, { transformHeader: csvPasteTransformHeader })
 
     if (csvPaste.error) {
       return NextResponse.json(
