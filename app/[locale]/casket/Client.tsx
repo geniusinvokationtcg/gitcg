@@ -94,6 +94,8 @@ export function DeckBuilderPageClient ({
     }
   }, [isOpenDeckImage])
 
+  //SETTINGS
+  const [showCardCount, setShowCardCount] = useLocalStorage("casketShowCardCount", true)
 
   const importDeckRef = useRef<HTMLInputElement>(null);
   const [isImporting, setIsImporting] = useState(false);
@@ -846,13 +848,41 @@ export function DeckBuilderPageClient ({
               onClick={() => setIsSelectingCards(true)}
               disableWordWrap={true}
             /></div>
-            {/* <CustomButton
+            <CustomButton
               type="icon"
               buttonText={
                 <HugeiconsIcon icon={Settings01Icon} color="currentColor" strokeWidth={1.5} size={16}/>
               }
-              onClick={() => setIsFiltering(!isFiltering)}
-            /> */}
+              onClick={() => openBox(
+                "settings",
+                <div className="relative flex flex-col gap-4 bg-white rounded-2xl w-100 h-fit p-5 text-center">
+                  <IconButton className="absolute right-4" onClick={() => closeBox("settings")}><XMarkIcon/></IconButton>
+                  <div className="font-semibold">Settings</div>
+
+                  <div className="flex flex-col gap-1.5">
+                    <Checkbox
+                      className="text-sm"
+                      trueCondition={showCardCount}
+                      onClick={() => setShowCardCount(prev => !prev)}
+                    >
+                      Show card count
+                    </Checkbox>
+                    
+                    <div className="text-start">
+                      <div className="filter_category">Show/Hide Buttons</div>
+                      <Checkbox
+                        className="text-sm"
+                        trueCondition={true}
+                        onClick={() => {}}
+                      >
+                        Lock
+                      </Checkbox>
+                    </div>
+                  </div>
+                
+                </div>
+              )}
+            />
           </div>
           <div className="flex flex-wrap gap-1 justify-end">
             <CustomButton

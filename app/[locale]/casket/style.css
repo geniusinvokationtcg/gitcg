@@ -132,7 +132,7 @@
 }
 
 .filter_category {
-  @apply mx-4 font-semibold;
+  @apply mx-4 font-semibold text-[14px];
 }
 .separator_line {
   @apply border-t-1 border-gray-300 my-1 mx-4;
