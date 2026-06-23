@@ -1,5 +1,6 @@
 import { ServerPure } from "@/utils/types"
 
+type LeagueWeekStatus = "not_started" | "ongoing" | "concluded"
 type LeagueTeamStatus = "active" | "dropped"
 type LeaguePlayerStatus = "active" | "dropped"
 type LeagueMatchPhase = "round_robin" | "playoff"
@@ -9,6 +10,18 @@ export interface LeagueSeason {
   created_at: string
   season_id: string
   name: string | null
+}
+
+export interface LeagueWeek {
+  id: string
+  created_at: string
+  season_id: string
+  week: string
+  status: LeagueWeekStatus
+  story_title: string | null
+  story_description: string | null
+  rules_title: string | null
+  rules_description: string | null
 }
 
 export interface LeagueTeam {

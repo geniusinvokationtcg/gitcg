@@ -417,3 +417,7 @@ img.round {
   filter: opacity(70%);
   pointer-events: none;
 }
+
+.whitened {
+  filter: opacity(70%)
+}

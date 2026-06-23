@@ -1,7 +1,7 @@
 "use client"
 
 import { supabase } from "@/lib/supabaseClient"
-import { LeagueSeason, LeagueTeam, LeaguePlayer, LeagueMatch, LeagueGame } from "./types"
+import { LeagueSeason, LeagueTeam, LeaguePlayer, LeagueMatch, LeagueGame, LeagueWeek } from "./types"
 import { useEffect, useState } from "react"
 
 export function useSeasonData() {
@@ -215,6 +215,39 @@ export function useGameDataByMatch(matchIds: string[]) {
     fetchData()
 
   }, [matchIds.join(",")])
+
+  return { data, isLoading, error }
+}
+
+export function useWeekDataBySeason(seasonId: string) {
+  const [data, setData] = useState<LeagueWeek[]>([])
+  const [isLoading, setIsLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+
+  useEffect(() => {
+    setIsLoading(true)
+
+    const fetchData = async () => {
+      const { data, error } = await supabase.schema("league")
+        .from("weeks")
+        .select("*")
+        .eq("season_id", seasonId)
+        .order("week")
+
+        if (error) {
+        setError(error.message)
+        setData([])
+      } else {
+        setError(null)
+        setData(data)
+      }
+
+      setIsLoading(false)
+    }
+
+    fetchData()
+
+  }, [seasonId])
 
   return { data, isLoading, error }
 }

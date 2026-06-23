@@ -1,12 +1,13 @@
 "use client"
 
-import { a } from "@react-spring/web";
-import { useGameDataByMatch, useGameDataByPlayer, useMatchData, usePlayerData, useTeamData } from "../hooks";
+import { useGameDataByMatch, useMatchData, usePlayerData, useTeamData, useWeekDataBySeason } from "../hooks";
 import { CoopLeagueSeasonPageParams } from "./page";
 import Link from "next/link";
 
 export function CoopLeagueSeasonPageClient({ params }: { params: CoopLeagueSeasonPageParams }) {
   const { locale, season } = params
+
+  const weeks = useWeekDataBySeason(season)
 
   const teams = useTeamData(season);
   const listedTeamIds = teams.data.map(team => team.id)
@@ -163,6 +164,11 @@ export function CoopLeagueSeasonPageClient({ params }: { params: CoopLeagueSeaso
                         {(() => {
                           const m = matchStats.find(match => (match.team_a_id === team.id && match.team_b_id === opp.id) || (match.team_a_id === opp.id && match.team_b_id === team.id))
                           if(!m) return;
+
+                          const week = weeks.data.find(w => w.week === m.week)
+                          if(!week || week.status === "not_started") return <div>
+                            <div className="text-[11px] whitespace-nowrap whitened">{`Week ${m.week}`}</div>
+                          </div>
 
                           const isTeamA = m.team_a_id === team.id
                           const win = isTeamA ? m.win_a : m.win_b
