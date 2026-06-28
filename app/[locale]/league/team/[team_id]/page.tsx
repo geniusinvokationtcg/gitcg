@@ -14,7 +14,13 @@ export async function generateMetadata({ params }: { params: Promise<CoopLeagueT
 
   const team = await getTeam(p.team_id)
 
-  if(!team.data) notFound()
+  console.log("metadata", team);
+
+  if (!team.data) {
+    return {
+      title: "Missing team",
+    };
+  }
 
   const seasonName = await getSeasonName(team.data.season_id)
 
