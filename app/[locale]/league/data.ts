@@ -50,17 +50,18 @@ export const getTeams = (teamIds: string[]) => {
   )()
 }
 
-export const getTeam = (teamId: string) => unstable_cache(
-  async () => {
-    return supabase.schema("league")
+export const getTeam = unstable_cache(
+  async (teamId: string) => {
+    return supabase
+      .schema("league")
       .from("teams")
-      .select("*")
+      .select("season_id,name")
       .eq("id", teamId)
-      .single<LeagueTeam>()
+      .single();
   },
-  ["league-team", teamId],
+  ["league-team"],
   {
-    tags: [`league-team:${teamId}`],
-    revalidate: 86400
+    tags: ["league-team"],
+    revalidate: 86400,
   }
-)()
+)

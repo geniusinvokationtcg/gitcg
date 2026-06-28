@@ -2,7 +2,7 @@ import { Locales } from "@/utils/types"
 import { CoopLeagueTeamPageClient } from "./Client"
 import { supabase } from "@/lib/supabaseClient"
 import { notFound } from "next/navigation"
-import { getSeasonName } from "../../data"
+import { getTeam, getSeasonName } from "../../data"
 import { LeagueTeam } from "../../types"
 
 export interface CoopLeagueTeamPageParams {
@@ -13,19 +13,8 @@ export interface CoopLeagueTeamPageParams {
 export async function generateMetadata({ params }: { params: Promise<CoopLeagueTeamPageParams> }) {
   const p = await params
 
-  const team = await supabase.schema("league")
-    .from("teams")
-    .select("*")
-    .eq("id", p.team_id)
-    .single<LeagueTeam>()
-
-  console.log("metadata", team);
-
-  if (!team.data) {
-    return {
-      title: "Missing team",
-    };
-  }
+  const team = await getTeam(p.team_id)
+  if(!team.data) return;
 
   const seasonName = await getSeasonName(team.data.season_id)
 
