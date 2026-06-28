@@ -34,7 +34,10 @@ export default async function CoopLeagueTeamPage({ params }: { params: Promise<C
     .eq("id", p.team_id)
     .single<{ season_id: string }>()
   
-  if(!season.data) notFound()
+  if(season.error) {
+    console.error(season.error)
+    notFound()
+  }
 
   return <CoopLeagueTeamPageClient params={p} season_id={season.data.season_id}/>
 }

@@ -59,6 +59,71 @@ export function CoopLeagueTeamPageClient({ params, season_id }: { params: CoopLe
         className="avatar"
         alt="Avatar"
       />
+
+      <div className="stat_showcase">
+        {(() => {
+          const teamStat = matchStats.reduce((a, match) => {
+            const isTeamA = match.team_a_id === team_id
+
+            let teamLetter: "a" | "b" = isTeamA ? "a" : "b"
+            const matchWin = match[`win_${teamLetter}`]
+            const matchLoss = match[`loss_${teamLetter}`]
+
+            //MATCH RECORD
+            if (match.isOngoing) {
+              a.match.ongoing++
+            } else if (matchWin > matchLoss) {
+              a.match.win++
+            } else if (matchWin === matchLoss) {
+              a.match.tie++
+            } else if (matchWin < matchLoss) {
+              a.match.loss++
+            }
+
+            if (!match.isOngoing) {
+              a.match.concluded++
+            }
+
+            //GAME RECORD
+            a.game.win += matchWin
+            a.game.tie += match.tie
+            a.game.loss += matchLoss
+            a.game.ongoing += match.ongoing
+            a.game.concluded += matchWin + match.tie + matchLoss
+
+            a.pts += 3 * matchWin + 0.5 * matchLoss
+
+            return a;
+          }, {
+            match: { win: 0, tie: 0, loss: 0, ongoing: 0, concluded: 0 },
+            game: { win: 0, tie: 0, loss: 0, ongoing: 0, concluded: 0 },
+            pts: 0
+          })
+
+          return <>
+            <div>
+              <div>Matches</div>
+              <div>{teamStat.match.concluded}</div>
+            </div>
+            <div>
+              <div>Match Record</div>
+              <div className="whitespace-nowrap">{`${teamStat.match.win}–${teamStat.match.tie}–${teamStat.match.loss}`}</div>
+            </div>
+            <div>
+              <div>Games</div>
+              <div>{teamStat.game.concluded}</div>
+            </div>
+            <div>
+              <div>Game Record</div>
+              <div className="whitespace-nowrap">{`${teamStat.game.win}–${teamStat.game.tie}–${teamStat.game.loss}`}</div>
+            </div>
+            <div>
+              <div>Points</div>
+              <div>{teamStat.pts}</div>
+            </div>
+          </>
+        })()}
+      </div>
     </section>
 
     <section>
