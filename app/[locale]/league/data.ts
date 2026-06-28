@@ -54,7 +54,7 @@ export const getTeam = (teamId: string) => unstable_cache(
   async () => {
     return supabase.schema("league")
       .from("teams")
-      .select("season_id,name")
+      .select("*")
       .eq("id", teamId)
       .single<LeagueTeam>()
   },
