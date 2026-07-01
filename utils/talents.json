@@ -832,5 +832,23 @@
     "character_name": "Experimental Field Generator",
     "talent_id": 226051,
     "talent_name": "Gravity Field"
+  },
+  {
+    "character_id": 1712,
+    "character_name": "Nefer",
+    "talent_id": 217121,
+    "talent_name": "Victory Flows from the Turning of Tides"
+  },
+  {
+    "character_id": 2105,
+    "character_name": "Wayward Hermetic Spiritspeaker",
+    "talent_id": 221051,
+    "talent_name": "Flow of Forms"
+  },
+  {
+    "character_id": 2504,
+    "character_name": "Black Serpent Knight: Windcutter",
+    "talent_id": 225041,
+    "talent_name": "\"Once, the Lone Wind That Kept the Dark Calamity at Bay...\""
   }
 ]

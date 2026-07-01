@@ -7967,6 +7967,90 @@
       "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a0cf9ce/0b6a227d1cd22fbf28cc2130e6f91a39.png"
     },
     {
+      "id": 1712,
+      "name": "Nefer",
+      "element_type": 306,
+      "role_skill_infos": [
+        {
+          "skill_text": "Deals 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' /><color=#7EC236FF>Dendro DMG</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "16",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/848248aa7c40784633446db172ee4678.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Normal Attack"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/2c014e6053c4f0d032e1d1ff0c6de0e1.png",
+          "name": "Striking Serpent",
+          "id": "17121"
+        },
+        {
+          "skill_text": "Deal 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' /><color=#7EC236FF>Dendro DMG</color>. Attach 1 stack of <color=#FFFFFFFF>RES</color> to self. Before your next action, grant <color=#FFFFFFFF>Cost Reduction</color> to up to 3 highest-cost <color=#FFFFFFFF>Seeds of Deceit</color> in your Hand.",
+          "skill_costs": [
+            {
+              "cost_type": "16",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/848248aa7c40784633446db172ee4678.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "Elemental Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68f81ec7/194ec6a0da89fa6bd036b4f252a24fee.png",
+          "name": "Senet Strategy: Dance of a Thousand Nights",
+          "id": "17122"
+        },
+        {
+          "skill_text": "Deal 4 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' /><color=#7EC236FF>Dendro DMG</color>. Deal +1 DMG for each <color=#FFFFFFFF>Seeds of Deceit</color> in your Hand (max +2)",
+          "skill_costs": [
+            {
+              "cost_type": "16",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/848248aa7c40784633446db172ee4678.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Elemental Burst"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a4458e2/5320bca958a2d476010576b4fa105615.png",
+          "name": "Sacred Vow: True Eye's Phantasm",
+          "id": "17123"
+        },
+        {
+          "skill_text": "(Passive) During this game, when your opponent is affected by <color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' /> Bloom reaction(s)</color>, the reaction will be converted to the <color=#FFFFFFFF><color=#FFFFFFFF>Lunar-Bloom</color></color> reaction.\\n<color=#FFFFFFFF>When your Hand contains fewer than 3 Seeds of Deceit and the opponent is affected by the <color=#FFFFFFFF>Lunar-Bloom</color> reaction:</color> Create 1 <color=#FFFFFFFF>Seeds of Deceit</color> in your Hand. (Twice per Round)",
+          "skill_costs": [],
+          "type": [
+            "Passive Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a0cf9d1/5191dbab79aa4cde77238186390f4560.png",
+          "name": "Moonsign Benediction: Dusklit Eaves",
+          "id": "17125"
+        }
+      ],
+      "weapon": "catalyst",
+      "belongs": [
+        "sumeru",
+        "nod_krai",
+        ""
+      ],
+      "hp": 10,
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a4458bd/0bf8746cc29ce22f5ef0ae24ea73c7d2.png",
+      "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a4458de/0d55076caed50cc3de8a6d473bbdd178.png"
+    },
+    {
       "id": 2101,
       "name": "Fatui Cryo Cicin Mage",
       "element_type": 301,
@@ -8291,6 +8375,90 @@
       "hp": 11,
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/5d35d54139a5d3492085840721aeabdc.png",
       "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f716/0175ca1c46848cdfd9dda7ba1dd73e59.png"
+    },
+    {
+      "id": 2105,
+      "name": "Wayward Hermetic Spiritspeaker",
+      "element_type": 301,
+      "role_skill_infos": [
+        {
+          "skill_text": "Deals 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/924fba80b9137b4e8fdf5871aa22d666.png' /><color=#99FFFFFF>Cryo DMG</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "11",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/412134fa7fc8a73b5e20c177a3ae0046.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Normal Attack"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/2c014e6053c4f0d032e1d1ff0c6de0e1.png",
+          "name": "Spiritspeaking: Frost Star",
+          "id": "21051"
+        },
+        {
+          "skill_text": "Deals 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/924fba80b9137b4e8fdf5871aa22d666.png' /><color=#99FFFFFF>Cryo DMG</color>, places 1 <color=#FFFFFFFF>Radiant Hues</color> third from the top of your deck, and <color=#FFFFFFFF>Select</color> 1 of 3 random <color=#FFFFFFFF>Radiant Hues</color> enhancement effects.",
+          "skill_costs": [
+            {
+              "cost_type": "11",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/412134fa7fc8a73b5e20c177a3ae0046.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "Elemental Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/b88f58ff18418c5d99dc62c329313686.png",
+          "name": "Radiance in Flux",
+          "id": "21052"
+        },
+        {
+          "skill_text": "Deals 4 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/924fba80b9137b4e8fdf5871aa22d666.png' /><color=#99FFFFFF>Cryo DMG</color>, and adds 1 <color=#FFFFFFFF>Radiant Hues</color> to your Hand.",
+          "skill_costs": [
+            {
+              "cost_type": "11",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/412134fa7fc8a73b5e20c177a3ae0046.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Elemental Burst"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a4458e2/5a96473f2494858527c95b467775d00b.png",
+          "name": "Chilling Illustration",
+          "id": "21053"
+        },
+        {
+          "skill_text": "(Passive) When battle begins, create 3 <color=#FFFFFFFF>Radiant Hues</color> and place them evenly into your deck.",
+          "skill_costs": [],
+          "type": [
+            "Passive Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a4458e2/893bbc66f46bb5d1d22b8adf207f4734.png",
+          "name": "Iridescent Silhouette",
+          "id": "21054"
+        }
+      ],
+      "weapon": "other_weapons",
+      "belongs": [
+        "monster",
+        "",
+        ""
+      ],
+      "hp": 10,
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a4458bd/31d9e8a3ace15bc4c57192463ea73920.png",
+      "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a4458de/8d17b3e81294df183d38a13f2a39cd04.png"
     },
     {
       "id": 2201,
@@ -10127,6 +10295,90 @@
       "hp": 10,
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/aac4640c3e0c0d35e05ba4e9faf6098d.png",
       "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f716/9f93bdb31065252347c6b7172a695ecf.png"
+    },
+    {
+      "id": 2504,
+      "name": "Black Serpent Knight: Windcutter",
+      "element_type": 307,
+      "role_skill_infos": [
+        {
+          "skill_text": "Deals 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>Physical DMG</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "17",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Normal Attack"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/4ef5373e27e14926f2fec5ffa0511440.png",
+          "name": "Half-Sword Technique",
+          "id": "25041"
+        },
+        {
+          "skill_text": "Deal 3 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' /><color=#80FFD7FF>Anemo DMG</color> and draw 1 card.",
+          "skill_costs": [
+            {
+              "cost_type": "17",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "Elemental Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/52b802c08904358e19418aac12fae5ee.png",
+          "name": "Rising Slash",
+          "id": "25042"
+        },
+        {
+          "skill_text": "<color=#FFFFFFFF>Prepare Skill</color>: <color=#FFFFFFFF>Reckless Stance</color>, then <color=#FFFFFFFF>Prepare Skill</color>: <color=#FFFFFFFF>Gale Pursuit</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "17",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Elemental Burst"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a4458e2/4f5d5f3d33770fcd3d1b23ebd5779a5c.png",
+          "name": "Guard Stance",
+          "id": "25043"
+        },
+        {
+          "skill_text": "(Passive) When you trigger a Swirl reaction, or when the opponent loses their <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/681a94b1/24bc6b249479a2371a126a0c617ee0ae.png' /><color=#FFFFFFFF>Shield</color>, <color=#FFFFFFFF>DMG Negation</color>, or Combat Status, draw 1 card. (Twice per Round)",
+          "skill_costs": [],
+          "type": [
+            "Passive Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/9cacc562a002a2a3a24e97ae06baa5f4.png",
+          "name": "Vanguard Momentum",
+          "id": "25044"
+        }
+      ],
+      "weapon": "other_weapons",
+      "belongs": [
+        "monster",
+        "",
+        ""
+      ],
+      "hp": 10,
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a4458bd/aa72d230ace4b4aa64faa13d3a0aa1e0.png",
+      "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a4458de/933f2176018047fdcb59d39488f15ff5.png"
     },
     {
       "id": 2601,
@@ -13095,7 +13347,7 @@
       "content": "<color=#FFFFFFFF>Combat Action</color>: When your active character is <color=#FFFFFFFF>Tighnari</color>, equip this card.\\nAfter Tighnari equips this card, immediately use <color=#FFD780FF>Vijnana-Phala Mine</color> once.\\nWhen your Tighnari, who has this card equipped, is affected by <color=#FFFFFFFF>Vijnana Suffusion</color>, the character's <color=#FFFFFFFF>Charged Attack</color> costs 1 less <color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png' />Unaligned Element</color>.\\n(You must have Tighnari in your deck to add this card to your deck.)",
       "action_type": "equipment_card",
       "rank_id": 0,
-      "cost_num1": "4",
+      "cost_num1": "3",
       "cost_type1": "16",
       "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/848248aa7c40784633446db172ee4678.png",
       "cost_num2": "0",
@@ -13320,6 +13572,29 @@
       "max_count": 2
     },
     {
+      "id": 217121,
+      "name": "Victory Flows from the Turning of Tides",
+      "content": "<color=#FFFFFFFF>Fast Action</color>: Equip this to your <color=#FFFFFFFF>Nefer</color>.\\nCreate 3 <color=#FFFFFFFF>Seeds of Deceit</color>, place them evenly into your deck, and grant <color=#FFFFFFFF>Cost Reduction</color> to all <color=#FFFFFFFF>Seeds of Deceit</color> cards in your Hand and deck.\\n<color=#FFFFFFFF>After your Nefer deals DMG with <color=#FFFFFFFF>Phantasm Performance</color>:</color> Draw 1 card, and grant <color=#FFFFFFFF>Cost Reduction</color> to all <color=#FFFFFFFF>Seeds of Deceit</color> cards in your Hand and deck. (Twice per Round)\\n(You must have Nefer in your deck to add this card to your deck.)",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "3",
+      "cost_type1": "16",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/848248aa7c40784633446db172ee4678.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a4458bd/88185515cd8bca42a244512aad56cea0.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 221011,
       "name": "Cicin's Cold Glare",
       "content": "<color=#FFFFFFFF>Combat Action</color>: When your active character is <color=#FFFFFFFF>Fatui Cryo Cicin Mage</color>, equip this card.\\nAfter Fatui Cryo Cicin Mage equips this card, immediately use <color=#FFD780FF>Misty Summons</color> once.\\nAfter your Fatui Cryo Cicin Mage, who has this card equipped, uses a Skill: If <color=#FFFFFFFF>Cryo Cicins</color>' <color=#FFFFFFFF>Usage(s)</color> have exceeded their upper limit, deal 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/924fba80b9137b4e8fdf5871aa22d666.png' /><color=#99FFFFFF>Cryo DMG</color>.\\n(You must have Fatui Cryo Cicin Mage in your deck to add this card to your deck.)",
@@ -13408,6 +13683,29 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/35a3ccbf495d2e920443caa063684438.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 221051,
+      "name": "Flow of Forms",
+      "content": "<color=#FFFFFFFF>Fast Action</color>: Equip this to your <color=#FFFFFFFF>Wayward Hermetic Spiritspeaker</color>.\\nCreate 1 Radiant Hues and add it to your Hand.\\nAfter you play <color=#FFFFFFFF>Radiant Hues</color>, create 2 stacks of <color=#FFFFFFFF>Shield</color>. (Once per Round) (You must have Wayward Hermetic Spiritspeaker in your deck to add this card to your deck)",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1": "11",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/412134fa7fc8a73b5e20c177a3ae0046.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a4458bd/35283f67fd32c3ba5e94b0ab45539181.png",
       "is_special": false,
       "max_count": 2
     },
@@ -13914,6 +14212,29 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/be6fab981ed1b4349e0d8fef9f2c6b86.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 225041,
+      "name": "\"Once, the Lone Wind That Kept the Dark Calamity at Bay...\"",
+      "content": "<color=#FFFFFFFF>Combat Action</color>: When your active character is <color=#FFFFFFFF>Black Serpent Knight: Windcutter</color>, equip this card.\\nAfter Black Serpent Knight: Windcutter equips this card, immediately use <color=#FFD780FF>Rising Slash</color> once.\\n<color=#FFFFFFFF>At the start of the Action Phase:</color> If your opponent has at least 7 cards in their Hand, attach 1 stack of <color=#FFFFFFFF>RES</color> to their active character. If you have at least 7 cards in your Hand, attach 2 stacks of <color=#FFFFFFFF>RES</color> to your active character.\\n(You must have Black Serpent Knight: Windcutter in your deck to add this card to your deck)",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "3",
+      "cost_type1": "17",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "combat_action",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a4458bd/dfbb5c6295f98d773ec24b2ed3d4db1f.png",
       "is_special": false,
       "max_count": 2
     },
@@ -17667,6 +17988,29 @@
       "max_count": 2
     },
     {
+      "id": 321041,
+      "name": "Nightmare Omen",
+      "content": "<color=#FFFFFFFF>When played or when the Action Phase begins:</color> Grants <color=#FFFFFFFF><color=#FFFFFFFF>Cost Increase</color></color> to the card with the highest <color=#FFFFFFFF><color=#FFFFFFFF>Current Elemental Dice Cost</color></color> in opponent's Hand, and grant <color=#FFFFFFFF><color=#FFFFFFFF>Cost Increase</color></color> to the top card of your deck.",
+      "action_type": "support_card",
+      "rank_id": 0,
+      "cost_num1": "0",
+      "cost_type1": "",
+      "cost_type1_icon": "",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "location",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a4458bd/ed300c1af2cd0fe3904392b2948d0480.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 322001,
       "name": "Paimon",
       "content": "<color=#FFFFFFFF>When Action Phase begins:</color> Create <color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8401f5013a7c381edb6cd088b207bb9f.png' />Omni Element</color> ×2.\\n<color=#FFFFFFFF><color=#FFFFFFFF>Usage(s)</color>: 2</color>",
@@ -19066,6 +19410,52 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a0cf9b1/bab71d306fc419b600b7ffafbd5197c2.png",
+      "is_special": false,
+      "max_count": 1
+    },
+    {
+      "id": 331010,
+      "name": "Elemental Transfiguration: Aquabreeze Blessing",
+      "content": "<color=#FFFFFFFF><color=#FFFFFFFF>Elemental Transfiguration</color>: </color><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>Hydro </color><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' /><color=#80FFD7FF>Anemo</color>\\n<color=#FFFFFFFF>Roll Phase:</color> Always roll 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png' /><color=#80C0FFFF>Hydro Dice</color> and 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png' /><color=#80FFD7FF>Anemo Dice</color>.\\n<color=#FFFFFFFF>After you trigger a <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' />Swirl (Hydro) reaction:</color> Discard this card, then choose either <color=#FFFFFFFF>Aquabreeze Blessing: Waterburst</color> or <color=#FFFFFFFF>Aquabreeze Blessing: Vortex</color> and add it to your Hand.",
+      "action_type": "support_card",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1": "3",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8b295c3fed21771dcced6055cdf2f2ce.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "elemental_transfiguration",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a4458bd/bd6a04bd679fce4cded58b3406eef80a.png",
+      "is_special": false,
+      "max_count": 1
+    },
+    {
+      "id": 331011,
+      "name": "Elemental Transfiguration: Thunderbloom Blessing",
+      "content": "<color=#FFFFFFFF><color=#FFFFFFFF>Elemental Transfiguration</color>:</color><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><color=#FFACFFFF>Electro</color><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' /><color=#7EC236FF>Dendro</color>\\n<color=#FFFFFFFF>Roll Phase:</color> Always roll 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0a7a50d15a7580c4de07a41f87a95787.png' /><color=#FFACFFFF>Electro Dice</color> and 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/848248aa7c40784633446db172ee4678.png' /><color=#7EC236FF>Dendro Dice</color>.\\n<color=#FFFFFFFF>After you trigger a <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' />Catalyze reaction:</color> Discard this card, then choose either <color=#FFFFFFFF>Thunderbloom Blessing: Shatterbolt</color> or <color=#FFFFFFFF>Thunderbloom Blessing: Nexus</color> and add it to your Hand.",
+      "action_type": "support_card",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1": "3",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8b295c3fed21771dcced6055cdf2f2ce.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "elemental_transfiguration",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a4458bd/318df8c18bb635c5de3f82c958d650f6.png",
       "is_special": false,
       "max_count": 1
     },
@@ -20887,6 +21277,52 @@
       "max_count": 2
     },
     {
+      "id": 332063,
+      "name": "Lil' Fungi's Fun-Tastic Fiesta",
+      "content": "Increase DMG dealt by your targeted Monster characters by 1. (Cannot stack)\\n<color=#FFFFFFFF> While this card is in your Hand, whenever your Monster characters use Skills:</color> Grants <color=#FFFFFFFF>Cost Reduction</color> to this card.\\n<color=#FFFFFFFF>When this card is <color=#FFFFFFFF>Discard</color>ed:</color> A random one of your Monster characters gains +1 Max HP.\\n(Can only be added to your deck if it contains at least 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/602a442d38d7e6a8dc0a21bf0540694d.png' />Monster characters)",
+      "action_type": "event_card",
+      "rank_id": 0,
+      "cost_num1": "5",
+      "cost_type1": "3",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8b295c3fed21771dcced6055cdf2f2ce.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a4458bd/c19448d0304b431eb8a2cbb2c3d37050.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 332064,
+      "name": "The Power of Research",
+      "content": "The next 3 times you play a card with a <color=#FFFFFFFF><color=#FFFFFFFF>Current Elemental Dice Cost</color></color> of 3 or more, create 1 random basic Elemental Die.",
+      "action_type": "event_card",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1": "3",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8b295c3fed21771dcced6055cdf2f2ce.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a4458bd/4220c933303873e2e081a964cfe9d955.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 333001,
       "name": "Jueyun Guoba",
       "content": "During this Round, the target character's next <color=#FFFFFFFF>Normal Attack</color> deals +1 DMG.\\n(A character can consume at most 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/e25f04745615df9e779831a1c1354e38.png' />Food per Round)",
@@ -21435,6 +21871,29 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a0cf9b1/ed0bbfd758f8354d1b7d6fa376fc3a40.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 333031,
+      "name": "Lakkaberry Pie",
+      "content": "During this Round, the target character will use 2 fewer Elemental Dice the next 2 times they use Skills.\\n(A character can consume at most 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/e25f04745615df9e779831a1c1354e38.png' />Food per Round)",
+      "action_type": "event_card",
+      "rank_id": 0,
+      "cost_num1": "4",
+      "cost_type1": "3",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8b295c3fed21771dcced6055cdf2f2ce.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "food",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a4458bd/f35e75e6ef67db04017ed4e6616208b1.png",
       "is_special": false,
       "max_count": 2
     }
@@ -25008,6 +25467,78 @@
       "name": "Roulette Special",
       "id": 333030,
       "code": 595,
+      "type": "action"
+    },
+    {
+      "name": "Nefer",
+      "id": 1712,
+      "code": 596,
+      "type": "character"
+    },
+    {
+      "name": "Wayward Hermetic Spiritspeaker",
+      "id": 2105,
+      "code": 597,
+      "type": "character"
+    },
+    {
+      "name": "Black Serpent Knight: Windcutter",
+      "id": 2504,
+      "code": 598,
+      "type": "character"
+    },
+    {
+      "name": "Victory Flows from the Turning of Tides",
+      "id": 217121,
+      "code": 599,
+      "type": "action"
+    },
+    {
+      "name": "Flow of Forms",
+      "id": 221051,
+      "code": 600,
+      "type": "action"
+    },
+    {
+      "name": "\"Once, the Lone Wind That Kept the Dark Calamity at Bay...\"",
+      "id": 225041,
+      "code": 601,
+      "type": "action"
+    },
+    {
+      "name": "Nightmare Omen",
+      "id": 321041,
+      "code": 602,
+      "type": "action"
+    },
+    {
+      "name": "Elemental Transfiguration: Aquabreeze Blessing",
+      "id": 331010,
+      "code": 603,
+      "type": "action"
+    },
+    {
+      "name": "Elemental Transfiguration: Thunderbloom Blessing",
+      "id": 331011,
+      "code": 604,
+      "type": "action"
+    },
+    {
+      "name": "Lil' Fungi's Fun-Tastic Fiesta",
+      "id": 332063,
+      "code": 605,
+      "type": "action"
+    },
+    {
+      "name": "The Power of Research",
+      "id": 332064,
+      "code": 606,
+      "type": "action"
+    },
+    {
+      "name": "Lakkaberry Pie",
+      "id": 333031,
+      "code": 607,
       "type": "action"
     }
   ]
