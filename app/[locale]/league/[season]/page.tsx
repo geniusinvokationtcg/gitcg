@@ -9,12 +9,12 @@ export interface CoopLeagueSeasonPageParams {
 }
 
 export async function generateMetadata({ params }: { params: Promise<CoopLeagueSeasonPageParams> }) {
-  const p = await params
+  // const p = await params
 
-  const seasonName = await getSeasonName(p.season)
+  // const seasonName = await getSeasonName(p.season)
 
   const metadata = {
-    title: `GITCG Co-op League ${seasonName.data?.name || ""}`,
+    title: `GITCG Co-op League`,//${seasonName.data?.name || ""}`,
     description: "Pitabrain"
   }
 
