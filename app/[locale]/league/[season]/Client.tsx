@@ -1,11 +1,14 @@
 "use client"
 
+import { usePageTitle } from "@/hooks/usePageTitle";
 import { useGameDataByMatch, useMatchData, usePlayerData, useTeamData, useWeekDataBySeason } from "../hooks";
 import { CoopLeagueSeasonPageParams } from "./page";
 import Link from "next/link";
 
 export function CoopLeagueSeasonPageClient({ params }: { params: CoopLeagueSeasonPageParams }) {
   const { locale, season } = params
+
+  usePageTitle("GITCG Co-op League")
 
   const weeks = useWeekDataBySeason(season)
 

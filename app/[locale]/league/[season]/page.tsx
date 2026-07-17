@@ -8,18 +8,18 @@ export interface CoopLeagueSeasonPageParams {
   season: string
 }
 
-export async function generateMetadata({ params }: { params: Promise<CoopLeagueSeasonPageParams> }) {
-  // const p = await params
+// export async function generateMetadata({ params }: { params: Promise<CoopLeagueSeasonPageParams> }) {
+//   // const p = await params
 
-  // const seasonName = await getSeasonName(p.season)
+//   // const seasonName = await getSeasonName(p.season)
 
-  const metadata = {
-    title: `GITCG Co-op League`,//${seasonName.data?.name || ""}`,
-    description: "Pitabrain"
-  }
+//   const metadata = {
+//     title: `GITCG Co-op League`,//${seasonName.data?.name || ""}`,
+//     description: "Pitabrain"
+//   }
 
-  return { ...metadata, openGraph: metadata, twitter: metadata }
-}
+//   return { ...metadata, openGraph: metadata, twitter: metadata }
+// }
 
 export default async function CoopLeagueSeasonPage({ params }: { params: Promise<CoopLeagueSeasonPageParams> }) {
   const p = await params
