@@ -35,11 +35,11 @@ export default async function CoopLeagueMatchPage({ params }: { params: Promise<
 
   const match = await getMatch(p.match_id)
   
-  if(!match.data) notFound();
+  if(!match.data) return "Error loading team: "+match.error.message
   
   const teams = await getTeams([match.data.team_a_id, match.data.team_b_id])
 
-  if(!teams.data) notFound()
+  if(!teams.data) return "Error loading team: "+teams.error.message
 
   return <CoopLeagueMatchPageClient params={p} season_id={match.data.season_id} match={match.data} teams={teams.data}/>
 }
