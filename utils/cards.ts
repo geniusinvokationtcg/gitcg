@@ -138,7 +138,7 @@ export const tribeResonance: {
 	},
 	{
 		tribe: "monster",
-		card_id: [332015]
+		card_id: [332015, 332063]
 	},
 	{
 		tribe: "fatui",
