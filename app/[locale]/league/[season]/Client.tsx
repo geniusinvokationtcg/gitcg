@@ -45,9 +45,11 @@ export function CoopLeagueSeasonPageClient({ params }: { params: CoopLeagueSeaso
       isOngoing: !!stats.ongoing || gamesByMatch.length < 3
     }
   })
+  const roundRobinMatchStats = matchStats.filter(match => match.phase === "round_robin")
 
   const teamStatsUnsorted = teams.data.map(team => {
     const matchByTeam = matchStats.filter(match => match.team_a_id === team.id || match.team_b_id === team.id)
+    const matchByTeam = roundRobinMatchStats.filter(match => match.team_a_id === team.id || match.team_b_id === team.id)
 
     const stats = matchByTeam.reduce((a, match) => {
       if (match.team_a_id === team.id) {
@@ -163,6 +165,7 @@ export function CoopLeagueSeasonPageClient({ params }: { params: CoopLeagueSeaso
                       <div className="text-xs flex flex-col gap-0.25">
                         {(() => {
                           const m = matchStats.find(match => (match.team_a_id === team.id && match.team_b_id === opp.id) || (match.team_a_id === opp.id && match.team_b_id === team.id))
+                          const m = roundRobinMatchStats.find(match => (match.team_a_id === team.id && match.team_b_id === opp.id) || (match.team_a_id === opp.id && match.team_b_id === team.id))
                           if(!m) return;
 
                           const week = weeks.data.find(w => w.week === m.week)

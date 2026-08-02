@@ -25,7 +25,6 @@ export default async function CoopLeagueSeasonPage({ params }: { params: Promise
   const p = await params
 
   const seasonName = await getSeasonName(p.season)
-  console.log(seasonName)
   
   // if(seasonName.error) {
   //   console.error(seasonName.error)
