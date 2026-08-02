@@ -48,7 +48,6 @@ export function CoopLeagueSeasonPageClient({ params }: { params: CoopLeagueSeaso
   const roundRobinMatchStats = matchStats.filter(match => match.phase === "round_robin")
 
   const teamStatsUnsorted = teams.data.map(team => {
-    const matchByTeam = matchStats.filter(match => match.team_a_id === team.id || match.team_b_id === team.id)
     const matchByTeam = roundRobinMatchStats.filter(match => match.team_a_id === team.id || match.team_b_id === team.id)
 
     const stats = matchByTeam.reduce((a, match) => {
@@ -164,7 +163,6 @@ export function CoopLeagueSeasonPageClient({ params }: { params: CoopLeagueSeaso
                     {team.id !== opp.id && (
                       <div className="text-xs flex flex-col gap-0.25">
                         {(() => {
-                          const m = matchStats.find(match => (match.team_a_id === team.id && match.team_b_id === opp.id) || (match.team_a_id === opp.id && match.team_b_id === team.id))
                           const m = roundRobinMatchStats.find(match => (match.team_a_id === team.id && match.team_b_id === opp.id) || (match.team_a_id === opp.id && match.team_b_id === team.id))
                           if(!m) return;
 
