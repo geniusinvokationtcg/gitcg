@@ -15,8 +15,8 @@ export function CoopLeagueSeasonPageClient({ params }: { params: CoopLeagueSeaso
   const players = usePlayerData(listedTeamIds)
   // const listedPlayerIds = players.data.map(player => player.id)
 
-  const matches = useMatchData(listedTeamIds)
-  const listedMatchIds = matches.data.map(match => match.id)
+  const matches = useMatchData(listedTeamIds, season)
+  const listedMatchIds = matches.data.map(match => match.id).filter(match_id => match_id)
 
   const games = useGameDataByMatch(listedMatchIds)
 
@@ -46,6 +46,8 @@ export function CoopLeagueSeasonPageClient({ params }: { params: CoopLeagueSeaso
     }
   })
   const roundRobinMatchStats = matchStats.filter(match => match.phase === "round_robin")
+  const playoffMatchStats = matchStats.filter(match => match.phase === "playoff")
+  console.log(matches.data.filter(m => m.phase === "playoff"))
 
   const teamStatsUnsorted = teams.data.map(team => {
     const matchByTeam = roundRobinMatchStats.filter(match => match.team_a_id === team.id || match.team_b_id === team.id)
@@ -132,8 +134,92 @@ export function CoopLeagueSeasonPageClient({ params }: { params: CoopLeagueSeaso
     || b.tie - a.tie
   )
 
+  const maxRound = 3
+
   return <div className="mx-auto my-6 px-6 flex flex-col gap-6 min-w-screen">
     <div className="flex flex-col gap-3">
+      <h1 className="section_title">Playoff Bracket</h1>
+      <div className="overflow-auto text-sm flex flex-col justify-center">
+        <div className="flex flex-row gap-x-12 mx-auto mb-6">
+          <h2 className="font-semibold mb-2 min-w-50 text-center">Quarterfinal</h2>
+          <h2 className="font-semibold mb-2 min-w-50 text-center">Semifinal</h2>
+          <h2 className="font-semibold mb-2 min-w-50 text-center">Final</h2>
+        </div>
+
+        <div
+          className="flex flex-row gap-x-12 mx-auto"
+          style={{ gridTemplateColumns: `repeat(${maxRound}, auto)` }}
+        >
+          {["ro8", "ro4", "ro2"].map((weekStr, index) => {
+            const roundMatches = playoffMatchStats.filter(match => match.week === weekStr).toSorted((a, b) => (a.order || 0) - (b.order || 0))
+            const matchMinHeight = 16.5*(2**(index)) + 8*(2**(index)-1);
+
+            return <div key={index} className="flex flex-col items-center gap-8 relative">
+              {roundMatches.map((match, i) => {
+                const winner = match.win_a > match.win_b && !match.isOngoing ? match.team_a_id : (match.isOngoing ? null : match.team_b_id)
+
+                function isMatchWinner (team_id: string | null) {
+                  if(!team_id) return false
+                  if(match.is_bye) return match.team_a_id === team_id || match.team_b_id === team_id
+                  return winner === team_id
+                }
+                
+                return <div
+                  key={match.id}
+                  className={`relative min-h-${matchMinHeight} flex items-center`}
+                  style={{
+                    height: `${(matchMinHeight)*4}px`,
+                  }}
+                >
+                  {/* Connectors (first part excludes last round; second part excludes first round) */}
+                  {index < maxRound-1 && <>
+                    <div className={`absolute top-[calc(50%-1px)] left-full h-0 w-6 border-2 border-l-0 border-gray-300 ${i % 2 === 0 ? "" : "hidden"}`}
+                    style={{
+                      height: `${(matchMinHeight+8.5)*4}px`,
+                    }}
+                    />
+                    <div className={`absolute left-[calc(100%+24px)] h-0 w-6 border-t-2 border-gray-300 ${i % 2 === 0 ? "" : "hidden"}`}
+                      style={{
+                        top: `${matchMinHeight*4+15}px`
+                      }}
+                    />
+                  </>}
+
+                  <div className="relative">
+                    <Link href={match.is_bye || match.team_a_id === null || match.team_b_id === null ? "" : `/${locale}/league/match/${match.id}`} className={`block ${match.is_bye || match.team_a_id === null || match.team_b_id === null ? "cursor-default" : ""}`}>
+                      <div className={`group w-50 relative z-10 flex flex-col gap-0.5`} >
+                        <div className="absolute top-[-20px] text-gray-500 text-xs group-hover:text-gray-800 transition-all duration-200">
+                          {
+                            ""
+                          }
+                        </div>
+                        <div className="flex flex-row gap-0.5 justify-between h-8">
+                          <span className={`overflow-hidden text-ellipsis whitespace-nowrap flex items-center w-full p-2 bg-gray-200 group-hover:bg-gray-300 transition-all duration-200 ${isMatchWinner(match.team_a_id) ? "font-semibold" : ""} ${!match.team_a_id && match.is_bye ? "italic" : ""}`}>
+                            {teams.data.find(team => team.id === match.team_a_id)?.name || (!match.team_a_id && match.is_bye ? "BYE" : "")}
+                          </span>
+                          <span className={`py-2 bg-gray-200 group-hover:bg-gray-300 transition-all duration-200 min-w-8 flex justify-center items-center ${isMatchWinner(match.team_a_id) ? "font-semibold" : ""}`}>
+                            {match.is_bye ? "" : match.win_a}
+                          </span>
+                        </div>
+                        <div className="flex flex-row gap-0.5 justify-between h-8">
+                          <span className={`overflow-hidden text-ellipsis whitespace-nowrap flex items-center w-full p-2 bg-gray-200 group-hover:bg-gray-300 transition-all duration-200 ${isMatchWinner(match.team_b_id) ? "font-semibold" : ""} ${!match.team_b_id && match.is_bye ? "italic" : ""}`}>
+                            {teams.data.find(team => team.id === match.team_b_id)?.name || (!match.team_b_id && match.is_bye ? "BYE" : "")}
+                          </span>
+                          <span className={`py-2 bg-gray-200 group-hover:bg-gray-300 transition-all duration-200 min-w-8 flex justify-center items-center ${isMatchWinner(match.team_b_id) ? "font-semibold" : ""}`}>
+                            {match.is_bye ? "" : match.win_b}
+                          </span>
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
+                  
+                </div>
+              })}
+            </div>
+          })}
+        </div>
+        
+      </div>
       <h1 className="section_title">Round-Robin Bracket</h1>
       <div className="fullpage_table_container border-t-1 border-gray-300 lg:w-fit lg:self-center"> {/*lg to center it for large screen*/}
         <table className="vertical_border">

@@ -65,3 +65,12 @@ export const getTeam = unstable_cache(
     revalidate: 86400,
   }
 )
+
+export function getWeekTitle(week: string) {
+  switch(week) {
+    case "ro8": return "Quarterfinal"
+    case "ro4": return "Semifinal"
+    case "ro2": return "Final"
+    default: return "Week " + week
+  }
+}

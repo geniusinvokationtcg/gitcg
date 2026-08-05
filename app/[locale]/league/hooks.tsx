@@ -105,7 +105,7 @@ export function usePlayerData(teamIds: string[]) {
   return { data, isLoading, error }
 }
 
-export function useMatchData(teamIds: string[]) {
+export function useMatchData(teamIds: string[], seasonId?: string) {
   const [data, setData] = useState<LeagueMatch[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -120,10 +120,19 @@ export function useMatchData(teamIds: string[]) {
         return
       }
 
-      const { data, error } = await supabase.schema("league")
+      const query = await supabase.schema("league")
         .from("matches")
-        .select("*")
-        .or(`team_a_id.in.(${teamIds.join(",")}),team_b_id.in.(${teamIds.join(",")})`)
+        .select("*").eq
+
+      const { data, error } = seasonId
+        ? await supabase.schema("league")
+          .from("matches")
+          .select("*")
+          .eq("season_id", seasonId)
+        : await supabase.schema("league")
+          .from("matches")
+          .select("*")
+          .or(`team_a_id.in.(${teamIds.join(",")}),team_b_id.in.(${teamIds.join(",")})`)
 
         if (error) {
         setError(error.message)

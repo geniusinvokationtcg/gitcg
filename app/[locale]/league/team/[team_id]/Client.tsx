@@ -4,6 +4,7 @@ import "../../style.css";
 import { useGameDataByMatch, useMatchData, useSeasonData, useTeamData } from "../../hooks";
 import { CoopLeagueTeamPageParams } from "./page";
 import Link from "next/link";
+import { getWeekTitle } from "../../data";
 
 export function CoopLeagueTeamPageClient({ params, season_id }: { params: CoopLeagueTeamPageParams; season_id: string }) {
   const { locale, team_id } = params;
@@ -143,7 +144,7 @@ export function CoopLeagueTeamPageClient({ params, season_id }: { params: CoopLe
 
           return (
             <Link key={match.id} className="hoverable_card match_card" href={`/league/match/${match.id}`}>
-              <div className="text-center">{`Week ${match.week}`}</div>
+              <div className="text-center">{getWeekTitle(match.week)}</div>
               <div className="self-center">
                 <div className="card_grid card_grid_team_name">
                   <div className="flex justify-end">

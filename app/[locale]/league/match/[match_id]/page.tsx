@@ -5,7 +5,7 @@ import { LeagueMatch } from "../../types"
 import { CoopLeagueMatchPageClient } from "./Client"
 import { unstable_cache } from "next/cache"
 import { revalidate } from "@/app/[locale]/weekly/[version]/[server]/[week]/decks/page"
-import { getMatch, getSeasonName, getTeams } from "../../data"
+import { getMatch, getSeasonName, getTeams, getWeekTitle } from "../../data"
 
 export interface CoopLeagueMatchPageParams {
   locale: Locales
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<CoopLeagueM
   const seasonName = await getSeasonName(match.data.season_id)
 
   const metadata = {
-    title: `${teams.data && `${teams.data[0].alias} vs ${teams.data[1].alias} | `}GITCG Co-Op League ${seasonName.data?.name || ""} Week ${match.data?.week || ""}`,
+    title: `${teams.data && `${teams.data[0].alias} vs ${teams.data[1].alias} | `}GITCG Co-Op League ${seasonName.data?.name || ""} ${getWeekTitle(match.data?.week || "")}`,
   }
 
   return { ...metadata, openGraph: metadata, twitter: metadata }

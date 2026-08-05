@@ -54,6 +54,7 @@ export interface LeagueMatch {
   order: number | null
   phase: LeagueMatchPhase
   season_id: string
+  is_bye: string
 }
 
 export interface LeagueGame {

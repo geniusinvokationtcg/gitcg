@@ -12,6 +12,7 @@ import { CustomButton } from "@/components/Button";
 import { EyeIcon } from "@heroicons/react/24/outline";
 import { serverList } from "@/utils/vars";
 import { useTranslations } from "next-intl";
+import { getWeekTitle } from "../../data";
 
 export function CoopLeagueMatchPageClient({ params, season_id, match, teams }: { params: CoopLeagueMatchPageParams; season_id: string; match: LeagueMatch; teams: LeagueTeam[] }) {
   //reorder the team correctly
@@ -61,7 +62,7 @@ export function CoopLeagueMatchPageClient({ params, season_id, match, teams }: {
 
   return <div className="league_body">
     <section>
-      <h1>{`GITCG Co-op League ${seasonName} Week ${match.week}`}</h1>
+      <h1>{`GITCG Co-op League ${seasonName} ${getWeekTitle(match.week)}`}</h1>
       <div className="teams_header">
         <Link href={`/league/team/${teams[0].id}`}>
           <div>
