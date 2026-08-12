@@ -35,7 +35,7 @@ export function isArcaneLegend (cardId: number): boolean {
 
 export function isValidCard (cardId: number, characterCards: (number | null)[]) {
   const characterTraits: {
-    element: Elements | undefined; tribe: string[]; talentId: number | undefined;
+    element: Elements | undefined; tribe: string[]; talentId: { character_id: number; character_name: string; talent_id: number; talent_name: string; }[];
   }[] = [];
   for(let char of characterCards) {
     if(char === null) continue;
@@ -46,7 +46,7 @@ export function isValidCard (cardId: number, characterCards: (number | null)[]) 
     characterTraits.push({
       element: getElement(detail.element_type),
       tribe: [...detail.belongs],
-      talentId: talents.find(t => t.character_id === char)?.talent_id
+      talentId: talents.filter(t => t.character_id === char)
     })
   }
   
@@ -65,7 +65,7 @@ export function isValidCard (cardId: number, characterCards: (number | null)[]) 
   }
 
   //check talent (the id for talents is 2xxxxx)
-  if(cardId < 300000 && !characterTraits.some(char => char.talentId === cardId)) return false;
+  if(cardId < 300000 && !characterTraits.some(char => char.talentId.some(talent => talent.talent_id === cardId) )) return false;
 
   return true;
 }

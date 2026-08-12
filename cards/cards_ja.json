@@ -3725,6 +3725,90 @@
       "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f716/8d7528bb86f445a1b5c2224512d5cb42.png"
     },
     {
+      "id": 1317,
+      "name": "ドゥリン",
+      "element_type": 303,
+      "role_skill_infos": [
+        {
+          "skill_text": "<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>物理ダメージ</color>を2与える。",
+          "skill_costs": [
+            {
+              "cost_type": "13",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/fe4517db495f28fdbcb44607d94640c3.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "通常攻撃"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/3f016e2d606ca39ea86e24d5245dfa5b.png",
+          "name": "輝炎の翼斬り",
+          "id": "13171"
+        },
+        {
+          "skill_text": "<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FF9999FF>炎元素ダメージ</color>を3与え、自身に<color=#FFFFFFFF>本質変転</color>を付与する。",
+          "skill_costs": [
+            {
+              "cost_type": "13",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/fe4517db495f28fdbcb44607d94640c3.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "元素スキル"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/692f7dca/da5dc3d51a7f6b4c22cd1610d7db9498.png",
+          "name": "二元術式・融合精錬",
+          "id": "13172"
+        },
+        {
+          "skill_text": "<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FF9999FF>炎元素ダメージ</color>を1与え、<color=#FFFFFFFF>純白の正</color>を生成する。",
+          "skill_costs": [
+            {
+              "cost_type": "13",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/fe4517db495f28fdbcb44607d94640c3.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "元素爆発"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba982/66d1324231edab8f45aaeaad7d4ef09a.png",
+          "name": "純白の法則・変転する光",
+          "id": "13173"
+        },
+        {
+          "skill_text": "【固有】<color=#FFFFFFFF>自身が「通常攻撃」を使用した後、</color>自身の「元素爆発」を<color=#FFFFFFFF>漆黒の法則・燻る星</color>に切り替える。\\n<color=#FFFFFFFF>自身が「元素スキル」を使用した後、</color>自身の「元素爆発」を<color=#FFFFFFFF>純白の法則・変転する光</color>に切り替える。",
+          "skill_costs": [],
+          "type": [
+            "固有スキル"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba982/4e058ed810ec6cf0ab189eded19d63fe.png",
+          "name": "顕現せし光霊",
+          "id": "13175"
+        }
+      ],
+      "weapon": "sword",
+      "belongs": [
+        "mondstadt",
+        "",
+        ""
+      ],
+      "hp": 10,
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/57e30bb834d47675a2fdced1bb668c56.png",
+      "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba981/ea02d8378172f946c3f7e33ee6ad2775.png"
+    },
+    {
       "id": 1401,
       "name": "フィッシュル",
       "element_type": 304,
@@ -6219,12 +6303,12 @@
           "id": "15151"
         },
         {
-          "skill_text": "<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' /><color=#80FFD7FF>風元素ダメージ</color>を1与え、自身は<color=#FFFFFFFF>夜魂の加護</color>状態に入り、<color=#FFFFFFFF>「夜魂値」</color>を2獲得し、<color=#FFFFFFFF>カクーク</color>を装備する。（キャラが<color=#FFFFFFFF>夜魂の加護</color>状態に入った後、このスキルは使用できなくなる）\\n（<color=#FFFFFFFF>カクーク</color>を装備したキャラは特技<color=#FFFFFFFF>援護射撃</color>を使用できる）",
+          "skill_text": "<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' /><color=#80FFD7FF>風元素ダメージ</color>を2与え、自身は<color=#FFFFFFFF>夜魂の加護</color>状態に入り、<color=#FFFFFFFF>「夜魂値」</color>を2獲得し、<color=#FFFFFFFF>カクーク</color>を装備する。（キャラが<color=#FFFFFFFF>夜魂の加護</color>状態に入った後、このスキルは使用できなくなる）\\n（<color=#FFFFFFFF>カクーク</color>を装備したキャラは特技<color=#FFFFFFFF>援護射撃</color>を使用できる）",
           "skill_costs": [
             {
               "cost_type": "17",
               "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
-              "cost_num": "2"
+              "cost_num": "3"
             }
           ],
           "type": [
@@ -6265,6 +6349,90 @@
       "hp": 10,
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68f81eac/86d8d0d9ba2aeeb2e320df51fa3a69b4.png",
       "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68f81ec5/3fb3bfa2ea58ca226538dfe54703ea45.png"
+    },
+    {
+      "id": 1516,
+      "name": "ヤフォダ",
+      "element_type": 307,
+      "role_skill_infos": [
+        {
+          "skill_text": "<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>物理ダメージ</color>を2与える。",
+          "skill_costs": [
+            {
+              "cost_type": "17",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "通常攻撃"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/cc29fde34aa6d42f8e110628a4bf2de2.png",
+          "name": "気転の矢",
+          "id": "15161"
+        },
+        {
+          "skill_text": "<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' /><color=#80FFD7FF>風元素ダメージ</color>を2与え、<color=#FFFFFFFF>高速キャラチェンジ</color>を1層生成し、味方は次のキャラに切り替わる。手札にいずれの元素の<color=#FFFFFFFF>ゴロニャンお宝ボトル</color>もない場合、手札に<color=#FFFFFFFF>ゴロニャンお宝ボトル</color>を生成する。そうでない場合、手札にあるすべての<color=#FFFFFFFF>ゴロニャンお宝ボトル</color>に<color=#FFFFFFFF>コストダウン</color>を付与する。",
+          "skill_costs": [
+            {
+              "cost_type": "17",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "元素スキル"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/692f7dca/2d038a9823acb6c19b9b64a1113d40dd.png",
+          "name": "奇策・財宝分配法",
+          "id": "15162"
+        },
+        {
+          "skill_text": "<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' /><color=#80FFD7FF>風元素ダメージ</color>を3与え、<color=#FFFFFFFF>家庭用肉球アシスタントマシン</color>を生成する。",
+          "skill_costs": [
+            {
+              "cost_type": "17",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "元素爆発"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba982/f99470c649ad33a4815785212069a858.png",
+          "name": "秘器・狩人の七つ道具",
+          "id": "15163"
+        },
+        {
+          "skill_text": "【固有】戦闘開始時、手札に<color=#FFFFFFFF>ゴロニャンお宝ボトル</color>を生成する。\\n味方が月反応または拡散反応を起こした後、味方の手札にあるすべての<color=#FFFFFFFF>ゴロニャンお宝ボトル</color>に<color=#FFFFFFFF>コストダウン</color>を付着させる。（各ラウンド最大2回まで）",
+          "skill_costs": [],
+          "type": [
+            "固有スキル"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba982/53af108201d227e415549056dfbdbb1a.png",
+          "name": "月兆の祝福・屋根上の疾走",
+          "id": "15164"
+        }
+      ],
+      "weapon": "bow",
+      "belongs": [
+        "nod_krai",
+        "",
+        ""
+      ],
+      "hp": 10,
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/52fc36122f134be0cd5a866931d2c653.png",
+      "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba981/9635bbc19193933b7a27d0357c902480.png"
     },
     {
       "id": 1601,
@@ -8403,7 +8571,7 @@
           "id": "21051"
         },
         {
-          "skill_text": "<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/924fba80b9137b4e8fdf5871aa22d666.png' /><color=#99FFFFFF>氷元素ダメージ</color>を1与え、<color=#FFFFFFFF>色彩</color>1枚を山札の3枚目の位置に加え、ランダムな<color=#FFFFFFFF>色彩</color>の強化効果3つの中から1つを<color=#FFFFFFFF>選択</color>する。",
+          "skill_text": "<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/924fba80b9137b4e8fdf5871aa22d666.png' /><color=#99FFFFFF>氷元素ダメージ</color>を1与え、<color=#FFFFFFFF>色彩</color>1枚を山札の3枚目の位置に加える。この対局において、このスキルを使用する最初の4回では、ランダムな<color=#FFFFFFFF>色彩</color>の強化効果3つの中から1つを<color=#FFFFFFFF>選択</color>する。",
           "skill_costs": [
             {
               "cost_type": "11",
@@ -9033,6 +9201,90 @@
       "hp": 11,
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/49d8176cf43a866b88bed5709e6a80c5.png",
       "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f716/5ea3cab5d35d44096106216727b4670e.png"
+    },
+    {
+      "id": 2208,
+      "name": "無相の水",
+      "element_type": 302,
+      "role_skill_infos": [
+        {
+          "skill_text": "<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>水元素ダメージ</color>を1与える。",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "通常攻撃"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/2c014e6053c4f0d032e1d1ff0c6de0e1.png",
+          "name": "水珠乱射",
+          "id": "22081"
+        },
+        {
+          "skill_text": "<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>水元素ダメージ</color>を2与え、<color=#FFFFFFFF>スキル準備</color>に入る：<color=#FFFFFFFF>溢流</color>。",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "元素スキル"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba982/5f5dfb69c657eb20c1e63671c2049db2.png",
+          "name": "湧き上がる激流",
+          "id": "22082"
+        },
+        {
+          "skill_text": "<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>水元素ダメージ</color>を3与え、<color=#FFFFFFFF>水滴</color>を召喚する。",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "元素爆発"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba982/790204089e0715ab315a95bf3b4b72ce.png",
+          "name": "災厄の潮",
+          "id": "22083"
+        },
+        {
+          "skill_text": "【固有】戦闘開始時、<color=#FFFFFFFF>水晶核心</color>が付与される。フィールド上に<color=#FFFFFFFF>水滴</color>が存在する場合、<color=#FFFFFFFF>水晶核心</color>を消費した時に再び<color=#FFFFFFFF>水晶核心</color>を付与し、<color=#FFFFFFFF>水滴</color>の使用可能回数-1。",
+          "skill_costs": [],
+          "type": [
+            "固有スキル"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba982/23cb4afc553bd958c2ebe591937bcafd.png",
+          "name": "水晶核心",
+          "id": "22084"
+        }
+      ],
+      "weapon": "other_weapons",
+      "belongs": [
+        "monster",
+        "",
+        ""
+      ],
+      "hp": 8,
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/76590248706396ae8a8bf50d1c5f5b9b.png",
+      "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba981/55561420e1c18c08f59e637bfa30366b.png"
     },
     {
       "id": 2301,
@@ -11663,6 +11915,29 @@
       "max_count": 2
     },
     {
+      "id": 212032,
+      "name": "星座の始まり",
+      "content": "<color=#FFFFFFFF>戦闘アクション</color>：味方の出撃キャラが<color=#FFFFFFFF>モナ</color>の時、このカードを装備できる。\\nモナがこのカードを装備した後、味方の次回の蒸発反応によるダメージ+2、かつ直ちに<color=#FFD780FF>因果点破</color>を1回使用する。\\n<color=#FFFFFFFF>モナ</color>の「通常攻撃」に必要な<color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png' />無色元素</color>-1、かつ「通常攻撃」後、味方の次回の蒸発反応によるダメージ+2。\\n（このカードはデッキにモナが含まれている場合のみ、デッキに追加できる）",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1": "12",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+      "cost_num2": "1",
+      "cost_type2": "10",
+      "cost_type2_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+      "action_card_tags": [
+        "talent",
+        "combat_action",
+        "13",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/f5a75ba8ba90007cee8b4efbbcbf3c91.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 212041,
       "name": "淵の災い·復水放流",
       "content": "<color=#FFFFFFFF>戦闘アクション</color>：味方の出撃キャラが<color=#FFFFFFFF>タルタリヤ</color>の時、このカードを装備できる。\\nタルタリヤがこのカードを装備した後、直ちに<color=#FFD780FF>魔王の武装·荒波</color>を1回発動する。\\nエンドフェーズ：このカードを装備したタルタリヤがフィールド上に存在する時、相手の出撃キャラに<color=#FFFFFFFF>断流</color>が付与されている場合、そのキャラに<color=#FFFFFFFF>貫通ダメージ</color>を1与える。\\n（このカードはデッキにタルタリヤが含まれている場合のみ、デッキに追加できる）",
@@ -12077,6 +12352,29 @@
       "max_count": 2
     },
     {
+      "id": 213062,
+      "name": "火花の魔法",
+      "content": "<color=#FFFFFFFF>クイックアクション</color>：味方の<color=#FFFFFFFF>クレー</color>に装備させる。\\nクレーに<color=#FFFFFFFF>爆裂花火</color>を付与する。\\n<color=#FFFFFFFF>装備キャラが<color=#FFFFFFFF>重撃</color>を行った後、</color><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FF9999FF>炎元素ダメージ</color>を2与える。（各ラウンド最大2回まで）\\n（このカードはデッキにクレーが含まれている場合のみ、デッキに追加できる）",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1": "13",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/fe4517db495f28fdbcb44607d94640c3.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "13",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/9438ab87a899aa35df6ee6ab26209b45.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 213071,
       "name": "血のかまど",
       "content": "<color=#FFFFFFFF>戦闘アクション</color>：味方の出撃キャラが<color=#FFFFFFFF>胡桃</color>の時、このカードを装備できる。\\n胡桃がこのカードを装備した後、直ちに<color=#FFD780FF>蝶導来世</color>を1回発動する。\\nこのカードを装備した胡桃のHPが6以下の時、与える<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FF9999FF>炎元素ダメージ</color>+1。\\n（このカードはデッキに胡桃が含まれている場合のみ、デッキに追加できる）",
@@ -12307,6 +12605,29 @@
       "max_count": 2
     },
     {
+      "id": 213171,
+      "name": "赤土の逆理",
+      "content": "<color=#FFFFFFFF>戦闘アクション</color>：味方の出撃キャラが<color=#FFFFFFFF>ドゥリン</color>の時、このカードを装備できる。\\nドゥリンがこのカードを装備した後、自身の現在の「元素爆発」に応じて、直ちに<color=#FFD780FF>純白の法則・変転する光</color>または<color=#FFD780FF>漆黒の法則・燻る星</color>を1回使用する。\\n<color=#FFFFFFFF>装備キャラが純白の法則・変転する光を使用した後、</color>味方が次の4回で与えるダメージ+1。\\n<color=#FFFFFFFF>装備キャラが漆黒の法則・燻る星を使用した後、</color>味方の<color=#FFFFFFFF>ドゥリン</color>と<color=#FFFFFFFF>漆黒の否</color>が与えるダメージ+2。\\n（このカードはデッキにドゥリンが含まれている場合のみ、デッキに追加できる）",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "4",
+      "cost_type1": "13",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/fe4517db495f28fdbcb44607d94640c3.png",
+      "cost_num2": "2",
+      "cost_type2": "1",
+      "cost_type2_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+      "action_card_tags": [
+        "talent",
+        "combat_action",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/730cd6ed2553a91846158638db273321.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 214011,
       "name": "星喰いの鴉",
       "content": "<color=#FFFFFFFF>戦闘アクション</color>：味方の出撃キャラが<color=#FFFFFFFF>フィッシュル</color>の時、このカードを装備できる。\\nフィッシュルがこのカードを装備した後、直ちに<color=#FFD780FF>夜巡りの翼</color>を1回発動する。\\nこのカードを装備したフィッシュルの生成した<color=#FFFFFFFF>オズ</color>は、フィッシュルが<color=#FFFFFFFF>通常攻撃</color>を行った後、<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><color=#FFACFFFF>雷元素ダメージ</color>を2与える。（<color=#FFFFFFFF>使用可能回数</color>の消費が必要）\\n（このカードはデッキにフィッシュルが含まれている場合のみ、デッキに追加できる）",
@@ -12326,6 +12647,29 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/aaf9c8e9b929f04175e94ba46a548072.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 214012,
+      "name": "終宵の幻奏",
+      "content": "<color=#FFFFFFFF>クイックアクション</color>：味方の<color=#FFFFFFFF>フィッシュル</color>に装備させる。\\n<color=#FFFFFFFF>オズ</color>を召喚する。\\n<color=#FFFFFFFF>オズ</color>がフィールドに存在する時、味方の<color=#FFACFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' />雷元素関連反応</color>が与えるダメージ+1。（毎ラウンド3回まで）\\n（このカードはデッキにフィッシュルが含まれている場合のみ、デッキに追加できる）",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1": "14",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0a7a50d15a7580c4de07a41f87a95787.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "13",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/32d2719eb188b0bfb05a5b91fff7dfe5.png",
       "is_special": false,
       "max_count": 2
     },
@@ -12790,6 +13134,29 @@
       "max_count": 2
     },
     {
+      "id": 215032,
+      "name": "風を讃えて",
+      "content": "<color=#FFFFFFFF>クイックアクション</color>：味方の<color=#FFFFFFFF>ウェンティ</color>に装備できる。\\n<color=#FFFFFFFF>暴風の目</color>を召喚する。\\n味方が<color=#FFFFFFFF>暴風の目</color>を召喚した後、このラウンド中、装備キャラの次の2回の<color=#FFFFFFFF>「通常攻撃」</color>が与える<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>物理ダメージ</color>は<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' /><color=#80FFD7FF>風元素ダメージ</color>になり、さらに必要な<color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png' />無色元素</color>-2。\\n（このカードはデッキにウェンティが含まれている場合のみ、デッキに追加できる）",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "3",
+      "cost_type1": "17",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "13",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/fb1da536ad13b34d91d8fb03c48894a3.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 215041,
       "name": "降魔·護法夜叉",
       "content": "<color=#FFFFFFFF>戦闘アクション</color>：味方の出撃キャラが<color=#FFFFFFFF>魈</color>の時、このカードを装備できる。\\n魈がこのカードを装備した後、直ちに<color=#FFD780FF>靖妖儺舞</color>を1回発動する。\\nこのカードを装備した魈が<color=#FFFFFFFF>夜叉の儺面</color>を付与されている間、<color=#FFFFFFFF>風輪両立</color>を発動する時に必要な<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png' /><color=#80FFD7FF>風元素</color>-1。（<color=#FFFFFFFF>夜叉の儺面</color>が1回付与されるたびに、2回発動可能）\\n（このカードはデッキに魈が含まれている場合のみ、デッキに追加できる）",
@@ -13062,6 +13429,29 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68f81eac/57c06e95c52835d1aa9621e5937389d5.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 215161,
+      "name": "アンダーグラウンドの悪知恵",
+      "content": "<color=#FFFFFFFF>戦闘アクション</color>：味方の出撃キャラが<color=#FFFFFFFF>ヤフォダ</color>の時、このカードを装備できる。\\nヤフォダがこのカードを装備した後、直ちに<color=#FFD780FF>奇策・財宝分配法</color>を1回発動する。\\n<color=#FFFFFFFF>ヤフォダ</color>が出撃キャラに切り替わった時、敵の手札の数が味方の手札の数以上の場合、ランダムに敵の手札を2枚コピーする。（各ラウンドで1回のみ）\\n（このカードはデッキにヤフォダが含まれている場合のみ、デッキに追加できる）",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "3",
+      "cost_type1": "17",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "combat_action",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/b9d33825378116f78fff8bf604e4d95c.png",
       "is_special": false,
       "max_count": 2
     },
@@ -13867,6 +14257,29 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6966dcbb/2452380125303d9dcfa0dd256e8062a4.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 222081,
+      "name": "不気味な荒波",
+      "content": "<color=#FFFFFFFF>クイックアクション</color>：味方の<color=#FFFFFFFF>無相の水</color>に装備させる。\\n<color=#FFFFFFFF>無相の水</color>または<color=#FFFFFFFF>水滴</color>がダメージを与えた後、HPを最も失っている味方の魔物を1回復する。（各ラウンドで3回のみ）\\n（このカードはデッキに無相の水が含まれている場合のみ、デッキに追加できる）",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1": "12",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/36bebf17772b3d11a439c220f4f34a21.png",
       "is_special": false,
       "max_count": 2
     },
@@ -19071,7 +19484,7 @@
     {
       "id": 330005,
       "name": "万戸の竈",
-      "content": "<color=#FFFFFFFF>1ラウンド目でこのカードを使用する時</color>、味方のデッキ内に最初から2枚以上の異なる「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/f991e209778856fbf83078b501953475.png' />天賦」が含まれていた場合、「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/f991e209778856fbf83078b501953475.png' />天賦」を1枚引く。\\n<color=#FFFFFFFF>2ラウンド目以後にこのカードを使用する時</color>、<color=#FFFFFFFF>「現在のラウンド数-1」</color>枚の手札を引く。（最大4枚まで）\\n（「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/ad05fb6424e58a2a5685647b6240555a.png' />秘伝」カードは各対戦ごとに1枚しか使用できない。このカードは必ず初期手札に含まれる）",
+      "content": "<color=#FFFFFFFF>1ラウンド目でこのカードを使用する時</color>、味方のデッキ内に最初から4/2枚以上の異なる「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/f991e209778856fbf83078b501953475.png' />天賦」が含まれていた場合、「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/f991e209778856fbf83078b501953475.png' />天賦」を2/1枚引く。\\n<color=#FFFFFFFF>2ラウンド目以後にこのカードを使用する時</color>、<color=#FFFFFFFF>「現在のラウンド数-1」</color>枚の手札を引く。（最大4枚まで）\\n（「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/ad05fb6424e58a2a5685647b6240555a.png' />秘伝」カードは各対戦ごとに1枚しか使用できない。このカードは必ず初期手札に含まれる）",
       "action_type": "event_card",
       "rank_id": 0,
       "cost_num1": "0",
@@ -21319,6 +21732,52 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a4458bd/4220c933303873e2e081a964cfe9d955.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 332065,
+      "name": "「魔女の課題」",
+      "content": "「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/f991e209778856fbf83078b501953475.png' />天賦」カードを1枚引く。味方のデッキに初期状態で「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/f991e209778856fbf83078b501953475.png' />天賦」カードが3枚以上含まれている場合、手札にある<color=#FFFFFFFF><color=#FFFFFFFF>現在の元素サイコロのコスト</color></color>が最も高いランダムな「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/f991e209778856fbf83078b501953475.png' />天賦」カード1枚に<color=#FFFFFFFF>コストダウン</color>を付与する。",
+      "action_type": "event_card",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1": "3",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8b295c3fed21771dcced6055cdf2f2ce.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/3cc9704c6de16db788254d7379ae7309.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 332066,
+      "name": "共に杯を交わそう",
+      "content": "<color=#FFFFFFFF>次のラウンド開始時、</color>互いにカードを2枚引き、ランダム元素サイコロを2個ランダムに生成する。",
+      "action_type": "event_card",
+      "rank_id": 0,
+      "cost_num1": "0",
+      "cost_type1": "",
+      "cost_type1_icon": "",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/5354c5f634805e0700598c9d043c0dc1.png",
       "is_special": false,
       "max_count": 2
     },
@@ -25539,6 +25998,78 @@
       "name": "ホワイトベリークッコ",
       "id": 333031,
       "code": 607,
+      "type": "action"
+    },
+    {
+      "name": "ドゥリン",
+      "id": 1317,
+      "code": 608,
+      "type": "character"
+    },
+    {
+      "name": "ヤフォダ",
+      "id": 1516,
+      "code": 609,
+      "type": "character"
+    },
+    {
+      "name": "無相の水",
+      "id": 2208,
+      "code": 610,
+      "type": "character"
+    },
+    {
+      "name": "赤土の逆理",
+      "id": 213171,
+      "code": 611,
+      "type": "action"
+    },
+    {
+      "name": "アンダーグラウンドの悪知恵",
+      "id": 215161,
+      "code": 612,
+      "type": "action"
+    },
+    {
+      "name": "不気味な荒波",
+      "id": 222081,
+      "code": 613,
+      "type": "action"
+    },
+    {
+      "name": "星座の始まり",
+      "id": 212032,
+      "code": 614,
+      "type": "action"
+    },
+    {
+      "name": "火花の魔法",
+      "id": 213062,
+      "code": 615,
+      "type": "action"
+    },
+    {
+      "name": "終宵の幻奏",
+      "id": 214012,
+      "code": 616,
+      "type": "action"
+    },
+    {
+      "name": "風を讃えて",
+      "id": 215032,
+      "code": 617,
+      "type": "action"
+    },
+    {
+      "name": "「魔女の課題」",
+      "id": 332065,
+      "code": 618,
+      "type": "action"
+    },
+    {
+      "name": "共に杯を交わそう",
+      "id": 332066,
+      "code": 619,
       "type": "action"
     }
   ]

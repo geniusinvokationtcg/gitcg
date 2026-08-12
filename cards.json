@@ -3725,6 +3725,90 @@
       "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f716/8d7528bb86f445a1b5c2224512d5cb42.png"
     },
     {
+      "id": 1317,
+      "name": "Durin",
+      "element_type": 303,
+      "role_skill_infos": [
+        {
+          "skill_text": "Deals 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>Physical DMG</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "13",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/fe4517db495f28fdbcb44607d94640c3.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Normal Attack"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/3f016e2d606ca39ea86e24d5245dfa5b.png",
+          "name": "Radiant Wingslash",
+          "id": "13171"
+        },
+        {
+          "skill_text": "Deals 3 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FF9999FF>Pyro DMG</color>. This character gains <color=#FFFFFFFF>Essential Transmutation</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "13",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/fe4517db495f28fdbcb44607d94640c3.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "Elemental Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/692f7dca/da5dc3d51a7f6b4c22cd1610d7db9498.png",
+          "name": "Binary Form: Convergence and Division",
+          "id": "13172"
+        },
+        {
+          "skill_text": "Deals 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FF9999FF>Pyro DMG</color> and create <color=#FFFFFFFF>Confirmation of Purity</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "13",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/fe4517db495f28fdbcb44607d94640c3.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Elemental Burst"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba982/66d1324231edab8f45aaeaad7d4ef09a.png",
+          "name": "Principle of Purity: As the Light Shifts",
+          "id": "13173"
+        },
+        {
+          "skill_text": "(Passive) <color=#FFFFFFFF>After this character uses a Normal Attack:</color> Switch their Elemental Burst to <color=#FFFFFFFF>Principle of Darkness: As the Stars Smolder</color>.\\n<color=#FFFFFFFF>After this character uses an Elemental Skill:</color> Switch their Elemental Burst to <color=#FFFFFFFF>Principle of Purity: As the Light Shifts</color>.",
+          "skill_costs": [],
+          "type": [
+            "Passive Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba982/4e058ed810ec6cf0ab189eded19d63fe.png",
+          "name": "Light Manifest of the Divine Calculus",
+          "id": "13175"
+        }
+      ],
+      "weapon": "sword",
+      "belongs": [
+        "mondstadt",
+        "",
+        ""
+      ],
+      "hp": 10,
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/57e30bb834d47675a2fdced1bb668c56.png",
+      "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba981/ea02d8378172f946c3f7e33ee6ad2775.png"
+    },
+    {
       "id": 1401,
       "name": "Fischl",
       "element_type": 304,
@@ -6219,12 +6303,12 @@
           "id": "15151"
         },
         {
-          "skill_text": "Deals 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' /><color=#80FFD7FF>Anemo DMG</color>, enters <color=#FFFFFFFF>Nightsoul's Blessing</color>, gains 2 <color=#FFFFFFFF>Nightsoul points</color>, and applies <color=#FFFFFFFF>Cacucu</color> to self. (This skill cannot be used after the character enters <color=#FFFFFFFF>Nightsoul's Blessing</color>.)\\n(Characters with <color=#FFFFFFFF>Cacucu</color> attached can use the Technique: <color=#FFFFFFFF>Supporting Fire</color>)",
+          "skill_text": "Deals 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' /><color=#80FFD7FF>Anemo DMG</color>, enters <color=#FFFFFFFF>Nightsoul's Blessing</color>, gains 2 <color=#FFFFFFFF>Nightsoul points</color>, and applies <color=#FFFFFFFF>Cacucu</color> to self. (This skill cannot be used after the character enters <color=#FFFFFFFF>Nightsoul's Blessing</color>.)\\n(Characters with <color=#FFFFFFFF>Cacucu</color> attached can use the Technique: <color=#FFFFFFFF>Supporting Fire</color>)",
           "skill_costs": [
             {
               "cost_type": "17",
               "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
-              "cost_num": "2"
+              "cost_num": "3"
             }
           ],
           "type": [
@@ -6265,6 +6349,90 @@
       "hp": 10,
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68f81eac/86d8d0d9ba2aeeb2e320df51fa3a69b4.png",
       "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68f81ec5/3fb3bfa2ea58ca226538dfe54703ea45.png"
+    },
+    {
+      "id": 1516,
+      "name": "Jahoda",
+      "element_type": 307,
+      "role_skill_infos": [
+        {
+          "skill_text": "Deals 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>Physical DMG</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "17",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Normal Attack"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/cc29fde34aa6d42f8e110628a4bf2de2.png",
+          "name": "Strike While the Arrow's Hot",
+          "id": "15161"
+        },
+        {
+          "skill_text": "Deals 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' /><color=#80FFD7FF>Anemo DMG</color>, creates 1 stack of <color=#FFFFFFFF>Agile Switch</color>, and switch to your next character. If you do not have <color=#FFFFFFFF>Purr-loined Treasure Flask</color> of any element in your Hand, create 1 <color=#FFFFFFFF>Purr-loined Treasure Flask</color> in your Hand. Otherwise, grant <color=#FFFFFFFF>Cost Reduction</color> to all <color=#FFFFFFFF>Purr-loined Treasure Flask</color> in your Hand.",
+          "skill_costs": [
+            {
+              "cost_type": "17",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "Elemental Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/692f7dca/2d038a9823acb6c19b9b64a1113d40dd.png",
+          "name": "Savvy Strategy: Splitting the Spoils",
+          "id": "15162"
+        },
+        {
+          "skill_text": "Deals 3 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' /><color=#80FFD7FF>Anemo DMG</color> and creates <color=#FFFFFFFF>Purrsonal Coordinated Assistance Robots</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "17",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Elemental Burst"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba982/f99470c649ad33a4815785212069a858.png",
+          "name": "Hidden Aces: Seven Tools of the Hunter",
+          "id": "15163"
+        },
+        {
+          "skill_text": "(Passive) When battle begins, create 1 <color=#FFFFFFFF>Purr-loined Treasure Flask</color> in your Hand.\\nAfter you trigger a Lunar Reaction or Swirl Reaction, attach <color=#FFFFFFFF>Cost Reduction</color> to all <color=#FFFFFFFF>Purr-loined Treasure Flask</color> in your Hand. (Twice per Round)",
+          "skill_costs": [],
+          "type": [
+            "Passive Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba982/53af108201d227e415549056dfbdbb1a.png",
+          "name": "Moonsign Benediction: Rooftop Dash",
+          "id": "15164"
+        }
+      ],
+      "weapon": "bow",
+      "belongs": [
+        "nod_krai",
+        "",
+        ""
+      ],
+      "hp": 10,
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/52fc36122f134be0cd5a866931d2c653.png",
+      "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba981/9635bbc19193933b7a27d0357c902480.png"
     },
     {
       "id": 1601,
@@ -8403,7 +8571,7 @@
           "id": "21051"
         },
         {
-          "skill_text": "Deals 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/924fba80b9137b4e8fdf5871aa22d666.png' /><color=#99FFFFFF>Cryo DMG</color>, places 1 <color=#FFFFFFFF>Radiant Hues</color> third from the top of your deck, and <color=#FFFFFFFF>Select</color> 1 of 3 random <color=#FFFFFFFF>Radiant Hues</color> enhancement effects.",
+          "skill_text": "Deals 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/924fba80b9137b4e8fdf5871aa22d666.png' /><color=#99FFFFFF>Cryo DMG</color>, places 1 <color=#FFFFFFFF>Radiant Hues</color> third from the top of your deck. If this is one of the first 4 times this skill is being used this game, then <color=#FFFFFFFF>Select</color> 1 of 3 random <color=#FFFFFFFF>Radiant Hues</color> enhancement effects.",
           "skill_costs": [
             {
               "cost_type": "11",
@@ -9033,6 +9201,90 @@
       "hp": 11,
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/49d8176cf43a866b88bed5709e6a80c5.png",
       "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f716/5ea3cab5d35d44096106216727b4670e.png"
+    },
+    {
+      "id": 2208,
+      "name": "Hydro Hypostasis",
+      "element_type": 302,
+      "role_skill_infos": [
+        {
+          "skill_text": "Deals 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>Hydro DMG</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Normal Attack"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/2c014e6053c4f0d032e1d1ff0c6de0e1.png",
+          "name": "Droplet Diffusion",
+          "id": "22081"
+        },
+        {
+          "skill_text": "Deals 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>Hydro DMG</color>, then performs \"<color=#FFFFFFFF>Prepare Skill</color>\" for <color=#FFFFFFFF>Overflow</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "Elemental Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba982/5f5dfb69c657eb20c1e63671c2049db2.png",
+          "name": "Surging Tides",
+          "id": "22082"
+        },
+        {
+          "skill_text": "Deals 3 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>Hydro DMG</color> and summons <color=#FFFFFFFF>Water Droplet</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Elemental Burst"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba982/790204089e0715ab315a95bf3b4b72ce.png",
+          "name": "Calamitous Tides",
+          "id": "22083"
+        },
+        {
+          "skill_text": "(Passive) When the battle begins, this character starts with <color=#FFFFFFFF>Hydro Crystal Core</color> attached. If <color=#FFFFFFFF>Water Droplet</color> is on the field when <color=#FFFFFFFF>Hydro Crystal Core</color> is consumed: Reattach <color=#FFFFFFFF>Hydro Crystal Core</color>, and decreases the Usage(s) of <color=#FFFFFFFF>Water Droplet</color> by 1.",
+          "skill_costs": [],
+          "type": [
+            "Passive Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba982/23cb4afc553bd958c2ebe591937bcafd.png",
+          "name": "Hydro Crystal Core",
+          "id": "22084"
+        }
+      ],
+      "weapon": "other_weapons",
+      "belongs": [
+        "monster",
+        "",
+        ""
+      ],
+      "hp": 8,
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/76590248706396ae8a8bf50d1c5f5b9b.png",
+      "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba981/55561420e1c18c08f59e637bfa30366b.png"
     },
     {
       "id": 2301,
@@ -11663,6 +11915,29 @@
       "max_count": 2
     },
     {
+      "id": 212032,
+      "name": "Genesis of Starsigns",
+      "content": "<color=#FFFFFFFF>Combat Action</color>: When your active character is <color=#FFFFFFFF>Mona</color>, equip this card.\\nAfter Mona equips this card, your next Vaporize Reaction deals +2 DMG and immediately use <color=#FFD780FF>Ripple of Fate</color> once.\\nWhen <color=#FFFFFFFF>Mona</color> uses a Normal Attack, spend 1 fewer <color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png' />Unaligned Element</color>. After the Normal Attack, your next Vaporize Reaction deals +2 DMG.\\n(You must have Mona in your deck to add this card to your deck.)",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1": "12",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+      "cost_num2": "1",
+      "cost_type2": "10",
+      "cost_type2_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+      "action_card_tags": [
+        "talent",
+        "combat_action",
+        "13",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/f5a75ba8ba90007cee8b4efbbcbf3c91.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 212041,
       "name": "Abyssal Mayhem: Hydrospout",
       "content": "<color=#FFFFFFFF>Combat Action</color>: When your active character is <color=#FFFFFFFF>Tartaglia</color>, equip this card.\\nAfter Tartaglia equips this card, immediately use <color=#FFD780FF>Foul Legacy: Raging Tide</color> once.\\nEnd Phase: When Tartaglia is on the field and has this card equipped, deal 1 <color=#FFFFFFFF>Piercing DMG</color> to the opponent's active character if they have <color=#FFFFFFFF>Riptide</color> attached.\\n(You must have Tartaglia in your deck to add this card to your deck.)",
@@ -12077,6 +12352,29 @@
       "max_count": 2
     },
     {
+      "id": 213062,
+      "name": "Sparkborne Magic",
+      "content": "<color=#FFFFFFFF>Fast Action</color>: Equip this to your <color=#FFFFFFFF>Klee</color>.\\nAttach <color=#FFFFFFFF>Explosive Spark</color> to Klee.\\n<color=#FFFFFFFF>When the attached character uses a <color=#FFFFFFFF>Charged Attack</color>:</color> Deals 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FF9999FF>Pyro DMG</color>. (Twice per Round)\\n(You must have Klee in your deck to add this card to your deck.)",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1": "13",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/fe4517db495f28fdbcb44607d94640c3.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "13",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/9438ab87a899aa35df6ee6ab26209b45.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 213071,
       "name": "Sanguine Rouge",
       "content": "<color=#FFFFFFFF>Combat Action</color>: When your active character is <color=#FFFFFFFF>Hu Tao</color>, equip this card.\\nAfter Hu Tao equips this card, immediately use <color=#FFD780FF>Guide to Afterlife</color> once.\\nWhen your Hu Tao, who has this card equipped, has no more than 6 HP: Deal +1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FF9999FF>Pyro DMG</color>.\\n(You must have Hu Tao in your deck to add this card to your deck.)",
@@ -12307,6 +12605,29 @@
       "max_count": 2
     },
     {
+      "id": 213171,
+      "name": "Adamah's Redemption",
+      "content": "<color=#FFFFFFFF>Combat Action</color>: When your active character is <color=#FFFFFFFF>Durin</color>, equip this card.\\nAfter Durin equips this card, immediately use <color=#FFD780FF>Principle of Purity: As the Light Shifts</color> or <color=#FFD780FF>Principle of Darkness: As the Stars Smolder</color> once based on the character's current Elemental Burst.\\n<color=#FFFFFFFF>When the character to which this is attached uses Principle of Purity: As the Light Shifts:</color> Your next 4 instances of DMG gain +1.\\n<color=#FFFFFFFF>When the character to which this is attached uses Principle of Darkness: As the Stars Smolder:</color> Your <color=#FFFFFFFF>Durin</color> and <color=#FFFFFFFF>Denial of Darkness</color> deal +2 DMG.\\n(You must have Durin in your deck to add this card to your deck.)",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "4",
+      "cost_type1": "13",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/fe4517db495f28fdbcb44607d94640c3.png",
+      "cost_num2": "2",
+      "cost_type2": "1",
+      "cost_type2_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+      "action_card_tags": [
+        "talent",
+        "combat_action",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/730cd6ed2553a91846158638db273321.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 214011,
       "name": "Stellar Predator",
       "content": "<color=#FFFFFFFF>Combat Action</color>: When your active character is <color=#FFFFFFFF>Fischl</color>, equip this card.\\nAfter Fischl equips this card, immediately use <color=#FFD780FF>Nightrider</color> once.\\nWhen your Fischl, who has this card equipped, creates an <color=#FFFFFFFF>Oz</color>, <color=#FFFFFFFF>Oz</color> will gain the following effect: after Fischl uses a <color=#FFFFFFFF>Normal Attack</color>: Deal 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><color=#FFACFFFF>Electro DMG</color>. (Consumes <color=#FFFFFFFF>Usage(s)</color>)\\n(You must have Fischl in your deck to add this card to your deck.)",
@@ -12326,6 +12647,29 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/aaf9c8e9b929f04175e94ba46a548072.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 214012,
+      "name": "Phantasmal Nocturne",
+      "content": "<color=#FFFFFFFF>Fast Action</color>: Equip this to your <color=#FFFFFFFF>Fischl</color>.\\nSummon <color=#FFFFFFFF>Oz</color>.\\nWhile <color=#FFFFFFFF>Oz</color> is on the field, your <color=#FFACFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' />Electro-Related Reactions</color> deals +1 DMG. (3 times per Round)\\n(You must have Fischl in your deck to add this card to your deck.)",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1": "14",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0a7a50d15a7580c4de07a41f87a95787.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "13",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/32d2719eb188b0bfb05a5b91fff7dfe5.png",
       "is_special": false,
       "max_count": 2
     },
@@ -12790,6 +13134,29 @@
       "max_count": 2
     },
     {
+      "id": 215032,
+      "name": "Temporal Wind's Eulogy",
+      "content": "<color=#FFFFFFFF>Fast Action</color>: Equip this to your <color=#FFFFFFFF>Venti</color>.\\nSummon <color=#FFFFFFFF>Stormeye</color>.\\nAfter you summon <color=#FFFFFFFF>Stormeye</color>, the attached character's <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>Physical DMG</color> is converted to <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' /><color=#80FFD7FF>Anemo DMG</color> for their next two <color=#FFFFFFFF>Normal Attacks</color> during this Round, and these attacks cost 2 fewer <color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png' />Unaligned Element</color>.\\n(You must have Venti in your deck to add this card to your deck.)",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "3",
+      "cost_type1": "17",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "13",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/fb1da536ad13b34d91d8fb03c48894a3.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 215041,
       "name": "Conqueror of Evil: Guardian Yaksha",
       "content": "<color=#FFFFFFFF>Combat Action</color>: When your active character is <color=#FFFFFFFF>Xiao</color>, equip this card.\\nAfter Xiao equips this card, immediately use <color=#FFD780FF>Bane of All Evil</color> once.\\nWhile your Xiao has <color=#FFFFFFFF>Yaksha's Mask</color> attached, your use of <color=#FFFFFFFF>Lemniscatic Wind Cycling</color> will cost 1 less <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png' /><color=#80FFD7FF>Anemo Die</color>. (Every attachment of <color=#FFFFFFFF>Yaksha's Mask</color> allows the effect to be triggered twice)\\n(You must have Xiao in your deck to add this card to your deck.)",
@@ -13062,6 +13429,29 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68f81eac/57c06e95c52835d1aa9621e5937389d5.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 215161,
+      "name": "Backstreet Guile",
+      "content": "<color=#FFFFFFFF>Combat Action</color>: When your active character is <color=#FFFFFFFF>Jahoda</color>, equip this card.\\nAfter Jahoda equips this card, immediately use <color=#FFD780FF>Savvy Strategy: Splitting the Spoils</color> once.\\nWhen <color=#FFFFFFFF>Jahoda</color> switches to the active character, if the number of cards in your opponent's Hand is greater than or equal to yours, randomly copy 2 cards from their Hand. (Once per Round)\\n(You must have Jahoda in your deck to add this card to your deck.)",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "3",
+      "cost_type1": "17",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "combat_action",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/b9d33825378116f78fff8bf604e4d95c.png",
       "is_special": false,
       "max_count": 2
     },
@@ -13867,6 +14257,29 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6966dcbb/2452380125303d9dcfa0dd256e8062a4.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 222081,
+      "name": "Treacherous Torrent",
+      "content": "<color=#FFFFFFFF>Fast Action</color>: Equip this to your <color=#FFFFFFFF>Hydro Hypostasis</color>.\\nAfter your <color=#FFFFFFFF>Hydro Hypostasis</color> or <color=#FFFFFFFF>Water Droplet</color> deals DMG, heal the most damaged Monster on your side for 1 HP. (3 times per Round)\\n(You must have Hydro Hypostasis in your deck to add this card to your deck.)",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1": "12",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/36bebf17772b3d11a439c220f4f34a21.png",
       "is_special": false,
       "max_count": 2
     },
@@ -19071,7 +19484,7 @@
     {
       "id": 330005,
       "name": "In Every House a Stove",
-      "content": "<color=#FFFFFFFF>When this card is played in the first Round:</color> If your deck initially contains at least 2 different <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/f991e209778856fbf83078b501953475.png' />Talent cards, draw 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/f991e209778856fbf83078b501953475.png' />Talent Card.\\n<color=#FFFFFFFF>When this card is played in the second Round or later:</color> Draw a number of cards equal to the <color=#FFFFFFFF>current Round number minus 1</color>. (Up to 4 cards can be drawn in this way)\\n(Only one <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/ad05fb6424e58a2a5685647b6240555a.png' />\"Arcane Legend\" card can be played per match. This card will be in your starting hand.)",
+      "content": "<color=#FFFFFFFF>When this card is played in the first Round:</color> If your deck initially contains at least 4/2 different <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/f991e209778856fbf83078b501953475.png' />Talent cards, draw 2/1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/f991e209778856fbf83078b501953475.png' />Talent Card.\\n<color=#FFFFFFFF>When this card is played in the second Round or later:</color> Draw a number of cards equal to the <color=#FFFFFFFF>current Round number minus 1</color>. (Up to 4 cards can be drawn in this way)\\n(Only one <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/ad05fb6424e58a2a5685647b6240555a.png' />\"Arcane Legend\" card can be played per match. This card will be in your starting hand.)",
       "action_type": "event_card",
       "rank_id": 0,
       "cost_num1": "0",
@@ -21319,6 +21732,52 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a4458bd/4220c933303873e2e081a964cfe9d955.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 332065,
+      "name": "Witch's Homework",
+      "content": "Draw 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/f991e209778856fbf83078b501953475.png' /> Talent card. If your deck initially contains at least 3 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/f991e209778856fbf83078b501953475.png' /> Talent cards, grant <color=#FFFFFFFF>Cost Reduction</color> to a random <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/f991e209778856fbf83078b501953475.png' /> Talent card with the highest <color=#FFFFFFFF><color=#FFFFFFFF>Current Elemental Dice Cost</color></color> in your Hand.",
+      "action_type": "event_card",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1": "3",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8b295c3fed21771dcced6055cdf2f2ce.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/3cc9704c6de16db788254d7379ae7309.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 332066,
+      "name": "Feasting in a Shared Toast",
+      "content": "<color=#FFFFFFFF>When the next Round begins:</color> Both sides draw 2 cards and gain 2 random Elemental Dice.",
+      "action_type": "event_card",
+      "rank_id": 0,
+      "cost_num1": "0",
+      "cost_type1": "",
+      "cost_type1_icon": "",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/5354c5f634805e0700598c9d043c0dc1.png",
       "is_special": false,
       "max_count": 2
     },
@@ -25539,6 +25998,78 @@
       "name": "Lakkaberry Pie",
       "id": 333031,
       "code": 607,
+      "type": "action"
+    },
+    {
+      "name": "Durin",
+      "id": 1317,
+      "code": 608,
+      "type": "character"
+    },
+    {
+      "name": "Jahoda",
+      "id": 1516,
+      "code": 609,
+      "type": "character"
+    },
+    {
+      "name": "Hydro Hypostasis",
+      "id": 2208,
+      "code": 610,
+      "type": "character"
+    },
+    {
+      "name": "Adamah's Redemption",
+      "id": 213171,
+      "code": 611,
+      "type": "action"
+    },
+    {
+      "name": "Backstreet Guile",
+      "id": 215161,
+      "code": 612,
+      "type": "action"
+    },
+    {
+      "name": "Treacherous Torrent",
+      "id": 222081,
+      "code": 613,
+      "type": "action"
+    },
+    {
+      "name": "Genesis of Starsigns",
+      "id": 212032,
+      "code": 614,
+      "type": "action"
+    },
+    {
+      "name": "Sparkborne Magic",
+      "id": 213062,
+      "code": 615,
+      "type": "action"
+    },
+    {
+      "name": "Phantasmal Nocturne",
+      "id": 214012,
+      "code": 616,
+      "type": "action"
+    },
+    {
+      "name": "Temporal Wind's Eulogy",
+      "id": 215032,
+      "code": 617,
+      "type": "action"
+    },
+    {
+      "name": "Witch's Homework",
+      "id": 332065,
+      "code": 618,
+      "type": "action"
+    },
+    {
+      "name": "Feasting in a Shared Toast",
+      "id": 332066,
+      "code": 619,
       "type": "action"
     }
   ]

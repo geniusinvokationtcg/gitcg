@@ -850,5 +850,48 @@
     "character_name": "Black Serpent Knight: Windcutter",
     "talent_id": 225041,
     "talent_name": "\"Once, the Lone Wind That Kept the Dark Calamity at Bay...\""
+  },
+  {
+    "character_id": 1317,
+    "character_name": "Durin",
+    "talent_id": 213171,
+    "talent_name": "Adamah's Redemption"
+  },
+  {
+    "character_id": 1516,
+    "character_name": "Jahoda",
+    "talent_id": 215161,
+    "talent_name": "Backstreet Guile"
+  },
+  {
+    "character_id": 2208,
+    "character_name": "Hydro Hypostasis",
+    "talent_id": 222081,
+    "talent_name": "Treacherous Torrent"
+  },
+  {
+    "character_id": 1401,
+    "character_name": "Fischl",
+    "talent_id": 214012,
+    "talent_name": "Phantasmal Nocturne"
+  },
+  {
+    "character_id": 1203,
+    "character_name": "Mona",
+    "talent_id": 212032,
+    "talent_name": "Genesis of Starsigns"
+  },
+  {
+    "character_id": 1306,
+    "character_name": "Klee",
+    "talent_id": 213062,
+    "talent_name": "Sparkborne Magic"
+  },
+  {
+    "character_id": 1503,
+    "character_name": "Venti",
+    "talent_id": 215032,
+    "talent_name": "Temporal Wind's Eulogy"
   }
+  
 ]

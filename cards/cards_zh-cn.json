@@ -3725,6 +3725,90 @@
       "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f716/8d7528bb86f445a1b5c2224512d5cb42.png"
     },
     {
+      "id": 1317,
+      "name": "杜林",
+      "element_type": 303,
+      "role_skill_infos": [
+        {
+          "skill_text": "造成2点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>物理伤害</color>。",
+          "skill_costs": [
+            {
+              "cost_type": "13",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/fe4517db495f28fdbcb44607d94640c3.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "普通攻击"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/3f016e2d606ca39ea86e24d5245dfa5b.png",
+          "name": "芒焰之翼斩",
+          "id": "13171"
+        },
+        {
+          "skill_text": "造成3点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FF9999FF>火元素伤害</color>，自身附属<color=#FFFFFFFF>精质转变</color>。",
+          "skill_costs": [
+            {
+              "cost_type": "13",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/fe4517db495f28fdbcb44607d94640c3.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "元素战技"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/692f7dca/da5dc3d51a7f6b4c22cd1610d7db9498.png",
+          "name": "二元式·聚分熔炼",
+          "id": "13172"
+        },
+        {
+          "skill_text": "造成1点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FF9999FF>火元素伤害</color>，生成<color=#FFFFFFFF>白化之是</color>。",
+          "skill_costs": [
+            {
+              "cost_type": "13",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/fe4517db495f28fdbcb44607d94640c3.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "元素爆发"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba982/66d1324231edab8f45aaeaad7d4ef09a.png",
+          "name": "白化法·如光流变",
+          "id": "13173"
+        },
+        {
+          "skill_text": "【被动】<color=#FFFFFFFF>自身使用「普通攻击」后：</color>将自身「元素爆发」切换为<color=#FFFFFFFF>黑度法·如星阴燃</color>。\\n<color=#FFFFFFFF>自身使用「元素战技」后：</color>将自身「元素爆发」切换为<color=#FFFFFFFF>白化法·如光流变</color>。",
+          "skill_costs": [],
+          "type": [
+            "被动技能"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba982/4e058ed810ec6cf0ab189eded19d63fe.png",
+          "name": "光灵遵神数显现",
+          "id": "13175"
+        }
+      ],
+      "weapon": "sword",
+      "belongs": [
+        "mondstadt",
+        "",
+        ""
+      ],
+      "hp": 10,
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/57e30bb834d47675a2fdced1bb668c56.png",
+      "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba981/ea02d8378172f946c3f7e33ee6ad2775.png"
+    },
+    {
       "id": 1401,
       "name": "菲谢尔",
       "element_type": 304,
@@ -6219,12 +6303,12 @@
           "id": "15151"
         },
         {
-          "skill_text": "造成1点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' /><color=#80FFD7FF>风元素伤害</color>，自身进入<color=#FFFFFFFF>夜魂加持</color>，获得2点<color=#FFFFFFFF>「夜魂值」</color>，并附属<color=#FFFFFFFF>咔库库</color>。（角色进入<color=#FFFFFFFF>夜魂加持</color>后不可使用此技能）\\n（附属<color=#FFFFFFFF>咔库库</color>的角色可以使用特技：<color=#FFFFFFFF>援护射击</color>）",
+          "skill_text": "造成2点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' /><color=#80FFD7FF>风元素伤害</color>，自身进入<color=#FFFFFFFF>夜魂加持</color>，获得2点<color=#FFFFFFFF>「夜魂值」</color>，并附属<color=#FFFFFFFF>咔库库</color>。（角色进入<color=#FFFFFFFF>夜魂加持</color>后不可使用此技能）\\n（附属<color=#FFFFFFFF>咔库库</color>的角色可以使用特技：<color=#FFFFFFFF>援护射击</color>）",
           "skill_costs": [
             {
               "cost_type": "17",
               "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
-              "cost_num": "2"
+              "cost_num": "3"
             }
           ],
           "type": [
@@ -6265,6 +6349,90 @@
       "hp": 10,
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68f81eac/86d8d0d9ba2aeeb2e320df51fa3a69b4.png",
       "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68f81ec5/3fb3bfa2ea58ca226538dfe54703ea45.png"
+    },
+    {
+      "id": 1516,
+      "name": "雅珂达",
+      "element_type": 307,
+      "role_skill_infos": [
+        {
+          "skill_text": "造成2点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>物理伤害</color>。",
+          "skill_costs": [
+            {
+              "cost_type": "17",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "普通攻击"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/cc29fde34aa6d42f8e110628a4bf2de2.png",
+          "name": "见机行矢",
+          "id": "15161"
+        },
+        {
+          "skill_text": "造成2点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' /><color=#80FFD7FF>风元素伤害</color>，生成1层<color=#FFFFFFFF>敏捷切换</color>，我方切换到下一个角色。如果手牌中没有任意元素的<color=#FFFFFFFF>呼噜噜秘藏瓶</color>，则生成手牌<color=#FFFFFFFF>呼噜噜秘藏瓶</color>；否则，赋予手牌中所有的<color=#FFFFFFFF>呼噜噜秘藏瓶</color><color=#FFFFFFFF>费用降低</color>。",
+          "skill_costs": [
+            {
+              "cost_type": "17",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "元素战技"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/692f7dca/2d038a9823acb6c19b9b64a1113d40dd.png",
+          "name": "奇策·财富分配方案",
+          "id": "15162"
+        },
+        {
+          "skill_text": "造成3点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' /><color=#80FFD7FF>风元素伤害</color>，生成<color=#FFFFFFFF>猫型家用互助协调器</color>。",
+          "skill_costs": [
+            {
+              "cost_type": "17",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "元素爆发"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba982/f99470c649ad33a4815785212069a858.png",
+          "name": "秘器·猎人的七道具",
+          "id": "15163"
+        },
+        {
+          "skill_text": "【被动】战斗开始时，生成手牌<color=#FFFFFFFF>呼噜噜秘藏瓶</color>。\\n我方触发月反应或扩散反应后，使我方手牌中所有<color=#FFFFFFFF>呼噜噜秘藏瓶</color>附着<color=#FFFFFFFF>费用降低</color>。（每回合2次）",
+          "skill_costs": [],
+          "type": [
+            "被动技能"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba982/53af108201d227e415549056dfbdbb1a.png",
+          "name": "月兆祝赐·檐上趱行",
+          "id": "15164"
+        }
+      ],
+      "weapon": "bow",
+      "belongs": [
+        "nod_krai",
+        "",
+        ""
+      ],
+      "hp": 10,
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/52fc36122f134be0cd5a866931d2c653.png",
+      "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba981/9635bbc19193933b7a27d0357c902480.png"
     },
     {
       "id": 1601,
@@ -8403,7 +8571,7 @@
           "id": "21051"
         },
         {
-          "skill_text": "造成1点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/924fba80b9137b4e8fdf5871aa22d666.png' /><color=#99FFFFFF>冰元素伤害</color>，将1张<color=#FFFFFFFF>浮彩</color>加入牌库中第3张的位置，并从3个随机的<color=#FFFFFFFF>浮彩</color>强化效果中<color=#FFFFFFFF>挑选</color>1个。",
+          "skill_text": "造成1点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/924fba80b9137b4e8fdf5871aa22d666.png' /><color=#99FFFFFF>冰元素伤害</color>，将1张<color=#FFFFFFFF>浮彩</color>加入牌库中第3张的位置。如果是本局游戏前4次使用此技能，则从3个随机的<color=#FFFFFFFF>浮彩</color>强化效果中<color=#FFFFFFFF>挑选</color>1个。",
           "skill_costs": [
             {
               "cost_type": "11",
@@ -9033,6 +9201,90 @@
       "hp": 11,
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/49d8176cf43a866b88bed5709e6a80c5.png",
       "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f716/5ea3cab5d35d44096106216727b4670e.png"
+    },
+    {
+      "id": 2208,
+      "name": "无相之水",
+      "element_type": 302,
+      "role_skill_infos": [
+        {
+          "skill_text": "造成1点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>水元素伤害</color>。",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "普通攻击"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/2c014e6053c4f0d032e1d1ff0c6de0e1.png",
+          "name": "水珠漫射",
+          "id": "22081"
+        },
+        {
+          "skill_text": "造成2点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>水元素伤害</color>，然后<color=#FFFFFFFF>准备技能</color>：<color=#FFFFFFFF>溢流</color>。",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "元素战技"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba982/5f5dfb69c657eb20c1e63671c2049db2.png",
+          "name": "涌动洪流",
+          "id": "22082"
+        },
+        {
+          "skill_text": "造成3点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>水元素伤害</color>，召唤<color=#FFFFFFFF>水滴</color>。",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "元素爆发"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba982/790204089e0715ab315a95bf3b4b72ce.png",
+          "name": "危祸之潮",
+          "id": "22083"
+        },
+        {
+          "skill_text": "【被动】战斗开始时，初始附属<color=#FFFFFFFF>水晶核心</color>。如果场上存在<color=#FFFFFFFF>水滴</color>，消耗<color=#FFFFFFFF>水晶核心</color>时重新附属<color=#FFFFFFFF>水晶核心</color>，并使<color=#FFFFFFFF>水滴</color>可用次数-1。",
+          "skill_costs": [],
+          "type": [
+            "被动技能"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba982/23cb4afc553bd958c2ebe591937bcafd.png",
+          "name": "水晶核心",
+          "id": "22084"
+        }
+      ],
+      "weapon": "other_weapons",
+      "belongs": [
+        "monster",
+        "",
+        ""
+      ],
+      "hp": 8,
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/76590248706396ae8a8bf50d1c5f5b9b.png",
+      "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba981/55561420e1c18c08f59e637bfa30366b.png"
     },
     {
       "id": 2301,
@@ -11663,6 +11915,29 @@
       "max_count": 2
     },
     {
+      "id": 212032,
+      "name": "天步真原",
+      "content": "<color=#FFFFFFFF>战斗行动</color>：我方出战角色为<color=#FFFFFFFF>莫娜</color>时，装备此牌。\\n莫娜装备此牌后，我方下次蒸发反应造成的伤害+2并立刻使用一次<color=#FFD780FF>因果点破</color>。\\n<color=#FFFFFFFF>莫娜</color>「普通攻击」少花费1个<color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png' />无色元素</color>，并且「普通攻击」后使我方下次蒸发反应造成的伤害+2。\\n（牌组中包含莫娜，才能加入牌组）",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1": "12",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+      "cost_num2": "1",
+      "cost_type2": "10",
+      "cost_type2_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+      "action_card_tags": [
+        "talent",
+        "combat_action",
+        "13",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/f5a75ba8ba90007cee8b4efbbcbf3c91.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 212041,
       "name": "深渊之灾·凝水盛放",
       "content": "<color=#FFFFFFFF>战斗行动</color>：我方出战角色为<color=#FFFFFFFF>达达利亚</color>时，装备此牌。\\n达达利亚装备此牌后，立刻使用一次<color=#FFD780FF>魔王武装·狂澜</color>。\\n结束阶段：装备有此牌的达达利亚在场时，如果敌方出战角色附属有<color=#FFFFFFFF>断流</color>，则对其造成1点<color=#FFFFFFFF>穿透伤害</color>。\\n（牌组中包含达达利亚，才能加入牌组）",
@@ -12077,6 +12352,29 @@
       "max_count": 2
     },
     {
+      "id": 213062,
+      "name": "火花魔法",
+      "content": "<color=#FFFFFFFF>快速行动</color>：装备给我方的<color=#FFFFFFFF>可莉</color>。\\n可莉附属<color=#FFFFFFFF>爆裂火花</color>。\\n<color=#FFFFFFFF>所附属角色进行<color=#FFFFFFFF>重击</color>后：</color>造成2点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FF9999FF>火元素伤害</color>。（每回合2次）\\n（牌组中包含可莉，才能加入牌组）",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1": "13",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/fe4517db495f28fdbcb44607d94640c3.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "13",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/9438ab87a899aa35df6ee6ab26209b45.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 213071,
       "name": "血之灶火",
       "content": "<color=#FFFFFFFF>战斗行动</color>：我方出战角色为<color=#FFFFFFFF>胡桃</color>时，装备此牌。\\n胡桃装备此牌后，立刻使用一次<color=#FFD780FF>蝶引来生</color>。\\n装备有此牌的胡桃在生命值不多于6时：造成的<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FF9999FF>火元素伤害</color>+1。\\n（牌组中包含胡桃，才能加入牌组）",
@@ -12307,6 +12605,29 @@
       "max_count": 2
     },
     {
+      "id": 213171,
+      "name": "红土之逆",
+      "content": "<color=#FFFFFFFF>战斗行动</color>：我方出战角色为<color=#FFFFFFFF>杜林</color>时，装备此牌。\\n杜林装备此牌后，根据自身当前「元素爆发」立刻使用一次<color=#FFD780FF>白化法·如光流变</color>或<color=#FFD780FF>黑度法·如星阴燃</color>。\\n<color=#FFFFFFFF>所附属角色使用白化法·如光流变后：</color>我方下4次造成的伤害+1。\\n<color=#FFFFFFFF>所附属角色使用黑度法·如星阴燃后：</color>我方<color=#FFFFFFFF>杜林</color>与<color=#FFFFFFFF>黑度之否</color>造成的伤害+2。\\n（牌组中包含杜林，才能加入牌组）",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "4",
+      "cost_type1": "13",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/fe4517db495f28fdbcb44607d94640c3.png",
+      "cost_num2": "2",
+      "cost_type2": "1",
+      "cost_type2_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+      "action_card_tags": [
+        "talent",
+        "combat_action",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/730cd6ed2553a91846158638db273321.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 214011,
       "name": "噬星魔鸦",
       "content": "<color=#FFFFFFFF>战斗行动</color>：我方出战角色为<color=#FFFFFFFF>菲谢尔</color>时，装备此牌。\\n菲谢尔装备此牌后，立刻使用一次<color=#FFD780FF>夜巡影翼</color>。\\n装备有此牌的菲谢尔生成的<color=#FFFFFFFF>奥兹</color>，会在菲谢尔<color=#FFFFFFFF>普通攻击</color>后造成2点<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><color=#FFACFFFF>雷元素伤害</color>。（需消耗<color=#FFFFFFFF>可用次数</color>）\\n（牌组中包含菲谢尔，才能加入牌组）",
@@ -12326,6 +12647,29 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/aaf9c8e9b929f04175e94ba46a548072.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 214012,
+      "name": "宵世幻奏",
+      "content": "<color=#FFFFFFFF>快速行动</color>：装备给我方的<color=#FFFFFFFF>菲谢尔</color>。\\n召唤<color=#FFFFFFFF>奥兹</color>。\\n<color=#FFFFFFFF>奥兹</color>在场时，我方<color=#FFACFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' />雷元素相关反应</color>造成的伤害+1。（每回合3次）\\n（牌组中包含菲谢尔，才能加入牌组）",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1": "14",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0a7a50d15a7580c4de07a41f87a95787.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "13",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/32d2719eb188b0bfb05a5b91fff7dfe5.png",
       "is_special": false,
       "max_count": 2
     },
@@ -12790,6 +13134,29 @@
       "max_count": 2
     },
     {
+      "id": 215032,
+      "name": "颂时风若",
+      "content": "<color=#FFFFFFFF>快速行动</color>：装备给我方的<color=#FFFFFFFF>温迪</color>。\\n召唤<color=#FFFFFFFF>暴风之眼</color>。\\n我方召唤<color=#FFFFFFFF>暴风之眼</color>后，本回合中所附属角色下2次<color=#FFFFFFFF>「普通攻击」</color>造成的<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>物理伤害</color>变为<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' /><color=#80FFD7FF>风元素伤害</color>，并且少花费2个<color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png' />无色元素</color>。\\n（牌组中包含温迪，才能加入牌组）",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "3",
+      "cost_type1": "17",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "13",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/fb1da536ad13b34d91d8fb03c48894a3.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 215041,
       "name": "降魔·护法夜叉",
       "content": "<color=#FFFFFFFF>战斗行动</color>：我方出战角色为<color=#FFFFFFFF>魈</color>时，装备此牌。\\n魈装备此牌后，立刻使用一次<color=#FFD780FF>靖妖傩舞</color>。\\n装备有此牌的魈附属<color=#FFFFFFFF>夜叉傩面</color>期间，使用<color=#FFFFFFFF>风轮两立</color>时少花费1个<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png' /><color=#80FFD7FF>风元素</color>。（每附属1次<color=#FFFFFFFF>夜叉傩面</color>，可触发2次）\\n（牌组中包含魈，才能加入牌组）",
@@ -13062,6 +13429,29 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/68f81eac/57c06e95c52835d1aa9621e5937389d5.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 215161,
+      "name": "暗巷的黠慧",
+      "content": "<color=#FFFFFFFF>战斗行动</color>：我方出战角色为<color=#FFFFFFFF>雅珂达</color>时，装备此牌。\\n雅珂达装备此牌后，立刻使用一次<color=#FFD780FF>奇策·财富分配方案</color>。\\n<color=#FFFFFFFF>雅珂达</color>切换成出战角色时，如果敌方手牌数量大于或等于我方手牌数量，则随机复制2张敌方手牌。（每回合1次）\\n（牌组中包含雅珂达，才能加入牌组）",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "3",
+      "cost_type1": "17",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "combat_action",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/b9d33825378116f78fff8bf604e4d95c.png",
       "is_special": false,
       "max_count": 2
     },
@@ -13867,6 +14257,29 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6966dcbb/2452380125303d9dcfa0dd256e8062a4.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 222081,
+      "name": "诡谲恶浪",
+      "content": "<color=#FFFFFFFF>快速行动</color>：装备给我方的<color=#FFFFFFFF>无相之水</color>。\\n<color=#FFFFFFFF>无相之水</color>或<color=#FFFFFFFF>水滴</color>造成伤害后，治疗我方受伤最多的魔物1点。（每回合3次）\\n（牌组中包含无相之水，才能加入牌组）",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1": "12",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/36bebf17772b3d11a439c220f4f34a21.png",
       "is_special": false,
       "max_count": 2
     },
@@ -19071,7 +19484,7 @@
     {
       "id": 330005,
       "name": "万家灶火",
-      "content": "<color=#FFFFFFFF>第1回合打出此牌时：</color>如果我方牌组中初始包含至少2张不同的「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/f991e209778856fbf83078b501953475.png' />天赋」牌，则抓1张「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/f991e209778856fbf83078b501953475.png' />天赋」牌。\\n<color=#FFFFFFFF>第2回合及以后打出此牌时：</color>我方抓<color=#FFFFFFFF>当前的回合数-1</color>数量的牌。（最多抓4张）\\n（整局游戏只能打出一张「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/ad05fb6424e58a2a5685647b6240555a.png' />秘传」卡牌；这张牌一定在你的起始手牌中）",
+      "content": "<color=#FFFFFFFF>第1回合打出此牌时：</color>如果我方牌组中初始包含至少4/2张不同的「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/f991e209778856fbf83078b501953475.png' />天赋」牌，则抓2/1张「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/f991e209778856fbf83078b501953475.png' />天赋」牌。\\n<color=#FFFFFFFF>第2回合及以后打出此牌时：</color>我方抓<color=#FFFFFFFF>当前的回合数-1</color>数量的牌。（最多抓4张）\\n（整局游戏只能打出一张「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/ad05fb6424e58a2a5685647b6240555a.png' />秘传」卡牌；这张牌一定在你的起始手牌中）",
       "action_type": "event_card",
       "rank_id": 0,
       "cost_num1": "0",
@@ -21319,6 +21732,52 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a4458bd/4220c933303873e2e081a964cfe9d955.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 332065,
+      "name": "「魔女的课业」",
+      "content": "抓1张「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/f991e209778856fbf83078b501953475.png' />天赋」牌。如果我方牌组中初始包含至少3张「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/f991e209778856fbf83078b501953475.png' />天赋」牌，则赋予手牌中<color=#FFFFFFFF><color=#FFFFFFFF>当前元素骰费用</color></color>最高的随机1张「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/f991e209778856fbf83078b501953475.png' />天赋」牌<color=#FFFFFFFF>费用降低</color>。",
+      "action_type": "event_card",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1": "3",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8b295c3fed21771dcced6055cdf2f2ce.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/3cc9704c6de16db788254d7379ae7309.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 332066,
+      "name": "齐聚共饮",
+      "content": "<color=#FFFFFFFF>下个回合开始时：</color>双方各抓2张牌，随机生成2个随机元素骰。",
+      "action_type": "event_card",
+      "rank_id": 0,
+      "cost_num1": "0",
+      "cost_type1": "",
+      "cost_type1_icon": "",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/5354c5f634805e0700598c9d043c0dc1.png",
       "is_special": false,
       "max_count": 2
     },
@@ -25539,6 +25998,78 @@
       "name": "白灵果派",
       "id": 333031,
       "code": 607,
+      "type": "action"
+    },
+    {
+      "name": "杜林",
+      "id": 1317,
+      "code": 608,
+      "type": "character"
+    },
+    {
+      "name": "雅珂达",
+      "id": 1516,
+      "code": 609,
+      "type": "character"
+    },
+    {
+      "name": "无相之水",
+      "id": 2208,
+      "code": 610,
+      "type": "character"
+    },
+    {
+      "name": "红土之逆",
+      "id": 213171,
+      "code": 611,
+      "type": "action"
+    },
+    {
+      "name": "暗巷的黠慧",
+      "id": 215161,
+      "code": 612,
+      "type": "action"
+    },
+    {
+      "name": "诡谲恶浪",
+      "id": 222081,
+      "code": 613,
+      "type": "action"
+    },
+    {
+      "name": "天步真原",
+      "id": 212032,
+      "code": 614,
+      "type": "action"
+    },
+    {
+      "name": "火花魔法",
+      "id": 213062,
+      "code": 615,
+      "type": "action"
+    },
+    {
+      "name": "宵世幻奏",
+      "id": 214012,
+      "code": 616,
+      "type": "action"
+    },
+    {
+      "name": "颂时风若",
+      "id": 215032,
+      "code": 617,
+      "type": "action"
+    },
+    {
+      "name": "「魔女的课业」",
+      "id": 332065,
+      "code": 618,
+      "type": "action"
+    },
+    {
+      "name": "齐聚共饮",
+      "id": 332066,
+      "code": 619,
       "type": "action"
     }
   ]
