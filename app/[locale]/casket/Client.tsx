@@ -216,7 +216,7 @@ export function DeckBuilderPageClient ({
 
   const actionTraits = useMemo(() => ({
     type: ["equipment_card", "support_card", "event_card"],
-    tag: ["talent", "weapon", "sword", "catalyst", "claymore", "bow", "polearm", "artifact", "technique", "location", "companion", "item", "arcane_legend", "elemental_transfiguration", "elemental_resonance", "food", "combat_action", "none"],
+    tag: ["talent", "hexerei", "weapon", "sword", "catalyst", "claymore", "bow", "polearm", "artifact", "technique", "location", "companion", "item", "arcane_legend", "elemental_transfiguration", "elemental_resonance", "food", "combat_action", "none"],
     cost: (() => {
       const costs: Set<number> = new Set();
       actions.forEach(c => costs.add(c.total_cost_num));
