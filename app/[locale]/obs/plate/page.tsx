@@ -33,7 +33,7 @@ export default function PlateOverlay() {
         }}
         className="genshin_font text-center text-2xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] text-white overflow-hidden"
       >
-        {`${getVerLabel(version, "en")} ${getServerLabel(server, "en")}`}
+        {`Version ${getVerLabel(version, "en")} ${getServerLabel(server, "en")}`}
         <br />
         {`Week ${week} ${
           customText ? customText :

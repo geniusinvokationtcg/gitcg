@@ -39,7 +39,7 @@ export default function MajorPlateOverlay () {
         }}
         className="genshin_font text-center text-2xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] text-white overflow-hidden"
       >
-        {`${getVerLabel(version, "en")} ${getServerLabel(server, "en")} Major`}
+        {`Version ${getVerLabel(version, "en")} ${getServerLabel(server, "en")} Major`}
         <br />
         {`${t(getRoundNameKey(games[round].length*2), { top: games[round].length*2 })} | Match ${liveData?.match || ""} | Game ${liveData?.game || ""}`}
       </p>

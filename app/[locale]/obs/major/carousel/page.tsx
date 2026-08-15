@@ -12,7 +12,6 @@ export default function MajorDeckCarouselOverlay () {
   
   const majorMetadata = useMajorMetadataByUuid(live.data?.major_uuid || "")
 
-  const liveData = live.data
   const majorData = majorMetadata.data?.content
 
   const players = (majorData?.players || []).map(player => ({

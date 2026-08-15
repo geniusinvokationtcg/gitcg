@@ -7,7 +7,7 @@ import { useLiveMatch } from "@/hooks/useLiveMatch";
 import { useLocalCardsData } from "@/hooks/useLocalCardsData";
 import { decodeAndSortActionCards, isValidDeckcode } from "@/utils/decoder";
 import { percentize } from "@/utils/formatting";
-import { CsvPasteRowClient } from "@/utils/types";
+import { CardType, CsvPasteRowClient } from "@/utils/types";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
@@ -26,34 +26,68 @@ export default function DeckCarouselOverlay() {
     decoded: decodeAndSortActionCards(row.deckcode)
   })).filter(row => row.isValidDeckcode.result && row.isCheckedIn)
 
-  const [playerIndex, setPlayerIndex] = useState(0);
+  const [slideIndex, setSlideIndex] = useState(0)
+
+  const mostUsedCharSlide = <CardMostUsed csvPaste={transformedData} type="characters"/>
+  const mostUsedActionSlide = <CardMostUsed csvPaste={transformedData} type="actions"/>
+  const deckSlides = transformedData.map(player => {
+    const name = duelistRecord ? duelistRecord.find(duelist => duelist[`uid_${server}`] === player.uid)?.handle_display || player.teamName : "N/A";
+    const deck = player.decoded;
+    const characters = deck.slice(0, 3);
+    const actions = deck.slice(3, 33);
+    
+    return <>
+      <div className="genshin_font text-[3rem]">{name}</div>
+            
+      <div className="flex flex-row gap-2">
+        {characters.map(c =>
+          <CardImage
+            key={c}
+            cardType="characters"
+            cardId={c}
+            size={"large"}
+            borderType="lustrous"
+          />
+        )}
+      </div>
+
+      <div className="grid grid-cols-10 gap-1">
+        {actions.map((c, i) =>
+          <CardImage
+            key={i}
+            cardType="actions"
+            cardId={c}
+            size={75}
+            borderType="lustrous"
+          />
+        )}
+      </div>
+    </>
+  })
+
+  const slides = [
+    mostUsedCharSlide,
+    mostUsedActionSlide,
+    ...deckSlides
+  ]
 
   useEffect(() => {
-    setPlayerIndex(transformedData.length);
-
     const timer = setInterval(() => {
-      setPlayerIndex(prev => (prev + 1) % (transformedData.length + 1));
+      setSlideIndex(prev => (prev + 1) % slides.length);
     }, 10000)
 
     return () => clearInterval(timer)
-  }, [transformedData.length])
+  }, [slides.length])
 
   if (error) return "Error: " + error;
   if (!data) return "Match loading";
   if (!duelistRecord) return "DR loading";
   if (!csvPasteAPIRes) return "CSV loading";
 
-  const currentPlayer = transformedData[playerIndex >= transformedData.length ? 0 : playerIndex];
-
-  const name = duelistRecord ? duelistRecord.find(duelist => duelist[`uid_${server}`] === currentPlayer.uid)?.handle_display || currentPlayer.teamName : "N/A";
-  const deck = currentPlayer.decoded;
-  const characters = deck.slice(0, 3);
-  const actions = deck.slice(3, 33);
-
   return <div style={{ background: "transparent", width: "auto" }} className="mt-6 mx-6">
     <AnimatePresence mode="wait">
       <motion.div
-        key={playerIndex}
+        key={slideIndex}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -63,34 +97,7 @@ export default function DeckCarouselOverlay() {
         }}
         className="flex flex-col gap-3 justify-center items-center overflow-hidden"
       >
-        {playerIndex === transformedData.length ? <CharacterCardMostUsed csvPaste={transformedData}/> : <>
-          <div className="genshin_font text-[3rem]">{name}</div>
-          
-          <div className="flex flex-row gap-2">
-            {characters.map(c =>
-              <CardImage
-                key={c}
-                cardType="characters"
-                cardId={c}
-                size={"large"}
-                borderType="lustrous"
-              />
-            )}
-          </div>
-
-          <div className="grid grid-cols-10 gap-1">
-            {actions.map((c, i) =>
-              <CardImage
-                key={i}
-                cardType="actions"
-                cardId={c}
-                size={75}
-                borderType="lustrous"
-              />
-            )}
-          </div>
-        </>}
-
+        {slides[slideIndex]}
       </motion.div>
     </AnimatePresence>
   </div>
@@ -101,12 +108,22 @@ interface CsvPasteRowClientTransformed extends CsvPasteRowClient {
   decoded: number[]
 }
 
-export function CharacterCardMostUsed ({ csvPaste }: { csvPaste: CsvPasteRowClientTransformed[] }) {
+export function CardMostUsed ({ csvPaste, type }: { csvPaste: CsvPasteRowClientTransformed[]; type: CardType }) {
+  console.log(csvPaste)
   const cardsMap: Map<number, number> = new Map();
+
+  const startIndex = type === "characters" ? 0 : 3
+  const endIndex = type === "characters" ? 3 : 33
   
   csvPaste.forEach(row => {
-    for (let i = 0; i < 3; i++) {
+    let cardsAlreadyChecked: number[] = []
+    for (let i = startIndex; i < endIndex; i++) {
       const id = row.decoded[i];
+      if(cardsAlreadyChecked.includes(id)) {
+        continue;
+      } else {
+        cardsAlreadyChecked = [...cardsAlreadyChecked, id]
+      }
       cardsMap.set(id, (cardsMap.get(id) ?? 0) + 1);
     }
   })
@@ -117,12 +134,12 @@ export function CharacterCardMostUsed ({ csvPaste }: { csvPaste: CsvPasteRowClie
   const localCardsData = useLocalCardsData();
 
   return <div className="genshin_font text-center flex flex-col gap-2 justify-center items-center">
-    <p className="text-[3rem]">Most used characters</p>
+    <p className="text-[3rem]">{`Most used ${type === "characters" ? "characters" : "action cards"}`}</p>
     <div className="flex flex-row gap-6">
       {cards.slice(0, 2).map(([id, count]) =>
         <div key={id} className="flex flex-col gap-2 justify-center items-center">
           <CardImage
-            cardType="characters"
+            cardType={type}
             cardId={id}
             size={150}
             borderType="lustrous"
@@ -144,7 +161,7 @@ export function CharacterCardMostUsed ({ csvPaste }: { csvPaste: CsvPasteRowClie
       {cards.slice(2, 5).map(([id, count]) =>
         <div key={id} className="flex flex-col gap-2 justify-center items-center">
           <CardImage
-            cardType="characters"
+            cardType={type}
             cardId={id}
             size={120}
             borderType="lustrous"
