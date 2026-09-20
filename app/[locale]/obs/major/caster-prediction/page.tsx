@@ -54,7 +54,8 @@ export default function MajorCasterPredictionOverlay() {
                   case "f15caf8e-bd2a-4eff-9505-7d9b279a6567": return "Kerching"
                   case "c197df31-b927-4fa3-8677-d470e1ee76cc": return "ersihfrans"
                   case "6369b903-9f6f-4a36-967a-967ea06f619d": return "KevinZ"
-                  default: return "Mischa"
+                  case "17be53af-4a87-4ac4-9812-07d4a4ab6b56": return "Mischa"
+                  default: return "Linux"
                 }
               })()}
             </div>
