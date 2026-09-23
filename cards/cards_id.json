@@ -614,7 +614,7 @@
         "",
         ""
       ],
-      "hp": 10,
+      "hp": 12,
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/c9d2126867ac43398249afb5a5d42610.png",
       "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f716/e35275d8ba79a90dfd27e340b51486c1.png"
     },
@@ -2474,7 +2474,7 @@
           "id": "12163"
         },
         {
-          "skill_text": "<color=#FFFFFFFF>Saat <color=#FFFFFFFF>Empowerment</color> diberikan kepada kartumu: </color>Jika terdapat <color=#FFFFFFFF>Cool Your Jets Ducky</color> di arenamu, maka Penggunaan +1. Jika tidak, diri sendiri akan mendapatkan 1 poin <color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png' />Energy</color>. (Sekali setiap Ronde)",
+          "skill_text": "(Pasif) <color=#FFFFFFFF>Saat <color=#FFFFFFFF>Empowerment</color> diberikan kepada kartumu: </color>Jika terdapat <color=#FFFFFFFF>Cool Your Jets Ducky</color> di arenamu, maka Penggunaan +1. Jika tidak, diri sendiri akan mendapatkan 1 poin <color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png' />Energy</color>. (Sekali setiap Ronde)",
           "skill_costs": [],
           "type": [
             "Passive Skill"
@@ -2493,6 +2493,90 @@
       "hp": 10,
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/06c08232f1285e53474d769a3c87042e.png",
       "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58cbe/751c2a66dfbd3fb158870012ff33b364.png"
+    },
+    {
+      "id": 1217,
+      "name": "Columbina",
+      "element_type": 302,
+      "role_skill_infos": [
+        {
+          "skill_text": "Mengakibatkan 1 poin <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>Hydro DMG</color>.\\nSelama pertandingan ini, setelah lawan terkena total 3 kali Reaksi Lunar, jika di Tanganmu terdapat kartu yang terpengaruh <color=#FFFFFFFF>Pengurangan Biaya</color>, maka akan meletakkan 1 kartu acak yang terpengaruh <color=#FFFFFFFF>Pengurangan Biaya</color> ke bagian atas Dek, lalu mengakibatkan 1 poin <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' /><color=#7EC236FF>Dendro DMG</color>. (Sekali setiap Ronde)",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Normal Attack"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/2c014e6053c4f0d032e1d1ff0c6de0e1.png",
+          "name": "Moondew Cascade",
+          "id": "12171"
+        },
+        {
+          "skill_text": "Mengakibatkan 1 poin <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>Hydro DMG</color> dan menciptakan <color=#FFFFFFFF>Gravity Ripple</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "Elemental Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6966dce5/771809f16437a2c4960f564f0f199057.png",
+          "name": "Eternal Tides",
+          "id": "12172"
+        },
+        {
+          "skill_text": "Mengakibatkan 3 poin <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><color=#80C0FFFF>Hydro DMG</color> dan menciptakan <color=#FFFFFFFF>Lunar Domain</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "12",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "Elemental Burst"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6ab31695/a02527df30931a59aeca6786d5359025.png",
+          "name": "Moonlit Melancholy",
+          "id": "12173"
+        },
+        {
+          "skill_text": "(Pasif) Dalam pertandingan ini, saat musuh menerima Reaksi <color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' />Electro-Charged</color>/<color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' />Bloom</color>/<color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/b357f624efdec0c1cc0cc4f180e07db4.png' /><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/98c267c74a3efdcfed4131a054ff4b82.png' />Crystallize (Hydro)</color>, reaksi tersebut berubah menjadi reaksi <color=#FFFFFFFF><color=#FFFFFFFF>Lunar-Charged</color></color>/<color=#FFFFFFFF><color=#FFFFFFFF>Lunar-Bloom</color></color>/<color=#FFFFFFFF><color=#FFFFFFFF>Lunar-Crystallize</color></color>.\\nSetelah musuh menerima Reaksi <color=#FFFFFFFF><color=#FFFFFFFF>Lunar-Charged</color></color>/<color=#FFFFFFFF><color=#FFFFFFFF>Lunar-Bloom</color></color>/<color=#FFFFFFFF><color=#FFFFFFFF>Lunar-Crystallize</color></color>: Mengakibatkan 1 poin <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><color=#FFACFFFF>Electro DMG</color>/<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' /><color=#7EC236FF>Dendro DMG</color>/<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/98c267c74a3efdcfed4131a054ff4b82.png' /><color=#FFE699FF>Geo DMG</color>. (Sekali setiap Ronde)",
+          "skill_costs": [],
+          "type": [
+            "Passive Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6ab31695/10343c2bc7dbdf8e6e13e93161133bea.png",
+          "name": "Moonsign Benediction: Moonlight, Lent Unto You",
+          "id": "12174"
+        }
+      ],
+      "weapon": "catalyst",
+      "belongs": [
+        "nod_krai",
+        "",
+        ""
+      ],
+      "hp": 10,
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6ab3168d/4efc04e0d956ce3dc94ea9d1b5cd2a1f.png",
+      "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6ab31694/5b79a7f688ef8cba6e67d099886a6e61.png"
     },
     {
       "id": 1301,
@@ -6414,7 +6498,7 @@
           "id": "15163"
         },
         {
-          "skill_text": "(Pasif) Saat pertandingan dimulai, menciptakan kartu <color=#FFFFFFFF>Purr-loined Treasure Flask</color> di Tangan. Setelah kamu memicu reaksi Lunar atau reaksi Swirl, memberikan <color=#FFFFFFFF>Pengurangan Biaya</color> ke semua kartu <color=#FFFFFFFF>Purr-loined Treasure Flask</color> di Tanganmu. (2 kali setiap Ronde)",
+          "skill_text": "(Pasif) Saat pertandingan dimulai, menciptakan kartu <color=#FFFFFFFF>Purr-loined Treasure Flask</color> di Tangan. Setelah kamu memicu Reaksi Lunar atau Reaksi Swirl, memberikan <color=#FFFFFFFF>Pengurangan Biaya</color> ke semua kartu <color=#FFFFFFFF>Purr-loined Treasure Flask</color> di Tanganmu. (2 kali setiap Ronde)",
           "skill_costs": [],
           "type": [
             "Passive Skill"
@@ -7283,6 +7367,90 @@
       "hp": 12,
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/681a9497/1bcd93318746a99f0404940b0a7b2f2c.png",
       "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/681a94af/4ca1622d72a6dfb024393a85485c7ef3.png"
+    },
+    {
+      "id": 1612,
+      "name": "Illuga",
+      "element_type": 305,
+      "role_skill_infos": [
+        {
+          "skill_text": "Mengakibatkan 2 poin <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>Physical DMG</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "15",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/680e755181a0b8c29e87d0570815ac29.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Normal Attack"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/0a4af4ecb63b4741aa3e42d18a2a0c21.png",
+          "name": "Oathkeeper's Spear",
+          "id": "16121"
+        },
+        {
+          "skill_text": "Mengakibatkan 3 poin <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/98c267c74a3efdcfed4131a054ff4b82.png' /><color=#FFE699FF>Geo DMG</color> dan menciptakan <color=#FFFFFFFF>Aedon</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "15",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/680e755181a0b8c29e87d0570815ac29.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "Elemental Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6966dce5/3972d09a057110aad73f0cbc620043f1.png",
+          "name": "Dawnbearing Songbird",
+          "id": "16122"
+        },
+        {
+          "skill_text": "Mengakibatkan 3 poin <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/98c267c74a3efdcfed4131a054ff4b82.png' /><color=#FFE699FF>Geo DMG</color> dan menciptakan <color=#FFFFFFFF>Nightingale's Song</color> dengan Penggunaan sebanyak 3 kali.",
+          "skill_costs": [
+            {
+              "cost_type": "15",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/680e755181a0b8c29e87d0570815ac29.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Elemental Burst"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6ab31695/5ff94e3e0cabccb0f57ef2da9edced9d.png",
+          "name": "Shadowless Reflection",
+          "id": "16123"
+        },
+        {
+          "skill_text": "(Pasif) Saat kartu yang namanya tidak ada di Dek awal Pertandingan ini ditambahkan ke Tanganmu, memberikan <color=#FFFFFFFF>Pengurangan Biaya</color> kepadanya. (Sekali setiap Ronde)",
+          "skill_costs": [],
+          "type": [
+            "Passive Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6ab31695/b0e856fd9a34c6204f92f980463d1796.png",
+          "name": "Moonsign Benediction: Unwithering in Winter",
+          "id": "16124"
+        }
+      ],
+      "weapon": "polearm",
+      "belongs": [
+        "nod_krai",
+        "",
+        ""
+      ],
+      "hp": 10,
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6ab3168d/972f565dbba9de910e00adf6baa9096a.png",
+      "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6ab31694/bfc7b6b56e4623431a1da7ea77546cd6.png"
     },
     {
       "id": 1701,
@@ -10330,8 +10498,8 @@
           "skill_text": "Memanggil <color=#FFFFFFFF>Shadowsword: Galloping Frost</color>.",
           "skill_costs": [
             {
-              "cost_type": "11",
-              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/412134fa7fc8a73b5e20c177a3ae0046.png",
+              "cost_type": "17",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
               "cost_num": "3"
             }
           ],
@@ -12193,7 +12361,7 @@
     {
       "id": 212161,
       "name": "The Burden of Creative Genius",
-      "content": "<color=#FFFFFFFF>Aksi Tempur</color>: Kartu ini dapat dikenakan saat menggunakan <color=#FFFFFFFF>Aino</color> sebagai Karakter Aktif.\\nAino akan langsung menggunakan <color=#FFD780FF>Precision Hydronic Cooler</color> satu kali setelah mengenakannya.\\n<color=#FFFFFFFF>Saat <color=#FFFFFFFF>Aino</color> yang mengenakan kartu ini berada di arena dan kamu memicu reaksi Electro-Charged, Lunar-Charged, Bloom, atau Lunar-Bloom:</color> DMG +2 dan memberikan <color=#FFFFFFFF><color=#FFFFFFFF>Empowerment</color></color> kepada 1 kartu di Tanganmu dengan <color=#FFFFFFFF><color=#FFFFFFFF>Biaya Dadu Elemental Saat Ini</color></color> tertinggi. (Sekali setiap Ronde)\\n(Kamu harus punya Aino di dalam Dek-mu untuk menambahkan kartu ini ke dalam Dek)",
+      "content": "<color=#FFFFFFFF>Aksi Tempur</color>: Kartu ini dapat dikenakan saat menggunakan <color=#FFFFFFFF>Aino</color> sebagai Karakter Aktif.\\nAino akan langsung menggunakan <color=#FFD780FF>Precision Hydronic Cooler</color> satu kali setelah mengenakannya.\\n<color=#FFFFFFFF>Saat <color=#FFFFFFFF>Aino</color> yang mengenakan kartu ini berada di arena dan kamu memicu reaksi Electro-Charged, Lunar-Charged, Bloom, Lunar-Bloom, Crystallize (Hydro), atau Lunar-Crystallize:</color> DMG +2 dan memberikan <color=#FFFFFFFF><color=#FFFFFFFF>Empowerment</color></color> kepada 1 kartu di Tanganmu dengan <color=#FFFFFFFF><color=#FFFFFFFF>Biaya Dadu Elemental Saat Ini</color></color> tertinggi. (Sekali setiap Ronde)\\n(Kamu harus punya Aino di dalam Dek-mu untuk menambahkan kartu ini ke dalam Dek)",
       "action_type": "equipment_card",
       "rank_id": 0,
       "cost_num1": "3",
@@ -12210,6 +12378,29 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/69d58ca1/bd378ee0c17a6a04c2d8d8681a44236a.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 212171,
+      "name": "Radiance Over Blossoms and Peaks",
+      "content": "<color=#FFFFFFFF>Aksi Tempur</color>: Kartu ini dapat dikenakan saat menggunakan <color=#FFFFFFFF>Columbina</color> sebagai Karakter Aktif.\\nColumbina akan langsung melancarkan <color=#FFD780FF>Eternal Tides</color> satu kali setelah mengenakannya.\\n<color=#FFFFFFFF>Ketika <color=#FFFFFFFF>Columbina</color></color> yang mengenakan kartu ini berada di arena dan setelah <color=#FFFFFFFF>musuh menerima <color=#FFFFFFFF><color=#FFFFFFFF>Lunar-Charged</color></color>: </color>1 Karaktermu yang Energy-nya belum terisi penuh mendapatkan 1 poin <color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png' />Energy</color>.\\nSetelah <color=#FFFFFFFF>musuh menerima <color=#FFFFFFFF><color=#FFFFFFFF>Lunar-Bloom</color></color>: </color>DMG yang diterima Karakter aktifmu berikutnya -1.\\nSetelah <color=#FFFFFFFF>musuh menerima <color=#FFFFFFFF><color=#FFFFFFFF>Lunar-Crystallize</color></color>: </color>Secara otomatis memainkan 1 kartu <color=#FFFFFFFF><color=#FFFFFFFF>Moondrift Harmony</color></color> dengan <color=#FFFFFFFF><color=#FFFFFFFF>Biaya Dadu Elemental Saat Ini</color></color> tertinggi di Tangan secara gratis. (2 kali setiap Ronde)\\n(Kamu harus punya Columbina di dalam Dek-mu untuk menambahkan kartu ini ke dalam Dek)",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "3",
+      "cost_type1": "12",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/aebd3583ff696429f2e8d83527149ce3.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "combat_action",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6ab3168d/c001b6210c2fa2eb336617d2dffbce3b.png",
       "is_special": false,
       "max_count": 2
     },
@@ -12697,6 +12888,29 @@
       "max_count": 2
     },
     {
+      "id": 214022,
+      "name": "Surge of Lightning",
+      "content": "<color=#FFFFFFFF>Aksi Tempur</color>: Kartu ini dapat dikenakan saat menggunakan <color=#FFFFFFFF>Razor</color> sebagai Karakter Aktif.\\nJika <color=#FFFFFFFF>Razor</color> milikmu belum terpengaruh <color=#FFFFFFFF>The Wolf Within</color>, maka akan memberikan <color=#FFFFFFFF>The Wolf Within</color> dengan durasi 1 Ronde kepada diri sendiri.\\nSelama Razor yang memiliki kartu ini terpengaruh <color=#FFFFFFFF>The Wolf Within</color>, DMG yang diakibatkan The Wolf Within milikmu +1.\\n(Kamu harus punya Razor di dalam Dek-mu untuk menambahkan kartu ini ke dalam Dek)",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1": "14",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0a7a50d15a7580c4de07a41f87a95787.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "13",
+        "combat_action",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6ab3168d/6029acd1ccf60874ed5cf08a441b4ba2.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 214031,
       "name": "Thundering Penance",
       "content": "<color=#FFFFFFFF>Aksi Tempur</color>: Kartu ini dapat dikenakan saat menggunakan <color=#FFFFFFFF>Keqing</color> sebagai Karakter aktif.\\nKeqing akan langsung melancarkan <color=#FFD780FF>Stellar Restoration</color> satu kali setelah mengenakannya.\\nKetika mengenakan kartu ini, <color=#FFFFFFFF>Electro Elemental Infusion</color> yang diciptakan Keqing akan mendapatkan efek berikut:\\n<color=#FFFFFFFF>Durasi (Ronde)</color> awal +1\\n<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><color=#FFACFFFF>Electro DMG</color> yang diakibatkan +1.\\n(Kamu harus punya Keqing di dalam Dek-mu untuk menambahkan kartu ini ke dalam Dek)",
@@ -13084,6 +13298,29 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f6fc/7b2fd7e8da8275ba2df341ab0ec53426.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 215012,
+      "name": "Sevenfold Transmutation",
+      "content": "<color=#FFFFFFFF>Aksi Cepat</color>: Mengenakan ini pada <color=#FFFFFFFF>Sucrose</color> milikmu.\\nMemanggil <color=#FFFFFFFF>Large Wind Spirit</color>.\\nSaat <color=#FFFFFFFF>Large Wind Spirit</color> ada di arena, Karaktermu yang terpengaruh \"<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/f991e209778856fbf83078b501953475.png' />Talenta\" mengakibatkan DMG +1.\\n(Kamu harus punya Sucrose di dalam Dek-mu untuk menambahkan kartu ini ke dalam Dek)",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "3",
+      "cost_type1": "17",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "13",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6ab3168d/2c474ea01ab0807be4c567164a62a64f.png",
       "is_special": false,
       "max_count": 2
     },
@@ -13548,6 +13785,29 @@
       "max_count": 2
     },
     {
+      "id": 216042,
+      "name": "Book of Blinding Light",
+      "content": "<color=#FFFFFFFF>Aksi Cepat</color>: Mengenakan ini pada <color=#FFFFFFFF>Albedo</color> milikmu.\\nMemanggil <color=#FFFFFFFF>Solar Isotoma</color>.\\nSaat <color=#FFFFFFFF>kamu memanggil Solar Isotoma</color>, akan menciptakan 2 lapis <color=#FFFFFFFF>Silver Isotoma</color> dan 1 Dadu Elemental dasar secara acak.\\n(Kamu harus punya Albedo di dalam Dek-mu untuk menambahkan kartu ini ke dalam Dek)",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1": "15",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/680e755181a0b8c29e87d0570815ac29.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "13",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6ab3168d/c7bcdb7e18586f767f7d3d454ba581c8.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 216051,
       "name": "Arataki Ichiban",
       "content": "<color=#FFFFFFFF>Aksi Tempur</color>: Kartu ini dapat dikenakan saat menggunakan <color=#FFFFFFFF>Arataki Itto</color> sebagai Karakter aktif.\\nArataki Itto akan langsung melancarkan <color=#FFD780FF>Fight Club Legend</color> satu kali setelah mengenakannya.\\nKetika mengenakan kartu ini, penggunaan <color=#FFFFFFFF>Fight Club Legend</color> kedua kali dan seterusnya pada setiap ronde: Jika memicu <color=#FFFFFFFF>Superlative Superstrength</color>, DMG +1.\\n(Kamu harus punya Arataki Itto di dalam Dek-mu untuk menambahkan kartu ini ke dalam Dek)",
@@ -13705,6 +13965,29 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/681a9497/1f67d6bcf02b63b48c26bcb73389af4a.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 216121,
+      "name": "Elk With Fanged Antlers",
+      "content": "<color=#FFFFFFFF>Aksi Cepat</color>: Kartu ini dapat dikenakan saat menggunakan <color=#FFFFFFFF>Illuga</color> sebagai Karakter Aktif.\\nMenciptakan 1 lapis <color=#FFFFFFFF>Nightingale's Song</color>.\\n<color=#FFFFFFFF>Ketika <color=#FFFFFFFF>Illuga</color> yang mengenakan kartu ini berada di arena: </color>Setiap mengonsumsi 2 lapis <color=#FFFFFFFF>Nightingale's Song</color>, menciptakan 1 kartu <color=#FFFFFFFF>Aedon</color> ke Tangan.\\n(Kamu harus punya Illuga di dalam Dek-mu untuk menambahkan kartu ini ke dalam Dek)",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1": "15",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/680e755181a0b8c29e87d0570815ac29.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6ab3168d/8c0ec8c0d16f2e0a842de6c7765a9fe1.png",
       "is_special": false,
       "max_count": 2
     },
@@ -14263,7 +14546,7 @@
     {
       "id": 222081,
       "name": "Treacherous Torrent",
-      "content": "<color=#FFFFFFFF>Aksi Cepat</color>: Kenakan ini pada <color=#FFFFFFFF>Hydro Hypostasis</color> milikmu.\\nSetelah <color=#FFFFFFFF>Hydro Hypostasis</color> atau <color=#FFFFFFFF>Water Droplet</color> mengakibatkan DMG, memulihkan 1 poin HP Monster milikmu yang paling banyak menerima DMG. (3 kali setiap Ronde)\\n(Kamu harus punya Hydro Hypostasis di dalam Dek-mu untuk menambahkan kartu ini ke dalam Dek)",
+      "content": "<color=#FFFFFFFF>Aksi Cepat</color>: Mengenakan ini pada <color=#FFFFFFFF>Hydro Hypostasis</color> milikmu.\\nSetelah <color=#FFFFFFFF>Hydro Hypostasis</color> atau <color=#FFFFFFFF>Water Droplet</color> mengakibatkan DMG, memulihkan 1 poin HP Monster milikmu yang HP-nya paling sedikit. (3 kali setiap Ronde)\\n(Kamu harus punya Hydro Hypostasis di dalam Dek-mu untuk menambahkan kartu ini ke dalam Dek)",
       "action_type": "equipment_card",
       "rank_id": 0,
       "cost_num1": "1",
@@ -14703,7 +14986,7 @@
       "content": "<color=#FFFFFFFF>Aksi Tempur</color>: Kartu ini dapat dikenakan saat menggunakan <color=#FFFFFFFF>Golden Wolflord</color> sebagai Karakter aktif.\\nGolden Wolflord akan langsung melancarkan <color=#FFD780FF>Howling Riftcall</color> satu kali setelah mengenakannya. \\nKetika Golden Wolflord yang mengenakan kartu ini berada di arena, <color=#FFFFFFFF>Golden Corrosion</color> lawanmu dapat ditumpuk hingga 5 lapis. Efek ini tetap berfungsi sekalipun Karakter yang terpengaruh sedang tidak standby.\\n(Kamu harus punya Golden Wolflord di dalam Dek-mu untuk menambahkan kartu ini ke dalam Dek)",
       "action_type": "equipment_card",
       "rank_id": 0,
-      "cost_num1": "3",
+      "cost_num1": "4",
       "cost_type1": "15",
       "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/680e755181a0b8c29e87d0570815ac29.png",
       "cost_num2": "0",
@@ -15114,7 +15397,7 @@
     {
       "id": 311111,
       "name": "Everlasting Moonglow",
-      "content": "<color=#FFFFFFFF>Saat HP Karakter yang terpengaruh minimum tersisa 11: </color>DMG yang diakibatkan +2.\\n<color=#FFFFFFFF>Saat dimainkan: </color>Karakter yang terpengaruh mendapatkan 1 poin Max HP.\\n(<color=#FFFFFFFF>Hanya Karakter pengguna <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/1643452964b58e2e69e64e2b5d3b5878.png' />Catalyst</color> yang dapat mengenakannya. Karakter maksimum dapat mengenakan 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/49acb071b0d634ded17cb788d9f520ed.png' />Senjata)",
+      "content": "<color=#FFFFFFFF>Saat HP Karakter yang terpengaruh minimum tersisa 11: </color>DMG yang diakibatkan +2. (Sekali setiap Ronde)\\n<color=#FFFFFFFF>Saat dimainkan: </color>Karakter yang terpengaruh mendapatkan 1 poin Max HP.\\n(<color=#FFFFFFFF>Hanya Karakter pengguna <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/1643452964b58e2e69e64e2b5d3b5878.png' />Catalyst</color> yang dapat mengenakannya. Karakter dapat mengenakan maksimum 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/49acb071b0d634ded17cb788d9f520ed.png' />Senjata)",
       "action_type": "equipment_card",
       "rank_id": 0,
       "cost_num1": "2",
@@ -17017,6 +17300,29 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a0cf9b1/8bd5135ff92d70bdb8d60ebfa275189b.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 312046,
+      "name": "Recollection of Days Past",
+      "content": "<color=#FFFFFFFF>Setelah Karaktermu mendapatkan pemulihan selain dari Artefak:</color> Kartu ini mengakumulasi 1 lapis <color=#FFFFFFFF>\"Yearning\"</color> (maksimum 4 lapis). Saat Ronde dimulai, memulihkan HP Karakter yang terpengaruh sebanyak 1 poin untuk setiap 2 lapis <color=#FFFFFFFF>\"Yearning\"</color>.\\n(Karakter dapat mengenakan maksimum 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/8abebfa3ce62ff97769616f606b9a7f4.png' />Artefak)",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1": "3",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8b295c3fed21771dcced6055cdf2f2ce.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "artifact",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6ab3168d/6bc5da5edafa106a62eef8f76f8a35a8.png",
       "is_special": false,
       "max_count": 2
     },
@@ -19185,7 +19491,7 @@
     {
       "id": 322034,
       "name": "Netochka",
-      "content": "<color=#FFFFFFFF>Saat kamu memicu reaksi Lunar-Charged atau Lunar-Bloom:</color> Memberikan <color=#FFFFFFFF><color=#FFFFFFFF>Battle Plan</color></color> kepada Karakter aktifmu. (Sekali setiap Ronde)",
+      "content": "<color=#FFFFFFFF>Saat kamu memicu reaksi Lunar-Charged, Lunar-Bloom, atau Lunar-Crystallize:</color> Memberikan <color=#FFFFFFFF><color=#FFFFFFFF>Battle Plan</color></color> kepada Karakter aktifmu. (Sekali setiap Ronde)",
       "action_type": "support_card",
       "rank_id": 0,
       "cost_num1": "1",
@@ -19689,6 +19995,29 @@
       "max_count": 1
     },
     {
+      "id": 330014,
+      "name": "Return of the Three Moons",
+      "content": "Mem<color=#FFFFFFFF>buang</color> 3 kartu dengan <color=#FFFFFFFF>Biaya Dadu Elemental Saat Ini</color> tertinggi di Tangan.\\nSaat awal Ronde berikutnya, memulihkan semua Karakter di arenamu sebanyak 3 poin.\\nSaat awal Ronde berikutnya lagi, menambahkan 3 kartu yang di<color=#FFFFFFFF>buang</color> ke Tangan dan memberikan 3 lapis <color=#FFFFFFFF><color=#FFFFFFFF>Pengurangan Biaya</color></color> ke kartu-kartu tersebut.\\n(Hanya dapat memainkan satu kartu <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/ad05fb6424e58a2a5685647b6240555a.png' />Arcana selama duel berlangsung. Kartu ini pasti akan ada di antara Kartu Aksi awal milikmu)",
+      "action_type": "event_card",
+      "rank_id": 0,
+      "cost_num1": "3",
+      "cost_type1": "3",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8b295c3fed21771dcced6055cdf2f2ce.png",
+      "cost_num2": "1",
+      "cost_type2": "6",
+      "cost_type2_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/5bdbe64fa0b51912abf046d26f735401.png",
+      "action_card_tags": [
+        "arcane_legend",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6ab3168d/a752159b5296d9eb6332ddcc99cbf451.png",
+      "is_special": true,
+      "max_count": 1
+    },
+    {
       "id": 331004,
       "name": "Elemental Transfiguration: Superconduct Blessing",
       "content": "<color=#FFFFFFFF><color=#FFFFFFFF>Elemental Transfiguration</color></color>: <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/924fba80b9137b4e8fdf5871aa22d666.png' /><color=#99FFFFFF>Cryo</color> <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><color=#FFACFFFF>Electro</color>\\n<color=#FFFFFFFF>Tahap Melempar Dadu:</color> Selalu melempar 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/412134fa7fc8a73b5e20c177a3ae0046.png' /><color=#99FFFFFF>Dadu Cryo</color> dan 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0a7a50d15a7580c4de07a41f87a95787.png' /><color=#FFACFFFF>Dadu Electro</color>.\\n<color=#FFFFFFFF>Setelah kamu memicu reaksi <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/924fba80b9137b4e8fdf5871aa22d666.png' /><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' />Superconduct</color>: Kartu ini akan dibuang, lalu kamu dapat memilih salah satu antara <color=#FFFFFFFF>Superconduct Blessing: Deep Freeze</color> atau <color=#FFFFFFFF>Superconduct Blessing: Electric Surge</color> untuk ditambahkan ke Tanganmu.",
@@ -19869,6 +20198,29 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a4458bd/318df8c18bb635c5de3f82c958d650f6.png",
+      "is_special": false,
+      "max_count": 1
+    },
+    {
+      "id": 331012,
+      "name": "Elemental Transfiguration: Overload Blessing",
+      "content": "<color=#FFFFFFFF><color=#FFFFFFFF>Elemental Transfiguration</color>:</color> <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><color=#FFACFFFF>Electro</color> <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FF9999FF>Pyro</color>\\n<color=#FFFFFFFF>Tahap Melempar Dadu:</color> Selalu melempar 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0a7a50d15a7580c4de07a41f87a95787.png' /><color=#FFACFFFF>Dadu Electro</color> dan 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/fe4517db495f28fdbcb44607d94640c3.png' /><color=#FF9999FF>Dadu Pyro</color>.\\n<color=#FFFFFFFF>Setelah kamu memicu reaksi <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' />Overloaded:</color> Kartu ini akan dibuang, lalu kamu dapat memilih salah satu antara <color=#FFFFFFFF>Overloaded: Pursuing Fire</color> atau <color=#FFFFFFFF>Overloaded: Thunderstrike</color> untuk ditambahkan ke Tanganmu.",
+      "action_type": "support_card",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1": "3",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8b295c3fed21771dcced6055cdf2f2ce.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "elemental_transfiguration",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6ab3168d/1c5aa6e3c96e88299a45f9fbff127b76.png",
       "is_special": false,
       "max_count": 1
     },
@@ -26070,6 +26422,66 @@
       "name": "Feasting in a Shared Toast",
       "id": 332066,
       "code": 619,
+      "type": "action"
+    },
+    {
+      "name": "Columbina",
+      "id": 1217,
+      "code": 620,
+      "type": "character"
+    },
+    {
+      "name": "Illuga",
+      "id": 1612,
+      "code": 621,
+      "type": "character"
+    },
+    {
+      "name": "Radiance Over Blossoms and Peaks",
+      "id": 212171,
+      "code": 622,
+      "type": "action"
+    },
+    {
+      "name": "Surge of Lightning",
+      "id": 214022,
+      "code": 623,
+      "type": "action"
+    },
+    {
+      "name": "Sevenfold Transmutation",
+      "id": 215012,
+      "code": 624,
+      "type": "action"
+    },
+    {
+      "name": "Book of Blinding Light",
+      "id": 216042,
+      "code": 625,
+      "type": "action"
+    },
+    {
+      "name": "Elk With Fanged Antlers",
+      "id": 216121,
+      "code": 626,
+      "type": "action"
+    },
+    {
+      "name": "Recollection of Days Past",
+      "id": 312046,
+      "code": 627,
+      "type": "action"
+    },
+    {
+      "name": "Elemental Transfiguration: Overload Blessing",
+      "id": 331012,
+      "code": 628,
+      "type": "action"
+    },
+    {
+      "name": "Return of the Three Moons",
+      "id": 330014,
+      "code": 629,
       "type": "action"
     }
   ]
