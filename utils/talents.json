@@ -892,6 +892,36 @@
     "character_name": "Venti",
     "talent_id": 215032,
     "talent_name": "Temporal Wind's Eulogy"
+  },
+  {
+    "character_id": 1217,
+    "character_name": "Columbina",
+    "talent_id": 212171,
+    "talent_name": "Radiance Over Blossoms and Peaks"
+  },
+  {
+    "character_id": 1612,
+    "character_name": "Illuga",
+    "talent_id": 216121,
+    "talent_name": "Elk With Fanged Antlers"
+  },
+  {
+    "character_id": 1402,
+    "character_name": "Razor",
+    "talent_id": 214022,
+    "talent_name": "Surge of Lightning"
+  },
+  {
+    "character_id": 1501,
+    "character_name": "Sucrose",
+    "talent_id": 215012,
+    "talent_name": "Sevenfold Transmutation"
+  },
+  {
+    "character_id": 1604,
+    "character_name": "Albedo",
+    "talent_id": 216042,
+    "talent_name": "Book of Blinding Light"
   }
   
 ]
