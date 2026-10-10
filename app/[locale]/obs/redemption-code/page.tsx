@@ -1,7 +1,7 @@
 "use client";
 
 export default function NextMatchOverlay() {
-  const redemptionCode = "EHVESHCT861D"
+  const redemptionCode = "DATGU82T95XF"
 
   return <div style={{ width: 720 }} className="relative flex justify-center align-middle gap-4 items-center text-[30px] text-center h-40 prevent_select">
     <div className={`absolute z-1 genshin_font -top-0 text-[24px] italic transition-all duration-200`}>REDEMPTION CODE</div>
