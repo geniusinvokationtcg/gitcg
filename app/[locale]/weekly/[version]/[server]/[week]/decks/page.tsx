@@ -98,7 +98,7 @@ export default async function DecklistDumpPage ({ params, searchParams }: { para
     const csvPasteClient: CsvPasteRowClient[] = csvPaste.filter(row => row.checkedInAt).map(row => ({
       teamName: row.teamName,
       uid: row.uid,
-      deckcode: row.deckcode,
+      deckcode: String(row.deckcode),
       isCheckedIn: !!row.checkedInAt
     }))
 
