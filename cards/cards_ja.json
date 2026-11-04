@@ -6519,6 +6519,80 @@
       "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba981/9635bbc19193933b7a27d0357c902480.png"
     },
     {
+      "id": 1517,
+      "name": "ファルカ",
+      "element_type": 307,
+      "role_skill_infos": [
+        {
+          "skill_text": "<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>物理ダメージ</color>を2与える。",
+          "skill_costs": [
+            {
+              "cost_type": "17",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "通常攻撃"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/bf0237fba9d4ab5b47ea86b90711a765.png",
+          "name": "西風剣術・流光の舞",
+          "id": "15171"
+        },
+        {
+          "skill_text": "<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' /><color=#80FFD7FF>風元素ダメージ</color>を1与え、自身に<color=#FFFFFFFF>疾風怒濤</color>を付与する。味方のフィールド上に炎/水/雷/氷元素キャラクターが存在する場合、この優先順位に従って自身に対応する元素付与を行う。",
+          "skill_costs": [
+            {
+              "cost_type": "17",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "元素スキル"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/699e3486/ee6b5523d3153ecbf7696152bbf8cb54.png",
+          "name": "堕ちる烈風",
+          "id": "15172"
+        },
+        {
+          "skill_text": "<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' /><color=#80FFD7FF>風元素ダメージ</color>を3与える。味方フィールド上に炎/水/雷/氷元素キャラクターが存在する場合、この優先順位に従って該当する元素ダメージへと変わる。このスキル終了後、さらに<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' /><color=#80FFD7FF>風元素ダメージ</color>を2与える。",
+          "skill_costs": [
+            {
+              "cost_type": "17",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "元素爆発"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6aea6781/b3c0764a27860e34eb89d923e8fb5fb2.png",
+          "name": "我こそ朔風",
+          "id": "15173"
+        }
+      ],
+      "weapon": "claymore",
+      "belongs": [
+        "mondstadt",
+        "",
+        ""
+      ],
+      "hp": 12,
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6aea677c/67d80f54c9f2ea86ec009ceb73b3f24d.png",
+      "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6aea6780/743e951d71a96e5aa3a56a192880ffc5.png"
+    },
+    {
       "id": 1601,
       "name": "凝光",
       "element_type": 305,
@@ -10780,7 +10854,7 @@
           "id": "25043"
         },
         {
-          "skill_text": "【固有】味方が拡散反応を起こした時、または相手が<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/681a94b1/24bc6b249479a2371a126a0c617ee0ae.png' /><color=#FFFFFFFF>シールド</color>、<color=#FFFFFFFF>ダメージ相殺</color>状態、出撃状態を失った時、カードを1枚引く。（各ラウンドで最大2回まで）",
+          "skill_text": "【固有】味方が拡散反応を起こした時、または相手が<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/681a94b1/24bc6b249479a2371a126a0c617ee0ae.png' /><color=#FFFFFFFF>シールド</color>、<color=#FFFFFFFF>ダメージ相殺</color>状態、出撃状態を失った時、カードを1枚引く。（各ラウンドで最大1回まで）",
           "skill_costs": [],
           "type": [
             "固有スキル"
@@ -10796,7 +10870,7 @@
         "",
         ""
       ],
-      "hp": 10,
+      "hp": 12,
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a4458bd/aa72d230ace4b4aa64faa13d3a0aa1e0.png",
       "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a4458de/933f2176018047fdcb59d39488f15ff5.png"
     },
@@ -12819,6 +12893,29 @@
       "max_count": 2
     },
     {
+      "id": 213172,
+      "name": "昇華の讃歌",
+      "content": "<color=#FFFFFFFF>クイックアクション</color>：味方の<color=#FFFFFFFF>ドゥリン</color>に装備させる。\\n<color=#FFFFFFFF>このカードを使用した時、および各アクションフェーズ開始時、味方のフィールド上に魔導カードが2枚以上ある場合、</color>味方の<color=#FFFFFFFF>ドゥリン</color>の現在の「元素爆発」に応じて以下の効果を獲得する。本ラウンド中、敵が受ける次の3回の炎元素ダメージ+1。または、<color=#FFFFFFFF>ドゥリン</color>が出撃キャラの場合、味方が次に与える蒸発および溶解ダメージ+3。\\n（このカードはデッキにドゥリンが含まれている場合のみ、デッキに追加できる）",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1": "13",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/fe4517db495f28fdbcb44607d94640c3.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "13",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6aea677c/38c262bace2a6cb7e8c079701043200c.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 214011,
       "name": "星喰いの鴉",
       "content": "<color=#FFFFFFFF>戦闘アクション</color>：味方の出撃キャラが<color=#FFFFFFFF>フィッシュル</color>の時、このカードを装備できる。\\nフィッシュルがこのカードを装備した後、直ちに<color=#FFD780FF>夜巡りの翼</color>を1回発動する。\\nこのカードを装備したフィッシュルの生成した<color=#FFFFFFFF>オズ</color>は、フィッシュルが<color=#FFFFFFFF>通常攻撃</color>を行った後、<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><color=#FFACFFFF>雷元素ダメージ</color>を2与える。（<color=#FFFFFFFF>使用可能回数</color>の消費が必要）\\n（このカードはデッキにフィッシュルが含まれている場合のみ、デッキに追加できる）",
@@ -13693,6 +13790,52 @@
       "max_count": 2
     },
     {
+      "id": 215171,
+      "name": "「謳え、誰にも奪えない自由を」",
+      "content": "<color=#FFFFFFFF>戦闘アクション</color>：味方の出撃キャラが<color=#FFFFFFFF>ファルカ</color>の時、このカードを装備できる。\\nファルカがこのカードを装備した後、直ちに<color=#FFD780FF>堕ちる烈風</color>を1回発動する。\\nこのカードを装備したファルカが出撃キャラである場合、味方が拡散反応を起こした後、味方が次回与える<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' /><color=#80FFD7FF>風元素ダメージ</color>と拡散された元素によるダメージ+1。（各ラウンドで1回のみ）\\n（このカードはデッキにファルカが含まれている場合のみ、デッキに追加できる）",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "3",
+      "cost_type1": "17",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "combat_action",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6aea677c/87e80387ffc90be8ad2cf0f98dbff850.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 215172,
+      "name": "朝を迎える光",
+      "content": "<color=#FFFFFFFF>クイックアクション</color>：味方の<color=#FFFFFFFF>ファルカ</color>に装備させ、<color=#FFFFFFFF>堕ちる烈風</color>を生成する。\\n味方の<color=#FFFFFFFF>ファルカ</color>が「通常攻撃」を使用した後、味方の手札にある<color=#FFFFFFFF>堕ちる烈風</color>1枚に<color=#FFFFFFFF><color=#FFFFFFFF>コストダウン</color></color>を付与する。\\n（このカードはデッキにファルカが含まれている場合のみ、デッキに追加できる）",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "3",
+      "cost_type1": "17",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "13",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6aea677c/59fff0da78554a9f1d08b5ed338f1b8f.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 216011,
       "name": "備えあれば憂いなし",
       "content": "<color=#FFFFFFFF>戦闘アクション</color>：味方の出撃キャラが<color=#FFFFFFFF>凝光</color>の時、このカードを装備できる。\\n凝光がこのカードを装備した後、直ちに<color=#FFD780FF>璇璣屏</color>を1回発動する。\\nこのカードを装備した凝光がフィールドに存在する時、<color=#FFFFFFFF>璇璣屏</color>は味方の与える<color=#FFE699FF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/98c267c74a3efdcfed4131a054ff4b82.png' /><color=#FFE699FF>岩元素ダメージ</color></color>を+1できる。\\n（このカードはデッキに凝光が含まれている場合のみ、デッキに追加できる）",
@@ -13787,7 +13930,7 @@
     {
       "id": 216042,
       "name": "白芒の書",
-      "content": "<color=#FFFFFFFF>クイックアクション</color>：味方の<color=#FFFFFFFF>アルベド</color>に装備させる。\\n<color=#FFFFFFFF>陽華</color>を召喚する。\\n<color=#FFFFFFFF>味方が陽華</color>を召喚した時、<color=#FFFFFFFF>銀華</color>を2層生成し、ランダムな基本元素サイコロを1個生成する。\\n（このカードはデッキにアルベドが含まれている場合のみ、デッキに追加できる）",
+      "content": "<color=#FFFFFFFF>クイックアクション</color>：味方の<color=#FFFFFFFF>アルベド</color>に装備させる。\\n<color=#FFFFFFFF>陽華</color>を召喚する。\\n<color=#FFFFFFFF>味方が陽華を召喚した</color>時、<color=#FFFFFFFF>銀華</color>を2層生成し、ランダムな基本元素サイコロを1個生成する。\\n（このカードはデッキにアルベドが含まれている場合のみ、デッキに追加できる）",
       "action_type": "equipment_card",
       "rank_id": 0,
       "cost_num1": "2",
@@ -17327,6 +17470,29 @@
       "max_count": 2
     },
     {
+      "id": 312047,
+      "name": "在りし日の歌",
+      "content": "<color=#FFFFFFFF>味方キャラが聖遺物以外の治療を受けた後、</color>このカードは<color=#FFFFFFFF>「渇望」</color>を1層蓄積する（最大4まで蓄積可能）。ラウンド開始時、<color=#FFFFFFFF>「渇望」</color>2層につき、装備キャラのHPを1回復する。<color=#FFFFFFFF>「渇望」</color>が4層ある場合、追加で1回復し、装備キャラのダメージ+1。\\n（キャラが装備できる「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/8abebfa3ce62ff97769616f606b9a7f4.png' />聖遺物」は最大1つまで）",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1": "10",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "artifact",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6aea677c/9af0a2688a272246c2839c4d342a160e.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 312101,
       "name": "氷雪を踏む音",
       "content": "<color=#FFFFFFFF>キャラに「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/f991e209778856fbf83078b501953475.png' />天賦」を使用する時、またはキャラがスキルを発動する時</color>、必要な<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/412134fa7fc8a73b5e20c177a3ae0046.png' /><color=#99FFFFFF>氷元素</color>-1。（各ラウンドで1回のみ）\\n（キャラが装備できる「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/8abebfa3ce62ff97769616f606b9a7f4.png' />聖遺物」は1つのみ）",
@@ -19512,6 +19678,29 @@
       "max_count": 2
     },
     {
+      "id": 322035,
+      "name": "カテリンド",
+      "content": "<color=#FFFFFFFF>敵が味方の初期デッキに存在しない名称のカードを使用した時、</color>HPを最も失っている味方キャラのHPを1回復する。（各ラウンド最大2回まで）",
+      "action_type": "support_card",
+      "rank_id": 0,
+      "cost_num1": "0",
+      "cost_type1": "",
+      "cost_type1_icon": "",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "companion",
+        "709",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6aea677c/f1143dadc24b340abf1eba5d6e450535.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 323001,
       "name": "参量物質変化器",
       "content": "<color=#FFFFFFFF>双方のキャラがスキルを発動した後</color>、元素ダメージを与えた場合、このカードに<color=#FFFFFFFF>「物質変化進捗」</color>を1つ重ねる。3つの<color=#FFFFFFFF>「物質変化進捗」</color>を重ねた時、このカードを破棄し、元素タイプの異なる基本元素サイコロを3個生成する。",
@@ -20018,6 +20207,29 @@
       "max_count": 1
     },
     {
+      "id": 330015,
+      "name": "プシュパの歌",
+      "content": "味方チームに3種類の異なる元素タイプのキャラクターが存在する時のみ使用できる。味方の元素サイコロ3個を<color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8401f5013a7c381edb6cd088b207bb9f.png' />万能元素</color>に転換する。この対局中、味方の<color=#FFFFFFFF>ロールフェーズ：</color>常に万能元素サイコロが3個出る。<color=#FFFFFFFF>味方が元素反応を起こした時：</color>与えるダメージ+1。<color=#FFFFFFFF>味方が元素反応を起こした後：</color>HPを最も失っている味方キャラクターを1回復する。\\n（1回の対局で使用できる「<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/ad05fb6424e58a2a5685647b6240555a.png' />秘伝」カードは各対戦ごとに1枚しか使用できない。このカードは必ず初期手札に含まれる）",
+      "action_type": "event_card",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1": "3",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8b295c3fed21771dcced6055cdf2f2ce.png",
+      "cost_num2": "1",
+      "cost_type2": "6",
+      "cost_type2_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/5bdbe64fa0b51912abf046d26f735401.png",
+      "action_card_tags": [
+        "arcane_legend",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6aea677c/8de7aaf2fbb291426e30189e711644fb.png",
+      "is_special": true,
+      "max_count": 1
+    },
+    {
       "id": 331004,
       "name": "元素変幻・超電導の祝福",
       "content": "<color=#FFFFFFFF><color=#FFFFFFFF>元素変幻</color>：</color><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/924fba80b9137b4e8fdf5871aa22d666.png' /><color=#99FFFFFF>氷元素</color><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><color=#FFACFFFF>雷元素</color>\\n<color=#FFFFFFFF>ロールフェーズ：</color>常に<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/412134fa7fc8a73b5e20c177a3ae0046.png' /><color=#99FFFFFF>氷元素サイコロ</color>2個と<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0a7a50d15a7580c4de07a41f87a95787.png' /><color=#FFACFFFF>雷元素サイコロ</color>2個が出る。\\n<color=#FFFFFFFF>味方が<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/924fba80b9137b4e8fdf5871aa22d666.png' /><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' />超電導反応を起こした後</color>、このカードを破棄し、<color=#FFFFFFFF>超電導の祝福・酷寒</color>と<color=#FFFFFFFF>超電導の祝福・電流</color>の中から1つ選び、手札に加える。",
@@ -20221,6 +20433,29 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6ab3168d/1c5aa6e3c96e88299a45f9fbff127b76.png",
+      "is_special": false,
+      "max_count": 1
+    },
+    {
+      "id": 331013,
+      "name": "元素変幻・燃焼の祝福",
+      "content": "<color=#FFFFFFFF><color=#FFFFFFFF>元素変幻</color>：</color><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FF9999FF>炎元素</color><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' /><color=#7EC236FF>草元素</color>\\n<color=#FFFFFFFF>ロールフェーズ：</color>常に<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/fe4517db495f28fdbcb44607d94640c3.png' /><color=#FF9999FF>炎元素サイコロ</color>2個と<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/848248aa7c40784633446db172ee4678.png' /><color=#7EC236FF>草元素サイコロ</color>2個が出る。\\n<color=#FFFFFFFF>味方が<img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' />燃焼反応を起こした後、</color>このカードを破棄し、<color=#FFFFFFFF>燃焼の祝福・究極の火勢</color>と<color=#FFFFFFFF>燃焼の祝福・究極の協奏</color>の中から1つ選び、手札に加える。",
+      "action_type": "support_card",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1": "3",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8b295c3fed21771dcced6055cdf2f2ce.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "elemental_transfiguration",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6aea677c/f8680594a3e7292c7c7eca6230605241.png",
       "is_special": false,
       "max_count": 1
     },
@@ -26482,6 +26717,54 @@
       "name": "三月の再臨",
       "id": 330014,
       "code": 629,
+      "type": "action"
+    },
+    {
+      "name": "ファルカ",
+      "id": 1517,
+      "code": 630,
+      "type": "character"
+    },
+    {
+      "name": "昇華の讃歌",
+      "id": 213172,
+      "code": 631,
+      "type": "action"
+    },
+    {
+      "name": "「謳え、誰にも奪えない自由を」",
+      "id": 215171,
+      "code": 632,
+      "type": "action"
+    },
+    {
+      "name": "朝を迎える光",
+      "id": 215172,
+      "code": 633,
+      "type": "action"
+    },
+    {
+      "name": "在りし日の歌",
+      "id": 312047,
+      "code": 634,
+      "type": "action"
+    },
+    {
+      "name": "カテリンド",
+      "id": 322035,
+      "code": 635,
+      "type": "action"
+    },
+    {
+      "name": "元素変幻・燃焼の祝福",
+      "id": 331013,
+      "code": 636,
+      "type": "action"
+    },
+    {
+      "name": "プシュパの歌",
+      "id": 330015,
+      "code": 637,
       "type": "action"
     }
   ]

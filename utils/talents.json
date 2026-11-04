@@ -922,6 +922,24 @@
     "character_name": "Albedo",
     "talent_id": 216042,
     "talent_name": "Book of Blinding Light"
+  },
+  {
+    "character_id": 1317,
+    "character_name": "Durin",
+    "talent_id": 213172,
+    "talent_name": "Ode to Ascension"
+  },
+  {
+    "character_id": 1517,
+    "character_name": "Varka",
+    "talent_id": 215171,
+    "talent_name": "\"For None May Take From Us Our Freedom of Song\""
+  },
+  {
+    "character_id": 1517,
+    "character_name": "Varka",
+    "talent_id": 215172,
+    "talent_name": "Dawn's Return"
   }
   
 ]

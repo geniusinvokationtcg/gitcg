@@ -6519,6 +6519,80 @@
       "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba981/9635bbc19193933b7a27d0357c902480.png"
     },
     {
+      "id": 1517,
+      "name": "Varka",
+      "element_type": 307,
+      "role_skill_infos": [
+        {
+          "skill_text": "Deals 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>Physical DMG</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "17",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Normal Attack"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/bf0237fba9d4ab5b47ea86b90711a765.png",
+          "name": "Favonius Bladework: Dancing Radiance",
+          "id": "15171"
+        },
+        {
+          "skill_text": "Deals 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' /><color=#80FFD7FF>Anemo DMG</color> and attaches <color=#FFFFFFFF>Sturm und Drang</color> to self. If you have any Pyro, Hydro, Electro, or Cryo characters on the field, this character gains the corresponding Elemental Infusion, prioritized in that order.",
+          "skill_costs": [
+            {
+              "cost_type": "17",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "Elemental Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/699e3486/ee6b5523d3153ecbf7696152bbf8cb54.png",
+          "name": "Windbound Execution",
+          "id": "15172"
+        },
+        {
+          "skill_text": "Deals 3 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' /><color=#80FFD7FF>Anemo DMG</color>. If you have any Pyro, Hydro, Electro, or Cryo characters on the field, this DMG is converted to the corresponding Elemental DMG, prioritized in that order. After this Skill ends, deal an additional 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' /><color=#80FFD7FF>Anemo DMG</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "17",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "Elemental Burst"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6aea6781/b3c0764a27860e34eb89d923e8fb5fb2.png",
+          "name": "Northwind Avatar",
+          "id": "15173"
+        }
+      ],
+      "weapon": "claymore",
+      "belongs": [
+        "mondstadt",
+        "",
+        ""
+      ],
+      "hp": 12,
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6aea677c/67d80f54c9f2ea86ec009ceb73b3f24d.png",
+      "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6aea6780/743e951d71a96e5aa3a56a192880ffc5.png"
+    },
+    {
       "id": 1601,
       "name": "Ningguang",
       "element_type": 305,
@@ -10780,7 +10854,7 @@
           "id": "25043"
         },
         {
-          "skill_text": "(Passive) When you trigger a Swirl reaction, or when the opponent loses their <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/681a94b1/24bc6b249479a2371a126a0c617ee0ae.png' /><color=#FFFFFFFF>Shield</color>, <color=#FFFFFFFF>DMG Negation</color>, or Combat Status, draw 1 card. (Twice per Round)",
+          "skill_text": "(Passive) When you trigger a Swirl reaction, or when the opponent loses their <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/681a94b1/24bc6b249479a2371a126a0c617ee0ae.png' /><color=#FFFFFFFF>Shield</color>, <color=#FFFFFFFF>DMG Negation</color>, or Combat Status, draw 1 card. (Once per Round)",
           "skill_costs": [],
           "type": [
             "Passive Skill"
@@ -10796,7 +10870,7 @@
         "",
         ""
       ],
-      "hp": 10,
+      "hp": 12,
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a4458bd/aa72d230ace4b4aa64faa13d3a0aa1e0.png",
       "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a4458de/933f2176018047fdcb59d39488f15ff5.png"
     },
@@ -12819,6 +12893,29 @@
       "max_count": 2
     },
     {
+      "id": 213172,
+      "name": "Ode to Ascension",
+      "content": "<color=#FFFFFFFF>Fast Action</color>: Equip this to your <color=#FFFFFFFF>Durin</color>.\\n<color=#FFFFFFFF>When this card is played and at the start of each Action Phase, if you have at least 2 Hexerei Cards on the field: </color>Gain one of the following effects based on your <color=#FFFFFFFF>Durin</color>'s current Elemental Burst: The next 3 instances of Pyro DMG taken by the opposing side this Round are increased by 1; or, while <color=#FFFFFFFF>Durin</color> is your active character, the next instance of Vaporize or Melt Reaction DMG you deal is increased by 3.\\n(You must have Durin in your deck to add this card to your deck.)",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1": "13",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/fe4517db495f28fdbcb44607d94640c3.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "13",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6aea677c/38c262bace2a6cb7e8c079701043200c.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 214011,
       "name": "Stellar Predator",
       "content": "<color=#FFFFFFFF>Combat Action</color>: When your active character is <color=#FFFFFFFF>Fischl</color>, equip this card.\\nAfter Fischl equips this card, immediately use <color=#FFD780FF>Nightrider</color> once.\\nWhen your Fischl, who has this card equipped, creates an <color=#FFFFFFFF>Oz</color>, <color=#FFFFFFFF>Oz</color> will gain the following effect: after Fischl uses a <color=#FFFFFFFF>Normal Attack</color>: Deal 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><color=#FFACFFFF>Electro DMG</color>. (Consumes <color=#FFFFFFFF>Usage(s)</color>)\\n(You must have Fischl in your deck to add this card to your deck.)",
@@ -13689,6 +13786,52 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/b9d33825378116f78fff8bf604e4d95c.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 215171,
+      "name": "\"For None May Take From Us Our Freedom of Song\"",
+      "content": "<color=#FFFFFFFF>Combat Action</color>: When your active character is <color=#FFFFFFFF>Varka</color>, equip this card.\\nWhen Varka equips this card, immediately use <color=#FFD780FF>Windbound Execution</color> once.\\nWhen your Varka has this card equipped and is the active character, after you trigger a Swirl Reaction: The next <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' /><color=#80FFD7FF>Anemo DMG</color> you deal and the next DMG matching the Swirled Element are each increased by 1. (Once per Round)\\n(You must have Varka in your deck to add this card to your deck.)",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "3",
+      "cost_type1": "17",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "combat_action",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6aea677c/87e80387ffc90be8ad2cf0f98dbff850.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 215172,
+      "name": "Dawn's Return",
+      "content": "<color=#FFFFFFFF>Fast Action</color>: Equip this to your <color=#FFFFFFFF>Varka</color> and create <color=#FFFFFFFF>Windbound Execution</color>.\\nAfter your <color=#FFFFFFFF>Varka</color> uses a Normal Attack: Grant <color=#FFFFFFFF><color=#FFFFFFFF>Cost Reduction</color></color> to 1 <color=#FFFFFFFF>Windbound Execution</color> in your Hand.\\n(You must have Varka in your deck to add this card to your deck.)",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "3",
+      "cost_type1": "17",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "13",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6aea677c/59fff0da78554a9f1d08b5ed338f1b8f.png",
       "is_special": false,
       "max_count": 2
     },
@@ -17327,6 +17470,29 @@
       "max_count": 2
     },
     {
+      "id": 312047,
+      "name": "Song of Days Past",
+      "content": "<color=#FFFFFFFF>After your character receives healing from a source other than an Artifact:</color> This card gains 1 stack of <color=#FFFFFFFF>Yearning</color> (max 4). At the start of the Round, for every 2 stacks of <color=#FFFFFFFF>Yearning</color>, heal the attached character for 1 HP. If this card has 4 stacks of <color=#FFFFFFFF>Yearning</color>, it heals for 1 additional HP, and DMG dealt by the equipping character is increased by 1.\\n(A character can equip a maximum of 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/8abebfa3ce62ff97769616f606b9a7f4.png' />Artifact)",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1": "10",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "artifact",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6aea677c/9af0a2688a272246c2839c4d342a160e.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 312101,
       "name": "Broken Rime's Echo",
       "content": "<color=#FFFFFFFF>When you play a <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/f991e209778856fbf83078b501953475.png' />Talent card or a Character uses a Skill:</color> Spend 1 less <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/412134fa7fc8a73b5e20c177a3ae0046.png' /><color=#99FFFFFF>Cryo</color> Die. (Once per Round)\\n(A character can equip a maximum of 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/8abebfa3ce62ff97769616f606b9a7f4.png' />Artifact)",
@@ -19512,6 +19678,29 @@
       "max_count": 2
     },
     {
+      "id": 322035,
+      "name": "Zeitlind",
+      "content": "<color=#FFFFFFFF>When your opponent plays a card whose name was not included in your initial deck:</color> Heal your most injured character for 1 HP. (Twice per Round)",
+      "action_type": "support_card",
+      "rank_id": 0,
+      "cost_num1": "0",
+      "cost_type1": "",
+      "cost_type1_icon": "",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "companion",
+        "709",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6aea677c/f1143dadc24b340abf1eba5d6e450535.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 323001,
       "name": "Parametric Transformer",
       "content": "<color=#FFFFFFFF>When either side uses a Skill:</color> If Elemental DMG was dealt, this card gains 1 <color=#FFFFFFFF>Qualitative Progress</color>.\\nIf this card has gained 3 <color=#FFFFFFFF>Qualitative Progress</color>, then discard this card and create 3 different Basic Elemental Dice.",
@@ -20018,6 +20207,29 @@
       "max_count": 1
     },
     {
+      "id": 330015,
+      "name": "Streaming Song",
+      "content": "Your party must include characters of 3 different Elemental Types to play this card. Convert 3 of your Elemental Dice to <color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8401f5013a7c381edb6cd088b207bb9f.png' />Omni Element</color>. For the rest of this match, during each <color=#FFFFFFFF>Roll Phase:</color> Always roll 3 Omni Element dice. <color=#FFFFFFFF>When you trigger an Elemental Reaction:</color> DMG dealt is increased by 1. <color=#FFFFFFFF>After you trigger an Elemental Reaction:</color> Heal your most injured character for 1 HP.\\n(Only one <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/ad05fb6424e58a2a5685647b6240555a.png' />\"Arcane Legend\" card can be played per match. This card will be in your starting hand.)",
+      "action_type": "event_card",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1": "3",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8b295c3fed21771dcced6055cdf2f2ce.png",
+      "cost_num2": "1",
+      "cost_type2": "6",
+      "cost_type2_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/5bdbe64fa0b51912abf046d26f735401.png",
+      "action_card_tags": [
+        "arcane_legend",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6aea677c/8de7aaf2fbb291426e30189e711644fb.png",
+      "is_special": true,
+      "max_count": 1
+    },
+    {
       "id": 331004,
       "name": "Elemental Transfiguration: Superconduct Blessing",
       "content": "<color=#FFFFFFFF><color=#FFFFFFFF>Elemental Transfiguration</color></color>: <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/924fba80b9137b4e8fdf5871aa22d666.png' /><color=#99FFFFFF>Cryo</color> <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><color=#FFACFFFF>Electro</color>\\n<color=#FFFFFFFF>Roll Phase</color>: Always roll 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/412134fa7fc8a73b5e20c177a3ae0046.png' /><color=#99FFFFFF>Cryo Dice</color> and 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0a7a50d15a7580c4de07a41f87a95787.png' /><color=#FFACFFFF>Electro Dice</color>.\\n<color=#FFFFFFFF>After you trigger <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/924fba80b9137b4e8fdf5871aa22d666.png' /><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' />Superconduct reaction(s)</color>: Discard this card, then choose either <color=#FFFFFFFF>Superconduct Blessing: Deep Freeze</color> or <color=#FFFFFFFF>Superconduct Blessing: Electric Surge</color> and add it to your Hand.",
@@ -20221,6 +20433,29 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6ab3168d/1c5aa6e3c96e88299a45f9fbff127b76.png",
+      "is_special": false,
+      "max_count": 1
+    },
+    {
+      "id": 331013,
+      "name": "Elemental Transfiguration: Burning Blessing",
+      "content": "<color=#FFFFFFFF><color=#FFFFFFFF>Elemental Transfiguration</color>:</color> <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FF9999FF>Pyro</color> <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' /><color=#7EC236FF>Dendro</color>\\n<color=#FFFFFFFF>Roll Phase:</color> Always roll 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/fe4517db495f28fdbcb44607d94640c3.png' /><color=#FF9999FF>Pyro Dice</color> and 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/848248aa7c40784633446db172ee4678.png' /><color=#7EC236FF>Dendro Dice</color>.\\n<color=#FFFFFFFF>After you trigger a <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' />Burning Reaction:</color> Discard this card, then choose either <color=#FFFFFFFF>Burning Blessing: Maximal Ferocity</color> or <color=#FFFFFFFF>Burning Blessing: Supreme Symphony</color> and add it to your Hand.",
+      "action_type": "support_card",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1": "3",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8b295c3fed21771dcced6055cdf2f2ce.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "elemental_transfiguration",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6aea677c/f8680594a3e7292c7c7eca6230605241.png",
       "is_special": false,
       "max_count": 1
     },
@@ -26482,6 +26717,54 @@
       "name": "Return of the Three Moons",
       "id": 330014,
       "code": 629,
+      "type": "action"
+    },
+    {
+      "name": "Varka",
+      "id": 1517,
+      "code": 630,
+      "type": "character"
+    },
+    {
+      "name": "Ode to Ascension",
+      "id": 213172,
+      "code": 631,
+      "type": "action"
+    },
+    {
+      "name": "\"For None May Take From Us Our Freedom of Song\"",
+      "id": 215171,
+      "code": 632,
+      "type": "action"
+    },
+    {
+      "name": "Dawn's Return",
+      "id": 215172,
+      "code": 633,
+      "type": "action"
+    },
+    {
+      "name": "Song of Days Past",
+      "id": 312047,
+      "code": 634,
+      "type": "action"
+    },
+    {
+      "name": "Zeitlind",
+      "id": 322035,
+      "code": 635,
+      "type": "action"
+    },
+    {
+      "name": "Elemental Transfiguration: Burning Blessing",
+      "id": 331013,
+      "code": 636,
+      "type": "action"
+    },
+    {
+      "name": "Streaming Song",
+      "id": 330015,
+      "code": 637,
       "type": "action"
     }
   ]

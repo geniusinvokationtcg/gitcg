@@ -6519,6 +6519,80 @@
       "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba981/9635bbc19193933b7a27d0357c902480.png"
     },
     {
+      "id": 1517,
+      "name": "Varka",
+      "element_type": 307,
+      "role_skill_infos": [
+        {
+          "skill_text": "Mengakibatkan 2 poin <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/e1430a8775eb864ed0617b7ef516e608.png' /><color=#FFFFFFFF>Physical DMG</color>.",
+          "skill_costs": [
+            {
+              "cost_type": "17",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+              "cost_num": "1"
+            },
+            {
+              "cost_type": "10",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+              "cost_num": "2"
+            }
+          ],
+          "type": [
+            "Normal Attack"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71a/bf0237fba9d4ab5b47ea86b90711a765.png",
+          "name": "Favonius Bladework: Dancing Radiance",
+          "id": "15171"
+        },
+        {
+          "skill_text": "Mengakibatkan 1 poin <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' /><color=#80FFD7FF>Anemo DMG</color>, memberikan <color=#FFFFFFFF>Sturm und Drang</color> kepada diri sendiri. Jika di arenamu terdapat Karakter berelemen Pyro/Hydro/Electro/Cryo, diri sendiri akan mendapatkan Elemental Infusion yang sesuai berdasarkan urutan prioritas tersebut.",
+          "skill_costs": [
+            {
+              "cost_type": "17",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "Elemental Skill"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/699e3486/ee6b5523d3153ecbf7696152bbf8cb54.png",
+          "name": "Windbound Execution",
+          "id": "15172"
+        },
+        {
+          "skill_text": "Mengakibatkan 3 poin <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' /><color=#80FFD7FF>Anemo DMG</color>. Jika di arenamu terdapat Karakter berelemen Pyro/Hydro/Electro/Cryo, DMG ini akan diubah menjadi DMG elemen yang sesuai berdasarkan urutan prioritas tersebut. Setelah Skill ini berakhir, mengakibatkan 2 poin <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' /><color=#80FFD7FF>Anemo DMG</color> lagi.",
+          "skill_costs": [
+            {
+              "cost_type": "17",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+              "cost_num": "3"
+            },
+            {
+              "cost_type": "1",
+              "icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54f12c0eadb091b3d564408471387021.png",
+              "cost_num": "3"
+            }
+          ],
+          "type": [
+            "Elemental Burst"
+          ],
+          "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6aea6781/b3c0764a27860e34eb89d923e8fb5fb2.png",
+          "name": "Northwind Avatar",
+          "id": "15173"
+        }
+      ],
+      "weapon": "claymore",
+      "belongs": [
+        "mondstadt",
+        "",
+        ""
+      ],
+      "hp": 12,
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6aea677c/67d80f54c9f2ea86ec009ceb73b3f24d.png",
+      "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6aea6780/743e951d71a96e5aa3a56a192880ffc5.png"
+    },
+    {
       "id": 1601,
       "name": "Ningguang",
       "element_type": 305,
@@ -10780,7 +10854,7 @@
           "id": "25043"
         },
         {
-          "skill_text": "(Pasif) Saat kamu memicu reaksi Swirl, atau saat lawan kehilangan Status <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/681a94b1/24bc6b249479a2371a126a0c617ee0ae.png' /><color=#FFFFFFFF>Perisai</color>, <color=#FFFFFFFF> Pengurangan DMG</color>, atau Status Pertempuran, mengambil 1 kartu. (2 kali setiap Ronde)",
+          "skill_text": "(Pasif) Saat kamu memicu reaksi Swirl, atau saat lawan kehilangan Status <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/681a94b1/24bc6b249479a2371a126a0c617ee0ae.png' /><color=#FFFFFFFF>Perisai</color>, <color=#FFFFFFFF> Pengurangan DMG</color>, atau Status Pertempuran, mengambil 1 kartu. (Sekali setiap Ronde)",
           "skill_costs": [],
           "type": [
             "Passive Skill"
@@ -10796,7 +10870,7 @@
         "",
         ""
       ],
-      "hp": 10,
+      "hp": 12,
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a4458bd/aa72d230ace4b4aa64faa13d3a0aa1e0.png",
       "avatar": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a4458de/933f2176018047fdcb59d39488f15ff5.png"
     },
@@ -12819,6 +12893,29 @@
       "max_count": 2
     },
     {
+      "id": 213172,
+      "name": "Ode to Ascension",
+      "content": "<color=#FFFFFFFF>Aksi Cepat</color>: Kenakan ini pada <color=#FFFFFFFF>Durin</color> milikmu.\\n<color=#FFFFFFFF>Saat kartu ini dimainkan dan setiap Tahap Aksi dimulai, jika terdapat minimal 2 Kartu Hexerei di arenamu</color>, maka mendapatkan efek berikut berdasarkan Elemental Burst <color=#FFFFFFFF>Durin</color> milikmu saat ini: 3 kali Pyro DMG berikutnya yang diterima musuh pada Ronde ini akan mengakibatkan DMG +1; Atau, saat <color=#FFFFFFFF>Durin</color> menjadi Karakter aktif, Vaporize dan Melt berikutnya yang diakibatkan olehmu akan mengakibatkan DMG +3.\\n(Kamu harus punya Durin di dalam Dek-mu untuk menambahkan kartu ini ke dalam Dek)",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "1",
+      "cost_type1": "13",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/fe4517db495f28fdbcb44607d94640c3.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "13",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6aea677c/38c262bace2a6cb7e8c079701043200c.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 214011,
       "name": "Stellar Predator",
       "content": "<color=#FFFFFFFF>Aksi Tempur</color>: Kartu ini dapat dikenakan saat menggunakan <color=#FFFFFFFF>Fischl</color> sebagai Karakter aktif.\\nFischl akan langsung melancarkan <color=#FFD780FF>Nightrider</color> satu kali setelah mengenakannya.\\nKetika mengenakan kartu ini, <color=#FFFFFFFF>Oz</color> yang diciptakan juga akan mengakibatkan 2 poin <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><color=#FFACFFFF>Electro DMG</color> (mengonsumsi <color=#FFFFFFFF>Penggunaan</color>) saat Fischl melancarkan <color=#FFFFFFFF>Normal Attack</color>.\\n(Kamu harus punya Fischl di dalam Dek-mu untuk menambahkan kartu ini ke dalam Dek)",
@@ -13689,6 +13786,52 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6a7ba97d/b9d33825378116f78fff8bf604e4d95c.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 215171,
+      "name": "\"For None May Take From Us Our Freedom of Song\"",
+      "content": "<color=#FFFFFFFF>Aksi Tempur</color>: Kartu ini dapat dikenakan saat menggunakan <color=#FFFFFFFF>Varka</color> sebagai Karakter aktif.\\nVarka akan langsung melancarkan <color=#FFD780FF>Windbound Execution</color> satu kali setelah mengenakannya.\\nSaat Varka yang mengenakan kartu ini digunakan sebagai Karakter aktif dan setelah kamu memicu reaksi Swirl: DMG <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/c89ca75b4aef48091d59bf71aaff2b8b.png' /><color=#80FFD7FF>Anemo DMG</color> dan DMG elemen yang terpicu Swirl berikutnya yang diakibatkan olehmu +1. (Sekali setiap Ronde)\\n(Kamu harus punya Varka di dalam Dek-mu untuk menambahkan kartu ini ke dalam Dek)",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "3",
+      "cost_type1": "17",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "combat_action",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6aea677c/87e80387ffc90be8ad2cf0f98dbff850.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
+      "id": 215172,
+      "name": "Dawn's Return",
+      "content": "<color=#FFFFFFFF>Aksi Cepat</color>：Kenakan ini pada <color=#FFFFFFFF>Varka</color> milikmu dan ciptakan <color=#FFFFFFFF>Windbound Execution</color>.\\nSetelah <color=#FFFFFFFF>Varka</color> milikmu menggunakan Normal Attack, akan memberikan <color=#FFFFFFFF><color=#FFFFFFFF>Pengurangan Biaya</color></color> kepada 1 <color=#FFFFFFFF>Windbound Execution</color> ke Tanganmu.\\n(Kamu harus punya Varka di dalam Dek-mu untuk menambahkan kartu ini ke dalam Dek)",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "3",
+      "cost_type1": "17",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/bff8d36c5fdb0df001e05624aa7b7e97.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "talent",
+        "13",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6aea677c/59fff0da78554a9f1d08b5ed338f1b8f.png",
       "is_special": false,
       "max_count": 2
     },
@@ -17327,6 +17470,29 @@
       "max_count": 2
     },
     {
+      "id": 312047,
+      "name": "Song of Days Past",
+      "content": "<color=#FFFFFFFF>Setelah Karaktermu mendapatkan pemulihan selain dari Artefak:</color> Kartu ini mengakumulasi 2 lapis <color=#FFFFFFFF>\"Yearning\"</color> (maksimum 4 lapis). Saat Ronde dimulai, memulihkan HP Karakter yang terpengaruh sebanyak 1 poin untuk setiap 2 lapis <color=#FFFFFFFF>\"Yearning\"</color>. Jika terdapat 4 lapis <color=#FFFFFFFF>\"Yearning\"</color>, maka memulihkan HP sebanyak 1 poin lagi dan Karakter yang mengenakan kartu ini mengakibatkan DMG +1.\\n(Karakter dapat mengenakan maksimum 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/8abebfa3ce62ff97769616f606b9a7f4.png' />Artefak)",
+      "action_type": "equipment_card",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1": "10",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/39de35b178b080a090ac95622bbbf0df.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "artifact",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6aea677c/9af0a2688a272246c2839c4d342a160e.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 312101,
       "name": "Broken Rime's Echo",
       "content": "<color=#FFFFFFFF>Saat memainkan Kartu <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/f991e209778856fbf83078b501953475.png' />Talenta terhadap Karakter atau Karakter menggunakan Skill:</color> akan menghabiskan 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/412134fa7fc8a73b5e20c177a3ae0046.png' /><color=#99FFFFFF>Dadu Cryo</color> lebih sedikit. (Sekali setiap Ronde)\\n(Karakter dapat mengenakan maksimum 1 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/8abebfa3ce62ff97769616f606b9a7f4.png' />Artefak)",
@@ -19512,6 +19678,29 @@
       "max_count": 2
     },
     {
+      "id": 322035,
+      "name": "Zeitlind",
+      "content": "<color=#FFFFFFFF>Saat lawan memainkan kartu yang namanya tidak ada dalam Dek awalmu di Pertandingan ini:</color> Memulihkan 1 poin HP Karaktermu yang paling banyak menerima DMG. (2 kali setiap Ronde)",
+      "action_type": "support_card",
+      "rank_id": 0,
+      "cost_num1": "0",
+      "cost_type1": "",
+      "cost_type1_icon": "",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "companion",
+        "709",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6aea677c/f1143dadc24b340abf1eba5d6e450535.png",
+      "is_special": false,
+      "max_count": 2
+    },
+    {
       "id": 323001,
       "name": "Parametric Transformer",
       "content": "<color=#FFFFFFFF>Setelah Karakter salah satu pemain menggunakan Skill:</color> Jika mengakibatkan DMG Elemental, maka kartu ini akan memperoleh 1 <color=#FFFFFFFF>\"Qualitative Progress\"</color>.\\nSaat kartu ini memiliki 3 <color=#FFFFFFFF>\"Qualitative Progress\"</color>, maka kartu ini akan dibuang, lalu menciptakan 3 Dadu Elemental Dasar dengan jenis elemen yang berbeda.",
@@ -20018,6 +20207,29 @@
       "max_count": 1
     },
     {
+      "id": 330015,
+      "name": "Streaming Song",
+      "content": "Hanya dapat dimainkan saat party milikmu memiliki Karakter dengan 3 jenis elemen berbeda. Mengonversi 3 Dadu Elemental milikmu menjadi <color=#FFFFFFFF><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8401f5013a7c381edb6cd088b207bb9f.png' />Elemen Omni</color>. Selama pertandingan ini, pada saat <color=#FFFFFFFF>Tahap Melempar Dadu:</color> selalu melempar 3 Dadu Omni. <color=#FFFFFFFF>Saat kamu memicu Reaksi Elemental:</color> DMG yang diakibatkan +1. <color=#FFFFFFFF>Setelah kamu memicu Reaksi Elemental:</color> memulihkan 1 poin HP Karaktermu yang paling banyak menerima DMG.\\n(Hanya dapat memainkan satu kartu <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f71f/ad05fb6424e58a2a5685647b6240555a.png' />Arcana selama duel berlangsung. Kartu ini pasti akan ada di antara Kartu Aksi awal milikmu)",
+      "action_type": "event_card",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1": "3",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8b295c3fed21771dcced6055cdf2f2ce.png",
+      "cost_num2": "1",
+      "cost_type2": "6",
+      "cost_type2_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/5bdbe64fa0b51912abf046d26f735401.png",
+      "action_card_tags": [
+        "arcane_legend",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6aea677c/8de7aaf2fbb291426e30189e711644fb.png",
+      "is_special": true,
+      "max_count": 1
+    },
+    {
       "id": 331004,
       "name": "Elemental Transfiguration: Superconduct Blessing",
       "content": "<color=#FFFFFFFF><color=#FFFFFFFF>Elemental Transfiguration</color></color>: <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/924fba80b9137b4e8fdf5871aa22d666.png' /><color=#99FFFFFF>Cryo</color> <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' /><color=#FFACFFFF>Electro</color>\\n<color=#FFFFFFFF>Tahap Melempar Dadu:</color> Selalu melempar 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/412134fa7fc8a73b5e20c177a3ae0046.png' /><color=#99FFFFFF>Dadu Cryo</color> dan 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0a7a50d15a7580c4de07a41f87a95787.png' /><color=#FFACFFFF>Dadu Electro</color>.\\n<color=#FFFFFFFF>Setelah kamu memicu reaksi <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/924fba80b9137b4e8fdf5871aa22d666.png' /><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0ff87d31d2858dc563d4a441cdd42f95.png' />Superconduct</color>: Kartu ini akan dibuang, lalu kamu dapat memilih salah satu antara <color=#FFFFFFFF>Superconduct Blessing: Deep Freeze</color> atau <color=#FFFFFFFF>Superconduct Blessing: Electric Surge</color> untuk ditambahkan ke Tanganmu.",
@@ -20221,6 +20433,29 @@
         ""
       ],
       "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6ab3168d/1c5aa6e3c96e88299a45f9fbff127b76.png",
+      "is_special": false,
+      "max_count": 1
+    },
+    {
+      "id": 331013,
+      "name": "Elemental Transfiguration: Burning Blessing",
+      "content": "<color=#FFFFFFFF><color=#FFFFFFFF>Elemental Transfiguration</color>:</color> <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><color=#FF9999FF>Pyro</color> <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' /><color=#7EC236FF>Dendro</color>\\n<color=#FFFFFFFF>Tahap Melempar Dadu:</color> Selalu melempar 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/fe4517db495f28fdbcb44607d94640c3.png' /><color=#FF9999FF>Dadu Pyro</color> dan 2 <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/848248aa7c40784633446db172ee4678.png' /><color=#7EC236FF>Dadu Dendro</color>.\\n<color=#FFFFFFFF>Setelah kamu memicu reaksi <img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/54e95d5fad102409daf191d692c92adc.png' /><img src='https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/0bfb3be161357095eefb85b88c1267a8.png' />Burning:</color> Kartu ini akan dibuang, lalu kamu dapat memilih salah satu antara <color=#FFFFFFFF>Burning Blessing: Maximal Ferocity</color> atau <color=#FFFFFFFF>Burning Blessing: Supreme Symphony</color> untuk ditambahkan ke Tanganmu.",
+      "action_type": "support_card",
+      "rank_id": 0,
+      "cost_num1": "2",
+      "cost_type1": "3",
+      "cost_type1_icon": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/67c7f719/8b295c3fed21771dcced6055cdf2f2ce.png",
+      "cost_num2": "0",
+      "cost_type2": "",
+      "cost_type2_icon": "",
+      "action_card_tags": [
+        "elemental_transfiguration",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "resource": "https://act-webstatic.hoyoverse.com/hk4e/e20200928calculate/item_icon/6aea677c/f8680594a3e7292c7c7eca6230605241.png",
       "is_special": false,
       "max_count": 1
     },
@@ -26482,6 +26717,54 @@
       "name": "Return of the Three Moons",
       "id": 330014,
       "code": 629,
+      "type": "action"
+    },
+    {
+      "name": "Varka",
+      "id": 1517,
+      "code": 630,
+      "type": "character"
+    },
+    {
+      "name": "Ode to Ascension",
+      "id": 213172,
+      "code": 631,
+      "type": "action"
+    },
+    {
+      "name": "\"For None May Take From Us Our Freedom of Song\"",
+      "id": 215171,
+      "code": 632,
+      "type": "action"
+    },
+    {
+      "name": "Dawn's Return",
+      "id": 215172,
+      "code": 633,
+      "type": "action"
+    },
+    {
+      "name": "Song of Days Past",
+      "id": 312047,
+      "code": 634,
+      "type": "action"
+    },
+    {
+      "name": "Zeitlind",
+      "id": 322035,
+      "code": 635,
+      "type": "action"
+    },
+    {
+      "name": "Elemental Transfiguration: Burning Blessing",
+      "id": 331013,
+      "code": 636,
+      "type": "action"
+    },
+    {
+      "name": "Streaming Song",
+      "id": 330015,
+      "code": 637,
       "type": "action"
     }
   ]
