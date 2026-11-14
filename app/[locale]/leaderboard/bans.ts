@@ -3,6 +3,13 @@ import { gameVersion } from "@/utils/version"
 
 const banned: BannedPlayer[] = [
   {
+    //begula/maddox
+    playerid: 678,
+    uid: [686926802],
+    starting: "7-2",
+    ending: "current"
+  },
+  {
     //maks
     playerid: 46,
     uid: [721705568],
