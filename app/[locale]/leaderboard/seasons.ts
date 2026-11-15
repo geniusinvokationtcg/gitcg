@@ -39,6 +39,12 @@ export const seasons: Seasons = {
   ],
   eu: [
     {
+      versions: ["7-2", "7-3", "7-4"],
+      best_finish: 3,
+      qualification_type: "top",
+      qualification_threshold: 8
+    },
+    {
       versions: ["6-7", "7-0", "7-1"],
       best_finish: 3,
       qualification_type: "top",
